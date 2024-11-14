@@ -1,0 +1,102 @@
+---
+sidebar: sidebar 
+permalink: task_dc_emc_unisphere_rest.html 
+keywords: data collector, Unisphere, EMC 
+summary: Dell EMC Unisphere REST 데이터 수집기 구성 
+---
+= Dell EMC Unisphere REST 데이터 수집기 구성
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+이 데이터 수집기는 Dell EMC Unisphere for PowerMax/VMAX 3 관리 시스템에서 인벤토리 및 성능 데이터를 가져옵니다.
+
+Dell/EMC는 Unisphere 10.0까지 볼륨 통계를 제공하지 않았습니다. 이 데이터 수집기는 9.2.0+를 지원하지만 볼륨 통계가 없으므로 이 통계를 수집할 수 없습니다.
+
+한 Unisphere for VMAX/PowerMax 인스턴스가 하나 이상의 Symmetrix VMAX 3 이상의 스토리지 시스템을 관리하고 있을 수 있습니다. 이 수집기는 기본적으로 해당 Unisphere 인스턴스에 대해 "로컬"인 모든 스토리지 시스템을 검색하려고 시도합니다. Unisphere 인스턴스에 "원격" 스토리지(즉, SRDF 복제를 통해 연결된 스토리지)가 표시되는 경우 해당 스토리지가 무시되며, 이러한 스토리지를 검색하려면 해당 사이트의 Unisphere 인스턴스가 로컬로 표시되는 Data Infrastructure Insights에서 추가 Unisphere Collector를 생성해야 합니다.
+
+구성을 위해 데이터 수집기는 Unisphere 서버의 IP 주소/FQDN, 포트 8443에 대한 TCP 연결, 사용자 이름 및 암호가 필요합니다.
+
+
+
+== 요구 사항
+
+* Unisphere 서버의 IP 주소/정규화된 도메인 이름입니다
+* 사용자 이름 및 암호
+* 포트 8443.
+
+
+
+
+== 구성
+
+[cols="2*"]
+|===
+| 필드에 입력합니다 | 설명 
+
+
+| Unisphere 서버의 IP 주소입니다 | Unisphere 서버의 IP 주소 또는 정규화된 도메인 이름입니다 
+
+
+| Unisphere 포트 | 기본값은 8443입니다 
+
+
+| 사용자 이름 | Unisphere 서버의 사용자 이름입니다 
+
+
+| 암호 | Unisphere 서버에 사용되는 암호입니다 
+|===
+
+
+== 고급 구성
+
+[cols="2*"]
+|===
+| 필드에 입력합니다 | 설명 
+
+
+| 재고 폴링 간격(분) | 기본값은 40분입니다. 
+
+
+| 성능 폴링 간격(초) | 성능 폴링 간격입니다. 
+
+
+| 목록을 지정하려면 '제외' 또는 '포함'을 선택하십시오 | VM 포함 또는 제외 여부를 지정합니다 
+
+
+| 인벤토리 필터 장치 목록 | 필터링할 VM 목록(쉼표로 구분됨 또는 값에 쉼표가 사용된 경우 세미콜론으로 구분) 
+
+
+| Unisphere 성능 폴링 간격(초) | 기본값은 300초입니다 
+|===
+
+
+== 문제 해결
+
+이 데이터 수집기에서 문제가 발생할 경우 다음과 같은 방법을 시도해 보십시오.
+
+
+
+=== 인벤토리
+
+[cols="2*"]
+|===
+| 문제: | 다음을 시도해 보십시오. 
+
+
+| 오류: 사용자 인증에 실패했습니다. | 이 장치에 대한 자격 증명이 올바른지 확인하십시오. 
+
+
+| 인벤토리 최근 상태: 예기치 않은 데이터가 검색됨 - 어레이가 0개의 볼륨을 보고했습니다 | 일반적으로 인증(인증이 아님) 문제를 나타냅니다. 자격 증명이 올바르고 사용자 이름에 모든 볼륨을 나열하고 해당 속성을 볼 수 있는 권한이 있는지 확인합니다. 
+|===
+추가 정보는 페이지 또는 에서 찾을 link:concept_requesting_support.html["지원"]link:reference_data_collector_support_matrix.html["Data Collector 지원 매트릭스"]수 있습니다.

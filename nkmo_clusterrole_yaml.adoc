@@ -1,0 +1,94 @@
+---
+sidebar: sidebar 
+permalink: nkmo_clusterrole_yaml.html 
+keywords: NKMO, yaml, 
+summary: NKMO Clusterrole에 대한 YAML 파일의 예 
+---
+= NKMO Clusterrole YAML의 예
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:nofooter: 
+:toclevels: 2
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+NetApp Kubernetes Monitoring Operator(NKMO)의 _kubbectl_component는 최소한 에이전트, 클러스터 역할, 클러스터 역할 바인딩, 사용자 정의 정의 정의, 배포 등의 Kubernetes 개체에 대한 액세스 권한으로 구성해야 합니다. 네임스페이스, 역할, rolebindings, 비밀, serviceaccount, 등을 다룹니다. 다음은 이러한 최소 권한을 가진 클러스터역할의 예입니다.
+
+[listing]
+----
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: netapp-kubernetes-monitoring-operator-installer-role
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - services
+  - serviceaccounts
+  - secrets
+  - namespaces
+  verbs:
+  - get
+  - list
+  - create
+  - patch
+  - update
+  - delete
+- apiGroups:
+  - rbac.authorization.k8s.io
+  resources:
+  - roles
+  - clusterroles
+  - rolebindings
+  - clusterrolebindings
+  verbs:
+  - get
+  - list
+  - create
+  - patch
+  - update
+  - delete
+  - escalate
+  - bind
+- apiGroups:
+  - apiextensions.k8s.io
+  resources:
+  - customresourcedefinitions
+  verbs:
+  - get
+  - list
+  - create
+  - patch
+  - update
+  - delete
+- apiGroups:
+  - apps
+  resources:
+  - deployments
+  verbs:
+  - get
+  - list
+  - create
+  - patch
+  - update
+  - delete
+- apiGroups:
+  - monitoring.netapp.com
+  resources:
+  - agents
+  verbs:
+  - get
+  - list
+  - create
+  - patch
+  - update
+  - delete
+----

@@ -1,0 +1,62 @@
+---
+sidebar: sidebar 
+permalink: insights_reclaim_ontap_cold_storage.html 
+keywords: insight, greedy, degraded, impacted, impacting, impactful, impact, resources, consuming, workload 
+summary: Insights를 통해 리소스가 사용자 환경의 다른 리소스에 미치는 영향을 파악할 수 있습니다. 
+---
+= 인사이트: ONTAP 냉장 보관 확보
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Reclaim ONTAP 냉장 보관_Insight는 ONTAP 시스템의 볼륨에 대한 콜드 용량, 잠재적 비용/전력 절감 및 권장 조치 항목에 대한 데이터를 제공합니다.
+
+이러한 Insights를 보려면 * 대시보드 > 인사이트 * 로 이동하여 _Reclaim ONTAP 냉장 보관_Insight를 살펴봅니다. 이 Insight는 Data Infrastructure Insights가 콜드 스토리지를 감지한 경우에만 영향을 받는 스토리지를 나열하며, 그렇지 않으면 "모두 지우기" 메시지가 표시됩니다.
+
+30일 미만의 콜드 데이터는 표시되지 않습니다.
+
+image:Cold_Data_Insight_List.png["콜드 데이터가 있는 3개 스토리지를 보여 주는 Insight 목록입니다"]
+
+Insight 설명은 "콜드" 데이터로 감지된 데이터의 양과 데이터가 상주하는 스토리지를 빠르게 표시합니다. 또한, 콜드 데이터가 포함된 워크로드 수도 제공합니다.
+
+목록에서 Insight를 선택하면 Cloud로 데이터를 이동하거나, 비구현 디스크를 순환시키기 위한 권장 사항과 이러한 권장 사항을 구현함으로써 실현할 수 있는 예상 비용 및 전력 절감 효과를 포함한 자세한 정보가 표시된 페이지가 열립니다. 또한 이 페이지에서는 숫자를 사용해 볼 수 있는 편리한 링크를 link:https://bluexp.netapp.com/cloud-tiering-service-tco["NetApp의 TCO 계산기"]제공합니다.
+
+image:Cold_Data_Power_Info.png["콜드 데이터 전원 정보"]
+
+
+
+=== 권장 사항
+
+Insight(인사이트) 페이지에서 * Recommendations(권장 사항) * 를 확장하여 다음 옵션을 탐색합니다.
+
+* 사용되지 않는 워크로드(좀비)를 저렴한 HDD(스토리지 계층)로 이동
++
+zombie 플래그, 콜드 스토리지 및 일 수를 활용하여 가장 낮은 데이터와 가장 큰 양의 데이터를 찾아 워크로드를 저렴한 스토리지 계층(예: 하드 디스크 스토리지를 사용하는 스토리지 풀)으로 이동합니다. 워크로드가 30일 이상 심각한 IO 요청을 받지 않은 경우 "좀비"로 간주됩니다.
+
+* 사용하지 않는 워크로드를 삭제합니다
++
+사용 중이 아닌 워크로드를 확인하고 아카이빙을 고려하거나 스토리지 시스템에서 제거합니다.
+
+* NetApp의 Fabric Pool 솔루션을 고려해 보십시오
++
+NetApplink:https://docs.netapp.com/us-en/cloud-manager-tiering/concept-cloud-tiering.html#features["Fabric Pool 솔루션"]는 콜드 데이터를 저렴한 클라우드 스토리지로 자동으로 계층화하여 성능 계층의 효율성을 높이고 원격 데이터 보호를 제공합니다.
+
+
+
+
+
+=== 시각화 및 탐색
+
+그래프 및 표는 추가 추세 정보를 제공할 뿐만 아니라 개별 작업 부하를 분석할 수 있게 해 줍니다.
+
+image:Cold_Data_Storage_Trend.png["콜드 데이터 요약 그래프"] image:Cold_Data_Workload_Table.png["콜드 데이터 워크로드 테이블"]

@@ -1,0 +1,95 @@
+---
+sidebar: sidebar 
+permalink: task_dc_redhat_virtualization.html 
+keywords: data collector, Red Hat Virtualization 
+summary: Red Hat Virtualization 데이터 수집기 구성. 
+---
+= Red Hat 가상화 데이터 수집기
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights는 Red Hat Virtualization 데이터 수집기를 사용하여 가상화된 Linux 및 Microsoft Windows 워크로드로부터 인벤토리 데이터를 수집합니다.
+
+
+
+== 용어
+
+Data Infrastructure Insights에서 구입한 각 자산 유형에 대해 자산에 사용되는 가장 일반적인 용어가 표시됩니다. 이 데이터 수집기를 보거나 문제를 해결할 때 다음 용어를 염두에 두십시오.
+
+[cols="2*"]
+|===
+| 공급업체/모델 기간 | Data Infrastructure Insights 용어 
+
+
+| 디스크 | 가상 디스크 
+
+
+| 호스트 | 호스트 
+
+
+| 가상 머신 | 가상 머신 
+
+
+| 스토리지 도메인 | 데이터 저장소 
+
+
+| 논리 단위 | LUN입니다 
+|===
+참고: 이러한 용어 매핑은 일반적인 용어 매핑일 뿐이며 이 데이터 수집기의 모든 경우를 나타내는 것은 아닙니다.
+
+
+
+== 요구 사항
+
+* REST API를 통해 포트 443을 통해 RHEV 서버의 IP 주소입니다
+* 읽기 전용 사용자 이름 및 암호
+* RHEV 버전 3.0+
+
+
+
+
+== 구성
+
+[cols="2*"]
+|===
+| 필드에 입력합니다 | 설명 
+
+
+| RHEV 서버 IP 주소입니다 | 스토리지 시스템의 IP 주소입니다 
+
+
+| 사용자 이름입니다 | 관리자 권한이 있는 사용자 이름입니다 
+
+
+| 관리자 권한이 있는 계정의 암호입니다 | 암호 
+|===
+
+
+== 고급 구성
+
+[cols="2*"]
+|===
+| 필드에 입력합니다 | 설명 
+
+
+| HTTPS 통신 포트 | RHEV에 대한 HTTPS 통신에 사용되는 포트입니다 
+
+
+| 재고 폴링 간격(분) | 기본값은 20분입니다. 
+|===
+
+
+== 문제 해결
+
+이 데이터 수집기에 대한 추가 정보는 페이지 또는 에서 찾을 link:concept_requesting_support.html["지원"]link:reference_data_collector_support_matrix.html["Data Collector 지원 매트릭스"]수 있습니다.

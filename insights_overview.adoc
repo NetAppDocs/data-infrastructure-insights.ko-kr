@@ -1,0 +1,49 @@
+---
+sidebar: sidebar 
+permalink: insights_overview.html 
+keywords: insight, greedy, degraded, impacted, impacting, impactful, impact, resources, consuming, workload, ttf, time to full, k8s, kubernetes, namespace 
+summary: 통찰력을 통해 리소스 사용 및 추세를 파악할 수 있습니다. 
+---
+= 인사이트
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Insights를 사용하면 리소스 사용량과 이러한 리소스가 다른 리소스에 미치는 영향 또는 전체 분석에 소요되는 시간을 파악할 수 있습니다.
+
+다양한 Insights를 사용할 수 있습니다. Dashboard > Insights * 로 이동하여 심층 분석을 시작합니다. 기본 탭의 활성 Insights(현재 진행 중인 Insights)를 보거나 _Inactive Insights_tab에서 비활성 Insights를 볼 수 있습니다. Inactive Insights는 이전에 활성화되었지만 더 이상 발생하지 않는 Insights입니다.
+
+
+
+== Insight 유형
+
+
+
+=== 스트레스 상태의 공유 리소스
+
+워크로드가 큰 경우 공유 리소스에 있는 다른 워크로드의 성능이 저하될 수 있습니다. 이렇게 하면 공유 리소스가 스트레스를 받게 됩니다. Data Infrastructure Insights는 리소스 포화 및 환경의 영향을 조사하는 데 도움이 되는 툴을 제공합니다. link:insights_shared_resources_under_stress.html["자세한 정보"]
+
+
+
+=== 공간이 부족되는 Kubernetes 네임스페이스
+
+Kubernetes Namespaces Out of Space Insight에서는 공간이 부족할 위험이 있는 Kubernetes 네임스페이스의 워크로드를 볼 수 있으며, 각 공간이 가득 찰 때까지 남은 일 수를 예상할 수 있습니다. link:insights_k8s_namespaces_running_out_of_space.html["자세한 정보"]
+
+
+
+=== ONTAP 콜드 스토리지 재확보
+
+Reclaim ONTAP Cold Storage_Insight는 ONTAP 시스템의 볼륨에 대한 콜드 용량, 잠재적 비용/전력 절감 및 권장 조치 항목에 대한 데이터를 제공합니다. link:insights_reclaim_ontap_cold_storage.html["자세한 정보"]
+
+
+NOTE: 이것은 _Preview_feature 이며 개선 사항이 있을 때 시간이 지남에 따라 변경될 수 있습니다. link:/concept_preview_features.html["자세한 정보"] Data Infrastructure Insights Preview 기능 정보

@@ -1,0 +1,302 @@
+---
+sidebar: sidebar 
+permalink: task_add_collector_svm.html 
+keywords: data collector, ONTAP, NetApp, SVM, cloud ontap, firewall 
+summary: 워크로드 보안 데이터 수집기 추가 
+---
+= ONTAP SVM Data Collector 구성
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+워크로드 보안은 데이터 수집기를 사용하여 디바이스에서 파일 및 사용자 액세스 데이터를 수집합니다.
+
+
+
+== 시작하기 전에
+
+* 이 데이터 수집기는 다음 구성 요소를 통해 지원됩니다.
++
+** Data ONTAP 9.2 이상 버전 최상의 성능을 얻으려면 9.13.1 이상의 Data ONTAP 버전을 사용하십시오.
+** SMB 프로토콜 버전 3.1 이하
+** ONTAP 9.15.1 이상이 설치된 NFS 4.1까지의 NFS 버전
+** FlexGroup는 ONTAP 9.4 이상 버전에서 지원됩니다
+** ONTAP Select가 지원됩니다
+
+
+* 데이터 유형 SVM만 지원됩니다. 무한 확장 볼륨이 있는 SVM은 지원되지 않습니다.
+* SVM에는 여러 가지 하위 유형이 있습니다. 이 중 _DEFAULT_, _SYNC_SOURCE_ 및 _SYNC_DESTINATION_ 만 지원됩니다.
+* 데이터 수집기를 구성하기 전에 Agentlink:task_cs_add_agent.html["구성해야 합니다"]가 필요합니다.
+* 올바르게 구성된 사용자 디렉토리 커넥터가 있는지 확인합니다. 그렇지 않으면 이벤트가 인코딩된 사용자 이름을 표시하고 “Activity Forensics(활동 포렌식)” 페이지에 사용자의 실제 이름(Active Directory에 저장된 이름)을 표시하지 않습니다.
+* • ONTAP 영구 저장소는 9.14.1부터 지원됩니다.
+* 최적의 성능을 위해 FPolicy 서버를 스토리지 시스템과 동일한 서브넷에 구성해야 합니다.
+* 다음 두 가지 방법 중 하나를 사용하여 SVM을 추가해야 합니다.
++
+** 클러스터 IP, SVM 이름, 클러스터 관리 사용자 이름 및 암호를 사용합니다. 이 방법은 * _ 을(를) 사용하는 것이 좋습니다
++
+*** SVM 이름은 ONTAP에 표시된 대로 대소문자를 구분합니다.
+
+
+** SVM Vserver 관리 IP, 사용자 이름 및 암호를 사용합니다
+** 전체 관리자 클러스터/SVM 관리 사용자 이름 및 암호를 사용할 수 없거나 사용할 의향이 없는 경우 아래 섹션에서 설명한 것처럼 더 작은 Privileges로 사용자 지정 사용자를 생성할 수 <<a-note-about-permissions,"권한에 대한 참고 사항">>있습니다. 이 맞춤형 사용자는 SVM 또는 클러스터 액세스를 위해 생성할 수 있습니다.
++
+*** o 아래 "권한에 대한 참고 사항" 섹션에서 언급한 csrole 이상의 권한이 있는 역할을 가진 AD 사용자를 사용할 수도 있습니다. 도 link:https://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.pow-adm-auth-rbac%2FGUID-0DB65B04-71DB-43F4-9A0F-850C93C4896C.html["ONTAP 설명서"]참조하십시오.
+
+
+
+
+* 다음 명령을 실행하여 SVM에 올바른 애플리케이션이 설정되었는지 확인합니다.
++
+ clustershell::> security login show -vserver <vservername> -user-or-group-name <username>
+
+
+출력 예: image:cs_svm_sample_output.png["SVM 명령 출력의 예"]
+
+* SVM에 CIFS 서버가 구성되어 있는지 확인합니다. clustershell:> `vserver cifs show`
++
+SVM 이름, CIFS 서버 이름 및 추가 필드가 반환됩니다.
+
+* SVM vsadmin 사용자의 암호를 설정합니다. 사용자 지정 사용자 또는 클러스터 관리자를 사용하는 경우 이 단계를 건너뜁니다. clustershell:> `security login password -username vsadmin -vserver svmname`
+* 외부 액세스를 위해 SVM vsadmin 사용자의 잠금을 해제합니다. 사용자 지정 사용자 또는 클러스터 관리자를 사용하는 경우 이 단계를 건너뜁니다. clustershell:> `security login unlock -username vsadmin -vserver svmname`
+* 데이터 LIF의 방화벽 정책이 'GMT'(이하 '데이터')로 설정되어 있는지 확인합니다. 전용 관리 lif를 사용하여 SVM.clustershell::> 을 추가하는 경우 이 단계를 건너뜁니다 `network interface modify -lif <SVM_data_LIF_name> -firewall-policy mgmt`
+* 방화벽이 활성화된 경우 Data ONTAP 데이터 수집기를 사용하여 포트에 대한 TCP 트래픽을 허용하도록 정의된 예외가 있어야 합니다.
++
+구성 정보는 을 link:concept_cs_agent_requirements.html["상담원 요구 사항"]참조하십시오. 이는 클라우드에 설치된 온프레미스 에이전트 및 에이전트에 적용됩니다.
+
+* Cloud ONTAP SVM을 모니터링하기 위해 AWS EC2 인스턴스에 에이전트를 설치한 경우 에이전트와 스토리지는 동일한 VPC에 있어야 합니다. 개별 VPC에 있는 경우 VPC 간에 유효한 경로가 있어야 합니다.
+
+
+
+
+== 사용자 액세스 차단을 위한 필수 조건
+
+다음 사항에 유의하십시오.link:cs_restrict_user_access.html["사용자 액세스 차단"]
+
+이 기능을 사용하려면 클러스터 레벨 자격 증명이 필요합니다.
+
+클러스터 관리 자격 증명을 사용하는 경우 새 권한이 필요하지 않습니다.
+
+사용자에게 부여된 권한으로 사용자 지정 사용자(예: _CsUser_)를 사용하는 경우 아래 단계에 따라 사용자를 차단하는 워크로드 보안에 권한을 부여합니다.
+
+클러스터 자격 증명이 있는 CsUser의 경우 ONTAP 명령줄에서 다음을 수행하십시오.
+
+....
+security login role create -role csrole -cmddirname "vserver export-policy rule" -access all
+security login role create -role csrole -cmddirname set -access all
+security login role create -role csrole -cmddirname "vserver cifs session" -access all
+security login role create -role csrole -cmddirname "vserver services access-check authentication translate" -access all
+security login role create -role csrole -cmddirname "vserver name-mapping" -access all
+....
+
+
+== 사용 권한에 대한 참고 사항
+
+
+
+=== 클러스터 관리 IP * 를 통해 추가할 때의 권한:
+
+클러스터 관리 관리자 사용자를 사용하여 워크로드 보안이 ONTAP SVM 데이터 수집기에 액세스할 수 없는 경우 아래 명령에 나와 있는 역할을 사용하여 "CsUser"라는 새 사용자를 생성할 수 있습니다. 클러스터 관리 IP를 사용하도록 워크로드 보안 데이터 수집기를 구성할 때 "CsUser"의 사용자 이름 "CsUser"와 암호를 사용합니다.
+
+새 사용자를 생성하려면 클러스터 관리 관리자 사용자 이름/암호를 사용하여 ONTAP에 로그인하고 ONTAP 서버에서 다음 명령을 실행합니다.
+
+ security login role create -role csrole -cmddirname DEFAULT -access readonly
+....
+security login role create -role csrole -cmddirname "vserver fpolicy" -access all
+security login role create -role csrole -cmddirname "volume snapshot" -access all -query "-snapshot cloudsecure_*"
+security login role create -role csrole -cmddirname "event catalog" -access all
+security login role create -role csrole -cmddirname "event filter" -access all
+security login role create -role csrole -cmddirname "event notification destination" -access all
+security login role create -role csrole -cmddirname "event notification" -access all
+security login role create -role csrole -cmddirname "security certificate" -access all
+....
+....
+security login create -user-or-group-name csuser -application ontapi -authmethod password -role csrole
+security login create -user-or-group-name csuser -application ssh -authmethod password -role csrole
+....
+
+
+=== vVserver 관리 IP * 를 통해 추가할 때의 권한:
+
+클러스터 관리 관리자 사용자를 사용하여 워크로드 보안이 ONTAP SVM 데이터 수집기에 액세스할 수 없는 경우 아래 명령에 나와 있는 역할을 사용하여 "CsUser"라는 새 사용자를 생성할 수 있습니다. 워크로드 보안 데이터 수집기에서 SVM 관리 IP를 사용하도록 구성할 때 "CsUser"의 사용자 이름 "CsUser"와 암호를 사용합니다.
+
+새 사용자를 생성하려면 클러스터 관리 관리자 사용자 이름/암호를 사용하여 ONTAP에 로그인하고 ONTAP 서버에서 다음 명령을 실행합니다. 쉽게 사용할 수 있도록 이러한 명령을 텍스트 편집기에 복사하고 ONTAP에서 다음 명령을 실행하기 전에 <vservername>을(를) SVM 이름으로 바꾸십시오.
+
+ security login role create -vserver <vservername> -role csrole -cmddirname DEFAULT -access none
+....
+security login role create -vserver <vservername> -role csrole -cmddirname "network interface" -access readonly
+security login role create -vserver <vservername> -role csrole -cmddirname version -access readonly
+security login role create -vserver <vservername> -role csrole -cmddirname volume -access readonly
+security login role create -vserver <vservername> -role csrole -cmddirname vserver -access readonly
+....
+....
+security login role create -vserver <vservername> -role csrole -cmddirname "vserver fpolicy" -access all
+security login role create -vserver <vservername> -role csrole -cmddirname "volume snapshot" -access all
+....
+ security login create -user-or-group-name csuser -application ontapi -authmethod password -role csrole -vserver <vservername>
+
+
+=== ONTAP 자율적 랜섬웨어 방어 및 ONTAP 액세스에 대한 권한이 거부되었습니다
+
+클러스터 관리 자격 증명을 사용하는 경우 새 권한이 필요하지 않습니다.
+
+사용자에게 부여된 권한으로 사용자 지정 사용자(예: _CsUser_)를 사용하는 경우, 아래 단계를 따라 워크로드 보안에 권한을 부여하여 ONTAP에서 ARP 관련 정보를 수집합니다.
+
+자세한 내용은 정보 를 참조하십시오 link:concept_ws_integration_with_ontap_access_denied.html["ONTAP 액세스와의 통합이 거부되었습니다"]
+
+및 link:concept_cs_integration_with_ontap_arp.html["ONTAP Autonomous 랜섬웨어 Protection과 통합"]
+
+
+
+== 데이터 수집기를 구성합니다
+
+.구성 단계
+. Data Infrastructure Insights 환경에 관리자 또는 계정 소유자로 로그인합니다.
+. Workload Security > Collector > + Data Collector * 를 클릭합니다
++
+사용 가능한 데이터 Collector가 표시됩니다.
+
+. NetApp SVM 타일 위로 마우스를 가져가 * + Monitor * 를 클릭합니다.
++
+ONTAP SVM 구성 페이지가 표시됩니다. 각 필드에 필요한 데이터를 입력합니다.
+
+
+
+[cols="2*"]
+|===
+
+
+| 필드에 입력합니다 | 설명 
+
+
+| 이름 | Data Collector의 고유 이름입니다 
+
+
+| 에이전트 | 목록에서 구성된 에이전트를 선택합니다. 
+
+
+| 관리 IP를 통해 연결 대상: | 클러스터 IP 또는 SVM 관리 IP를 선택합니다 
+
+
+| 클러스터/SVM 관리 IP 주소 | 위에서 선택한 항목에 따라 클러스터 또는 SVM의 IP 주소입니다. 
+
+
+| SVM 이름 | SVM 이름(클러스터 IP를 통해 연결할 때 이 필드 필요) 
+
+
+| 사용자 이름 | 클러스터 IP를 통해 추가할 때 SVM/클러스터에 액세스하는 사용자 이름 옵션은 1입니다. 클러스터 관리 2. 'CsUser' 3. CsUser와 유사한 역할을 가진 AD 사용자. SVM IP를 통해 추가할 때 옵션은 4.vsadmin 5입니다. 'CsUser' 6. CsUser와 유사한 역할을 하는 AD-사용자 이름입니다. 
+
+
+| 암호 | 위의 사용자 이름에 대한 암호입니다 
+
+
+| 공유/볼륨 필터링 | 이벤트 컬렉션에서 공유/볼륨을 포함할지 또는 제외할지 여부를 선택합니다 
+
+
+| 제외/포함할 전체 공유 이름을 입력합니다 | 이벤트 컬렉션에서 제외하거나 포함할(적절한 경우) 공유의 쉼표로 구분된 목록입니다 
+
+
+| 제외/포함할 전체 볼륨 이름을 입력합니다 | 이벤트 컬렉션에서 제외하거나 포함할(적절한 경우) 쉼표로 구분된 볼륨 목록입니다 
+
+
+| 폴더 액세스를 모니터링합니다 | 이 옵션을 선택하면 폴더 액세스 모니터링에 대한 이벤트가 활성화됩니다. 이 옵션을 선택하지 않아도 폴더 생성/이름 변경 및 삭제가 모니터링됩니다. 이 기능을 활성화하면 모니터링되는 이벤트 수가 증가합니다. 
+
+
+| ONTAP 전송 버퍼 크기를 설정합니다 | ONTAP Fpolicy 전송 버퍼 크기를 설정합니다. 9.8p7 이전의 ONTAP 버전을 사용하고 성능 문제가 발생하면 ONTAP 전송 버퍼 크기를 변경하여 ONTAP 성능을 향상시킬 수 있습니다. 이 옵션이 표시되지 않고 탐색 중인 경우 NetApp 지원에 문의하십시오. 
+|===
+.작업을 마친 후
+* 설치된 데이터 수집기 페이지에서 각 수집기 오른쪽에 있는 옵션 메뉴를 사용하여 데이터 수집기를 편집합니다. 데이터 수집기를 다시 시작하거나 데이터 수집기 구성 속성을 편집할 수 있습니다.
+
+
+
+
+== MetroCluster의 권장 구성
+
+다음은 MetroCluster에 권장됩니다.
+
+. 데이터 수집기 2개를 소스 SVM에 연결하고 다른 데이터 수집기를 타겟 SVM에 연결합니다.
+. 데이터 수집기는 _Cluster IP_로 연결해야 합니다.
+. 언제든지 한 데이터 수집기가 실행 중이어야 하며, 다른 데이터 수집기는 오류가 발생합니다.
++
+현재 '실행 중인' SVM의 데이터 수집기는 _ running _ 으로 표시됩니다. 현재 '가장 위에 있는' SVM의 데이터 수집기는 _Error_로 표시됩니다.
+
+. 전환이 있을 때마다 데이터 수집기의 상태가 '실행 중'에서 '오류'로, 또는 그 반대로 변경됩니다.
+. 데이터 수집기가 오류 상태에서 실행 상태로 이동하는 데 최대 2분이 걸립니다.
+
+
+
+
+== 서비스 정책
+
+ONTAP* 버전 9.9.1 이상 * 과 함께 서비스 정책을 사용하는 경우 데이터 소스 수집기에 연결하려면 _data-FPolicy-client_service가 data service_data-nfs_ 및 /or_data-cifs_와 함께 필요합니다.
+
+예:
+
+....
+Testcluster-1::*> net int service-policy create -policy only_data_fpolicy -allowed-addresses 0.0.0.0/0 -vserver aniket_svm
+-services data-cifs,data-nfs,data,-core,data-fpolicy-client
+(network interface service-policy create)
+....
+9.9.1 이전의 ONTAP 버전에서는 _data-FPolicy-client_를 설정할 필요가 없습니다.
+
+
+
+== 데이터 수집기 재생 - 일시 중지
+
+이제 컬렉터의 kebab 메뉴에 2개의 새 작업이 표시됩니다(일시 중지 및 다시 시작).
+
+Data Collector가 _running_state인 경우 수집을 일시 중지할 수 있습니다. 수집기에 대한 "세 개의 점" 메뉴를 열고 일시 중지를 선택합니다. Collector가 일시 중지되는 동안 ONTAP에서 수집된 데이터는 없고 Collector에서 ONTAP로 전송되는 데이터는 없습니다. 즉, Fpolicy 이벤트가 ONTAP에서 데이터 수집기로, 그리고 그 안에서 데이터 인프라 Insights로 이동하지 않습니다.
+
+Collector가 일시 중지된 동안 ONTAP에 새 볼륨 등이 생성되면 워크로드 보안이 데이터를 수집하지 않고 해당 볼륨 등이 대시보드나 테이블에 반영되지 않습니다.
+
+다음 사항에 유의하십시오.
+
+* 일시 중지된 수집기에 구성된 설정에 따라 스냅샷 삭제가 수행되지 않습니다.
+* ONTAP ARP와 같은 EMS 이벤트는 일시 중지된 Collector에서 처리되지 않습니다. 즉, ONTAP에서 랜섬웨어 공격을 식별하면 Data Infrastructure Insights 워크로드 보안이 해당 이벤트를 파악할 수 없습니다.
+* 일시 중지된 수집기에 대해 상태 알림 이메일이 전송되지 않습니다.
+* 수동 또는 자동 작업(예: 스냅샷 또는 사용자 차단)은 일시 중지된 수집기에서 지원되지 않습니다.
+* 에이전트 또는 수집기 업그레이드, 에이전트 VM 다시 시작/재부팅 또는 에이전트 서비스 다시 시작 시 일시 중지된 수집기는 _Paused_state에 남아 있습니다.
+* 데이터 수집기가 _Error_state 인 경우 수집기를 _Paused_state 로 변경할 수 없습니다. 일시 중지 버튼은 수집기의 상태가 _running_인 경우에만 활성화됩니다.
+* 에이전트의 연결이 끊어진 경우 수집기를 _Paused_state 로 변경할 수 없습니다. Collector가 _stopped_state로 이동하고 Pause 버튼이 비활성화됩니다.
+
+
+
+
+== 영구 저장
+
+영구 저장소는 ONTAP 9.14.1 이상에서 지원됩니다. 볼륨 이름 지침은 ONTAP 9.14부터 9.15까지 다양합니다.
+
+영구 저장소는 수집기 편집/추가 페이지에서 확인란을 선택하여 활성화할 수 있습니다. 이 확인란을 선택하면 볼륨 이름을 수락할 수 있는 텍스트 필드가 표시됩니다. 볼륨 이름은 영구 저장을 활성화하기 위한 필수 필드입니다.
+
+* ONTAP 9.14.1의 경우 기능을 활성화하기 전에 볼륨을 생성하고 _Volume Name_ 필드에 동일한 이름을 제공해야 합니다. 권장 볼륨 크기는 16GB입니다.
+* ONTAP 9.15.1의 경우 수집기에서 _Volume Name_ 필드에 제공된 이름을 사용하여 16GB 크기로 볼륨이 자동으로 생성됩니다.
+
+
+영구 저장소에 대한 특정 권한이 필요합니다(일부 또는 모두 이미 존재할 수 있음).
+
+클러스터 모드:
+
+....
+security login rest-role create -role csrestrole -api /api/protocols/fpolicy -access all -vserver <cluster-name>
+security login rest-role create -role csrestrole -api /api/cluster/jobs/ -access readonly -vserver <cluster-name>
+....
+SVM 모드:
+
+....
+security login rest-role create -role csrestrole -api /api/protocols/fpolicy -access all -vserver <vserver-name>
+security login rest-role create -role csrestrole -api /api/cluster/jobs/ -access readonly -vserver <vserver-name>
+....
+
+
+== 문제 해결
+
+link:troubleshooting_collector_svm.html["SVM Collector 문제 해결"]문제 해결 정보는 페이지를 참조하십시오.

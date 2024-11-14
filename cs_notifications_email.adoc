@@ -1,0 +1,67 @@
+---
+sidebar: sidebar 
+permalink: cs_notifications_email.html 
+summary: 워크로드 보안 경고 알림을 위한 e-메일 주소 추가 
+keywords: email, notifications, alerts, warnings, attacks 
+---
+= 경고, 경고 및 에이전트/데이터 소스 수집기 상태에 대한 이메일 알림 구성
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+워크로드 보안 경고 수신자를 구성하려면 * Admin > Notifications * 를 클릭하고 각 수신자의 적절한 섹션에 이메일 주소를 입력합니다.
+
+
+
+== 잠재적 공격 경고 및 경고
+
+potential attack_alert 알림을 보내려면 _ Send potential attack Alerts _ 섹션에 받는 사람의 전자 메일 주소를 입력합니다. e-메일 알림은 알림의 모든 작업에 대해 알림 받는 사람 목록으로 전송됩니다.
+
+_Warning_notifications를 보내려면 _Send Warning Alerts_ 섹션에 받는 사람의 이메일 주소를 입력합니다.
+
+
+
+== 에이전트 및 Data Collector 상태 모니터링
+
+알림을 통해 에이전트 및 데이터 소스의 상태를 모니터링할 수 있습니다.
+
+에이전트 또는 데이터 소스 수집기가 작동하지 않는 경우 알림을 받으려면 _ 데이터 수집 상태 경고 _ 섹션에 받는 사람의 전자 메일 주소를 입력합니다.
+
+다음 사항에 유의하십시오.
+
+* 상태 알림은 에이전트/수집기가 최소 1시간 동안 보고를 중지한 후에만 전송됩니다.
+* 특정 24시간 동안 에이전트 또는 데이터 수집기의 연결이 끊어진 경우에도 지정된 수신자에게 하나의 이메일 알림만 전송됩니다.
+* Agent가 고장 날 경우 한 번에 하나의 경고가 전송됩니다(수집기당 1개가 아님). 이메일에는 영향을 받는 모든 SVM의 목록이 포함됩니다.
+* Active Directory 수집 장애는 경고로 보고되며 랜섬웨어 감지에 영향을 주지 않습니다.
+* 이제 시작 설정 목록에 새 _Configure email notifications_단계가 포함됩니다.
+
+
+
+
+== Agent 및 Data Collector 업그레이드 알림을 받는 중입니다
+
+* "Data Collection Health Alerts"에 이메일 ID를 입력합니다.
+* "업그레이드 알림 활성화" 확인란이 활성화됩니다.
+* 에이전트 및 Data Collector 업그레이드 이메일 알림은 계획된 업그레이드 하루 전에 이메일 ID로 전송됩니다.
+
+
+
+
+== 문제 해결
+
+|===
+| * 문제: * | * 사용해 보세요. * 
+
+
+| 이메일 ID가 "Data Collector Health Alerts"에 있지만 알림을 받지 않습니다. | 알림 이메일은 NetApp Data Infrastructure Insights 도메인, 즉 _accounts@service.clou dinsights.NetApp.com_에서 발송되었습니다. 일부 회사는 외부 도메인에서 보낸 전자 메일을 차단합니다. NetApp Data Infrastructure Insights 도메인의 외부 알림을 화이트리스트로 등록했는지 확인합니다. 
+|===

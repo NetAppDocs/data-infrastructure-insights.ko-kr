@@ -1,0 +1,141 @@
+---
+sidebar: sidebar 
+permalink: concept_kubernetes_network_monitoring_and_map.html 
+keywords: service map, workloads, 
+summary: Kubernetes 워크로드 종속성 및 흐름을 소개하고 네트워크 및 성능 문제를 강조합니다 
+---
+= Kubernetes 네트워크 성능 모니터링 및 맵
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Kubernetes 네트워크 성능 모니터링 및 맵 기능은 서비스 간 종속성(워크로드라고도 함)을 매핑하여 문제 해결을 간소화하고 네트워크 성능 지연 시간 및 이상 징후를 실시간으로 확인하여 사용자에게 영향을 미치기 전에 성능 문제를 식별합니다. 이 기능은 조직이 Kubernetes 트래픽 흐름을 분석하고 감사하여 전체 비용을 절감할 수 있도록 도와줍니다.
+
+주요 기능: • 워크로드 맵은 Kubernetes 워크로드 종속성 및 흐름을 제공하고 네트워크 및 성능 문제를 강조합니다. • Kubernetes Pod, 워크로드 및 노드 간의 네트워크 트래픽을 모니터링하고, 트래픽 및 지연 문제의 원인을 식별합니다. • 수신, 송신, 지역 간 및 교차 영역 네트워크 트래픽을 분석하여 전체 비용을 절감합니다.
+
+image:workload-map-animated.gif["워크로드 맵 예"]
+
+
+
+== 필수 구성 요소
+
+Kubernetes 네트워크 성능 모니터링 및 맵을 사용하려면 먼저 이 옵션을 사용하도록 를 구성해야 link:task_config_telegraf_agent_k8s.html["NetApp Kubernetes 모니터링 운영자"]합니다. 오퍼레이터 배포 중에 "네트워크 성능 및 맵" 확인란을 선택하여 활성화합니다. Kubernetes 랜딩 페이지로 이동하여 "배포 수정"을 선택하여 이 옵션을 활성화할 수도 있습니다.
+
+image:ServiceMap_NKMO_Deployment_Options.png["NKMO Stup 중 지도 옵션을 선택합니다"]
+
+
+
+== 모니터
+
+워크로드 맵은 을 사용하여 link:task_create_monitor.html["모니터"]정보를 파생시킵니다. Data Infrastructure Insights는 다양한 기본 Kubernetes Monitor를 제공합니다(이는 기본적으로 _ Paused _ 일 수 있습니다. 원하는 모니터를 _Resume_(예: 활성화)하거나, Kubernetes 객체에 대한 사용자 지정 모니터를 생성할 수 있습니다. 이 경우 워크로드 맵도 사용됩니다.
+
+아래의 모든 오브젝트 유형에 대해 Data Infrastructure Insights 메트릭 경고를 생성할 수 있습니다. 데이터가 기본 개체 유형별로 그룹화되어 있는지 확인합니다.
+
+* Kubernetes 워크로드
+* Kubernetes 발병
+* kubernetes.deployment
+* cub네티스.crontjob을 제공합니다
+* Kubernetes, 작업
+* 복제 복제
+* Kubernetes.statefulset입니다
+* 선택하십시오
+* kubernetes.network_traffic_l4
+
+
+
+
+== 지도
+
+지도에는 서비스/작업 부하 및 상호 관계가 표시됩니다. 화살표는 교통 방향을 표시합니다. 작업 부하 위로 마우스를 가져가면 다음 예에서와 같이 해당 작업 부하에 대한 요약 정보가 표시됩니다.
+
+image:ServiceMap_Simple_Example.png["워크로드 맵 워크로드의 예"]
+
+원 안에 있는 아이콘은 다양한 서비스 유형을 나타냅니다. 아이콘은 기본 개체에 가 있는 경우에만 <<workload-labels,라벨>>표시됩니다.
+
+image:ServiceMap_Icons.png["서비스 아이콘 설명"]
+
+각 원의 크기는 노드 크기를 나타냅니다. 이러한 크기는 상대적이며 브라우저 확대/축소 수준 또는 화면 크기가 실제 원형 크기에 영향을 줄 수 있습니다. 같은 방법으로, 트래픽 회선 스타일은 연결 크기를 한 눈에 볼 수 있게 합니다. 굵은 실선은 트래픽이 높고 밝은 점선은 트래픽이 적습니다.
+
+원 안에 있는 숫자는 서비스에서 현재 처리 중인 외부 연결의 수입니다.
+
+image:ServiceMap_Node_and_Connection_Legend.png["상대적인 원(노드) 및 연결 크기를 보여주는 범례"]
+
+
+
+== 워크로드 세부 정보 및 알림
+
+색상으로 표시된 원은 워크로드에 대한 경고 또는 위험 수준 경고를 나타냅니다. 원 위로 마우스를 가져가면 문제 요약이 표시됩니다. 원을 클릭하여 자세히 표시된 슬라이드 아웃 패널을 엽니다.
+
+image:Workload_Map_Slideout_with_Alert.png["워크로드 Slideout 세부 정보 및 알림"]
+
+
+
+== 찾기 및 필터링
+
+다른 Data Infrastructure Insights 기능과 마찬가지로 필터를 쉽게 설정하여 원하는 특정 오브젝트 또는 워크로드 특성에 집중할 수 있습니다.
+
+image:Workload_Map_Filtering.png["워크로드 맵 필터링"]
+
+마찬가지로 _Find_ 필드에 문자열을 입력하면 일치하는 워크로드가 강조 표시됩니다.
+
+image:Workload_Map_Find_Highlighting.png["찾기 상자에 입력하면 워크로드가 강조 표시됩니다"]
+
+
+
+== 워크로드 레이블
+
+지도에서 표시되는 워크로드 유형(예: 원 아이콘)을 식별하려면 워크로드 레이블이 필요합니다. 레이블은 다음과 같이 파생됩니다.
+
+* 일반 용어로 실행 중인 서비스/애플리케이션의 이름입니다
+* 소스가 POD인 경우:
++
+** 레이블은 POD의 워크로드 레이블에서 파생됩니다
+** 작업 부하에 대한 예상 레이블: app.Kubernetes.io/component
+** 레이블 이름 참조: https://kubernetes.io/docs/concepts/overview/working-with-objects/common-labels/[]
+** 권장 라벨:
++
+*** 프런트 엔드
+*** 백엔드
+*** 데이터베이스
+*** 캐시
+*** 대기열
+*** 카프카
+
+
+
+
+* 소스가 Kubernetes 클러스터 외부에 있는 경우:
++
+** Data Infrastructure Insights는 DNS 확인된 이름을 구문 분석하여 서비스 유형을 추출합니다.
++
+예를 들어, DNS Resolved 이름이 _s3.eu-north-1.amazonaws.com _ 인 경우 Resolved 이름은 서비스 유형으로 get_s3_로 구문 분석됩니다.
+
+
+
+
+
+
+
+== 깊이 잠들어 보세요
+
+워크로드를 마우스 오른쪽 버튼으로 클릭하면 더 자세히 살펴볼 수 있는 추가 옵션이 제공됩니다. 예를 들어, 여기에서 해당 워크로드의 연결을 확대하여 볼 수 있습니다.
+
+image:Workload_Map_Zoom_Into_Connections.png["워크로드 맵 확대/축소를 마우스 오른쪽 버튼으로 클릭하여 워크로드의 연결을 표시합니다"]
+
+또는 세부 정보 슬라이드 아웃 패널을 열어 _Summary_, _Network_ 또는 _Pod & Storage_ 탭을 직접 볼 수 있습니다.
+
+image:Workload_Map_Detail_Network_Slideout.png["Slideout Network 탭의 상세 예"]
+
+마지막으로, _자산 페이지로 이동 _ 을(를) 선택하면 워크로드에 대한 상세 자산 랜딩 페이지가 열립니다.
+
+image:Workload_Map_Asset_Page.png["워크로드 자산 페이지"]

@@ -1,0 +1,107 @@
+---
+sidebar: sidebar 
+permalink: task_dc_rubrik_cdm.html 
+keywords: data collector, Rubrik, 
+summary: Rubrik CDM 데이터 수집기 구성 
+---
+= Rubrik CDM Data Collector
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights는 Rubrik 데이터 수집기를 사용하여 Rubrik 스토리지 어플라이언스로부터 인벤토리 및 성능 데이터를 가져옵니다.
+
+
+
+== 용어
+
+Data Infrastructure Insights는 Rubrik 데이터 수집기에서 다음 인벤토리 정보를 가져옵니다. Data Infrastructure Insights에서 구입한 각 자산 유형에 대해 이 자산에 사용되는 가장 일반적인 용어가 표시되어 있습니다. 이 데이터 수집기를 보거나 문제를 해결할 때 다음 용어를 염두에 두십시오.
+
+[cols="2*"]
+|===
+| 공급업체/모델 기간 | Data Infrastructure Insights 용어 
+
+
+| 클러스터 | 스토리지, 스토리지 풀 
+
+
+| 노드 | 스토리지 노드 
+
+
+| 디스크 | 디스크 
+|===
+참고: 이러한 용어 매핑은 일반적인 용어 매핑일 뿐이며 이 데이터 소스의 모든 경우를 나타내는 것은 아닙니다.
+
+
+
+== 요구 사항
+
+이 데이터 수집기를 구성하려면 다음이 필요합니다.
+
+* Data Infrastructure Insights 수집 장치가 Rubrik 클러스터에 대한 TCP 포트 443에 대한 연결을 시작합니다. 클러스터당 Collector 1개.
+* Rubrik 클러스터 IP 주소
+* 클러스터에 대한 사용자 이름 및 암호.
+* Rubrik 클러스터 IP 주소 또는 호스트 이름.
+* 기본 인증의 경우 클러스터에 대한 사용자 이름과 암호가 필요합니다. 서비스 계정 기반 인증을 사용하려면 서비스 계정, 암호 및 조직 ID가 필요합니다
+* 포트 요구 사항: HTTPS 443
+
+
+
+
+== 구성
+
+[cols="2*"]
+|===
+| 필드에 입력합니다 | 설명 
+
+
+| IP | Rubrik 클러스터의 IP 주소 
+
+
+| 사용자 이름입니다 | 클러스터의 사용자 이름입니다 
+
+
+| 암호 | 클러스터의 암호입니다 
+|===
+
+
+== 고급 구성
+
+[cols="2*"]
+|===
+| 재고 폴링 간격(분) | 기본값은 60입니다 
+
+
+| 성능 폴링 간격(초) | 기본값은 300입니다 
+|===
+
+
+== 문제 해결
+
+이 데이터 수집기에서 문제가 발생할 경우 다음과 같은 방법을 시도해 보십시오.
+
+
+
+=== 인벤토리
+
+[cols="2*"]
+|===
+| 문제: | 다음을 시도해 보십시오. 
+
+
+| 하나 이상의 저장소가 생성되었다는 메시지가 표시됩니다. | 클러스터가 올바르게 구성되어 있고 수집기가 단일 클러스터를 가리키고 있는지 확인합니다. 
+
+
+| 디스크 API가 더 많은 데이터를 반환한다는 경고가 수신되었습니다 | 추가 데이터를 얻으려면 지원 부서에 문의하십시오. 
+|===
+추가 정보는 페이지 또는 에서 찾을 link:concept_requesting_support.html["지원"]link:reference_data_collector_support_matrix.html["Data Collector 지원 매트릭스"]수 있습니다.

@@ -1,0 +1,127 @@
+---
+sidebar: sidebar 
+permalink: concept_cs_agent_requirements.html 
+summary: Agent로 사용하는 서버 또는 VM은 최소 요구 사항을 충족해야 합니다 
+keywords: agent, Linux, requirements, docker, browsers, permissions, Network, Cloud Secure 
+---
+= 워크로드 보안 에이전트 요구 사항
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+데이터 수집기에서 정보를 얻으려면 사용자가 있어야 link:task_cs_add_agent.html["Agent를 설치합니다"]합니다. Agent를 설치하기 전에 운영 체제, CPU, 메모리 및 디스크 공간 요구 사항을 충족하는지 확인해야 합니다.
+
+[cols="36,60"]
+|===
+| 구성 요소 | Linux 요구 사항 
+
+
+| 운영 체제 | 다음 중 하나의 라이센스 버전을 실행하는 컴퓨터: * CentOS 8 Stream(64비트), CentOS 9 Stream, SELinux * OpenSUSE Leap 15.3 - 15.5(64비트) * Oracle Linux 8.6 - 8.8, 9.1 - 9.4 - 9.4(64비트) * Red Hat Enterprise Linux 8.6 - 9.4 - 9.4, SUSE Linux 9 - 64 비트 Linux * 9.4 - 64 비트 Linux * 9.4, SUSE Linux 8 전용 서버가 권장됩니다. 
+
+
+| 명령 | 설치를 위해 '압축 해제'가 필요합니다. 또한 설치, 스크립트 실행 및 제거에 'SUDO su –' 명령이 필요합니다. 
+
+
+| CPU | CPU 코어 4개 
+
+
+| 메모리 | 16GB RAM 
+
+
+| 사용 가능한 디스크 공간입니다 | 디스크 공간은 /opt/NetApp 36GB(파일 시스템 생성 후 최소 35GB의 여유 공간)와 같은 방식으로 할당되어야 합니다. 참고: 파일 시스템을 생성할 수 있도록 추가 디스크 공간을 할당하는 것이 좋습니다. 파일 시스템에 최소 35GB의 여유 공간이 있는지 확인합니다. /opt가 NAS 스토리지에서 마운트된 폴더인 경우 로컬 사용자가 이 폴더에 액세스할 수 있는지 확인합니다. 로컬 사용자에게 이 폴더에 대한 권한이 없는 경우 Agent 또는 Data Collector가 설치되지 않을 수 있습니다. 자세한 내용은 섹션을 참조하십시오.link:task_cs_add_agent.html#troubleshooting-agent-errors["문제 해결"] 
+
+
+| 네트워크 | 100Mbps~1Gbps 이더넷 연결, 정적 IP 주소, 모든 디바이스에 대한 IP 연결 및 워크로드 보안 인스턴스(80 또는 443)에 대한 필수 포트. 
+|===
+참고: 워크로드 보안 에이전트는 Data Infrastructure Insights 수집 장치 및/또는 에이전트와 동일한 시스템에 설치할 수 있습니다. 그러나 별도의 컴퓨터에 설치하는 것이 가장 좋습니다. 동일한 시스템에 설치된 경우 아래와 같이 디스크 공간을 할당하십시오.
+
+|===
+
+
+| 사용 가능한 디스크 공간입니다 | Linux의 경우 디스크 공간을 50GB~55GB로, /opt/NetApp 25-30 GB/var/log/NetApp 25GB로 할당해야 합니다 
+|===
+
+
+== 추가 권장 사항
+
+* NTP(Network Time Protocol) * 또는 * SNTP(Simple Network Time Protocol) * 를 사용하여 ONTAP 시스템과 에이전트 시스템의 시간을 동기화하는 것이 좋습니다.
+
+
+
+
+== 클라우드 네트워크 액세스 규칙
+
+미국 * 기반 * 워크로드 보안 환경:
+
+[cols="5*"]
+|===
+| 프로토콜 | 포트 | 출처 | 목적지 | 설명 
+
+
+| TCP | 443 | 워크로드 보안 에이전트 | site_name> .cs01.cloudinsights.netapp.com <site_name> .c01.cloudinsights.netapp.com <site_name> .c02.cloudinsights.netapp.com 을 참조하십시오 | Data Infrastructure Insights에 액세스 
+
+
+| TCP | 443 | 워크로드 보안 에이전트 | gateway.c01.cloudinsights.netapp.com agentlogin.cs01.cloudinsights.netapp.com | 인증 서비스에 대한 액세스 
+|===
+유럽 기반 * 워크로드 보안 환경:
+
+[cols="5*"]
+|===
+| 프로토콜 | 포트 | 출처 | 목적지 | 설명 
+
+
+| TCP | 443 | 워크로드 보안 에이전트 | site_name> .cs01-eu-1.cloudinsights.netapp.com <site_name> .c01-eu-1.cloudinsights.netapp.com <site_name> .c02-eu-1.cloudinsights.netapp.com 을 참조하십시오 | Data Infrastructure Insights에 액세스 
+
+
+| TCP | 443 | 워크로드 보안 에이전트 | gateway.c01.cloudinsights.netapp.com agentlogin.cs01-eu-1.cloudinsights.netapp.com | 인증 서비스에 대한 액세스 
+|===
+APAC 기반 * 워크로드 보안 환경의 경우:
+
+[cols="5*"]
+|===
+| 프로토콜 | 포트 | 출처 | 목적지 | 설명 
+
+
+| TCP | 443 | 워크로드 보안 에이전트 | site_name> .cs01-ap-1.cloudinsights.netapp.com <site_name> .c01-ap-1.cloudinsights.netapp.com <site_name> .c02-ap-1.cloudinsights.netapp.com 을 참조하십시오 | Data Infrastructure Insights에 액세스 
+
+
+| TCP | 443 | 워크로드 보안 에이전트 | gateway.c01.cloudinsights.netapp.com agentlogin.cs01-ap-1.cloudinsights.netapp.com | 인증 서비스에 대한 액세스 
+|===
+
+
+== 네트워크 내 규칙
+
+[cols="5*"]
+|===
+| 프로토콜 | 포트 | 출처 | 목적지 | 설명 
+
+
+| TCP | 389(LDAP) 636(LDAPS/START-TLS) | 워크로드 보안 에이전트 | LDAP 서버 URL입니다 | LDAP에 연결합니다 
+
+
+| TCP | 443 | 워크로드 보안 에이전트 | 클러스터 또는 SVM 관리 IP 주소(SVM 수집기 구성에 따라 다름) | ONTAP와의 API 통신 
+
+
+| TCP | 35000-55000 | SVM 데이터 LIF IP 주소 | 워크로드 보안 에이전트 | Fpolicy 이벤트에 대해 ONTAP에서 워크로드 보안 에이전트로의 통신 ONTAP가 워크로드 보안 에이전트(있는 경우)에 방화벽을 포함하여 이벤트를 보내려면 이러한 포트를 워크로드 보안 에이전트에 개방해야 합니다. 이러한 포트를 * 모두 * 예약할 필요는 없지만 이 범위 내에 예약하는 포트가 있어야 합니다. 우선 100개 이하의 포트를 예약하여 필요한 경우 늘리는 것이 좋습니다. 
+
+
+| TCP | 7 | 워크로드 보안 에이전트 | SVM 데이터 LIF IP 주소 | Agent에서 SVM 데이터 LIF로 에코 
+
+
+| SSH를 클릭합니다 | 22 | 워크로드 보안 에이전트 | 클러스터 관리 | CIFS/SMB 사용자 차단에 필요합니다. 
+|===
+
+
+== 시스템 사이징
+
+link:concept_cs_event_rate_checker.html["이벤트 속도 검사기"]크기 조정에 대한 자세한 내용은 설명서를 참조하십시오.

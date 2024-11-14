@@ -1,0 +1,81 @@
+---
+sidebar: sidebar 
+permalink: task_troubleshooting_general_problems.html 
+summary: 일반적인 Data Infrastructure Insights 문제 해결 팁 
+keywords: troubleshooting, problems, browser, login, log in, accessing, access to, Trident, qtree, quota 
+---
+= 일반적인 Data Infrastructure Insights 문제 해결
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+여기에서 Data Infrastructure Insights의 문제 해결을 위한 제안을 찾을 수 있습니다.
+
+link:task_troubleshooting_linux_acquisition_unit_problems.html["Linux 획득 장치 문제 해결"]및 link:task_troubleshooting_windows_acquisition_unit_problems.html["Windows 획득 장치 문제 해결"]을 참조하십시오.
+
+
+
+== 로그인 문제
+
+|===
+| * 문제: * | * 사용해 보세요. * 
+
+
+| Data Infrastructure Insights는 6시간마다 자동으로 로그아웃됩니다 | 이는 비활성화된 브라우저 타사 쿠키가 원인입니다. 사용자는 모든 타사 쿠키를 사용하도록 브라우저를 구성하거나 더 좁은 예외 목록을 사용하여 Data Infrastructure Insights를 사용하도록 설정할 수 있습니다. 예: 브라우저의 설정을 엽니다. "모든 쿠키 허용" 옵션을 선택합니다. * 또는 * "타사 쿠키 차단"을 선택하고 _[\ *.]auth0.com_및 _[ *.]NetApp.com_에 대한 예외를 추가합니다. Microsoft Edge는 Chrome과 동일한 형식의 예외 항목을 접습니다. Firefox에서 쿠키 예외는 간단히 _auth0.com _ 및 _netapp.com _ 로 지정됩니다. 
+
+
+| BlueXP 계정이 있지만 BlueXP에 로그인할 수 없습니다. | 에서 티켓을 엽니다 https://mysupport.netapp.com/site/help[]. "blueXP.netapp.com > 계정/로그인 문제" 또는 "bluexp.netapp.com > 페더레이션 문제" 범주를 선택합니다. 이는 특히 BlueXP 문제 또는 질문을 대상으로 한 것입니다. 기타 모든 Data Infrastructure Insights 기술 지원 문제는 에 문의하십시오link:concept_requesting_support.html["NetApp 지원"]. 
+
+
+| Data Infrastructure Insights에 초대를 받았지만 "인증되지 않음"이라는 메시지가 표시됩니다. | BlueXP 계정에 등록했는지 또는 조직에서 BlueXP를 통해 SSO 로그인을 사용하는지 확인하십시오. BlueXP  프로필 이메일 주소가 Data Infrastructure Insights 시작 이메일에 표시된 이메일 주소와 일치하는지 확인하십시오. 이메일이 일치하지 않으면 올바른 이메일 주소로 새 초대를 요청하십시오. 
+
+
+| BlueXP 에서 로그아웃했고 Data Infrastructure Insights에서 자동으로 로그아웃되었습니다. | NetApp 클라우드 서비스 전체에서 SSO(Single Sign-On)가 모든 Data Infrastructure Insights 세션에서 로그아웃됩니다. 여러 Data Infrastructure Insights 계정에 액세스할 수 있는 경우 한 계정에서 로그아웃하면 모든 활성 세션이 로그아웃됩니다. 계정에 액세스하려면 다시 로그인하십시오. 
+
+
+| 며칠 후에 자동으로 로그아웃되었습니다. | NetApp 클라우드 계정은 며칠 간격으로 다시 인증해야 합니다(현재 BlueXP 설정은 7일). 계정에 액세스하려면 다시 로그인하십시오. 
+
+
+| "더 이상 로그인할 수 없습니다"라는 오류 메시지가 나타납니다. | Data Infrastructure Insights에 대한 액세스 권한을 확인하려면 계정 관리자에게 문의하십시오. BlueXP  프로필 이메일 주소가 Data Infrastructure Insights 시작 이메일에 표시된 이메일 주소와 일치하는지 확인하십시오 
+
+
+| 기타 로그인 오류 | Chrome에서 시크릿 모드를 시도하거나 브라우저 기록, 쿠키 및 캐시를 지웁니다. 다른 브라우저 프로필(예 Chrome - 사람 추가). 
+|===
+
+
+== 기타 문제
+
+|===
+
+
+| * 질문: * | * 답변: * 
+
+
+| Qtree 하드 할당량이 쿼리에 올바르게 표시되지만 소프트 할당량이 볼륨의 총 용량으로 표시됩니다. 맞습니까? | 수동으로 설정하거나 Trident를 통해 설정하는 하드 할당량만 설정된 할당량으로 표시됩니다. 하드 할당량을 지정하지 않으면 Qtree 용량이 내부 볼륨 용량이 됩니다. 
+
+
+| 동일한 Qtree에 수동으로 소프트 할당량과 하드 할당량이 모두 설정되어 있지만 표시되는 총 용량은 하드 할당량입니다. 맞습니까? | 예. 하드 할당량이 지정된 경우 총 용량으로 표시됩니다. 
+
+
+| Cognos 보고서 일정 시간을 입력할 때 일정 시간에 "m"이 추가로 나타나는 경우가 있습니다. 예를 들어 시간을 "02:15 PM"으로 입력하면 "02:15 PMM"(또는 PMM)이라는 추가 문자를 추가할 수 있습니다. 바깥쪽을 클릭하면 "오전 2:15"로 변경됩니다. 보고서를 저장할 수 있지만 저장된 보고서를 다시 열면 일정 시간에 AM 또는 PM을 입력했는지 여부에 관계없이 예약 시간이 오전(예: 오전)으로 표시됩니다. | 예약 시간을 다시 입력하십시오. 전체 "AM" 또는 "PM" 문자를 입력하지 않도록 주의하십시오. "AM"에는 "A"를, "PM"에는 "P"를 입력하면 됩니다. 추가 문자가 표시되지 않으면 예약 시간이 올바르게 설정됩니다. 
+|===
+
+
+== 리소스
+
+추가 문제 해결 정보는 에서 찾을 link:https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Cloud_Insights["NetApp 기술 자료"]수 있습니다(지원 로그인 필요).
+
+추가 지원 정보는 Data Infrastructure Insights  페이지에서 확인할 수 link:concept_requesting_support.html["지원"]있습니다.
+
+활성 Data Infrastructure Insights에 가입되어 있는 경우 다음 지원 옵션을 사용할 수 있습니다.
+
+link:https://www.netapp.com/us/contact-us/support.aspx["전화"] link:https://mysupport.netapp.com/site/cases/mine/create?serialNumber=95001014387268156333["지원 티켓"]
+
+자세한 내용은 를 https://docs.netapp.com/us-en/cloudinsights/concept_requesting_support.html["Data Infrastructure Insights 지원 문서"]참조하십시오.

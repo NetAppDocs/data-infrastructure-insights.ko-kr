@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: task_dc_na_cloud_volumes.html 
+summary: AWS 데이터 수집기에 NetApp Cloud Volumes Services를 구성합니다 
+keywords: data collector, NetApp, Cloud, AWS 
+---
+= AWS용 NetApp Cloud Volumes Services 데이터 수집기
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+이 데이터 수집기는 AWS용 NetApp Cloud Volumes Services 구성의 인벤토리 수집을 지원합니다.
+
+
+
+== 구성
+
+[cols="2*"]
+|===
+| 필드에 입력합니다 | 설명 
+
+
+| Cloud Volumes Region(Cloud Volumes 영역 | NetApp Cloud Volumes Services for AWS의 지역 
+
+
+| API 키 | Cloud Volumes API 키입니다 
+
+
+| 비밀 키 | Cloud Volumes 암호 키입니다 
+|===
+
+
+== 고급 구성
+
+[cols="2*"]
+|===
+| 필드에 입력합니다 | 설명 
+
+
+| 재고 폴링 간격(분) | 기본값은 60분입니다 
+|===
+
+
+== 문제 해결
+
+이 데이터 수집기에서 문제가 발생할 경우 다음과 같은 방법을 시도해 보십시오.
+
+[cols="2*"]
+|===
+| 문제: | 다음을 시도해 보십시오. 
+
+
+| 다음과 유사한 오류가 발생했습니다. '요청을 실행하지 못했습니다. <AWS 지역 끝점 >:8080 [<AWS 지역 끝점 >/AWS 지역 끝점 IP >] 실패: 연결 시간 초과: \https://<AWS 지역 끝점 FQDN >:8080/v1/스토리지/IPRanges HTTP/1.1' | link:task_configure_acquisition_unit.html#proxy-configuration-2["프록시"]Data Infrastructure Insights에서 수집 장치와 통신하는 데 사용되는 은 Data Infrastructure Insights와 Data Collector 자체 간에 통신하지 않습니다. 다음과 같은 몇 가지 방법을 시도해 볼 수 있습니다. 획득 장치가 FQDN을 확인하고 필요한 포트에 도달할 수 있는지 확인하십시오. 프록시가 오류 메시지의 지정된 끝점에 도달할 필요가 없는지 확인합니다. curl(말림)은 획득 장치와 끝점 사이의 통신을 테스트하는 데 사용할 수 있습니다. 이 테스트에 프록시를 사용하고 있지 * 않은지 확인하십시오. 예: root@acquisitionunit #curl-s-H accept: application/json-H "Content-type: application/json" -H API-key:<데이터 수집기 자격 증명에 사용되는 api 키 -H secret-key:link:https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Cloud_Insights/Cloud_Insights_fails_discovery_for_Cloud_Volumes_Service_for_AWS["NetApp KB 문서"]<데이터 수집기 자격 증명에 사용된 비밀 키>-X \https://<AWS 지역 엔드포인트 가져오기>:8080/v1/IP1/스토리지/IPRanges 를 참조하십시오. 
+|===
+이 데이터 수집기에 대한 추가 정보는 페이지 또는 에서 찾을 link:concept_requesting_support.html["지원"]link:reference_data_collector_support_matrix.html["Data Collector 지원 매트릭스"]수 있습니다.

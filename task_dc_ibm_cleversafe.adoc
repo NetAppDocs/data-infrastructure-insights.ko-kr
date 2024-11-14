@@ -1,0 +1,95 @@
+---
+sidebar: sidebar 
+permalink: task_dc_ibm_cleversafe.html 
+keywords: data collector, IBM Cleversafe 
+summary: IBM Cleversafe 데이터 수집기 구성 
+---
+= IBM Cleversafe 데이터 수집기
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights는 이 데이터 수집기를 사용하여 IBM Cleversafe 스토리지 시스템의 인벤토리 및 성능 데이터를 검색합니다.
+
+
+NOTE: IBM Cleversafe는 관리 단위 비율과 다른 원시 TB로 측정되었습니다. 포맷되지 않은 IBM Cleversafe 용량은 40TB마다 1로 충전됩니다.link:concept_subscribing_to_cloud_insights.html#pricing["관리 장치(MU)"]
+
+
+
+== 용어
+
+Data Infrastructure Insights는 IBM Cleversafe 데이터 수집기에서 다음과 같은 인벤토리 정보를 수집합니다. Data Infrastructure Insights에서 구입한 각 자산 유형에 대해 이 자산에 사용되는 가장 일반적인 용어가 표시되어 있습니다. 이 데이터 수집기를 보거나 문제를 해결할 때 다음 용어를 염두에 두십시오.
+
+[cols="2*"]
+|===
+| 공급업체/모델 기간 | Data Infrastructure Insights 용어 
+
+
+| 스토리지 풀 | 스토리지 풀 
+
+
+| 컨테이너 | 내부 볼륨 
+
+
+| 컨테이너 | 파일 공유 
+
+
+| NFS 공유 | 공유 
+|===
+참고: 이러한 용어 매핑은 일반적인 용어 매핑일 뿐이며 이 데이터 수집기의 모든 경우를 나타내는 것은 아닙니다.
+
+
+
+== 요구 사항
+
+* 클러스터의 외부 데이터 서비스 IP 주소입니다
+* 관리자 사용자 이름 및 암호
+* 포트 9440
+
+
+
+
+== 구성
+
+[cols="2*"]
+|===
+| 필드에 입력합니다 | 설명 
+
+
+| 관리자 IP 또는 호스트 이름입니다 | 관리 노드의 IP 주소 또는 호스트 이름입니다 
+
+
+| 사용자 이름입니다 | 수퍼 사용자 또는 시스템 관리자 역할을 가진 사용자 계정의 사용자 이름입니다 
+
+
+| 암호 | 슈퍼 사용자 또는 시스템 관리자 역할을 가진 사용자 계정의 암호입니다 
+|===
+
+
+== 고급 구성
+
+[cols="2*"]
+|===
+| 필드에 입력합니다 | 설명 
+
+
+| 재고 폴링 간격(분) | 재고 조사 사이의 간격입니다. 
+
+
+| HTTP 연결 시간 초과(초) | HTTP 제한 시간(초) 
+|===
+
+
+== 문제 해결
+
+이 데이터 수집기에 대한 추가 정보는 페이지 또는 에서 찾을 link:concept_requesting_support.html["지원"]link:reference_data_collector_support_matrix.html["Data Collector 지원 매트릭스"]수 있습니다.

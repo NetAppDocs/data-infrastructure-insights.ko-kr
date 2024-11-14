@@ -1,0 +1,567 @@
+---
+sidebar: sidebar 
+permalink: ws_manually_installing_agent_and_collector.html 
+keywords: install, configure, agent, collector, workload, security, cloud secure 
+summary: 작업 부하 보안 에이전트는 수동으로 설치 또는 업데이트할 수 있으므로 사용자 환경에 설치된 소프트웨어를 보다 효율적으로 제어할 수 있습니다. 
+---
+= 워크로드 보안 에이전트 및 수집기를 수동으로 설치합니다
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+기본적으로 새 버전의 Workload Security Agent 또는 Collector를 사용할 수 있으면 업그레이드 전 알림이 전송되고 에이전트와 수집기는 사용자 환경에서 자동으로 업데이트됩니다. 그러나 보안이 통제되는 환경에서는 자동 업그레이드를 원하지 않을 수 있습니다. 이러한 경우 에이전트 및 수집기의 수동 설치/업그레이드를 위해 워크로드 보안을 구성할 수 있으므로 시스템에 설치된 소프트웨어를 보다 효율적으로 제어할 수 있습니다.
+
+
+
+== 시작하기 전에
+
+. swagger에서 "cloudsecure_installers.agent" 및 "cloudsecure_installers.collector"라는 API 범주를 사용할 수 있는지 확인합니다. 그렇지 않은 경우 수동 에이전트 설치에 대한 지원이 활성화되지 않습니다. 이 기능을 활성화하려면 NetApp 지원에 문의하십시오.
++
+image:ws_manual_install_APIs.png["API 수동 설치"]
+
+. 이 문서에 언급된 모든 명령을 '루트' 사용자로 실행하거나, 다른 사용자와 함께 실행하는 경우 'SUDO'로 명령을 실행합니다.
+
+
+
+
+== 새 에이전트 설치
+
+. 새 워크로드 보안 API 액세스 토큰을 생성합니다.
++
+.. Admin > API Access * 로 이동합니다. "Workload Security Tokens" 탭을 선택하고 "+API Access Token"을 클릭합니다.
++
+... 쉽게 식별할 수 있는 이름 및 설명을 설정합니다.
+... "이 토큰을 호출하는 데 사용할 API 유형" 드롭다운에서 _Collector Management_ 및 _Agent & Collector 설치 _ 를 선택합니다.
+... 원하는 만료 기간을 선택합니다.
+
+
+.. Save(저장) 를 클릭합니다.
+
+
+
+
+[[copy-access-token]]
+. 생성된 API 액세스 토큰을 복사합니다. 창이 닫히면 토큰을 더 이상 검색할 수 없습니다. 이 경우 새 토큰을 생성해야 합니다.
++
+image:ws_create_and_save_token.png["API 토큰을 생성하고 저장합니다"]
+
++
+image:ws_create_and_save_token_confirm.png["토큰 생성을 확인합니다"]
+
++
+.. Admin > API Access > API Documentation * (페이지 오른쪽 상단)으로 이동하고 _Workload Security_icon 을 선택합니다. 그러면 워크로드 보안 API에 대한 Swagger 문서가 열립니다.
++
+image:ws_swagger_documentation_link.png["워크로드 보안에 대한 Swagger 문서"]
+
+.. _Workload Security_API에 대한 액세스 권한을 부여합니다.
+
+
+. 페이지 오른쪽 상단에 있는 _authorize_ 버튼을 클릭합니다.
+. Customer ApiKey(apiKey)_text 필드에 이전에 복사한 API 토큰을 붙여 <<copy-access-token,1c단계>>넣습니다.
+. authorize_를 클릭하고 창을 닫습니다.
++
+image:ws_API_authorization.png["API를 인증합니다"]
+
++
+.. Agent 설치 프로그램을 다운로드합니다.
+
+
+. Swagger에서 _cloudsecure_installers.agent_>_/v1/cloudsecure/agent/installers/{platform}/latest_(get) API를 선택합니다. 클릭_시험_을(를) 클릭하십시오.
+. platform_필드에 _linux_를 입력합니다. 실행 _ 을(를) 클릭합니다.
++
+image:ws_installers_agent_api_swagger.png["에이전트 설치 프로그램 API-TOP용 Swagger"] image:ws_installers_agent_api_swagger-2.png["에이전트 설치 관리자 API 응답용 Swagger"]
+
+. '파일 다운로드'를 클릭하여 설치 프로그램을 다운로드합니다.
+. 설치 관리자 파일이 에이전트를 설치할 시스템이 아닌 다른 컴퓨터에 외부에서 다운로드된 경우 설치 관리자 파일을 해당 시스템에 복사합니다.
+. 또는 curl 명령을 복사하여 에이전트가 설치되어야 하는 시스템에서 직접 실행할 수 있습니다.
++
+** curl 명령에 "-o{{file_name}}" 인수를 추가하여 원하는 이름으로 설치 프로그램 파일을 저장합니다. 설치 관리자 파일의 실제 이름은 swagger 응답 헤더 섹션에서 찾을 수 있습니다. 해당 이름을 사용할 수도 있습니다.
++
+image:ws_installers_agent_api_swagger_installer_file.png["API-Swagger를 통해 최신 에이전트 선택"]
+
+** 파일을 원하는 위치에 다운로드할 수 있지만 uninstaller.zip의 압축을 풀 수 있는 빈 폴더에 다운로드하는 것이 좋습니다.
++
+... 새 폴더를 만들고(권장), 설치 프로그램 파일을 이 폴더에 복사하고 압축을 풉니다.
++
+[listing]
+----
+[root@demo-agent /]# mkdir agent_installers
+[root@demo-agent /]# cd agent_installers/
+[root@demo-agent agent_installers]# pwd
+/agent_installers
+[root@demo-agent agent_installers]# ll
+total 0
+[root@demo-agent agent_installers]# curl -X GET "https://netapp-demo.dev.cloudsecure.netapp.com/rest/v1/cloudsecure/agents/installers/linux/latest" -H "accept: application/octet-stream" -H "X-CloudInsights-ApiKey: <<API Access Token>>" -o cloudsecure-linux-agent-installer-1.617.0.zip
+[root@demo-agent agent_installers]# ll
+total 76012
+-rw------- 1 root root 77834705 Apr 26 14:34 cloudsecure-linux-agent-installer-1.617.0.zip
+----
++
+[listing]
+----
+[root@demo-agent agent_installers]# unzip cloudsecure-linux-agent-installer-1.617.0.zip
+Archive:  cloudsecure-linux-agent-installer-1.617.0.zip
+  inflating: cloudsecure-agent-image.zip
+  inflating: cloudsecure-agent-install.sh
+  inflating: cloudsecure-agent-upgrade.sh
+----
+... "cloudsecure-agent-install.sh" 파일에 대한 set_execute_permission.
++
+[listing]
+----
+[root@demo-agent agent_installers]# chmod +x cloudsecure-agent-install.sh
+[root@demo-agent agent_installers]# ll
+total 153344
+-rw------- 1 root root 79154250 Apr 26 06:37 cloudsecure-agent-image.zip
+-rwx------ 1 root root    16574 Apr 26 06:25 cloudsecure-agent-install.sh
+-rw------- 1 root root     8586 Apr 26 06:25 cloudsecure-agent-upgrade.sh
+-rw------- 1 root root 77834705 Apr 26 14:34 cloudsecure-linux-agent-installer-1.617.0.zip
+
+----
+... 새 에이전트 설치를 위한 일회성 토큰을 생성합니다.
++
+참고: 이 단계에서 생성된 일회성 토큰은 에서 생성된 API 액세스 토큰과 다릅니다<<copy-access-token,1c단계>>.
+
+
+
+
+
+. Swagger에서 execute_cloudsecure_installers.agent>/v1/cloudsecure/agent/oneTimeToken_api를 실행하고 응답에서 토큰을 복사합니다.
++
+.. 1회 토큰을 환경 변수로 내보냅니다.
++
+[listing]
+----
+[root@demo-agent ~]# export TOKEN=<<one time token generated in step 7>>
+----
+.. 프록시 서버를 사용하는 경우 https_proxy를 아래에 설명된 형식의 환경 변수로 내보냅니다.
++
+[listing]
+----
+[root@demo-agent ~]# export HTTPS_PROXY='USER:PASSWORD@PROXY_SERVER:PORT'
+----
+.. 선택 사항: 기본적으로 에이전트 및 수집기는 "/opt/NetApp" 경로에 설치됩니다. 다른 경로에 설치하려면 다음 환경 변수를 설정하십시오."
++
+[listing]
+----
+[root@demo-agent ~]# export AGENT_INSTALL_PATH=/test_user/apps
+----
++
+참고: 사용자 지정 경로에 설치된 경우 데이터 수집기 및 에이전트 로그와 같은 기타 모든 아티팩트는 사용자 지정 경로 내에만 생성됩니다. 설치 로그는 -_/var/log/NetApp/cloudsecure/install_에 계속 남아 있습니다.
+
+.. 에이전트 설치 프로그램을 다운로드한 디렉터리로 돌아가서 "cloudsecure-agent-install.sh"를 실행합니다.
++
+[listing]
+----
+[root@demo-agent agent_installers]# ./ cloudsecure-agent-install.sh
+----
++
+참고: 사용자가 “bash” 셸에서 실행되고 있지 않으면 내보내기 명령이 작동하지 않을 수 있습니다. 이 경우 8단계부터 11단계까지 결합하여 아래와 같이 실행할 수 있습니다. HTTPS_PROXY 및 AGENT_INSTALL_PATH는 선택 사항이며 필요하지 않은 경우 무시할 수 있습니다.
+
++
+[listing]
+----
+sudo /bin/bash -c "TOKEN=<<one time token generated in step 7>> HTTPS_PROXY=<<proxy details in the format mentioned in step 9>> AGENT_INSTALL_PATH=<<custom_path_to_install_agent>> ./cloudsecure-agent-install.sh"
+----
++
+이 때 에이전트가 성공적으로 설치되어야 합니다.
+
+.. 에이전트 설치를 위한 상태 점검:
+
+
+. "systemctl status cloudsecure-agent.service” 실행하고 에이전트 서비스가 _running_state에 있는지 확인합니다.
++
+[listing]
+----
+[root@demo-agent ~]# systemctl status cloudsecure-agent.service
+ cloudsecure-agent.service - Cloud Secure Agent Daemon Service
+   Loaded: loaded (/usr/lib/systemd/system/cloudsecure-agent.service; enabled; vendor preset: disabled)
+   Active: active (running) since Fri 2024-04-26 02:50:37 EDT; 12h ago
+ Main PID: 15887 (java)
+    Tasks: 72
+   CGroup: /system.slice/cloudsecure-agent.service
+           ├─15887 java -Dconfig.file=/test_user/apps/cloudsecure/agent/conf/application.conf -Dagent.proxy.host= -Dagent.proxy.port= -Dagent.proxy.user= -Dagent.proxy.password= -Dagent.env=prod -Dagent.base.path=/test_user/apps/cloudsecure/agent -...
+
+----
+. 상담원은 "상담원" 페이지에 표시되고 '연결됨' 상태여야 합니다.
++
+image:ws_agentsPageShowingConnected.png["연결된 에이전트를 표시하는 UI"]
+
++
+.. 설치 후 정리.
+
+
+. 에이전트 설치에 성공하면 다운로드한 에이전트 설치 관리자 파일을 삭제할 수 있습니다.
+
+
+
+
+== 새 데이터 수집기를 설치합니다.
+
+참고: 이 문서에는 "ONTAP SVM data collector"를 설치하는 지침이 포함되어 있습니다. "Cloud Volumes ONTAP 데이터 수집기" 및 "Amazon FSx for NetApp ONTAP 데이터 수집기"에도 동일한 단계가 적용됩니다.
+
+. Collector를 설치해야 하는 시스템으로 이동하여 "/tmp" 디렉토리 아래에 "Collector"라는 디렉토리를 생성합니다.
++
+[listing]
+----
+[root@demo-agent ~]# mkdir -p /tmp/collectors
+----
+. “Collector” 디렉토리의 소유권을 “cssys:cssys”(에이전트 설치 중에 cssys 사용자 및 그룹이 생성됨)로 변경합니다.
++
+[listing]
+----
+[root@demo-agent /]# chown cssys:cssys /tmp/collectors
+[root@demo-agent /]# cd /tmp/
+[root@demo-agent tmp]# ll | grep collectors
+drwx------ 2 cssys         cssys 4096 Apr 26 15:56 collectors
+
+----
+. 이제 Collector 버전과 UUID를 가져와야 합니다. "cloudsecure_config.collector-types" API로 이동합니다.
+. "cloudsecure_config.collector-types>/v1/cloudsecure/collector-types"(get) API 로 이동합니다. “collectorCategory” 드롭다운에서 수집기 유형을 “data”로 선택합니다. 모든 수집기 유형 세부 정보를 가져오려면 "모두"를 선택하십시오.
+. 필요한 Collector 유형의 UUID를 복사합니다.
++
+image:ws_collectorAPIShowingUUID.png["UUID를 표시하는 Collector API 응답입니다"]
+
+. Collector 설치 프로그램을 다운로드합니다.
++
+.. "cloudsecure_installers.collector>/v1/cloudsecure/collector-types/installers/{collectorTypeUUID}"(get) API로 이동합니다. 이전 단계에서 복사한 UUID를 입력하고 설치 관리자 파일을 다운로드합니다.
++
+image:ws_downloadCollectorByUUID.png["UUID로 Collector를 다운로드하는 API입니다"]
+
+.. 설치 관리자 파일이 다른 컴퓨터에 외부에서 다운로드되면 설치 관리자 파일을 에이전트가 실행 중인 시스템에 복사하고 "/tmp/collectors" 디렉토리에 저장합니다.
+.. 또는 동일한 API에서 curl 명령을 복사하여 Collector를 설치할 시스템에서 직접 실행할 수 있습니다.
++
+파일 이름은 다운로드 수집기 API의 응답 헤더에 있는 것과 동일해야 합니다. 아래 스크린샷을 참조하십시오.
+
++
+image:ws_curl_command.png["난독 처리된 토큰을 보여 주는 Curl 명령의 예"]
+
++
+[listing]
+----
+[root@demo-agent collectors]# pwd
+/tmp/collectors
+[root@demo-agent collectors]# curl -X GET "https://netapp-demo.dev.cloudsecure.netapp.com/rest/v1/cloudsecure/collector-types/installers/1829df8a-c16d-45b1-b72a-ed5707129870" -H "accept: application/octet-stream" -H "X-CloudInsights-ApiKey: <<API Access Token>>" -o cs-ontap-dsc_1.286.0.zip
+
+-rw------- 1 root root 50906252 Apr 26 16:11 cs-ontap-dsc_1.286.0.zip
+[root@demo-agent collectors]# chown cssys:cssys cs-ontap-dsc_1.286.0.zip
+[root@demo-agent collectors]# ll
+total 49716
+-rw------- 1 cssys cssys 50906252 Apr 26 16:11 cs-ontap-dsc_1.286.0.zip
+----
+
+
+. Workload Security > Collector * 로 이동하고 * + Collector * 를 선택합니다. ONTAP SVM_collector를 선택합니다.
+. Collector 세부 정보 및 _Save_the Collector를 구성합니다.
+. “Save(저장)”를 클릭하면 에이전트 프로세스가 "/tmp/Collectors/" 디렉터리에서 Collector 설치 프로그램을 찾아 Collector를 설치합니다.
+. 대체 옵션으로 UI를 통해 Collector를 추가하는 대신 API를 통해서도 추가할 수 있습니다.
++
+.. "cloudsecure_config.collectors"> "/v1/cloudsecure/collectors"(POST) API로 이동합니다.
+.. 예 드롭다운에서 "ONTAP SVM data collector json sample"를 선택하고, collector 구성 세부 정보를 업데이트하고, Execute를 선택합니다.
++
+image:ws_API_add_collector.png["Collector를 추가할 API입니다"]
+
+
+
+. 이제 '데이터 수집기' 섹션 아래에 수집기가 표시됩니다.
++
+image:ws_collectorPageList.png["수집기를 보여 주는 UI 목록 페이지"]
+
+. 설치 후 정리.
++
+.. Collector 설치에 성공하면 "/tmp/Collector" 디렉토리의 모든 파일을 삭제할 수 있습니다.
+
+
+
+
+
+
+== 새 사용자 디렉터리 수집기를 설치하는 중입니다
+
+참고: 이 문서에서는 LDAP Collector를 설치하는 단계에 대해 설명했습니다. AD Collector 설치에도 동일한 단계가 적용됩니다.
+
+. Collector를 설치해야 하는 시스템으로 이동하여 "/tmp" 디렉토리 아래에 "Collector"라는 디렉토리를 생성합니다.
++
+[listing]
+----
+[root@demo-agent ~]# mkdir -p /tmp/collectors
+[root@demo-agent /]# chown cssys:cssys /tmp/collectors
+[root@demo-agent /]# cd /tmp/
+[root@demo-agent tmp]# ll | grep collectors
+drwx------ 2 cssys         cssys 4096 Apr 26 15:56 collectors
+----
+. 이제 Collector의 버전과 UUID를 가져와야 합니다. "cloudsecure_config.collector-types" API로 이동합니다. collectorCategory 드롭다운에서 수집기 유형을 "user"로 선택합니다. 단일 요청에서 모든 수집기 유형 세부 정보를 가져오려면 "모두"를 선택하십시오.
++
+image:ws_API_collector_all.png["API를 사용하여 모든 수집기를 가져옵니다"]
+
+. LDAP 수집기의 UUID를 복사합니다.
++
+image:ws_LDAP_collector_UUID.png["LDAP 수집기 UUID를 보여 주는 API 응답입니다"]
+
+. Collector 설치 프로그램을 다운로드합니다.
++
+.. "cloudsecure_installers.collector"> "/v1/cloudsecure/collector-types/installers/{collectorTypeUUID}"(GET) API로 이동합니다. 이전 단계에서 복사한 UUID를 입력하고 설치 관리자 파일을 다운로드합니다.
++
+image:ws_LDAP_collector_UUID_download.png["API 및 다운로드 수집기에 대한 응답입니다"]
+
+.. 설치 관리자 파일이 다른 컴퓨터에 외부에서 다운로드되면 설치 관리자 파일을 에이전트가 실행 중인 시스템과 "/tmp/collectors" 디렉토리에 복사합니다.
+.. 또는 동일한 API에서 curl 명령을 복사하여 Collector를 설치해야 하는 시스템에서 직접 실행할 수 있습니다.
++
+파일 이름은 다운로드 수집기 API의 응답 헤더에 있는 것과 동일해야 합니다. 아래 스크린샷을 참조하십시오.
+
++
+image:ws_curl_command.png["curl 명령 API"]
+
+
+
++
+[listing]
+----
+[root@demo-agent collectors]# pwd
+/tmp/collectors
+[root@demo-agent collectors]# curl -X GET "https://netapp-demo.dev.cloudsecure.netapp.com/rest/v1/cloudsecure/collector-types/installers/37fb37bd-6078-4c75-a64f-2b14cb1a1eb1" -H "accept: application/octet-stream" -H "X-CloudInsights-ApiKey: <<API Access Token>>" -o cs-ldap-dsc_1.322.0.zip
+----
+. Collector 설치 프로그램 zip 파일의 소유권을 cssys:cssys로 변경합니다.
++
+[listing]
+----
+[root@demo-agent collectors]# ll
+total 37156
+-rw------- 1 root root 38045966 Apr 29 10:02 cs-ldap-dsc_1.322.0.zip
+[root@demo-agent collectors]# chown cssys:cssys cs-ldap-dsc_1.322.0.zip
+[root@demo-agent collectors]# ll
+total 37156
+-rw------- 1 cssys cssys 38045966 Apr 29 10:02 cs-ldap-dsc_1.322.0.zip
+
+----
+. '사용자 디렉터리 수집기' 페이지로 이동하고 '+사용자 디렉터리 수집기'를 클릭합니다.
++
+image:ws_user_directory_collector.png["사용자 디렉토리 수집기를 추가하는 중입니다"]
+
+. 'LDAP Directory Server'를 선택합니다.
++
+image:ws_LDAP_user_select.png["LDAP 사용자를 선택하기 위한 UI 창입니다"]
+
+. LDAP Directory Server 세부 정보를 입력하고 '저장'을 클릭합니다
++
+image:ws_LDAP_user_Details.png["LDAP 사용자 세부 정보를 보여 주는 UI"]
+
+. “Save(저장)”를 클릭하면 에이전트 서비스가 "/tmp/Collectors/" 디렉터리에서 Collector 설치 프로그램을 찾아 Collector를 설치합니다.
+. 대체 옵션으로 UI를 통해 Collector를 추가하는 대신 API를 통해서도 추가할 수 있습니다.
++
+.. "cloudsecure_config.collectors"> "/v1/cloudsecure/collectors"(POST) API로 이동합니다.
+.. 예제 드롭다운에서 "LDAP Directory Server user collector json sample"(LDAP 디렉터리 서버 사용자 수집기 json sample)"을 선택하고 Collector 구성 세부 정보를 업데이트한 다음 "Execute(실행)"를 클릭합니다.
++
+image:ws_API_LDAP_Collector.png["LDAP Collector용 API"]
+
+
+
+. 이제 컬렉터가 "User Directory Collector" 섹션에 표시됩니다.
++
+image:ws_LDAP_collector_list.png["UI의 LDAP Collector 목록입니다"]
+
+. 설치 후 정리.
++
+.. Collector 설치에 성공하면 "/tmp/Collector" 디렉토리의 모든 파일을 삭제할 수 있습니다.
+
+
+
+
+
+
+== 에이전트 업그레이드
+
+에이전트/수집기의 새 버전을 사용할 수 있을 때 이메일 알림이 전송됩니다.
+
+. 최신 에이전트 설치 프로그램을 다운로드합니다.
++
+.. 최신 설치 프로그램을 다운로드하는 단계는 “새 에이전트 설치”의 단계와 유사합니다. swagger에서 "cloudsecure_installers.agent"> "/v1/cloudsecure/agent/installers/{platform}/latest" api를 선택하고 플랫폼을 "linux"로 입력한 다음 설치 프로그램 zip 파일을 다운로드합니다. 또는 curl 명령을 사용할 수도 있습니다. 설치 프로그램 파일의 압축을 풉니다.
+
+
+. "cloudsecure-agent-upgrade.sh" 파일에 대한 실행 권한을 설정합니다.
++
+[listing]
+----
+[root@demo-agent agent_installers]# unzip cloudsecure-linux-agent-installer-1.618.0.zip
+Archive:  cloudsecure-linux-agent-installer-1.618.0.zip
+  inflating: cloudsecure-agent-image.zip
+  inflating: cloudsecure-agent-install.sh
+  inflating: cloudsecure-agent-upgrade.sh
+[root@demo-agent agent_installers]# ll
+total 153344
+-rw------- 1 root root 79154230 Apr 26  2024 cloudsecure-agent-image.zip
+-rw------- 1 root root    16574 Apr 26  2024 cloudsecure-agent-install.sh
+-rw------- 1 root root     8586 Apr 26  2024 cloudsecure-agent-upgrade.sh
+-rw------- 1 root root 77834660 Apr 26 17:35 cloudsecure-linux-agent-installer-1.618.0.zip
+[root@demo-agent agent_installers]# chmod +x cloudsecure-agent-upgrade.sh
+[root@demo-agent agent_installers]# ll
+total 153344
+-rw------- 1 root root 79154230 Apr 26  2024 cloudsecure-agent-image.zip
+-rw------- 1 root root    16574 Apr 26  2024 cloudsecure-agent-install.sh
+-rwx------ 1 root root     8586 Apr 26  2024 cloudsecure-agent-upgrade.sh
+-rw------- 1 root root 77834660 Apr 26 17:35 cloudsecure-linux-agent-installer-1.618.0.zip
+
+----
+. "cloudsecure-agent-upgrade.sh" 스크립트를 실행합니다. 스크립트가 성공적으로 실행되면 출력에 "Cloudsecure 에이전트가 성공적으로 업그레이드되었습니다."라는 메시지가 인쇄됩니다.
+. 다음 명령 'systemctl daemon -reload'를 실행합니다
++
+[listing]
+----
+[root@demo-agent ~]# systemctl daemon-reload
+----
+. 에이전트 서비스를 다시 시작합니다.
++
+[listing]
+----
+[root@demo-agent ~]# systemctl restart cloudsecure-agent.service
+----
++
+이 시점에서 에이전트가 성공적으로 업그레이드되어야 합니다.
+
+. 에이전트 업그레이드 후 상태 점검
++
+.. 에이전트가 설치된 경로로 이동합니다(예: "/opt/NetApp/cloudsecure/"). symlink “에이전트”는 에이전트의 새 버전을 가리켜야 합니다.
++
+[listing]
+----
+[root@demo-agent cloudsecure]# pwd
+/opt/netapp/cloudsecure
+[root@demo-agent cloudsecure]# ll
+total 40
+lrwxrwxrwx  1 cssys cssys  114 Apr 26 17:38 agent -> /test_user/apps/cloudsecure/cloudsecure-agent-1.618.0
+drwxr-xr-x  4 cssys cssys 4096 Apr 25 10:45 agent-certs
+drwx------  2 cssys cssys 4096 Apr 25 16:18 agent-logs
+drwx------ 11 cssys cssys 4096 Apr 26 02:50 cloudsecure-agent-1.617.0
+drwx------ 11 cssys cssys 4096 Apr 26 17:42 cloudsecure-agent-1.618.0
+drwxr-xr-x  3 cssys cssys 4096 Apr 26 02:45 collector-image
+drwx------  2 cssys cssys 4096 Apr 25 10:45 conf
+drwx------  3 cssys cssys 4096 Apr 26 16:39 data-collectors
+-rw-r--r--  1 root  root    66 Apr 25 10:45 sysctl.conf.bkp
+drwx------  2 root  root  4096 Apr 26 17:38 tmp
+
+----
+.. 상담원은 "상담원" 페이지에 표시되고 '연결됨' 상태여야 합니다.
++
+image:ws_agentsPageShowingConnected.png["연결된 상담원을 표시하는 UI"]
+
+
+
+. 설치 후 정리.
++
+.. 에이전트 설치에 성공하면 다운로드한 에이전트 설치 관리자 파일을 삭제할 수 있습니다.
+
+
+
+
+
+
+== Collector 업그레이드 중
+
+참고: 업그레이드 단계는 모든 유형의 Collector에 대해 동일합니다. 이 문서에서는 "ONTAP SVM" 수집기 업그레이드를 시연합니다.
+
+. Collector를 업그레이드해야 하는 시스템으로 이동하여 "/tmp/collectors" 디렉토리가 없는 경우 생성합니다.
++
+[listing]
+----
+mkdir -p /tmp/collectors
+----
+. "Collector" 디렉토리가 _cssys:cssys_에 의해 소유되었는지 확인하십시오.
++
+[listing]
+----
+[root@demo-agent /]# chown cssys:cssys /tmp/collectors
+[root@demo-agent /]# cd /tmp/
+[root@demo-agent tmp]# ll | grep collectors
+drwx------ 2 cssys         cssys 4096 Apr 26 15:56 collectors
+
+----
+. swagger에서 "cloudsecure_config.collector-types" get API로 이동합니다. "collectorCategory" 드롭다운에서 "data"를 선택합니다(사용자 디렉토리 수집기의 경우 "user"를 선택하거나 "all"을 선택).
++
+응답 본문에서 UUID 및 버전을 복사합니다.
+
++
+image:ws_collector_uuid_and_version.png["Collector UUID 및 버전이 강조 표시된 API 응답입니다"]
+
+. 최신 Collector 설치 프로그램 파일을 다운로드합니다.
++
+.. "cloudsecure_installers.collector"> "/v1/cloudsecure/collector-types/installers/{collectorTypeUUID}" API로 이동합니다. 이전 단계에서 복사한 "collectorTypeUUID"를 입력하십시오. 설치 프로그램을 "/tmp/collectors" 디렉토리에 다운로드합니다.
+.. 또는 동일한 API의 curl 명령을 사용할 수도 있습니다.
++
+image:ws_curl_command_only.png["curl 명령 예"]
+
++
+참고: 파일 이름은 다운로드 수집기 API의 응답 헤더에 있는 것과 같아야 합니다.
+
+
+
+. Collector 설치 프로그램 zip 파일의 소유권을 cssys:cssys로 변경합니다.
++
+[listing]
+----
+[root@demo-agent collectors]# ll
+total 55024
+-rw------- 1 root root 56343750 Apr 26 19:00 cs-ontap-dsc_1.287.0.zip
+[root@demo-agent collectors]# chown cssys:cssys cs-ontap-dsc_1.287.0.zip
+[root@demo-agent collectors]# ll
+total 55024
+-rw------- 1 cssys cssys 56343750 Apr 26 19:00 cs-ontap-dsc_1.287.0.zip
+
+----
+. 업그레이드 Collector API를 트리거합니다.
++
+.. swagger에서 "cloudsecure_installers.collector"> "/v1/cloudsecure/collector-types/upgrade"(PUT) API로 이동하십시오.
+.. "Examples" 드롭다운에서 "ONTAP SVM data collector upgrade json sample"을 선택하여 샘플 페이로드를 채웁니다.
+.. 에서 복사한 버전으로 버전을 <<copy-access-token,3단계>>교체하고 '실행'을 클릭합니다.
++
+image:ws_svm_ontap_collector_upgrade_example_json.png["Swagger UI의 SVM 업그레이드 예"]
+
++
+몇 초 동안 기다립니다. 수집기가 자동으로 업그레이드됩니다.
+
+
+
+. 상태 점검.
++
+수집기는 UI에서 실행 중이어야 합니다.
+
+. 업그레이드 후 정리:
++
+.. Collector 업그레이드에 성공하면 "/tmp/Collector" 디렉토리의 모든 파일을 삭제할 수 있습니다.
+
+
+
+
+다른 유형의 수집기도 업그레이드하려면 위의 단계를 반복합니다.
+
+
+
+== Commons 문제 및 수정 사항.
+
+. AGENT014 오류
++
+이 오류는 수집기 설치 파일이 "/tmp/collectors" 디렉토리에 없거나 액세스할 수 없는 경우에 발생합니다. 설치 프로그램 파일이 다운로드되었고 디렉터리 "Collector" 및 설치 관리자 zip 파일이 cssys:cssys에 의해 소유되었는지 확인하고 에이전트 서비스를 다시 시작합니다. "systemctl restart cloudsecure-agent.service”
+
++
+image:ws_agent014_error.png["\"agent 014\" 오류 호버 팁을 보여 주는 UI 화면"]
+
+. 승인되지 않은 오류입니다
++
+[listing]
+----
+{
+  "errorMessage": "Requested public API is not allowed to be accessed by input API access token.",
+  "errorCode": "NOT_AUTHORIZED"
+}
+
+----
++
+이 오류는 모든 필수 API 범주를 선택하지 않고 API 액세스 토큰이 생성된 경우 표시됩니다. 필요한 모든 API 범주를 선택하여 새 API 액세스 토큰을 생성합니다.
+
+

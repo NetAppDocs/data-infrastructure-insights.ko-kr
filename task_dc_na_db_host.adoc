@@ -1,0 +1,67 @@
+---
+sidebar: sidebar 
+permalink: task_dc_na_db_host.html 
+keywords: data collector, generic db 
+summary: 일반 DB 호스트 확인자 수집기입니다 
+---
+= NetApp 일반 DB 호스트 확인자
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+이 데이터 수집기는 재고를 획득합니다
+
+
+
+== 용어
+
+Data Infrastructure Insights가 이 수집기의 인벤토리를 가져옵니다.
+
+
+
+== 구성
+
+[cols="2*"]
+|===
+| 필드에 입력합니다 | 설명 
+
+
+| DB 서버 IP 주소입니다 | DB 서버의 IP 주소입니다 
+
+
+| DB 서버 포트 | 기본값은 3306입니다 
+
+
+| 검증된 드라이버 클래스 이름 | 드라이버의 클래스 이름입니다. 
+
+
+| JDBC 드라이버 URL입니다 | 드라이버의 URL입니다 
+
+
+| SQL 쿼리 | 테이블에서 데이터를 반환하는 데 사용되는 쿼리입니다 
+|===
+
+
+== 고급 구성
+
+[cols="2*"]
+|===
+| 필드에 입력합니다 | 설명 
+
+
+| 재고 조사 간격(분) | 기본값은 60분입니다 
+
+
+| SSL 연결을 활성화합니다 | SSL을 통한 연결을 활성화하려면 선택합니다 
+
+
+| WWN 별칭을 보고합니다 | WWN 별칭을 보고하려면 선택합니다 
+|===
+추가 정보는 페이지 또는 에서 찾을 link:concept_requesting_support.html["지원"]link:reference_data_collector_support_matrix.html["Data Collector 지원 매트릭스"]수 있습니다.

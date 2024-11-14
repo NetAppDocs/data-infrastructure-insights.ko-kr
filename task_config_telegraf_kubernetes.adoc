@@ -1,0 +1,49 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_kubernetes.html 
+keywords: telegraf 
+summary: Kubernetes용 데이터 수집기 
+---
+= 데이터 수집기: Kubernetes
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Data Infrastructure Insights는 이 데이터 수집기를 사용하여 Kubernetes Pod, 노드 및 컨테이너 메트릭을 수집합니다.
+
+
+
+== 설치
+
+Kubernetes 설치 지침은 페이지 를 참조하십시오link:task_config_telegraf_agent_k8s.html["Kubernetes 모니터링 운영자"].
+
+
+
+== Kube-state-metrics 정보
+
+Kubernetes Monitoring Operator는 kube 상태 메트릭을 자동으로 설치하므로 사용자 개입이 필요하지 않습니다.
+
+
+
+=== Kube-state-metrics 카운터
+
+NetApp Kubernetes 모니터링 오퍼레이터는 아래에 나열된 kube-state-metrics 카운터를 추출합니다. 각 카운터에 대한 자세한 내용은 다음을 https://github.com/kubernetes/kube-state-metrics/tree/main/docs#exposed-metrics[]참조하십시오.
+
+. 메트릭 분월 설정
+. 구현 메트릭
+. 네임스페이스 메트릭
+. 노드 메트릭
+. 영구 볼륨 메트릭
+. 영구 볼륨 클레임 메트릭
+. POD 메트릭
+. ReplicaSet 메트릭입니다
+. 서비스 메트릭
+. StatefulSet 메트릭입니다
+

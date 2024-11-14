@@ -1,0 +1,82 @@
+---
+sidebar: sidebar 
+permalink: concept_acquisition_unit_requirements.html 
+summary: 획득 장치로 사용하는 서버 또는 VM이 최소 요구 사항을 충족해야 합니다. 
+keywords: AU, acquisition unit, requirements, sizing 
+---
+= 획득 장치 요구 사항
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+인프라스트럭처 데이터 수집기(스토리지, VM, 포트, EC2 등)로부터 정보를 가져오려면 획득 장치(AU)를 설치해야 합니다. 획득 장치를 설치하기 전에 운영 체제, CPU, 메모리 및 디스크 공간 요구 사항을 충족하는지 확인해야 합니다.
+
+
+
+== 요구 사항
+
+|===
+
+
+| 구성 요소 | Linux 요구 사항 | Windows 요구 사항 
+
+
+| 운영 체제 | 다음 중 하나의 라이센스 버전을 실행하는 컴퓨터: * CentOS(64비트): 7.2 ~ 7.9, 8.1 ~ 8.4, Stream 8, Stream 9 * AlmaLinux 9.3 및 9.4 * 데비안(64비트): 9 및 10 * OpenSUSE Leap 15.1 ~ 15.5 * Oracle Enterprise Linux(64비트): 8.8 ~ 9.4 * 9.8 ~ 9.4 * 9.4 * 9.4 * 9.4, Rock15 * 9.4 Linux Server 8.8 ~ 7.9 * 9.4 * 9.4 * 9.4 * 9.4, Rockhat Linux Server 8.9 * 8.9 * 9.4 * 9.4 전용 서버가 권장됩니다. SELinux를 실행하는 경우 획득 장치 시스템에서 sudo semanage fcontext -a -t usr_t "/opt/NetApp/cloudinsights(/. *)?"sudo restorecon -R/opt/NetApp/cloudinsights 명령을 실행하는 것이 좋습니다 | 다음 중 하나의 라이센스 버전을 실행하는 컴퓨터: * Microsoft Windows 10 64비트 * Microsoft Windows Server 2012 * Microsoft Windows Server 2012 R2 * Microsoft Windows Server 2016 * Microsoft Windows Server 2019 * Microsoft Windows Server 2022 * Microsoft Windows 11 이 컴퓨터는 다른 응용 프로그램 수준 소프트웨어를 실행하지 않아야 합니다. 전용 서버가 권장됩니다. 
+
+
+| CPU | CPU 코어 2개 | 동일합니다 
+
+
+| 메모리 | 8GB RAM | 동일합니다 
+
+
+| 사용 가능한 디스크 공간입니다 | 50GB(100GB 권장) Linux의 경우 디스크 공간은 /opt/NetApp 10GB(대규모 환경의 경우 20GB)/var/log/NetApp 40GB(대규모 환경의 경우 80GB)/tmp 설치 중 최소 1GB 이상의 사용 가능 상태로 할당되어야 합니다 | 50GB 
+
+
+| 네트워크 | 100Mbps/1Gbps 이더넷 연결, 정적 IP 주소, 획득 장치에서 *.cloudinsights.NetApp.com 또는 데이터 인프라 인사이트 환경(예: \https://<environment_id>.c01.cloudinsights.NetApp.com)으로의 포트 80 또는 443(아웃바운드) 연결이 필요합니다. 획득 장치와 각 데이터 수집기 사이의 요구 사항은 에 대한 지침을 link:data_collector_list.html["데이터 수집기"]참조하십시오. 조직에서 인터넷 액세스에 프록시 사용을 요구하는 경우 조직의 프록시 동작을 이해하고 Data Infrastructure Insights가 작동하려면 특정 예외를 찾아야 할 수 있습니다. 예를 들어, 조직에서 기본적으로 액세스를 차단하며 특정 웹 사이트/도메인에 대한 액세스는 예외로 허용됩니까? 이 경우 예외 목록에 다음 도메인을 추가해야 합니다. *.cloudinsights.NetApp.com 자세한 내용은 프록시 link:task_troubleshooting_linux_acquisition_unit_problems.html#considerations-about-proxies-and-firewalls["여기(Linux)"] 또는 에 대해 읽어보십시오link:task_troubleshooting_windows_acquisition_unit_problems.html#considerations-about-proxies-and-firewalls["여기(Windows)"]. | 동일합니다 
+
+
+| 권한 | 획득 장치 서버의 sudo 권한. /tmp는 Exec 기능과 함께 마운트되어야 합니다. | 획득 장치 서버에 대한 관리자 권한 
+
+
+| 바이러스 검사 |  | 설치하는 동안 모든 바이러스 스캐너를 완전히 비활성화해야 합니다. 설치 후 획득 장치 소프트웨어에서 사용하는 경로는 바이러스 검사에서 제외되어야 합니다. 
+|===
+
+
+== 추가 권장 사항
+
+* 정확한 감사 및 데이터 보고를 위해 * NTP(Network Time Protocol) * 또는 * SNTP(Simple Network Time Protocol) * 를 사용하여 획득 장치 시스템의 시간을 동기화하는 것이 좋습니다.
+
+
+
+
+== 사이징 관련
+
+8GB 메모리와 50GB의 디스크 공간만 갖춘 Data Infrastructure Insights Acquisition Unit을 시작할 수 있지만 대규모 환경에서는 다음과 같은 질문을 해야 합니다.
+
+다음 사항을 예상하십니까?
+
+* 이 획득 장치에서 2,500개 이상의 가상 머신 또는 10개의 대규모(>2개 노드) ONTAP 클러스터, Symmetrix 또는 HDS/HPE VSP/XP 스토리지를 검색합니까?
+* 이 획득 장치에 75개 이상의 총 데이터 수집기를 배포하시겠습니까?
+
+
+위의 "예"로 답할 때마다 AU에 8GB의 메모리와 50GB의 디스크 공간을 추가하는 것이 좋습니다. 예를 들어, 둘 다에 "예"를 선택한 경우 150GB 이상의 디스크 공간이 있는 24GB 메모리 시스템을 구축해야 합니다. Linux에서 로그 위치에 추가할 디스크 공간입니다.
+
+사이징에 대한 추가 질문은 NetApp 지원에 문의하십시오.
+
+
+
+== 추가 Federal Edition 요구 사항
+
+* Data Infrastructure Insights Federal Edition 클러스터에 Acquisition Unit을 설치하는 경우 기본 운영 체제에 적절한 엔트로피 소스가 있어야 합니다. Linux 시스템에서는 일반적으로 _rng-tools_를 설치하거나 하드웨어 RNG(Random Number Generation)를 사용하여 이 작업을 수행합니다. 획득 장치 시스템에서 이 요구 사항이 충족되는지 확인하는 것은 고객의 책임입니다.
+

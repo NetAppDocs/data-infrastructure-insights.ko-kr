@@ -1,0 +1,22 @@
+---
+sidebar: sidebar 
+permalink: ws_allowed_file_types.html 
+keywords: workload security, cloud secure, include list, allowed, file types, ransomware 
+summary: 허용된 파일 형식 목록에 파일 확장명을 추가하여 경고를 줄입니다. 
+---
+= 허용된 파일 형식 정책
+:allow-uri-read: 
+
+
+[role="lead"]
+알려진 파일 확장명에 대한 랜섬웨어 공격이 감지되고 경고 화면에서 경고가 생성되는 경우 불필요한 경고를 방지하기 위해 해당 파일 확장명을 _allowed file types_list 에 추가할 수 있습니다.
+
+Workload Security > Policies * 로 이동한 후 _Allowed File Type Policies_tab으로 이동합니다.
+
+image:WS_Allowed_File_Type_Policies.png["허용된 파일 형식 정책"]
+
+허용된 파일 유형_목록에 추가되면 해당 허용된 파일 유형에 대한 랜섬웨어 공격 경고가 생성되지 않습니다. _allowed File Types_policy는 랜섬웨어 탐지에만 적용됩니다.
+
+예를 들어, 이름이 _test.txt_인 파일의 이름이 _test.txt.abc_로 변경되고 Workload Security가 _.abc_extension으로 인해 랜섬웨어 공격을 감지하는 경우 _.abc_extension을 _allowed file types_list에 추가할 수 있습니다. 목록에 추가된 후에는 _.abc_extension을 가진 파일에 대해 랜섬웨어 공격이 더 이상 생성되지 않습니다.
+
+허용되는 파일 형식은 정확히 일치하는 파일(예: ".abc") 또는 식(예: ". * type", ".type *" 또는 " * type *")일 수 있습니다. ".a * c", ".p * f" 형식의 식은 지원되지 않습니다.

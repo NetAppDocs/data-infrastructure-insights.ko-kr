@@ -1,0 +1,94 @@
+---
+sidebar: sidebar 
+permalink: task_config_cs_incloud.html 
+keywords: Cloud, Storage, AWS, Cloud Volumes, Cloud ONTAP, firewall, VPC, Subnet,  cloud secure 
+summary: 워크로드 보안은 데이터 수집기를 사용하여 디바이스에서 파일 및 사용자 액세스 데이터를 수집합니다. 
+---
+= NetApp ONTAP Collector용 Cloud Volumes ONTAP 및 Amazon FSx 구성
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+워크로드 보안은 데이터 수집기를 사용하여 디바이스에서 파일 및 사용자 액세스 데이터를 수집합니다.
+
+
+
+== Cloud Volumes ONTAP 스토리지 구성
+
+워크로드 보안 에이전트를 호스팅하도록 단일 노드/HA AWS 인스턴스를 구성하려면 OnCommand Cloud Volumes ONTAP 설명서를 참조하십시오. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/index.html[]
+
+구성이 완료되면 다음 단계에 따라 SVM을 설정합니다. https://docs.netapp.com/us-en/cloudinsights/task_add_collector_svm.html[]
+
+
+
+== 지원되는 플랫폼
+
+* Cloud Volumes ONTAP - 사용 가능한 모든 클라우드 서비스 공급자에서 지원됩니다. 예: Amazon, Azure, Google Cloud
+* ONTAP 아마존 FSx
+
+
+
+
+== 에이전트 시스템 구성
+
+에이전트 시스템은 클라우드 서비스 공급자의 각 서브넷에 구성되어야 합니다. [Agent Requirements] 에서 네트워크 액세스에 대해 자세히 알아보십시오.
+
+다음은 AWS에서 Agent를 설치하는 단계입니다. 클라우드 서비스 공급자에 적용되는 것과 동일한 단계를 Azure 또는 Google Cloud에서 설치를 위해 수행할 수 있습니다.
+
+AWS에서 다음 단계를 수행하여 워크로드 보안 에이전트로 사용할 시스템을 구성합니다.
+
+다음 단계를 수행하여 워크로드 보안 에이전트로 사용할 시스템을 구성합니다.
+
+.단계
+. AWS 콘솔에 로그인하고 EC2-Instances 페이지로 이동한 후 _Launch instance_를 선택합니다.
+. 이 페이지에서 설명한 대로 적절한 버전의 RHEL 또는 CentOS AMI를 선택합니다. https://docs.netapp.com/us-en/cloudinsights/concept_cs_agent_requirements.html[]
+. Cloud ONTAP 인스턴스가 상주하는 VPC 및 서브넷을 선택합니다.
+. 할당된 리소스로 _T2.xLarge_(vCPU 4개 및 16GB RAM)를 선택합니다.
++
+.. EC2 인스턴스를 만듭니다.
+
+
+. YUM 패키지 관리자를 사용하여 필요한 Linux 패키지를 설치합니다.
++
+.. install_wget_and_unzip_native Linux 패키지를 설치합니다.
+
+
+
+
+
+
+== 워크로드 보안 에이전트를 설치합니다
+
+. Data Infrastructure Insights 환경에 관리자 또는 계정 소유자로 로그인합니다.
+. Workload Security * Collector * 로 이동한 후 * Agents * 탭을 클릭합니다.
+. * + Agent * 를 클릭하고 RHEL을 대상 플랫폼으로 지정합니다.
+. Agent 설치 명령을 복사합니다.
+. 로그인한 RHEL EC2 인스턴스에 Agent Installation 명령을 붙여 넣습니다. 그러면 워크로드 보안 에이전트가 설치되고 모든 가 link:concept_cs_agent_requirements.html["상담원 필수 구성 요소"]충족됩니다.
+
+
+자세한 단계는 https://docs .NetApp.com/us-en/cloudinsights/task_cs_add_agent.html#steps-to-install-agent 링크를 참조하십시오
+
+
+
+== 문제 해결
+
+알려진 문제와 해결 방법은 다음 표에 설명되어 있습니다.
+
+|===
+
+
+| 문제 | 해상도 
+
+
+| "워크로드 보안: Amazon FxSN 데이터 수집기에 대한 ONTAP 유형을 확인하지 못했습니다." 오류가 데이터 수집기에 표시됩니다. 고객은 새로운 Amazon FSxN 데이터 수집기를 워크로드 보안에 추가할 수 없습니다. 에이전트에서 포트 443의 FSxN 클러스터에 대한 연결이 시간 초과입니다. 방화벽 및 AWS 보안 그룹에는 통신을 허용하는 데 필요한 규칙이 활성화되어 있습니다. 에이전트가 이미 구축되어 있으며 동일한 AWS 계정에도 있습니다. 이 동일한 에이전트를 사용하여 나머지 NetApp 장치를 연결 및 모니터링합니다(모두 작동). | fsxadmin LIF 네트워크 세그먼트를 에이전트의 보안 규칙에 추가하여 이 문제를 해결합니다. 포트가 확실하지 않은 경우 모든 포트가 허용됩니다. 
+|===

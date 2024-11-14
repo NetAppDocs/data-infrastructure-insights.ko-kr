@@ -1,0 +1,191 @@
+---
+sidebar: sidebar 
+permalink: concept_ontap_essentials.html 
+summary: ONTAP Essentials는 환경에 대한 자세한 개요를 제공하는 일련의 대시보드와 워크플로우입니다. 
+keywords: dashboard, widget, ontap, overview, insight 
+---
+= ONTAP 핵심 요소
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+ONTAP Essentials는 ONTAP 인벤토리 및 워크로드를 상세하게 보여주는 대시보드 및 워크플로 집합입니다. ONTAP Essentials에서 작업할 때 사용되는 용어는 다음과 같습니다.
+
+* 인프라/인벤토리: 사용자 데이터에 스토리지/네트워킹 서비스를 제공하는 객체입니다
+* 워크로드: 사용자가 데이터를 읽고 쓸 수 있도록 인터페이스를 제공하는 객체입니다.
+* 데이터 보호: NetApp 데이터 보호 기술을 사용하여 보호할 수 있는 오브젝트
+
+
+ONTAP와 관련된 추가 용어 및 정의는 link:task_dc_na_cdot.html["ONTAP 데이터 수집기"]설명서를 참조하십시오.
+
+ONTAP Essentials를 사용하려면 지난 7일 이내에 수집된 데이터를 포함하는 ONTAP 데이터 수집기 중 최소한 한 명이 있어야 합니다.
+
+
+
+== 개요
+
+탐색을 시작하려면 기본 데이터 인프라 인사이트 메뉴에서 * ONTAP 필수 * 를 선택합니다.
+
+image:OE_Overview.png["ONTAP Essentials에 대한 개요 대시보드"]
+
+개요 * 대시보드에는 전체 용량 및 성능 백분율과 함께 사용자 환경의 클러스터 수와 같은 유용한 정보가 표시됩니다. 또한 스토리지 용량 또는 성능 용량이 공간 부족해질 때까지 예상 일 수에 대한 예측 데이터도 볼 수 있습니다. 또한, 인프라에서 CPU가 65% 이상인 컨트롤러가 실행 중이면 페일오버가 발생할 가능성이 있는 클러스터 상황에 놓입니다. ONTAP Essentials는 이러한 컨트롤러를 "핫" 컨트롤러로 표시합니다.
+
+정보 그래프를 통해 시간 경과에 따른 성능 및 용량 사용량 분석 정보를 확인할 수 있습니다. 이러한 각 그래프 또는 데이터 요소를 탐색 또는 조사의 시작 지점으로 사용할 수 있습니다.
+
+참고: "일 대 전체" 숫자 "0"(영)은 전체 일 수가 90일 이상 예상됨을 나타냅니다. 즉, 시스템이 곧 공간이 부족해질 위험이 없습니다.
+
+
+
+== 데이터 보호
+
+데이터 보호 * 페이지는 * 스냅샷 복사본 * 또는 * SnapMirror 정책 * 으로 보호되는 볼륨의 상태를 표시합니다.
+
+Local Protection Overview _ 섹션에서 이 차트는 스냅샷 복사본으로 보호되는 볼륨에 대한 다음 정보를 제공합니다.
+
+* 보호되지 않는 볼륨뿐만 아니라 스냅샷 복사본으로 보호되는 볼륨의 수입니다.
+* 스냅샷 복사본에 대해 예약 공간을 사용 중이거나 초과하는 볼륨 수입니다.
+* 특정 범위의 스냅샷 복사본 수(예: 10개 미만의 복사본, 10개~200개 등)
+
+
+원격 보호 개요 _ 섹션에서 차트에는 SnapMirror 정책으로 보호되는 볼륨과 관련된 정보가 나와 있습니다.
+
+* 정상 상태가 아닌 SnapMirror 관계 수입니다.
+* 지연 상태에 따라 RPO(복구 지점 목표)가 지연되는 SnapMirror 관계 수
+* 볼륨 SnapMirror, SVM 관계, FlexGroup SnapMirror 관계, SMBC(SnapMirror Business Continuity) 일관성 그룹 관계, 보호되지 않는 볼륨 등과 같이 SnapMirror 볼륨 보호 유형으로 보호되는 관계 수입니다.
+* 비동기 미러, 비동기 볼트, 비동기 MirrorVault, StrictSync 및 Sync와 같은 SnapMirror 관계 유형으로 보호되는 관계 수입니다.
+
+
+image:DataProtectionDashboard_OverviewWidgets_.png["로컬 및 원격 개요를 보여 주는 데이터 보호 대시보드 위젯"]
+
+페이지 하단의 _Clusters_GRID에서는 다음과 관련된 세부 정보를 제공합니다.
+
+* 스냅숏으로 보호되지 않는 볼륨입니다.
+* 볼륨이 스냅숏 예비 공간을 침범합니다.
+* SnapMirror 정책으로 보호되지 않는 볼륨 및 지연을 경험하는 SnapMirror 관계
+* 비정상적인 SnapMirror 관계:
+
+
+image:DataProtectionDashboard_ClusterList.png["데이터 보호 클러스터 목록"]
+
+
+
+== 보안
+
+보안 대시보드에서는 하드웨어 및 소프트웨어 볼륨 암호화, 랜섬웨어 방지 상태 및 클러스터 인증 방법에 대한 차트를 보여 주는 현재 보안 상황을 즉시 확인할 수 있습니다. 보안 기준은 에 정의된 권장 사항을 기준으로 평가됩니다.link:https://www.netapp.com/pdf.html?item=/media/10674-tr4569.pdf["ONTAP 9 * 에 대한 * NetApp 보안 강화 가이드"]
+
+암호화 또는 랜섬웨어 차단 수치 중 하나를 선택하여 환경에 대해 자세히 알아볼 수 있습니다.
+
+image:OE_SecurityDashboard.png["ONTAP Essentials 보안 대시보드"]
+
+ONTAP Essentials 보안 대시보드는 환경을 모니터링하여 클러스터 규정 준수 상태를 확인합니다. 자세한 내용은 를 link:https://docs.netapp.com/us-en/active-iq-unified-manager/health-checker/reference_cluster_compliance_categories.html["클러스터 규정 준수 범주"]참조하십시오. ONTAP Essentials는 다음 모니터를 사용하여 준수 여부를 결정합니다.
+
+|===
+| 모니터 이름 | 특성 이름(클러스터 세부 정보에 표시됨) | 특성 규정 준수 값 
+
+
+| FIPS 모드가 비활성화되었습니다 | FIPS 모드입니다 | 활성화됨 
+
+
+| SSH에 대한 클러스터 비보안 암호 | 보안 SSH 설정 | 예 
+
+
+| 텔넷 프로토콜 사용 | 텔넷 | 사용 안 함 
+
+
+| 원격 셸 사용 | 원격 셸 | 사용 안 함 
+
+
+| 기본 로컬 관리자 사용 | 기본 관리자 사용자입니다 | 사용 안 함 
+
+
+| MD5 해시 암호입니다 | MD5가 사용 중입니다 | 아니요 
+
+
+| 클러스터 피어 통신이 암호화되지 않았습니다 | 클러스터 피어링 | 암호화/피어 없음 
+
+
+| AutoSupport HTTPS 전송이 비활성화되었습니다 | HTTPS를 사용하는 AutoSupport | 예 
+
+
+| NTP 서버가 구성되지 않았습니다 | Network Time Protocol의 약어입니다 | 구성됨 
+
+
+| NTP 서버 수가 부족합니다 | Network Time Protocol의 약어입니다 | 구성됨 
+
+
+| 클러스터 로그인 배너 비활성화됨 | 로그인 배너 | 활성화됨 
+
+
+| 로그 전달이 암호화되지 않았습니다 | 로그 전달이 암호화되었습니다 | 예 
+|===
+위의 모니터가 비활성화된 경우 클러스터 세부 정보에는 해당 보안 규정 준수 속성에 대한 값이 '선택되지 않음'으로 표시됩니다.
+
+image:OE_Cluster_Compliance_Example.png["클러스터 규정 준수 상태"]
+
+SVM의 경우 보안 대시보드에서 다음 모니터를 확인합니다.
+
+|===
+| 모니터 이름 | 속성 이름(스토리지 VM 설정에 표시됨) | 특성 규정 준수 값 
+
+
+| SSH에 대한 스토리지 VM 보안 암호가 안전하지 않습니다 | 보안 SSH 설정 | 예 
+
+
+| 스토리지 VM 로그인 배너가 비활성화되었습니다 | 로그인 배너 | 활성화됨 
+
+
+| 스토리지 VM 감사 로그가 비활성화되었습니다 | 감사 로그 | 활성화됨 
+|===
+클러스터 목록에서 각 클러스터에 대해 _View Details_를 선택하여 _Cluster, Storage VM,_ 또는 _Anti-랜섬웨어_에 대한 현재 설정을 보여주는 "slideout" 패널을 엽니다.
+
+클러스터 세부 정보에는 연결 상태, 인증서 정보 등이 포함됩니다. image:OE_Cluster_Slideout.png["클러스터 세부 정보 슬라이드 아웃 패널"]
+
+스토리지 VM 세부 정보에 감사 및 SSH 정보가 표시됨: image:OE_Storage_Slideout.png["Storage(저장소) 탭"]
+
+안티 랜섬웨어 세부 정보는 스토리지 VM이 ONTAP의 랜섬웨어 방지 보호 또는 데이터 인프라 인사이트 워크로드 보안으로 보호되는지 여부를 보여줍니다. ONTAP ARP 열은 ONTAP 시스템에 구성된 ONTAP의 온보드 Anti-랜섬웨어 방지 프로그램의 현재 상태를 표시합니다. Data Infrastructure Insights 워크로드 보안은 해당 열에서 "보호"를 선택하여 활성화할 수 있습니다. image:OE_Anti-Ransomware_Slideout.png["랜섬웨어 방지 탭"]
+
+
+
+== 경고
+
+이 곳에서 사용자 환경의 활성 알림을 확인하고 잠재적인 문제를 신속하게 파악할 수 있습니다. 해결된 알림을 보려면 _Resolved_탭을 선택합니다.
+
+image:OE_Alerts.png["ONTAP 핵심 경고 목록"]
+
+
+
+== 검토할 수 있습니다
+
+ONTAP Essentials * 인프라 * 페이지에서는 모든 기본 ONTAP 객체에 대해 사전 구축된(추가 사용자 지정 가능) 쿼리를 사용하여 클러스터 상태와 성능을 확인할 수 있습니다. 탐색할 오브젝트 유형(클러스터, 스토리지 풀 등)을 선택하고 상태 또는 성능 정보를 표시할지 여부를 선택합니다. 필터를 설정하여 개별 시스템에 대해 자세히 설명합니다.
+
+image:ONTAP_Essentials_Health_Performance.png["스토리지 풀에 대한 인프라스트럭처 선택"]
+
+클러스터 상태를 보여 주는 인프라 페이지: image:ONTAP_Essentials_Infrastructure_A.png["검토할 인프라 개체"]
+
+
+
+== 네트워킹
+
+ONTAP Essentials 네트워킹에서는 FC, NVMe FC, 이더넷 및 iSCSI 인프라에 대한 뷰를 제공합니다. 이 페이지에서는 클러스터의 포트 및 해당 노드에 대해 살펴볼 수 있습니다.
+
+image:ONTAP_Essentials_Alerts_Menu.png["ONTAP Essentials 네트워킹 메뉴"] image:ONTAP_Essentials_Alerts_Page.png["클러스터 노드의 포트를 보여 주는 ONTAP Essentials 네트워킹 FC 페이지입니다"]
+
+
+
+== 워크로드
+
+사용자 환경의 LUN/볼륨, NFS 또는 SMB 공유 또는 qtree에서 워크로드를 확인하고 탐색합니다.
+
+image:ONTAP_Essentials_Workloads_Menu.png["워크로드 메뉴"]
+
+image:ONTAP_Essentials_Workloads_Page.png["워크로드 목록 페이지"]
