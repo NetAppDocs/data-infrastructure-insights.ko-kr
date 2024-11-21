@@ -73,10 +73,3 @@ keywords: AU, acquisition unit, requirements, sizing
 위의 "예"로 답할 때마다 AU에 8GB의 메모리와 50GB의 디스크 공간을 추가하는 것이 좋습니다. 예를 들어, 둘 다에 "예"를 선택한 경우 150GB 이상의 디스크 공간이 있는 24GB 메모리 시스템을 구축해야 합니다. Linux에서 로그 위치에 추가할 디스크 공간입니다.
 
 사이징에 대한 추가 질문은 NetApp 지원에 문의하십시오.
-
-
-
-== 추가 Federal Edition 요구 사항
-
-* Data Infrastructure Insights Federal Edition 클러스터에 Acquisition Unit을 설치하는 경우 기본 운영 체제에 적절한 엔트로피 소스가 있어야 합니다. Linux 시스템에서는 일반적으로 _rng-tools_를 설치하거나 하드웨어 RNG(Random Number Generation)를 사용하여 이 작업을 수행합니다. 획득 장치 시스템에서 이 요구 사항이 충족되는지 확인하는 것은 고객의 책임입니다.
-

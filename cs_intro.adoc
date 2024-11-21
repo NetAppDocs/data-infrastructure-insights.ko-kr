@@ -22,9 +22,6 @@ summary: 개요
 Data Infrastructure Insights 스토리지 워크로드 보안(이전의 Cloud Secure)은 내부자 위협에 대한 실행 가능한 인텔리전스를 사용하여 데이터를 보호하는 데 도움이 됩니다. 또한 하이브리드 클라우드 환경 전반에서 모든 기업 데이터 액세스에 대한 중앙 집중식 가시성과 제어를 제공하여 보안 및 규정 준수 목표를 충족할 수 있습니다.
 
 
-NOTE: Data Infrastructure Insights Federal Edition에서는 워크로드 보안을 사용할 수 없습니다.
-
-
 
 == 가시성
 

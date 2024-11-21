@@ -2420,12 +2420,9 @@
   <block id="e0dc2ed956b3711e722d965954939344" category="list-text">이 획득 장치에 75개 이상의 총 데이터 수집기를 배포하시겠습니까?</block>
   <block id="159904c45b61bfdda4989e18bf9891e8" category="paragraph">위의 "예"로 답할 때마다 AU에 8GB의 메모리와 50GB의 디스크 공간을 추가하는 것이 좋습니다. 예를 들어, 둘 다에 "예"를 선택한 경우 150GB 이상의 디스크 공간이 있는 24GB 메모리 시스템을 구축해야 합니다. Linux에서 로그 위치에 추가할 디스크 공간입니다.</block>
   <block id="11bb1da5c9cf0248245ce5b24119d183" category="paragraph">사이징에 대한 추가 질문은 NetApp 지원에 문의하십시오.</block>
-  <block id="da9f9625eb860a1ad92687973f4b6f55" category="section-title">추가 Federal Edition 요구 사항</block>
-  <block id="cde8307fb591a6c3934539dcb5919f06" category="list-text">Data Infrastructure Insights Federal Edition 클러스터에 Acquisition Unit을 설치하는 경우 기본 운영 체제에 적절한 엔트로피 소스가 있어야 합니다. Linux 시스템에서는 일반적으로 _rng-tools_를 설치하거나 하드웨어 RNG(Random Number Generation)를 사용하여 이 작업을 수행합니다. 획득 장치 시스템에서 이 요구 사항이 충족되는지 확인하는 것은 고객의 책임입니다.</block>
   <block id="96cb7682ad0362f3aff6ef6f90dd2520" category="summary">Data Infrastructure Insights는 NetApp Active IQ에서 위험 데이터를 수집합니다</block>
   <block id="b5fe3a41d32647f20f3b5ec96045d6d6" category="doc">Active IQ</block>
   <block id="df0ddcb04f0e5278d49d2c87dfa7f7fc" category="paragraph">NetApp는 <block ref="5d418eb60d51fa035e4b287bd4191a07" category="inline-link-macro-rx"></block>NetApp 고객의 하드웨어/소프트웨어 시스템에 대해 일련의 시각화, 분석 및 기타 지원 관련 서비스를 제공합니다. Active IQ에서 보고하는 데이터는 시스템 문제 해결을 개선하고 장치와 관련된 최적화 및 예측 분석에 대한 통찰력을 제공할 수 있습니다.</block>
-  <block id="ace71aa31322ae1c7e3740649676adf8" category="admonition">ActiveIQ는 Data Infrastructure Insights Federal Edition에서 사용할 수 없습니다.</block>
   <block id="97ba27a6c978c304ea9138ee01781875" category="paragraph">데이터 인프라 Insights는 Active IQ에서 모니터링 및 보고하는 NetApp clustered Data ONTAP 스토리지 시스템의 * 위험 * 을 수집합니다. 스토리지 시스템에 대해 보고된 위험은 해당 장치에서 데이터 수집의 일부로 Data Infrastructure Insights에 의해 자동으로 수집됩니다. Active IQ 위험 정보를 수집하려면 데이터 인프라 인사이트 에 적절한 데이터 수집기를 추가해야 합니다.</block>
   <block id="bfdb97c5bb51966044d87207708e9888" category="paragraph">Data Infrastructure Insights에는 Active IQ에서 모니터링 및 보고하지 않는 ONTAP 시스템의 위험 데이터가 표시되지 않습니다.</block>
   <block id="a98980e7429cd68c3207593853e627fe" category="paragraph">보고된 위험은 _STORAGE_AND_STORAGE NODE_ASSET 랜딩 페이지의 "위험" 표에 나와 있습니다. 이 표에는 위험 세부 정보, 위험 범주 및 잠재적 영향이 나와 있으며, 스토리지 노드의 모든 위험을 요약하는 Active IQ 페이지 링크가 제공됩니다(NetApp 지원 어카운트 로그인 필요).</block>
@@ -3331,7 +3328,6 @@
   <block id="7cf514f5919cb28bfec05b4c4f4c46c6" category="paragraph">단일 값 위젯 또는 게이지 위젯에서 링크를 클릭하면 위젯의 첫 번째 쿼리에 해당하는 쿼리 페이지가 표시됩니다.</block>
   <block id="643c94a9b7fa8044a23bb9cbc6ebffbe" category="section-title">표 위젯 포맷팅</block>
   <block id="9e2381c8e7ac28deb699317b34df149b" category="paragraph">단일 값 및 게이지 위젯과 마찬가지로 표 위젯에서 조건부 서식을 설정하여 색 및/또는 특수 아이콘으로 데이터를 강조 표시할 수 있습니다.</block>
-  <block id="5fd3ff776b149305fbc059482c2bb581" category="admonition">조건부 서식은 현재 Data Infrastructure Insights Federal Edition에서 사용할 수 없습니다.</block>
   <block id="84679b44186157278902037b722c7359" category="paragraph">조건부 서식을 사용하면 테이블 위젯에서 경고 수준 및 위험 수준 임계값을 설정하고 강조 표시하여 이상값 및 예외적인 데이터 지점에 대한 즉각적인 가시성을 얻을 수 있습니다.</block>
   <block id="af857689eee998410c8a208e06da82aa" category="inline-image-macro">조건부 서식 예제</block>
   <block id="07ee1acb2c120e65f59c1e4f6f6c04e9" category="paragraph"><block ref="07ee1acb2c120e65f59c1e4f6f6c04e9" category="inline-image-macro-rx" type="image"></block></block>
@@ -5943,7 +5939,6 @@
   <block id="58e92099c75821827b7a665f2931deb2" category="paragraph"><block ref="58e92099c75821827b7a665f2931deb2" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b451cdd4206327fd0afecbb2df7b2bec" category="doc">스토리지 워크로드 보안 정보</block>
   <block id="d91922a1bdba61ab374e14011d46cddf" category="paragraph">Data Infrastructure Insights 스토리지 워크로드 보안(이전의 Cloud Secure)은 내부자 위협에 대한 실행 가능한 인텔리전스를 사용하여 데이터를 보호하는 데 도움이 됩니다. 또한 하이브리드 클라우드 환경 전반에서 모든 기업 데이터 액세스에 대한 중앙 집중식 가시성과 제어를 제공하여 보안 및 규정 준수 목표를 충족할 수 있습니다.</block>
-  <block id="f685e8c506c41657d74fe2fe7ec4ca60" category="admonition">Data Infrastructure Insights Federal Edition에서는 워크로드 보안을 사용할 수 없습니다.</block>
   <block id="1729a56cfc89021478498fe0c89a843a" category="section-title">가시성</block>
   <block id="72afd90b781c569f0442e6e45c9f3193" category="paragraph">온프레미스 또는 클라우드에 저장된 주요 기업 데이터에 대한 사용자 액세스를 중앙 집중식으로 파악하고 제어할 수 있습니다.</block>
   <block id="6bb784bfbef2792b99ae322d0ce648b6" category="paragraph">데이터 액세스 및 제어에 대한 시기 적절하고 정확한 가시성을 제공하지 못하는 도구 및 수동 프로세스를 대체합니다. 워크로드 보안은 클라우드 및 사내 스토리지 시스템 모두에서 고유하게 작동하며 악의적인 사용자 동작에 대한 실시간 경고를 제공합니다.</block>
@@ -9069,7 +9064,6 @@
   <block id="02230bab9788e4843408e124331bb1ca" category="cell">클러스터에 존재하는 Kubernetes CronJobs에 대해 어떤 메트릭도 수집되지 않습니다.</block>
   <block id="b3b6bea000b13acbfcb412bad49ee494" category="cell">Kubernetes 버전을 확인합니다(예:<block ref="4fc58818ca77fb3a60cbd34a7f7d5071" prefix=" " category="inline-code"></block>). v1.20.x 이하일 경우 이는 예상되는 제한 사항입니다. Kubernetes Monitoring Operator와 함께 배포된 kube-state-metrics 릴리스는 v1.cronjob만 지원합니다. Kubernetes 1.20.x 이하에서는 crontjob 리소스가 v1beta.crontjob에 있습니다. 따라서 kube-state-metrics는 crontjob 리소스를 찾을 수 없습니다.</block>
   <block id="45698e13b1c2f7241751839133834506" category="cell">운용자 설치 후, Telegraf-ds Pod는 CrashLoopBackOff로 진입하고 POD 로그는 "su:Authentication failure"를 나타낸다.</block>
-  <block id="f8c008ebe75bf3ef5a707b1a1565926f" category="cell">_AgentConfiguration_에서 Telegraf 섹션을 편집하고 _dockerMetricCollectionEnabled_를 false 로 설정합니다. 자세한 내용은 조작자를 <block ref="74a91e6274b6ee5f9fd240fb978eb1d9" category="inline-link-macro-rx"></block>참조하십시오. 참고: Data Infrastructure Insights Federal Edition을 사용하는 경우 Docker 소켓에 액세스하려면 Telegraf 컨테이너를 루트로 실행하거나 _su_를 사용하여 Telegraf 사용자를 Docker 그룹에 추가해야 하기 때문에 _su_ 사용이 제한된 사용자는 Docker 메트릭을 수집할 수 없습니다. Docker 메트릭 수집 및 _su_의 사용은 기본적으로 활성화되어 있습니다. 이 두 가지를 모두 사용하지 않으려면 _AgentConfiguration_파일에서 _Telegraf.docker_entry를 제거하십시오. ... spec:... Telegraf:...           -name:docker       run-mode:                    -DemonSet 대체:-key:docker_unix_sock_placeholder         값: unix://run/docker.sock... ...</block>
   <block id="802997bcb8e9581226b3000b8b611b1c" category="cell">내 Telegraf 로그에 다음과 유사한 오류 메시지가 반복 표시됩니다: E! [agent] 출력에 쓰는 중 오류가 발생했습니다. http: POST "\https://&lt;tenant_url&gt;/REST/v1/lake/injest/influxdb": 컨텍스트 기한 초과(클라이언트. 헤더 대기 중 시간 초과)</block>
   <block id="5a581223d2fea6c45a7ac1278334f8c1" category="cell">_AgentConfiguration_에서 Telegraf 섹션을 편집하고 increase_outputTimeout_을 10초로 편집합니다. 자세한 내용은 조작자를 <block ref="74a91e6274b6ee5f9fd240fb978eb1d9" category="inline-link-macro-rx"></block>참조하십시오.</block>
   <block id="4f05106cca363b0f3c492314ab777534" category="cell">일부 이벤트 로그에 대한 _divedobject_data가 없습니다.</block>
@@ -11824,4 +11818,5 @@
   <block id="47407ceeb441f7c5d1eac8ca6060c4b7" category="summary">NetApp Cloud Volumes ONTAP 데이터 수집기를 구성합니다</block>
   <block id="a7544b3f9e0cc7c642c8b55af45cc192" category="doc">NetApp Cloud Volumes ONTAP 데이터 수집기</block>
   <block id="2285e08ef18a1a3f2e02b335409147d7" category="paragraph">이 데이터 수집기는 Cloud Volumes ONTAP 구성에서 인벤토리 수집을 지원합니다.</block>
+  <block id="e77701e8957afb414a45ca434ef7f000" category="cell">_AgentConfiguration_에서 Telegraf 섹션을 편집하고 _dockerMetricCollectionEnabled_를 false 로 설정합니다. 자세한 내용은 조작자를 <block ref="74a91e6274b6ee5f9fd240fb978eb1d9" category="inline-link-macro-rx"></block>참조하십시오. ... 사양 : ... 텔레그라프 : ...           -name:docker       run-mode:                    -DemonSet 대체:-key:docker_unix_sock_placeholder         값: unix://run/docker.sock... ...</block>
 </blocks>

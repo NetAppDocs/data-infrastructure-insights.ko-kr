@@ -639,9 +639,6 @@ image:Single-ValueWidgets.png["포맷이 있는 단일 값 위젯 및 포맷이 
 
 단일 값 및 게이지 위젯과 마찬가지로 표 위젯에서 조건부 서식을 설정하여 색 및/또는 특수 아이콘으로 데이터를 강조 표시할 수 있습니다.
 
-
-NOTE: 조건부 서식은 현재 Data Infrastructure Insights Federal Edition에서 사용할 수 없습니다.
-
 조건부 서식을 사용하면 테이블 위젯에서 경고 수준 및 위험 수준 임계값을 설정하고 강조 표시하여 이상값 및 예외적인 데이터 지점에 대한 즉각적인 가시성을 얻을 수 있습니다.
 
 image:ConditionalFormattingExample.png["조건부 서식 예제"]
