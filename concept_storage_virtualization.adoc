@@ -29,7 +29,7 @@ Data Infrastructure Insights는 로컬 스토리지가 있는 스토리지 어�
 
 image:StorageVirtualization_TableWidgetSettings.png["스토리지 가상화 유형을 표시하는 기본 쿼리입니다"]
 
-결과 테이블 위젯은 사용자 환경의 _Standard_, _Backend_ 및 _Virtual_storages를 보여 줍니다.
+결과 테이블 위젯은 테넌트의 _Standard_, _Backend_ 및 _Virtual_storage를 보여 줍니다.
 
 image:StorageVirtualization_TableWidgetShowingVirtualizedTypes.png["가상화된 유형을 보여주는 표"]
 
@@ -45,7 +45,7 @@ image:StorageVirtualization_StorageSummary.png["가상 스토리지 및 백업 �
 
 === 기존 랜딩 페이지 및 대시보드
 
-현재 환경에 사용자 지정된 랜딩 페이지 또는 대시보드가 있는 경우 기본적으로 모든 가상화 정보가 자동으로 표시되지 않습니다. 그러나 사용자 지정 대시보드 또는 랜딩 페이지(사용자 지정 내용을 다시 구현해야 함)를 _ Default_Any로 되돌리거나 원하는 가상화 특성 또는 메트릭을 포함하도록 관련 위젯을 수정할 수 있습니다.
+현재 테넌트에 사용자 지정된 랜딩 페이지 또는 대시보드가 있는 경우 기본적으로 모든 가상화 정보가 자동으로 표시되지 않습니다. 그러나 사용자 지정 대시보드 또는 랜딩 페이지(사용자 지정 내용을 다시 구현해야 함)를 _ Default_Any로 되돌리거나 원하는 가상화 특성 또는 메트릭을 포함하도록 관련 위젯을 수정할 수 있습니다.
 
 _기본값으로 되돌리기_는 사용자 지정 대시보드 또는 랜딩 페이지 화면의 오른쪽 상단에서 사용할 수 있습니다.
 

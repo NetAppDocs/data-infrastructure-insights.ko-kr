@@ -21,7 +21,7 @@ summary: Kubernetes 랜딩 페이지가 설명했습니다
 [role="lead"]
 Data Infrastructure Insights Kubernetes Explorer는 Kubernetes 클러스터의 전체 상태 및 사용량을 보여주기 위한 강력한 툴이며 조사 영역을 쉽게 드릴다운할 수 있습니다.
 
-대시보드 > Kubernetes Explorer * 를 클릭하면 Kubernetes 클러스터 목록 페이지가 열립니다. 이 개요 페이지에는 사용자 환경의 Kubernetes 클러스터 테이블이 포함되어 있습니다.
+대시보드 > Kubernetes Explorer * 를 클릭하면 Kubernetes 클러스터 목록 페이지가 열립니다. 이 개요 페이지에는 테넌트의 Kubernetes 클러스터 표가 포함되어 있습니다.
 
 image:Kubernetes_List_Page_new.png["Kubernetes 목록 페이지"]
 
@@ -29,7 +29,7 @@ image:Kubernetes_List_Page_new.png["Kubernetes 목록 페이지"]
 
 === 클러스터 목록
 
-클러스터 목록에는 사용자 환경의 각 클러스터에 대한 다음 정보가 표시됩니다.
+클러스터 목록에는 테넌트의 각 클러스터에 대한 다음 정보가 표시됩니다.
 
 * 클러스터 * 이름 *. 클러스터 이름을 클릭하면 해당 클러스터에 대한 가 열립니다link:kubernetes_cluster_detail.html["* 상세 페이지 *"].
 * * 채도 * 백분율. 전체 채도란 CPU, 메모리 또는 저장소 채도가 가장 높은 것입니다.

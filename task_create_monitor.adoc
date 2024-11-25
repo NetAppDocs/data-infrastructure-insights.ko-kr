@@ -36,7 +36,7 @@ Data Infrastructure Insights는 귀사의 환경에 다양한 솔루션을 link:
 
 == 보안 모범 사례
 
-Data Infrastructure Insights 경고는 사용자 환경의 데이터 포인트와 추세를 강조하도록 설계되었으며, Data Infrastructure Insights를 사용하면 유효한 이메일 주소를 경고 수신자로 입력할 수 있습니다. 보안 환경에서 작업하는 경우 알림을 받는 사람 또는 알림에 액세스할 수 있는 사람을 특히 주의하십시오.
+Data Infrastructure Insights 경고는 테넌트의 데이터 포인트와 추세를 강조하도록 설계되었으며, Data Infrastructure Insights를 사용하면 유효한 이메일 주소를 경고 수신자로 입력할 수 있습니다. 보안 환경에서 작업하는 경우 알림을 받는 사람 또는 알림에 액세스할 수 있는 사람을 특히 주의하십시오.
 
 
 
@@ -232,7 +232,7 @@ image:Monitors_Alert_Description.png["경고 시정 조치 및 설명"]
 
 == 모니터 그룹
 
-그룹화를 사용하면 관련 모니터를 보고 관리할 수 있습니다. 예를 들어 사용자 환경의 스토리지 전용 모니터 그룹을 사용하거나 특정 수신자 목록과 관련된 모니터를 사용할 수 있습니다.
+그룹화를 사용하면 관련 모니터를 보고 관리할 수 있습니다. 예를 들어 테넌트의 저장소 전용 모니터 그룹 또는 특정 받는 사람 목록과 관련된 모니터를 가질 수 있습니다.
 
 image:Monitors_GroupList.png["모니터 그룹화"]
 
@@ -297,7 +297,7 @@ image:Monitors_PauseGroup.png["그룹을 일시 중지합니다"]
 
 == 시스템 정의 모니터
 
-Data Infrastructure Insights에는 메트릭 및 로그 모두에 대해 다수의 시스템 정의 모니터가 포함되어 있습니다. 사용 가능한 시스템 모니터는 사용자 환경에 있는 데이터 수집기에 따라 다릅니다. 따라서 데이터 수집기가 추가되거나 구성이 변경되면 Data Infrastructure Insights에서 사용할 수 있는 모니터가 변경될 수 있습니다.
+Data Infrastructure Insights에는 메트릭 및 로그 모두에 대해 다수의 시스템 정의 모니터가 포함되어 있습니다. 사용 가능한 시스템 모니터는 테넌트에 있는 데이터 수집기에 따라 다릅니다. 따라서 데이터 수집기가 추가되거나 구성이 변경되면 Data Infrastructure Insights에서 사용할 수 있는 모니터가 변경될 수 있습니다.
 
 link:task_system_monitors.html["시스템 정의 모니터"]Data Infrastructure Insights에 포함된 모니터에 대한 설명은 페이지를 참조하십시오.
 

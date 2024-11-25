@@ -64,7 +64,7 @@ VMware와 같은 하이퍼바이저에서는 ESXi 호스트 및 해당 VM(가상
 
 == Data Infrastructure Insights는 파이버 채널 스위치를 지원합니까?
 
-예. Data Infrastructure Insights는 스토리지 자산에서 데이터를 수집하는 것 외에 현재 환경의 Cisco, Brocade 및 QLogic 스위치로부터 인벤토리 및 성능 데이터도 수집합니다.
+예. Data Infrastructure Insights는 스토리지 자산에서 데이터를 수집할 뿐 아니라 테넌트의 Cisco, Brocade 및 QLogic 스위치로부터 인벤토리 및 성능 데이터도 수집합니다.
 
 
 

@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task_cloud_insights_onboarding_1.html 
-summary: Data Infrastructure Insights에 등록하고 환경 조성 
+summary: Data Infrastructure Insights에 등록하고 테넌트를 생성합니다. 
 keywords: onboarding, new user 
 ---
 = Data Infrastructure Insights 온보딩
@@ -49,11 +49,11 @@ image:BlueXP_CloudInsights.png["BlueXP 에서 Data Infrastructure Insights 무�
 
 == Data Infrastructure Insights 무료 평가판을 시작하십시오
 
-Data Infrastructure Insights에 처음 로그인하는 경우 Data Infrastructure Insights 제품 아래에서 * 무료 평가판 시작 * 을 클릭합니다. Data Infrastructure Insights는 환경을 상주할 지역을 선택하는 등 회사 환경을 생성하는 과정을 안내합니다.
+Data Infrastructure Insights에 처음 로그인하는 경우 Data Infrastructure Insights 제품 아래에서 * 무료 평가판 시작 * 을 클릭합니다. Data Infrastructure Insights는 테넌트가 상주할 지역을 선택하는 등 회사의 테넌트를 생성하는 과정을 안내합니다.
 
-image:trial_region_selector.png["Data Infrastructure Insights 환경을 호스팅할 지역 선택"]
+image:trial_region_selector.png["Data Infrastructure Insights 테넌트를 호스팅할 지역을 선택합니다"]
 
-환경 생성이 완료되면 BlueXP  자격 증명을 사용하여 로그인하여 Data Infrastructure Insights의 30일 무료 평가판을 시작할 수 있습니다. 이 평가판을 통해 Data Infrastructure Insights에서 제공하는 기능을 살펴볼 수 있습니다.
+테넌트 생성이 완료되면 BlueXP  자격 증명을 사용하여 로그인하여 Data Infrastructure Insights의 30일 무료 평가판을 시작할 수 있습니다. 이 평가판을 통해 Data Infrastructure Insights에서 제공하는 기능을 살펴볼 수 있습니다.
 
 무료 평가판에서는 link:concept_subscribing_to_cloud_insights.html["구독을 시작합니다"]언제든지 Data Infrastructure Insights를 사용할 수 있습니다. 구독하면 현재 구독에 따라 Data Infrastructure Insights 기능을 사용할 수 있습니다.
 
@@ -61,17 +61,17 @@ image:trial_region_selector.png["Data Infrastructure Insights 환경을 호스�
 
 == 로그인 후 이동
 
-환경이 생성되면 언제든지 NetApp BlueXP  포털에 로그인하고 * 데이터 인프라 인사이트 * 로 이동 * 을 클릭하면 됩니다. Data Infrastructure Insights 환경으로 바로 이동할 수 있습니다.
+테넌트가 생성되면 언제든지 NetApp BlueXP  포털에 로그인하고 * 데이터 인프라 통찰력으로 이동 * 을 클릭하면 됩니다. 귀하는 Data Infrastructure Insights 테넌트로 직접 연결됩니다.
 
-또한 Data Infrastructure Insights 환경 URL에서 브라우저를 직접 열 수 있습니다. 예를 들면 다음과 같습니다.
+또한 Data Infrastructure Insights 테넌트 URL에서 브라우저를 직접 열 수도 있습니다. 예를 들면 다음과 같습니다.
 
- \https://<environment-prefix>.c01.cloudinsights.netapp.com/
+ \https://<tenant-prefix>.c01.cloudinsights.netapp.com/
 URL은 각 사용자의 초대 이메일에도 포함되어 있어 간단한 액세스와 북마크 기능을 제공합니다. 사용자가 BlueXP에 아직 로그인하지 않은 경우 로그인하라는 메시지가 표시됩니다.
 
 
-NOTE: 신규 사용자가 환경 URL에 액세스하려면 먼저 BlueXP에 대한 액세스를 등록해야 합니다.
+NOTE: 신규 사용자가 테넌트 URL에 액세스하려면 BlueXP 에 대한 액세스를 계속 등록해야 합니다.
 
-새 환경에 처음 로그인할 때 에 대한 설정을 link:task_getting_started_with_cloud_insights.html["* 데이터 수집 시작 *"]안내합니다.
+새 테넌트에 처음 로그인할 때 에 대한 설정을 link:task_getting_started_with_cloud_insights.html["* 데이터 수집 시작 *"]안내합니다.
 
 
 

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_install_manual_au.html 
 keywords: Acquisition Unit, AU, install, configure, Linux, add, remove, uninstall, delete, deleting, move, moving, manual, AU, Patch 
-summary: Data Infrastructure Insights는 AU 소프트웨어를 수동으로 업데이트하도록 구성하여 환경에 설치된 소프트웨어를 보다 효과적으로 제어할 수 있습니다. 
+summary: Data Infrastructure Insights는 AU 소프트웨어를 수동으로 업데이트하도록 구성하여 테넌트에 설치된 소프트웨어를 보다 효율적으로 제어할 수 있습니다. 
 ---
 = 획득 장치 소프트웨어 수동 설치
 :hardbreaks:
@@ -16,7 +16,7 @@ summary: Data Infrastructure Insights는 AU 소프트웨어를 수동으로 업�
 
 
 [role="lead"]
-기본적으로 Data Infrastructure Insights는 업데이트가 배포될 때 AU(Acquisition Unit) 소프트웨어를 자동으로 업데이트합니다. 그러나 보안 제어 환경에서는 자동 업데이트가 불가능하거나 불가능할 수 있습니다. 이 경우 AU 소프트웨어를 수동으로 업데이트하도록 Data Infrastructure Insights를 구성하여 환경에 설치된 소프트웨어를 보다 효과적으로 제어할 수 있습니다.
+기본적으로 Data Infrastructure Insights는 업데이트가 배포될 때 AU(Acquisition Unit) 소프트웨어를 자동으로 업데이트합니다. 그러나 보안 제어 환경에서는 자동 업데이트가 불가능하거나 불가능할 수 있습니다. 이 경우 AU 소프트웨어를 수동으로 업데이트하도록 Data Infrastructure Insights를 구성하여 테넌트에 설치된 소프트웨어를 보다 효과적으로 제어할 수 있습니다.
 
 AU 소프트웨어를 수동으로 다운로드하고 설치하려면 다음 단계를 수행하십시오. Data Infrastructure Insights는 이러한 많은 단계에 사용할 수 있는 유용한 Swagger 문서 페이지를 제공하거나 자체 API 스크립트/명령을 사용할 수 있습니다. 관리자 > API 액세스로 이동하고 “API 설명서” 링크를 클릭합니다.
 

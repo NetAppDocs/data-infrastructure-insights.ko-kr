@@ -135,7 +135,7 @@ Data Infrastructure Insights 관측성은 다음 두 가지 방식 중 하나로
 
 ==== 용량 측정
 
-Data Infrastructure Insights 관측성 은 사용자 환경의 스토리지 계층에 따라 사용량을 측정합니다. 다음 범주 중 하나 이상에 해당하는 저장소가 있을 수 있습니다.
+Data Infrastructure Insights 관측성 은 테넌트의 스토리지 계층에 따라 사용을 측정합니다. 다음 범주 중 하나 이상에 해당하는 저장소가 있을 수 있습니다.
 
 * 1차 원시 값
 * 객체 원시

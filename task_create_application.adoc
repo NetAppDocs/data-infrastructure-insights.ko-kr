@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task_create_application.html 
-summary: 필요에 따라 사용자 환경의 자산에 적용할 애플리케이션을 정의합니다. 
+summary: 필요에 따라 테넌트의 자산에 적용할 응용 프로그램을 정의합니다. 
 keywords: application, create application, 
 ---
 = 응용 프로그램 만들기
@@ -16,7 +16,7 @@ keywords: application, create application,
 
 
 [role="lead"]
-사용자 환경에서 실행 중인 특정 애플리케이션과 연결된 데이터를 추적하려면 Data Infrastructure Insights에서 애플리케이션을 정의할 수 있습니다.
+테넌트에서 실행 중인 특정 애플리케이션과 연결된 데이터를 추적하려면 Data Infrastructure Insights에서 애플리케이션을 정의할 수 있습니다.
 
 .시작하기 전에
 애플리케이션을 업무 엔티티에 연결하려면 애플리케이션을 정의하기 전에 업무 엔티티를 생성해야 합니다.

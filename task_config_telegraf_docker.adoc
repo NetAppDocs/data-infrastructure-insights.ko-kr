@@ -27,7 +27,7 @@ Data Infrastructure Insights는 이 데이터 수집기를 사용하여 Docker�
 
 . 관측성 > 수집기 * 에서 * + Data Collector * 를 클릭합니다. Docker를 선택합니다.
 +
-Agent를 수집하도록 구성하지 않은 경우 작업 환경에서 를 선택하라는 메시지가 link:task_config_telegraf_agent.html["에이전트를 설치합니다"]표시됩니다.
+Agent를 수집하도록 구성하지 않은 경우 테넌트에 대한 메시지가 link:task_config_telegraf_agent.html["에이전트를 설치합니다"]표시됩니다.
 
 +
 에이전트가 이미 구성되어 있는 경우 해당 운영 체제 또는 플랫폼을 선택하고 * 계속 * 을 클릭합니다.

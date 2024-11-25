@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: insights_shared_resources_under_stress.html 
 keywords: insight, greedy, degraded, impacted, impacting, impactful, impact, resources, consuming, workload 
-summary: Insights를 통해 리소스가 사용자 환경의 다른 리소스에 미치는 영향을 파악할 수 있습니다. 
+summary: 인사이트를 통해 리소스가 테넌트의 다른 리소스에 어떤 영향을 미치는지 파악할 수 있습니다. 
 ---
 = 인사이트: 부하 상태의 공유 리소스
 :toc: macro
@@ -19,7 +19,7 @@ summary: Insights를 통해 리소스가 사용자 환경의 다른 리소스에
 
 
 [role="lead"]
-워크로드가 큰 경우 공유 리소스에 있는 다른 워크로드의 성능이 저하될 수 있습니다. 이렇게 하면 공유 리소스가 스트레스를 받게 됩니다. Data Infrastructure Insights는 리소스 포화 및 환경의 영향을 조사하는 데 도움이 되는 툴을 제공합니다.
+워크로드가 큰 경우 공유 리소스에 있는 다른 워크로드의 성능이 저하될 수 있습니다. 이렇게 하면 공유 리소스가 스트레스를 받게 됩니다. Data Infrastructure Insights는 리소스 포화 및 테넌트에 대한 영향을 조사하는 데 도움이 되는 도구를 제공합니다.
 
 
 
@@ -63,7 +63,7 @@ image:ResourceInsightDemanding.png["까다로운 작업 부하 차트"] image:Re
 
 == 포화도를 해결하려면 어떻게 해야 합니까?
 
-환경의 포화 가능성을 줄이거나 제거하기 위해 취할 수 있는 여러 단계가 있습니다. 이 정보는 페이지의 * + Show Recommendations * 링크를 확장하여 표시됩니다. 다음은 몇 가지 시도해볼 수 있는 사항입니다.
+테넌트에 포화 가능성을 줄이거나 제거하기 위해 취할 수 있는 여러 단계가 있습니다. 이 정보는 페이지의 * + Show Recommendations * 링크를 확장하여 표시됩니다. 다음은 몇 가지 시도해볼 수 있는 사항입니다.
 
 * IOPS가 높은 소비자를 이동하세요
 +

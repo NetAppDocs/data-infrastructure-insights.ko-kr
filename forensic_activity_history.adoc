@@ -23,7 +23,7 @@ summary: 포렌식 활동 기록 데이터
 
 == 모든 활동 데이터 검토
 
-Forensics > Activity Forensics * 를 클릭하고 * All Activity * 탭을 클릭하여 All Activity 페이지에 액세스합니다. 이 페이지에서는 다음 정보를 중심으로 사용자 환경의 활동에 대한 개요를 제공합니다.
+Forensics > Activity Forensics * 를 클릭하고 * All Activity * 탭을 클릭하여 All Activity 페이지에 액세스합니다. 이 페이지에서는 테넌트의 활동에 대한 개요를 제공하고 다음 정보를 강조합니다.
 
 * Activity History _(활동 내역)를 보여주는 그래프(선택한 전역 시간 범위에 따라 분당 5분/10분에 액세스됨)
 +

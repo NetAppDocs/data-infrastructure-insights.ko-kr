@@ -60,7 +60,7 @@ summary: Data Infrastructure Insights는 Telegraf를 Kubernetes에서 통합 데
 
 === 프록시 지원을 구성하는 중입니다
 
-NetApp Kubernetes Monitoring Operator를 설치하기 위해 사용자 환경에서 프록시를 사용할 수 있는 두 가지 위치가 있습니다. 이러한 시스템은 동일하거나 별도의 프록시 시스템일 수 있습니다.
+NetApp Kubernetes 모니터링 오퍼레이터를 설치하기 위해 테넌트의 프록시를 사용할 수 있는 위치는 두 곳입니다. 이러한 시스템은 동일하거나 별도의 프록시 시스템일 수 있습니다.
 
 * 설치 코드 스니펫을 실행하는 동안("curl" 사용) 프록시를 사용하여 스니펫이 실행되는 시스템을 Data Infrastructure Insights 환경에 연결해야 합니다
 * Data Infrastructure Insights 환경과 통신하는 데 필요한 프록시입니다
