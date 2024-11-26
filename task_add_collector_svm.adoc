@@ -149,6 +149,28 @@ security login create -user-or-group-name csuser -application http -authmethod p
 ....
 
 
+=== Protobuf 모드
+
+이 옵션이 Collector의 _Advanced Configuration_settings에서 활성화되면 워크로드 보안은 FPolicy 엔진을 protebuf 모드로 구성합니다. Protobuf 모드는 ONTAP 버전 9.15 이상에서 지원됩니다.
+
+이 기능에 대한 자세한 내용은 을 link:https://docs.netapp.com/us-en/ontap/nas-audit/steps-setup-fpolicy-config-concept.html["ONTAP 설명서"]참조하십시오.
+
+protbuf에 대한 특정 권한이 필요합니다(일부 또는 전부가 이미 있을 수 있음).
+
+클러스터 모드:
+
+....
+security login rest-role create -role csrestrole -api /api/protocols/fpolicy -access all -vserver <cluster_name>
+security login create -user-or-group-name csuser -application http -authmethod password -role csrestrole
+....
+SVM 모드:
+
+....
+security login rest-role create -role csrestrole -api /api/protocols/fpolicy -access all -vserver <svm_name>
+security login create -user-or-group-name csuser -application http -authmethod password -role csrestrole -vserver <svm_name>
+....
+
+
 === ONTAP 자율적 랜섬웨어 방어 및 ONTAP 액세스에 대한 권한이 거부되었습니다
 
 클러스터 관리 자격 증명을 사용하는 경우 새 권한이 필요하지 않습니다.

@@ -11819,4 +11819,8 @@
   <block id="0967b055354d8d340dcc9aacf450c7f9" category="cell">영구 볼륨의 IOPS 임계값은 영구 볼륨이 사전 정의된 성능 기대치를 초과할 때 관리자에게 경고하는 데 사용할 수 있습니다. 이 모니터를 활성화하면 지속성 볼륨의 일반적인 IOPS 프로필에 적합한 알림이 생성됩니다. 이 모니터는 테넌트의 모든 영구 볼륨을 포함합니다. 경고 및 임계 임계값은 이 모니터를 복제한 후 작업 부하에 적합한 임계값을 설정하여 모니터링 목표에 따라 조정할 수 있습니다.</block>
   <block id="3ee2ba16702e3b406dd125b347f5f30b" category="summary">작업 부하 보안 에이전트를 수동으로 설치 또는 업데이트할 수 있으므로 테넌트에 설치된 소프트웨어를 보다 효율적으로 제어할 수 있습니다.</block>
   <block id="17a311772e6362d1e9dd73c324273dcc" category="paragraph">기본적으로 새 버전의 Workload Security Agent 또는 Collector를 사용할 수 있으면 업그레이드 전 알림이 전송되고 에이전트와 수집기는 테넌트에서 자동으로 업데이트됩니다. 그러나 보안이 통제되는 환경에서는 자동 업그레이드를 원하지 않을 수 있습니다. 이러한 경우 에이전트 및 수집기의 수동 설치/업그레이드를 위해 워크로드 보안을 구성할 수 있으므로 시스템에 설치된 소프트웨어를 보다 효율적으로 제어할 수 있습니다.</block>
+  <block id="6a6cf662ae6f91c127da69e22956cc12" category="section-title">Protobuf 모드</block>
+  <block id="e60c852a7a4c8de70f56c1772db9c0f5" category="paragraph">이 옵션이 Collector의 _Advanced Configuration_settings에서 활성화되면 워크로드 보안은 FPolicy 엔진을 protebuf 모드로 구성합니다. Protobuf 모드는 ONTAP 버전 9.15 이상에서 지원됩니다.</block>
+  <block id="502f573701c400ca3de6252b1c8e6e9e" category="paragraph">이 기능에 대한 자세한 내용은 을 <block ref="5c3d3ed23ecd4e0a61ac3e8d31f3a637" category="inline-link-macro-rx"></block>참조하십시오.</block>
+  <block id="e28cace0b0e193aac1db472078caa8fb" category="paragraph">protbuf에 대한 특정 권한이 필요합니다(일부 또는 전부가 이미 있을 수 있음).</block>
 </blocks>
