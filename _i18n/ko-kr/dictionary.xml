@@ -8936,15 +8936,6 @@
   <block id="bd0f62d92c7b0e5d6e74b4447418c58b" category="paragraph">Kubernetes 모니터링 운영자가 클러스터 전체의 비밀을 볼 수 있는 권한을 제거하려면 설치하기 전에 _operator-setup.yaml_file 에서 다음 리소스를 삭제하십시오.</block>
   <block id="1790cdbccc4ddd4389eb90d73e043f4b" category="paragraph">업그레이드인 경우 클러스터에서 리소스도 삭제합니다.</block>
   <block id="a66e68a20b3b94a700f3a3b9baa06764" category="paragraph">변경 분석이 활성화된 경우 _AgentConfiguration_or_operator-config.yaml_를 수정하여 변경 관리 섹션의 주석을 해제하고 변경 관리 섹션 아래에 _kindsToIgnoreFromWatch: '"비밀"'_를 포함시킵니다. 이 줄에서 작은따옴표와 큰따옴표의 존재 및 위치를 확인합니다.</block>
-  <block id="342761835c95d3618833ced82b6260ac" category="section-title">Kubernetes 체크섬 확인 중</block>
-  <block id="db313a156e59a943eb317e556df6b532" category="paragraph">Data Infrastructure Insights 에이전트 설치 관리자가 무결성 검사를 수행하지만 일부 사용자는 다운로드한 아티팩트를 설치하거나 적용하기 전에 자체 검증을 수행할 수 있습니다. 기본 다운로드 및 설치 대신 다운로드 전용 작업을 수행하기 위해 이러한 사용자는 UI에서 가져온 에이전트 설치 명령을 편집하고 뒤에 오는 "설치" 옵션을 제거할 수 있습니다.</block>
-  <block id="8ff498fedef16be83cafa8d00c04dd6d" category="list-text">명령에서 뒤에 오는 "--install"을 제거합니다.</block>
-  <block id="facc439433117841a75e83541c8f2373" category="paragraph">download-only 명령은 Data Infrastructure Insights에서 작업 디렉토리로 필요한 모든 아티팩트를 다운로드합니다. 아티팩트에는 다음이 포함되지만 이에 국한되지는 않습니다.</block>
-  <block id="700459827d4941a6a127bc7de7938d5d" category="list-text">서명된 체크섬 파일(SHA256.signed)</block>
-  <block id="e1f4fa985535cfb2dd4b3f50c918b7eb" category="list-text">서명 확인을 위한 PEM 파일(NetApp_cert.pem</block>
-  <block id="7c9f5399bb10652ab7e06778c4de02e1" category="paragraph">PEM 파일의 지문이 다음과 같은 것인지 확인하여 PEM 파일을 확인할 수 있습니다.</block>
-  <block id="7a2babd4fa48c9b0c07e4b865ff53efa" category="paragraph">보다 구체적으로,</block>
-  <block id="76dfc651463ab4e67ce2140b8aadb473" category="paragraph">서명된 체크섬 파일은 PEM 파일을 사용하여 확인할 수 있습니다.</block>
   <block id="ae233b4bee0ed9f611ffe211f5804e00" category="section-title">톨레러스와 얼룩을 볼 수 있습니다</block>
   <block id="6aae913b976c156306d8a5cbbbc06ad5" category="inline-link-macro">상담원 구성 _ 에서</block>
   <block id="d6f0c62217650cf8ede1bd5e1e862b5a" category="paragraph">NetApp-CI-Telegraf-DS_,_netapp-ci-fluent-bit-DS_ 및_netapp-ci-net-observer-L4-DS_Demets는 모든 노드에서 데이터를 올바르게 수집하기 위해 클러스터의 모든 노드에 Pod를 예약해야 합니다. 운용자는 잘 알려진 일부 * 얼룩을 견딜 수 있도록 구성되었습니다. 노드에 사용자 지정 테인트를 구성하여 모든 노드에서 Pod가 실행되지 않도록 설정한 경우, 해당 테인트에 대한 * 톨러레이션 * 을 생성할 수 있습니다<block ref="dc90f93af5ccf5020646213d9b7d2c3d" category="inline-link-macro-rx"></block>. 클러스터의 모든 노드에 사용자 지정 얼룩을 적용한 경우 운영자 포드를 예약 및 실행할 수 있도록 운영자 구축에 필요한 허용 오차도 추가해야 합니다.</block>
@@ -11823,4 +11814,13 @@
   <block id="e60c852a7a4c8de70f56c1772db9c0f5" category="paragraph">이 옵션이 Collector의 _Advanced Configuration_settings에서 활성화되면 워크로드 보안은 FPolicy 엔진을 protebuf 모드로 구성합니다. Protobuf 모드는 ONTAP 버전 9.15 이상에서 지원됩니다.</block>
   <block id="502f573701c400ca3de6252b1c8e6e9e" category="paragraph">이 기능에 대한 자세한 내용은 을 <block ref="5c3d3ed23ecd4e0a61ac3e8d31f3a637" category="inline-link-macro-rx"></block>참조하십시오.</block>
   <block id="e28cace0b0e193aac1db472078caa8fb" category="paragraph">protbuf에 대한 특정 권한이 필요합니다(일부 또는 전부가 이미 있을 수 있음).</block>
+  <block id="435f137980b3b041bbc191c90260bf28" category="section-title">Kubernetes 모니터링 운영자 이미지 서명 확인</block>
+  <block id="d9348d075dc7b3c91cff99d56dfc327b" category="inline-link-macro">Kubernetes 문서</block>
+  <block id="d4f8460ff8f7a6b9a2f0fa99bf9124dd" category="paragraph">운용자의 이미지 및 배포한 모든 관련 이미지는 NetApp에 의해 서명됩니다. Cosign 도구를 사용하여 설치하기 전에 이미지를 수동으로 확인하거나 Kubernetes 승인 컨트롤러를 구성할 수 있습니다. 자세한 내용은 를 <block ref="1aa503106da392b948a493e0ecf5782d" category="inline-link-macro-rx"></block>참조하십시오.</block>
+  <block id="c26df34b044a0a427be188b6e37d45c2" category="paragraph">이미지 서명을 확인하는 데 사용되는 공개 키는 _선택 사항: 운영자 이미지를 개인 저장소에 업로드하십시오. &gt; 이미지 서명 공개 키 _ 의 모니터링 운영자 설치 타일에서 사용할 수 있습니다</block>
+  <block id="0bc181a97045ca85d89be70b124298b4" category="paragraph">이미지 서명을 수동으로 확인하려면 다음 단계를 수행하십시오.</block>
+  <block id="b08a05b2c1b7cc9bf90ee55d748a813c" category="list-text">Image Pull Snippet(이미지 가져오기 스니펫)을 복사하여 실행합니다</block>
+  <block id="2e9d4d6615af62102584a57c2c8ddacd" category="list-text">메시지가 나타나면 리포지토리 암호를 복사하여 입력합니다</block>
+  <block id="2cea2fa4f716d1fa2efbffe877eb702c" category="list-text">이미지 서명 공개 키(예: dii-image-signing.pub)를 저장합니다.</block>
+  <block id="55d6bfb079ee69230d07a9a9c1c17b66" category="list-text">코싸인을 사용하여 영상을 확인합니다. 다음 코사인 사용 예를 참조하십시오</block>
 </blocks>
