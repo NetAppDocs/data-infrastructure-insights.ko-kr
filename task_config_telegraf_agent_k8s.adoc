@@ -19,8 +19,6 @@ summary: Kubernetes 모니터링 운영자는 Data Infrastructure Insights에 �
 Data Infrastructure Insights는 Kubernetes 컬렉션을 위한 * Kubernetes Monitoring Operator * 를 제공합니다. Kubernetes > Collectors > + Kubernetes Collector * 로 이동하여 새 연산자를 구축합니다.
 
 
-toc::[]
-
 
 == Kubernetes Monitoring Operator를 설치하기 전에
 
@@ -65,15 +63,11 @@ image:KubernetesModifyDeploymentMenu.png["Kubernetes Collector 목록 페이지�
 
 화면에는 각 구성 요소의 현재 상태가 표시되며 필요한 경우 해당 Collector에 대한 구성 요소를 비활성화하거나 활성화할 수 있습니다.
 
-image:KubernetesModifyDeploymentScreen.png["Mody 구축 옵션, 700"]
+image:KubernetesModifyDeploymentScreen.png["배포 옵션을 수정합니다. width=700"]
 
 
 
-== 업그레이드 중
-
-
-
-=== 최신 Kubernetes Monitoring Operator로 업그레이드하십시오
+== 최신 Kubernetes Monitoring Operator로 업그레이드하십시오
 
 기존 운영자와 함께 AgentConfiguration이 존재하는지 확인합니다(네임스페이스가 DEFAULT_NetApp-MONITORING_이 아닌 경우 해당 네임스페이스를 대체합니다).
 
