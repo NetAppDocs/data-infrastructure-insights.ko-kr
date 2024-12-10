@@ -250,6 +250,9 @@ Data Infrastructure Insights에서 지원하는 데이터 수집기의 사전순
 | link:task_dc_na_ontap_rest.html["NetApp ONTAP REST 수집기입니다"] | 검토할 수 있습니다 
 
 
+| link:task_dc_na_ontap_all_san_array.html["NetApp ONTAP ASA(All-SAN Array) 수집기"] | 검토할 수 있습니다 
+
+
 | link:task_dc_na_cdot.html["NetApp ONTAP Select를 참조하십시오"] | 검토할 수 있습니다 
 
 
@@ -305,6 +308,9 @@ Data Infrastructure Insights에서 지원하는 데이터 수집기의 사전순
 
 
 | link:task_config_telegraf_agent.html#ubuntu-and-debian["Ubuntu 및 amp;데비안"] | 서비스 
+
+
+| link:task_dc_vast_datastore.html["VAST 데이터스토어"] | 검토할 수 있습니다 
 
 
 | link:task_dc_vmware.html["VMware vSphere를 참조하십시오"] | 검토할 수 있습니다 

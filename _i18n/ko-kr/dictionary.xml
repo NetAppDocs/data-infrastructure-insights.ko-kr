@@ -11822,4 +11822,40 @@
   <block id="55d6bfb079ee69230d07a9a9c1c17b66" category="list-text">코싸인을 사용하여 영상을 확인합니다. 다음 코사인 사용 예를 참조하십시오</block>
   <block id="f0eddc4fb4218ed4ec07da7604fbc1c8" category="inline-image-macro">배포 옵션을 수정합니다. width=700</block>
   <block id="593e78308f625f4551ee5b44b6d582e5" category="paragraph"><block ref="593e78308f625f4551ee5b44b6d582e5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ee063f6b962df93a461d2ffc011f30c6" category="inline-link-macro">NetApp ONTAP ASA(All-SAN Array) 수집기</block>
+  <block id="9e21612beb462f7bd1f813292fecce9e" category="cell"><block ref="9e21612beb462f7bd1f813292fecce9e" category="inline-link-macro-rx"></block></block>
+  <block id="b9b8d4cf4d94212bab3d8ce132b74a37" category="inline-link-macro">VAST 데이터스토어</block>
+  <block id="9b445526869ff95a6549cc8c81c4131b" category="cell"><block ref="9b445526869ff95a6549cc8c81c4131b" category="inline-link-macro-rx"></block></block>
+  <block id="53c9e67c854dc8f210a1632d7ec33799" category="summary">ONTAP All-SAN 어레이 데이터 수집기</block>
+  <block id="a6415bd2448b7919eed8f0af42d67ee9" category="doc">NetApp ONTAP ASA(All-SAN 어레이) 데이터 수집기</block>
+  <block id="b405c90a99544fe264526a99edd2f41c" category="paragraph">이 데이터 수집기는 REST API 호출을 사용하여 ONTAP 9.16.0 이상을 실행하는 스토리지 시스템에서 인벤토리, EMS 로그 및 성능 데이터를 수집합니다.</block>
+  <block id="87df89e1b5a76047447b71a01aec2982" category="list-text">ONTAP 버전 9.16.0 이상</block>
+  <block id="7032ac73bd8241edcec890cdcfabcfa3" category="summary">VAST 데이터 저장소 스토리지 데이터 수집기를 구성하는 중입니다.</block>
+  <block id="ffc9339c36ed95025058c23ec2753b24" category="doc">VAST 데이터스토어 데이터 수집기</block>
+  <block id="db6d41642fd36481ced7748f3f81bc64" category="paragraph">Data Infrastructure Insights는 방대한 데이터 저장소 데이터 수집기를 사용하여 인벤토리 및 성능 데이터를 수집합니다.</block>
+  <block id="1d6af794b2599c1407a83029a09d1ecf" category="cell">네트워크 사업자</block>
+  <block id="457f8d4c765467475ea256add7a3fdc6" category="cell">디스크(위치 필드의 디스크 쉘프 부분)</block>
+  <block id="5b90b71cdc32ad1ac3a7c9235afb9c2f" category="cell">C 노드</block>
+  <block id="c514ac300b6b6e64d5d0b5cc21c5406a" category="cell">StorageNode(유형=CNode)</block>
+  <block id="abcef8b528b45f6e48e135521400cf7f" category="cell">D 노드</block>
+  <block id="da316cef9dacf85ad51ef2feaf010065" category="cell">StorageNode(type=dnode)</block>
+  <block id="15a01110f16efe243b3f75f198287ea2" category="cell">NVRAM입니다</block>
+  <block id="2d4aef30a49a581a6ed89ce840054235" category="cell">디스크</block>
+  <block id="c8e6306840fb73fee1dbc570f9991451" category="cell">보호된 경로</block>
+  <block id="41ad9be6d4308d2a5b19ec77094e428e" category="cell">내부 볼륨 동기화</block>
+  <block id="4ea922c8a9600ba45c7d092b9fac3071" category="cell">QoS 정책</block>
+  <block id="8d83e8b6efd5f54fe3b580a2f28b2f16" category="cell">내부 볼륨(QoS 제한)</block>
+  <block id="fb0d8a1c841cd92afd4cb16ddedaeed5" category="cell">할당량</block>
+  <block id="80307ff54caa7cf20882ee314544c98d" category="cell">SSD를 지원합니다</block>
+  <block id="ab46b0da4c689d676afbc74038c40f71" category="cell">테넌트</block>
+  <block id="c86f4cd8354a2b53d0d427eea434f0bc" category="cell">정책 보기</block>
+  <block id="a1c6152b473e54093548a39b0a49cf60" category="cell">파일 공유(사용 권한)</block>
+  <block id="ed4832a84ee072b00a6740f657183598" category="cell">보기</block>
+  <block id="e2ab08588eb609321db99af452ec8dbd" category="list-text">VAST 데이터스토어 시스템 IP 주소 또는 정규화된 도메인 이름입니다</block>
+  <block id="9658c9c5c5e1ce7340ab09e1dcacf227" category="list-text">사용자 이름/암호를 사용하여 VAST 시스템에 액세스합니다</block>
+  <block id="7abb31f5998b15d8c5e15f3bff14bab8" category="list-text">포트 요구 사항: HTTPS 443</block>
+  <block id="32ff8302603799728a4e2397623f2b3a" category="cell">VAST 데이터스토어 스토리지 IP/호스트 이름</block>
+  <block id="a59ed6c78eadc966927de4b65adc1801" category="cell">스토리지 시스템의 IP 주소 또는 FQDN입니다</block>
+  <block id="9f329f951728d9fd2dc3c86d970b2e7f" category="cell">VAST Storage 사용자 이름입니다</block>
+  <block id="50f8e432f3a17936f4fd1dee864d7ff1" category="cell">VAST 스토리지 암호</block>
 </blocks>
