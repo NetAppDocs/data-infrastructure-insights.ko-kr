@@ -4166,8 +4166,6 @@
   <block id="f2b5d43aba260933c552d69977b7274d" category="list-text">* Data Infrastructure Insights에 가입 * 하여 <block ref="ae0970f4d06315494d31beaa05a7be05" category="inline-link-macro-rx"></block>직접 또는 을 통해 지속적으로 데이터에 액세스할 수 <block ref="e91d3f98f4b43abdea3c839a7777954c" category="inline-link-macro-rx"></block>있습니다.</block>
   <block id="7bc1d8b07dfc0e98950abc0c7f3979a5" category="inline-link-macro">정보 및 지역</block>
   <block id="6c36c3c54c4f691f7ed13a16d49bbde7" category="paragraph">등록 프로세스 중에 Data Infrastructure Insights 환경을 호스팅할 글로벌 지역을 선택할 수 있습니다. 자세한 내용은 데이터 인프라 인사이트 를 참조하십시오<block ref="286a302a1ee50fd59eb368d3d9779037" category="inline-link-macro-rx"></block>.</block>
-  <block id="b56a9b49aabd38d375de7e8e4f8b5622" category="inline-link-macro">Data Infrastructure Insights 가격 책정</block>
-  <block id="cee7deeaab7259c2e4c56b35d6bb0c93" category="paragraph">Data Infrastructure Insights Basic 및 Premium 버전에서 사용할 수 있는 기능에 대한 전체 비교는 <block ref="c893050db2e06595e0b03cb2a1aae724" category="inline-link-macro-rx"></block>페이지를 참조하십시오.</block>
   <block id="ef66b5abbe1e0b79e23deb05dd2d11a9" category="admonition">비활성 Data Infrastructure Insights Basic Edition 환경이 삭제되고 해당 리소스가 회수됩니다. 연속 7일 동안 수집된 데이터가 없는 경우, 연속으로 30일 동안 사용자 활동이 없는 경우 환경은 비활성 상태로 간주됩니다. Data Infrastructure Insights는 알림을 전송하고 환경이 삭제되기 4일의 유예 기간을 제공합니다.</block>
   <block id="d618d9be50e37adf260935938e49af96" category="inline-image-macro">자물쇠</block>
   <block id="12ddfc86083937d7a126f2fd8615aa6b" category="inline-xref">모듈 평가</block>
@@ -11888,4 +11886,6 @@
   <block id="144b03f9a57dbd781b29163e6412a6a3" category="paragraph">보안 및 리소스 관리 기능을 개선하기 위해 설계된 최신 기능을 소개합니다! 고급 포렌식 그룹별 기능 및 계층적 다중 그룹별 지원을 통해 특정 폴더에 액세스한 사용자를 쉽게 식별하고, 활성 클라이언트 IP 주소를 추적하여 위험을 사전에 관리할 수 있습니다. 가장 많이 액세스되는 파일과 폴더를 정확히 파악하여 스토리지 및 대역폭 사용을 최적화하고 실제 사용자를 식별하여 시스템 액세스를 보다 효율적으로 제어할 수 있습니다.</block>
   <block id="15b5571e4da70619b1e8530a8df35661" category="inline-image-macro">그룹별을 보여 주는 포렌식 예제 화면</block>
   <block id="d932f771e537d16693bed2e69269a746" category="paragraph"><block ref="d932f771e537d16693bed2e69269a746" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ee0b2f1c8ad7945cf603e8d752a5e7b5" category="inline-link-macro">Data Infrastructure Insights 에디션</block>
+  <block id="bbf9080a1bf1fb2f62558ce683d64be0" category="paragraph">Data Infrastructure Insights Basic 및 Premium 버전에서 사용할 수 있는 기능에 대한 전체 비교는 <block ref="49bb501f6c401ae5b06c3dbe5fc987bd" category="inline-link-macro-rx"></block>페이지를 참조하십시오.</block>
 </blocks>
