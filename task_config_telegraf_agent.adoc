@@ -29,7 +29,7 @@ Kubernetes에 설치하는 방법에 대한 자세한 link:task_config_telegraf_
 NOTE: 정확한 감사 및 데이터 보고를 위해 * NTP(Network Time Protocol) * 또는 * SNTP(Simple Network Time Protocol) * 를 사용하여 Agent 시스템의 시간을 동기화하는 것이 좋습니다.
 
 
-NOTE: Agent를 설치하기 전에 설치 파일을 확인하려면 의 아래 섹션을 참조하십시오<<체크섬을 확인하는 중입니다>>.
+NOTE: Agent를 설치하기 전에 설치 파일을 확인하려면 의 아래 섹션을 참조하십시오<<Verifying Checksums>>.
 
 
 
@@ -364,15 +364,15 @@ systemctl stop telegraf (If your operating system is using systemd)
 
 
 
-== 체크섬을 확인하는 중입니다
+== Telegraf 패키지 체크섬 확인
 
-Data Infrastructure Insights 에이전트 설치 관리자가 무결성 검사를 수행하지만 일부 사용자는 다운로드한 아티팩트를 설치하거나 적용하기 전에 자체 검증을 수행할 수 있습니다. 이 작업은 설치 프로그램을 다운로드하고 다운로드한 패키지에 대한 체크섬을 생성한 다음 설치 지침에 표시된 값과 체크섬을 비교하여 수행할 수 있습니다.
+Data Infrastructure Insights 에이전트 설치 프로그램이 무결성 검사를 수행하지만 일부 사용자는 다운로드한 Telegraf 바이너리를 설치하기 전에 자체 검증을 수행할 수 있습니다. 이 작업은 설치 프로그램을 다운로드하고 다운로드한 패키지에 대한 체크섬을 생성한 다음 설치 지침에 표시된 값과 체크섬을 비교하여 수행할 수 있습니다.
 
 
 
 === 설치하지 않고 설치 프로그램 패키지를 다운로드합니다
 
-다운로드 전용 작업(기본 다운로드 및 설치와 반대)을 수행하기 위해 사용자는 UI에서 가져온 에이전트 설치 명령을 편집하고 뒤에 오는 "설치" 옵션을 제거할 수 있습니다.
+기본 다운로드 및 설치 대신 다운로드 전용 작업을 수행하기 위해 사용자는 UI에서 얻은 에이전트 설치 명령을 편집하고 "설치" 옵션을 제거할 수 있습니다.
 
 다음 단계를 수행하십시오.
 
@@ -387,35 +387,36 @@ Windows 이외의 경우(이러한 예는 Kubernetes에 해당하고, 실제 스
 
 * 다운로드 및 설치(기본값):
 +
- installerName=cloudinsights-kubernetes.sh … && sudo -E -H ./$installerName --download –-install
+ installerName=cloudinsights-ubuntu_debian.sh … && ./$installerName --download --verify && sudo -E -H ./$installerName --install
 * 다운로드 전용:
 +
- installerName=cloudinsights-kubernetes.sh … && sudo -E -H ./$installerName --download
+ installerName=cloudinsights-ubuntu_debian.sh … && ./$installerName --download --verify
 
 
 창:
 
 * 다운로드 및 설치(기본값):
 +
- !$($installerName=".\cloudinsights-windows.ps1") … -and $(&$installerName -download -install)
+ !$($installerName=".\cloudinsights-windows.ps1") … -and $(if(((Get-FileHash $installerName).Hash).ToLower() -eq "INSTALLER_CHECKSUM ") { &$installerName -download -verify -install } else { Write-Host "Install script checksum does not match"})"
 * 다운로드 전용:
 +
- !$($installerName=".\cloudinsights-windows.ps1") … -and $(&$installerName -download)
+ !$($installerName=".\cloudinsights-windows.ps1") … -and $(if(((Get-FileHash $installerName).Hash).ToLower() -eq "INSTALLER_CHECKSUM ") { &$installerName -download -verify } else { Write-Host "Install script checksum does not match"})"
 
 
 download-only 명령은 Data Infrastructure Insights에서 작업 디렉토리로 필요한 모든 아티팩트를 다운로드합니다. 아티팩트에는 다음이 포함되지만 이에 국한되지는 않습니다.
 
 * 설치 스크립트
 * 환경 파일입니다
-* YAML 파일
-* 체크섬 파일(SHA256.signed 또는 SHA256.PS1로 끝남)
+* Telegraf 바이너리
+* Telegraf 바이너리의 서명입니다
+* 이진 서명을 확인하는 공용 인증서입니다
 
 
-육안 검사를 통해 설치 스크립트, 환경 파일 및 YAML 파일을 확인할 수 있습니다.
+DII에서 다운로드 및 복사된 설치 스니펫은 자동으로 설치 스크립트를 체크섬하고 Telegraf 바이너리의 서명은 설치 스크립트를 통해 확인됩니다.
 
 
 
-=== 체크섬 값을 생성합니다
+=== 체크섬 값을 확인합니다
 
 체크섬 값을 생성하려면 해당 플랫폼에 대해 다음 명령을 수행합니다.
 
@@ -425,20 +426,6 @@ download-only 명령은 Data Infrastructure Insights에서 작업 디렉토리�
 * 창:
 +
  Get-FileHash telegraf.zip -Algorithm SHA256 | Format-List
-
-
-
-
-=== 체크섬을 확인합니다
-
-체크섬 파일에서 필요한 체크섬을 추출합니다
-
-* 비 Windows:
-+
- openssl smime -verify -in telegraf*.sha256.signed -CAfile netapp_cert.pem -purpose any -nosigs -noverify
-* 창:
-+
- (Get-Content telegraf.zip.sha256.ps1 -First 1).toUpper()
 
 
 
