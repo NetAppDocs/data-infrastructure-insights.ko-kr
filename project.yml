@@ -245,8 +245,6 @@ sidebar:
       entries:
       - title: 활동 포렌식 - 모든 활동
         url: "/forensic_activity_history.html"
-      - title: 활동 포렌식 - 엔티티
-        url: "/forensic_entity_detail.html"
       - title: 사용자
         url: "/forensic_user_overview.html"
     - title: 자동 응답 정책

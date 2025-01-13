@@ -2135,7 +2135,6 @@
   <block id="8b323f07a8614b39412ac6f03ce45d0e" category="sidebar">워크로드 보안 사용자 관리</block>
   <block id="abc492c54ab99cf963d50d67acb42565" category="sidebar">이벤트 속도 검사기(에이전트 크기 지정 가이드)</block>
   <block id="a8df87f53c1b831dfc886e69dec19144" category="sidebar">활동 포렌식 - 모든 활동</block>
-  <block id="e5ac43b15443b9248d0df9b88a442cf9" category="sidebar">활동 포렌식 - 엔티티</block>
   <block id="f9aae5fda8d810a29f12d1e61b4ab25f" category="sidebar">사용자</block>
   <block id="9b5911ec569b49f0ae81ecb2c9067806" category="sidebar">ONTAP 자율 랜섬웨어 보호 통합</block>
   <block id="1c31d515d2e78422350a8dfc6a331a38" category="sidebar">ONTAP 액세스 통합이 거부되었습니다</block>
@@ -6249,9 +6248,7 @@
   <block id="1fec62ac6ef0096301dec6c9552701f7" category="cell">지정된 디렉토리 아래의 모든 파일과 폴더의 반복적인 조회</block>
   <block id="e16b5b7f26f54214445cbe38d72c2828" category="cell">빠릅니다</block>
   <block id="f6a092f816e6eb604694d6a921395ccb" category="cell">디렉터리 검색은 최대 4개의 디렉터리가 빠릅니다.</block>
-  <block id="840207e609d7b9a7b687b3b2712e903d" category="cell">지정된 경로 regex 아래의 모든 파일과 폴더의 반복적인 조회(테스트 * 는 파일 또는 디렉토리 또는 둘 다를 의미할 수 있음)</block>
   <block id="e7b02c274fe199317927b2a2d54e280e" category="cell">느린 속도</block>
-  <block id="4b88bc6659fa6ffa1353db049ea38556" category="cell">디렉터리+파일 정규식 검색은 디렉터리 검색보다 검색 속도가 느립니다.</block>
   <block id="1bd0462f5987c1382af61035c6ea62ff" category="cell">4개 이상의 디렉터리 검색은 검색 속도가 느립니다.</block>
   <block id="2127f473d96f54c997a492a6ca024c5b" category="cell">기타 모든 비 경로 기반 필터. 사용자 및 엔터티 유형 필터는 따옴표로 묶는 것이 좋습니다. 예: User="Administrator" Entity Type="txt"</block>
   <block id="9b9935ad5969c28de13381a2e512b47c" category="paragraph">참고:</block>
@@ -6286,7 +6283,6 @@
   <block id="e0c965c954b5a9fdc33c5b0516799f7d" category="cell">"AutoRansomUser4_03162022"로 시작하지 않는 모든 항목을 반환합니다.</block>
   <block id="eae639a70006feff484a39363c977e24" category="cell">도메인</block>
   <block id="3c16a1572c295ef2bbd770516679c559" category="cell">대상 필드가 비어 있는 결과를 반환합니다</block>
-  <block id="012f3ec70fcf8eccc1fce56e4a0b94b6" category="section-title">경로/원래 경로 검색</block>
   <block id="64048c881c93933680d02730e9d9ce63" category="paragraph">/ 을(를) 사용하거나 사용하지 않고 검색 결과는 다릅니다</block>
   <block id="53ca5edb3205aa3468395e1789114a60" category="cell">작동하지 않습니다</block>
   <block id="1d7531d059e4088a0878ea4eb94d32b6" category="cell">"/AutoDir1/AutoFile03242022"</block>
@@ -11835,7 +11831,6 @@
   <block id="ce0a4ef9bdcf713141ba5af92b5449a2" category="list-text">그룹별 드롭다운은 사용자, 경로, 엔티티 유형 등을 기준으로 활동을 그룹화할 수 있는 옵션을 제공합니다</block>
   <block id="2f67a7ee2834facb4c2289f3f9f8a7b0" category="list-text">테이블 위에 있는 공통 경로 버튼을 클릭하면 엔터티 경로 세부 정보가 있는 슬라이드 아웃 패널을 볼 수 있습니다.</block>
   <block id="2b9b3cac1b8e073b6533f3389ac6ad5f" category="list-text">슬라이드 아웃 패널로 에 대한 링크를 사용하여 엔티티에 액세스한 * 사용자 *<block ref="62cf04ad66abc0c5964885d5ae0624ca" category="inline-link-macro-rx"></block>.</block>
-  <block id="06bc22bdba9ef782b6246496ad8db1bd" category="list-text">Path * 는 _entity_path 입니다.</block>
   <block id="2c20ae8e4eac25c0be12e73a9aea15f8" category="list-text">첫 번째 레벨 폴더(루트) * 는 소문자인 엔터티 경로의 루트 디렉토리입니다.</block>
   <block id="d56292c623739eef9a2dbb8219169c5c" category="list-text">2nd Level Folder * 는 소문자인 엔터티 경로의 두 번째 레벨 디렉토리입니다.</block>
   <block id="21a75329f45abb51a3f768e3caaf47c5" category="list-text">세 번째 수준 폴더 * 는 소문자로 엔터티 경로의 세 번째 수준 디렉터리입니다.</block>
@@ -11849,7 +11844,6 @@
   <block id="80662c9452da0395efcb752fc6efd791" category="list-text">작업 수는 하이퍼링크로 표시됩니다. 이 항목을 선택하면 선택한 그룹이 필터로 추가됩니다. 활동 표는 해당 필터에 따라 업데이트됩니다.</block>
   <block id="f5048103eec701282d4bd47edb30c0dd" category="list-text">필터를 변경하거나 시간 범위를 변경하거나 화면을 새로 고치면 필터를 다시 설정하지 않으면 필터링된 결과로 돌아갈 수 없습니다.</block>
   <block id="a7b9ef6a74f521c07a42dfe2b3ba5984" category="list-text">필터는 슬라이드 아웃 패널에서 추가할 수 있습니다. 이 값은 top_Filter by_list의 해당 필터에 추가됩니다.</block>
-  <block id="a6c33488a3d8762852d55cced3c5bf96" category="list-text">*엔터티의 경로 * - 디렉터리 경로 필터(경로 문자열 / 로 끝나는)를 최대 4개까지 입력하여 더 빠른 결과를 얻을 수 있습니다. 예: _"/home/userX/nested1/nested2/"_. 자세한 내용은 아래 표를 참조하십시오.</block>
   <block id="abc9548bbf938c1b00d7d7943eea69c6" category="list-text">1단계 폴더(루트) - 엔티티 경로의 루트 디렉토리입니다. 예를 들어, 엔터티 경로가 /home/userX/nested1/nested2/이면 home 또는 "home"을 사용할 수 있습니다.</block>
   <block id="ef05d086fd7703f59da830094683f26b" category="list-text">두 번째 수준 폴더 - 엔터티 경로 필터의 두 번째 수준 디렉터리입니다. 예를 들어, 엔터티 경로가 /home/userX/nested1/nested2/이면 userX 또는 "userX"를 사용할 수 있습니다.</block>
   <block id="d09c77be27888e5715284768b4b56a37" category="list-text">3rd 레벨 폴더 – 엔티티 경로 필터의 세 번째 레벨 디렉토리입니다.</block>
@@ -11873,10 +11867,6 @@
   <block id="17411e5191f440928552bd359518e697" category="cell">Works; AutoDir1 및 AutoFile03242022와 일치하는 2단계 디렉터리와 일치하는 1단계 디렉터리의 모든 작업을 반환합니다(대소문자 구분 없음).</block>
   <block id="a874dae9695be1c2a6ef02373776f7b7" category="cell">검색 문자열의 별표(\ *)는 모든 항목을 검색합니다. 그러나 _ * &lt;searchTerm&gt;_또는 _ * &lt;searchTerm&gt; * _ 과(와) 같은 선행 와일드카드 문자열은 쿼리 속도를 느리게 만듭니다. 보다 나은 성능을 얻으려면 접두사 문자열을 대신 _&lt;searchTerm&gt;*_ 형식으로 사용합니다(즉, 별표(*)_after_a 검색 용어를 추가합니다). 예: _ * testvolume_or_ * test * volume_ 대신 _testvolume *_ 문자열을 사용하십시오. 디렉토리 검색을 사용하여 지정된 폴더 아래의 모든 활동을 재귀적으로 봅니다(계층 검색). 예: "/path1/path2/path3/"는 /path1/path2/path3 아래에 재귀적으로 모든 활동을 나열합니다. 또는 All Activity(모든 활동) 탭 아래의 "Add to Filter(필터에 추가)" 옵션을 사용합니다.</block>
   <block id="980f8b6539b7c131f66cdde66f81a98f" category="cell">더 빠른 결과를 얻으려면 디렉터리 경로 필터(경로 문자열 / 로 끝나는)를 최대 4개까지 사용하는 것이 좋습니다. 예를 들어 디렉터리 경로가 /aa/bbb/ccc/dd인 경우 "/aa/bb/ccc/dd/"를 검색하여 데이터를 더 빨리 로드하십시오.</block>
-  <block id="26ae3eeb85fe056d40f1b756635ebb59" category="section-title">포렌식 그룹화를 통해 위험을 사전에 관리합니다</block>
-  <block id="144b03f9a57dbd781b29163e6412a6a3" category="paragraph">보안 및 리소스 관리 기능을 개선하기 위해 설계된 최신 기능을 소개합니다! 고급 포렌식 그룹별 기능 및 계층적 다중 그룹별 지원을 통해 특정 폴더에 액세스한 사용자를 쉽게 식별하고, 활성 클라이언트 IP 주소를 추적하여 위험을 사전에 관리할 수 있습니다. 가장 많이 액세스되는 파일과 폴더를 정확히 파악하여 스토리지 및 대역폭 사용을 최적화하고 실제 사용자를 식별하여 시스템 액세스를 보다 효율적으로 제어할 수 있습니다.</block>
-  <block id="15b5571e4da70619b1e8530a8df35661" category="inline-image-macro">그룹별을 보여 주는 포렌식 예제 화면</block>
-  <block id="d932f771e537d16693bed2e69269a746" category="paragraph"><block ref="d932f771e537d16693bed2e69269a746" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ee0b2f1c8ad7945cf603e8d752a5e7b5" category="inline-link-macro">Data Infrastructure Insights 에디션</block>
   <block id="bbf9080a1bf1fb2f62558ce683d64be0" category="paragraph">Data Infrastructure Insights Basic 및 Premium 버전에서 사용할 수 있는 기능에 대한 전체 비교는 <block ref="49bb501f6c401ae5b06c3dbe5fc987bd" category="inline-link-macro-rx"></block>페이지를 참조하십시오.</block>
   <block id="3bbdd1e5a1fbf0d58680e594b8806722" category="section-title">Telegraf 패키지 체크섬 확인</block>
@@ -11887,4 +11877,18 @@
   <block id="b7e85347cdffb5889c57e4b1ad785a2e" category="list-text">이진 서명을 확인하는 공용 인증서입니다</block>
   <block id="bfc63dcde995168de645c7c0b1b67357" category="paragraph">DII에서 다운로드 및 복사된 설치 스니펫은 자동으로 설치 스크립트를 체크섬하고 Telegraf 바이너리의 서명은 설치 스크립트를 통해 확인됩니다.</block>
   <block id="26f2872f4049fcba9927c1b41d6502d3" category="section-title">체크섬 값을 확인합니다</block>
+  <block id="9dd6e3f1271bf8cdcd9a0becace5f06f" category="section-title">2025년 1월</block>
+  <block id="d482be2df573f6eb04e440a4a05482a1" category="section-title">포렌식 그룹화를 통해 위험을 사전에 관리합니다</block>
+  <block id="2e6b3809f9d5218f35a0a7a320263e07" category="paragraph">보안 및 리소스 관리 기능을 개선하기 위해 설계된 최신 기능을 소개합니다! 고급 그룹별 기능 및 계층적 다중 그룹별 지원을 통해 특정 폴더에 액세스한 사용자를 쉽게 식별하고, 가장 활발한 사용자와 공유를 확인하고, 활성 클라이언트 IP 주소를 추적하여 위험을 사전에 관리할 수 있습니다. 가장 많이 액세스되는 파일과 폴더를 정확히 파악하여 스토리지 및 대역폭 사용을 최적화하고 사용자를 식별하여 시스템 액세스를 보다 효율적으로 제어할 수 있습니다.</block>
+  <block id="7c86c6e5a05df9478bfb181de6b56a05" category="inline-image-macro">포렌식 활동 추적 예제 화면</block>
+  <block id="e14be859c412d77ea3be17beace7319c" category="paragraph"><block ref="e14be859c412d77ea3be17beace7319c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b6e54264047927b79be771cbfd2b5201" category="section-title">대시보드 액세스 제어</block>
+  <block id="84229233ad61c44b8e53075992f6c8a5" category="paragraph">Data Infrastructure Insights는 이제 작성하는 대시보드에 대한 액세스를 보다 효과적으로 제어할 수 있습니다. 그래프를 수정할 수 있는 사용자를 선택합니다. 사용자는 잠재적으로 민감한 정보에 대한 노출을 제어합니다. 일반 가시성이 지원되지 않는 대시보드에서 계속 작업 중입니까? 공유할 준비가 될 때까지 비공개로 유지할 수 있습니다.</block>
+  <block id="f916d734e48a8724b0f8c434b43a06a7" category="inline-image-macro">대시보드 공유 옵션</block>
+  <block id="e2d1989486babbb3dc0993863f9f4ef8" category="paragraph"><block ref="e2d1989486babbb3dc0993863f9f4ef8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c278bdd917e4f32f7d8a13861d3c1a43" category="list-text">Path * 는 _entity_path 입니다. 정확한 엔터티 경로(예: "_/home/userX/nested1/nested2/abc.txt_") 또는 재귀 검색을 위한 경로의 디렉토리 부분(예: "_/home/userX/nested1/nested2/_")이어야 합니다. 참고: regex 경로 패턴(예: _userX_)은 여기서 허용되지 않습니다. 또는 아래에 언급된 개별 경로 폴더 레벨 필터를 경로 필터링에 지정할 수도 있습니다.</block>
+  <block id="09cde459dc94ebcdb7fb39e8a2b6e65f" category="list-text">*엔터티의 경로 * - 정확한 엔터티 경로(예: "_/home/userX/nested1/nested2/abc.txt_") 또는 재귀 검색을 위한 경로의 디렉토리 부분(예: "_/home/userX/nested1/nested2/_")이어야 합니다. 참고: regex 경로 패턴(예: * userX *)은 여기서 허용되지 않습니다. 보다 빠른 결과를 위해 디렉터리 경로 필터(경로 문자열 / 로 끝나는)를 최대 4개까지 사용할 것을 권장합니다. 예: "_/home/userX/nested1/nested2/_". 자세한 내용은 아래 표를 참조하십시오.</block>
+  <block id="39dfb1596c6a6cd5efc77677cffa9f47" category="cell">경로 값이 /home/userX/nested1/test와 일치하는 정확한 일치</block>
+  <block id="67796eee76b434ba7f714f24fce77a4c" category="cell">정확한 검색은 디렉터리 검색에 비해 검색 속도가 느립니다.</block>
+  <block id="ee884ab6f8aeb5114dc04fcb169533de" category="section-title">경로 검색</block>
 </blocks>
