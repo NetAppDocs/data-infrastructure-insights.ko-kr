@@ -1,21 +1,18 @@
 ---
 sidebar: sidebar 
 permalink: task_identify_inactive_devices.html 
-keywords: inactive, device, 
-summary: 비활성 디바이스를 식별하면 해당 디바이스를 삭제하거나 활성 역할에 할당할 수 있습니다. 
+keywords: inactive, device, remove, removing, identify, identifying 
+summary: 비활성 장치를 식별하면 장치를 삭제하거나 활성 역할에 할당할 수 있습니다. 
 ---
 = 비활성 장치 식별
-:toc: macro
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 
-:toc: 
 :toclevels: 1
 :nofooter: 
 :icons: font
 :linkattrs: 
 :imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]
@@ -24,10 +21,12 @@ summary: 비활성 디바이스를 식별하면 해당 디바이스를 삭제하
 다음 단계에 따라 비활성 자산을 식별합니다.
 
 .단계
-* Explore ->+New Metric Query * 로 이동합니다.
+* 관측성 > 탐색 ->+새 메트릭 쿼리 * 로 이동합니다.
 * 드롭다운에서 _Storage_를 선택합니다.
 * 기어를 클릭하고 _IsActive_를 열로 추가합니다.
 +
 검사를 표시하는 행이 활성화됩니다. "X"는 비활성 장치를 나타냅니다.
 
 
+
+비활성 장치를 제거하려면 제거할 장치를 선택하고 * Bulk Actions * 드롭다운에서 _Delete Inactive Devices_를 선택합니다.

@@ -87,6 +87,8 @@ sidebar:
         url: "/task_query_copy_table_values.html"
       - title: 로그를 쿼리하는 중입니다
         url: "/concept_log_explorer.html"
+      - title: 비활성 장치 식별
+        url: "/task_identify_inactive_devices.html"
     - title: 인사이트
       entries:
       - title: 개요

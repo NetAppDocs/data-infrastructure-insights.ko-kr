@@ -679,11 +679,9 @@
   <block id="14af2cecff51d4bd977845145cc871e8" category="list-text">* 삭제됨 *: 제거되었으며 더 이상 사용할 수 없는 데이터 수집기입니다.</block>
   <block id="b92e6e167ffd0f1968a046d49559d1cd" category="list-text">획득 장치: 데이터 수집기를 호스팅하는 전용 컴퓨터(일반적으로 가상 머신)입니다. 이 컴퓨터는 일반적으로 모니터링되는 항목과 동일한 데이터 센터/VPC에 위치합니다.</block>
   <block id="c5b4625b23c5673b268b9b686102faa0" category="list-text">데이터 소스: 하드웨어 또는 소프트웨어 스택과 통신하는 모듈입니다. 장치와 통신하기 위해 AU 컴퓨터에서 실행되는 구성 및 코드로 구성됩니다.</block>
-  <block id="14f8a78e828f1a5ed0a16f4eb166171e" category="summary">비활성 디바이스를 식별하면 해당 디바이스를 삭제하거나 활성 역할에 할당할 수 있습니다.</block>
   <block id="ee5c6c936b3e5e6b3191a941d5161f88" category="doc">비활성 장치 식별</block>
   <block id="dedb4128ca8f8589aeee2da1198fdc45" category="paragraph">보유하고 있는 자산과 자산을 사용하는 사람을 파악하는 것은 "적합한 사이징"과 사용되지 않는 인프라를 확보하는 데 매우 중요합니다. 사용량이 적은 리소스를 쉽게 재할당하거나 사용 중단할 수 있으며 불필요한 구매를 방지할 수 있습니다.</block>
   <block id="89335488274d94cea3defd958dbbabbe" category="paragraph">다음 단계에 따라 비활성 자산을 식별합니다.</block>
-  <block id="62a2ac40719f6cb31d5e1ad43d9d8a19" category="list-text">Explore -&gt;+New Metric Query * 로 이동합니다.</block>
   <block id="9ec73c52f582999e7cc8d920ca844c81" category="list-text">드롭다운에서 _Storage_를 선택합니다.</block>
   <block id="4c6af067d4990a4c05731f55b8095467" category="list-text">기어를 클릭하고 _IsActive_를 열로 추가합니다.</block>
   <block id="49eec5d17a233960170b22a7e35d15a7" category="paragraph">검사를 표시하는 행이 활성화됩니다. "X"는 비활성 장치를 나타냅니다.</block>
@@ -11891,4 +11889,26 @@
   <block id="39dfb1596c6a6cd5efc77677cffa9f47" category="cell">경로 값이 /home/userX/nested1/test와 일치하는 정확한 일치</block>
   <block id="67796eee76b434ba7f714f24fce77a4c" category="cell">정확한 검색은 디렉터리 검색에 비해 검색 속도가 느립니다.</block>
   <block id="ee884ab6f8aeb5114dc04fcb169533de" category="section-title">경로 검색</block>
+  <block id="2cc37e7dae91aa6d162030f273b8b089" category="section-title">API 액세스 토큰 생성 및 사용</block>
+  <block id="f7e5cf33ae8a7c09bd73c6eb95b3e017" category="paragraph">Telegraf 데이터 수집용 API 액세스 토큰을 생성하려면 다음 중 하나를 수행하십시오.</block>
+  <block id="8ddcacd36bfaa54f9de9d8d1c6d98ca9" category="section-title">Data Collector 설치 페이지를 통해 만듭니다</block>
+  <block id="394d78dd95d6065caac482adbe22a898" category="list-text">사용할 플랫폼(Windows, Linux)의 Data Collector 설치 페이지로 이동합니다.</block>
+  <block id="7db0aa7259305c6d7d0e72d5ca0ebe3e" category="list-text">API 액세스 토큰 단추를 사용하여 토큰을 생성합니다.</block>
+  <block id="eaaf6f42e491bead6370a5960ab7260c" category="list-text">이름을 입력하고 저장을 클릭합니다.</block>
+  <block id="0972f446b6a6a91283e10881d0cd5cf0" category="list-text">이제 토큰 이름이 드롭다운에서 선택되고 Collector를 설치할 때 사용됩니다.</block>
+  <block id="4cb3c725652f3200a0496010ad323294" category="section-title">API 액세스 토큰을 수동으로 생성합니다</block>
+  <block id="cc7ffe0790f9f9e2c594de1ca95da934" category="list-text">Admin &gt; API Access 로 이동합니다.</block>
+  <block id="f567a7e9fa5b6ea07dfbcb1f10ba898f" category="list-text">API 액세스 토큰을 클릭합니다.</block>
+  <block id="da2b1a111c6e52a8a048f3f7d02e27f5" category="list-text">이름을 입력하고 선택적으로 설명을 입력합니다.</block>
+  <block id="2a5f374bd17838390e94539cf1c9edc6" category="list-text">"어떤 유형의 API를 사용하여 이 토큰을 호출할 수 있습니까?"에서 "데이터 수집"만 선택한 다음 "수집 장치"를 선택 취소합니다.</block>
+  <block id="bde31c4af787b8aa67aa8f46d9927e06" category="list-text">"Permissions"에서 Read/Write를 선택합니다.</block>
+  <block id="47513702e119e549693050eff5813577" category="list-text">"Kubernetes용 토큰 자동 회전"의 선택을 취소합니다.</block>
+  <block id="e1fda48afafafca9c77b96f3325e10f1" category="paragraph">새로 생성된 API 액세스 토큰을 사용하려면 설치 프로그램 페이지의 "기존 API 액세스 토큰 선택 또는 새 토큰 생성" 드롭다운에서 토큰을 선택합니다. 다음 속성을 가진 토큰만 사용할 수 있습니다.</block>
+  <block id="9533e239d3608e18a0887fa1e16eeb68" category="list-text">API 유형: "데이터 수집"만 해당</block>
+  <block id="80ca9e629a03eaeba4e8aee7e74f24d0" category="list-text">권한: 읽기/쓰기</block>
+  <block id="4b6539abc7c077e53508d1262f8b50a0" category="list-text">Kubernetes 자동 회전: 끄기</block>
+  <block id="dc404ee30c75f557f651d109560394f2" category="summary">비활성 장치를 식별하면 장치를 삭제하거나 활성 역할에 할당할 수 있습니다.</block>
+  <block id="ca351e1a429ee72dbdb2061c22743ef6" category="list-text">관측성 &gt; 탐색 -&gt;+새 메트릭 쿼리 * 로 이동합니다.</block>
+  <block id="5e7f24385025eba3461014d3d964455b" category="paragraph">비활성 장치를 제거하려면 제거할 장치를 선택하고 * Bulk Actions * 드롭다운에서 _Delete Inactive Devices_를 선택합니다.</block>
+  <block id="72a442c57900f55848aa4acb856a507d" category="sidebar">비활성 장치 식별</block>
 </blocks>
