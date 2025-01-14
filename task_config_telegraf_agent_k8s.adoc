@@ -484,5 +484,8 @@ Fluent-bit을 다시 시작합니다.
  fs.inotify.max_user_instances=<something larger than current setting>
  fs.inotify.max_user_watches=<something larger than current setting>
 ----
+
+
+| Telegraf DS pods는 TLS 인증서를 검증할 수 없기 때문에 Kubernetes 입력 플러그인에서 HTTP 요청을 하지 못하는 것과 관련된 오류를 보고하고 있습니다. 예: E! [input.kubernetes] 플러그인 오류: TLS를 가져오기 "https://<kubelet_IP>:10250/stats/summary":[]위해 HTTP 요청을 하는 중 오류"https://<kubelet_IP>:10250/stats/summary":[]: 인증서를 확인하지 못했습니다. x509: <kubelet_IP>에 대한 인증서의 유효성을 검사할 수 없습니다. IP SAN이 포함되어 있지 않습니다 | 이 문제는 kubelet이 자체 서명된 인증서를 사용하고 있거나 지정된 인증서에 certificates_subject alternative Name_list에 <kubelet_IP>가 포함되어 있지 않은 경우에 발생합니다. 이 문제를 해결하기 위해 사용자는link:telegraf_agent_k8s_config_options.html["에이전트 구성"], 및 set_Telegraf:insecureK8sSkipVerify_to_true_를 수정할 수 있습니다. 이렇게 하면 확인을 건너뛰도록 Telegraf 입력 플러그인이 구성됩니다. 또는 link:https://kubernetes.io/docs/reference/config-api/kubelet-config.v1beta1/["서버 TLSBootstrap"]'certificates.k8s.io' API에서 인증서 요청을 트리거하는 kubelet을 구성할 수도 있습니다. 
 |===
 추가 정보는 페이지 또는 에서 찾을 link:concept_requesting_support.html["지원"]link:reference_data_collector_support_matrix.html["Data Collector 지원 매트릭스"]수 있습니다.

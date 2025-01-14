@@ -112,7 +112,10 @@ summary: NetApp Kubernetes Monitoring Operator는 다양한 구성 옵션을 제
 |  | SkipProcessorsAfterAggregators 를 참조하십시오 | 을 참조하십시오 link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Telegraf 구성 문서"] 
 
 
-|  | 보호되지 않음 | 자세한 link:https://community.influxdata.com/t/updating-telegraf-to-version-1-29-5-crashes-kubernetes-pod/33376["알려진 Telegraf 문제입니다"]내용을 확인하십시오. setting_unprotected_는 Kubernetes 모니터링 운영자에게 플래그와 함께 Telegraf를 실행하도록 지시합니다. `--unprotected` 
+|  | 보호되지 않음 | 이거 link:https://community.influxdata.com/t/updating-telegraf-to-version-1-29-5-crashes-kubernetes-pod/33376["알려진 Telegraf 문제입니다"]봐요. setting_unprotected_는 Kubernetes 모니터링 운영자에게 플래그와 함께 Telegraf를 실행하도록 지시합니다. `--unprotected` 
+
+
+|  | insecureK8sSkipVerify를 참조하십시오 | Telegraf가 IP SAN 부족으로 인증서를 확인할 수 없는 경우 검증 건너뛰기를 활성화하십시오 
 
 
 | Kudbe-state-metrics를 나타냅니다 |  | 작업자의 kudbe 상태 메트릭 설치를 사용자 지정할 수 있는 구성 옵션입니다 
