@@ -11923,4 +11923,8 @@
   <block id="b03a68ce04fd31de1bf167d4c6537d2f" category="paragraph">대화형 토폴로지 맵을 제공함으로써 SAN Analyzer를 사용하면 문제를 정확히 파악하고 변경 사항을 이해하며 데이터 흐름에 대한 이해도를 높일 수 있습니다. SAN Analyzer를 사용하여 복잡한 IT 환경에서 SAN 관리를 간소화하고 블록 워크로드에 대한 가시성을 높일 수 있습니다.</block>
   <block id="9c6601cca8cd67405c34e4897bb272f1" category="section-title">자산 간의 연결을 탐색합니다</block>
   <block id="14fe64769d4df689f51e13f60c5ec439" category="admonition">수집기에 제한된 사용자가 있는 경우 수집기를 일시 중지할 수 없습니다. 수집기를 일시 중지하기 전에 사용자 액세스를 복원합니다.</block>
+  <block id="81c776ec15386302abf1c34d317e3393" category="paragraph">SAN Analyzer를 보려면 * 관측성 &gt; 분석 &gt; SAN Analyzer * 를 선택합니다. 애플리케이션, 호스트, 패브릭 및/또는 스토리지에 대한 필터를 설정합니다. 연결된 오브젝트를 보여 주는 오브젝트의 지도가 표시됩니다. 해당 연결에 대한 트래픽 메트릭을 보려면 개체 위에 마우스를 올려 놓으십시오.</block>
+  <block id="fde6f74861c217b576ec5d769f2467c3" category="paragraph"><block ref="fde6f74861c217b576ec5d769f2467c3" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3cfbb427bd17b95ae08e5597561217ef" category="paragraph">개체 또는 그룹을 클릭하면 개체 및 해당 연결에 대한 추가 세부 정보를 제공하는 슬라이드 아웃 패널이 열립니다. 슬라이드아웃에는 요약, 포트 세부 정보 및 존 정보가 있는 탭이 포함되어 있습니다(있는 경우).</block>
+  <block id="7512260392fef04bf211fab22007addd" category="paragraph"><block ref="7512260392fef04bf211fab22007addd" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>

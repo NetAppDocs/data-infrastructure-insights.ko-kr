@@ -25,3 +25,11 @@ image:san_analyzer_example_with_panel.png["스토리지 시스템의 SAN Analyze
 
 
 == 자산 간의 연결을 탐색합니다
+
+SAN Analyzer를 보려면 * 관측성 > 분석 > SAN Analyzer * 를 선택합니다. 애플리케이션, 호스트, 패브릭 및/또는 스토리지에 대한 필터를 설정합니다. 연결된 오브젝트를 보여 주는 오브젝트의 지도가 표시됩니다. 해당 연결에 대한 트래픽 메트릭을 보려면 개체 위에 마우스를 올려 놓으십시오.
+
+image:san_analyzer_traffic_metrics.png[""]
+
+개체 또는 그룹을 클릭하면 개체 및 해당 연결에 대한 추가 세부 정보를 제공하는 슬라이드 아웃 패널이 열립니다. 슬라이드아웃에는 요약, 포트 세부 정보 및 존 정보가 있는 탭이 포함되어 있습니다(있는 경우).
+
+image:san_analyzer_slideout_example.png[""]
