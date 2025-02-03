@@ -11927,4 +11927,16 @@
   <block id="fde6f74861c217b576ec5d769f2467c3" category="paragraph"><block ref="fde6f74861c217b576ec5d769f2467c3" category="inline-image-macro-rx" type="image"></block></block>
   <block id="3cfbb427bd17b95ae08e5597561217ef" category="paragraph">개체 또는 그룹을 클릭하면 개체 및 해당 연결에 대한 추가 세부 정보를 제공하는 슬라이드 아웃 패널이 열립니다. 슬라이드아웃에는 요약, 포트 세부 정보 및 존 정보가 있는 탭이 포함되어 있습니다(있는 경우).</block>
   <block id="7512260392fef04bf211fab22007addd" category="paragraph"><block ref="7512260392fef04bf211fab22007addd" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="18082cdb9388e2686e081dd6012e47b8" category="summary">사용자가 만드는 대시보드가 공용 대시보드인지 아니면 비공개형인지 결정합니다.</block>
+  <block id="cc5c681651d638257ae03658c963c7c6" category="doc">대시보드 액세스 관리</block>
+  <block id="571ad98bb1054a211a5d3fa3a3240265" category="paragraph">Data Infrastructure Insights는 이제 작성하는 대시보드에 대한 액세스를 보다 효과적으로 제어할 수 있습니다. 그래프를 수정할 수 있는 사용자를 선택합니다. 사용자는 잠재적으로 민감한 정보에 대한 노출을 제어합니다. 대시보드를 비공개로 유지하면 조직의 다른 사용자가 시각화를 사용할 준비가 될 때까지 시각화를 마무리할 수 있습니다.</block>
+  <block id="505e6238dfdc62d1b4bbdf930fa887b8" category="inline-image-macro">대시보드 공유 옵션, 폭 = 300</block>
+  <block id="43b5d7a5affce9056fb3d7ec4b82fe17" category="paragraph"><block ref="43b5d7a5affce9056fb3d7ec4b82fe17" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="547a803d844f9925f62c57d49f10caf6" category="paragraph">기본적으로 새 대시보드를 만들면 해당 대시보드는 만든 사람만 볼 수 있습니다. 다른 사용자는 대시보드를 보거나 수정할 수 없습니다.</block>
+  <block id="78d12ef818f574226b0780765511e2d5" category="paragraph">대시보드를 완료한 후에는 조직의 다른 사용자가 볼 수 있도록 선택할 수 있습니다. 대시보드를 공유하려면 대시보드 목록에서 오른쪽 메뉴에서 _Share_ 를 선택합니다.</block>
+  <block id="8e561a2090f27ed80a24e59dff11dcce" category="inline-image-macro">메뉴에서 대시보드 액세스 공유를 선택합니다</block>
+  <block id="5fc6afe4cfc7bc7e58ad6e7119812663" category="paragraph"><block ref="5fc6afe4cfc7bc7e58ad6e7119812663" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="16442b20a2319083af65dedb2d7e942e" category="paragraph">편집 또는 읽기 전용 권한으로 대시보드를 모든 사용자와 공유하거나 사용자를 선택할 수 있습니다.</block>
+  <block id="1dcba5cd7d6049883623c0653a2031f6" category="inline-image-macro">편집 또는 읽기 권한이 있는 대시보드를 공유하는 드롭다운</block>
+  <block id="ac0466f21ebde71eed9f3673b4c7da1b" category="paragraph"><block ref="ac0466f21ebde71eed9f3673b4c7da1b" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
