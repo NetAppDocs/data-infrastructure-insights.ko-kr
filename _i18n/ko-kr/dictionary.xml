@@ -11939,4 +11939,15 @@
   <block id="16442b20a2319083af65dedb2d7e942e" category="paragraph">편집 또는 읽기 전용 권한으로 대시보드를 모든 사용자와 공유하거나 사용자를 선택할 수 있습니다.</block>
   <block id="1dcba5cd7d6049883623c0653a2031f6" category="inline-image-macro">편집 또는 읽기 권한이 있는 대시보드를 공유하는 드롭다운</block>
   <block id="ac0466f21ebde71eed9f3673b4c7da1b" category="paragraph"><block ref="ac0466f21ebde71eed9f3673b4c7da1b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="98465e4573c2849304e85edaeef13370" category="summary">VM 최적화</block>
+  <block id="761ab7bf046ac25fda0da8f1af542322" category="paragraph">시작하려면 관찰 가능성 &gt; 분석 &gt; VM 최적화 로 이동합니다. 잠재적 절감 효과가 코어 수 및 스토리지 절약 수치로 요약됩니다. 데이터 센터, 가상 센터 IP 또는 클러스터별로 초점을 맞추도록 필터를 설정하거나 자체 필터를 설정하여 초점을 더욱 좁힐 수 있습니다.</block>
+  <block id="045386d087f10e1f0ae1e3bf75624afe" category="inline-image-macro">VM 최적화 개요</block>
+  <block id="7110454d98ba958eec64260bbc5dec80" category="paragraph"><block ref="7110454d98ba958eec64260bbc5dec80" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="03f6f40a2cf552119978ffce0238086f" category="paragraph">하이퍼바이저 서비스 해제 탭에는 선택한 최적화 전략을 기반으로 잠재적인 비용 절감 효과가 표시됩니다. 전략마다 다른 임계값을 활용하여 잠재적 절감액을 결정합니다.</block>
+  <block id="6e3975fe060cfaed5d52ef53dce4935b" category="paragraph">클러스터의 CPU 및 메모리 사용률에 대한 세부 정보가 있는 슬라이드 아웃 패널을 열려면 목록에서 클러스터를 선택합니다.</block>
+  <block id="f76142da98b557ade1c2d52abf0a207b" category="inline-image-macro">하이퍼바이저 최적화 탭</block>
+  <block id="bfea8ae8feffd62a3b499ac0dc5015ac" category="paragraph"><block ref="bfea8ae8feffd62a3b499ac0dc5015ac" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="0dc236d363c2d7f668f1ee1391ffab69" category="paragraph">VM 재확보 탭에는 30일, 60일 또는 90일 이상 유휴 상태이거나 전원이 꺼진 VM에 대한 세부 정보와 함께 잠재적 용량, 메모리 및 vCPU 절약 효과가 제공됩니다. 목록에서 VM을 선택하면 해당 VM에 대한 세부 정보 페이지가 열립니다.</block>
+  <block id="5edbd52aee44c2dfb6c01abc4128600a" category="inline-image-macro">VM 재확보 탭</block>
+  <block id="e2e66b001cd3f2f1481c4b23049ca899" category="paragraph"><block ref="e2e66b001cd3f2f1481c4b23049ca899" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
