@@ -29,7 +29,7 @@ Kubernetes에 설치하는 방법에 대한 자세한 link:task_config_telegraf_
 NOTE: 정확한 감사 및 데이터 보고를 위해 * NTP(Network Time Protocol) * 또는 * SNTP(Simple Network Time Protocol) * 를 사용하여 Agent 시스템의 시간을 동기화하는 것이 좋습니다.
 
 
-NOTE: Agent를 설치하기 전에 설치 파일을 확인하려면 의 아래 섹션을 참조하십시오<<Verifying Checksums>>.
+NOTE: Agent를 설치하기 전에 설치 파일을 확인하려면 의 아래 섹션을 참조하십시오<<Telegraf 패키지 체크섬 확인>>.
 
 
 

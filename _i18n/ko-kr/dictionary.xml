@@ -8655,7 +8655,6 @@
   <block id="da7e75e5407636a24c1c7cce20e7d225" category="paragraph">Data Infrastructure Insights의 현재 Telegraf 버전은 * 1.24.0 * 입니다.</block>
   <block id="2041337c363c1ecaeb2a1aa9c8999494" category="paragraph">Kubernetes에 설치하는 방법에 대한 자세한 <block ref="f0d3e43e41da35ba651820db811551cd" category="inline-link-macro-rx"></block>내용은 페이지를 참조하십시오.</block>
   <block id="ae2f2b5e87a12f1cd650f0e46b92e4ec" category="admonition">정확한 감사 및 데이터 보고를 위해 * NTP(Network Time Protocol) * 또는 * SNTP(Simple Network Time Protocol) * 를 사용하여 Agent 시스템의 시간을 동기화하는 것이 좋습니다.</block>
-  <block id="f97f94f0ff0c35a96686e2fd00940ac8" category="admonition">Agent를 설치하기 전에 설치 파일을 확인하려면 의 아래 섹션을 참조하십시오<block ref="1d9f3d6343939e76574c60762a7f2fae" category="inline-xref-macro-rx"></block>.</block>
   <block id="137bac1c26ca6d0b61bc783c9a2fcbbd" category="section-title">Agent 설치</block>
   <block id="a4c0f3c4bd8931418c028fb88c45e72f" category="paragraph">서비스 데이터 수집기를 설치하고 아직 Agent를 구성하지 않은 경우 해당 운영 체제에 대한 Agent를 먼저 설치하라는 메시지가 표시됩니다. 이 항목에서는 다음과 같은 운영 체제에 Telegraf 에이전트를 설치하는 지침을 제공합니다.</block>
   <block id="8d6f7baf6fd8e47d9316fcc507ab0f85" category="list-text"><block ref="85415f26af88eac138de6f713927df0c" category="inline-xref-macro-rx"></block></block>
@@ -11974,4 +11973,5 @@
   <block id="43bfa97b37a997b631be2c5c6423c5fc" category="cell">더 빠른 결과를 위해 디렉토리 경로 필터(경로 문자열 / 로 끝나는)를 최대 4개까지 사용하는 것이 좋습니다. 예를 들어 디렉토리 경로가 /aa/bbb/ccc/dd인 경우 "/aa/bb/ccc/dd/"를 검색하여 데이터를 더 빨리 로드하십시오.</block>
   <block id="76b6bb11709d612b89ea4e85c1289694" category="cell">Forensics UI에서 엔터티 이름 필터를 사용할 때 데이터가 느리게 로드되고 오류가 발생합니다.</block>
   <block id="9047530966d5f017f54aa4479b25a938" category="cell">더 작은 시간 범위를 사용하여 정확한 값을 큰따옴표로 검색해 보십시오. 예를 들어 entityPath가 "/home/userX/nested1/nested2/nested3/testfile.txt"이면 "testfile.txt"를 엔티티 이름 필터로 사용합니다.</block>
+  <block id="af8cb62c8a34ba6726d4859a2c8c7e95" category="admonition">Agent를 설치하기 전에 설치 파일을 확인하려면 의 아래 섹션을 참조하십시오<block ref="bf4e2f55c3503e0739d2135298b462c7" category="inline-xref-macro-rx"></block>.</block>
 </blocks>
