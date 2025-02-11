@@ -8533,14 +8533,12 @@
   <block id="9be58f2fc8b11ec837406376ca6b3e2a" category="doc">Data Infrastructure Insights 온보딩</block>
   <block id="c9c452240be4db82e89f010124f3c4a2" category="paragraph">데이터 인프라 인사이트 작업을 시작하기 전에 * NetApp BlueXP  * 포털에 등록해야 합니다. NetApp BlueXP  로그인을 이미 가지고 있는 경우 몇 가지 간단한 단계를 통해 데이터 인프라 인사이트 무료 평가판을 시작할 수 있습니다.</block>
   <block id="5bff30d13ce98c505187872963af1f25" category="section-title">NetApp BlueXP 계정 생성</block>
-  <block id="b73a83fb453d4638343c31abb0f03dfc" category="paragraph">NetApp의 클라우드 서비스를 시작하려면 로 <block ref="b4c824fcd8d5915314065a3371563411" category="inline-link-macro-rx"></block> 이동하여 * 시작하기 * 를 클릭하십시오.</block>
   <block id="1e26781b207fa848ce81c7268cf016a7" category="list-text">아직 등록하지 않은 경우 * 등록 * 을 선택합니다</block>
   <block id="05d2a837df7692f0d65e4466b2fb05bd" category="list-text">유효한 업무용 전자 메일 주소를 입력하고 암호를 선택하십시오.</block>
   <block id="ad66d403ef43ddd58a7b527874c51878" category="list-text">회사 이름과 전체 이름을 입력합니다.</block>
   <block id="895a961645c5f6456e2cc43102e1de8a" category="list-text">이용 약관에 동의하고 * 계속 * 을 선택합니다.</block>
   <block id="027e58ebcf59f73bde476a8af6584584" category="list-text">BlueXP가 시작하는 과정을 안내합니다.</block>
   <block id="6670eac4232d1c66e6c936fe67e52aff" category="section-title">NetApp BlueXP 로그인을 이미 가지고 있는 경우에는 어떻게 해야 합니까?</block>
-  <block id="71292a4043ee880f4b2810b42954372c" category="paragraph">NetApp BlueXP  계정이 있으면 포털 페이지에서 * 로그인 * 을 선택하기만 하면 <block ref="b4c824fcd8d5915314065a3371563411" category="inline-link-macro-rx"></block>됩니다.</block>
   <block id="a46b8a484704b65f978247cb9b3901aa" category="paragraph">이메일 주소와 비밀번호를 입력합니다. 그런 다음 NetApp의 클라우드 오퍼링 페이지로 이동합니다.</block>
   <block id="a255e7df64ed3494ccf094bd8b25822f" category="paragraph">Data Infrastructure Insights를 선택합니다.</block>
   <block id="ce69050591300865b670a02cda814df2" category="inline-image-macro">BlueXP 에서 Data Infrastructure Insights 무료 평가판을 사용해 보십시오</block>
@@ -11985,4 +11983,6 @@
   <block id="1677cd7abeaa8f0a0514a964c0c2bda6" category="paragraph"><block ref="1677cd7abeaa8f0a0514a964c0c2bda6" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0b7788a77d5d76748437f02599d4ffbf" category="paragraph"><block ref="0b7788a77d5d76748437f02599d4ffbf" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e4d6c49d3ae18aca7ed82f5ef2ab8266" category="paragraph"><block ref="e4d6c49d3ae18aca7ed82f5ef2ab8266" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1158d69294406edc67b8de2b5ed02647" category="paragraph">NetApp의 클라우드 서비스를 시작하려면 로 <block ref="40ad5c1f57b9131d3640bb640a07e49e" category="inline-link-macro-rx"></block> 이동하여 * 시작하기 * 를 클릭하십시오.</block>
+  <block id="90aa9e4cd4632612b7635f2c366a8948" category="paragraph">NetApp BlueXP  계정이 있으면 포털 페이지에서 * 로그인 * 을 선택하기만 하면 <block ref="40ad5c1f57b9131d3640bb640a07e49e" category="inline-link-macro-rx"></block>됩니다.</block>
 </blocks>

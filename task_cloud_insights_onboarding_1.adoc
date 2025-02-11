@@ -24,7 +24,7 @@ toc::[]
 
 == NetApp BlueXP 계정 생성
 
-NetApp의 클라우드 서비스를 시작하려면 로 link:https://cloud.netapp.com["* NetApp BlueXP *"^] 이동하여 * 시작하기 * 를 클릭하십시오.
+NetApp의 클라우드 서비스를 시작하려면 로 link:https://bluexp.netapp.com/["* NetApp BlueXP *"^] 이동하여 * 시작하기 * 를 클릭하십시오.
 
 * 아직 등록하지 않은 경우 * 등록 * 을 선택합니다
 * 유효한 업무용 전자 메일 주소를 입력하고 암호를 선택하십시오.
@@ -37,7 +37,7 @@ NetApp의 클라우드 서비스를 시작하려면 로 link:https://cloud.netap
 
 === NetApp BlueXP 로그인을 이미 가지고 있는 경우에는 어떻게 해야 합니까?
 
-NetApp BlueXP  계정이 있으면 포털 페이지에서 * 로그인 * 을 선택하기만 하면 link:https://cloud.netapp.com["* NetApp BlueXP *"^]됩니다.
+NetApp BlueXP  계정이 있으면 포털 페이지에서 * 로그인 * 을 선택하기만 하면 link:https://bluexp.netapp.com/["* NetApp BlueXP *"^]됩니다.
 
 이메일 주소와 비밀번호를 입력합니다. 그런 다음 NetApp의 클라우드 오퍼링 페이지로 이동합니다.
 
