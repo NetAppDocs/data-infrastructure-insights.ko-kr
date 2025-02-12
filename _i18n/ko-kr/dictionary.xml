@@ -11985,4 +11985,16 @@
   <block id="e4d6c49d3ae18aca7ed82f5ef2ab8266" category="paragraph"><block ref="e4d6c49d3ae18aca7ed82f5ef2ab8266" category="inline-image-macro-rx" type="image"></block></block>
   <block id="1158d69294406edc67b8de2b5ed02647" category="paragraph">NetApp의 클라우드 서비스를 시작하려면 로 <block ref="40ad5c1f57b9131d3640bb640a07e49e" category="inline-link-macro-rx"></block> 이동하여 * 시작하기 * 를 클릭하십시오.</block>
   <block id="90aa9e4cd4632612b7635f2c366a8948" category="paragraph">NetApp BlueXP  계정이 있으면 포털 페이지에서 * 로그인 * 을 선택하기만 하면 <block ref="40ad5c1f57b9131d3640bb640a07e49e" category="inline-link-macro-rx"></block>됩니다.</block>
+  <block id="e6652e28190651190702622512d6199d" category="section-title">최신 ASA 시스템을 위한 ONTAP Essentials입니다</block>
+  <block id="b7b46ce5d1a547db89c0bc615ff272a5" category="inline-link-macro">ASA</block>
+  <block id="e4d6d8fa32272beabde4921e66b643d2" category="paragraph">ONTAP Essentials에는 이제 최신 장치를 위한 즉시 사용 가능한 관리 기능이 포함되어 <block ref="a86d3d554a7f4851edc0f19a9e8accf3" category="inline-link-macro-rx"></block>있습니다. 여기에는 ONTAP에서 실행되는 워크로드의 VM-LUN 토폴로지용 SAN Analyzer가 포함됩니다. 이제 Data Infrastructure Insights Basic Edition의 일부로 NetApp 지원과 함께 사용할 수도 있습니다.</block>
+  <block id="8af8d6d7603eec1cb34086e9cf6e2055" category="inline-image-macro">ONTAP Essentials 드롭다운에서 ASA를 유니파이드 제품과 구별하여 보여 줍니다</block>
+  <block id="5fe97e7e7c561aa4a8199e55d380aadb" category="paragraph"><block ref="5fe97e7e7c561aa4a8199e55d380aadb" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="bd255743216cfae20f87e84a9cd8e7e1" category="section-title">DII API 사용 추적: 보안 및 효율성 향상</block>
+  <block id="0be262a01ffd53cb1827d924de37e376" category="paragraph">관리자 사용자가 사용할 수 있는 향상된 REST API 사용 추적을 통해 보안 상태를 강화하고 리소스 관리를 간소화합니다. API 사용량 추적을 사용하면 사용 중인 API 토큰, 사용 IP 주소 및 생성된 트래픽 볼륨을 확인할 수 있습니다. 토큰을 특정 IP 주소 및 사용 수준에 연결하면 시스템 액세스 및 사용 추세에 대한 강력한 통찰력을 얻을 수 있으므로 안전하고 효율적인 환경을 유지하고 원활한 운영을 유지하는 데 필요한 제어 기능을 제공합니다.</block>
+  <block id="864d5cf863bc1474afd3f84717104d24" category="paragraph">API 사용량을 보려면 * 관측성 &gt; 관리자 &gt; API 액세스 * 로 이동하고 _View API Usage _ 를 선택합니다. 이 API는 DII 관측성 API에만 사용할 수 있으며 워크로드 보안 또는 보고 API에는 적용되지 않습니다.</block>
+  <block id="320be4cb0a9128705d37286f8afff816" category="inline-image-macro">API 사용 분석 예</block>
+  <block id="d7f696b40402f5f6c5dc60d881af09a0" category="paragraph"><block ref="d7f696b40402f5f6c5dc60d881af09a0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="811a069713a14c7b8c3b0333afcedfff" category="section-title">사용자를 제한하는 워크로드 보안 API</block>
+  <block id="4c68ec61ca843531d828d448eb135006" category="paragraph">워크로드 보안에서 사용자 제한을 관리하기 위해 새 API가 추가되었습니다. API를 사용하면 사용자를 차단 또는 차단 해제하거나 제한된 액세스 기간을 변경할 수 있습니다. cloudsecure_actions.block_API에 대한 내용은 관리자 &gt; API 액세스 &gt; API 문서 페이지를 참조하십시오.</block>
 </blocks>

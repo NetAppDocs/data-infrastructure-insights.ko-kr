@@ -20,6 +20,31 @@ NetApp은 제품과 서비스를 지속적으로 개선 및 개선하고 있습�
 
 
 
+=== 최신 ASA 시스템을 위한 ONTAP Essentials입니다
+
+ONTAP Essentials에는 이제 최신 장치를 위한 즉시 사용 가능한 관리 기능이 포함되어 link:task_dc_na_ontap_all_san_array.html["ASA"]있습니다. 여기에는 ONTAP에서 실행되는 워크로드의 VM-LUN 토폴로지용 SAN Analyzer가 포함됩니다. 이제 Data Infrastructure Insights Basic Edition의 일부로 NetApp 지원과 함께 사용할 수도 있습니다.
+
+image:ontap_essentials_asa_views.png["ONTAP Essentials 드롭다운에서 ASA를 유니파이드 제품과 구별하여 보여 줍니다"]
+
+
+
+=== DII API 사용 추적: 보안 및 효율성 향상
+
+관리자 사용자가 사용할 수 있는 향상된 REST API 사용 추적을 통해 보안 상태를 강화하고 리소스 관리를 간소화합니다. API 사용량 추적을 사용하면 사용 중인 API 토큰, 사용 IP 주소 및 생성된 트래픽 볼륨을 확인할 수 있습니다. 토큰을 특정 IP 주소 및 사용 수준에 연결하면 시스템 액세스 및 사용 추세에 대한 강력한 통찰력을 얻을 수 있으므로 안전하고 효율적인 환경을 유지하고 원활한 운영을 유지하는 데 필요한 제어 기능을 제공합니다.
+
+API 사용량을 보려면 * 관측성 > 관리자 > API 액세스 * 로 이동하고 _View API Usage _ 를 선택합니다. 이 API는 DII 관측성 API에만 사용할 수 있으며 워크로드 보안 또는 보고 API에는 적용되지 않습니다.
+
+image:api_usage_analytics_screenshot.png["API 사용 분석 예"]
+
+
+
+=== 사용자를 제한하는 워크로드 보안 API
+
+워크로드 보안에서 사용자 제한을 관리하기 위해 새 API가 추가되었습니다. API를 사용하면 사용자를 차단 또는 차단 해제하거나 제한된 액세스 기간을 변경할 수 있습니다. cloudsecure_actions.block_API에 대한 내용은 관리자 > API 액세스 > API 문서 페이지를 참조하십시오.
+
+'''
+
+
 == 2025년 1월
 
 
