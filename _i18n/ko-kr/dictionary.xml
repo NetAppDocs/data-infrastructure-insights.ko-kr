@@ -12002,4 +12002,11 @@
   <block id="6b240be76b07166c90df4dd3d8870b5f" category="paragraph">환경에 iSCSI 디바이스가 포함된 경우 _iscsi_object 위로 마우스를 가져가면 관련 iSCSI 디바이스와 관련된 연결이 강조 표시됩니다.</block>
   <block id="f922b3837a16ba3a595d03fafff3c0c6" category="inline-image-macro">iSCSI 트래픽이 강조 표시됩니다</block>
   <block id="30a8ce61ff74633c5fba361b87bb964a" category="paragraph"><block ref="30a8ce61ff74633c5fba361b87bb964a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="581ba4a57638d5498f99aafb2b6402c9" category="section-title">DII 푸시 버튼 업그레이드</block>
+  <block id="433d081988851966788ba677d938d07d" category="paragraph">Kubernetes Monitoring Operator는 DII Kubernetes Collector 페이지를 통해 업그레이드할 수 있습니다. 업그레이드하려는 클러스터 옆에 있는 메뉴를 클릭하고 _Upgrade_를 선택합니다. 작업자는 이미지 서명을 확인하고 현재 설치의 스냅샷을 수행하고 업그레이드를 수행합니다. 몇 분 내에 업그레이드 진행 중 - 최신 상태로 를 통해 운영자 상태 진행 상황을 볼 수 있습니다. 오류가 발생하면 오류 상태를 선택하여 자세한 내용을 확인하고 아래의 누름 버튼 업그레이드 문제 해결 표를 참조하십시오.</block>
+  <block id="03875270ab1c6cff042b492ee14233c4" category="section-title">개인 리포지토리를 이용한 푸시 버튼 업그레이드</block>
+  <block id="e54a7171ef187b31ad82e9367e9488f8" category="paragraph">운영자가 개인 리포지토리를 사용하도록 구성된 경우 운영자를 실행하는 데 필요한 모든 이미지와 해당 서명을 리포지토리에서 사용할 수 있는지 확인하십시오. 누락된 이미지에 대한 업그레이드 프로세스 중에 오류가 발생하면 리포지토리에 이미지를 추가하고 업그레이드를 다시 시도하십시오. 이미지 서명을 저장소에 업로드하려면 다음과 같이 공동 작성 툴을 사용하여 세 가지 옵션: 개인 저장소에 운영자 이미지를 업로드 &gt; 이미지 풀 코드 조각 에 지정된 모든 이미지에 대한 서명을 업로드하십시오</block>
+  <block id="3e70b4412d3a3b92cd10a9e1453fc282" category="section-title">이전에 실행 중인 버전으로 롤백하는 중입니다</block>
+  <block id="4d8704d77f12b96a935cdf09de6c94be" category="paragraph">푸시 버튼 업그레이드 기능을 사용하여 업그레이드했는데 업그레이드 후 7일 이내에 현재 버전의 운영자에 문제가 발생한 경우 업그레이드 프로세스 중에 생성된 스냅샷을 사용하여 이전에 실행 중인 버전으로 다운그레이드할 수 있습니다. 롤백할 클러스터 옆의 메뉴를 클릭하고 _Roll Back_을 선택합니다.</block>
+  <block id="95168a3a05a80c7b596b36a7ec8218c4" category="section-title">수동 업그레이드</block>
 </blocks>
