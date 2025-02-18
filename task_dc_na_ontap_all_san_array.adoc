@@ -34,6 +34,11 @@ summary: ONTAP All-SAN 어레이 데이터 수집기
 
 
 
+NOTE: ASA R2는 ONTAP ASA 스토리지 플랫폼의 최신 세대 모델을 나타냅니다. 여기에는 스토리지 모델 ASA A1K, A90, A70, A50, A30 및 A20이 포함됩니다.
+
+모든 이전 세대 ASA 시스템의 경우 link:task_dc_na_ontap_rest.html["ONTAP REST를 참조하십시오"]Collector를 사용하십시오.
+
+
 
 == 사용 권한에 대한 참고 사항
 
