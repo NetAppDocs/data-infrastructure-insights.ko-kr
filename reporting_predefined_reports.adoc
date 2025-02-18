@@ -40,7 +40,7 @@ HTML, PDF, CSV, XML 등 다양한 형식의 보고서를 생성할 수 있습니
 . 미리 정의된 보고서에 액세스하려면 * Reports * 를 선택합니다.
 
 
-image:Reporting_Menu.png["보고 메뉴"] image:Reporting_Team_Content.png["보고서가 강조 표시된 팀 콘텐츠"]
+image:Reporting_Menu.png["보고 메뉴"] image:Reporting_Team_Content.png["강조 표시된 보고서를 보여 주는 팀 콘텐츠, 너비 = 800"]
 
 
 

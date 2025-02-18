@@ -4174,10 +4174,8 @@
   <block id="c66bd552dea63071ad19e124c869ab2e" category="paragraph">AWS Marketplace 무료 평가판을 연장할 수 없습니다. 평가 중에 언제든지 * Admin -&gt; Subscription * 페이지를 방문하여 Data Infrastructure Insights Basic Edition으로 다운그레이드하거나 유료 Data Infrastructure Insights 구독으로 변경할 수 있습니다.</block>
   <block id="03742c91392961db83c5540550a3500a" category="section-title">평가판이 만료된 경우 어떻게 합니까?</block>
   <block id="55b44e6cb866667b35e33325e5f2b246" category="paragraph">무료 평가판이 만료되었고 Data Infrastructure Insights를 아직 구독하지 않은 경우 구독할 때까지 기능이 제한됩니다. 데이터 수집이 중지될 수 있으며 몇 주 후에는 데이터 보존 정책에 따라 데이터가 삭제됩니다.</block>
-  <block id="b3aa21e2b7855df7d2d86e0bcb7a55d9" category="section-title">구독이 만료된 경우 어떻게 해야 합니까?</block>
   <block id="35b65825e5ac5124cb47e8b94e7e203a" category="paragraph">Data Infrastructure Insights에 가입했지만 구독이 만료된 경우, 구독을 갱신하기 위한 5일의 유예 기간이 주어집니다. 이 유예 기간 동안에는 모든 Data Infrastructure Insights 기능이 활성 상태로 유지됩니다.</block>
   <block id="60e8665be02d68c6c89f05f0f7865a28" category="paragraph">유예 기간이 경과하면 갱신할 때까지 Data Infrastructure Insights 기능이 일시 중단됩니다. 갱신하려면 * 관리 &gt; 구독 * 페이지를 참조하거나 NetApp 세일즈 팀에 문의하십시오.</block>
-  <block id="4d1fc9b1363bc3a01af741ec16cbe749" category="admonition">유예 기간이 종료될 때까지 수집된 Data Infrastructure Insights 데이터는 유예 기간 후 30일 동안 그대로 유지됩니다. 이 시간 내에 구독을 갱신하면 유예 기간이 경과할 때까지 모든 데이터를 사용할 수 있습니다.</block>
   <block id="267ff18a74a9df19266142dc71925a29" category="section-title">가입 * 이 만료된 경우 어떻게 해야 합니까?</block>
   <block id="5ee83dda0a980eba56098446eee3b5e4" category="admonition">Data Infrastructure Insights 데이터는 유예 기간 후 30일 동안 그대로 유지됩니다. 이 시간 내에 구독을 갱신하면 유예 기간이 경과할 때까지 모든 데이터를 사용할 수 있습니다.</block>
   <block id="76064df620f99261dce25de296d7e769" category="paragraph">모듈 평가 * 를 활용할 수도 있습니다. 예를 들어, 인프라 관측성을 이미 구독하고 있지만 Kubernetes를 환경에 추가하고 있는 경우, NetApp Kubernetes 모니터링 운영자를 설치하는 시점부터 Kubernetes 관측성 30일 평가를 자동으로 시작합니다. 평가 기간이 끝날 때까지만 Kubernetes 관측성 관리형 유닛 사용에 대한 요금이 부과됩니다.</block>
@@ -7930,8 +7928,6 @@
   <block id="27daabf1c454d33595dbe589aefcd6e0" category="list-text">왼쪽 탐색 창에서 * 콘텐츠 &gt; 팀 콘텐츠 * 를 선택합니다.</block>
   <block id="4049f6107bd22bd909a404599ebeacd6" category="list-text">미리 정의된 보고서에 액세스하려면 * Reports * 를 선택합니다.</block>
   <block id="ee3a0672263c3995fe8e38b6cfe439c4" category="inline-image-macro">보고 메뉴</block>
-  <block id="81a9f8ce382fd16358d56245a66220a4" category="inline-image-macro">보고서가 강조 표시된 팀 콘텐츠</block>
-  <block id="48bcae107d50992efecf85a6c4736dba" category="paragraph"><block ref="042d6428eca469dceeec3a1b4202ab56" category="inline-image-macro-rx" type="image"></block> <block ref="9aede4345f2bc9132f2c99c71d833e20" category="inline-image-macro-rx" type="image"></block></block>
   <block id="a75b8fc33414d692d111110189a35f09" category="section-title">사전 정의된 보고서를 사용하여 일반적인 질문에 답합니다</block>
   <block id="e89ec6ed2e5ec193067c2a247878a526" category="paragraph">다음 미리 정의된 보고서는 * 팀 콘텐츠 &gt; 보고서 * 에서 사용할 수 있습니다.</block>
   <block id="1c3be015eacffb807e30cff683e0ab59" category="section-title">애플리케이션 서비스 수준 용량 및 성능</block>
@@ -12009,4 +12005,6 @@
   <block id="3e70b4412d3a3b92cd10a9e1453fc282" category="section-title">이전에 실행 중인 버전으로 롤백하는 중입니다</block>
   <block id="4d8704d77f12b96a935cdf09de6c94be" category="paragraph">푸시 버튼 업그레이드 기능을 사용하여 업그레이드했는데 업그레이드 후 7일 이내에 현재 버전의 운영자에 문제가 발생한 경우 업그레이드 프로세스 중에 생성된 스냅샷을 사용하여 이전에 실행 중인 버전으로 다운그레이드할 수 있습니다. 롤백할 클러스터 옆의 메뉴를 클릭하고 _Roll Back_을 선택합니다.</block>
   <block id="95168a3a05a80c7b596b36a7ec8218c4" category="section-title">수동 업그레이드</block>
+  <block id="92e9b9412f142b06bb1d5b741604efd6" category="inline-image-macro">강조 표시된 보고서를 보여 주는 팀 콘텐츠, 너비 = 800</block>
+  <block id="d7daabce37094cca59c57db4ac298a14" category="paragraph"><block ref="042d6428eca469dceeec3a1b4202ab56" category="inline-image-macro-rx" type="image"></block> <block ref="5880297252ec23e342670c23021aaf20" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>

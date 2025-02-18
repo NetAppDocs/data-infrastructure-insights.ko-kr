@@ -70,17 +70,6 @@ AWS Marketplace 무료 평가판을 연장할 수 없습니다. 평가 중에 �
 
 
 
-== 구독이 만료된 경우 어떻게 해야 합니까?
-
-Data Infrastructure Insights에 가입했지만 구독이 만료된 경우, 구독을 갱신하기 위한 5일의 유예 기간이 주어집니다. 이 유예 기간 동안에는 모든 Data Infrastructure Insights 기능이 활성 상태로 유지됩니다.
-
-유예 기간이 경과하면 갱신할 때까지 Data Infrastructure Insights 기능이 일시 중단됩니다. 갱신하려면 * 관리 > 구독 * 페이지를 참조하거나 NetApp 세일즈 팀에 문의하십시오.
-
-
-NOTE: 유예 기간이 종료될 때까지 수집된 Data Infrastructure Insights 데이터는 유예 기간 후 30일 동안 그대로 유지됩니다. 이 시간 내에 구독을 갱신하면 유예 기간이 경과할 때까지 모든 데이터를 사용할 수 있습니다.
-
-
-
 == 가입 * 이 만료된 경우 어떻게 해야 합니까?
 
 Data Infrastructure Insights에 가입했지만 구독이 만료된 경우, 구독을 갱신하기 위한 5일의 유예 기간이 주어집니다. 이 유예 기간 동안에는 모든 Data Infrastructure Insights 기능이 활성 상태로 유지됩니다.
