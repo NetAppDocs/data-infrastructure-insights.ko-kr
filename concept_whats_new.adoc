@@ -36,7 +36,7 @@ image:ontap_essentials_asa_views.png["ONTAP Essentials 드롭다운에서 ASA를
 
 관리자 사용자가 사용할 수 있는 향상된 REST API 사용 추적을 통해 보안 상태를 강화하고 리소스 관리를 간소화합니다. API 사용량 추적을 사용하면 사용 중인 API 토큰, 사용 IP 주소 및 생성된 트래픽 볼륨을 확인할 수 있습니다. 토큰을 특정 IP 주소 및 사용 수준에 연결하면 시스템 액세스 및 사용 추세에 대한 강력한 통찰력을 얻을 수 있으므로 안전하고 효율적인 환경을 유지하고 원활한 운영을 유지하는 데 필요한 제어 기능을 제공합니다.
 
-API 사용량을 보려면 * 관측성 > 관리자 > API 액세스 * 로 이동하고 _View API Usage _ 를 선택합니다. 이 API는 DII 관측성 API에만 사용할 수 있으며 워크로드 보안 또는 보고 API에는 적용되지 않습니다.
+API 사용량을 보려면 * 관측성 > 관리자 > API 액세스 * 로 이동하고 _View API Usage _ 를 선택합니다. 이 API는 DII 관측성 API에만 사용할 수 있으며 워크로드 보안에는 적용되지 않습니다.
 
 image:api_usage_analytics_screenshot.png["API 사용 분석 예"]
 
