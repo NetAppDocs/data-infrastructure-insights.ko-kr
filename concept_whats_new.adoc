@@ -20,6 +20,10 @@ NetApp은 제품과 서비스를 지속적으로 개선 및 개선하고 있습�
 
 
 
+== 2025년 2월
+
+
+
 === 최신 ASA 시스템을 위한 ONTAP Essentials입니다
 
 ONTAP Essentials에는 이제 최신 장치를 위한 즉시 사용 가능한 관리 기능이 포함되어 link:task_dc_na_ontap_all_san_array.html["ASA"]있습니다. 여기에는 ONTAP에서 실행되는 워크로드의 VM-LUN 토폴로지용 SAN Analyzer가 포함됩니다. 이제 Data Infrastructure Insights Basic Edition의 일부로 NetApp 지원과 함께 사용할 수도 있습니다.
