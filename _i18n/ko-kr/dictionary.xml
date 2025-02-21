@@ -12011,4 +12011,7 @@
   <block id="9813cb21933d9e535322d83efc9b8d25" category="paragraph">모든 이전 세대 ASA 시스템의 경우 <block ref="75bdda54644cc13465ab7acc10710396" category="inline-link-macro-rx"></block>Collector를 사용하십시오.</block>
   <block id="6cc5c9e930ea3d3b8bff4367c60ceea4" category="section-title">2025년 2월</block>
   <block id="8261d0e1521d30da1b36761d508cb245" category="paragraph">API 사용량을 보려면 * 관측성 &gt; 관리자 &gt; API 액세스 * 로 이동하고 _View API Usage _ 를 선택합니다. 이 API는 DII 관측성 API에만 사용할 수 있으며 워크로드 보안에는 적용되지 않습니다.</block>
+  <block id="bcaea0fa3a691efcd767e69c0bf6c611" category="paragraph">받는 사람이 Data Infrastructure Insights에서 알림을 받도록 하려면 다음 이메일 주소를 모든 "허용" 목록에 추가합니다.</block>
+  <block id="920ab4b11a04d50637a16a5c9699b3ba" category="list-text">\accounts@service.cloudinsights.netapp.com 으로 문의하십시오</block>
+  <block id="b68146f7d3be586c34e5b6d021541f50" category="list-text">\DoNotReply@cloudinsights.netapp.com 으로 문의하십시오</block>
 </blocks>
