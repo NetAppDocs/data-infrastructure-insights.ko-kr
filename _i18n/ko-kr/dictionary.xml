@@ -3647,11 +3647,7 @@
   <block id="bf3f7ef872246f009e37d0a4c0951049" category="paragraph">* 형식: * US-BV-\1</block>
   <block id="08b3c5691f5c3cb584dc1a3ec5321962" category="summary">Data Infrastructure Insights에는 다양한 작업을 수행하는 방법을 보여 주는 자습서가 포함되어 있습니다.</block>
   <block id="5b425cd08035f29c3dad5d45f1d2ea6e" category="doc">피처 튜터리얼</block>
-  <block id="c11546e49fdd67698723459cc158d58e" category="paragraph">Data Infrastructure Insights에는 데이터를 빠르고 쉽게 찾고, 문제를 해결하고, 기업 환경에 대한 통찰력을 제공할 수 있는 유용한 기능이 포함되어 있습니다. 강력한 쿼리를 사용하여 데이터를 쉽게 찾고, 대시보드에서 데이터를 시각화하고, 설정한 데이터 임계값에 대한 전자 메일 알림을 보낼 수 있습니다.</block>
-  <block id="0b79795d3efc95b9976c7c5b933afce2" category="section-title">소개</block>
-  <block id="1a2d0d51ce048c550f58a12da3a8a0b7" category="paragraph">Data Infrastructure Insights의 작동 방식을 설명하는 간단한 자습서를 시청하십시오.</block>
   <block id="7dc1d63676b307452b778906ec63a727" category="section-title">체크리스트 및 비디오 자습서</block>
-  <block id="bb32edd6cfeb5b70b9425ab7efaffc7d" category="paragraph">Data Infrastructure Insights 사이트에 표시되는 * 시작 체크리스트 * 에는 몇 가지 유용한 작업 및 개념 목록이 포함되어 있습니다. 체크리스트에서 항목을 선택하면 해당 개념에 대한 적절한 Data Infrastructure Insights 페이지로 이동합니다. 예를 들어, _Create a Dashboard_item을 클릭하면 Data Infrastructure Insights * Dashboards * 페이지가 열립니다.</block>
   <block id="06bc4be9452f8162d26f7cb4b4d2e0b2" category="inline-image-macro">자습서 체크리스트 진행</block>
   <block id="8d72a33fb7e1e81326ed633058c4c3c6" category="paragraph"><block ref="8d72a33fb7e1e81326ed633058c4c3c6" category="inline-image-macro-rx" type="image"></block></block>
   <block id="76139ab832813477c275f09a383293c0" category="paragraph">페이지 상단에는 대시보드를 만드는 방법을 보여주는 비디오 자습서에 대한 링크가 있습니다. 동영상을 원하는 횟수만큼 볼 수 있습니다. 해당 비디오에 대해 이 _link를 다시 표시하지 않습니다. 비디오를 해제할 때까지 대시보드 페이지로 이동할 때마다 사용할 수 있습니다.</block>
@@ -3660,10 +3656,6 @@
   <block id="0aac9dc0b59278dac24dcb96f42f6674" category="paragraph">비디오를 한 번 이상 시청한 후 체크리스트의 _ 대시보드 생성 _ 항목이 체크 아웃되어 튜토리얼을 완료했음을 나타냅니다. 그런 다음 다음 다음 자습서로 진행할 수 있습니다.</block>
   <block id="02bf91ef19eb660db8593e97292dde1c" category="admonition">원하는 순서대로 튜터리얼을 볼 수 있습니다.</block>
   <block id="2d7a0a906729c332280875fa9c1ea09c" category="section-title">점검 목록을 해제합니다</block>
-  <block id="9fd687d950079f0d903acce7d665006e" category="paragraph">점검 목록 맨 아래에 있는 _다시 표시하지 않음_링크를 클릭할 때까지 시작 점검 목록이 사이트에 표시됩니다. 체크리스트를 없앤 후에도 메시지 헤더 표시줄에서 각 자습서를 해제할 때까지 해당하는 각 Data Infrastructure Insights 페이지에서 자습서를 계속 사용할 수 있습니다.</block>
-  <block id="ec7cecc5c967770303bd0879fae9fa97" category="section-title">자습서를 봅니다</block>
-  <block id="dd0d7945a3c6cc8c8a340c913a130d8d" category="section-title">데이터 쿼리</block>
-  <block id="730fe644f1d87eaec727a65945705b30" category="section-title">장치 확인</block>
   <block id="e8cdc72b15f2eb76eb1815f526758f2e" category="doc">인사이트: 고부하로 인해 발생합니다</block>
   <block id="e182a8a3f2adf774fb1c959df71b8600" category="section-title">용어</block>
   <block id="7f595b1ef82026007f2533413106e7d8" category="paragraph">작업 부하 또는 리소스 영향에 대해 이야기할 때 다음 정의가 유용합니다.</block>
@@ -12013,5 +12005,7 @@
   <block id="bcaea0fa3a691efcd767e69c0bf6c611" category="paragraph">받는 사람이 Data Infrastructure Insights에서 알림을 받도록 하려면 다음 이메일 주소를 모든 "허용" 목록에 추가합니다.</block>
   <block id="920ab4b11a04d50637a16a5c9699b3ba" category="list-text">\accounts@service.cloudinsights.netapp.com 으로 문의하십시오</block>
   <block id="b68146f7d3be586c34e5b6d021541f50" category="list-text">\DoNotReply@cloudinsights.netapp.com 으로 문의하십시오</block>
-  <block id="b496ede8f397a48079afe818e67e759f" category="paragraph">Data Infrastructure Insights에는 이러한 기능을 이해하고 비즈니스 통찰력 전략을 보다 잘 구현하는 데 도움이 되는 다양한 비디오 자습서가 포함되어 있습니다.</block>
+  <block id="f96c0cb8e557b8c2286592a385c5fd6e" category="paragraph">Data Infrastructure Insights에는 문제를 빠르고 쉽게 해결하고 기업 환경에 대한 통찰력을 제공할 수 있는 유용한 기능이 포함되어 있습니다. 강력한 쿼리를 사용하여 데이터를 쉽게 찾고, 대시보드에서 데이터를 시각화하고, 설정한 데이터 임계값에 대한 전자 메일 알림을 보낼 수 있습니다.</block>
+  <block id="9a3ddb6d99b9ffb5f7473690abc9fb52" category="paragraph">Data Infrastructure Insights 테넌트에 표시되는 * 시작 체크리스트 * 에는 몇 가지 유용한 작업 및 개념 목록이 포함되어 있습니다. 체크리스트에서 항목을 선택하면 해당 개념에 대한 적절한 Data Infrastructure Insights 페이지로 이동합니다. 예를 들어, _Create a Dashboard_item을 클릭하면 Data Infrastructure Insights * Dashboards * 페이지가 열립니다.</block>
+  <block id="363b2b401698741ed946f685265f5dc1" category="paragraph">검사 목록 맨 아래에 있는 _다시 표시 안 함_ 링크를 클릭할 때까지 시작 검사 목록이 표시됩니다. 체크리스트를 없앤 후에도 메시지 헤더 표시줄에서 각 자습서를 해제할 때까지 해당하는 각 Data Infrastructure Insights 페이지에서 자습서를 계속 사용할 수 있습니다.</block>
 </blocks>

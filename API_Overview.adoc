@@ -273,7 +273,7 @@ API 액세스 토큰의 만료 날짜가 있습니다. API 액세스 토큰이 �
 
 * NetApp Kubernetes Monitoring Operator를 편집합니다.
 +
- kubectl -n netapp-monitoring edit agent agent-monitoring-netapp
+ kubectl -n netapp-monitoring edit agent netapp-ci-agent-monitoring-netapp
 * 이전 API 토큰을 새 API 토큰으로 대체하여 _spec.output-sink.api-key_value를 수정합니다.
 +
 ....
