@@ -168,6 +168,6 @@ Data Infrastructure Insights는 Brocade FC 스위치 데이터 수집기에서 �
 | Access Gateway 포트에 두 개 이상의 노드가 로그인되었다는 메시지를 받습니다 | NPV 디바이스가 올바르게 작동하고 있고 연결된 모든 WWN이 예상되는지 확인합니다. NPV 장치를 직접 얻지 마십시오. 대신 핵심 패브릭 스위치를 인수하면 NPV 장치 데이터가 수집됩니다. 
 
 
-| 성능 수집이 "SNMP 요청 전송 중 시간 초과"와 함께 실패합니다. | 쿼리 변수 및 스위치 구성에 따라 일부 쿼리가 기본 시간 제한을 초과할 수 있습니다. link:https://kb.netapp.com/Cloud/BlueXP/Cloud_Insights/Cloud_Insight_Brocade_data_source_fails_performance_collection_with_a_timeout_due_to_default_SNMP_configuration["자세한 정보"].. 
+| 성능 수집이 "SNMP 요청 전송 중 시간 초과"와 함께 실패합니다. | 쿼리 변수 및 스위치 구성에 따라 일부 쿼리가 기본 시간 제한을 초과할 수 있습니다. link:https://kb.netapp.com/Cloud/BlueXP/DII/Data_Infrastructure_Insights_Brocade_data_source_fails_performance_collection_with_a_timeout_due_to_default_SNMP_configuration["자세한 정보"].. 
 |===
 추가 정보는 페이지 또는 에서 찾을 link:concept_requesting_support.html["지원"]link:reference_data_collector_support_matrix.html["Data Collector 지원 매트릭스"]수 있습니다.

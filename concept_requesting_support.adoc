@@ -87,10 +87,9 @@ NetApp는 다양한 방식으로 데이터 인프라 인사이트를 지원합�
 
 이러한 지원 옵션은 평가판 모드에서 사용할 수 있으며 연중무휴 24시간 무료로 제공됩니다.
 
-* *https://kb.NetApp.com/Special:Search?query=cloud+insights[Knowledgebase] *
-
-
-+ 이 섹션의 링크를 클릭하면 관련 문서, 사용 방법 등을 검색할 수 있는 NetApp 기술 문서로 이동합니다.
+* * https://kb.netapp.com/Cloud/BlueXP/DII[KnowledgeBase]*
++
+이 섹션의 링크를 클릭하면 NetApp Knowledgebase로 이동하고 관련 기사, 방법 등을 검색할 수 있습니다.
 
 * *link:https://docs.netapp.com/us-en/cloudinsights/["문서화"]*
 +

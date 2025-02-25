@@ -1472,7 +1472,6 @@
   <block id="05b4ddcb7946bd7615ac3f1458e51d47" category="cell">예약 시간을 다시 입력하십시오. 전체 "AM" 또는 "PM" 문자를 입력하지 않도록 주의하십시오. "AM"에는 "A"를, "PM"에는 "P"를 입력하면 됩니다. 추가 문자가 표시되지 않으면 예약 시간이 올바르게 설정됩니다.</block>
   <block id="ddcf50c29294d4414f3f7c1bbc892cb5" category="section-title">리소스</block>
   <block id="55d00560611b7ac6ad1fbc07da675be3" category="inline-link-macro">NetApp 기술 자료</block>
-  <block id="b4bfb3ce4e8b9e9d62106cb32011d02d" category="paragraph">추가 문제 해결 정보는 에서 찾을 <block ref="15447e468ec3e05469147de69518b15c" category="inline-link-macro-rx"></block>수 있습니다(지원 로그인 필요).</block>
   <block id="5b54c3b04831265b1d859da4050ad35f" category="paragraph">추가 지원 정보는 Data Infrastructure Insights  페이지에서 확인할 수 <block ref="d34993add17c6dd464dba2ccd7f99cbb" category="inline-link-macro-rx"></block>있습니다.</block>
   <block id="90c8925e0cc3bad3ddb84b5af67af65a" category="paragraph">활성 Data Infrastructure Insights에 가입되어 있는 경우 다음 지원 옵션을 사용할 수 있습니다.</block>
   <block id="0af89698bf5d1150026d4fcbbcf784a6" category="inline-link-macro">지원 티켓</block>
@@ -1485,7 +1484,6 @@
   <block id="7ef7f61ee5433c00d6e2bd93b6a72b5f" category="cell">획득 장치 * 탭의 * 관측성 &gt; 수집기 * 페이지에 AU 상태가 "인증서 만료됨" 또는 "인증서 해지됨"으로 표시됩니다.</block>
   <block id="a56fa9c38676d6ae98991340b46ca3ad" category="cell">AU 오른쪽의 메뉴를 클릭하고 * 연결 복원 * 을 선택합니다. 지침에 따라 획득 장치를 복원합니다: 1. 획득 장치(AU) 서비스를 중지합니다. Copy Stop Command _ (복사 중지 명령) 버튼을 클릭하여 명령을 클립보드로 빠르게 복사한 다음, 이 명령을 획득 장치 시스템의 명령 프롬프트에 붙여넣을 수 있습니다. 2. AU의 _/var/lib/NetApp/cloudinsights/acq/conf_ 폴더에 "token"이라는 이름의 파일을 생성합니다. 3. 토큰 복사 버튼을 클릭하고 이 토큰을 생성한 파일에 붙여 넣습니다. 4. AU 서비스를 다시 시작합니다. Copy Restart Command _ 버튼을 클릭하고 AU의 명령 프롬프트에 명령을 붙여 넣습니다.</block>
   <block id="ba5ed4798f807b143761ea5211f06ea2" category="cell">획득 장치 서버 서비스를 시작할 때 권한이 거부되었습니다</block>
-  <block id="abb32e1da1ad856744ba53e096ef4ba3" category="cell">AU가 SELinux에 설치된 경우 SE를 _permissive_mode로 설정해야 합니다. _Enforcing_mode는 지원되지 않습니다. SELinux를 허용 모드로 설정한 후 AU 서비스를 다시 시작합니다. <block ref="a82c78a8c8abe174de58c3bb493cbdd3" category="inline-link-macro-rx"></block>..</block>
   <block id="f8c1f64e9a97f83b0f209268bdd07bcb" category="cell">서버 요구 사항이 충족되지 않았습니다</block>
   <block id="b4851e92b19af0c5c82447fc0937709d" category="inline-link-macro">요구 사항</block>
   <block id="1b30be776a2009c2060ad54316282f2f" category="cell">획득 장치 서버 또는 VM이 충족되는지 확인합니다 <block ref="e5b1973153b9956f66244f44dc226837" category="inline-link-macro-rx"></block></block>
@@ -4040,8 +4038,6 @@
   <block id="3b2314bf0168715cc6642c0246916477" category="paragraph">많은 NetApp 오퍼링에서 Data Infrastructure Insights Basic Edition이 패키지의 일부로 포함됩니다. Premium Edition으로 업그레이드하려면 영업 담당자에게 문의하십시오.</block>
   <block id="0ead5de583924ac8d48848b85f68e778" category="section-title">셀프 서비스 지원:</block>
   <block id="6c0afebc7e7822e3ca22734d7b5d42c0" category="paragraph">이러한 지원 옵션은 평가판 모드에서 사용할 수 있으며 연중무휴 24시간 무료로 제공됩니다.</block>
-  <block id="e3072490c4d1e9d415ba1bcef5c7bdb1" category="list-text">*https://kb.NetApp.com/Special:Search?query=cloud+insights[Knowledgebase] *</block>
-  <block id="3926b94c4a8e59d9d045fe99d237163b" category="paragraph">+ 이 섹션의 링크를 클릭하면 관련 문서, 사용 방법 등을 검색할 수 있는 NetApp 기술 문서로 이동합니다.</block>
   <block id="5b6cf869265c13af8566f192b4ab3d2a" category="inline-link-macro">문서화</block>
   <block id="7cef246d709d34533b9dea3e15d3f5a2" category="list-text">*<block ref="2ecfa39652ed0f06ca436cc3b19d2bbb" category="inline-link-macro-rx"></block>*</block>
   <block id="15d10c3fd39c9846221b3ea9c93b55e0" category="paragraph">설명서 링크를 클릭하면 이 설명서 센터로 이동합니다.</block>
@@ -4834,7 +4830,6 @@
   <block id="eefa6cd78e40f4194cf842026e05a215" category="section-title">ONTAP 9.9+용 클라우드 연결은 더 이상 사용되지 않습니다</block>
   <block id="2589e2b6868c0dfc4223608ad37b1ecf" category="paragraph">ONTAP 9.9 이상의 데이터 수집기에 대한 클라우드 연결이 더 이상 사용되지 않습니다. 2023년 4월 4일부터 사용자 환경의 Cloud Connection 데이터 수집기는 더 이상 데이터를 수집하지 않으며 폴링 시 오류를 표시합니다. 클라우드 연결 데이터 수집기는 후속 업데이트에서 Cloud Insights에서 완전히 제거됩니다.</block>
   <block id="f5395c9793af8a11b406ca7c1ac70da9" category="inline-link-macro">자세한 정보</block>
-  <block id="8ae386dae67728714e42ae37acbde665" category="paragraph">2023년 4월 4일 이전에는 클라우드 연결에서 현재 수집한 ONTAP 시스템의 새로운 NetApp ONTAP 데이터 관리 소프트웨어 데이터 수집기를 구성해야 합니다. <block ref="61bbaeff08609910a4a5c1401ada9f16" category="inline-link-macro-rx"></block>..</block>
   <block id="abb14d21829ba186172f6e1d0b64b55b" category="section-title">2023년 1월</block>
   <block id="636b18f0d68407e346d028a8211fb724" category="section-title">새 로그 모니터</block>
   <block id="497c0ee717343a5ba95064eaf970a772" category="inline-link-macro">추가 시스템 모니터</block>
@@ -9485,7 +9480,6 @@
   <block id="3fde2c923d9dcbf8f73ec0e80dc74d75" category="paragraph">가장 간단한 방법은 프록시/방화벽에서 와일드카드 구성을 지정하여 Data Infrastructure Insights와 통신하는 것입니다. 예를 들면 다음과 같습니다.</block>
   <block id="7011d12128c7027c0a5ef0db2c274300" category="admonition">와일드카드에서는 별표(*)를 사용하는 것이 일반적이지만 프록시/방화벽 구성에서는 다른 형식을 사용할 수 있습니다. 사용자 환경에서 올바른 와일드카드 사양을 확인하려면 프록시 설명서를 참조하십시오.</block>
   <block id="347129195bfdcce2fcf0d362a84ed033" category="inline-link-macro">Knowledgbase를 참조하십시오</block>
-  <block id="6ad0fb78b8821fe632ae6653b56991b5" category="paragraph">프록시 구성에 대한 자세한 내용은 NetApp를 <block ref="9ee959d13eb0fcadf2047adb8fe84539" category="inline-link-macro-rx"></block>참조하십시오.</block>
   <block id="042f2a856726ac957ea57dbbe84766ca" category="section-title">프록시 URL 보기</block>
   <block id="ab7992748e11f14996bdc2646a49e293" category="paragraph">온보딩 중에 데이터 수집기를 선택할 때 * 프록시 설정 * 링크를 클릭하거나 * 도움말 &gt; 지원 * 페이지의 _프록시 설정_ 아래에 있는 링크를 클릭하여 프록시 끝점 URL을 볼 수 있습니다. 다음과 같은 테이블이 표시됩니다.</block>
   <block id="2d606071517d0747fae04dd73f7f6408" category="inline-image-macro">프록시 끝점 테이블</block>
@@ -10267,7 +10261,6 @@
   <block id="e73a974e5f64b7f2d040fb59fd2aafcd" category="cell">섀시 IP 주소를 사용하도록 데이터 소스 구성을 변경합니다.</block>
   <block id="04eb81d16943e8c8a6314aaac38a4f4b" category="cell">Access Gateway 포트에 두 개 이상의 노드가 로그인되었다는 메시지를 받습니다</block>
   <block id="17f6f686e23fbca9f92a7a9926136c2d" category="cell">성능 수집이 "SNMP 요청 전송 중 시간 초과"와 함께 실패합니다.</block>
-  <block id="212277044ae3f4c8673a76ebbe182cbd" category="cell">쿼리 변수 및 스위치 구성에 따라 일부 쿼리가 기본 시간 제한을 초과할 수 있습니다. <block ref="0374e985eaa396deda9975ede578752d" category="inline-link-macro-rx"></block>..</block>
   <block id="e04ebf98a9012bb6a191a7804699c68b" category="summary">Brocade FOS REST 데이터 수집기를 구성하는 중입니다.</block>
   <block id="706579d23b1ddf6c6ff6115a0f9271b4" category="doc">Brocade FOS REST Data Collector</block>
   <block id="eff72425072b480bbbaf5cf932ce0c52" category="paragraph">Data Infrastructure Insights는 Brocade FOS REST Collector를 사용하여 FabricOS(FabricOS) 펌웨어 8.2 이상을 실행하는 Brocade 스위치 장치의 인벤토리 및 성능을 검색합니다.</block>
@@ -11563,8 +11556,6 @@
   <block id="a9d11491cdc145dca25e537c123d978b" category="summary">ONTAP 9.9 이상의 데이터 수집기에 대한 NetApp 클라우드 연결을 구성합니다</block>
   <block id="34727dd01aaa3e0d53fd68d429bbff53" category="doc">ONTAP 9.9 이상의 데이터 수집기를 위한 NetApp 클라우드 연결</block>
   <block id="0803ffc49bb5d009027ad578d29858b8" category="paragraph">이 데이터 수집기는 ONTAP 9.9 + CVO, AFF 및 FAS 시스템의 데이터 수집을 지원하기 위해 클라우드 연결을 생성합니다.</block>
-  <block id="35799672184c185a5b76dc14b0e32aa7" category="inline-link-macro">기술 자료</block>
-  <block id="0de86890c2f317ce1ead6727d6bff886" category="admonition">이 데이터 수집기는 2023년 4월 4일부터 Data Infrastructure Insights에 더 이상 설치할 수 없으며, 2023년 7월 모든 Data Infrastructure Insights 설치에서 제거될 예정입니다. AU 기반 데이터 수집으로 전환하는 방법에 대한 자세한 내용은 을 참조하십시오<block ref="334c0315e59c6351d5f9bac4d495b3ee" category="inline-link-macro-rx"></block>.</block>
   <block id="aa660f33d4c20ae2b92aa73acb4c5828" category="summary">AWS 데이터 수집기에 NetApp Cloud Volumes Services를 구성합니다</block>
   <block id="6d719c7976115879cdcafb7922e7e5fd" category="doc">AWS용 NetApp Cloud Volumes Services 데이터 수집기</block>
   <block id="85930060216df642a21fd8c262d1cc6c" category="paragraph">이 데이터 수집기는 AWS용 NetApp Cloud Volumes Services 구성의 인벤토리 수집을 지원합니다.</block>
@@ -11576,7 +11567,6 @@
   <block id="9447267c06cce84dba179c481872fb16" category="cell">Cloud Volumes 암호 키입니다</block>
   <block id="36d35d8bdb33f254c1406a404bc7c125" category="cell">다음과 유사한 오류가 발생했습니다. '요청을 실행하지 못했습니다. &lt;AWS 지역 끝점 &gt;:8080 [&lt;AWS 지역 끝점 &gt;/AWS 지역 끝점 IP &gt;] 실패: 연결 시간 초과: \https://&lt;AWS 지역 끝점 FQDN &gt;:8080/v1/스토리지/IPRanges HTTP/1.1'</block>
   <block id="ef756d1229bc6f51e983884d984a03f3" category="inline-link-macro">NetApp KB 문서</block>
-  <block id="babd9d09d01450e3fe3a53819529d6f5" category="cell"><block ref="588cebdad26ee4a9a3bb08c290310eb7" category="inline-link-macro-rx"></block>Data Infrastructure Insights에서 수집 장치와 통신하는 데 사용되는 은 Data Infrastructure Insights와 Data Collector 자체 간에 통신하지 않습니다. 다음과 같은 몇 가지 방법을 시도해 볼 수 있습니다. 획득 장치가 FQDN을 확인하고 필요한 포트에 도달할 수 있는지 확인하십시오. 프록시가 오류 메시지의 지정된 끝점에 도달할 필요가 없는지 확인합니다. curl(말림)은 획득 장치와 끝점 사이의 통신을 테스트하는 데 사용할 수 있습니다. 이 테스트에 프록시를 사용하고 있지 * 않은지 확인하십시오. 예: root@acquisitionunit #curl-s-H accept: application/json-H "Content-type: application/json" -H API-key:&lt;데이터 수집기 자격 증명에 사용되는 api 키 -H secret-key:<block ref="776b569bb4fd625ede408f144a17e02c" category="inline-link-macro-rx"></block>&lt;데이터 수집기 자격 증명에 사용된 비밀 키&gt;-X \https://&lt;AWS 지역 엔드포인트 가져오기&gt;:8080/v1/IP1/스토리지/IPRanges 를 참조하십시오.</block>
   <block id="47407ceeb441f7c5d1eac8ca6060c4b7" category="summary">NetApp Cloud Volumes ONTAP 데이터 수집기를 구성합니다</block>
   <block id="a7544b3f9e0cc7c642c8b55af45cc192" category="doc">NetApp Cloud Volumes ONTAP 데이터 수집기</block>
   <block id="2285e08ef18a1a3f2e02b335409147d7" category="paragraph">이 데이터 수집기는 Cloud Volumes ONTAP 구성에서 인벤토리 수집을 지원합니다.</block>
@@ -12009,4 +11999,13 @@
   <block id="5620b4a9c0487779fe08be37f85948ac" category="paragraph"><block ref="5620b4a9c0487779fe08be37f85948ac" category="inline-image-macro-rx" type="image"></block></block>
   <block id="905f3e264909d9cdcfa3de883e22e115" category="inline-image-macro">SAN Analyzer 슬라이드 아웃 패널</block>
   <block id="16e072902d4155747f40acc51a5aa5a3" category="paragraph"><block ref="16e072902d4155747f40acc51a5aa5a3" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1eaf65163d0a898b5a6a94771ef2cf69" category="list-text">* https://kb.netapp.com/Cloud/BlueXP/DII[KnowledgeBase]*</block>
+  <block id="0e8f78366da6895d9cdeb4b8ed117539" category="paragraph">이 섹션의 링크를 클릭하면 NetApp Knowledgebase로 이동하고 관련 기사, 방법 등을 검색할 수 있습니다.</block>
+  <block id="bf404f6bed29d85c3f6e00ca198b64e2" category="paragraph">2023년 4월 4일 이전에는 클라우드 연결에서 현재 수집한 ONTAP 시스템의 새로운 NetApp ONTAP 데이터 관리 소프트웨어 데이터 수집기를 구성해야 합니다.</block>
+  <block id="bf82f4272c116f4033743ef9a8d2db15" category="paragraph">프록시 구성에 대한 자세한 내용은 NetApp를 <block ref="b348c1aae834cf0cd466b9787dfa5acf" category="inline-link-macro-rx"></block>참조하십시오.</block>
+  <block id="a7cf74afe22d08d0531dde90555aadbd" category="cell">쿼리 변수 및 스위치 구성에 따라 일부 쿼리가 기본 시간 제한을 초과할 수 있습니다. <block ref="fd40aed016519dab72e69cf2e3342cb9" category="inline-link-macro-rx"></block>..</block>
+  <block id="fb915b764f3baecfa629ff22686e14ee" category="admonition">이 데이터 수집기는 2023년 4월 4일부터 Data Infrastructure Insights에 더 이상 설치할 수 없으며, 2023년 7월 모든 Data Infrastructure Insights 설치에서 제거될 예정입니다.</block>
+  <block id="1f1f9d998591f96c2653327f9004b1a9" category="cell"><block ref="588cebdad26ee4a9a3bb08c290310eb7" category="inline-link-macro-rx"></block>Data Infrastructure Insights에서 수집 장치와 통신하는 데 사용되는 은 Data Infrastructure Insights와 Data Collector 자체 간에 통신하지 않습니다. 다음과 같은 몇 가지 방법을 시도해 볼 수 있습니다. 획득 장치가 FQDN을 확인하고 필요한 포트에 도달할 수 있는지 확인하십시오. 프록시가 오류 메시지의 지정된 끝점에 도달할 필요가 없는지 확인합니다. curl(말림)은 획득 장치와 끝점 사이의 통신을 테스트하는 데 사용할 수 있습니다. 이 테스트에 프록시를 사용하고 있지 * 않은지 확인하십시오. 예: root@acquisitionunit #curl-s-H accept: application/json-H "Content-type: application/json" -H API-key:&lt;데이터 수집기 자격 증명에 사용되는 api 키 -H secret-key:<block ref="ee10e7e073fdf55fff4a0c77a9c435fc" category="inline-link-macro-rx"></block>&lt;데이터 수집기 자격 증명에 사용된 비밀 키&gt;-X \https://&lt;AWS 지역 엔드포인트 가져오기&gt;:8080/v1/IP1/스토리지/IPRanges 를 참조하십시오.</block>
+  <block id="1ec51096f7cea66fb872ea91910e89b9" category="paragraph">추가 문제 해결 정보는 에서 찾을 <block ref="6fe211aef2305839bd4b415ac3b03770" category="inline-link-macro-rx"></block>수 있습니다(지원 로그인 필요).</block>
+  <block id="9e6e19182965cf2820f2a5f8cce84e8b" category="cell">AU가 SELinux에 설치된 경우 SE를 _permissive_mode로 설정해야 합니다. _Enforcing_mode는 지원되지 않습니다. SELinux를 허용 모드로 설정한 후 AU 서비스를 다시 시작합니다. <block ref="2aa71c1262c825b4349ce4125965fabb" category="inline-link-macro-rx"></block>..</block>
 </blocks>
