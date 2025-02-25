@@ -48,13 +48,13 @@ image:Notifications_email_list.png["이메일 알림"]
 | 평가판 또는 구독이 업데이트되었습니다 | 페이지에서 구독 세부 정보를 검토합니다link:concept_subscribing_to_cloud_insights.html["구독"] 
 
 
-| 구독은 90일 후에 만료됩니다. 구독은 30일 후에 만료됩니다 | "자동 갱신"이 활성화된 경우 추가 조치가 필요하지 않습니다. 연락처를 통해 구독을 갱신합니다link:https://www.netapp.com/us/forms/sales-inquiry/cloud-insights-sales-inquiries.aspx["NetApp 영업"] 
+| 구독은 90일 후에 만료됩니다. 구독은 30일 후에 만료됩니다 | "자동 갱신"이 활성화된 경우 별도의 조치가 필요하지 않습니다. 가입을 갱신하려면 NetApp 영업부에 문의하십시오 
 
 
-| 평가판은 2일 후에 종료됩니다 | 페이지에서 평가판을 갱신하십시오.link:concept_subscribing_to_cloud_insights.html["구독"] 평가판을 한 번 갱신할 수 있습니다. 구독을 구입하려면 에 문의하십시오link:https://www.netapp.com/us/forms/sales-inquiry/cloud-insights-sales-inquiries.aspx["NetApp 영업"] 
+| 평가판은 2일 후에 종료됩니다 | 페이지에서 평가판을 갱신하십시오.link:concept_subscribing_to_cloud_insights.html["구독"] 평가판을 한 번 갱신할 수 있습니다. 구독을 구입하려면 NetApp 영업부에 문의하십시오 
 
 
-| 평가판 또는 구독이 만료되었습니다. 48시간 이내에 계정 데이터 수집이 중지됩니다. 48시간 후에는 계정이 삭제됩니다 | 구독을 구입하려면 에 문의하십시오link:https://www.netapp.com/us/forms/sales-inquiry/cloud-insights-sales-inquiries.aspx["NetApp 영업"] 
+| 평가판 또는 구독이 만료되었습니다. 48시간 이내에 계정 데이터 수집이 중지됩니다. 48시간 후에는 계정이 삭제됩니다 | 구독을 구입하려면 NetApp 영업부에 문의하십시오 
 |===
 [NOTE]
 ====

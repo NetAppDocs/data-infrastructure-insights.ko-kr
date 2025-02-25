@@ -21,8 +21,6 @@ summary: Data Infrastructure Insights는 Telegraf를 통합 데이터 수집을 
 [role="lead"]
 Data Infrastructure Insights는 link:https://docs.influxdata.com/telegraf["텔레그라프"]통합 데이터 수집을 위한 에이전트로 를 사용합니다. Telegraf는 메트릭, 이벤트 및 로그를 수집 및 보고하는 데 사용할 수 있는 플러그인 기반 서버 에이전트입니다. 입력 플러그인은 시스템/OS에 직접 액세스하거나 타사 API를 호출하거나 구성된 스트림(예 Kafka, statsd 등). 출력 플러그인은 수집된 메트릭, 이벤트 및 로그를 에이전트에서 Data Infrastructure Insights로 전송하는 데 사용됩니다.
 
-Data Infrastructure Insights의 현재 Telegraf 버전은 * 1.24.0 * 입니다.
-
 Kubernetes에 설치하는 방법에 대한 자세한 link:task_config_telegraf_agent_k8s.html["NetApp Kubernetes 모니터링 운영자"]내용은 페이지를 참조하십시오.
 
 

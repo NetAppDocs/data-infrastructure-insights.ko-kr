@@ -10,7 +10,7 @@ summary: '잠재적 공격(예: 랜섬웨어) 및/또는 활동 경고에 대해
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media
+:imagesdir: ./media/
 
 
 [role="lead"]

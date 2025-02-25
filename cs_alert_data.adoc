@@ -10,7 +10,7 @@ summary: 워크로드 보안은 비정상적인 사용자 활동이나 잠재적
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media
+:imagesdir: ./media/
 
 
 [role="lead"]

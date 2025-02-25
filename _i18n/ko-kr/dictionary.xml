@@ -3854,12 +3854,8 @@
   <block id="787ad0b7a17de4ad6b1711bbf8d79fcb" category="inline-link-macro">구독</block>
   <block id="e3f7fb4cb907310317d00ec805d579f0" category="cell">페이지에서 구독 세부 정보를 검토합니다<block ref="1270e27ca8ec5d3dff21c492e4b5c786" category="inline-link-macro-rx"></block></block>
   <block id="1670271ef2e024b3bd83b4667cfad9f1" category="cell">구독은 90일 후에 만료됩니다. 구독은 30일 후에 만료됩니다</block>
-  <block id="9f1787a10e1ab4246b75150fda98b7f6" category="inline-link-macro">NetApp 영업</block>
-  <block id="56e2a36f9711ac801f182c46e593a905" category="cell">"자동 갱신"이 활성화된 경우 추가 조치가 필요하지 않습니다. 연락처를 통해 구독을 갱신합니다<block ref="24745b642cc0706e7f0bffb600ab0d70" category="inline-link-macro-rx"></block></block>
   <block id="a8e16db6b3540132d03fdb273b982975" category="cell">평가판은 2일 후에 종료됩니다</block>
-  <block id="ca668270291dd570712b6adc1ce8923f" category="cell">페이지에서 평가판을 갱신하십시오.<block ref="1270e27ca8ec5d3dff21c492e4b5c786" category="inline-link-macro-rx"></block> 평가판을 한 번 갱신할 수 있습니다. 구독을 구입하려면 에 문의하십시오<block ref="24745b642cc0706e7f0bffb600ab0d70" category="inline-link-macro-rx"></block></block>
   <block id="1e520752d3100399ac52c71e449da882" category="cell">평가판 또는 구독이 만료되었습니다. 48시간 이내에 계정 데이터 수집이 중지됩니다. 48시간 후에는 계정이 삭제됩니다</block>
-  <block id="e89ae227607d5f04ef37a542e59758d5" category="cell">구독을 구입하려면 에 문의하십시오<block ref="24745b642cc0706e7f0bffb600ab0d70" category="inline-link-macro-rx"></block></block>
   <block id="8e93b1e0d1805d8655a5ef72cc4c1f73" category="section-title">경고를 위한 글로벌 수신자 목록</block>
   <block id="f80a3af59189fad5d417cb3684841b2f" category="paragraph">알림의 전자 메일 알림은 알림의 모든 작업에 대해 알림 받는 사람 목록으로 전송됩니다. 글로벌 수신자 목록에 알림 메시지를 보내도록 선택할 수 있습니다.</block>
   <block id="df43b72d848c482dd610f8178005dbe4" category="paragraph">글로벌 경고 수신자를 구성하려면 * Global Monitor Notification Recipients * 섹션에서 원하는 수신자를 선택합니다.</block>
@@ -3986,7 +3982,6 @@
   <block id="b865b0f0f94674aa0d7878e2253f2c1b" category="doc">피처 및 기능 미리보기</block>
   <block id="8a0d14c15291ab894b50ee0f241e5564" category="paragraph">Data Infrastructure Insights에서는 새로운 기능을 _Preview_방식으로 강조합니다. 미리 보기 기능은 제한된 환경 또는 제한된 용량에서 사용할 수 있습니다.</block>
   <block id="2240ee7d4e56b8ba7ac49b14311cdeed" category="inline-link-macro">NetApp 세일즈 팀</block>
-  <block id="1faeb81be1b403bf2b660e33e3c7e5f7" category="paragraph">이러한 기능 중 하나 이상을 미리 보려면 에 자세한 내용을 문의하십시오<block ref="16ff11ed878ec2cb7f479192bb9f1a7d" category="inline-link-macro-rx"></block>.</block>
   <block id="5fa0ef8fc40e60003288942e2da3e300" category="cell">* 피처 *</block>
   <block id="d972e288b86634fdb9a758828b4d511a" category="cell">ONTAP 콜드 스토리지 재확보</block>
   <block id="e1f1a8af4cedab3466112b828b25b73f" category="cell">콜드 용량 및 기타 관련 메트릭이 있는 ONTAP 볼륨 워크로드의 시각화를 제공합니다.</block>
@@ -4067,7 +4062,6 @@
   <block id="1ce9a43d63998783a781596de13b0965" category="list-text"><block ref="fa5b9c38e8e5b8e1f4e408b08ce16532" category="inline-link-macro-rx"></block></block>
   <block id="2911a8a094a0fc515bf83ad1a0cf9eba" category="list-text">* 채팅 * - NetApp 지원 담당자와 연결하여 지원을 받을 수 있습니다(평일에만 해당). 채팅은 Data Infrastructure Insights 화면의 오른쪽 위에 있는 * 도움말 &gt; 라이브 채팅 * 메뉴 옵션에서 확인할 수 있습니다.</block>
   <block id="ac2ae10a8c7bd50e80c93d5e57fc84da" category="inline-link-macro">* 영업팀에 문의 *</block>
-  <block id="5c0e6c90408c98d6eca3e09416c4ee77" category="paragraph">링크를 클릭하여 영업 지원을 요청할 수도 <block ref="57d2406fdd9ad62e0bb0722bd44749df" category="inline-link-macro-rx"></block>있습니다.</block>
   <block id="30a12dfd5908adfdb9f06395cb4b5c34" category="paragraph">Data Infrastructure Insights 일련 번호는 서비스 내에 * 도움말 &gt; 지원 * 메뉴를 통해 표시됩니다. 서비스에 액세스하는 데 문제가 있고 이전에 NetApp에 일련 번호를 등록한 경우 다음과 같이 NetApp Support 사이트에서 Data Infrastructure Insights 일련 번호 목록을 볼 수도 있습니다.</block>
   <block id="290bf19e1ed3fabfc80a0ac6d77f6466" category="list-text">mysupport.netapp.com 에 로그인합니다</block>
   <block id="77cb462f113aa28274c4c9d4a0bd4124" category="list-text">Products &gt; My Products 메뉴 탭에서 제품군 "SaaS Data Infrastructure Insights"를 사용하여 등록된 모든 일련 번호를 찾습니다.</block>
@@ -4146,7 +4140,6 @@
   <block id="6341e61d6dc641d29b3f2e7300137ea9" category="list-text">NetApp의 모든 클라우드 서비스에 액세스하려면 에서 계정을 <block ref="e0b3e45a049f223d3b91d005d1e31db5" category="inline-link-macro-rx"></block>등록하십시오.</block>
   <block id="2ef085adce795622c057ad2ea6c13059" category="inline-link-macro">NetApp 영업</block>
   <block id="cab27dc53edb571cac663ce2e16450dc" category="inline-link-macro">AWS 마켓플레이스</block>
-  <block id="f2b5d43aba260933c552d69977b7274d" category="list-text">* Data Infrastructure Insights에 가입 * 하여 <block ref="ae0970f4d06315494d31beaa05a7be05" category="inline-link-macro-rx"></block>직접 또는 을 통해 지속적으로 데이터에 액세스할 수 <block ref="e91d3f98f4b43abdea3c839a7777954c" category="inline-link-macro-rx"></block>있습니다.</block>
   <block id="7bc1d8b07dfc0e98950abc0c7f3979a5" category="inline-link-macro">정보 및 지역</block>
   <block id="6c36c3c54c4f691f7ed13a16d49bbde7" category="paragraph">등록 프로세스 중에 Data Infrastructure Insights 환경을 호스팅할 글로벌 지역을 선택할 수 있습니다. 자세한 내용은 데이터 인프라 인사이트 를 참조하십시오<block ref="286a302a1ee50fd59eb368d3d9779037" category="inline-link-macro-rx"></block>.</block>
   <block id="ef66b5abbe1e0b79e23deb05dd2d11a9" category="admonition">비활성 Data Infrastructure Insights Basic Edition 환경이 삭제되고 해당 리소스가 회수됩니다. 연속 7일 동안 수집된 데이터가 없는 경우, 연속으로 30일 동안 사용자 활동이 없는 경우 환경은 비활성 상태로 간주됩니다. Data Infrastructure Insights는 알림을 전송하고 환경이 삭제되기 4일의 유예 기간을 제공합니다.</block>
@@ -4212,7 +4205,6 @@
   <block id="99d34ca2583ae7363bd4e07f9b2d98cc" category="inline-xref">자체 구독</block>
   <block id="ab5e9545afec38b9d4cc8cb1f64b1a59" category="paragraph">관리 유닛 수가 1,000개 미만인 경우 NetApp 세일즈 또는 AWS 마켓플레이스를 통해 구독할 수 있습니다<block ref="5ef09ccc45a6e1ddce52b5a69393ce8f" category="inline-xref-macro-rx"></block>.</block>
   <block id="61951f38f686ce7c31ccc7f65173062c" category="section-title">NetApp Sales Direct를 통해 구독하십시오</block>
-  <block id="e3b70cffc25d522a4137f9cafd0f3c50" category="paragraph">예상 관리 유닛 수가 1,000 이상인 경우 <block ref="57d2406fdd9ad62e0bb0722bd44749df" category="inline-link-macro-rx"></block>버튼을 클릭하여 NetApp 세일즈 팀을 통해 구독하십시오.</block>
   <block id="0313fe3f07d732172e3b8700c1cea6f1" category="paragraph">NetApp 세일즈 담당자에게 데이터 인프라 인사이트 * 일련 번호 * 를 제공하여 유료 구독을 데이터 인프라 인사이트 환경에 적용할 수 있도록 해야 합니다. 일련 번호는 Data Infrastructure Insights 평가판 환경을 고유하게 식별하며 * Admin &gt; Subscription * 페이지에서 찾을 수 있습니다.</block>
   <block id="ba16017252787d62326108ae062b54b0" category="section-title">AWS Marketplace를 통해 직접 구독</block>
   <block id="75df7bd83cb6391af3c2bb23c74cb72d" category="admonition">기존 Data Infrastructure Insights 평가판 계정에 AWS Marketplace 구독을 적용하려면 계정 소유자 또는 관리자여야 합니다. 또한 AWS(Amazon Web Services) 계정이 있어야 합니다.</block>
@@ -4638,7 +4630,6 @@
   <block id="135a3d8d94bbc8eb1cd03dbd8fa28277" category="paragraph"><block ref="135a3d8d94bbc8eb1cd03dbd8fa28277" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ad437072c1980f7cddeaf25e082880bb" category="section-title">VMware 태그를 Cloud Insights 주석에 매핑합니다</block>
   <block id="7f8b37715b940736bc29a71b2f98126d" category="inline-link-macro">VMware</block>
-  <block id="b67ffcdf52573a01af5e6400d8043174" category="paragraph"><block ref="eb8043f75c4f74e4780785affa0e63c3" category="inline-link-macro-rx"></block>데이터 수집기를 사용하면 VMware에 구성된 동일한 이름의 태그로 Cloud Insights 텍스트 주석을 채울 수 있습니다.</block>
   <block id="02892541231ed9b9797890da851659d1" category="section-title">FOS 9.1.1c 이상 펌웨어에 대한 Brocade CLI Collector 안정성 향상</block>
   <block id="f451a3db1d946e0e6f7a6faff75241f4" category="paragraph">9.1.1c 펌웨어를 실행하는 일부 Brocade 파이버 채널 스위치에서 특정 CLI 명령의 출력 앞에 "mott" 로그인 배너 텍스트 또는 기본 암호 변경에 대한 사용자 경고가 표시될 수 있습니다. Brocade CLI Collector는 이러한 두 가지 유형의 불필요한 텍스트를 무시하도록 개선되었습니다.</block>
   <block id="08cc9fe40f6d675ceb9852acf6cb4d2d" category="paragraph">이 개선 사항 이전에는 가상 패브릭이 없는 FOS 9.1.1c 스위치만 이 컬렉터 유형으로 검색할 수 있었습니다.</block>
@@ -4985,7 +4976,6 @@
   <block id="9a3185d3dd699a74f8c315584250a80c" category="inline-link-macro">Agent 설치</block>
   <block id="c41fe2272c9ff38bed21d6e67f9945cc" category="paragraph">Telegraf 통합 데이터 수집용 에이전트가 버전 * 1.22.3 * 으로 업데이트되어 성능 및 보안이 향상되었습니다. 업데이트하려는 사용자는 설명서의 해당 업그레이드 섹션을 참조할 수 <block ref="7eca75c9707898b05c3a8b3fe84d7968" category="inline-link-macro-rx"></block>있습니다. 이전 버전의 에이전트는 사용자 작업 없이 계속 작동합니다.</block>
   <block id="ecf4e9e3c38358de05561be5ed03f5d0" category="section-title">피처 미리보기</block>
-  <block id="876a3f6e99a6a623eff957c61ab96f8a" category="paragraph">Cloud Insights는 다양하고 흥미로운 새로운 미리 보기 기능을 정기적으로 강조하고 있습니다. 이러한 기능 중 하나 이상을 미리 보려면 에 자세한 내용을 문의하십시오<block ref="16ff11ed878ec2cb7f479192bb9f1a7d" category="inline-link-macro-rx"></block>.</block>
   <block id="2ad48475868a5acf715f48e45c20d2d1" category="cell">Cloud Secure – 공격에 대한 사용자 액세스를 차단합니다</block>
   <block id="4e28671aa760c1ba504510846bdf520c" category="cell">공격이 감지될 때 사용자 액세스를 차단하는 기능을 통해 업무상 중요한 데이터를 더욱 안전하게 보호할 수 있습니다. 자동 대응 정책을 사용하거나 경고 또는 사용자 세부 정보 페이지에서 수동으로 액세스를 차단할 수 있습니다. <block ref="e8dc9c29c76388404a63bbf729dac2fd" category="inline-link-macro-rx"></block></block>
   <block id="b56a5394775a9f077c12cb3e770d913c" category="section-title">2022년 5월</block>
@@ -5419,7 +5409,6 @@
   <block id="2a6de53195a3acc5f7d30058cb96c7b0" category="cell">보고서 구성, 보고 작업 종료 및 재시작 등의 모든 관리 작업과 모든 작성자 기능을 수행할 수 있습니다.</block>
   <block id="6ba491c2b785c6d3b29438ccaae4be23" category="admonition">Cloud Insights 보고는 500MU 이상의 환경에서 사용할 수 있습니다.</block>
   <block id="9e1a95c1bf70be97bddc1d6d3b0fd7bf" category="inline-link-macro">기존 고객을 위한 중요 참고 사항</block>
-  <block id="bbe0f3f4b15751e0fe172352be87e28a" category="admonition">현재 Premium Edition 고객이며 보고서를 보존하려면 이 내용을 읽어 <block ref="def308f247292b766d2c9907f94474d4" category="inline-link-macro-rx"></block>보십시오.</block>
   <block id="788f4763779031fd7bb3241cdf39ad5b" category="section-title">데이터 수집용 새로운 API 범주입니다</block>
   <block id="facfa3abb0f333223d77bb5c23d49f72" category="paragraph">Cloud Insights는 * 데이터 수집 * API 범주를 추가하여 사용자 지정 데이터 및 에이전트를 보다 강력하게 제어할 수 있도록 합니다. 이 API 범주와 기타 API 범주에 대한 자세한 내용은 Cloud Insights에서 * 관리자 &gt; API 액세스 * 로 이동하고 _API Documentation_link를 클릭하여 확인할 수 있습니다. AU 세부 정보 페이지와 AU 목록 페이지에 표시되는 메모 필드에서 AU에 메모를 첨부할 수도 있습니다.</block>
   <block id="ea6b0fa25e3cb324da39980f6290f837" category="section-title">2020년 8월</block>
@@ -5676,7 +5665,6 @@
   <block id="e289ad98e91a5c5e09b44d6006fba214" category="section-title">2019년 6월</block>
   <block id="b5288703cf95cb2a528be0fe38299786" category="section-title">Cloud Insights 에디션</block>
   <block id="b4f83b03956523a39e8bbbd0895f0f29" category="inline-link-macro">Cloud Insights</block>
-  <block id="39627bb9ad7910603c9a7a558b721eed" category="paragraph">Cloud Insights는 고객의 예산과 비즈니스 요구에 맞게 다양한 버전으로 제공됩니다. NetApp Support 계정이 유효한 기존 NetApp 고객은 무료 * Basic Edition * 을 통해 7일 동안 데이터를 보존하고 NetApp 데이터 수집기에 액세스할 수 있습니다. 또는 * Standard Edition * 을 통해 지원되는 모든 데이터 수집기에 대한 액세스, 전문가 기술 지원 등을 이용할 수 있습니다. 사용 가능한 기능에 대한 자세한 내용은 NetApp <block ref="90b37a6f19d0c9cebf9cb98c49d719f7" category="inline-link-macro-rx"></block>사이트를 참고하십시오.</block>
   <block id="076961e5ebe9ba19944f1e07d39a3734" category="section-title">새로운 인프라 데이터 수집기: NetApp HCI</block>
   <block id="ee295f6adf0fba3513382450efd2d056" category="inline-link-macro">NetApp HCI 가상 센터</block>
   <block id="40d7c8ab2c54cab8d61c485a80cdd6c0" category="list-text"><block ref="d2237560e4b0257aaba680703e5b6009" category="inline-link-macro-rx"></block> 인프라 데이터 수집기로 추가되었습니다. HCI 가상 센터 데이터 수집기는 NetApp HCI 호스트 정보를 수집하며 가상 센터 내의 모든 개체에 대해 읽기 전용 권한이 필요합니다.</block>
@@ -8609,7 +8597,6 @@
   <block id="2ddc4416c197500bc7619829b98c8b77" category="doc">데이터 수집을 위한 에이전트 구성(Windows/Linux)</block>
   <block id="bdb9a31f361d8d3be1c6915647e92d4d" category="inline-link-macro">텔레그라프</block>
   <block id="5f021f72cc2bb955c838ed30118dbef0" category="paragraph">Data Infrastructure Insights는 <block ref="eed175bcf32f20f81ea47b9c982c2797" category="inline-link-macro-rx"></block>통합 데이터 수집을 위한 에이전트로 를 사용합니다. Telegraf는 메트릭, 이벤트 및 로그를 수집 및 보고하는 데 사용할 수 있는 플러그인 기반 서버 에이전트입니다. 입력 플러그인은 시스템/OS에 직접 액세스하거나 타사 API를 호출하거나 구성된 스트림(예 Kafka, statsd 등). 출력 플러그인은 수집된 메트릭, 이벤트 및 로그를 에이전트에서 Data Infrastructure Insights로 전송하는 데 사용됩니다.</block>
-  <block id="da7e75e5407636a24c1c7cce20e7d225" category="paragraph">Data Infrastructure Insights의 현재 Telegraf 버전은 * 1.24.0 * 입니다.</block>
   <block id="2041337c363c1ecaeb2a1aa9c8999494" category="paragraph">Kubernetes에 설치하는 방법에 대한 자세한 <block ref="f0d3e43e41da35ba651820db811551cd" category="inline-link-macro-rx"></block>내용은 페이지를 참조하십시오.</block>
   <block id="ae2f2b5e87a12f1cd650f0e46b92e4ec" category="admonition">정확한 감사 및 데이터 보고를 위해 * NTP(Network Time Protocol) * 또는 * SNTP(Simple Network Time Protocol) * 를 사용하여 Agent 시스템의 시간을 동기화하는 것이 좋습니다.</block>
   <block id="137bac1c26ca6d0b61bc783c9a2fcbbd" category="section-title">Agent 설치</block>
@@ -11850,8 +11837,6 @@
   <block id="9c6601cca8cd67405c34e4897bb272f1" category="section-title">자산 간의 연결을 탐색합니다</block>
   <block id="14fe64769d4df689f51e13f60c5ec439" category="admonition">수집기에 제한된 사용자가 있는 경우 수집기를 일시 중지할 수 없습니다. 수집기를 일시 중지하기 전에 사용자 액세스를 복원합니다.</block>
   <block id="81c776ec15386302abf1c34d317e3393" category="paragraph">SAN Analyzer를 보려면 * 관측성 &gt; 분석 &gt; SAN Analyzer * 를 선택합니다. 애플리케이션, 호스트, 패브릭 및/또는 스토리지에 대한 필터를 설정합니다. 연결된 오브젝트를 보여 주는 오브젝트의 지도가 표시됩니다. 해당 연결에 대한 트래픽 메트릭을 보려면 개체 위에 마우스를 올려 놓으십시오.</block>
-  <block id="fde6f74861c217b576ec5d769f2467c3" category="paragraph"><block ref="fde6f74861c217b576ec5d769f2467c3" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="7512260392fef04bf211fab22007addd" category="paragraph"><block ref="7512260392fef04bf211fab22007addd" category="inline-image-macro-rx" type="image"></block></block>
   <block id="18082cdb9388e2686e081dd6012e47b8" category="summary">사용자가 만드는 대시보드가 공용 대시보드인지 아니면 비공개형인지 결정합니다.</block>
   <block id="cc5c681651d638257ae03658c963c7c6" category="doc">대시보드 액세스 관리</block>
   <block id="571ad98bb1054a211a5d3fa3a3240265" category="paragraph">Data Infrastructure Insights는 이제 작성하는 대시보드에 대한 액세스를 보다 효과적으로 제어할 수 있습니다. 그래프를 수정할 수 있는 사용자를 선택합니다. 사용자는 잠재적으로 민감한 정보에 대한 노출을 제어합니다. 대시보드를 비공개로 유지하면 조직의 다른 사용자가 시각화를 사용할 준비가 될 때까지 시각화를 마무리할 수 있습니다.</block>
@@ -12008,4 +11993,20 @@
   <block id="f96c0cb8e557b8c2286592a385c5fd6e" category="paragraph">Data Infrastructure Insights에는 문제를 빠르고 쉽게 해결하고 기업 환경에 대한 통찰력을 제공할 수 있는 유용한 기능이 포함되어 있습니다. 강력한 쿼리를 사용하여 데이터를 쉽게 찾고, 대시보드에서 데이터를 시각화하고, 설정한 데이터 임계값에 대한 전자 메일 알림을 보낼 수 있습니다.</block>
   <block id="9a3ddb6d99b9ffb5f7473690abc9fb52" category="paragraph">Data Infrastructure Insights 테넌트에 표시되는 * 시작 체크리스트 * 에는 몇 가지 유용한 작업 및 개념 목록이 포함되어 있습니다. 체크리스트에서 항목을 선택하면 해당 개념에 대한 적절한 Data Infrastructure Insights 페이지로 이동합니다. 예를 들어, _Create a Dashboard_item을 클릭하면 Data Infrastructure Insights * Dashboards * 페이지가 열립니다.</block>
   <block id="363b2b401698741ed946f685265f5dc1" category="paragraph">검사 목록 맨 아래에 있는 _다시 표시 안 함_ 링크를 클릭할 때까지 시작 검사 목록이 표시됩니다. 체크리스트를 없앤 후에도 메시지 헤더 표시줄에서 각 자습서를 해제할 때까지 해당하는 각 Data Infrastructure Insights 페이지에서 자습서를 계속 사용할 수 있습니다.</block>
+  <block id="fcef7a70b7e9119c20e30e9ab1556015" category="paragraph">회사 환경에서 사용되는 애플리케이션을 이해하면 자산 사용량과 비용을 추적할 수 있습니다.</block>
+  <block id="0e7f6af549f009474555d1625059e6d7" category="cell">"자동 갱신"이 활성화된 경우 별도의 조치가 필요하지 않습니다. 가입을 갱신하려면 NetApp 영업부에 문의하십시오</block>
+  <block id="2e9dbda35cab3bb298214da257ad124f" category="cell">페이지에서 평가판을 갱신하십시오.<block ref="1270e27ca8ec5d3dff21c492e4b5c786" category="inline-link-macro-rx"></block> 평가판을 한 번 갱신할 수 있습니다. 구독을 구입하려면 NetApp 영업부에 문의하십시오</block>
+  <block id="a25c3f0a67375ee45e02e2a95818cfb5" category="cell">구독을 구입하려면 NetApp 영업부에 문의하십시오</block>
+  <block id="670521a1846ad94b7cc140e2678df21c" category="paragraph">이러한 기능 중 하나 이상을 미리 보려면 에 자세한 내용을 문의하십시오<block ref="02af545fedbe237243dabe2f44648f4d" category="inline-link-macro-rx"></block>.</block>
+  <block id="16630d72023cbbf23b8ab69cac2b3ff7" category="paragraph">링크를 클릭하여 영업 지원을 요청할 수도 <block ref="6193a07b36740b6aedc4527702e204e2" category="inline-link-macro-rx"></block>있습니다.</block>
+  <block id="3fcd9845b26dde701c891681edc7b769" category="list-text">* Data Infrastructure Insights에 가입 * 하여 <block ref="326364f658f4dbd53be7e9aa308d8ef9" category="inline-link-macro-rx"></block>직접 또는 을 통해 지속적으로 데이터에 액세스할 수 <block ref="e91d3f98f4b43abdea3c839a7777954c" category="inline-link-macro-rx"></block>있습니다.</block>
+  <block id="5d42f131ad60489240ed184620da0559" category="paragraph">예상 관리 유닛 수가 1,000 이상인 경우 <block ref="6193a07b36740b6aedc4527702e204e2" category="inline-link-macro-rx"></block>버튼을 클릭하여 NetApp 세일즈 팀을 통해 구독하십시오.</block>
+  <block id="a42decca1d15ec644d4c66c06689344e" category="paragraph"><block ref="a4e343c69e2eae514016d98dfce8b36b" category="inline-link-macro-rx"></block>데이터 수집기를 사용하면 VMware에 구성된 동일한 이름의 태그로 Cloud Insights 텍스트 주석을 채울 수 있습니다.</block>
+  <block id="0d0549b05d1645d38baa1a6cedaa7190" category="paragraph">Cloud Insights는 다양하고 흥미로운 새로운 미리 보기 기능을 정기적으로 강조하고 있습니다. 이러한 기능 중 하나 이상을 미리 보려면 에 자세한 내용을 문의하십시오<block ref="02af545fedbe237243dabe2f44648f4d" category="inline-link-macro-rx"></block>.</block>
+  <block id="6230fc6d3836bf964eb587a1b21b5c48" category="admonition">현재 Premium Edition 고객이며 보고서를 보존하려면 이 내용을 읽어 <block ref="85f8206314043d7dd91d050def6a5cd1" category="inline-link-macro-rx"></block>보십시오.</block>
+  <block id="76a42951dc5d3e54f25d85112bcaa111" category="paragraph">Cloud Insights는 고객의 예산과 비즈니스 요구에 맞게 다양한 버전으로 제공됩니다. NetApp Support 계정이 유효한 기존 NetApp 고객은 무료 * Basic Edition * 을 통해 7일 동안 데이터를 보존하고 NetApp 데이터 수집기에 액세스할 수 있습니다. 또는 * Standard Edition * 을 통해 지원되는 모든 데이터 수집기에 대한 액세스, 전문가 기술 지원 등을 이용할 수 있습니다. 사용 가능한 기능에 대한 자세한 내용은 NetApp <block ref="67d94682b6b1dd7a9ae6ec194255c574" category="inline-link-macro-rx"></block>사이트를 참고하십시오.</block>
+  <block id="238195bd1c59d39a21a833f68ecd7a0c" category="inline-image-macro">SAN Analyzer 트래픽 메트릭의 예입니다</block>
+  <block id="5620b4a9c0487779fe08be37f85948ac" category="paragraph"><block ref="5620b4a9c0487779fe08be37f85948ac" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="905f3e264909d9cdcfa3de883e22e115" category="inline-image-macro">SAN Analyzer 슬라이드 아웃 패널</block>
+  <block id="16e072902d4155747f40acc51a5aa5a3" category="paragraph"><block ref="16e072902d4155747f40acc51a5aa5a3" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>

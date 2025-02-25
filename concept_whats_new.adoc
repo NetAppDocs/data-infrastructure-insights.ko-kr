@@ -568,7 +568,7 @@ image:StorageNodeSupportData.png["스토리지 노드 지원 정보입니다"]
 
 === VMware 태그를 Cloud Insights 주석에 매핑합니다
 
-link:task_dc_vmware.html#mapping-vmware-tags-to-cloud-insights-annotations["VMware"]데이터 수집기를 사용하면 VMware에 구성된 동일한 이름의 태그로 Cloud Insights 텍스트 주석을 채울 수 있습니다.
+link:task_dc_vmware.html["VMware"]데이터 수집기를 사용하면 VMware에 구성된 동일한 이름의 태그로 Cloud Insights 텍스트 주석을 채울 수 있습니다.
 
 
 
@@ -1387,7 +1387,7 @@ Telegraf 통합 데이터 수집용 에이전트가 버전 * 1.22.3 * 으로 업
 
 === 피처 미리보기
 
-Cloud Insights는 다양하고 흥미로운 새로운 미리 보기 기능을 정기적으로 강조하고 있습니다. 이러한 기능 중 하나 이상을 미리 보려면 에 자세한 내용을 문의하십시오link:https://www.netapp.com/us/forms/sales-inquiry/cloud-insights-sales-inquiries.aspx["NetApp 세일즈 팀"].
+Cloud Insights는 다양하고 흥미로운 새로운 미리 보기 기능을 정기적으로 강조하고 있습니다. 이러한 기능 중 하나 이상을 미리 보려면 에 자세한 내용을 문의하십시오link:https://bluexp.netapp.com/contact-cds["NetApp 세일즈 팀"].
 
 |===
 
@@ -1452,7 +1452,7 @@ Collector 실패로 인해 중요한 메트릭을 놓치지 마십시오!
 
 === 피처 미리보기
 
-Cloud Insights는 다양하고 흥미로운 새로운 미리 보기 기능을 정기적으로 강조하고 있습니다. 이러한 기능 중 하나 이상을 미리 보려면 에 자세한 내용을 문의하십시오link:https://www.netapp.com/us/forms/sales-inquiry/cloud-insights-sales-inquiries.aspx["NetApp 세일즈 팀"].
+Cloud Insights는 다양하고 흥미로운 새로운 미리 보기 기능을 정기적으로 강조하고 있습니다. 이러한 기능 중 하나 이상을 미리 보려면 에 자세한 내용을 문의하십시오link:https://bluexp.netapp.com/contact-cds["NetApp 세일즈 팀"].
 
 |===
 
@@ -1511,7 +1511,7 @@ Cloud Insights는 Pod, 데모 세트, 복제 및 복제를 생성 또는 제거�
 
 === 피처 미리보기
 
-Cloud Insights는 다양하고 흥미로운 새로운 미리 보기 기능을 정기적으로 강조하고 있습니다. 이러한 기능 중 하나 이상을 미리 보려면 에 자세한 내용을 문의하십시오link:https://www.netapp.com/us/forms/sales-inquiry/cloud-insights-sales-inquiries.aspx["NetApp 세일즈 팀"].
+Cloud Insights는 다양하고 흥미로운 새로운 미리 보기 기능을 정기적으로 강조하고 있습니다. 이러한 기능 중 하나 이상을 미리 보려면 에 자세한 내용을 문의하십시오link:https://bluexp.netapp.com/contact-cds["NetApp 세일즈 팀"].
 
 |===
 
@@ -2386,7 +2386,7 @@ Cloud Insights의 사용자 역할에 따라 link:reporting_user_roles.html["보
 NOTE: Cloud Insights 보고는 500MU 이상의 환경에서 사용할 수 있습니다.
 
 
-IMPORTANT: 현재 Premium Edition 고객이며 보고서를 보존하려면 이 내용을 읽어 link:reporting_user_roles.html#important-note-for-existing-customers["기존 고객을 위한 중요 참고 사항"]보십시오.
+IMPORTANT: 현재 Premium Edition 고객이며 보고서를 보존하려면 이 내용을 읽어 link:reporting_user_roles.html["기존 고객을 위한 중요 참고 사항"]보십시오.
 
 
 
@@ -2992,7 +2992,7 @@ Cloud Insights는 NetApp ActiveIQ에서 데이터를 수집하여 NetApp 고객�
 
 === Cloud Insights 에디션
 
-Cloud Insights는 고객의 예산과 비즈니스 요구에 맞게 다양한 버전으로 제공됩니다. NetApp Support 계정이 유효한 기존 NetApp 고객은 무료 * Basic Edition * 을 통해 7일 동안 데이터를 보존하고 NetApp 데이터 수집기에 액세스할 수 있습니다. 또는 * Standard Edition * 을 통해 지원되는 모든 데이터 수집기에 대한 액세스, 전문가 기술 지원 등을 이용할 수 있습니다. 사용 가능한 기능에 대한 자세한 내용은 NetApp link:https://cloud.netapp.com/cloud-insights["Cloud Insights"]사이트를 참고하십시오.
+Cloud Insights는 고객의 예산과 비즈니스 요구에 맞게 다양한 버전으로 제공됩니다. NetApp Support 계정이 유효한 기존 NetApp 고객은 무료 * Basic Edition * 을 통해 7일 동안 데이터를 보존하고 NetApp 데이터 수집기에 액세스할 수 있습니다. 또는 * Standard Edition * 을 통해 지원되는 모든 데이터 수집기에 대한 액세스, 전문가 기술 지원 등을 이용할 수 있습니다. 사용 가능한 기능에 대한 자세한 내용은 NetApp link:https://www.netapp.com/cloud-services/cloud-insights/["Cloud Insights"]사이트를 참고하십시오.
 
 
 
