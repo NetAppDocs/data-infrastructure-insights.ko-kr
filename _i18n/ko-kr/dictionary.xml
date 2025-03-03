@@ -4150,7 +4150,6 @@
   <block id="de41af8028b5287cc6d65bb0e73cae11" category="section-title">AWS 마켓플레이스를 통해 평가하십시오</block>
   <block id="bc8745f374e91204332a0cd070e3c20c" category="inline-xref">관리 단위</block>
   <block id="a1aea5576cb96c98e98a9642fc30f4b0" category="paragraph">AWS Marketplace를 통해 무료 평가판을 등록할 수도 있습니다. AWS Marketplace 무료 평가판에서는 33일의 평가판 기간 동안 Data Infrastructure Insights에 액세스할 수 있으며 최대 499개의 <block ref="74100db5c6c154a5b13e17b29feeccc3" category="inline-xref-macro-rx"></block>MU(Multi-up)까지 사용할 수 있습니다.</block>
-  <block id="54cf8a50b1cedbeedf2404d21702105e" category="paragraph">참고: 499MU 이상을 구성하는 경우 "위반" 상태를 입력합니다. 평가판이 위반되는 경우 구성된 MU 수를 줄이거나 Data Infrastructure Insights에 가입하여 위반이 해결될 때까지 일부 Data Infrastructure Insights 기능에 액세스할 수 없습니다.</block>
   <block id="c66bd552dea63071ad19e124c869ab2e" category="paragraph">AWS Marketplace 무료 평가판을 연장할 수 없습니다. 평가 중에 언제든지 * Admin -&gt; Subscription * 페이지를 방문하여 Data Infrastructure Insights Basic Edition으로 다운그레이드하거나 유료 Data Infrastructure Insights 구독으로 변경할 수 있습니다.</block>
   <block id="03742c91392961db83c5540550a3500a" category="section-title">평가판이 만료된 경우 어떻게 합니까?</block>
   <block id="55b44e6cb866667b35e33325e5f2b246" category="paragraph">무료 평가판이 만료되었고 Data Infrastructure Insights를 아직 구독하지 않은 경우 구독할 때까지 기능이 제한됩니다. 데이터 수집이 중지될 수 있으며 몇 주 후에는 데이터 보존 정책에 따라 데이터가 삭제됩니다.</block>
@@ -4181,7 +4180,6 @@
   <block id="c3a44b5ae4d0db1da47414cf32828287" category="list-text">객체 원시</block>
   <block id="49a22ea7d938494c1ed0f89b1259e69d" category="list-text">클라우드 소비</block>
   <block id="9530a67a23d320926f20ff19d1667b8c" category="paragraph">각 계층은 서로 다른 속도로 측정되며, 전체 합계는 _ 유효 권한 _ 을(를) 제공하기 위해 계산됩니다. 유효 사용량을 계산하는 공식은 다음과 같습니다.</block>
-  <block id="f00305fde34ce30d58eb994d36b91d7f" category="admonition">관리되는 유닛의 합계는 요약 섹션의 데이터 수집기 수와 약간 다를 수 있습니다. 관리 단위 수가 가장 가까운 관리 단위로 반올림되기 때문입니다. Data Collector 목록에서 이러한 숫자의 합계는 상태 섹션의 총 관리 단위 수보다 약간 높을 수 있습니다. 요약 섹션에는 구독에 대한 실제 관리 단위 수가 반영됩니다. 이를 지원하기 위해 DII는 _subscribed_quantities를 기준으로 단일 * 유효 권한 * 번호를 계산합니다. 그런 다음 _discovered_storage를 기준으로 동일한 수를 계산하고 유효 용량이 유효 권한보다 큰 경우에만 위반을 선언합니다. 따라서 각 계층에 대해 구독된 양과는 다른 수량을 유연하게 모니터링할 수 있습니다. DII에서는 검색된 총 스토리지가 구독된 유효 사용 권한 내에 있는 동안 이러한 수량을 모니터링할 수 있습니다.</block>
   <block id="f2dddeb36ea97f1d320b0c83ef58c28c" category="paragraph">Data Infrastructure Insights 인프라 관측성 및 Kubernetes 관측성 수는 * 관리형 유닛 * 당 사용량을 측정합니다. 관리되는 유닛의 사용은 인프라 환경에서 관리되는 * 호스트 또는 가상 머신 * 수와 * 포맷되지 않은 용량 * 의 양에 따라 계산됩니다.</block>
   <block id="0b8e651376aa14f43ba4123bb6c8d139" category="list-text">관리 유닛 1개 = 호스트 2개(가상 또는 물리적 시스템)</block>
   <block id="dc3f15e1a26ca80a17b59bb6db783b8a" category="list-text">1 관리 유닛 = 4TiB의 물리적 디스크 또는 가상 디스크 포맷 안 됨 용량</block>
@@ -12037,4 +12035,5 @@
   <block id="1c21a303d962b5c2aaa6a1cf83f62414" category="list-text">VMware vCenter Server 8.0.3 빌드 - 24262322</block>
   <block id="5136d67ed194c95ea9a2710028034652" category="list-text">VMware vCenter Server 8.0.3 빌드 - 24305161</block>
   <block id="24820d2348a2986c54e81b6bc96fb06f" category="list-text">VMware vCenter Server 8.0.3 빌드 - 24322831</block>
+  <block id="c0e4c1840494e97bdd3774c6b4983211" category="admonition">관리되는 유닛의 합계는 요약 섹션의 데이터 수집기 수와 약간 다를 수 있습니다. 관리 단위 수가 가장 가까운 관리 단위로 반올림되기 때문입니다. Data Collector 목록에서 이러한 숫자의 합계는 상태 섹션의 총 관리 단위 수보다 약간 높을 수 있습니다. 요약 섹션에는 구독에 대한 실제 관리 단위 수가 반영됩니다. 이를 지원하기 위해 DII는 _subscribed_quantities를 기반으로 한 * 유효 권한 * 번호를 계산한 다음 _discovered_storage를 기반으로 동일한 수를 계산합니다. 따라서 각 계층에 대해 구독된 양과는 다른 수량을 유연하게 모니터링할 수 있습니다. DII에서는 검색된 총 스토리지가 구독된 유효 사용 권한 내에 있는 동안 이러한 수량을 모니터링할 수 있습니다.</block>
 </blocks>

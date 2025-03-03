@@ -58,8 +58,6 @@ NOTE: Data Infrastructure Insights를 평가하는 데 추가 시간이 필요�
 
 AWS Marketplace를 통해 무료 평가판을 등록할 수도 있습니다. AWS Marketplace 무료 평가판에서는 33일의 평가판 기간 동안 Data Infrastructure Insights에 액세스할 수 있으며 최대 499개의 <<observability-metering,관리 단위>>MU(Multi-up)까지 사용할 수 있습니다.
 
-참고: 499MU 이상을 구성하는 경우 "위반" 상태를 입력합니다. 평가판이 위반되는 경우 구성된 MU 수를 줄이거나 Data Infrastructure Insights에 가입하여 위반이 해결될 때까지 일부 Data Infrastructure Insights 기능에 액세스할 수 없습니다.
-
 AWS Marketplace 무료 평가판을 연장할 수 없습니다. 평가 중에 언제든지 * Admin -> Subscription * 페이지를 방문하여 Data Infrastructure Insights Basic Edition으로 다운그레이드하거나 유료 Data Infrastructure Insights 구독으로 변경할 수 있습니다.
 
 
@@ -142,7 +140,7 @@ Data Infrastructure Insights 관측성 은 테넌트의 스토리지 계층에 �
 
  Effective usage = Raw TiB + (0.1 x Object Tier Raw TiB) + (0.25 x Cloud Tier Provisioning TiB)
 
-NOTE: 관리되는 유닛의 합계는 요약 섹션의 데이터 수집기 수와 약간 다를 수 있습니다. 관리 단위 수가 가장 가까운 관리 단위로 반올림되기 때문입니다. Data Collector 목록에서 이러한 숫자의 합계는 상태 섹션의 총 관리 단위 수보다 약간 높을 수 있습니다. 요약 섹션에는 구독에 대한 실제 관리 단위 수가 반영됩니다. 이를 지원하기 위해 DII는 _subscribed_quantities를 기준으로 단일 * 유효 권한 * 번호를 계산합니다. 그런 다음 _discovered_storage를 기준으로 동일한 수를 계산하고 유효 용량이 유효 권한보다 큰 경우에만 위반을 선언합니다. 따라서 각 계층에 대해 구독된 양과는 다른 수량을 유연하게 모니터링할 수 있습니다. DII에서는 검색된 총 스토리지가 구독된 유효 사용 권한 내에 있는 동안 이러한 수량을 모니터링할 수 있습니다.
+NOTE: 관리되는 유닛의 합계는 요약 섹션의 데이터 수집기 수와 약간 다를 수 있습니다. 관리 단위 수가 가장 가까운 관리 단위로 반올림되기 때문입니다. Data Collector 목록에서 이러한 숫자의 합계는 상태 섹션의 총 관리 단위 수보다 약간 높을 수 있습니다. 요약 섹션에는 구독에 대한 실제 관리 단위 수가 반영됩니다. 이를 지원하기 위해 DII는 _subscribed_quantities를 기반으로 한 * 유효 권한 * 번호를 계산한 다음 _discovered_storage를 기반으로 동일한 수를 계산합니다. 따라서 각 계층에 대해 구독된 양과는 다른 수량을 유연하게 모니터링할 수 있습니다. DII에서는 검색된 총 스토리지가 구독된 유효 사용 권한 내에 있는 동안 이러한 수량을 모니터링할 수 있습니다.
 
 
 
