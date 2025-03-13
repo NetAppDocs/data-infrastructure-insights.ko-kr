@@ -158,8 +158,6 @@ Data Infrastructure Insights 인프라 관측성 및 Kubernetes 관측성 수는
 
 
 
-사용자 환경에 1,000개 이상의 관리되는 장치가 포함되거나 포함될 것으로 예상되는 경우 * Volume Pricing * 을 받을 자격이 있으며 NetApp 영업 팀에 연락하여 구독을 신청하라는 메시지가 표시됩니다. 자세한 내용은 을 <<how-do-i-subscribe,아래에 있습니다>>참조하십시오.
-
 
 
 === 워크로드 보안 측정
@@ -183,7 +181,7 @@ NOTE: 기존 워크로드 보안 서브스크립션의 MU 사용량이 조정되
 
 === NetApp Sales Direct를 통해 구독하십시오
 
-예상 관리 유닛 수가 1,000 이상인 경우 link:https://bluexp.netapp.com/contact-cds["* 영업팀에 문의 *"]버튼을 클릭하여 NetApp 세일즈 팀을 통해 구독하십시오.
+예상 관리 유닛 수가 1,000 이상인 경우 link:https://www.netapp.com/forms/cloud-insights-contact-us["* 영업팀에 문의 *"]버튼을 클릭하여 NetApp 세일즈 팀을 통해 구독하십시오.
 
 NetApp 세일즈 담당자에게 데이터 인프라 인사이트 * 일련 번호 * 를 제공하여 유료 구독을 데이터 인프라 인사이트 환경에 적용할 수 있도록 해야 합니다. 일련 번호는 Data Infrastructure Insights 평가판 환경을 고유하게 식별하며 * Admin > Subscription * 페이지에서 찾을 수 있습니다.
 
