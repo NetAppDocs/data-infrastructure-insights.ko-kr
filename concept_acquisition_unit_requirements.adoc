@@ -31,7 +31,7 @@ keywords: AU, acquisition unit, requirements, sizing
 | 구성 요소 | Linux 요구 사항 | Windows 요구 사항 
 
 
-| 운영 체제 | 다음 중 하나의 라이센스 버전을 실행하는 컴퓨터: * CentOS(64비트): 7.2 ~ 7.9, 8.1 ~ 8.4, Stream 8, Stream 9 * AlmaLinux 9.3 및 9.4 * 데비안(64비트): 9 및 10 * OpenSUSE Leap 15.1 ~ 15.5 * Oracle Enterprise Linux(64비트): 8.8 ~ 9.4 * 9.8 ~ 9.4 * 9.4 * 9.4 * 9.4, Rock15 * 9.4 Linux Server 8.8 ~ 7.9 * 9.4 * 9.4 * 9.4 * 9.4, Rockhat Linux Server 8.9 * 8.9 * 9.4 * 9.4 전용 서버가 권장됩니다. SELinux를 실행하는 경우 획득 장치 시스템에서 sudo semanage fcontext -a -t usr_t "/opt/NetApp/cloudinsights(/. *)?"sudo restorecon -R/opt/NetApp/cloudinsights 명령을 실행하는 것이 좋습니다 | 다음 중 하나의 라이센스 버전을 실행하는 컴퓨터: * Microsoft Windows 10 64비트 * Microsoft Windows Server 2012 * Microsoft Windows Server 2012 R2 * Microsoft Windows Server 2016 * Microsoft Windows Server 2019 * Microsoft Windows Server 2022 * Microsoft Windows 11 이 컴퓨터는 다른 응용 프로그램 수준 소프트웨어를 실행하지 않아야 합니다. 전용 서버가 권장됩니다. 
+| 운영 체제 | 다음 중 하나를 실행하는 컴퓨터: * AlmaLinux 9.3 ~ 9.5 * CentOS(64비트): 7.2 ~ 7.9, 8.1 ~ 8.4, Stream 8, Stream 9 * Debian(64비트): 9 ~ 11 * OpenSUSE Leap 15.1 ~ 15.6 * Oracle Enterprise Linux(64비트) 전용 서버가 권장됩니다. SELinux를 실행하는 경우 획득 장치 시스템에서 sudo semanage fcontext -a -t usr_t "/opt/NetApp/cloudinsights(/. *)?"sudo restorecon -R/opt/NetApp/cloudinsights 명령을 실행하는 것이 좋습니다 | 다음 중 하나의 라이센스 버전을 실행하는 컴퓨터: * Microsoft Windows 10 64비트 * Microsoft Windows 11 * Microsoft Windows Server 2012 * Microsoft Windows Server 2012 R2 * Microsoft Windows Server 2016 * Microsoft Windows Server 2019 * Microsoft Windows Server 2022 * Microsoft Windows Server 2025 이 컴퓨터에서는 다른 애플리케이션 레벨 소프트웨어를 실행하지 않아야 합니다. 전용 서버가 권장됩니다. 
 
 
 | CPU | CPU 코어 2개 | 동일합니다 
