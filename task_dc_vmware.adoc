@@ -138,7 +138,7 @@ Data Infrastructure Insights는 VMware vSphere Data Collector에서 다음과 �
 
 == VMware 태그를 Data Infrastructure Insights 주석에 매핑
 
-VMware 데이터 수집기를 사용하면 Data Infrastructure Insights 주석을 VMware에 구성된 태그로 채울 수 있습니다. 주석의 이름은 VMware 태그와 동일하게 지정해야 합니다. Data Infrastructure Insights는 항상 같은 이름의 텍스트 유형 주석을 채우고 다른 유형(숫자, 부울 등)의 주석을 채우려는 "최선의 시도"를 합니다. 주석이 다른 유형이고 데이터 수집기가 주석을 채우지 못할 경우 주석을 제거하고 텍스트 유형으로 다시 생성해야 할 수 있습니다.
+VMware 데이터 수집기를 사용하면 Data Infrastructure Insights 주석을 VMware에 구성된 태그로 채울 수 있습니다. DII 주석 이름은 VMware * category * name과 동일해야 합니다. 그러면 태그는 범주와 동일한 이름의 DII 주석의 주석 값으로 적용됩니다. Data Infrastructure Insights는 항상 같은 이름의 텍스트 유형 주석을 채우고 다른 유형(숫자, 부울 등)의 주석을 채우려는 "최선의 시도"를 합니다. 주석이 다른 유형이고 데이터 수집기가 주석을 채우지 못할 경우 주석을 제거하고 텍스트 유형으로 다시 생성해야 할 수 있습니다.
 
 VMware 태그는 대소문자를 구분하지만 Data Infrastructure Insights 태그는 대소문자를 구분하지 않습니다. 따라서 Data Infrastructure Insights에서 "소유자"라는 주석을 작성하고 VMware에서 "소유자", "소유자" 및 "소유자"라는 태그를 생성하면 이러한 모든 "소유자" 변형은 Cloud Insight의 "소유자" 주석에 매핑됩니다.
 
