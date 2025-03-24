@@ -12,7 +12,7 @@ keywords: data collector, vendor, infrastructure, integration, service
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ./media/The alerting page redesign will also be ready by the of the month. Need to add it to what’s new as wellopens
 
 
 [role="lead"]
@@ -272,9 +272,6 @@ Data Infrastructure Insights에서 지원하는 데이터 수집기의 사전순
 
 
 | link:task_dc_nutanix.html["Nutanix NX 시리즈"] | 검토할 수 있습니다 
-
-
-| link:task_dc_openstack.html["더 적합하였습니다"] | 검토할 수 있습니다 
 
 
 | link:task_config_telegraf_openzfs.html["OpenZFS 를 선택합니다"] | 서비스 

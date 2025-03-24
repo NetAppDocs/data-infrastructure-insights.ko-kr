@@ -407,8 +407,6 @@ sidebar:
           url: "/task_dc_na_storagegrid.html"
       - title: 말씀해 주십시오
         url: "/task_dc_nutanix.html"
-      - title: 더 적합하였습니다
-        url: "/task_dc_openstack.html"
       - title: 오라클
         url: "/task_dc_oracle_zfs.html"
       - title: 퓨어
