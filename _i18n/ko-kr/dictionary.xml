@@ -218,51 +218,6 @@
   <block id="5b02fb8f86f33e62862c6886dbbe655e" category="list-text">volume_groups를 사용하지 않는 한 읽기 전용 사용자 이름 및 암호가 필요합니다. 이 경우 Admin 사용자 이름과 암호가 필요합니다</block>
   <block id="bf61ff29d8ff867a7727b034a7efa26f" category="list-text">포트 요구 사항: HTTPS 443</block>
   <block id="b8b0b769d3e3395123e9c6b52b36b840" category="cell">Nutanix 어레이에 연결하는 데 사용되는 TCP 포트입니다. 기본값은 9440입니다.</block>
-  <block id="6e831c008aae70e3aac84aff192fcea2" category="summary">OpenStack 데이터 수집기.</block>
-  <block id="2f186f5eedfe86b735c206f6be34f9a7" category="doc">OpenStack 데이터 수집기</block>
-  <block id="1affaa3c0d19c2e084afa700debb8740" category="paragraph">OpenStack(REST API/KVM) 데이터 수집기는 모든 OpenStack 인스턴스에 대한 인벤토리 데이터를 수집하며 선택적으로 VM 성능 데이터를 가져옵니다.</block>
-  <block id="ee627d472fc6df1e0c1367deb7ee0063" category="list-text">OpenStack 컨트롤러의 IP 주소입니다</block>
-  <block id="280f91bd66acb7cf04ec960fca75f64a" category="list-text">OpenStack 관리자 역할 자격 증명 및 Linux KVM 하이퍼바이저에 대한 sudo 액세스 admin 계정 또는 admin 등가 권한을 사용하지 않는 경우, 데이터 수집기 사용자 ID에 대해 휴식을 취할 기본 정책을 식별하기 위해 시행착오 및 오류를 사용해야 합니다.</block>
-  <block id="c0ea429a2fadacc206fdc8f17cfa492c" category="list-text">성능 수집을 위해 OpenStack Gnocchi 모듈을 설치하고 구성해야 합니다. Gnocchi 구성은 각 하이퍼바이저에 대한 nova.conf 파일을 편집한 다음 각 하이퍼바이저에서 Nova Compute 서비스를 다시 시작하여 수행합니다. 옵션 이름이 OpenStack의 다양한 릴리즈에서 변경되었습니다.</block>
-  <block id="8beeeec38dbc6258291f2e47130835d8" category="list-text">아이스하우스</block>
-  <block id="291b02b25fbb9789119d2383e9f08e29" category="list-text">준오</block>
-  <block id="3afe87a2a8c61f8023e56883b9baccb8" category="list-text">킬로</block>
-  <block id="84e1da9e55480128662cfdfe79cb8923" category="list-text">리버티</block>
-  <block id="89042bafc0f1c8153060574c3895f44b" category="list-text">미타카</block>
-  <block id="1c8b97c83b0726216cd5dbc88a64b0ed" category="list-text">뉴턴</block>
-  <block id="baba8cba1a3c4596919404471ad4d0d8" category="list-text">옥타</block>
-  <block id="43ec0ba7025c8d3dfc798f09c6fb36d2" category="list-text">CPU 통계의 경우 컴퓨팅 노드의 /etc/nova/nova.conf에서 “compute_monitor=ComputeDriverCPUMonitor”를 켜야 합니다.</block>
-  <block id="30d248ff55e04656a0bc13e82c28ca89" category="list-text">포트 요구 사항:</block>
-  <block id="4931562219172e126d11a20bd2ee6af3" category="list-text">http의 경우 5000, Keystone 서비스의 경우 13000</block>
-  <block id="5829ef3d89411d46f0a05f6867ff2efd" category="list-text">22 KVM SSH의 경우</block>
-  <block id="a58963a7c2c9eafce2ab09ca28270ee0" category="list-text">Nova 컴퓨팅 서비스: 8774</block>
-  <block id="745b1ee1989bc6dd0ac838e4dcb448e5" category="list-text">8776을 참조하십시오</block>
-  <block id="dfe1b74026ff6682b451240881e76be4" category="list-text">Gnocchi Performance Service용 8777</block>
-  <block id="ca3d2d05f916b41d8f53f506ace2e80e" category="list-text">Glance 이미지 서비스의 경우 9292 * 참고 * 포트는 특정 서비스에 바인딩되며, 대규모 환경의 컨트롤러 또는 다른 호스트에서 서비스가 실행될 수 있습니다.</block>
-  <block id="9be07620e581c90b777b5fef1296cc28" category="cell">OpenStack 컨트롤러 IP 주소입니다</block>
-  <block id="c5e968faf75175530ec61fb1846cfdce" category="cell">OpenStack 컨트롤러의 IP 주소 또는 정규화된 도메인 이름입니다</block>
-  <block id="60f987e0e1dafdb918779f7224cd3aaf" category="cell">OpenStack 관리자</block>
-  <block id="963b85b5fea0fb25d7f739d70b488f08" category="cell">OpenStack 관리자의 사용자 이름입니다</block>
-  <block id="702c22fcd705ed77553d755f22f3966a" category="cell">OpenStack 암호</block>
-  <block id="79db7b7c9e06d7a21d6a84e5efacf631" category="cell">OpenStack Admin에 사용되는 암호입니다</block>
-  <block id="97564e1a26ba1c694feebd9a3f2d9f38" category="cell">OpenStack 관리자 테넌트</block>
-  <block id="5d24fef3e48bfdbcdc47e96414966a56" category="cell">OpenStack 관리자 테넌트 이름입니다</block>
-  <block id="80fd569cda415ce2714eede8209d7eb3" category="cell">KVM Sudo 사용자</block>
-  <block id="7014ddc89480575c89e23a7982c7c0ac" category="cell">KVM Sudo 사용자 이름입니다</block>
-  <block id="aab8d1693141a32bece39aa945271b85" category="cell">자격 증명 유형을 지정하려면 '암호' 또는 'OpenSSH 키 파일'을 선택하십시오</block>
-  <block id="31deddc69cd96113632a3ab17e5cd93e" category="cell">SSH를 통해 장치에 연결하는 데 사용되는 자격 증명 유형입니다</block>
-  <block id="b6593f79d3306be8166f8e92e7cb4a65" category="cell">재고 개인 키에 대한 전체 경로</block>
-  <block id="dba54b8be33cd375b2f9f38a66dd55b4" category="cell">KVM Sudo 암호</block>
-  <block id="dfe35b8b294b35971918582bb405c7a8" category="cell">SSH를 통해 하이퍼바이저 인벤토리 검색을 설정합니다</block>
-  <block id="8bc6def4f9968da03c00d5a791ff25b3" category="cell">SSH를 통해 하이퍼바이저 인벤토리 검색을 설정하려면 이 확인란을 선택합니다</block>
-  <block id="724bdc3d08a628510ac4b35391f971e9" category="cell">OpenStack 관리 URL 포트입니다</block>
-  <block id="93dc129787d356e23553d69cfe40511e" category="cell">HTTPS를 사용합니다</block>
-  <block id="1e435f995c73427ccb198051f1f58881" category="cell">보안 HTTP를 사용하려면 선택합니다</block>
-  <block id="6b9dc11d780e38196cc7f712ba7d8f5c" category="cell">SSH에 사용되는 포트입니다</block>
-  <block id="19f99c5f7ed3601984d9068bcacd7fa8" category="cell">SSH 프로세스 재시도</block>
-  <block id="b65a95e1edb457db54d2696cdde74458" category="cell">재고 조사 사이의 간격입니다. 기본값은 20분입니다.</block>
-  <block id="ebe11f389d67e77cfd3d461ac635ac57" category="cell">"정책 허용 안 함" 또는 "권한이 없습니다"로 시작하는 오류 메시지와 함께 "구성 오류"</block>
-  <block id="98a8b66b2a474494c50e1594ce9331b1" category="cell">* IP 주소 확인 * 사용자 이름 및 암호 확인</block>
   <block id="298831ffa37c3339463b0927313f5324" category="summary">Oracle ZFS 데이터 수집기 구성.</block>
   <block id="12aa4229d08c65b7528cfd8184ed0f2b" category="doc">Oracle ZFS Storage Appliance 데이터 수집기</block>
   <block id="19a548e7f1d623a2cebfcbb03e92f222" category="paragraph">Data Infrastructure Insights는 Oracle ZFS Storage Appliance 데이터 수집기를 사용하여 인벤토리 및 성능 데이터를 수집합니다.</block>
@@ -2186,7 +2141,6 @@
   <block id="8f4063b3e2653e9f3c560f79c771819b" category="sidebar">E-Series REST를</block>
   <block id="c106fc8dee70ab4a9453d7ed9a891bd7" category="sidebar">NetApp HCI 관리 서버</block>
   <block id="bb88c75c573c51be16c7d85804e7a9fe" category="sidebar">말씀해 주십시오</block>
-  <block id="7ff6cc997b141399bcdf2c338fb4031c" category="sidebar">더 적합하였습니다</block>
   <block id="30162ed78b6c10f731411f2fc440c24f" category="sidebar">오라클</block>
   <block id="d30973809f2e4238b7eb2bac9241674c" category="sidebar">퓨어</block>
   <block id="1d9fc183665bd1e195391190be506894" category="sidebar">Red Hat</block>
@@ -6098,8 +6052,6 @@
   <block id="d4df4178129288e74d306d474f41121d" category="cell"><block ref="d4df4178129288e74d306d474f41121d" category="inline-link-macro-rx"></block></block>
   <block id="c7a56e9ede426bcb6ef8adebfa167f5b" category="inline-link-macro">Nutanix NX 시리즈</block>
   <block id="9935d13e4384b8045cffd7789defe14c" category="cell"><block ref="9935d13e4384b8045cffd7789defe14c" category="inline-link-macro-rx"></block></block>
-  <block id="f2cf54cfab756c7cdb0f16c0ed5cda12" category="inline-link-macro">더 적합하였습니다</block>
-  <block id="d2c9f580641c4ac421cd1184c444c1e6" category="cell"><block ref="d2c9f580641c4ac421cd1184c444c1e6" category="inline-link-macro-rx"></block></block>
   <block id="a1b8b82e2c6dab4ba2762641402e6184" category="inline-link-macro">OpenZFS 를 선택합니다</block>
   <block id="f5a800ee25a815f4c8c0d66efcf7438d" category="cell"><block ref="f5a800ee25a815f4c8c0d66efcf7438d" category="inline-link-macro-rx"></block></block>
   <block id="a2c92312bc8a9e692141bc61305782f3" category="inline-link-macro">Oracle ZFS Storage Appliance</block>
@@ -11646,7 +11598,6 @@
   <block id="2f461803a8b3a27284482a32459a1078" category="cell">이거 <block ref="0dcd3ea27696029fecb8ccd7e247f633" category="inline-link-macro-rx"></block>봐요. setting_unprotected_는 Kubernetes 모니터링 운영자에게 플래그와 함께 Telegraf를 실행하도록 지시합니다.<block ref="3a41393afb053a415e6dc30cf704d899" prefix=" " category="inline-code"></block></block>
   <block id="0860569a69c3584507ee09f4be585418" category="cell">insecureK8sSkipVerify를 참조하십시오</block>
   <block id="3008cd3125cccc003fa13335717e556e" category="cell">Telegraf가 IP SAN 부족으로 인증서를 확인할 수 없는 경우 검증 건너뛰기를 활성화하십시오</block>
-  <block id="3a6957a9f0cd14c98be3bfcbf85db668" category="paragraph"><block ref="3a6957a9f0cd14c98be3bfcbf85db668" category="inline-link-macro-rx"></block></block>
   <block id="9e43104f0687bd3a308759c5411641d7" category="paragraph"><block ref="9e43104f0687bd3a308759c5411641d7" category="inline-link-macro-rx"></block></block>
   <block id="348fd8f652c33b1be14b9b2f000cff0d" category="cell">이는 ONTAP 측의 네트워킹 문제 때문일 가능성이 가장 높습니다. 다음 단계를 따르십시오. 1. SVM의 연결을 차단하는 관리 리소스나 SVM 데이터 거짓에 방화벽이 없는지 확인합니다. 2. 클러스터 관리 IP를 통해 SVM을 추가할 때는 SVM의 데이터 lif 및 관리 lif가 Agent VM에서 Pingable인지 확인하십시오. 문제가 발생한 경우, lif에 대한 게이트웨이, 넷마스크 및 경로를 확인하십시오. 클러스터 관리 IP를 사용하여 ssh를 통해 클러스터에 로그인하고 에이전트 IP를 Ping할 수도 있습니다. 에이전트 IP가 Ping할 수 있는지 확인합니다. _ network ping -vserver &lt;vserver name&gt; -destination &lt;Agent ip&gt; -lif &lt;LIF Name&gt; -show-detail_이 Ping할 수 없는 경우 ONTAP의 네트워크 설정이 올바른지 확인하여 에이전트 시스템이 Ping할 수 있는지 확인합니다. 3. 클러스터 IP를 통해 연결을 시도했지만 작동하지 않는 경우 SVM IP를 통해 직접 연결해 보십시오. SVM IP를 통해 연결하는 단계는 위 섹션을 참조하십시오. 4. SVM IP 및 vsadmin 자격 증명을 통해 수집기를 추가하는 동안 SVM LIF에 데이터 플러스 관리 역할이 활성화되어 있는지 확인하십시오. 이 경우 SVM LIF로 ping을 수행할 수 있지만 SVM LIF에 대한 SSH는 작동하지 않습니다. SVM 관리 전용 LIF를 생성한 후 이 SVM 관리 전용 LIF를 통해 연결을 시도하십시오. 5. 그래도 해결되지 않으면 새 SVM LIF를 생성하고 이 LIF를 통해 연결을 시도하십시오. 서브넷 마스크가 올바르게 설정되었는지 확인합니다. 6. 고급 디버깅: a) ONTAP에서 패킷 추적을 시작합니다. b) CloudSecure UI에서 데이터 수집기를 SVM에 연결해 봅니다. c) 오류가 나타날 때까지 기다립니다. ONTAP에서 패킷 추적을 중지합니다. d) ONTAP에서 패킷 추적을 엽니다. 이 위치에서 사용할 수 있습니다. _\https://&lt;cluster_mgmt_ip&gt;/SPI/&lt;clustername&gt;/etc/log/packet_traces/_e) ONTAP에서 에이전트 상자로 SYN이 있는지 확인합니다. f) ONTAP에서 SYN이 없으면 ONTAP의 방화벽에 문제가 됩니다. g) ONTAP에서 방화벽을 열어 ONTAP가 에이전트 상자를 연결할 수 있도록 합니다. 7. 여전히 작동하지 않으면 네트워킹 팀에 문의하여 ONTAP에서 Agent Box로의 연결을 차단하는 외부 방화벽이 없는지 확인하십시오. 9. 위의 방법으로 문제가 해결되지 않으면 에서 케이스를 열어 추가 지원을 받으십시오<block ref="d0162286c59c67bf86d01f060ee7cd04" category="inline-link-macro-rx"></block>.</block>
   <block id="2b8272217b69f1c5b5ad5968f0bc0945" category="list-text">Data Infrastructure Insights 무료 평가판을 신청하여 사용 가능한 기능을 살펴보십시오. 무료 평가판을 등록하려면:</block>
@@ -11786,7 +11737,6 @@
   <block id="8af8d6d7603eec1cb34086e9cf6e2055" category="inline-image-macro">ONTAP Essentials 드롭다운에서 ASA를 유니파이드 제품과 구별하여 보여 줍니다</block>
   <block id="5fe97e7e7c561aa4a8199e55d380aadb" category="paragraph"><block ref="5fe97e7e7c561aa4a8199e55d380aadb" category="inline-image-macro-rx" type="image"></block></block>
   <block id="bd255743216cfae20f87e84a9cd8e7e1" category="section-title">DII API 사용 추적: 보안 및 효율성 향상</block>
-  <block id="0be262a01ffd53cb1827d924de37e376" category="paragraph">관리자 사용자가 사용할 수 있는 향상된 REST API 사용 추적을 통해 보안 상태를 강화하고 리소스 관리를 간소화합니다. API 사용량 추적을 사용하면 사용 중인 API 토큰, 사용 IP 주소 및 생성된 트래픽 볼륨을 확인할 수 있습니다. 토큰을 특정 IP 주소 및 사용 수준에 연결하면 시스템 액세스 및 사용 추세에 대한 강력한 통찰력을 얻을 수 있으므로 안전하고 효율적인 환경을 유지하고 원활한 운영을 유지하는 데 필요한 제어 기능을 제공합니다.</block>
   <block id="320be4cb0a9128705d37286f8afff816" category="inline-image-macro">API 사용 분석 예</block>
   <block id="d7f696b40402f5f6c5dc60d881af09a0" category="paragraph"><block ref="d7f696b40402f5f6c5dc60d881af09a0" category="inline-image-macro-rx" type="image"></block></block>
   <block id="811a069713a14c7b8c3b0333afcedfff" category="section-title">사용자를 제한하는 워크로드 보안 API</block>
@@ -11810,7 +11760,6 @@
   <block id="8429b607073457ee8f7513c9b33f2b47" category="inline-link-macro">ONTAP REST를 참조하십시오</block>
   <block id="9813cb21933d9e535322d83efc9b8d25" category="paragraph">모든 이전 세대 ASA 시스템의 경우 <block ref="75bdda54644cc13465ab7acc10710396" category="inline-link-macro-rx"></block>Collector를 사용하십시오.</block>
   <block id="6cc5c9e930ea3d3b8bff4367c60ceea4" category="section-title">2025년 2월</block>
-  <block id="8261d0e1521d30da1b36761d508cb245" category="paragraph">API 사용량을 보려면 * 관측성 &gt; 관리자 &gt; API 액세스 * 로 이동하고 _View API Usage _ 를 선택합니다. 이 API는 DII 관측성 API에만 사용할 수 있으며 워크로드 보안에는 적용되지 않습니다.</block>
   <block id="bcaea0fa3a691efcd767e69c0bf6c611" category="paragraph">받는 사람이 Data Infrastructure Insights에서 알림을 받도록 하려면 다음 이메일 주소를 모든 "허용" 목록에 추가합니다.</block>
   <block id="920ab4b11a04d50637a16a5c9699b3ba" category="list-text">\accounts@service.cloudinsights.netapp.com 으로 문의하십시오</block>
   <block id="b68146f7d3be586c34e5b6d021541f50" category="list-text">\DoNotReply@cloudinsights.netapp.com 으로 문의하십시오</block>
@@ -12049,4 +11998,7 @@
   <block id="bc23aa0997542e15a65a21a96991960a" category="paragraph">The user can go to the add/edit collector page, enter the cluster level details (in Cluster Mode) or SVM level details (in SVM Mode), and click on the *Test Connection* button. Workload Security will then process the request and display an appropriate success or failure message.</block>
   <block id="e8f41baace36619af4a7292787a17936" category="inline-image-macro">Workload Security 'Test Connection' success message</block>
   <block id="e6ea93198fd78cbc89b93053e0d0b573" category="paragraph"><block ref="e6ea93198fd78cbc89b93053e0d0b573" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ca873110efddef67beadcfe5f8a4ca84" category="paragraph">관리자 사용자가 사용할 수 있는 향상된 REST API 사용 추적을 통해 보안 상태를 강화하고 리소스 관리를 간소화합니다. API 사용량 추적을 사용하면 사용 중인 API 토큰, 사용 IP 주소 및 생성된 트래픽 볼륨을 확인할 수 있습니다. 토큰을 특정 IP 주소 및 사용 수준에 연결하면 시스템 액세스 및 사용 추세에 대한 강력한 통찰력을 얻을 수 있으므로 안전하고 효율적인 환경을 유지하고 원활한 운영을 유지하는 데 필요한 제어 기능을 제공합니다. 관리자 사용자가 사용할 수 있는 향상된 REST API 사용 추적을 통해 보안 상태를 강화하고 리소스 관리를 간소화합니다. API 사용량 추적을 사용하면 사용 중인 API 토큰, 사용 IP 주소 및 생성된 트래픽 볼륨을 확인할 수 있습니다. 토큰을 특정 IP 주소 및 사용 수준에 연결하면 시스템 액세스 및 사용 추세에 대한 강력한 통찰력을 얻을 수 있으므로 안전하고 효율적인 환경을 유지하고 원활한 운영을 유지하는 데 필요한 제어 기능을 제공합니다.</block>
+  <block id="24f17d3ee72bb2738ceb12180ec2fa71" category="paragraph">API 사용량을 보려면 * 관측성 &gt; 관리자 &gt; API 액세스 * 로 이동하고 _View API Usage _ 를 선택합니다. 이 API는 DII 관측성 API에만 사용할 수 있으며 워크로드 보안에는 적용되지 않습니다. API 사용량을 보려면 * 관측성 &gt; 관리자 &gt; API 액세스 * 로 이동하고 _View API Usage _ 를 선택합니다. 이 API는 DII 관측성 API에만 사용할 수 있으며 워크로드 보안에는 적용되지 않습니다.</block>
+  <block id="c033c9dce9a48cc67d3409bab6aab6ba" category="paragraph"><block ref="c033c9dce9a48cc67d3409bab6aab6ba" category="inline-link-macro-rx"></block></block>
 </blocks>
