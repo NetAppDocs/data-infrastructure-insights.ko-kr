@@ -7626,7 +7626,6 @@
   <block id="b91bb54d5249b7797f071b75dfcc2669" category="cell">1일(또는 다음 ETL이 될 때까지)</block>
   <block id="96cfad9bf45103ee0ef58fa25c0cfa6b" category="summary">보고서 출력 및 전달 사용자 지정, 보고서를 클립보드로 복사, 보고서 열기(XML).</block>
   <block id="e1039935b082dfd38ef43eb7fef4b452" category="doc">보고서 관리</block>
-  <block id="ce2ce538c48e429c8dc98553649f3bbd" category="paragraph">보고서의 출력 형식과 배달, 보고서 속성 또는 일정, 전자 메일 보고서를 사용자 지정할 수 있습니다.</block>
   <block id="11ad95cf52a6f6d0f02121ba7f3398ce" category="admonition">보고 권한 또는 보안을 변경하기 전에 "내 콘텐츠" 보고서를 "팀 콘텐츠" 폴더에 복사하여 보고서가 저장되도록 해야 합니다.</block>
   <block id="b4c2efa32144f8c7f6fa5513ac1c7e55" category="section-title">보고서의 출력 형식 및 배달 사용자 지정</block>
   <block id="8bee38bef7beb0158135e68890b6cc17" category="paragraph">보고서의 형식 및 전달 방법을 사용자 지정할 수 있습니다.</block>
@@ -11998,7 +11997,37 @@
   <block id="bc23aa0997542e15a65a21a96991960a" category="paragraph">The user can go to the add/edit collector page, enter the cluster level details (in Cluster Mode) or SVM level details (in SVM Mode), and click on the *Test Connection* button. Workload Security will then process the request and display an appropriate success or failure message.</block>
   <block id="e8f41baace36619af4a7292787a17936" category="inline-image-macro">Workload Security 'Test Connection' success message</block>
   <block id="e6ea93198fd78cbc89b93053e0d0b573" category="paragraph"><block ref="e6ea93198fd78cbc89b93053e0d0b573" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="ca873110efddef67beadcfe5f8a4ca84" category="paragraph">관리자 사용자가 사용할 수 있는 향상된 REST API 사용 추적을 통해 보안 상태를 강화하고 리소스 관리를 간소화합니다. API 사용량 추적을 사용하면 사용 중인 API 토큰, 사용 IP 주소 및 생성된 트래픽 볼륨을 확인할 수 있습니다. 토큰을 특정 IP 주소 및 사용 수준에 연결하면 시스템 액세스 및 사용 추세에 대한 강력한 통찰력을 얻을 수 있으므로 안전하고 효율적인 환경을 유지하고 원활한 운영을 유지하는 데 필요한 제어 기능을 제공합니다. 관리자 사용자가 사용할 수 있는 향상된 REST API 사용 추적을 통해 보안 상태를 강화하고 리소스 관리를 간소화합니다. API 사용량 추적을 사용하면 사용 중인 API 토큰, 사용 IP 주소 및 생성된 트래픽 볼륨을 확인할 수 있습니다. 토큰을 특정 IP 주소 및 사용 수준에 연결하면 시스템 액세스 및 사용 추세에 대한 강력한 통찰력을 얻을 수 있으므로 안전하고 효율적인 환경을 유지하고 원활한 운영을 유지하는 데 필요한 제어 기능을 제공합니다.</block>
-  <block id="24f17d3ee72bb2738ceb12180ec2fa71" category="paragraph">API 사용량을 보려면 * 관측성 &gt; 관리자 &gt; API 액세스 * 로 이동하고 _View API Usage _ 를 선택합니다. 이 API는 DII 관측성 API에만 사용할 수 있으며 워크로드 보안에는 적용되지 않습니다. API 사용량을 보려면 * 관측성 &gt; 관리자 &gt; API 액세스 * 로 이동하고 _View API Usage _ 를 선택합니다. 이 API는 DII 관측성 API에만 사용할 수 있으며 워크로드 보안에는 적용되지 않습니다.</block>
   <block id="c033c9dce9a48cc67d3409bab6aab6ba" category="paragraph"><block ref="c033c9dce9a48cc67d3409bab6aab6ba" category="inline-link-macro-rx"></block></block>
+  <block id="88c55c9f00e518db40a6c680728b787f" category="section-title">2025년 3월</block>
+  <block id="27e5c5c33051ef47e145b432e9e357db" category="section-title">효율적인 인프라 관리를 위한 향상된 상황에 맞는 탐색 기능</block>
+  <block id="ca3a08b4a664d3460c1afb17ce14a0ca" category="paragraph">Data Infrastructure Insights를 활용하여 탁월한 운영을 실현함으로써 시간을 절약할 수 있습니다. 이제 모든 개체에서 자산 랜딩 페이지로 바로 이동할 수 있는 상황에 맞는 메뉴 링크를 추가하여 디바이스 성능 정보를 확인하고, 네트워크 토폴로지 시각화를 위한 SAN Analyzer, 운영 인식을 위한 로그 또는 구성 관리를 위한 Change Analyzer를 제공합니다.</block>
+  <block id="45e1277af0993d1c08727056083474c9" category="paragraph">여러 뷰에서 주요 데이터에 즉시 액세스할 수 있으므로 오브젝트 관계를 더욱 빠르게 파악할 수 있습니다. 이 간소화된 워크플로우는 의사 결정 및 문제 해결을 가속화하여 궁극적으로 시간을 절약하고 전체 분석 기능을 향상시킵니다.</block>
+  <block id="d27d64bffed25c10a892bc8f660ba7f7" category="inline-image-macro">상황에 맞는 메뉴 예, 너비 = 500</block>
+  <block id="6dd26781bf3123977fae6dbb9f75427c" category="paragraph"><block ref="6dd26781bf3123977fae6dbb9f75427c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="27fca6aa6301d8c72a523105d0dfaa1a" category="section-title">제거된 자산의 기록을 보존합니다</block>
+  <block id="586eb9e16a0ec8ad28e277e9d196f2dd" category="paragraph">향상된 인프라 변경 기능은 이제 qtree 및 이동했지만 더 이상 사용할 수 없는 볼륨과 같이 제거된 자산의 내역을 보존합니다.</block>
+  <block id="a79d807cd6c977273077bb3d4a51e1b2" category="paragraph">문제 해결 퍼즐에 뭔가가 없나요? 이제는 그렇지 않습니다! 삭제된 객체를 취소선으로 표시하여 자산이 제거된 후에도 완전한 컨텍스트를 제공하여 이전 변경 사항이나 전체 경로 전체에 대한 알림의 중요한 요소를 놓치지 않도록 합니다.</block>
+  <block id="d8da5ac928748682c768408271223f18" category="paragraph">그 덕분에 문제가 되는 자산이 더 이상 존재하지 않는 경우에도 문제 해결 시간이 단축되고 인프라 의사 결정이 더욱 확실해집니다.</block>
+  <block id="a0b5ff2e6cd6a9740be797a7a6b34997" category="inline-image-macro">인프라 변경에 포함된 자산이 취소선으로 표시되고 너비 = 300으로 제거되었습니다</block>
+  <block id="f3c74d92e889a4bd4cbd4388efc65fdb" category="paragraph"><block ref="f3c74d92e889a4bd4cbd4388efc65fdb" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f09332c5a7acdbdfd43f130781181079" category="section-title">Kubernetes 운영자 푸시 버튼 업그레이드</block>
+  <block id="d72c7a2edae9e6c8ab8d1527df9217ff" category="paragraph">최신 Kubernetes Operator를 알고 싶으신가요? DII Kubernetes Collectors 클러스터 메뉴에서 필요에 따라 운영자를 업그레이드합니다. 메뉴에서 업그레이드를 선택하면 운영자가 이미지 서명을 확인하고 현재 설치의 스냅샷을 캡처하고 업그레이드를 수행합니다.</block>
+  <block id="abdd6f2e7e9f2361861772c2c29f98fb" category="paragraph">푸시 버튼 업그레이드는 선택적 기능이며, 활성화는 클러스터별로 관리할 수 있습니다.</block>
+  <block id="b0fc14520e77d6941197ef450ea7eaae" category="inline-image-macro">클러스터 메뉴에서 푸시 버튼 오퍼레이터 업그레이드, 폭 = 600</block>
+  <block id="e3f059356a2fbfebca83fcdf9910b3d2" category="paragraph"><block ref="e3f059356a2fbfebca83fcdf9910b3d2" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4ed46393b3a0412ddf1eae5c48a6d652" category="section-title">스토리지 워크로드 보안 데이터 수집기에 대한 접속을 테스트합니다</block>
+  <block id="fe66903c02341817b7eae46d6cef7796" category="paragraph">테스트 연결 기능은 최종 사용자가 DII(Data Infrastructure Insights) 워크로드 보안에서 데이터 수집기를 설정할 때 오류의 구체적인 원인을 식별하도록 돕는 데 목적이 있습니다. 이를 통해 사용자는 네트워크 통신 또는 역할 누락과 관련된 문제를 스스로 해결할 수 있습니다.</block>
+  <block id="701f9e4af7f2f002d1df02722e85bb9c" category="paragraph"><block ref="28ccd88a9589dac6de50156682ee8b05" category="inline-image-macro-rx" type="image"></block> <block ref="e6ea93198fd78cbc89b93053e0d0b573" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f8af8f12dc05f5482c3f4fd82b8cdae2" category="paragraph">이제 Data Infrastructure Insights Acquisition Unit과 함께 다음 운영 체제가 지원됩니다<block ref="e27610920cf83f6a88b088882e8c727e" category="inline-link-macro-rx"></block>.</block>
+  <block id="fcf95cfc7074058539f2dddb1953e304" category="list-text">AlmaLinux 9.5</block>
+  <block id="a4d1a1b0fcd0ad5c982e632c20fe46c7" category="list-text">데비안 (64비트) 11</block>
+  <block id="d2eddc9906197e8402324c9aa4cd553c" category="list-text">openSUSE 리프 15.6</block>
+  <block id="d3720f74b5a7e492d19484a99dc4099a" category="list-text">Oracle Enterprise Linux(64비트) 8.9, 8.10, 9.5</block>
+  <block id="62cdf3cf4f8add1aca2819c46ff9a420" category="list-text">Red Hat(64비트) 8.9, 8.10, 9.5</block>
+  <block id="4e80b0ab552791c676018d06a8ab1a7c" category="list-text">로키 9.5</block>
+  <block id="ef436eeff254793f46443f71b4c3e50d" category="list-text">SUSE Linux Enterprise Server 15 SP6</block>
+  <block id="7ce4625168ff8cf506188a346ab739ac" category="list-text">Ubuntu 서버 24.04 LTS</block>
+  <block id="0be262a01ffd53cb1827d924de37e376" category="paragraph">관리자 사용자가 사용할 수 있는 향상된 REST API 사용 추적을 통해 보안 상태를 강화하고 리소스 관리를 간소화합니다. API 사용량 추적을 사용하면 사용 중인 API 토큰, 사용 IP 주소 및 생성된 트래픽 볼륨을 확인할 수 있습니다. 토큰을 특정 IP 주소 및 사용 수준에 연결하면 시스템 액세스 및 사용 추세에 대한 강력한 통찰력을 얻을 수 있으므로 안전하고 효율적인 환경을 유지하고 원활한 운영을 유지하는 데 필요한 제어 기능을 제공합니다.</block>
+  <block id="8261d0e1521d30da1b36761d508cb245" category="paragraph">API 사용량을 보려면 * 관측성 &gt; 관리자 &gt; API 액세스 * 로 이동하고 _View API Usage _ 를 선택합니다. 이 API는 DII 관측성 API에만 사용할 수 있으며 워크로드 보안에는 적용되지 않습니다.</block>
+  <block id="2613b3928d7ae4e00e8610b858e67528" category="paragraph">보고서의 출력 형식 및 전달을 사용자 정의하고 보고서 속성 또는 일정을 설정하고 보고서를 전자 메일로 보낼 수 있습니다.</block>
 </blocks>
