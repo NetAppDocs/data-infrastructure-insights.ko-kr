@@ -235,6 +235,8 @@ sidebar:
         url: "/task_config_user_dir_connect_ldap.html"
       - title: ONTAP SVM Data Collector 구성
         url: "/task_add_collector_svm.html"
+      - title: SVM Collector 문제 해결
+        url: "/troubleshooting_collector_svm.html"
       - title: Cloud ONTAP 데이터 수집기 구성
         url: "/task_config_cs_incloud.html"
       - title: 워크로드 보안 사용자 관리
