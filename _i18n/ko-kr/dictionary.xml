@@ -4122,7 +4122,6 @@
   <block id="6e52566e82d306ca143ec27c3c65784e" category="list-text">1차 원시 값</block>
   <block id="c3a44b5ae4d0db1da47414cf32828287" category="list-text">객체 원시</block>
   <block id="49a22ea7d938494c1ed0f89b1259e69d" category="list-text">클라우드 소비</block>
-  <block id="9530a67a23d320926f20ff19d1667b8c" category="paragraph">각 계층은 서로 다른 속도로 측정되며, 전체 합계는 _ 유효 권한 _ 을(를) 제공하기 위해 계산됩니다. 유효 사용량을 계산하는 공식은 다음과 같습니다.</block>
   <block id="f2dddeb36ea97f1d320b0c83ef58c28c" category="paragraph">Data Infrastructure Insights 인프라 관측성 및 Kubernetes 관측성 수는 * 관리형 유닛 * 당 사용량을 측정합니다. 관리되는 유닛의 사용은 인프라 환경에서 관리되는 * 호스트 또는 가상 머신 * 수와 * 포맷되지 않은 용량 * 의 양에 따라 계산됩니다.</block>
   <block id="0b8e651376aa14f43ba4123bb6c8d139" category="list-text">관리 유닛 1개 = 호스트 2개(가상 또는 물리적 시스템)</block>
   <block id="dc3f15e1a26ca80a17b59bb6db783b8a" category="list-text">1 관리 유닛 = 4TiB의 물리적 디스크 또는 가상 디스크 포맷 안 됨 용량</block>
@@ -11907,7 +11906,6 @@
   <block id="1c21a303d962b5c2aaa6a1cf83f62414" category="list-text">VMware vCenter Server 8.0.3 빌드 - 24262322</block>
   <block id="5136d67ed194c95ea9a2710028034652" category="list-text">VMware vCenter Server 8.0.3 빌드 - 24305161</block>
   <block id="24820d2348a2986c54e81b6bc96fb06f" category="list-text">VMware vCenter Server 8.0.3 빌드 - 24322831</block>
-  <block id="c0e4c1840494e97bdd3774c6b4983211" category="admonition">관리되는 유닛의 합계는 요약 섹션의 데이터 수집기 수와 약간 다를 수 있습니다. 관리 단위 수가 가장 가까운 관리 단위로 반올림되기 때문입니다. Data Collector 목록에서 이러한 숫자의 합계는 상태 섹션의 총 관리 단위 수보다 약간 높을 수 있습니다. 요약 섹션에는 구독에 대한 실제 관리 단위 수가 반영됩니다. 이를 지원하기 위해 DII는 _subscribed_quantities를 기반으로 한 * 유효 권한 * 번호를 계산한 다음 _discovered_storage를 기반으로 동일한 수를 계산합니다. 따라서 각 계층에 대해 구독된 양과는 다른 수량을 유연하게 모니터링할 수 있습니다. DII에서는 검색된 총 스토리지가 구독된 유효 사용 권한 내에 있는 동안 이러한 수량을 모니터링할 수 있습니다.</block>
   <block id="ce70e0ca30a003d9df6c2c5bf545464a" category="paragraph">예상 관리 유닛 수가 1,000 이상인 경우 <block ref="a9a75603ab8aac3033fb50ea01ab50c4" category="inline-link-macro-rx"></block>버튼을 클릭하여 NetApp 세일즈 팀을 통해 구독하십시오.</block>
   <block id="dde5131249fb4fdf0bb4b08bbcba4943" category="cell">다음 중 하나를 실행하는 컴퓨터: * AlmaLinux 9.3 ~ 9.5 * CentOS(64비트): 7.2 ~ 7.9, 8.1 ~ 8.4, Stream 8, Stream 9 * Debian(64비트): 9 ~ 11 * OpenSUSE Leap 15.1 ~ 15.6 * Oracle Enterprise Linux(64비트) 전용 서버가 권장됩니다. SELinux를 실행하는 경우 획득 장치 시스템에서 sudo semanage fcontext -a -t usr_t "/opt/NetApp/cloudinsights(/. *)?"sudo restorecon -R/opt/NetApp/cloudinsights 명령을 실행하는 것이 좋습니다</block>
   <block id="31192200d4ffdcb773965b28dbfbe0fd" category="cell">다음 중 하나의 라이센스 버전을 실행하는 컴퓨터: * Microsoft Windows 10 64비트 * Microsoft Windows 11 * Microsoft Windows Server 2012 * Microsoft Windows Server 2012 R2 * Microsoft Windows Server 2016 * Microsoft Windows Server 2019 * Microsoft Windows Server 2022 * Microsoft Windows Server 2025 이 컴퓨터에서는 다른 애플리케이션 레벨 소프트웨어를 실행하지 않아야 합니다. 전용 서버가 권장됩니다.</block>
@@ -12334,4 +12332,6 @@
   <block id="7c275595b37d9736259910a2cee23932" category="paragraph">FPolicy 구성을 삭제하는 단계:</block>
   <block id="f2e1c8f11a6d114e56889c093ddb4738" category="list-text">데이터 수집기 페이지에서 오류가 있는 데이터 수집기의 오른쪽으로 스크롤한 다음 3개의 점 메뉴를 클릭합니다. 편집 _ 을(를) 선택합니다. 데이터 수집기의 암호를 다시 입력합니다. Save _ 버튼을 눌러 데이터 수집기를 저장합니다. Data Collector가 다시 시작되고 오류가 해결되어야 합니다.</block>
   <block id="96f9921aa76d3057450b4f8f037c88c6" category="list-text">Agent 시스템에 CPU 또는 RAM 여유 공간이 충분하지 않을 수 있으므로 DSC가 실패합니다. 시스템의 에이전트에 추가되는 데이터 수집기 수를 확인하십시오. 20개를 초과하는 경우 Agent 시스템의 CPU 및 RAM 용량을 늘리십시오. CPU와 RAM이 증가되면 DSC가 초기화 중 상태로 전환되었다가 자동으로 실행 상태로 전환됩니다. 에서 사이징 가이드를 <block ref="830ad31fe88c5bf31dcfcc5f15ccdf0e" category="inline-link-macro-rx"></block>살펴봅니다.</block>
+  <block id="3f30aeae69979f1a726fa86b1951eb1a" category="paragraph">각 계층은 서로 다른 비율로 측정되며, 전체 합계는 가중 자격을 제공하기 위해 계산됩니다. 가중 사용량을 계산하는 공식은 다음과 같습니다.</block>
+  <block id="277010ce624a057cfbdaed781a611725" category="paragraph">이를 지원하기 위해 DII는 _subscribed_quantities를 기준으로 단일 * 가중 자격 * 번호를 계산합니다. 그런 다음 _discovered_storage를 기준으로 동일한 수를 계산하고 검색된 용량이 가중 권한보다 큰 경우에만 위반을 선언합니다. 따라서 각 계층에 대해 가입된 금액과 다른 수량을 유연하게 모니터링할 수 있습니다. DII에서는 검색된 총 스토리지가 가입된 가중 소유 권한 내에 있는 동안 이러한 수량을 모니터링할 수 있습니다.</block>
 </blocks>
