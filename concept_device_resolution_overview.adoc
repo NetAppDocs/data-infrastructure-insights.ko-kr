@@ -6,13 +6,7 @@ summary: 자동 장치 해상도를 사용하면 테넌트의 성능 및 인벤�
 ---
 = 자동 장치 해상도 개요
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
 [role="lead"]

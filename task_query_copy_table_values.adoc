@@ -5,17 +5,8 @@ summary: 테이블의 값을 클립보드로 복사하여 다른 응용 프로�
 keywords: query, queries, copy, values, clipboard 
 ---
 = 테이블 값 복사 중
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

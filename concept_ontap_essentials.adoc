@@ -5,17 +5,8 @@ summary: ONTAP Essentials는 환경에 대한 자세한 개요를 제공하는 �
 keywords: dashboard, widget, ontap, overview, insight 
 ---
 = ONTAP 핵심 요소
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

@@ -5,17 +5,8 @@ keywords: audit, users, activities
 summary: 감사는 Data Infrastructure Insights 시스템의 시스템 및 사용자 활동에 대한 보기를 제공합니다. 
 ---
 = 감사
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

@@ -5,17 +5,8 @@ keywords: agent, Workload Security, delete agent, Cloud Secure
 summary: 워크로드 보안 에이전트를 삭제하는 중입니다 
 ---
 = 워크로드 보안 에이전트를 삭제하는 중입니다
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

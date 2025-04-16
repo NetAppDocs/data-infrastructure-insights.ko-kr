@@ -386,15 +386,6 @@
   <block id="49dac8e94cf3a894a33bf2ff0051828c" category="list-text">주석의 * 이름 * 과 * 설명 * 을 입력합니다.</block>
   <block id="5ed946a370c3e5d22bb43ca0f39ca56b" category="paragraph">이 필드에는 최대 255자까지 입력할 수 있습니다.</block>
   <block id="405058419342051b3c11561ed45101a9" category="list-text">Type * 을 클릭한 다음 이 주석에 허용되는 데이터 유형을 나타내는 다음 옵션 중 하나를 선택합니다.</block>
-  <block id="853674fd87670915f5e62faf7ba4201b" category="list-text">yes와 no를 선택하여 드롭다운 목록을 작성합니다. 예를 들어 "Direct Attached" 주석은 Boolean입니다.</block>
-  <block id="30351833b3f477dc86ff2081ead61845" category="list-text">이렇게 하면 날짜가 들어 있는 필드가 만들어집니다. 예를 들어, 주석이 날짜가 될 경우 이를 선택합니다.</block>
-  <block id="368748c929322a3f212441c747f2b16d" category="list-text">다음 중 하나를 생성합니다.</block>
-  <block id="909b59bf6aecf275b91dbb2cf2ec5521" category="list-text">드롭다운 고정 목록</block>
-  <block id="ef957d205d8a4826f9552e63f41f17fe" category="paragraph">다른 사용자가 장치에 이 주석 유형을 할당하는 경우 목록에 값을 더 추가할 수 없습니다.</block>
-  <block id="1658a49ef0d858de0e9ee69c3a5e10b4" category="list-text">드롭다운 유연한 목록</block>
-  <block id="6c97cf7a205eed7477c9cb071a14d09e" category="paragraph">이 목록을 만들 때 즉시 새 값 추가 옵션을 선택하면 다른 사용자가 장치에 이 주석 유형을 할당할 때 목록에 값을 더 추가할 수 있습니다.</block>
-  <block id="790087407b1b2f72741fa0eec24f9cf7" category="list-text">주석을 지정하는 사용자가 숫자를 입력할 수 있는 필드를 만듭니다. 예를 들어, 주석 유형이 "바닥"인 경우 사용자는 "숫자"의 값 유형을 선택하고 바닥 번호를 입력할 수 있습니다.</block>
-  <block id="d5a5fcc5b0ad62b2be2608a1437cc15c" category="list-text">자유 형식 텍스트를 허용하는 필드를 만듭니다. 예를 들어, 주석 유형으로 "Language"를 입력하고 값 유형으로 "Text"를 선택한 다음 언어를 값으로 입력할 수 있습니다.</block>
   <block id="a619e1879772f3d8b997e57449a4917d" category="admonition">유형을 설정하고 변경 사항을 저장한 후에는 주석 유형을 변경할 수 없습니다. 유형을 변경해야 하는 경우 주석을 삭제하고 새 주석을 만들어야 합니다.</block>
   <block id="7cc5d080d4ace8620cb66ec8af48642c" category="list-text">주석 유형으로 목록 을 선택한 경우 다음을 수행합니다.</block>
   <block id="72d27766c4fd84aa2a683895eae75df9" category="list-text">자산 페이지에서 주석에 더 많은 값을 추가할 수 있는 기능을 원하는 경우 * 즉시 새 값 추가 * 를 선택하여 유연한 목록을 만듭니다.</block>
@@ -1790,7 +1781,6 @@
   <block id="cd340fe1a6cf5e3a42e4f1d2eae63efb" category="paragraph">워크로드 보안은 데이터 수집기를 사용하여 디바이스에서 파일 및 사용자 액세스 데이터를 수집합니다. 여기에서 이 수집기와 관련된 문제 해결을 위한 팁을 찾을 수 있습니다.</block>
   <block id="e937b51440ae649590205a6bdfe87f95" category="inline-link-macro">SVM Collector 구성</block>
   <block id="7dd7d734df8f68ee69beae1fdbd5a09e" category="paragraph"><block ref="22f03f06815cacacef516ef1743c2ffa" category="inline-link-macro-rx"></block>이 Collector 구성에 대한 지침은 페이지를 참조하십시오.</block>
-  <block id="4b3fbac9b531aa2660d41834f330998e" category="paragraph">오류의 경우, _Status_열에서 _more detail_을 클릭하여 오류에 대한 세부 정보를 확인하십시오.</block>
   <block id="9308a4a251c0b6f099fc32506e41c24d" category="inline-image-macro">워크로드 보안 수집기 오류 추가 세부 정보 링크</block>
   <block id="6a6fcf99d83d56b2429dfa3ef83b50a0" category="paragraph"><block ref="6a6fcf99d83d56b2429dfa3ef83b50a0" category="inline-image-macro-rx" type="image"></block></block>
   <block id="d7a4e713cb63e4db8a2b51e171793fb0" category="cell">Data Collector는 일정 시간 동안 실행되며 임의 시간 후 중지되며, "오류 메시지: 커넥터가 오류 상태입니다. 서비스 이름: 감사. 장애 원인: 외부 FPolicy 서버가 과부하 상태입니다."</block>
@@ -2255,7 +2245,6 @@
   <block id="eeb633b07360786b4ed111224e472b5a" category="section-title">용량 항목</block>
   <block id="17261729b0a6791788f14c944a555443" category="paragraph">용량항목은 단일 논리 용량 단위입니다. 이 개체의 상위 개체에 의해 정의된 단위로 "값"과 "상위 임계값"이 있습니다. 또한 용량 값의 구성 방법을 설명하는 선택적 분석 맵을 지원합니다. 예를 들어 100TB StoragePool의 총 용량은 100의 값을 갖는 CapacityItem입니다. 이 분석 결과는 "데이터"에 할당된 60TB 및 "스냅샷"에 대해 40TB로 표시될 수 있습니다.</block>
   <block id="3b0649c72650c313a357338dcdfb64ec" category="list-text">참고</block>
-  <block id="116187c467970a363a1be1eec9777926" category="list-text">"HighThreshold"는 해당 메트릭의 시스템 정의 임계값을 나타내며, 클라이언트는 이 임계값을 사용하여 허용되는 구성 범위를 벗어난 값에 대한 경고 또는 시각적 신호를 생성할 수 있습니다.</block>
   <block id="01499e599eb4fdc4c936da877a465d53" category="paragraph">다음은 여러 용량 카운터가 있는 StoragePools의 용량을 보여 줍니다.</block>
   <block id="85aa7a55c03d4a7d205562096674066a" category="inline-image-macro">스토리지 풀 용량 예</block>
   <block id="6f0ac10b550f7a116f9d902d16213da3" category="paragraph"><block ref="6f0ac10b550f7a116f9d902d16213da3" category="inline-image-macro-rx" type="image"></block></block>
@@ -2981,17 +2970,6 @@
   <block id="59a039b9bdde97f886d094af635410bd" category="section-title">메트릭 혁신</block>
   <block id="f7c36dece720648d179dbf6c974f9288" category="paragraph">Data Infrastructure Insights는 위젯(특히 Kubernetes, ONTAP 고급 데이터, Telegraf 플러그인 등 "사용자 지정" 또는 통합 메트릭이라는 메트릭)의 특정 메트릭에 대해 다양한 * 변환 * 옵션을 제공하므로 데이터를 다양한 방식으로 표시할 수 있습니다. 변환될 수 있는 메트릭을 위젯에 추가하면 다음과 같은 변환 선택 사항을 제공하는 드롭다운이 표시됩니다.</block>
   <block id="6adf97f83acf6453d4a6a4b1070f3754" category="list-text">없음</block>
-  <block id="8dff9b3275d903bce911a227cbed3634" category="list-text">데이터는 조작 없이 그대로 표시됩니다.</block>
-  <block id="dcb66ff6e4a2517ade22183779939c9d" category="list-text">속도</block>
-  <block id="9b3e9f4a548e4f107c31fe2a21eed22a" category="list-text">현재 값을 이전 관찰 이후의 시간 범위로 나눈 값입니다.</block>
-  <block id="eb2527806a7e1ef48009eaaa785368fe" category="list-text">누적</block>
-  <block id="81be1e144a5ed592ed4813fe9a14b16d" category="list-text">이전 값과 현재 값의 합계를 누적하는 값입니다.</block>
-  <block id="db1f4ab5845def61a83d5df13e0c2397" category="list-text">델타</block>
-  <block id="a1933dae1248a2768b141e98f357f4e1" category="list-text">이전 관찰 값과 현재 값의 차이</block>
-  <block id="182287f79b18308934050eed051fa06e" category="list-text">델타 요금</block>
-  <block id="c4b4b6e9c3267be39ae1c34d6560414a" category="list-text">델타 값을 이전 관찰 이후의 시간 범위로 나눈 값</block>
-  <block id="bef0e8af1d9f29c6ecb74d3390d4f227" category="list-text">누적 속도</block>
-  <block id="71d65ae1cbf6688be0226ae6c7ce8a47" category="list-text">누적 값을 이전 관찰 이후의 시간 범위로 나눈 값입니다.</block>
   <block id="7ade6c64e9a88c6a4e7b10ff7debb111" category="paragraph">메트릭을 변환해도 기본 데이터 자체는 변경되지 않고 데이터가 표시되는 방식만 변경됩니다.</block>
   <block id="9c03aeff3f0df812a2cff2cd25e5e8b0" category="section-title">대시보드 위젯 쿼리 및 필터</block>
   <block id="cf43137803fb51915f84cbc5c3068d34" category="section-title">쿼리</block>
@@ -6531,8 +6509,6 @@
   <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">개인 정보 보호 정책</block>
   <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
-  <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">오픈 소스</block>
-  <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">통지 파일은 NetApp 소프트웨어에 사용된 타사의 저작권 및 라이센스에 대한 정보를 제공합니다.</block>
   <block id="c7f50a9f133f1f71a9f91fe12f7c7f7e" category="inline-link-macro">데이터 인프라 인사이트(이전의 Cloud Insights)를 위한 고지 사항</block>
   <block id="4d8cd5134c1193f4d301c7e6bcaa38a7" category="inline-link-macro">워크로드 보안 공지(이전의 Cloud Secure)</block>
   <block id="af943d1d81f743ab6e7c9bcbe3a8c6e9" category="summary">NKMO Clusterrole에 대한 YAML 파일의 예</block>
@@ -8125,11 +8101,7 @@
   <block id="af53996a121bcf0b43c612a8465b5398" category="list-text">다음 명령을 실행하여 SVM에 올바른 애플리케이션이 설정되었는지 확인합니다.</block>
   <block id="cce32d87b6a1e3cf5567d9c84f96be3f" category="inline-image-macro">SVM 명령 출력의 예</block>
   <block id="d056d5eb1e184e9c1ac10b7b898406c4" category="paragraph">출력 예: <block ref="c5dea5ffbc3dcabd33992848de2142cc" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="7f94746ef413dd6cce888dc8191c7d02" category="list-text">SVM에 CIFS 서버가 구성되어 있는지 확인합니다. clustershell:&gt;<block ref="fafd8ff6ac4a59e73c5d4e3b47d545ee" prefix=" " category="inline-code"></block></block>
   <block id="4b39c6cbbc0b2ff309b19953839ed0f3" category="paragraph">SVM 이름, CIFS 서버 이름 및 추가 필드가 반환됩니다.</block>
-  <block id="b059c5a49d6022043ff796404b82c462" category="list-text">SVM vsadmin 사용자의 암호를 설정합니다. 사용자 지정 사용자 또는 클러스터 관리자를 사용하는 경우 이 단계를 건너뜁니다. clustershell:&gt;<block ref="73b77b9c99e693ec16bc3e4960672465" prefix=" " category="inline-code"></block></block>
-  <block id="7236e4bb54415ccc8948a0979ed96585" category="list-text">외부 액세스를 위해 SVM vsadmin 사용자의 잠금을 해제합니다. 사용자 지정 사용자 또는 클러스터 관리자를 사용하는 경우 이 단계를 건너뜁니다. clustershell:&gt;<block ref="db25ee40fb860a97415dab9c598caaf9" prefix=" " category="inline-code"></block></block>
-  <block id="2358ac25c31ef63c5d2ed813dbf64816" category="list-text">데이터 LIF의 방화벽 정책이 'GMT'(이하 '데이터')로 설정되어 있는지 확인합니다. 전용 관리 lif를 사용하여 SVM.clustershell::&gt; 을 추가하는 경우 이 단계를 건너뜁니다<block ref="0197c7c6728dc0e945da717147320f69" prefix=" " category="inline-code"></block></block>
   <block id="2d3cc76ffef3ba66813c26ecf4f96b0f" category="list-text">방화벽이 활성화된 경우 Data ONTAP 데이터 수집기를 사용하여 포트에 대한 TCP 트래픽을 허용하도록 정의된 예외가 있어야 합니다.</block>
   <block id="1b44ec95d8bb09c8257712da31dde413" category="inline-link-macro">상담원 요구 사항</block>
   <block id="d47350de0cb738713602fc081af217e9" category="paragraph">구성 정보는 을 <block ref="66b24601b32ea1e28a736b303c9dda16" category="inline-link-macro-rx"></block>참조하십시오. 이는 클라우드에 설치된 온프레미스 에이전트 및 에이전트에 적용됩니다.</block>
@@ -11955,8 +11927,6 @@
   <block id="4e80b0ab552791c676018d06a8ab1a7c" category="list-text">로키 9.5</block>
   <block id="ef436eeff254793f46443f71b4c3e50d" category="list-text">SUSE Linux Enterprise Server 15 SP6</block>
   <block id="7ce4625168ff8cf506188a346ab739ac" category="list-text">Ubuntu 서버 24.04 LTS</block>
-  <block id="0be262a01ffd53cb1827d924de37e376" category="paragraph">관리자 사용자가 사용할 수 있는 향상된 REST API 사용 추적을 통해 보안 상태를 강화하고 리소스 관리를 간소화합니다. API 사용량 추적을 사용하면 사용 중인 API 토큰, 사용 IP 주소 및 생성된 트래픽 볼륨을 확인할 수 있습니다. 토큰을 특정 IP 주소 및 사용 수준에 연결하면 시스템 액세스 및 사용 추세에 대한 강력한 통찰력을 얻을 수 있으므로 안전하고 효율적인 환경을 유지하고 원활한 운영을 유지하는 데 필요한 제어 기능을 제공합니다.</block>
-  <block id="8261d0e1521d30da1b36761d508cb245" category="paragraph">API 사용량을 보려면 * 관측성 &gt; 관리자 &gt; API 액세스 * 로 이동하고 _View API Usage _ 를 선택합니다. 이 API는 DII 관측성 API에만 사용할 수 있으며 워크로드 보안에는 적용되지 않습니다.</block>
   <block id="2613b3928d7ae4e00e8610b858e67528" category="paragraph">보고서의 출력 형식 및 전달을 사용자 정의하고 보고서 속성 또는 일정을 설정하고 보고서를 전자 메일로 보낼 수 있습니다.</block>
   <block id="7676d746a6b2036f8764b1e1250213d3" category="cell">3.1.1 (MU3) 3.1.2 (MU2) 3.1.3 (MU2) 3.2.1 (MU3) 3.2.1 (MU4) 3.2.2 (MU4) 3.2.2 (MU6) 3.3.1</block>
   <block id="d9c3a16f0d6e7e82d6b68abd0ed8778b" category="paragraph">이 데이터 수집기에서 지원하는 모델 및 버전: API 버전:</block>
@@ -12334,4 +12304,47 @@
   <block id="96f9921aa76d3057450b4f8f037c88c6" category="list-text">Agent 시스템에 CPU 또는 RAM 여유 공간이 충분하지 않을 수 있으므로 DSC가 실패합니다. 시스템의 에이전트에 추가되는 데이터 수집기 수를 확인하십시오. 20개를 초과하는 경우 Agent 시스템의 CPU 및 RAM 용량을 늘리십시오. CPU와 RAM이 증가되면 DSC가 초기화 중 상태로 전환되었다가 자동으로 실행 상태로 전환됩니다. 에서 사이징 가이드를 <block ref="830ad31fe88c5bf31dcfcc5f15ccdf0e" category="inline-link-macro-rx"></block>살펴봅니다.</block>
   <block id="3f30aeae69979f1a726fa86b1951eb1a" category="paragraph">각 계층은 서로 다른 비율로 측정되며, 전체 합계는 가중 자격을 제공하기 위해 계산됩니다. 가중 사용량을 계산하는 공식은 다음과 같습니다.</block>
   <block id="277010ce624a057cfbdaed781a611725" category="paragraph">이를 지원하기 위해 DII는 _subscribed_quantities를 기준으로 단일 * 가중 자격 * 번호를 계산합니다. 그런 다음 _discovered_storage를 기준으로 동일한 수를 계산하고 검색된 용량이 가중 권한보다 큰 경우에만 위반을 선언합니다. 따라서 각 계층에 대해 가입된 금액과 다른 수량을 유연하게 모니터링할 수 있습니다. DII에서는 검색된 총 스토리지가 가입된 가중 소유 권한 내에 있는 동안 이러한 수량을 모니터링할 수 있습니다.</block>
+  <block id="8d178fa49ef817f44dcc4258ca07b1dd" category="paragraph">참고: "highThreshold"는 해당 메트릭의 시스템 정의 임계값을 나타내며, 클라이언트가 허용 가능한 구성 범위를 벗어난 값에 대한 알림이나 시각적 신호를 생성하는 데 사용할 수 있습니다.</block>
+  <block id="923fc210f74163c8b2f7b1b3b93f66d9" category="paragraph">목차:[]</block>
+  <block id="cb7c09827bd69ac10d5ced00302bbe0a" category="paragraph">None(없음): 데이터가 있는 그대로 표시되며 조작 없이 표시됩니다.</block>
+  <block id="04e0a16e5e5751fe89d90dc8e7c4836d" category="paragraph">속도: 현재 값을 이전 관찰 이후 시간 범위로 나눈 값입니다.</block>
+  <block id="57f025c43ccbd17175f551d2537502f6" category="paragraph">누적: 이전 값과 현재 값의 합계를 합한 값입니다.</block>
+  <block id="ee7e4da7ed0e53334d90ad8a9e7b2ac7" category="paragraph">Delta: 이전 관찰 값과 현재 값의 차이.</block>
+  <block id="f92ec8daf31bca80a75188fc51e7c9d7" category="paragraph">델타 비율: 델타 값을 이전 관찰 이후 시간 범위로 나눈 값입니다.</block>
+  <block id="f3a6e5fadd6dd5c92532731c5e678fed" category="paragraph">누적 비율: 누적 값을 이전 관찰 이후의 시간 범위로 나눈 값입니다.</block>
+  <block id="b22cba5f40e7b73c3ff809f5520ed4bf" category="paragraph"><block ref="b22cba5f40e7b73c3ff809f5520ed4bf" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="42ce83dc3f5ef22d986311b267a5ac20" category="section-title">2025년 4월</block>
+  <block id="fbc87552732cc2b26b43d6276a074ffc" category="section-title">사전 문제 해결을 위한 라인 위젯의 ML 기반 이상 경계</block>
+  <block id="9f7cd8199d6124c4f4553f2c176b1d5c" category="paragraph">선 또는 스플라인 차트 위젯을 사용하여 성능 문제를 해결하기 위해 실제 메트릭과 함께 예상 동작 경계를 표시할 수 있으므로 정상 및 비정상 메트릭 추세를 구분할 수 있습니다.</block>
+  <block id="eebf90e82914469f2dfc221f4faf2065" category="paragraph">계절 데이터 분석을 통한 DII 머신 러닝은 과거 패턴을 기반으로 하는 지능적인 임계값을 설정합니다. 메트릭이 예상 범위를 벗어나면 시스템에서 이를 이상 징후로 강조 표시하여 문제를 빠르게 식별하고 평균 해결 시간을 줄이며 운영에 영향을 미치기 전에 문제를 해결할 수 있습니다.</block>
+  <block id="44ca9974803bd41bb1826d9cf436c703" category="inline-image-macro">위의 스파이크를 표시하는 예상 경계, 너비 = 400</block>
+  <block id="093b02dc890c25bbe57cc9883b6f37e5" category="paragraph"><block ref="093b02dc890c25bbe57cc9883b6f37e5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6c8b67e91957195849c42aaf1ad22042" category="section-title">VSAN 스토리지 지원으로 VMware 비용 최적화</block>
+  <block id="7ae6cf4414540fa7a14236e09f4bc284" category="paragraph">VMware의 VM 최적화 기능은 이제 VSAN 스토리지를 사용하는 VMware 환경을 지원합니다. 이 분석에서는 CPU 및 메모리 사용량 외에도 재확보를 위한 로컬 VSAN 스토리지를 고려하여 라이센스 비용을 추가로 절감할 수 있습니다.</block>
+  <block id="ec05f91c2c2b63f117125c8a95ae7d4f" category="inline-image-macro">VSAN을 사용한 VM 최적화 예</block>
+  <block id="65aab751aa4e4fdccdbfd146653962a1" category="paragraph"><block ref="65aab751aa4e4fdccdbfd146653962a1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="dd926bc8baa503ad7ada93a04edffe21" category="section-title">알림 세부 정보를 간편하게 확인할 수 있습니다</block>
+  <block id="baf64fe15bce38c00a414f9f4ac29283" category="paragraph">새로운 슬레드아웃 패널을 사용하면 이전보다 훨씬 쉽게 경고를 조사할 수 있습니다. 알림을 선택하면 해당 알림에 대한 세부 정보를 볼 수 있으며, 문제를 조사하는 동안 자리를 잃지 않고 알림 간에 쉽게 전환할 수 있습니다.</block>
+  <block id="e9acb24b6ccfd9ff0141dc2683fb1fc6" category="inline-image-macro">보다 쉽게 탐색할 수 있도록 알림 슬라이드 아웃</block>
+  <block id="3ae807e49abe8a58660ef733493cbacc" category="paragraph"><block ref="3ae807e49abe8a58660ef733493cbacc" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="19cefc1a05e82b0e19584462dea5a563" category="section-title">워크로드 보안 포렌식 비동기 내보내기</block>
+  <block id="a39507b873640f4e60c12fb375005a04" category="paragraph">포렌식 데이터를 내보내는 데는 내보낼 데이터의 양에 따라 몇 초에서 몇 시간 정도 걸릴 수 있습니다. 워크로드 보안은 해당 데이터를 비동기적으로 내보내므로 .csv가 컴파일되는 동안에도 작업을 계속할 수 있습니다.</block>
+  <block id="6c17946dd20446540805b53e2f7cd731" category="section-title">규칙으로 그룹화된 데이터 수집기 알림</block>
+  <block id="c3bd9ae81ad0672e842d282715d758e1" category="paragraph">데이터 수집기에 알림을 구성한 경우 4월 15일부터 해당 알림은 알림 규칙에서 처리되며 받는 사람이 동일한 수집기에 대한 단일 규칙이 적용됩니다. 받는 사람이 다른 컬렉터에는 별도의 규칙이 있습니다. 기존 Collector 알림은 알림 규칙으로 마이그레이션됩니다.</block>
+  <block id="ca873110efddef67beadcfe5f8a4ca84" category="paragraph">관리자 사용자가 사용할 수 있는 향상된 REST API 사용 추적을 통해 보안 상태를 강화하고 리소스 관리를 간소화합니다. API 사용량 추적을 사용하면 사용 중인 API 토큰, 사용 IP 주소 및 생성된 트래픽 볼륨을 확인할 수 있습니다. 토큰을 특정 IP 주소 및 사용 수준에 연결하면 시스템 액세스 및 사용 추세에 대한 강력한 통찰력을 얻을 수 있으므로 안전하고 효율적인 환경을 유지하고 원활한 운영을 유지하는 데 필요한 제어 기능을 제공합니다. 관리자 사용자가 사용할 수 있는 향상된 REST API 사용 추적을 통해 보안 상태를 강화하고 리소스 관리를 간소화합니다. API 사용량 추적을 사용하면 사용 중인 API 토큰, 사용 IP 주소 및 생성된 트래픽 볼륨을 확인할 수 있습니다. 토큰을 특정 IP 주소 및 사용 수준에 연결하면 시스템 액세스 및 사용 추세에 대한 강력한 통찰력을 얻을 수 있으므로 안전하고 효율적인 환경을 유지하고 원활한 운영을 유지하는 데 필요한 제어 기능을 제공합니다.</block>
+  <block id="24f17d3ee72bb2738ceb12180ec2fa71" category="paragraph">API 사용량을 보려면 * 관측성 &gt; 관리자 &gt; API 액세스 * 로 이동하고 _View API Usage _ 를 선택합니다. 이 API는 DII 관측성 API에만 사용할 수 있으며 워크로드 보안에는 적용되지 않습니다. API 사용량을 보려면 * 관측성 &gt; 관리자 &gt; API 액세스 * 로 이동하고 _View API Usage _ 를 선택합니다. 이 API는 DII 관측성 API에만 사용할 수 있으며 워크로드 보안에는 적용되지 않습니다.</block>
+  <block id="1178bc1f7bc2e2481537fe9d595549fd" category="paragraph">포함: https://raw.githubusercontent.com/NetAppDocs/common/main/_include/open-source-notice-intro.adoc[]</block>
+  <block id="4bffd602151b14e55ad1f19de262d0c1" category="list-text">SVM에 CIFS 서버가 구성되어 있는지 확인합니다. clustershell:&gt;<block ref="fafd8ff6ac4a59e73c5d4e3b47d545ee" prefix=" " category="inline-code"></block></block>
+  <block id="52ea452f7c0975b526b909c63394b7e8" category="list-text">SVM vsadmin 사용자의 암호를 설정합니다. 사용자 지정 사용자 또는 클러스터 관리자를 사용하는 경우 이 단계를 건너뜁니다. clustershell:&gt;<block ref="73b77b9c99e693ec16bc3e4960672465" prefix=" " category="inline-code"></block></block>
+  <block id="9b7edcaaf6b4a85dc972c92c9191eb04" category="list-text">외부 액세스를 위해 SVM vsadmin 사용자의 잠금을 해제합니다. 사용자 지정 사용자 또는 클러스터 관리자를 사용하는 경우 이 단계를 건너뜁니다. clustershell:&gt;<block ref="db25ee40fb860a97415dab9c598caaf9" prefix=" " category="inline-code"></block></block>
+  <block id="368c3bb96cbd7737c094fe94dfdedf94" category="list-text">데이터 LIF의 방화벽 정책이 'GMT'(이하 '데이터')로 설정되어 있는지 확인합니다. 전용 관리 lif를 사용하여 SVM.clustershell:&gt; 을 추가하는 경우 이 단계를 건너뜁니다<block ref="0197c7c6728dc0e945da717147320f69" prefix=" " category="inline-code"></block></block>
+  <block id="c71b503670f2867f513635832d1599c3" category="paragraph"><block ref="c71b503670f2867f513635832d1599c3" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d2b98171b3e920dab4bb3e92ccf4e89a" category="paragraph"><block ref="d2b98171b3e920dab4bb3e92ccf4e89a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="feacd3cef81abfcdbf59bda9ba5b97fd" category="paragraph"><block ref="feacd3cef81abfcdbf59bda9ba5b97fd" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="24b75506ade423135a0ebfd6a8ab8fa4" category="paragraph">Boolean: yes 및 no를 선택할 수 있는 드롭다운 목록을 만듭니다. 예를 들어 "Direct Attached" 주석은 Boolean입니다. Date(날짜): 날짜를 포함하는 필드가 만들어집니다. 예를 들어, 주석이 날짜가 될 경우 이를 선택합니다. 목록: 다음 중 하나를 만듭니다.* 드롭다운 고정 목록</block>
+  <block id="3eb86d134a8e7d548d1298e1aa9a12d5" category="paragraph">+ 다른 사용자가 장치에 이 주석 유형을 할당할 때 목록에 더 많은 값을 추가할 수 없습니다. *유연한 드롭다운 목록</block>
+  <block id="d8f872f26b52cf9aec4a137dbe0a8c26" category="paragraph">+ 이 목록을 만들 때 즉시 새 값 추가 옵션을 선택하면 다른 사용자가 장치에 이 주석 유형을 할당할 때 목록에 더 많은 값을 추가할 수 있습니다.</block>
+  <block id="d41b70ca456515e9579f88a5bc4b81f5" category="paragraph">Number(번호): 주석을 할당하는 사용자가 숫자를 입력할 수 있는 필드를 만듭니다. 예를 들어, 주석 유형이 "바닥"인 경우 사용자는 "숫자"의 값 유형을 선택하고 바닥 번호를 입력할 수 있습니다.</block>
+  <block id="9dc3b5c01c2c832a96e1c6c19e498029" category="paragraph">텍스트: 자유 형식 텍스트를 허용하는 필드를 만듭니다. 예를 들어, 주석 유형으로 "Language"를 입력하고 값 유형으로 "Text"를 선택한 다음 언어를 값으로 입력할 수 있습니다.</block>
+  <block id="bf446d389b04278c2780f587bb4b6e54" category="paragraph">오류가 발생한 경우 Installed Data Collectors 페이지의 _Status_column에서 _more detail_을 클릭하여 오류에 대한 세부 정보를 확인할 수 있습니다.</block>
 </blocks>

@@ -6,13 +6,7 @@ keywords: query, queries, viewing
 ---
 = 쿼리 보기
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
 [role="lead"]

@@ -5,17 +5,8 @@ summary: 워크로드 보안은 ONTAP와 통합되어 액세스 거부 이벤트
 keywords: ransomware, ARP, Protection, Security, access 
 ---
 = ONTAP 액세스와의 통합이 거부되었습니다
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

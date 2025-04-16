@@ -5,17 +5,8 @@ keywords: insight, pv, persistent volume, backend
 summary: 통찰력은 Kubernetes 공간이 가득 찰 가능성을 예측하는 데 도움이 될 수 있습니다. 
 ---
 = 인사이트: Kubernetes 네임스페이스가 공간 부족입니다
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

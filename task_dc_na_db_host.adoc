@@ -6,13 +6,7 @@ summary: 일반 DB 호스트 확인자 수집기입니다
 ---
 = NetApp 일반 DB 호스트 확인자
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
 [role="lead"]

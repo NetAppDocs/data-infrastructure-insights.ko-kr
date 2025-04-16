@@ -5,17 +5,8 @@ keywords: data collector, VAST storage, VAST data
 summary: VAST 데이터 저장소 스토리지 데이터 수집기를 구성하는 중입니다. 
 ---
 = VAST 데이터스토어 데이터 수집기
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

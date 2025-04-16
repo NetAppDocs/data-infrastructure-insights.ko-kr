@@ -267,6 +267,8 @@ sidebar:
       url: "/cs_notifications_email.html"
     - title: 워크로드 보안 API
       url: "/concept_cs_api.html"
+    - title: SVM Collector 문제 해결
+      url: "/troubleshooting_collector_svm.html"
   - title: 문제 해결
     entries:
     - title: 일반 문제 해결

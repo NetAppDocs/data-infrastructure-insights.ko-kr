@@ -5,17 +5,8 @@ keywords: collectors, data collectors, configure, introduction, browsers , Cloud
 summary: 몇 가지 간단한 단계를 통해 워크로드 보안을 시작할 수 있습니다 
 ---
 = 워크로드 보안 시작
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

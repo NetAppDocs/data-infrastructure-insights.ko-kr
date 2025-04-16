@@ -5,17 +5,8 @@ summary: 데이터 보존 시간 및 다운샘플링에 대해 설명합니다
 keywords: time-to-live, TTL, downsampling, downsample, retention 
 ---
 = 데이터 보존 및 다운샘플링 데이터
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

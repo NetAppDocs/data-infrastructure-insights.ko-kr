@@ -5,17 +5,8 @@ summary: Data Infrastructure Insights는 릴리즈 라이프사이클 전반에�
 keywords: security, risk, protection 
 ---
 = SecurityAdmin 도구
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

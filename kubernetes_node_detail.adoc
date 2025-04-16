@@ -6,13 +6,7 @@ summary: Kubernetes 노드 세부 정보 페이지는 백엔드 PV 및 Pod 스�
 ---
 = Kubernetes 노드 세부 정보 페이지
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
 [role="lead"]

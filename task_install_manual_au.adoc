@@ -6,13 +6,7 @@ summary: Data Infrastructure Insights는 AU 소프트웨어를 수동으로 업�
 ---
 = 획득 장치 소프트웨어 수동 설치
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
 [role="lead"]

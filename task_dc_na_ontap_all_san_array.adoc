@@ -6,13 +6,7 @@ summary: ONTAP All-SAN 어레이 데이터 수집기
 ---
 = NetApp ONTAP ASA(All-SAN 어레이) 데이터 수집기
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
 [role="lead"]

@@ -6,13 +6,7 @@ summary: 작업 부하 보안 에이전트를 수동으로 설치 또는 업데�
 ---
 = 워크로드 보안 에이전트 및 수집기를 수동으로 설치합니다
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
 [role="lead"]

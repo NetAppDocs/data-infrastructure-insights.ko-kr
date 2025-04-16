@@ -5,17 +5,8 @@ keywords: Acquisition Unit, AU, install, configure, Linux, add, remove, uninstal
 summary: 획득 장치 Windows 및 Linux에서 프록시 지원 설치, 제거, 구성 등. 
 ---
 = 획득 장치 구성
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]
@@ -120,7 +111,8 @@ image:ProxyEndpoints_NewTable.png["프록시 끝점 테이블"]
 
 
 
-image::NewWindowsAUInstall.png[Windows AU 설치]
+[role="thumb"]
+image:NewWindowsAUInstall.png["Windows AU 설치"]
 
 . 획득 장치를 호스팅하는 서버 또는 VM이 권장 시스템 요구 사항을 충족하는지 확인합니다.
 . 서버에서 지원되는 Windows 버전을 실행 중인지 확인합니다. 지원되는 버전 목록을 보려면 _OS 버전 지원됨(I)_을 클릭합니다.

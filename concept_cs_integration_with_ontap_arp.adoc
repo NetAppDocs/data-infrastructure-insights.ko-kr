@@ -5,17 +5,8 @@ summary: 워크로드 보안 은 ONTAP 자율 랜섬웨어 보호 와 통합되�
 keywords: ransomware, ARP, Protection, Security 
 ---
 = ONTAP Autonomous 랜섬웨어 Protection과 통합
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

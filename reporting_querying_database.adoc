@@ -5,17 +5,8 @@ summary: Data Infrastructure Insights API를 사용하여 보고 DB를 직접 �
 keywords: reporting, cognos, data warehouse, dwh, API 
 ---
 = API를 통해 보고 데이터베이스에 액세스합니다
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

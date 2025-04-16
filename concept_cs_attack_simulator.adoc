@@ -5,17 +5,8 @@ keywords: ransomware, simulation, simulator, restrict, attack
 summary: 스크립트를 사용하여 워크로드 보안을 테스트 또는 시연하기 위해 랜섬웨어 공격을 시뮬레이션할 수 있습니다 
 ---
 = 워크로드 보안: 공격 시뮬레이션
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

@@ -5,17 +5,8 @@ keywords: CloudSecure, Cloud Secure
 summary: 개요 
 ---
 = 스토리지 워크로드 보안 정보
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

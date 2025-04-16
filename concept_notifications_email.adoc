@@ -5,17 +5,8 @@ summary: 알림에 대한 이메일 주소를 추가하는 중입니다.
 keywords: email, notifications, signature, recipient, list, subscription 
 ---
 = 이메일 알림 구성
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

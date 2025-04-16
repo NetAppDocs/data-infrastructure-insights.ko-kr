@@ -6,13 +6,7 @@ summary: Data Infrastructure Insights API를 사용하여 주석과 애플리케
 ---
 = 주석 불러오기
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
 [role="lead"]

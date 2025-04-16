@@ -5,17 +5,12 @@ keywords: Forensic, user activity, user activity data,
 summary: 포렌식 사용자 활동 데이터 
 ---
 = 법의학 사용자 활동 데이터
-:toc: macro
 :hardbreaks:
-:toclevels: 
 :allow-uri-read: 
-:toc: 
-:toclevels: 
 :nofooter: 
 :icons: font
 :linkattrs: 
 :imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

@@ -5,17 +5,8 @@ summary: NetApp SolidFire 데이터 수집기를 구성합니다
 keywords: data collector, queries, create 
 ---
 = NetApp SolidFire All-Flash 어레이 데이터 수집기입니다
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

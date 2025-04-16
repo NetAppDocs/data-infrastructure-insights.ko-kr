@@ -5,17 +5,8 @@ summary: Data Collector 획득 상태
 keywords: collector, acquisition, status 
 ---
 = 데이터 수집기 획득 상태를 확인하는 중입니다
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

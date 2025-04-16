@@ -6,13 +6,8 @@ summary: Kubernetes 모니터링 운영자는 Data Infrastructure Insights에 �
 ---
 = Kubernetes Monitoring Operator 설치 및 구성
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
 :nofooter: 
-:toclevels: 2
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
 [role="lead"]

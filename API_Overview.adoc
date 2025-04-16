@@ -5,17 +5,8 @@ keywords: API, customer API, premium, JSON, Swagger, Access Token, token, rotate
 summary: Data Infrastructure Insights API를 사용하면 모니터링 및 보고 시스템과 같은 다른 애플리케이션과 통합할 수 있습니다. 
 ---
 = Data Infrastructure Insights API를 참조하십시오
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]
@@ -230,8 +221,7 @@ image:DiskPerformanceExample.png["디스크 성능 JSON"]
 
 용량항목은 단일 논리 용량 단위입니다. 이 개체의 상위 개체에 의해 정의된 단위로 "값"과 "상위 임계값"이 있습니다. 또한 용량 값의 구성 방법을 설명하는 선택적 분석 맵을 지원합니다. 예를 들어 100TB StoragePool의 총 용량은 100의 값을 갖는 CapacityItem입니다. 이 분석 결과는 "데이터"에 할당된 60TB 및 "스냅샷"에 대해 40TB로 표시될 수 있습니다.
 
-참고:: "HighThreshold"는 해당 메트릭의 시스템 정의 임계값을 나타내며, 클라이언트는 이 임계값을 사용하여 허용되는 구성 범위를 벗어난 값에 대한 경고 또는 시각적 신호를 생성할 수 있습니다.
-
+참고: "highThreshold"는 해당 메트릭의 시스템 정의 임계값을 나타내며, 클라이언트가 허용 가능한 구성 범위를 벗어난 값에 대한 알림이나 시각적 신호를 생성하는 데 사용할 수 있습니다.
 
 다음은 여러 용량 카운터가 있는 StoragePools의 용량을 보여 줍니다.
 

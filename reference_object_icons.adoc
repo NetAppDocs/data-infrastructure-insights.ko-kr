@@ -5,7 +5,12 @@ summary: Data Infrastructure Insights 오브젝트 아이콘 참조.
 keywords: icons, assets, objects, reference, map 
 ---
 = 개체 아이콘 참조
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]

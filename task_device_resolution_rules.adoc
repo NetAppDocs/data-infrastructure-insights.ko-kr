@@ -5,17 +5,8 @@ keywords: Automatic, AR, AHR, Host, automatic device resolution
 summary: 장치 해결 기능은 사용자 환경의 성능 및 인벤토리를 정확하게 추적하는 데 도움이 됩니다. 
 ---
 = 장치 해상도 규칙
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

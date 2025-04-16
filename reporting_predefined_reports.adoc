@@ -5,17 +5,8 @@ summary: 미리 정의된 보고서 개요
 keywords: reporting, cognos, data warehouse, dwh, pre-defined 
 ---
 = 미리 정의된 보고서를 쉽게 만들 수 있습니다
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

@@ -6,13 +6,7 @@ summary: 주석을 작성하는 방법.
 ---
 = 주석 사용
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
 [role="lead"]

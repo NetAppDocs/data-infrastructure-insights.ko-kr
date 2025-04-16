@@ -6,13 +6,7 @@ summary: 성능 또는 인벤토리 임계값에 대한 경고를 표시할 모�
 ---
 = Webhook를 사용한 알림
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
 [role="lead"]

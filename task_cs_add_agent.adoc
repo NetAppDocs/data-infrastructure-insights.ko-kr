@@ -5,17 +5,8 @@ keywords: agent, Workload Security, installation, Cloud Secure
 summary: 워크로드 보안 에이전트 추가 
 ---
 = 워크로드 보안 에이전트 설치
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]
@@ -40,7 +31,7 @@ summary: 워크로드 보안 에이전트 추가
 Agent 추가 페이지가 표시됩니다.
 
 +
-image::Add-agent-1.png[워크로드 보안 에이전트 추가]
+image:Add-agent-1.png["워크로드 보안 에이전트 추가"]
 
 . 에이전트 서버가 최소 시스템 요구 사항을 충족하는지 확인합니다.
 . 에이전트 서버가 지원되는 Linux 버전을 실행 중인지 확인하려면 _VERSION SUPPORTED (I) _ 을(를) 클릭합니다.
@@ -52,7 +43,7 @@ image:CloudSecureAgentWithProxy_Instructions.png["프록시 메모를 사용하�
 . 터미널 창에서 설치 명령을 실행합니다.
 . 설치가 성공적으로 완료되면 다음과 같은 메시지가 표시됩니다.
 +
-image::new-agent-detect.png[에이전트 설치 성공 메시지]
+image:new-agent-detect.png["에이전트 설치 성공 메시지"]
 
 
 

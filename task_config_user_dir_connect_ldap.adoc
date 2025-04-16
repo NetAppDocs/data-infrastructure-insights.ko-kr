@@ -5,17 +5,8 @@ keywords: collector, configure, LDAP, Active Directory, cloud secure
 summary: 워크로드 보안 LDAP 사용자 디렉토리 수집기 구성 
 ---
 = LDAP Directory Server Collector 구성
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

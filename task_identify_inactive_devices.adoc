@@ -6,13 +6,7 @@ summary: 비활성 장치를 식별하면 장치를 삭제하거나 활성 역�
 ---
 = 비활성 장치 식별
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
 [role="lead"]

@@ -5,17 +5,8 @@ keywords: service map, workloads,
 summary: Kubernetes 워크로드 종속성 및 흐름을 소개하고 네트워크 및 성능 문제를 강조합니다 
 ---
 = Kubernetes 네트워크 성능 모니터링 및 맵
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

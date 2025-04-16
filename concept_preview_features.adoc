@@ -5,17 +5,8 @@ summary: 미리 보기 기능은 제한된 용량으로 사용할 수 있으며,
 keywords: coming soon, preview, 
 ---
 = 피처 및 기능 미리보기
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

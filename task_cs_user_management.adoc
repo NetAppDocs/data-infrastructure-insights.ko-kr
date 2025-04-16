@@ -6,13 +6,7 @@ summary: 워크로드 보안 사용자 계정은 Data Infrastructure Insights �
 ---
 = 사용자 관리
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
 [role="lead"]

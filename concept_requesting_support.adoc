@@ -6,17 +6,12 @@ keywords: support, knowledgebase, documentation, community, chat, videos, help, 
 ---
 = 지원을 요청하는 중입니다
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
+[role="lead"]
+목차:[]
 
-toc::[]
 Data Infrastructure Insights에서 * 도움말 > 지원 * 을 클릭하여 지원 옵션에 액세스할 수 있습니다. 사용 가능한 지원 옵션은 Data Infrastructure Insights Edition에 따라 다릅니다.
 
 image:SupportPageWithLearningCenter.png["지원 페이지"]

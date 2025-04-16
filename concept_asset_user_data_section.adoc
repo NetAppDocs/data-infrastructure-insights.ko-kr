@@ -5,17 +5,8 @@ summary: 자산 페이지의 사용자 데이터 섹션에서 현재 자산에 �
 keywords: asset page, user data, applications, annotations 
 ---
 = 사용자 데이터 섹션
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

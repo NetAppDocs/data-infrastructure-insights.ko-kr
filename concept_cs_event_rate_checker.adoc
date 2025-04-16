@@ -5,17 +5,8 @@ summary: ONTAP SVM DSC를 설치하기 전에 이 스크립트를 실행하여 S
 keywords: event, checker, rate, sizing, cloud secure 
 ---
 = SVM Event Rate Checker(에이전트 크기 지정 가이드)
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

@@ -5,17 +5,8 @@ keywords: monitors, alerts, log, metric
 summary: 성능 또는 인벤토리 임계값과 메트릭 또는 로그 조건에 대해 경고하는 모니터를 생성합니다. 
 ---
 = 시스템 모니터
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]
@@ -24,8 +15,8 @@ Data Infrastructure Insights에는 메트릭 및 로그 모두에 대해 다수�
 
 NOTE: 대부분의 시스템 모니터는 기본적으로 _Paused_상태입니다. 모니터의 _Resume_옵션을 선택하여 시스템 모니터를 활성화할 수 있습니다. Data Collector에서 _고급 카운터 데이터 수집_ 및 _ONTAP EMS 로그 수집 활성화_가 활성화되어 있는지 확인합니다. 이러한 옵션은 ONTAP 데이터 수집기의 _ 고급 구성 _ 에서 찾을 수 있습니다. image:Enable_Log_Monitor_Collection.png["ONTAP에 대한 고급 카운터 및 EMS 로그 수집 활성화"]
 
+목차:[]
 
-toc::[]
 
 
 == 모니터 설명

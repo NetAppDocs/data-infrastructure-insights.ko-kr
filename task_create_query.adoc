@@ -5,17 +5,8 @@ summary: 쿼리를 사용하면 자산과 관심 메트릭을 쉽고 빠르게 �
 keywords: query, queries 
 ---
 = 쿼리 만들기
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

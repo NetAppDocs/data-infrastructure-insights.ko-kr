@@ -5,17 +5,8 @@ summary: 주석을 여러 자산에 자동으로 적용하는 주석 규칙을 �
 keywords: annotate, annotation, rules 
 ---
 = 주석 규칙 작성
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

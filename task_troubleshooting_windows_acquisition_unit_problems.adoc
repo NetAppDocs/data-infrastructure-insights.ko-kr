@@ -5,17 +5,8 @@ summary: Windows의 획득 장치 문제에 대한 문제 해결 팁
 keywords: AU, acquisition unit, trioubleshooting 
 ---
 = Windows의 획득 장치 문제 해결
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

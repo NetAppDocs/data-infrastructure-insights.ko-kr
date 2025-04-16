@@ -5,17 +5,8 @@ summary: 고급 검색 기술 검색을 통해 원하는 자산을 찾을 수 �
 keywords: asset page, objects, search, advanced, alerts 
 ---
 = 자산 및 경고 검색을 위한 힌트 및 팁
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

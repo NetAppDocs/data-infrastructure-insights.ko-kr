@@ -6,13 +6,7 @@ summary: Cloud Insights는 인프라 변경 사항을 추적하여 분석과 문
 ---
 = 인프라 변경 분석
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
 [role="lead"]

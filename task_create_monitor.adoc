@@ -5,17 +5,8 @@ keywords: monitors, alerts, log, metric, system-defined, system, metric,
 summary: 성능 또는 인벤토리 임계값과 메트릭 또는 로그 조건에 대해 경고하는 모니터를 생성합니다. 
 ---
 = 모니터를 통한 경고
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]
@@ -24,8 +15,8 @@ summary: 성능 또는 인벤토리 임계값과 메트릭 또는 로그 조건�
 
 TIP: 모니터 및 경고는 모든 Data Infrastructure Insights 에디션에서 사용할 수 있지만 Basic Edition에는 다음 사항이 적용됩니다. * 한 번에 최대 5개의 사용자 지정 모니터만 활성화할 수 있습니다. 5개 이상의 모니터는 에서 생성되거나 _Paused_state로 이동됩니다. * VMDK, 가상 머신, 호스트 및 데이터 저장소 메트릭 모니터는 지원되지 않습니다. 이러한 메트릭에 대해 생성된 모니터가 있는 경우 일시 중지되고 Basic Edition으로 다운그레이드할 때 다시 시작할 수 없습니다.
 
+목차:[]
 
-toc::[]
 모니터를 사용하면 스토리지, VM, EC2 및 포트와 같은 "인프라" 객체에서 생성되는 메트릭과 Kubernetes, ONTAP 고급 메트릭, Teleraf 플러그인과 같이 "통합" 데이터에 대한 임계값을 설정할 수 있습니다. 이러한 _metric_monitor는 경고 수준 또는 위험 수준 임계값을 초과할 때 사용자에게 경고합니다.
 
 또한 지정된_log events_가 감지되면 경고를 트리거하는 모니터를 생성할 수도 있습니다.

@@ -107,7 +107,7 @@ security login role create -role csrole -cmddirname "vserver name-mapping" -acce
 . SVM에 모든 엑스포트 정책을 나열하십시오.
 +
 ....
-contrail-qa-fas8020::> export-policy rule show -vserver <svm name>
+contrail-qa-fas8020:> export-policy rule show -vserver <svm name>
              Policy          Rule    Access   Client                RO
 Vserver      Name            Index   Protocol Match                 Rule
 ------------ --------------- ------  -------- --------------------- ---------
@@ -126,11 +126,11 @@ svm3        test            3       cifs,    0.0.0.0/0             any
 ....
 . 각 RuleIndex를 지정하여 "cloudsecure_rule"이 Client match인 SVM의 모든 정책 전반에 걸쳐 규칙을 삭제합니다. 워크로드 보안 규칙은 일반적으로 1입니다.
 +
- contrail-qa-fas8020::*> export-policy rule delete -vserver <svm name> -policyname * -ruleindex 1
+ contrail-qa-fas8020:*> export-policy rule delete -vserver <svm name> -policyname * -ruleindex 1
 . 워크로드 보안 규칙이 삭제되었는지 확인합니다(선택적 단계 확인).
 +
 ....
-contrail-qa-fas8020::*> export-policy rule show -vserver <svm name>
+contrail-qa-fas8020:*> export-policy rule show -vserver <svm name>
              Policy          Rule    Access   Client                RO
 Vserver      Name            Index   Protocol Match                 Rule
 ------------ --------------- ------  -------- --------------------- ---------

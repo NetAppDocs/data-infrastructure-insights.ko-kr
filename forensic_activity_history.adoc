@@ -5,15 +5,12 @@ keywords: Forensic, activity history, activity data, history
 summary: 포렌식 활동 기록 데이터 
 ---
 = 법의학 - 모든 활동
-:toc: macro
 :hardbreaks:
 :allow-uri-read: 
-:toc: 
 :nofooter: 
 :icons: font
 :linkattrs: 
 :imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

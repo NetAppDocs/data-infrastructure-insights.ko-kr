@@ -5,17 +5,8 @@ summary: Data Infrastructure Insights 시작하기
 keywords: invite, roles, data collector, acquisition unit, AU 
 ---
 = 데이터 수집을 시작하는 중입니다
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

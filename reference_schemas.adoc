@@ -6,13 +6,7 @@ keywords: dwh, data warehouse, schema, reporting
 ---
 = 데이터 인프라 인사이트 보고용 스키마
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
 [role="lead"]

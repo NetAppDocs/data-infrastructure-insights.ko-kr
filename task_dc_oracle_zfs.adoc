@@ -5,17 +5,8 @@ keywords: data collector, Oracle, ZFS, storage applicance
 summary: Oracle ZFS 데이터 수집기 구성. 
 ---
 = Oracle ZFS Storage Appliance 데이터 수집기
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

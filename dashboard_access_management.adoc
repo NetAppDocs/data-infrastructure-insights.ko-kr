@@ -5,17 +5,9 @@ summary: 사용자가 만드는 대시보드가 공용 대시보드인지 아니
 keywords: dashboard, public, shared, private 
 ---
 = 대시보드 액세스 관리
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
 :nofooter: 
-:toclevels: 1
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

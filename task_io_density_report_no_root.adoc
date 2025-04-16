@@ -5,17 +5,8 @@ summary: 입출력 밀도가 높은 경우 루트 볼륨을 제외하려는 경�
 keywords: NetApp, root volume, high I/O, 
 ---
 = 입출력 밀도 보고서가 내부 데이터 볼륨만 설명하도록 합니다
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]
