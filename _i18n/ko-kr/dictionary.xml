@@ -1783,34 +1783,13 @@
   <block id="7dd7d734df8f68ee69beae1fdbd5a09e" category="paragraph"><block ref="22f03f06815cacacef516ef1743c2ffa" category="inline-link-macro-rx"></block>이 Collector 구성에 대한 지침은 페이지를 참조하십시오.</block>
   <block id="9308a4a251c0b6f099fc32506e41c24d" category="inline-image-macro">워크로드 보안 수집기 오류 추가 세부 정보 링크</block>
   <block id="6a6fcf99d83d56b2429dfa3ef83b50a0" category="paragraph"><block ref="6a6fcf99d83d56b2429dfa3ef83b50a0" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="d7a4e713cb63e4db8a2b51e171793fb0" category="cell">Data Collector는 일정 시간 동안 실행되며 임의 시간 후 중지되며, "오류 메시지: 커넥터가 오류 상태입니다. 서비스 이름: 감사. 장애 원인: 외부 FPolicy 서버가 과부하 상태입니다."</block>
-  <block id="7dc1f3b50a6e66da2ae31d89467342c4" category="cell">수집기가 오류 메시지를 보고합니다: "SVM의 데이터 인터페이스에 연결할 수 있는 커넥터에서 로컬 IP 주소를 찾을 수 없습니다."</block>
   <block id="dfb48a2f78b82c90165015b0e73f7e58" category="inline-link-macro">NetApp 지원</block>
-  <block id="17f836aa8a8fb1af2d3360f0ff3cda15" category="cell">메시지: "[hostname:&lt;IP Address&gt;에 대한 ONTAP 유형을 확인하지 못했습니다. 이유: 스토리지 시스템에 대한 접속 오류 &lt;IP 주소&gt;: 호스트에 연결할 수 없습니다(호스트에 연결할 수 없음)"</block>
-  <block id="17a99211f689747ad8a030b9a5329d3f" category="cell">오류 메시지: "커넥터가 오류 상태입니다. service.name: 감사. 실패 이유: 외부 FPolicy 서버가 종료되었습니다."</block>
   <block id="92803a6fb12b06142e6654f883c9c782" category="inline-link-macro">방화벽 명령을 확인합니다</block>
-  <block id="3ff8715e3293a7f6a746ae2f5903e6fc" category="cell">활동 페이지에 이벤트가 표시되지 않습니다.</block>
-  <block id="bf7317c42b788373d4a9473aa1cc851b" category="cell">SVM Data Collector가 오류 상태이고 오류 메시지가 "에이전트가 수집기에 연결하지 못했습니다"입니다.</block>
-  <block id="3650ca0390cbe1b7b56c0868bc3472e8" category="cell">SVM Data Collector에서 "fpolicy.server.connectError: Node가 FPolicy 서버 "12.195.15.146"과 연결을 설정하지 못했습니다(이유: "Select Timed Out")"라는 오류 메시지를 표시합니다.</block>
-  <block id="19fbc1da6cc1d96ccb997d120b2a91eb" category="cell">SVM/클러스터에서 방화벽이 활성화됩니다. FPolicy 엔진이 FPolicy 서버에 연결할 수 없습니다. 자세한 정보를 얻는 데 사용할 수 있는 ONTAP의 CLI는 이벤트 로그 표시 - 소스 FPolicy입니다. FPolicy는 오류 이벤트 로그 표시 - 소스 FPolicy - 필드 이벤트, 작업, 설명입니다. 자세한 내용은 표시됩니다. <block ref="c2f863dc8aacfc5c321b626bd2f4e2b3" category="inline-link-macro-rx"></block> ONTAP 측면.</block>
-  <block id="9075128206bc41797fb7dcbcce601bd5" category="cell">오류 메시지: “커넥터가 오류 상태입니다. 서비스 이름: 감사. 장애 원인: SVM에서 유효한 데이터 인터페이스(역할: 데이터, 데이터 프로토콜: NFS 또는 CIFS 또는 둘 다, 상태: UP)를 찾을 수 없습니다."</block>
-  <block id="5e50a9740093f324176ef9cdd483d732" category="cell">운영 인터페이스(데이터 및 데이터 프로토콜 역할을 CIFS/NFS로 사용)가 있는지 확인합니다.</block>
-  <block id="42c19ac69d2315e69adceb5440ce4cbe" category="cell">데이터 수집기는 오류 상태가 된 다음 일정 시간이 지나면 실행 중 상태가 되고 다시 오류 상태로 돌아갑니다. 이 주기가 반복됩니다.</block>
-  <block id="2d964cb606454cdebb2ea12ed310dbab" category="cell">커넥터가 오류 상태입니다. 서비스 이름: 감사. 실패 원인: 구성하지 못했습니다(SVM svmname에 대한 정책). 이유: 'FPolicy.policy.scope-modify:"연방" 내의 '포함할' 요소에 대해 잘못된 값이 지정되었습니다.</block>
-  <block id="82e15291d012761eb5c9c9dc7f78a45f" category="cell">공유 이름은 따옴표 없이 지정해야 합니다. ONTAP SVM DSC 구성을 편집하여 공유 이름을 수정하십시오. _INCLUDE 및 EXCLUDE_는 긴 공유 이름 목록에 사용할 수 없습니다. 포함 또는 제외할 공유 수가 많은 경우 대신 볼륨별 필터링을 사용합니다.</block>
-  <block id="195474d2c18505993c684349168eca84" category="cell">클러스터에 사용되지 않는 기존 fpolicies가 있습니다. 워크로드 보안을 설치하기 전에 이러한 작업을 어떻게 해야 합니까?</block>
-  <block id="63deecc7a53992db1697a520a67af0bd" category="cell">워크로드 보안을 활성화한 후 ONTAP 성능에 영향을 미침: 지연 시간이 산발적으로 높고 IOPS가 산발적으로 낮아지는 경우</block>
   <block id="25de52ee95bc069e80aae94425213b53" category="inline-link-macro">1372994</block>
   <block id="a23b44fdff4bcafe023f18c4c11815e0" category="inline-link">1415152</block>
   <block id="1728bd23561a7ad8c0a5ece1af1fc9e1" category="inline-link">1438207</block>
   <block id="36e30a439910e67f76754ab0874aef1b" category="inline-link">1479704</block>
   <block id="7e18cc81c15bd72df03b7461c26d6e4a" category="inline-link">1354659</block>
-  <block id="40e2d40b31fb9557e4b0f6ca0bff37f3" category="cell">워크로드 보안과 함께 ONTAP를 사용할 때 ONTAP에서 지연 시간 문제가 나타날 수 있습니다. 다음과 같은 여러 가지 가능한 이유가 있습니다: <block ref="5b7caa0ef6cc830703e594488c525913" category="inline-link-macro-rx"></block>,<block ref="b861ec6ca06b8e18b9d090dd75b00a26" category="inline-link-rx"></block>,<block ref="a5fade3ab29d18b9b976189fcb9919ed" category="inline-link-rx"></block>, ,<block ref="8899da2205eee6e62b28641da3533e12" category="inline-link-rx"></block><block ref="c9d1d03c1b92a8bbffc617ad493e8619" category="inline-link-rx"></block> . 이러한 모든 문제는 ONTAP 9.13.1 이상에서 수정되었으며 이러한 최신 버전 중 하나를 사용하는 것이 좋습니다.</block>
-  <block id="723f73d5b4ee441851ae64cbfe823522" category="cell">데이터 수집기가 오류 중입니다. 이 오류 메시지를 표시합니다. "오류: 커넥터가 오류 상태입니다. 서비스 이름: 감사. 실패 원인: SVM svm_test에서 정책을 구성하지 못했습니다. 이유: ZAPI 필드에 값이 없습니다. 이벤트 “</block>
-  <block id="0631a8aa5414db88c4ba11ffa8ff89e8" category="cell">NFS 서비스만 구성하여 새로운 SVM으로 시작하십시오. 워크로드 보안에서 ONTAP SVM 데이터 수집기 추가 CIFS는 SVM을 위한 허용 프로토콜로 구성된 동시에 워크로드 보안에서 ONTAP SVM Data Collector를 추가합니다. 워크로드 보안의 데이터 수집기에 오류가 표시될 때까지 기다립니다. SVM에 CIFS 서버가 구성되어 있지 않으므로 왼쪽에 표시된 이 오류는 워크로드 보안으로 표시됩니다. ONTAP SVM 데이터 수집기를 편집하고 CIFS를 허용된 프로토콜로 선택 취소하십시오. 데이터 수집기를 저장합니다. NFS 프로토콜만 활성화된 상태에서 실행됩니다.</block>
-  <block id="1b852bd0522bb1e9abdc5b85f45b2eff" category="cell">Data Collector에 다음과 같은 오류 메시지가 표시됩니다. "오류: 2회 재시도에서 Collector 상태를 확인하지 못했습니다. Collector를 다시 시작하십시오(오류 코드: AGENT008)."</block>
-  <block id="f4635255d83c947a8f5c0873878fce73" category="cell">SVM 모드를 선택하면 Data Collector에서 오류가 발생합니다.</block>
-  <block id="e01a5196bbb9ef19ecab5eb2b9c9a7a8" category="cell">SVM 모드로 연결하는 동안 SVM 관리 IP 대신 클러스터 관리 IP를 사용하여 연결하면 연결 오류가 발생합니다. 올바른 SVM IP를 사용하는지 확인하십시오.</block>
   <block id="489efd89349dbbe0899a6a7b922044da" category="paragraph">그래도 문제가 발생하면 * 도움말 &gt; 지원 * 페이지에 나와 있는 지원 링크를 참조하십시오.</block>
   <block id="f998abe6d6e1433185e617432fa562a7" category="summary">허용된 파일 형식 목록에 파일 확장명을 추가하여 경고를 줄입니다.</block>
   <block id="2b38e4e9371e68c324f4d975aeec0b8b" category="doc">허용된 파일 형식 정책</block>
@@ -3142,7 +3121,6 @@
   <block id="d4c39c48f7a7f001c1903155c3db9ac7" category="paragraph"><block ref="d4c39c48f7a7f001c1903155c3db9ac7" category="inline-image-macro-rx" type="image"></block></block>
   <block id="03df896fc71cd516fdcf44aa699c4933" category="section-title">변수</block>
   <block id="b4b0f4b96c62f1b25f5e8866a7d69ab6" category="paragraph">변수를 사용하면 대시보드의 일부 또는 모든 위젯에 표시된 데이터를 한 번에 변경할 수 있습니다. 하나 이상의 위젯에서 공통 변수를 사용하도록 설정하면 한 곳에서 변경한 경우 각 위젯에 표시된 데이터가 자동으로 업데이트됩니다.</block>
-  <block id="45430f654166211a655017eedb515347" category="paragraph">대시보드 변수는 여러 가지 형식으로 제공되며 서로 다른 필드에서 사용할 수 있으며 명명 규칙을 따라야 합니다. 이러한 개념은 여기에 설명되어 있습니다.</block>
   <block id="e8196d2aa0d7c28cd131d991850f1cea" category="section-title">변수 유형</block>
   <block id="f39814a3ff54979da6b688b16b8244e2" category="paragraph">변수는 다음 형식 중 하나일 수 있습니다.</block>
   <block id="1634ed475d7378ae8b2f149b1a4c43e3" category="list-text">* 특성 *: 오브젝트의 특성 또는 메트릭을 사용하여 필터링합니다</block>
@@ -12246,14 +12224,10 @@
   <block id="3d9254358b13bcf7d44afcf258f73fd7" category="list-text">VMware ESXi 6.5.0 빌드 - 5310538</block>
   <block id="f1bbfc67a175810e7ac8c661d6b4a2cc" category="list-text">VMware ESXi 8.0.1 빌드 - 21495797</block>
   <block id="06450b55dd990fe8530bcc47f2e2c522" category="list-text">VMware vCenter Server 8.0.0 빌드 - 21457384</block>
-  <block id="97603db27713a81e2c84405a5352db03" category="cell">액세스 거부 기능이 활성화된 경우 데이터 수집기에 "커넥터가 오류 상태입니다. 서비스 이름: 감사. 실패 이유: SVM test_svm에서 FPolicy를 구성하지 못했습니다. 사유: 사용자가 승인되지 않았습니다."</block>
-  <block id="56cad8f9ba4de10172f57856721882b0" category="cell">사용자에게 액세스 거부 기능에 필요한 REST 권한이 없을 수 있습니다. 의 지침에 따라 <block ref="acf32226210d6c3eeee22de70798517f" category="inline-link-macro-rx"></block>권한을 설정하십시오. 권한이 설정되면 수집기를 다시 시작합니다.</block>
-  <block id="7f4e990617f489c9ef64bd60d50bbe6b" category="paragraph">ONTAP의 이벤트 발생률은 상담원 박스가 처리할 수 있는 것보다 훨씬 높았습니다. 따라서 연결이 종료되었습니다.</block>
   <block id="6cbdb7b222e25139b815f11a8bf316b0" category="paragraph">연결이 끊겼을 때 CloudSecure의 최대 트래픽을 확인합니다. 이는 * CloudSecure &gt; Activity Forensics &gt; All Activity * 페이지에서 확인할 수 있습니다.</block>
   <block id="fb318561d723fea4bf5cfc32c9f76869" category="paragraph">최대 집계된 트래픽이 Agent Box에서 처리할 수 있는 트래픽보다 높은 경우 Agent Box에서 Collector 배포를 사이징하는 방법에 대한 이벤트 속도 검사기 페이지를 참조하십시오.</block>
   <block id="df5d9f6706ba32a91dad936fdd8c31ec" category="paragraph">Agent가 2021년 3월 4일 이전에 Agent 상자에 설치된 경우 Agent 상자에서 다음 명령을 실행합니다.</block>
   <block id="00b9b87b6684a6049795f956c8ffb2a5" category="paragraph">크기 조정 후 UI에서 Collector를 다시 시작합니다.</block>
-  <block id="190f101017d4849e32ad24c85a037484" category="paragraph">이는 ONTAP 측의 네트워킹 문제 때문일 가능성이 가장 높습니다. 다음 단계를 따르십시오.</block>
   <block id="b2e0ae5db392da4135a0d6d4c1790759" category="list-text">SVM의 연결을 차단하는 관리 리소스나 SVM 데이터 거짓에 방화벽이 없는지 확인합니다.</block>
   <block id="1750d9cfda79066e3c52899aa692608a" category="list-text">클러스터 관리 IP를 통해 SVM을 추가할 때는 SVM의 데이터 lif 및 관리 lif가 Agent VM에서 Pingable인지 확인하십시오. 문제가 발생한 경우, lif에 대한 게이트웨이, 넷마스크 및 경로를 확인하십시오.</block>
   <block id="391d354d5b5d9326eec673c4983e3e05" category="paragraph">클러스터 관리 IP를 사용하여 ssh를 통해 클러스터에 로그인하고 에이전트 IP를 Ping할 수도 있습니다. 에이전트 IP가 Ping할 수 있는지 확인합니다.</block>
@@ -12292,12 +12266,10 @@
   <block id="4df741dad2f6a6c39f5a70a091533287" category="list-text">Agent에 연결된 데이터 소스 수집기의 수를 확인합니다.</block>
   <block id="d3def8792ee2d2f60ea9dd540351d13c" category="list-text">또한 UI의 "모든 활동" 페이지에서 데이터 흐름 속도도 확인합니다.</block>
   <block id="99a207238eac17ccccaa337b350f2c5e" category="list-text">초당 작업 수가 상당히 많은 경우 다른 에이전트를 설치하고 일부 데이터 소스 수집기를 새 에이전트로 이동합니다.</block>
-  <block id="bf084a2e9e043e416efdf5762e90830e" category="paragraph">이 문제는 일반적으로 다음 시나리오에서 발생합니다.</block>
   <block id="15e5b3ba5eaf37b26361f3e2a868ae94" category="list-text">추가된 데이터 수집기가 여러 개 있습니다.</block>
   <block id="e7b379f8d8ee16ec17e9758c65babb58" category="list-text">이러한 동작을 보여주는 데이터 수집기는 이러한 데이터 수집기에 1개의 SVM을 추가합니다. 즉, 2개 이상의 데이터 수집기가 1개의 SVM에 연결됩니다.</block>
   <block id="778e500175319f00ec332bd346fedb28" category="list-text">1개의 데이터 수집기가 1개의 SVM에만 연결되도록 합니다.</block>
   <block id="12a944dc1d44e8ee8192cd638cb95cb4" category="list-text">동일한 SVM에 연결된 다른 데이터 수집기를 삭제합니다.</block>
-  <block id="5c81db005bfd2b3f9c22268bec51a515" category="paragraph">사용되지 않는 기존 FPolicy 설정이 연결되지 않은 경우에도 모두 삭제하는 것이 좋습니다. 워크로드 보안에서는 접두사 "cloudsecure_"를 사용하여 FPolicy를 생성합니다. 사용되지 않는 다른 모든 FPolicy 구성은 삭제할 수 있습니다.</block>
   <block id="ac5c1a90c90193c22745b697a0f6d000" category="paragraph">FPolicy 목록을 표시하는 CLI 명령:</block>
   <block id="7c275595b37d9736259910a2cee23932" category="paragraph">FPolicy 구성을 삭제하는 단계:</block>
   <block id="f2e1c8f11a6d114e56889c093ddb4738" category="list-text">데이터 수집기 페이지에서 오류가 있는 데이터 수집기의 오른쪽으로 스크롤한 다음 3개의 점 메뉴를 클릭합니다. 편집 _ 을(를) 선택합니다. 데이터 수집기의 암호를 다시 입력합니다. Save _ 버튼을 눌러 데이터 수집기를 저장합니다. Data Collector가 다시 시작되고 오류가 해결되어야 합니다.</block>
@@ -12347,4 +12319,45 @@
   <block id="d41b70ca456515e9579f88a5bc4b81f5" category="paragraph">Number(번호): 주석을 할당하는 사용자가 숫자를 입력할 수 있는 필드를 만듭니다. 예를 들어, 주석 유형이 "바닥"인 경우 사용자는 "숫자"의 값 유형을 선택하고 바닥 번호를 입력할 수 있습니다.</block>
   <block id="9dc3b5c01c2c832a96e1c6c19e498029" category="paragraph">텍스트: 자유 형식 텍스트를 허용하는 필드를 만듭니다. 예를 들어, 주석 유형으로 "Language"를 입력하고 값 유형으로 "Text"를 선택한 다음 언어를 값으로 입력할 수 있습니다.</block>
   <block id="bf446d389b04278c2780f587bb4b6e54" category="paragraph">오류가 발생한 경우 Installed Data Collectors 페이지의 _Status_column에서 _more detail_을 클릭하여 오류에 대한 세부 정보를 확인할 수 있습니다.</block>
+  <block id="18ecc77d71add8ff4b0a4dd5d38432a5" category="section-title">시간 범위를 확대합니다</block>
+  <block id="b8a17d6bb00e8b3257bbc4ccce8f2aeb" category="paragraph">시계열 위젯(선, 스플라인, 영역, 누적 영역) 또는 랜딩 페이지의 그래프를 보는 동안 마우스를 그래프 위로 끌어 확대합니다. 그런 다음 화면 오른쪽 위에서 다른 페이지의 그래프에 잠긴 시간 범위의 데이터가 반영되도록 시간 범위를 잠글 수 있습니다. 잠금을 해제하려면 목록에서 다른 시간 범위를 선택합니다.</block>
+  <block id="f4d7fcf5873b7a09e82de6fe44f2a436" category="section-title">선 위젯의 이상 경계</block>
+  <block id="d3e0c8a1ecd8c84ddaa334c2d9827e7f" category="paragraph">대시보드나 랜딩 페이지에 선 또는 스플라인 차트 위젯을 포함할 때 데이터에 대한 * 예상 범위 * 의 컨텍스트에서 차트를 보도록 선택할 수 있습니다. 이를 데이터 패턴의 이상 징후를 찾는 것으로 생각할 수 있습니다.</block>
+  <block id="01b92f51612a1570641a4accf27354f1" category="paragraph">DII는 계절별 데이터(시간별 또는 매일)를 사용하여 주어진 시간에 데이터가 속하는 위치의 상한 및 하한을 설정합니다. 데이터 스파이크가 예상 범위보다 높거나 낮은 경우 차트에서는 이를 변형으로 강조 표시합니다.</block>
+  <block id="99c3329d5d99881331bb15f97799f6be" category="inline-image-macro">이상 범위 예 - 실제 데이터가 예상 바운드(width)를 초과하는 스파이크를 보여 줍니다</block>
+  <block id="47a7aeee60dd8a61f9f66ca35aeae7f9" category="paragraph"><block ref="47a7aeee60dd8a61f9f66ca35aeae7f9" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6e98803189caf8d600ac277ee26488e8" category="paragraph">이상 경계를 보려면 위젯을 편집하고 _Show Anomaly Bounds_를 선택합니다. 다음 두 가지 감지 알고리즘 중 하나를 선택할 수 있습니다.</block>
+  <block id="4516a972134716668d9d005af29ef139" category="list-text">* Adaptive Detector * 는 변화에 신속하게 적응하여 세부 조사에 도움이 됩니다.</block>
+  <block id="7e7aac57571a8828ad25658e8d2d2521" category="list-text">* Smooth Detector * 는 노이즈와 위양성을 최소화하여 단기적인 변동을 필터링하면서 상당한 변화를 감지합니다.</block>
+  <block id="6cb8858a82e1e2e2845f25162ba82f87" category="paragraph">또한 _Hourly_또는 _Daily_Seasonality를 표시하고 감지의 민감도를 설정할 수 있습니다. _High_sensitivity는 더 많은 경계 교차점을 감지하며, _Low_sensitivity는 적게 감지합니다.</block>
+  <block id="31187a5ee059290053d0f82340837242" category="inline-image-macro">탐지 알고리즘, 계절성 및 민감도를 포함한 이상 범위에 대한 설정입니다</block>
+  <block id="2ffe23ad54a8e26e74e3f37be728dbeb" category="paragraph"><block ref="2ffe23ad54a8e26e74e3f37be728dbeb" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ef5c52fd00b778503c506ad346c37295" category="paragraph">차트가 한 줄을 표시하도록 설정된 경우에만 예상 범위를 볼 수 있습니다. 그룹화 기준 설정 또는 필터에 여러 줄이 표시되는 경우 또는 위젯에 대해 여러 쿼리를 설정한 경우 예상 범위를 표시하는 옵션이 비활성화됩니다.</block>
+  <block id="793246caa2d17de182541cbff17fbabd" category="inline-image-macro">위의 스파이크를 표시하는 예상 경계, 너비 = 300</block>
+  <block id="ea696d4ab8fb62865dfbe3741a7a5d98" category="paragraph"><block ref="ea696d4ab8fb62865dfbe3741a7a5d98" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="182ce87180fe5b09fa1710d1b249ecf0" category="paragraph">알려진 문제 및 해결 방법은 아래에 설명되어 있습니다.</block>
+  <block id="23d35f04a6305a542c62e0793452c9ad" category="paragraph">* 문제: * Data Collector가 일정 시간 동안 실행되고 임의의 시간 후에 중지되며 "오류 메시지: 커넥터가 오류 상태입니다. 서비스 이름: 감사. 장애 원인: 외부 FPolicy 서버가 과부하 상태입니다."</block>
+  <block id="85501d33ecd840c5761971c7b55e894c" category="paragraph">*이 방법을 시도해 보십시오:* ONTAP의 이벤트 발생률이 Agent Box가 처리할 수 있는 것보다 훨씬 높았습니다. 따라서 연결이 종료되었습니다.</block>
+  <block id="8dec88cb91cbe8919968ad8546e29d29" category="paragraph">* 문제: * 수집기는 오류 메시지를 보고합니다: "SVM의 데이터 인터페이스에 도달할 수 있는 커넥터에 로컬 IP 주소를 찾을 수 없습니다." *이 방법을 시도해 보십시오:* ONTAP 측의 네트워킹 문제 때문일 수 있습니다. 다음 단계를 따르십시오.</block>
+  <block id="d14f3c628a090f279b8f9c00766e85cc" category="paragraph">* 문제: * 메시지: " ONTAP[hostname:&lt;IP Address&gt;. 이유: 스토리지 시스템 &lt;IP Address&gt;에 대한 연결 오류: 호스트에 연결할 수 없습니다(호스트에 연결할 수 없음)" * 다음을 시도하십시오. *</block>
+  <block id="4a8da97869c1ccb5f0c010bc73fcb940" category="paragraph">* 문제: * 오류 메시지: "커넥터가 오류 상태입니다. service.name: 감사. 실패 이유: 외부 FPolicy 서버가 종료되었습니다." * 사용해 보세요. *</block>
+  <block id="4b198a0cd43be6fc081b4995826e7672" category="paragraph">* 문제 : * 활동 페이지에 이벤트가 표시되지 않습니다. * 사용해 보세요. *</block>
+  <block id="e45fdd2145016f7fcc29b179b255183e" category="paragraph">* 문제: * SVM Data Collector가 오류 상태이고 오류 메시지는 "Agent가 Collector에 연결하지 못했습니다."입니다. * 다음을 시도하십시오. *</block>
+  <block id="8a1416995d314617de12ed7aa4bd2467" category="paragraph">* 문제: * SVM Data Collector는 "fpolicy.server.connectError: 노드가 FPolicy 서버 "12.195.15.146"과의 연결을 설정하지 못했습니다"(이유: "시간 초과 선택")" 오류 메시지를 표시합니다. * 다음을 시도하십시오. * SVM/클러스터에서 방화벽이 활성화됩니다. FPolicy 엔진이 FPolicy 서버에 연결할 수 없습니다. 자세한 정보를 얻는 데 사용할 수 있는 ONTAP의 CLI는 다음과 같습니다.</block>
+  <block id="0b0c14625851c63aa1977699a0bb729f" category="paragraph">* 문제: * 오류 메시지: "커넥터가 오류 상태입니다. 서비스 이름: 감사. 장애 원인: SVM에서 유효한 데이터 인터페이스(역할: 데이터, 데이터 프로토콜: NFS 또는 CIFS 또는 둘 다, 상태: UP)를 찾을 수 없습니다." * 이 작업을 시도하십시오. * 운영 인터페이스가 있는지 확인하십시오(CIFS/NFS로서 데이터 및 데이터 프로토콜 역할을 합니다.</block>
+  <block id="b36fd6f11853dfd44a57310a6054c451" category="paragraph">* 문제 : * 데이터 수집기가 오류 상태로 들어간 다음 잠시 후 실행 상태로 돌아간 다음 다시 오류로 돌아갑니다. 이 주기가 반복됩니다. *이 방법을 시도해 보십시오:** 이것은 일반적으로 다음 시나리오에서 발생합니다:</block>
+  <block id="5e34f5db201b138420b061f08cbe11af" category="paragraph">* 문제: * 커넥터가 오류 상태입니다. 서비스 이름: 감사. 실패 원인: 구성하지 못했습니다(SVM svmname에 대한 정책). 이유: 'FPolicy.policy의 'shares-to-include' 요소에 잘못된 값이 지정되었습니다. scope-modify: "Federal" * 시도하십시오. * * 공유 이름은 따옴표 없이 지정해야 합니다. ONTAP SVM DSC 구성을 편집하여 공유 이름을 수정하십시오.</block>
+  <block id="af601d5fafb52a70ba0c4c8d49f7d8ad" category="paragraph">_INCLUDE 및 EXCLUDE_는 긴 공유 이름 목록에 사용할 수 없습니다. 포함 또는 제외할 공유 수가 많은 경우 대신 볼륨별 필터링을 사용합니다.</block>
+  <block id="e89b27e0a4f2f1144fe6db2c891631a7" category="paragraph">* 문제: * 클러스터에 사용되지 않는 기존 fpolicies가 있습니다. 워크로드 보안을 설치하기 전에 이러한 작업을 어떻게 해야 합니까? *이 방법을 시도해 보십시오. * 연결이 끊긴 상태라도 기존의 사용되지 않는 FPolicy 설정을 모두 삭제하는 것이 좋습니다. 워크로드 보안에서는 접두사 "cloudsecure_"를 사용하여 FPolicy를 생성합니다. 사용되지 않는 다른 모든 FPolicy 구성은 삭제할 수 있습니다.</block>
+  <block id="fde38d88f8244f8a7b724b900bd7e422" category="paragraph">| 워크로드 보안을 활성화한 후 ONTAP 성능에 영향을 미칩니다. 지연 시간이 급격하게 증가하고 IOPS가 갑자기 낮아졌습니다. | 워크로드 보안과 함께 ONTAP를 사용하는 동안 ONTAP에서 지연 시간 문제가 발생할 수 있습니다. 다음과 같은 여러 가지 가능한 이유가 있습니다: <block ref="5b7caa0ef6cc830703e594488c525913" category="inline-link-macro-rx"></block>,<block ref="b861ec6ca06b8e18b9d090dd75b00a26" category="inline-link-rx"></block>,<block ref="a5fade3ab29d18b9b976189fcb9919ed" category="inline-link-rx"></block>, ,<block ref="8899da2205eee6e62b28641da3533e12" category="inline-link-rx"></block><block ref="c9d1d03c1b92a8bbffc617ad493e8619" category="inline-link-rx"></block> . 이러한 모든 문제는 ONTAP 9.13.1 이상에서 수정되었으며 이러한 최신 버전 중 하나를 사용하는 것이 좋습니다.</block>
+  <block id="392c3c278e79c8048452de58dff9fd56" category="paragraph">* 문제: * 데이터 수집기가 오류 상태입니다. 이 오류 메시지를 표시합니다. "오류: 커넥터가 오류 상태입니다. 서비스 이름: 감사. 실패 원인: SVM svm_test에서 정책을 구성하지 못했습니다. 이유: ZAPI 필드에 값이 없습니다. 이벤트 "* 이것을 시도하십시오:*</block>
+  <block id="bcb838cbc5adbbb585ffd4e501e4b07b" category="list-text">NFS 서비스만 구성하여 새로운 SVM으로 시작하십시오.</block>
+  <block id="55007273037aed04d07e70999d5153b2" category="list-text">워크로드 보안에서 ONTAP SVM 데이터 수집기 추가 CIFS는 SVM을 위한 허용 프로토콜로 구성된 동시에 워크로드 보안에서 ONTAP SVM Data Collector를 추가합니다.</block>
+  <block id="c5e48108c2128269b181c77142f6e2c0" category="list-text">워크로드 보안의 데이터 수집기에 오류가 표시될 때까지 기다립니다.</block>
+  <block id="bc71f49bfafa6a1dbe64216acd61b88e" category="list-text">SVM에 CIFS 서버가 구성되어 있지 않으므로 왼쪽에 표시된 이 오류는 워크로드 보안으로 표시됩니다.</block>
+  <block id="10b2e2acac1b3fff1d033229848652e2" category="list-text">ONTAP SVM 데이터 수집기를 편집하고 CIFS를 허용된 프로토콜로 선택 취소하십시오. 데이터 수집기를 저장합니다. NFS 프로토콜만 활성화된 상태에서 실행됩니다.</block>
+  <block id="c6ac5b768bf8fa1cdc43218fe66da4f4" category="paragraph">* 문제: * 데이터 수집기는 오류 메시지를 표시합니다: "오류: 2회 재시도 내에 수집기의 상태를 확인하지 못했습니다. 수집기를 다시 시작하십시오(오류 코드: AGENT008)". * 시험: *</block>
+  <block id="8c5a140b8e26d5573c3346f7da21fdd0" category="paragraph">* 문제: * SVM 모드가 선택되었을 때 Data Collector에서 오류가 발생했습니다. * 다음을 시도하십시오. * SVM 모드에서 연결하는 동안 SVM 관리 IP 대신 클러스터 관리 IP를 사용하여 연결하면 연결 오류가 발생합니다. 올바른 SVM IP를 사용하는지 확인하십시오.</block>
+  <block id="55be0ee113a903248473234512ad1ba6" category="paragraph">* 문제: * 액세스 거부 기능이 활성화된 경우 데이터 수집기에 오류 메시지가 표시됩니다. "커넥터가 오류 상태입니다. 서비스 이름: 감사. 실패 이유: SVM test_svm에서 FPolicy를 구성하지 못했습니다. 사유: 사용자가 승인되지 않았습니다." *이 방법을 시도해 보십시오:* 사용자에게 액세스 거부 기능에 필요한 REST 권한이 없을 수 있습니다. 의 지침에 따라 <block ref="acf32226210d6c3eeee22de70798517f" category="inline-link-macro-rx"></block>권한을 설정하십시오.</block>
+  <block id="c9d2ff4bbf3f4496b0b55e66133b6e56" category="paragraph">권한이 설정되면 수집기를 다시 시작합니다.</block>
 </blocks>
