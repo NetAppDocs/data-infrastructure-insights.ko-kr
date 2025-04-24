@@ -3328,10 +3328,7 @@
   <block id="0c934902725716ff33a000cef8df7331" category="section-title">대시보드 컨트롤</block>
   <block id="d1a06af586beabfef382d9a9a1b7cbe4" category="paragraph">대시보드 화면에는 다음과 같은 몇 가지 컨트롤이 있습니다.</block>
   <block id="e1cee0b7833b8d6d0c9830c0c359d32a" category="list-text">* 시간 선택기 *: 최근 15분에서 최근 30일까지 또는 최대 31일의 사용자 지정 시간 범위에 대한 대시보드 데이터를 볼 수 있습니다. 개별 위젯에서 이 전역 시간 범위를 재정의할 수 있습니다.</block>
-  <block id="3f5ac045dae0be24b305231f2e8120a3" category="list-text">* 편집 * 버튼: 이 버튼을 선택하면 편집 모드가 활성화되며, 이 모드를 통해 대시보드를 변경할 수 있습니다. 새 대시보드는 기본적으로 편집 모드로 열립니다.</block>
   <block id="d8de249d2c603118f28d5a4a162472de" category="list-text">* 저장 * 버튼: 대시보드를 저장하거나 삭제할 수 있습니다.</block>
-  <block id="2d9c0480416024820f428b9656ea2e60" category="paragraph">Save * 를 클릭하기 전에 새 이름을 입력하여 현재 대시보드의 이름을 바꿀 수 있습니다.</block>
-  <block id="4c91165c490e5fa72e8f2d18eb8d690c" category="list-text">* 위젯 추가 * 버튼: 대시보드에 표, 차트 또는 기타 위젯을 원하는 수만큼 추가할 수 있습니다.</block>
   <block id="9b07dfa776e7e85e1de7a9e7a5c3bb2b" category="paragraph">위젯의 크기를 조정하고 대시보드 내의 다른 위치로 재배치하여 현재 필요에 따라 데이터를 가장 잘 볼 수 있습니다.</block>
   <block id="e861414ecdd46ceedcfd68cb18af35a1" category="section-title">위젯 유형</block>
   <block id="241e81a1429afe00dffbd10c52eb5d1a" category="paragraph">다음 위젯 유형 중에서 선택할 수 있습니다.</block>
@@ -12229,7 +12226,6 @@
   <block id="b2e0ae5db392da4135a0d6d4c1790759" category="list-text">SVM의 연결을 차단하는 관리 리소스나 SVM 데이터 거짓에 방화벽이 없는지 확인합니다.</block>
   <block id="1750d9cfda79066e3c52899aa692608a" category="list-text">클러스터 관리 IP를 통해 SVM을 추가할 때는 SVM의 데이터 lif 및 관리 lif가 Agent VM에서 Pingable인지 확인하십시오. 문제가 발생한 경우, lif에 대한 게이트웨이, 넷마스크 및 경로를 확인하십시오.</block>
   <block id="391d354d5b5d9326eec673c4983e3e05" category="paragraph">클러스터 관리 IP를 사용하여 ssh를 통해 클러스터에 로그인하고 에이전트 IP를 Ping할 수도 있습니다. 에이전트 IP가 Ping할 수 있는지 확인합니다.</block>
-  <block id="e7ba86f45d7d15de38f2537adf2afd68" category="paragraph">_network ping -vserver &lt;vserver name&gt; -destination &lt;Agent IP&gt; -lif &lt;Lif Name&gt; -show -detail_</block>
   <block id="ed6479f97f72e2c84fce83c6e84134fa" category="paragraph">Ping할 수 없는 경우 ONTAP의 네트워크 설정이 올바른지 확인하여 Agent 시스템이 Ping할 수 있도록 합니다.</block>
   <block id="83d96b0695c5db59120643aeaf92968a" category="list-text">클러스터 IP를 통해 연결을 시도했지만 작동하지 않는 경우 SVM IP를 통해 직접 연결해 보십시오. SVM IP를 통해 연결하는 단계는 위 섹션을 참조하십시오.</block>
   <block id="e91b7ee623b377e0be2de8ac35124ec3" category="list-text">SVM IP 및 vsadmin 자격 증명을 통해 수집기를 추가하는 동안 SVM LIF에 데이터 플러스 관리 역할이 활성화되어 있는지 확인하십시오. 이 경우 SVM LIF로 ping을 수행할 수 있지만 SVM LIF에 대한 SSH는 작동하지 않습니다. SVM 관리 전용 LIF를 생성한 후 이 SVM 관리 전용 LIF를 통해 연결을 시도하십시오.</block>
@@ -12257,7 +12253,6 @@
   <block id="cf2a826b3dbe4d26f14753b4a312c007" category="list-text">동일한 SVM이 두 개의 서로 다른 워크로드 보안 환경(테넌트)에 추가된 경우, 마지막 SVM은 항상 성공합니다. 두 번째 수집기는 FPolicy를 자체 IP 주소로 구성하고 첫 번째 것을 시작합니다. 따라서 첫 번째 수집기는 이벤트 수신을 중지하고 "감사" 서비스가 오류 상태로 전환됩니다. 이를 방지하려면 각 SVM을 단일 환경에서 구성합니다.</block>
   <block id="5db652447c417b7edd8a6faf30683ee0" category="list-text">이 오류는 서비스 정책이 올바르게 구성되지 않은 경우에도 발생할 수 있습니다. ONTAP 9.8 이상에서는 데이터 소스 수집기에 연결하기 위해 데이터 서비스 데이터 서비스 데이터(NFS 및/또는 데이터 CIFS)와 함께 데이터 FPolicy 클라이언트 서비스가 필요합니다. 또한 데이터-FPolicy-클라이언트 서비스는 모니터링되는 SVM에 대한 데이터 거짓과 연결되어야 합니다.</block>
   <block id="9fbb9e6888c2aef7254ccac7160ec144" category="list-text">ONTAP Collector가 "실행 중" 상태인지 확인합니다. 예 인 경우 일부 파일을 열어 CIFS 클라이언트 VM에서 일부 CIFS 이벤트가 생성되는지 확인합니다.</block>
-  <block id="30eacabf37bbb4653e7ca981b2801051" category="list-text">활동이 표시되지 않는 경우 SVM에 로그인하고 다음 명령을 입력하십시오. _&lt;SVM&gt; 이벤트 로그에 -소스 FPolicy_FPolicy와 관련된 오류가 없는지 확인하십시오.</block>
   <block id="a936f63883c022699e3a5ae08232ef26" category="list-text">활동이 표시되지 않는 경우 SVM에 로그인하십시오. 다음 명령을 입력합니다.</block>
   <block id="c838f9e60ab91d3bf9f4ae53696f31dc" category="paragraph">접두사 "cloudsecure_"로 명명된 FPolicy 정책이 설정되어 있고 상태가 "on"인지 확인합니다. 설정되지 않으면 Agent가 SVM에서 명령을 실행할 수 없을 가능성이 높습니다. 페이지 시작 부분에 설명된 모든 필수 구성 요소가 준수되었는지 확인하십시오.</block>
   <block id="2b7249a3eb66724971d86b79578b4015" category="list-text">대부분의 경우 Agent가 오버로드되어 데이터 소스 수집기에 연결할 수 없습니다.</block>
@@ -12339,7 +12334,6 @@
   <block id="e45fdd2145016f7fcc29b179b255183e" category="paragraph">* 문제: * SVM Data Collector가 오류 상태이고 오류 메시지는 "Agent가 Collector에 연결하지 못했습니다."입니다. * 다음을 시도하십시오. *</block>
   <block id="8a1416995d314617de12ed7aa4bd2467" category="paragraph">* 문제: * SVM Data Collector는 "fpolicy.server.connectError: 노드가 FPolicy 서버 "12.195.15.146"과의 연결을 설정하지 못했습니다"(이유: "시간 초과 선택")" 오류 메시지를 표시합니다. * 다음을 시도하십시오. * SVM/클러스터에서 방화벽이 활성화됩니다. FPolicy 엔진이 FPolicy 서버에 연결할 수 없습니다. 자세한 정보를 얻는 데 사용할 수 있는 ONTAP의 CLI는 다음과 같습니다.</block>
   <block id="0b0c14625851c63aa1977699a0bb729f" category="paragraph">* 문제: * 오류 메시지: "커넥터가 오류 상태입니다. 서비스 이름: 감사. 장애 원인: SVM에서 유효한 데이터 인터페이스(역할: 데이터, 데이터 프로토콜: NFS 또는 CIFS 또는 둘 다, 상태: UP)를 찾을 수 없습니다." * 이 작업을 시도하십시오. * 운영 인터페이스가 있는지 확인하십시오(CIFS/NFS로서 데이터 및 데이터 프로토콜 역할을 합니다.</block>
-  <block id="b36fd6f11853dfd44a57310a6054c451" category="paragraph">* 문제 : * 데이터 수집기가 오류 상태로 들어간 다음 잠시 후 실행 상태로 돌아간 다음 다시 오류로 돌아갑니다. 이 주기가 반복됩니다. *이 방법을 시도해 보십시오:** 이것은 일반적으로 다음 시나리오에서 발생합니다:</block>
   <block id="5e34f5db201b138420b061f08cbe11af" category="paragraph">* 문제: * 커넥터가 오류 상태입니다. 서비스 이름: 감사. 실패 원인: 구성하지 못했습니다(SVM svmname에 대한 정책). 이유: 'FPolicy.policy의 'shares-to-include' 요소에 잘못된 값이 지정되었습니다. scope-modify: "Federal" * 시도하십시오. * * 공유 이름은 따옴표 없이 지정해야 합니다. ONTAP SVM DSC 구성을 편집하여 공유 이름을 수정하십시오.</block>
   <block id="af601d5fafb52a70ba0c4c8d49f7d8ad" category="paragraph">_INCLUDE 및 EXCLUDE_는 긴 공유 이름 목록에 사용할 수 없습니다. 포함 또는 제외할 공유 수가 많은 경우 대신 볼륨별 필터링을 사용합니다.</block>
   <block id="e89b27e0a4f2f1144fe6db2c891631a7" category="paragraph">* 문제: * 클러스터에 사용되지 않는 기존 fpolicies가 있습니다. 워크로드 보안을 설치하기 전에 이러한 작업을 어떻게 해야 합니까? *이 방법을 시도해 보십시오. * 연결이 끊긴 상태라도 기존의 사용되지 않는 FPolicy 설정을 모두 삭제하는 것이 좋습니다. 워크로드 보안에서는 접두사 "cloudsecure_"를 사용하여 FPolicy를 생성합니다. 사용되지 않는 다른 모든 FPolicy 구성은 삭제할 수 있습니다.</block>
@@ -12350,7 +12344,6 @@
   <block id="c5e48108c2128269b181c77142f6e2c0" category="list-text">워크로드 보안의 데이터 수집기에 오류가 표시될 때까지 기다립니다.</block>
   <block id="bc71f49bfafa6a1dbe64216acd61b88e" category="list-text">SVM에 CIFS 서버가 구성되어 있지 않으므로 왼쪽에 표시된 이 오류는 워크로드 보안으로 표시됩니다.</block>
   <block id="10b2e2acac1b3fff1d033229848652e2" category="list-text">ONTAP SVM 데이터 수집기를 편집하고 CIFS를 허용된 프로토콜로 선택 취소하십시오. 데이터 수집기를 저장합니다. NFS 프로토콜만 활성화된 상태에서 실행됩니다.</block>
-  <block id="c6ac5b768bf8fa1cdc43218fe66da4f4" category="paragraph">* 문제: * 데이터 수집기는 오류 메시지를 표시합니다: "오류: 2회 재시도 내에 수집기의 상태를 확인하지 못했습니다. 수집기를 다시 시작하십시오(오류 코드: AGENT008)". * 시험: *</block>
   <block id="8c5a140b8e26d5573c3346f7da21fdd0" category="paragraph">* 문제: * SVM 모드가 선택되었을 때 Data Collector에서 오류가 발생했습니다. * 다음을 시도하십시오. * SVM 모드에서 연결하는 동안 SVM 관리 IP 대신 클러스터 관리 IP를 사용하여 연결하면 연결 오류가 발생합니다. 올바른 SVM IP를 사용하는지 확인하십시오.</block>
   <block id="55be0ee113a903248473234512ad1ba6" category="paragraph">* 문제: * 액세스 거부 기능이 활성화된 경우 데이터 수집기에 오류 메시지가 표시됩니다. "커넥터가 오류 상태입니다. 서비스 이름: 감사. 실패 이유: SVM test_svm에서 FPolicy를 구성하지 못했습니다. 사유: 사용자가 승인되지 않았습니다." *이 방법을 시도해 보십시오:* 사용자에게 액세스 거부 기능에 필요한 REST 권한이 없을 수 있습니다. 의 지침에 따라 <block ref="acf32226210d6c3eeee22de70798517f" category="inline-link-macro-rx"></block>권한을 설정하십시오.</block>
   <block id="c9d2ff4bbf3f4496b0b55e66133b6e56" category="paragraph">권한이 설정되면 수집기를 다시 시작합니다.</block>
@@ -12360,4 +12353,30 @@
   <block id="c7ce8523ab71d2ab79f0a54681bde5c6" category="paragraph">ZFS 어레이가 너무 오래되어 REST API를 지원할 수 없습니다. AK 2014.1.3.0은 최초의 REST API를 지원하는 ZFS OS 릴리스였으며, 일부 ZFS 어플라이언스가 이 버전으로 업그레이드할 수 있는 것은 아닙니다.</block>
   <block id="0be262a01ffd53cb1827d924de37e376" category="paragraph">관리자 사용자가 사용할 수 있는 향상된 REST API 사용 추적을 통해 보안 상태를 강화하고 리소스 관리를 간소화합니다. API 사용량 추적을 사용하면 사용 중인 API 토큰, 사용 IP 주소 및 생성된 트래픽 볼륨을 확인할 수 있습니다. 토큰을 특정 IP 주소 및 사용 수준에 연결하면 시스템 액세스 및 사용 추세에 대한 강력한 통찰력을 얻을 수 있으므로 안전하고 효율적인 환경을 유지하고 원활한 운영을 유지하는 데 필요한 제어 기능을 제공합니다.</block>
   <block id="8261d0e1521d30da1b36761d508cb245" category="paragraph">API 사용량을 보려면 * 관측성 &gt; 관리자 &gt; API 액세스 * 로 이동하고 _View API Usage _ 를 선택합니다. 이 API는 DII 관측성 API에만 사용할 수 있으며 워크로드 보안에는 적용되지 않습니다.</block>
+  <block id="d4e6618283d16f29ba2c9d35766c45a1" category="paragraph">저장 메뉴에서 * 이름 바꾸기 * 를 클릭하여 현재 대시보드의 이름을 바꿀 수 있습니다.</block>
+  <block id="e29fd9e1d666ef26240aa2b0ed0fc1eb" category="list-text">* + 위젯 추가 * 버튼을 사용하면 테이블, 차트 또는 기타 위젯을 대시보드에 추가할 수 있습니다.</block>
+  <block id="62f5739cc82c405ea8357b692b14edbe" category="list-text">* + 변수 추가 * 버튼을 사용하면 변수를 사용하여 대시보드 데이터를 능동적으로 필터링할 수 있습니다.</block>
+  <block id="76eae0a751a898b7502d367e62b8fd6d" category="list-text">* 시간 막대 차트 * : 시간에 따른 로그 또는 메트릭 데이터를 표시합니다.</block>
+  <block id="671839ef7e8bf30120d054f860c84021" category="inline-image-macro">로그 데이터를 보여 주는 시간 막대 차트 예, 너비 = 200</block>
+  <block id="7fec05b71ec732e9bd7bdcbdbd94e7f8" category="paragraph"><block ref="7fec05b71ec732e9bd7bdcbdbd94e7f8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8b4b69c36bee3b088919c3e43a80f18c" category="section-title">Collector 마이그레이션</block>
+  <block id="d801c228c66c7fa487f2a8b7e96d562d" category="paragraph">한 에이전트에서 다른 에이전트로 작업 부하 보안 수집기를 손쉽게 마이그레이션할 수 있으므로 에이전트 간에 수집기의 로드 밸런싱을 효율적으로 수행할 수 있습니다.</block>
+  <block id="e360b039f3620c4847b5b84d78e80480" category="list-text">소스 에이전트는 _CONNECTED_STATE에 있어야 합니다.</block>
+  <block id="6ac92a202fa1f4747631bdcddfe6dd36" category="list-text">마이그레이션할 수집기는 _running_state에 있어야 합니다.</block>
+  <block id="fc9d3df613063ee57906c461320744e2" category="paragraph">참고:</block>
+  <block id="c4da4d3440b598c8edf40d69f984f009" category="list-text">마이그레이션은 데이터 및 사용자 디렉터리 수집기에 대해 모두 지원됩니다.</block>
+  <block id="47e78491de9a67f5836acba0100229fe" category="list-text">수동으로 관리되는 테넌트에 대해서는 Collector 마이그레이션이 지원되지 않습니다.</block>
+  <block id="8d7cc88bc7151c6f89c782e846c2e794" category="section-title">Collector를 마이그레이션합니다</block>
+  <block id="754f58ec9179e0d0a95d7cfbd792e670" category="paragraph">Collector를 마이그레이션하려면 다음 단계를 수행하십시오.</block>
+  <block id="213d23bd03074c84906851a840c802f5" category="list-text">"수집기 편집" 페이지로 이동합니다.</block>
+  <block id="df217418f3f92028ed4fc80e60e917a6" category="list-text">상담원 드롭다운에서 대상 상담원을 선택합니다.</block>
+  <block id="20085de2d7ac8fc18785d6450ab167e3" category="list-text">"수집기 저장" 버튼을 클릭합니다.</block>
+  <block id="d86dd741c6543921b9b4bc3d1da7d642" category="paragraph">워크로드 보안에서 요청을 처리합니다. 마이그레이션에 성공하면 수집기 목록 페이지로 리디렉션됩니다. 오류가 발생하면 편집 페이지에 적절한 메시지가 표시됩니다.</block>
+  <block id="bff6d170f0b8edf07af035d6c7a0785f" category="paragraph">참고: 수집기가 대상 에이전트로 성공적으로 마이그레이션되면 "수집기 편집" 페이지에서 이전에 수행한 구성 변경 사항은 그대로 적용됩니다.</block>
+  <block id="92f3bb936d162eca89372102e441a55c" category="inline-image-macro">다른 에이전트를 선택하여 수집기를 마이그레이션합니다</block>
+  <block id="db4125d1ded8b7b828eabf0eeb986b37" category="paragraph"><block ref="db4125d1ded8b7b828eabf0eeb986b37" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="84f0533755d1a33e5cc67c5d1108baa6" category="list-text">활동이 표시되지 않는 경우 SVM에 로그인하고 다음 명령을 입력하십시오.</block>
+  <block id="839fd302fc2dc5dee66803e94e9f95dc" category="paragraph">FPolicy와 관련된 오류가 없는지 확인하십시오.</block>
+  <block id="6e393b37e77fb2093e24fb776c6faf55" category="paragraph">* 문제 : * 데이터 수집기가 오류 상태로 들어간 다음 잠시 후 실행 상태로 돌아간 다음 다시 오류로 돌아갑니다. 이 주기가 반복됩니다. *이 방법을 시도해 보십시오:* 일반적으로 다음과 같은 경우에 발생합니다.</block>
+  <block id="8202c6a36256606217ad100be587d707" category="paragraph">* 문제: * 데이터 수집기는 오류 메시지를 표시합니다: "오류: 2회 재시도 내에 수집기의 상태를 확인하지 못했습니다. 수집기를 다시 시작하십시오(오류 코드: AGENT008)". * 사용해 보세요. *</block>
 </blocks>
