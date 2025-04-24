@@ -11663,7 +11663,6 @@
   <block id="e4d6c49d3ae18aca7ed82f5ef2ab8266" category="paragraph"><block ref="e4d6c49d3ae18aca7ed82f5ef2ab8266" category="inline-image-macro-rx" type="image"></block></block>
   <block id="1158d69294406edc67b8de2b5ed02647" category="paragraph">NetApp의 클라우드 서비스를 시작하려면 로 <block ref="40ad5c1f57b9131d3640bb640a07e49e" category="inline-link-macro-rx"></block> 이동하여 * 시작하기 * 를 클릭하십시오.</block>
   <block id="90aa9e4cd4632612b7635f2c366a8948" category="paragraph">NetApp BlueXP  계정이 있으면 포털 페이지에서 * 로그인 * 을 선택하기만 하면 <block ref="40ad5c1f57b9131d3640bb640a07e49e" category="inline-link-macro-rx"></block>됩니다.</block>
-  <block id="e6652e28190651190702622512d6199d" category="section-title">최신 ASA 시스템을 위한 ONTAP Essentials입니다</block>
   <block id="b7b46ce5d1a547db89c0bc615ff272a5" category="inline-link-macro">ASA</block>
   <block id="e4d6d8fa32272beabde4921e66b643d2" category="paragraph">ONTAP Essentials에는 이제 최신 장치를 위한 즉시 사용 가능한 관리 기능이 포함되어 <block ref="a86d3d554a7f4851edc0f19a9e8accf3" category="inline-link-macro-rx"></block>있습니다. 여기에는 ONTAP에서 실행되는 워크로드의 VM-LUN 토폴로지용 SAN Analyzer가 포함됩니다. 이제 Data Infrastructure Insights Basic Edition의 일부로 NetApp 지원과 함께 사용할 수도 있습니다.</block>
   <block id="8af8d6d7603eec1cb34086e9cf6e2055" category="inline-image-macro">ONTAP Essentials 드롭다운에서 ASA를 유니파이드 제품과 구별하여 보여 줍니다</block>
@@ -12288,8 +12287,6 @@
   <block id="fbc87552732cc2b26b43d6276a074ffc" category="section-title">사전 문제 해결을 위한 라인 위젯의 ML 기반 이상 경계</block>
   <block id="9f7cd8199d6124c4f4553f2c176b1d5c" category="paragraph">선 또는 스플라인 차트 위젯을 사용하여 성능 문제를 해결하기 위해 실제 메트릭과 함께 예상 동작 경계를 표시할 수 있으므로 정상 및 비정상 메트릭 추세를 구분할 수 있습니다.</block>
   <block id="eebf90e82914469f2dfc221f4faf2065" category="paragraph">계절 데이터 분석을 통한 DII 머신 러닝은 과거 패턴을 기반으로 하는 지능적인 임계값을 설정합니다. 메트릭이 예상 범위를 벗어나면 시스템에서 이를 이상 징후로 강조 표시하여 문제를 빠르게 식별하고 평균 해결 시간을 줄이며 운영에 영향을 미치기 전에 문제를 해결할 수 있습니다.</block>
-  <block id="44ca9974803bd41bb1826d9cf436c703" category="inline-image-macro">위의 스파이크를 표시하는 예상 경계, 너비 = 400</block>
-  <block id="093b02dc890c25bbe57cc9883b6f37e5" category="paragraph"><block ref="093b02dc890c25bbe57cc9883b6f37e5" category="inline-image-macro-rx" type="image"></block></block>
   <block id="6c8b67e91957195849c42aaf1ad22042" category="section-title">VSAN 스토리지 지원으로 VMware 비용 최적화</block>
   <block id="7ae6cf4414540fa7a14236e09f4bc284" category="paragraph">VMware의 VM 최적화 기능은 이제 VSAN 스토리지를 사용하는 VMware 환경을 지원합니다. 이 분석에서는 CPU 및 메모리 사용량 외에도 재확보를 위한 로컬 VSAN 스토리지를 고려하여 라이센스 비용을 추가로 절감할 수 있습니다.</block>
   <block id="ec05f91c2c2b63f117125c8a95ae7d4f" category="inline-image-macro">VSAN을 사용한 VM 최적화 예</block>
@@ -12302,8 +12299,6 @@
   <block id="a39507b873640f4e60c12fb375005a04" category="paragraph">포렌식 데이터를 내보내는 데는 내보낼 데이터의 양에 따라 몇 초에서 몇 시간 정도 걸릴 수 있습니다. 워크로드 보안은 해당 데이터를 비동기적으로 내보내므로 .csv가 컴파일되는 동안에도 작업을 계속할 수 있습니다.</block>
   <block id="6c17946dd20446540805b53e2f7cd731" category="section-title">규칙으로 그룹화된 데이터 수집기 알림</block>
   <block id="c3bd9ae81ad0672e842d282715d758e1" category="paragraph">데이터 수집기에 알림을 구성한 경우 4월 15일부터 해당 알림은 알림 규칙에서 처리되며 받는 사람이 동일한 수집기에 대한 단일 규칙이 적용됩니다. 받는 사람이 다른 컬렉터에는 별도의 규칙이 있습니다. 기존 Collector 알림은 알림 규칙으로 마이그레이션됩니다.</block>
-  <block id="ca873110efddef67beadcfe5f8a4ca84" category="paragraph">관리자 사용자가 사용할 수 있는 향상된 REST API 사용 추적을 통해 보안 상태를 강화하고 리소스 관리를 간소화합니다. API 사용량 추적을 사용하면 사용 중인 API 토큰, 사용 IP 주소 및 생성된 트래픽 볼륨을 확인할 수 있습니다. 토큰을 특정 IP 주소 및 사용 수준에 연결하면 시스템 액세스 및 사용 추세에 대한 강력한 통찰력을 얻을 수 있으므로 안전하고 효율적인 환경을 유지하고 원활한 운영을 유지하는 데 필요한 제어 기능을 제공합니다. 관리자 사용자가 사용할 수 있는 향상된 REST API 사용 추적을 통해 보안 상태를 강화하고 리소스 관리를 간소화합니다. API 사용량 추적을 사용하면 사용 중인 API 토큰, 사용 IP 주소 및 생성된 트래픽 볼륨을 확인할 수 있습니다. 토큰을 특정 IP 주소 및 사용 수준에 연결하면 시스템 액세스 및 사용 추세에 대한 강력한 통찰력을 얻을 수 있으므로 안전하고 효율적인 환경을 유지하고 원활한 운영을 유지하는 데 필요한 제어 기능을 제공합니다.</block>
-  <block id="24f17d3ee72bb2738ceb12180ec2fa71" category="paragraph">API 사용량을 보려면 * 관측성 &gt; 관리자 &gt; API 액세스 * 로 이동하고 _View API Usage _ 를 선택합니다. 이 API는 DII 관측성 API에만 사용할 수 있으며 워크로드 보안에는 적용되지 않습니다. API 사용량을 보려면 * 관측성 &gt; 관리자 &gt; API 액세스 * 로 이동하고 _View API Usage _ 를 선택합니다. 이 API는 DII 관측성 API에만 사용할 수 있으며 워크로드 보안에는 적용되지 않습니다.</block>
   <block id="1178bc1f7bc2e2481537fe9d595549fd" category="paragraph">포함: https://raw.githubusercontent.com/NetAppDocs/common/main/_include/open-source-notice-intro.adoc[]</block>
   <block id="4bffd602151b14e55ad1f19de262d0c1" category="list-text">SVM에 CIFS 서버가 구성되어 있는지 확인합니다. clustershell:&gt;<block ref="fafd8ff6ac4a59e73c5d4e3b47d545ee" prefix=" " category="inline-code"></block></block>
   <block id="52ea452f7c0975b526b909c63394b7e8" category="list-text">SVM vsadmin 사용자의 암호를 설정합니다. 사용자 지정 사용자 또는 클러스터 관리자를 사용하는 경우 이 단계를 건너뜁니다. clustershell:&gt;<block ref="73b77b9c99e693ec16bc3e4960672465" prefix=" " category="inline-code"></block></block>
@@ -12363,4 +12358,6 @@
   <block id="f0c8a72ba609d5ea03569e2dfec9ccf9" category="paragraph">참고: FOS의 기본 읽기 전용 사용자 "user"에는 모든 가상 패브릭에 대한 보기 권한이 없으며 "섀시 역할" 권한도 없습니다. 즉, FOS 장치의 물리적 구성과 논리적 구성을 모두 이해해야 하는 Data Infrastructure Insights에서 "사용자"를 사용하면 성공할 가능성이 낮습니다.</block>
   <block id="6ae3f27888576a5c4fe83bc692a46ff9" category="paragraph">"404 \https://.....:215/api/access/v1" 상태로 인해 요청이 실패했습니다</block>
   <block id="c7ce8523ab71d2ab79f0a54681bde5c6" category="paragraph">ZFS 어레이가 너무 오래되어 REST API를 지원할 수 없습니다. AK 2014.1.3.0은 최초의 REST API를 지원하는 ZFS OS 릴리스였으며, 일부 ZFS 어플라이언스가 이 버전으로 업그레이드할 수 있는 것은 아닙니다.</block>
+  <block id="0be262a01ffd53cb1827d924de37e376" category="paragraph">관리자 사용자가 사용할 수 있는 향상된 REST API 사용 추적을 통해 보안 상태를 강화하고 리소스 관리를 간소화합니다. API 사용량 추적을 사용하면 사용 중인 API 토큰, 사용 IP 주소 및 생성된 트래픽 볼륨을 확인할 수 있습니다. 토큰을 특정 IP 주소 및 사용 수준에 연결하면 시스템 액세스 및 사용 추세에 대한 강력한 통찰력을 얻을 수 있으므로 안전하고 효율적인 환경을 유지하고 원활한 운영을 유지하는 데 필요한 제어 기능을 제공합니다.</block>
+  <block id="8261d0e1521d30da1b36761d508cb245" category="paragraph">API 사용량을 보려면 * 관측성 &gt; 관리자 &gt; API 액세스 * 로 이동하고 _View API Usage _ 를 선택합니다. 이 API는 DII 관측성 API에만 사용할 수 있으며 워크로드 보안에는 적용되지 않습니다.</block>
 </blocks>
