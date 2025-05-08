@@ -12,9 +12,6 @@ keywords: application, create application,
 [role="lead"]
 테넌트에서 실행 중인 특정 애플리케이션과 연결된 데이터를 추적하려면 Data Infrastructure Insights에서 애플리케이션을 정의할 수 있습니다.
 
-.시작하기 전에
-애플리케이션을 업무 엔티티에 연결하려면 애플리케이션을 정의하기 전에 업무 엔티티를 생성해야 합니다.
-
 .이 작업에 대해
 Data Infrastructure Insights를 사용하면 사용량 또는 비용 보고와 같은 항목에 대한 애플리케이션과 연결된 자산에서 데이터를 추적할 수 있습니다.
 

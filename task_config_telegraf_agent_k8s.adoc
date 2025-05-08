@@ -153,15 +153,15 @@ kubectl -n <NAMESPACE> delete clusterrole,clusterrolebinding,crd,svc,deploy,role
  kubectl delete ns <NAMESPACE>
 첫 번째 명령이 "리소스를 찾을 수 없음"을 반환하면 다음 지침에 따라 모니터링 연산자의 이전 버전을 제거합니다.
 
-다음 명령을 순서대로 실행합니다. 현재 설치에 따라 이러한 명령 중 일부는 '개체를 찾을 수 없음' 메시지를 반환할 수 있습니다. 이러한 메시지는 무시해도 됩니다.
+다음 명령을 순서대로 실행합니다. 현재 설치에 따라 이러한 명령 중 일부는 'object not found' 메시지를 반환할 수 있습니다. 이러한 메시지는 무시해도 됩니다.
 
 ....
-kubectl -n <NAMESPACE> delete agent agent-monitoring-netapp
+kubectl -n <NAMESPACE> delete agent netapp-ci-agent-monitoring-netapp
 kubectl delete crd agents.monitoring.netapp.com
-kubectl -n <NAMESPACE> delete role agent-leader-election-role
-kubectl delete clusterrole agent-manager-role agent-proxy-role agent-metrics-reader <NAMESPACE>-agent-manager-role <NAMESPACE>-agent-proxy-role <NAMESPACE>-cluster-role-privileged
-kubectl delete clusterrolebinding agent-manager-rolebinding agent-proxy-rolebinding agent-cluster-admin-rolebinding <NAMESPACE>-agent-manager-rolebinding <NAMESPACE>-agent-proxy-rolebinding <NAMESPACE>-cluster-role-binding-privileged
-kubectl delete <NAMESPACE>-psp-nkmo
+kubectl -n <NAMESPACE> delete role netapp-ci-agent-manager netapp-ci-kube-state-metrics
+kubectl delete clusterrole netapp-ci-<NAMESPACE>-additional-permissions netapp-ci-<NAMESPACE>-agent-manager netapp-ci-<NAMESPACE>-agent-secret netapp-ci-<NAMESPACE>-agent-view-plus netapp-ci-<NAMESPACE>-change-observer-view-plkubectl get us netapp-ci-<NAMESPACE>-kube-state-metrics netapp-ci-<NAMESPACE>-net-observerkubectl
+kubectl delete clusterrolebinding netapp-ci-<NAMESPACE>-additional-permissions netapp-ci-<NAMESPACE>-agent-manager netapp-ci-<NAMESPACE>-agent-secret netapp-ci-<NAMESPACE>-agent-view netapp-ci-<NAMESPACE>-agent-view-plus netapp-ci-<NAMESPACE>-change-observer-additional-permissions netapp-ci-<NAMESPACE>-change-observer-secret netapp-ci-<NAMESPACE>-change-observer-view netapp-ci-<NAMESPACE>-change-observer-view-plus netapp-ci-<NAMESPACE>-event-exporter netapp-ci-<NAMESPACE>-kube-state-metrics netapp-ci-<NAMESPACE>-net-observer
+kubectl delete netapp-ci-<NAMESPACE>-psp-nkmo
 kubectl delete ns <NAMESPACE>
 ....
 보안 컨텍스트 제약 조건이 이전에 생성된 경우:

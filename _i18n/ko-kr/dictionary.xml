@@ -8483,7 +8483,6 @@
   <block id="12deeaac5f633c54b730f8c247dbf7e0" category="paragraph">다음 명령을 사용하여 모니터링 연산자의 최신 버전을 제거할 수 있습니다.</block>
   <block id="aee5f180cc531b30ec6cf8dcf509d9b8" category="paragraph">모니터링 운영자가 자체 전용 네임스페이스에 배포된 경우 네임스페이스를 삭제합니다.</block>
   <block id="97e76f0c81cc1c26b3d8ffe0d972c5af" category="paragraph">첫 번째 명령이 "리소스를 찾을 수 없음"을 반환하면 다음 지침에 따라 모니터링 연산자의 이전 버전을 제거합니다.</block>
-  <block id="0b14d0fbc4256c7ec7c3bb39b2c28854" category="paragraph">다음 명령을 순서대로 실행합니다. 현재 설치에 따라 이러한 명령 중 일부는 '개체를 찾을 수 없음' 메시지를 반환할 수 있습니다. 이러한 메시지는 무시해도 됩니다.</block>
   <block id="82a8cca794947463478c2f08445a8ff4" category="paragraph">보안 컨텍스트 제약 조건이 이전에 생성된 경우:</block>
   <block id="a945216a5c61e628c867b8948c797454" category="section-title">Kube-state-metrics 정보</block>
   <block id="951a50d1b55837ddb5ff4cb5af4ebc8a" category="paragraph">NetApp Kubernetes Monitoring Operator는 다른 인스턴스와 충돌을 피하기 위해 고유한 kube-state-metrics를 설치합니다.</block>
@@ -9360,7 +9359,6 @@
   <block id="9931bdf1120e743a2d938e061f7df898" category="paragraph">규칙을 삭제할 것인지 묻는 확인 메시지가 표시됩니다.</block>
   <block id="b101d3b5c8c4309f4cffa3adfd387b6b" category="list-text">확인 * 을 클릭합니다</block>
   <block id="e42dae64f8e80d611352315992a2460d" category="doc">응용 프로그램 만들기</block>
-  <block id="598c4639acaf0f3c5a419f9cf865ef56" category="paragraph">애플리케이션을 업무 엔티티에 연결하려면 애플리케이션을 정의하기 전에 업무 엔티티를 생성해야 합니다.</block>
   <block id="ba52eab802a385ced7d6e9782614bf0b" category="paragraph">Data Infrastructure Insights를 사용하면 사용량 또는 비용 보고와 같은 항목에 대한 애플리케이션과 연결된 자산에서 데이터를 추적할 수 있습니다.</block>
   <block id="91ee28fc3faa982ecdc71598fe7ce8b9" category="list-text">Data Infrastructure Insights 메뉴에서 * 관측성 &gt; 보강하기 &gt; 애플리케이션 * 을 클릭합니다. 를 선택합니다</block>
   <block id="8358341ae527ee11b5b1dc8e8f22edea" category="paragraph">응용 프로그램 추가 대화 상자가 표시됩니다.</block>
@@ -12379,4 +12377,5 @@
   <block id="839fd302fc2dc5dee66803e94e9f95dc" category="paragraph">FPolicy와 관련된 오류가 없는지 확인하십시오.</block>
   <block id="6e393b37e77fb2093e24fb776c6faf55" category="paragraph">* 문제 : * 데이터 수집기가 오류 상태로 들어간 다음 잠시 후 실행 상태로 돌아간 다음 다시 오류로 돌아갑니다. 이 주기가 반복됩니다. *이 방법을 시도해 보십시오:* 일반적으로 다음과 같은 경우에 발생합니다.</block>
   <block id="8202c6a36256606217ad100be587d707" category="paragraph">* 문제: * 데이터 수집기는 오류 메시지를 표시합니다: "오류: 2회 재시도 내에 수집기의 상태를 확인하지 못했습니다. 수집기를 다시 시작하십시오(오류 코드: AGENT008)". * 사용해 보세요. *</block>
+  <block id="c073fe7a74166cd5d73ec57ce2d1f76e" category="paragraph">다음 명령을 순서대로 실행합니다. 현재 설치에 따라 이러한 명령 중 일부는 'object not found' 메시지를 반환할 수 있습니다. 이러한 메시지는 무시해도 됩니다.</block>
 </blocks>
