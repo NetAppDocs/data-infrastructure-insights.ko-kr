@@ -4084,8 +4084,6 @@
   <block id="f057d707b9d5c17f0fad56f8204f6bff" category="section-title">워크로드 보안 측정</block>
   <block id="c3ef097c271469a3ca9718d35396087c" category="paragraph">워크로드 보안은 관측성 측정과 동일한 접근 방식을 사용하여 클러스터에 의해 측정됩니다.</block>
   <block id="3943920606f23b23925f15408e26cae2" category="paragraph">워크로드 보안 * 탭의 * Admin &gt; Subscription * 페이지에서 워크로드 보안 사용을 볼 수 있습니다.</block>
-  <block id="36e75837cd661882faf4ce93d35cafea" category="inline-image-macro">'Admin &amp; GT, Subscription &amp; GT, Workload Security 탭 - 하이엔드, 미드레인지 및 엔트리 레벨 노드 수 표시'</block>
-  <block id="78770d4128ce656a56bd8e8ecd580a0e" category="paragraph"><block ref="9d3e296bb7e7c4cf7ec09d1ec6e96740" category="inline-image-macro-rx" type="image"></block></block>
   <block id="daba1c6ff8590913bcb10d43d3bfcf13" category="admonition">기존 워크로드 보안 서브스크립션의 MU 사용량이 조정되어 노드 사용량이 관리되는 유닛을 소비하지 않습니다. Data Infrastructure Insights는 사용이 허가된 사용에 대한 준수를 보장하기 위해 사용량을 측정합니다.</block>
   <block id="c015ba02347af3d8c00ede570637622a" category="section-title">가입하려면 어떻게 해야 합니까?</block>
   <block id="99d34ca2583ae7363bd4e07f9b2d98cc" category="inline-xref">자체 구독</block>
@@ -12378,4 +12376,6 @@
   <block id="6e393b37e77fb2093e24fb776c6faf55" category="paragraph">* 문제 : * 데이터 수집기가 오류 상태로 들어간 다음 잠시 후 실행 상태로 돌아간 다음 다시 오류로 돌아갑니다. 이 주기가 반복됩니다. *이 방법을 시도해 보십시오:* 일반적으로 다음과 같은 경우에 발생합니다.</block>
   <block id="8202c6a36256606217ad100be587d707" category="paragraph">* 문제: * 데이터 수집기는 오류 메시지를 표시합니다: "오류: 2회 재시도 내에 수집기의 상태를 확인하지 못했습니다. 수집기를 다시 시작하십시오(오류 코드: AGENT008)". * 사용해 보세요. *</block>
   <block id="c073fe7a74166cd5d73ec57ce2d1f76e" category="paragraph">다음 명령을 순서대로 실행합니다. 현재 설치에 따라 이러한 명령 중 일부는 'object not found' 메시지를 반환할 수 있습니다. 이러한 메시지는 무시해도 됩니다.</block>
+  <block id="d873c97dd6dca1c7bd30ed50b82bee0f" category="inline-image-macro">고급, 미드레인지 및 엔트리 레벨 노드 수를 보여 주는 관리 및 GT, 워크로드 보안 탭</block>
+  <block id="a2efde4371837d491f7f2d093cb687a2" category="paragraph"><block ref="6239b49ee0db956af965dd1ce0c92bfa" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>

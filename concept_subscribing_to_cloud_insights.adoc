@@ -159,7 +159,7 @@ Data Infrastructure Insights 인프라 관측성 및 Kubernetes 관측성 수는
 
 워크로드 보안 * 탭의 * Admin > Subscription * 페이지에서 워크로드 보안 사용을 볼 수 있습니다.
 
-image:ws_metering_example_page.png["'Admin  GT, Subscription  GT, Workload Security 탭 - 하이엔드, 미드레인지 및 엔트리 레벨 노드 수 표시'"]
+image:ws_metering_example_page.png["고급, 미드레인지 및 엔트리 레벨 노드 수를 보여 주는 관리 및 GT, 워크로드 보안 탭"]
 
 
 NOTE: 기존 워크로드 보안 서브스크립션의 MU 사용량이 조정되어 노드 사용량이 관리되는 유닛을 소비하지 않습니다. Data Infrastructure Insights는 사용이 허가된 사용에 대한 준수를 보장하기 위해 사용량을 측정합니다.
