@@ -2306,25 +2306,11 @@
   <block id="e0dc2ed956b3711e722d965954939344" category="list-text">이 획득 장치에 75개 이상의 총 데이터 수집기를 배포하시겠습니까?</block>
   <block id="159904c45b61bfdda4989e18bf9891e8" category="paragraph">위의 "예"로 답할 때마다 AU에 8GB의 메모리와 50GB의 디스크 공간을 추가하는 것이 좋습니다. 예를 들어, 둘 다에 "예"를 선택한 경우 150GB 이상의 디스크 공간이 있는 24GB 메모리 시스템을 구축해야 합니다. Linux에서 로그 위치에 추가할 디스크 공간입니다.</block>
   <block id="11bb1da5c9cf0248245ce5b24119d183" category="paragraph">사이징에 대한 추가 질문은 NetApp 지원에 문의하십시오.</block>
-  <block id="96cb7682ad0362f3aff6ef6f90dd2520" category="summary">Data Infrastructure Insights는 NetApp Active IQ에서 위험 데이터를 수집합니다</block>
   <block id="b5fe3a41d32647f20f3b5ec96045d6d6" category="doc">Active IQ</block>
-  <block id="df0ddcb04f0e5278d49d2c87dfa7f7fc" category="paragraph">NetApp는 <block ref="5d418eb60d51fa035e4b287bd4191a07" category="inline-link-macro-rx"></block>NetApp 고객의 하드웨어/소프트웨어 시스템에 대해 일련의 시각화, 분석 및 기타 지원 관련 서비스를 제공합니다. Active IQ에서 보고하는 데이터는 시스템 문제 해결을 개선하고 장치와 관련된 최적화 및 예측 분석에 대한 통찰력을 제공할 수 있습니다.</block>
-  <block id="97ba27a6c978c304ea9138ee01781875" category="paragraph">데이터 인프라 Insights는 Active IQ에서 모니터링 및 보고하는 NetApp clustered Data ONTAP 스토리지 시스템의 * 위험 * 을 수집합니다. 스토리지 시스템에 대해 보고된 위험은 해당 장치에서 데이터 수집의 일부로 Data Infrastructure Insights에 의해 자동으로 수집됩니다. Active IQ 위험 정보를 수집하려면 데이터 인프라 인사이트 에 적절한 데이터 수집기를 추가해야 합니다.</block>
-  <block id="bfdb97c5bb51966044d87207708e9888" category="paragraph">Data Infrastructure Insights에는 Active IQ에서 모니터링 및 보고하지 않는 ONTAP 시스템의 위험 데이터가 표시되지 않습니다.</block>
-  <block id="a98980e7429cd68c3207593853e627fe" category="paragraph">보고된 위험은 _STORAGE_AND_STORAGE NODE_ASSET 랜딩 페이지의 "위험" 표에 나와 있습니다. 이 표에는 위험 세부 정보, 위험 범주 및 잠재적 영향이 나와 있으며, 스토리지 노드의 모든 위험을 요약하는 Active IQ 페이지 링크가 제공됩니다(NetApp 지원 어카운트 로그인 필요).</block>
-  <block id="44def9cfd3c785a71c36d95e24981147" category="inline-image-macro">Active IQ 위험 표</block>
-  <block id="253139fff686e1ef9f39ced79055cc70" category="paragraph"><block ref="253139fff686e1ef9f39ced79055cc70" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="8887b934719a6de0be9e0e43f0ab23d0" category="paragraph">보고된 위험의 수도 랜딩 페이지의 요약 위젯에 표시되며 해당 Active IQ 페이지에 대한 링크도 표시됩니다. storage_landing 페이지에서 count는 모든 기본 스토리지 노드의 위험을 합한 값입니다.</block>
   <block id="96caf84605c76fdc8e4cec8734853381" category="inline-image-macro">스토리지 페이지 요약</block>
   <block id="1be3faf6a174e90a1b900868f94e4600" category="paragraph"><block ref="1be3faf6a174e90a1b900868f94e4600" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="4a45597eae979dc62d93cd1d748058bd" category="section-title">Active IQ 페이지를 엽니다</block>
-  <block id="487f4fcccb6a34d5590990b8e54ace74" category="paragraph">Active IQ 페이지에 대한 링크를 클릭할 때 현재 Active IQ 계정에 로그인되어 있지 않은 경우 다음 단계를 수행하여 스토리지 노드의 Active IQ 페이지를 표시해야 합니다.</block>
-  <block id="ae19f5b6992b8d45f55c8e5baa5492c8" category="list-text">데이터 인프라 인사이트 요약 위젯 또는 위험 표에서 "Active IQ" 링크를 클릭합니다.</block>
-  <block id="cd2403e73e741b8001cced6aa04fa472" category="list-text">NetApp Support 계정에 로그인하십시오. Active IQ의 스토리지 노드 페이지로 직접 이동됩니다.</block>
   <block id="62fcdd34f555d8c4a7cdda3b94732063" category="section-title">위험을 쿼리하는 중입니다</block>
-  <block id="32a5da80264ae98c83852181734d819d" category="paragraph">Data Infrastructure Insights에서 스토리지 또는 스토리지 노드 쿼리에 * monitoring.count * 열을 추가할 수 있습니다. 반환된 결과에 Active IQ가 모니터링된 스토리지 시스템이 포함된 경우 monitoring.count 열에 스토리지 시스템 또는 노드의 위험 수가 표시됩니다.</block>
   <block id="0ba8adc53c16a6ffe145978e834b02f8" category="section-title">대시보드</block>
-  <block id="88773c59e894d8416f71b9658d5a03fc" category="paragraph">위젯(예: 원형 차트, 표 위젯, 막대, 열, 분산형 플롯, 및 단일 가치 위젯)을 활용하여 Active IQ에서 모니터링하는 NetApp clustered Data ONTAP 시스템의 스토리지 및 스토리지 노드에 대한 오브젝트 위험을 시각화합니다. "오브젝트 위험"은 스토리지 또는 스토리지 노드가 초점의 개체인 이러한 위젯에서 열 또는 메트릭으로 선택할 수 있습니다.</block>
   <block id="e0ca94f4a4b2b9a6b7968e11a7757d03" category="inline-image-macro">위젯의 개체 위험</block>
   <block id="4a7b46f5ae3d121fb437f8755e468f60" category="paragraph"><block ref="4a7b46f5ae3d121fb437f8755e468f60" category="inline-image-macro-rx" type="image"></block></block>
   <block id="be2f9224b979c292cb15fb8ca6626094" category="summary">메트릭 이상 징후를 모니터링합니다</block>
@@ -12378,4 +12364,64 @@
   <block id="c073fe7a74166cd5d73ec57ce2d1f76e" category="paragraph">다음 명령을 순서대로 실행합니다. 현재 설치에 따라 이러한 명령 중 일부는 'object not found' 메시지를 반환할 수 있습니다. 이러한 메시지는 무시해도 됩니다.</block>
   <block id="d873c97dd6dca1c7bd30ed50b82bee0f" category="inline-image-macro">고급, 미드레인지 및 엔트리 레벨 노드 수를 보여 주는 관리 및 GT, 워크로드 보안 탭</block>
   <block id="a2efde4371837d491f7f2d093cb687a2" category="paragraph"><block ref="6239b49ee0db956af965dd1ce0c92bfa" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="67cdd97ee57ecbb8d5397980e2f337b2" category="summary">Data Infrastructure Insights는 NetApp Active IQ Digital Advisor(Digital Advisor라고도 함)에서 위험 데이터를 수집합니다.</block>
+  <block id="dab2edf9eaac3950e92c281ce358af01" category="doc">Active IQ Digital Advisor</block>
+  <block id="c68ffc18976c6478ceba645cdcfe3ad4" category="paragraph">NetApp<block ref="cbe8da543274ee624cafab4e3c376bb9" category="inline-link-macro-rx"></block>(Digital Advisor라고도 함)는 NetApp 고객에게 하드웨어/소프트웨어 시스템과 관련하여 일련의 시각화, 분석 및 기타 지원 관련 서비스를 제공합니다. Digital Advisor에서 보고하는 데이터는 시스템 문제의 문제 해결을 개선하고 장치와 관련된 최적화 및 예측 분석에 대한 통찰력을 제공합니다.</block>
+  <block id="bb4ab99c035d10d75227562a13f30fbd" category="paragraph">데이터 인프라 Insights는 디지털 어드바이저를 통해 모니터링 및 보고하는 NetApp clustered Data ONTAP 스토리지 시스템의 * 위험 * 을 수집합니다. 스토리지 시스템에 대해 보고된 위험은 해당 장치에서 데이터 수집의 일부로 Data Infrastructure Insights에 의해 자동으로 수집됩니다. Digital Advisor 위험 정보를 수집하려면 Data Infrastructure Insights에 적절한 데이터 수집기를 추가해야 합니다.</block>
+  <block id="5b3f4c933f6bb8b2000bc2d18617bf70" category="paragraph">Data Infrastructure Insights에는 Digital Advisor가 모니터링하고 보고하지 않는 ONTAP 시스템의 위험 데이터가 표시되지 않습니다.</block>
+  <block id="512f021ba1976438e7134e934898c5bd" category="paragraph">보고된 위험은 _STORAGE_AND_STORAGE NODE_ASSET 랜딩 페이지의 "위험" 표에 나와 있습니다. 표에는 위험 세부 정보, 위험 범주 및 위험의 잠재적 영향이 나와 있으며 스토리지 노드에 대한 모든 위험을 요약한 디지털 어드바이저 페이지 링크도 제공됩니다(NetApp 지원 계정 로그인 필요).</block>
+  <block id="29a84751efa30791c464febff54612dd" category="inline-image-macro">디지털 어드바이저 위험 표</block>
+  <block id="b10eb84d2e981f75c16c48813937b3b7" category="paragraph"><block ref="b10eb84d2e981f75c16c48813937b3b7" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1a6627262063d4ee7cc3abb758c1fcf6" category="paragraph">보고된 위험 수가 랜딩 페이지의 요약 위젯에 해당 Digital Advisor 페이지에 대한 링크와 함께 표시됩니다. storage_landing 페이지에서 count는 모든 기본 스토리지 노드의 위험을 합한 값입니다.</block>
+  <block id="0a341d745c345ab59da1ff09230bf0f5" category="section-title">Digital Advisor 페이지를 엽니다</block>
+  <block id="d6749e879d62d77cbfe2a4f30aa6f3ca" category="paragraph">Digital Advisor 페이지 링크를 클릭할 때 현재 Digital Advisor 계정에 로그인하지 않은 경우 다음 단계를 수행하여 스토리지 노드에 대한 Digital Advisor 페이지를 확인해야 합니다.</block>
+  <block id="61c06e5830878d055d855182425d292e" category="list-text">Data Infrastructure Insights Summary 위젯 또는 위험 표에서 "Digital Advisor" 링크를 클릭합니다.</block>
+  <block id="5570e484e2050414e7ae0efcb7989c8c" category="list-text">NetApp Support 계정에 로그인하십시오. Digital Advisor의 스토리지 노드 페이지로 바로 이동합니다.</block>
+  <block id="21c1dac7b79e4e1279824cc10d71d738" category="paragraph">Data Infrastructure Insights에서 스토리지 또는 스토리지 노드 쿼리에 * monitoring.count * 열을 추가할 수 있습니다. 반환된 결과에 Digital Advisor에서 모니터링하는 스토리지 시스템이 포함된 경우 monitoring.count 열에 스토리지 시스템 또는 노드에 대한 위험 수가 표시됩니다.</block>
+  <block id="bd27458945df244cb55045b52a24310c" category="paragraph">Digital Advisor에서 모니터링하는 NetApp clustered Data ONTAP 시스템의 스토리지 및 스토리지 노드에 대한 객체 위험을 시각화하기 위해 위젯(예: 원형 차트, 표 위젯, 막대, 열, 분산형 플롯 및 단일 값 위젯)을 구축할 수 있습니다. "오브젝트 위험"은 스토리지 또는 스토리지 노드가 초점의 개체인 이러한 위젯에서 열 또는 메트릭으로 선택할 수 있습니다.</block>
+  <block id="88ebaf1e13c1e098d9a4a73a9242d56d" category="summary">PagerDuty에 대한 워크로드 보안 Webhook를 생성하여 보안을 알립니다</block>
+  <block id="a423930cfe0734579ae74f4cb828cdc6" category="doc">PagerDuty에 대한 워크로드 보안 Webhook 예</block>
+  <block id="d50bb41906d2f733d067c591f51e4963" category="admonition">이 페이지는 변경될 수 있는 타사 지침을 참조합니다. 최신 정보는 를 <block ref="4cf6cb20b95cded724b319964a5ce815" category="inline-link-macro-rx"></block>참조하십시오.</block>
+  <block id="40a77f4bbfd0ca63ed510e92b9833d67" category="list-text">PagerDuty에서 * Services &gt; Service Directory * 로 이동하고 * + New Service * 버튼을 클릭합니다.</block>
+  <block id="7d26cc043fbfb2e53a18d31fea52c7e8" category="list-text">_ 이름 _ 을(를) 입력하고 _ 직접 API 사용 _ 을(를) 선택합니다. Add Service _ 를 선택합니다.</block>
+  <block id="d4eb5fdef857fa235821f3033fa67762" category="list-text">통합 키 * 를 보려면 _Integrations_탭을 선택합니다. 아래의 Data Infrastructure Insights Webhook을 생성할 때 이 키가 필요합니다.</block>
+  <block id="a3e8d0a78049eabf2c286c14c55b54f2" category="inline-image-macro">PagerDuty 인시던트 목록 예, width=700</block>
+  <block id="5d7dc3b4dea14491b2bd2a77d44d3906" category="paragraph"><block ref="5d7dc3b4dea14491b2bd2a77d44d3906" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="742b9235199c630d771bdfddb2c88611" category="section-title">워크로드 보안 페이지 듀티 Webhook 생성:</block>
+  <block id="ac3971f28a80367895637f2a7baff2b9" category="list-text">Admin &gt; Notifications 로 이동한 후 _Workload Security Webhooks_tab 을 선택합니다. 새 Webhook을 생성하려면 '+Webhook'을 선택하십시오.</block>
+  <block id="1d87d3a9dea9aa3897a6eae95a91d36a" category="list-text">Webhook에 의미 있는 이름을 지정합니다.</block>
+  <block id="2f1454968ee4b9454d180e309715be49" category="list-text">템플릿 유형 드롭다운에서 _PagerDuty Trigger_를 선택합니다.</block>
+  <block id="3fbd0a1ea55bc616095344f3e328a58e" category="list-text">_routingKey_라는 사용자 지정 매개 변수 암호를 만들고 이 값을 위에서 생성한 PagerDuty_Integration Key_로 설정합니다.</block>
+  <block id="69976b733a7e722341855c38d322daf8" category="inline-image-macro">라우팅 키 설정, 폭 = 300</block>
+  <block id="59429acf87914c20fdad5f135b01c652" category="paragraph"><block ref="59429acf87914c20fdad5f135b01c652" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a5d9118ea338b5d8a10b75a82d2b1af4" category="inline-image-macro">워크로드 보안 PagerDuty Webhook 예, width = 400</block>
+  <block id="3d72322f92053aca22220d16d1e96147" category="paragraph"><block ref="3d72322f92053aca22220d16d1e96147" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="30eb5b55a445f5f9ecc59318a74aca4d" category="list-text">웹 후크를 통해 이벤트에 대해 알리려면 _ Workload Security &gt; Policies _ 로 이동합니다. _ + 공격 정책 _ 또는 _ + 경고 정책 _ 을(를) 선택합니다.</block>
+  <block id="4637fc3950065ad14b9030eccdbb419f" category="list-text">의미 있는 정책 이름을 입력합니다.</block>
+  <block id="a5cb6f5849887e301a555c444584e1c2" category="list-text">필수 공격 유형, 정책을 연결할 장치 및 필수 조치 를 선택합니다.</block>
+  <block id="267bb94f071c1cc48b24df7711f00add" category="list-text">Webhooks Notifications_드롭다운 아래에서 필요한 PagerDuty Webhook를 선택합니다. 정책을 저장합니다.</block>
+  <block id="d3982edf8ee2e9d64dff417d32932263" category="paragraph">참고: Webhook를 편집하여 기존 정책에 연결할 수도 있습니다.</block>
+  <block id="ed8719c17bf4a6b47a6788c4a3556656" category="inline-image-macro">webhook, width=400을 보여주는 공격 정책 대화 상자를 추가합니다</block>
+  <block id="ebc41e374ce79e003d0fdbca5ff78a65" category="paragraph"><block ref="ebc41e374ce79e003d0fdbca5ff78a65" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="95833a73b3e45da13788f4fcafa6cccb" category="summary">Slack에 대한 워크로드 보안 Webhook을 생성하여 보안을 알립니다</block>
+  <block id="4c41f7a846a2313609fc27e816292120" category="doc">Slack을 위한 워크로드 보안 Webhook 예</block>
+  <block id="2a07da088af04bdad7b7af04058988d0" category="paragraph">이 페이지는 변경될 수 있는 타사 지침을 참조합니다. 최신 정보는 Slack 문서를 참조하십시오.</block>
+  <block id="5862c65b8f7019053c2c8608553da8b0" category="section-title">여유 시간 예</block>
+  <block id="3a3bfcc3b5ed3df4a3c05a7b1bf64859" category="list-text">로<block ref="895c0cedff8a42203a3dd912da834bde" category="inline-link-rx"></block> 이동하여 새 앱 만들기 의미 있는 이름을 지정하고 작업 영역을 선택합니다.</block>
+  <block id="22c69d9725266703049e6aa276638f1c" category="inline-image-macro">Slack 앱을 만듭니다. width = 400</block>
+  <block id="247e1031c7df77d7e892f04e3d981f15" category="paragraph"><block ref="247e1031c7df77d7e892f04e3d981f15" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="cfd6657a0c61826500cdfc6129ca5675" category="list-text">Incoming Webhook로 이동하여 _Activate Incoming Webhook_를 클릭하고 _Add New Webhook_를 선택한 후 게시할 채널을 선택합니다.</block>
+  <block id="6156beaa30eb28272c612e8f6354b961" category="list-text">Webhook URL을 복사합니다. 이 URL은 워크로드 보안 웹후크를 생성할 때 제공됩니다.</block>
+  <block id="6b7df77372799e1a695a1ded8374a011" category="section-title">워크로드 보안 슬랙 Webhook을 생성합니다</block>
+  <block id="722b5451130fff18e8af3cc06455619f" category="list-text">Admin &gt; Notifications 로 이동한 후 _Workload Security Webhooks_tab 을 선택합니다. 새 Webhook을 생성하려면 _ + Webhook _ 을(를) 선택하십시오.</block>
+  <block id="c6474368b7cd8a2778b616cf4905ae3d" category="list-text">템플릿 유형 드롭다운에서 _ Slack _ 을(를) 선택합니다.</block>
+  <block id="fc2a3346b6fec59f8cff07a6f8aade93" category="list-text">위에서 복사한 URL을 붙여 넣습니다.</block>
+  <block id="a03c7cdbfcc4b139a6c388264157965d" category="inline-image-macro">Webhook Slack 워크로드 보안의 예, 너비 = 400</block>
+  <block id="6e4b68c24aaef9b8e2d3cb4e2669fabc" category="paragraph"><block ref="6e4b68c24aaef9b8e2d3cb4e2669fabc" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2f5eb341673ba105f1383f2b750ad3b0" category="section-title">Webhook를 통한 알림</block>
+  <block id="2d7c71390213ca5b29909f9995d38c22" category="list-text">웹 후크를 통해 이벤트에 대해 알리려면 _ Workload Security &gt; Policies _ 로 이동합니다. _+공격 정책_ 또는 _+경고 정책 _ 을(를) 클릭합니다.</block>
+  <block id="5c91d93f01617de1c11eee11259b389d" category="list-text">필수 공격 유형, 정책을 연결할 장치 및 필수 조치 를 선택합니다.</block>
+  <block id="91229a6bb91ad336076b839006d6f3d8" category="list-text">Webhooks Notifications_드롭다운 메뉴에서 필요한 webhook를 선택합니다. 정책을 저장합니다.</block>
+  <block id="ed3289eb0a2d31b7eb1d54764da04491" category="inline-image-macro">공격 정책 대화 상자 추가(너비 = 400</block>
+  <block id="f91815c8aac9f13a54e97684dfd7a4bf" category="paragraph"><block ref="f91815c8aac9f13a54e97684dfd7a4bf" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>

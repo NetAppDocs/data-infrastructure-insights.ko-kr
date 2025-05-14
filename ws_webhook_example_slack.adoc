@@ -1,0 +1,58 @@
+---
+sidebar: sidebar 
+permalink: ws_webhook_example_slack.html 
+keywords: webhook, notification, Slack, integration, 
+summary: Slack에 대한 워크로드 보안 Webhook을 생성하여 보안을 알립니다 
+---
+= Slack을 위한 워크로드 보안 Webhook 예
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Webhook을 사용하면 사용자 지정된 Webhook 채널을 사용하여 다양한 응용 프로그램에 경고 알림을 보낼 수 있습니다. 이 페이지에서는 Slack에 대한 Webhook을 설정하는 예를 제공합니다.
+
+이 페이지는 변경될 수 있는 타사 지침을 참조합니다. 최신 정보는 Slack 문서를 참조하십시오.
+
+
+
+==== 여유 시간 예
+
+* 로 https://api.slack.com/apps[] 이동하여 새 앱 만들기 의미 있는 이름을 지정하고 작업 영역을 선택합니다.
+
+
+image:ws_create_slack_app.png["Slack 앱을 만듭니다. width = 400"]
+
+* Incoming Webhook로 이동하여 _Activate Incoming Webhook_를 클릭하고 _Add New Webhook_를 선택한 후 게시할 채널을 선택합니다.
+* Webhook URL을 복사합니다. 이 URL은 워크로드 보안 웹후크를 생성할 때 제공됩니다.
+
+
+
+
+==== 워크로드 보안 슬랙 Webhook을 생성합니다
+
+. Admin > Notifications 로 이동한 후 _Workload Security Webhooks_tab 을 선택합니다. 새 Webhook을 생성하려면 _ + Webhook _ 을(를) 선택하십시오.
+. Webhook에 의미 있는 이름을 지정합니다.
+. 템플릿 유형 드롭다운에서 _ Slack _ 을(를) 선택합니다.
+. 위에서 복사한 URL을 붙여 넣습니다.
+
+
+image:ws_webhook_slack_example.png["Webhook Slack 워크로드 보안의 예, 너비 = 400"]
+
+
+
+==== Webhook를 통한 알림
+
+* 웹 후크를 통해 이벤트에 대해 알리려면 _ Workload Security > Policies _ 로 이동합니다. _+공격 정책_ 또는 _+경고 정책 _ 을(를) 클릭합니다.
+* 의미 있는 정책 이름을 입력합니다.
+* 필수 공격 유형, 정책을 연결할 장치 및 필수 조치 를 선택합니다.
+* Webhooks Notifications_드롭다운 메뉴에서 필요한 webhook를 선택합니다. 정책을 저장합니다.
+
+
+참고: Webhook를 편집하여 기존 정책에 연결할 수도 있습니다.
+
+image:ws_add_attack_policy.png["공격 정책 대화 상자 추가(너비 = 400"]
