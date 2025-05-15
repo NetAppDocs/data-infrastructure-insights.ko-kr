@@ -1,0 +1,60 @@
+---
+sidebar: sidebar 
+permalink: ws_webhook_example_discord.html 
+keywords: webhook, notification, Discord, integration 
+summary: 보안 경고를 위한 Discord용 Workload Security Webhook를 생성합니다 
+---
+= 워크로드 보안 웹후크 Discord의 예
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Webhook을 사용하면 사용자 지정된 Webhook 채널을 사용하여 다양한 응용 프로그램에 경고 알림을 보낼 수 있습니다. 이 페이지에서는 불협화용 웹훅을 설정하는 예를 제공합니다.
+
+
+NOTE: 이 페이지는 타사 지침을 참조하며, 이러한 지침은 변경될 수 있습니다. 최신 정보는 를 link:https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks["불화 문서"]참조하십시오.
+
+
+
+== 불화 설정:
+
+* 불화에서 서버를 선택하고 텍스트 채널에서 채널 편집(기어 아이콘)을 선택합니다.
+* 통합 > Webhook 보기 * 를 선택하고 * 새 Webhook * 을 클릭합니다
+* Webhook URL을 복사합니다. 이를 Workload Security Webhook 구성에 붙여 넣어야 합니다.
+
+
+
+
+== 워크로드 보안 Webhook 생성:
+
+. Admin > Notifications 로 이동한 후 _Workload Security Webhooks_tab 을 선택합니다. 새 Webhook을 생성하려면 '+Webhook'을 클릭하십시오.
+. 웹후크에 의미 있는 이름을 지정합니다.
+. 템플릿 유형 _ 드롭다운에서 * 불화 * 를 선택합니다.
+. 위의 Discord URL을 _url_필드에 붙여넣습니다.
+
+
+image:ws_webhook_discord_example.png["워크로드 보안 Webhook Discord의 예"]
+
+Webhook를 테스트하려면 메시지 본문의 URL 값을 유효한 URL(예: _https://netapp.com_))로 임시 대체한 다음 _Test Webhook_button을 클릭하십시오. 웹 후크 테스트 기능이 작동하려면 Discord에서 올바른 URL을 제공해야 합니다.
+
+테스트가 완료되면 메시지 본문을 다시 설정해야 합니다.
+
+
+
+== Webhook를 통한 알림
+
+웹 후크를 통해 이벤트에 대해 알리려면 _ Workload Security > Policies _ 로 이동합니다. _+공격 정책_ 또는 _+경고 정책 _ 을(를) 클릭합니다.
+
+* 의미 있는 정책 이름을 입력합니다.
+* 필요한 공격 유형, 정책을 연결할 장치 및 필요한 조치를 선택합니다.
+* Webhooks Notifications_드롭다운 메뉴에서 필요한 Discord Webhook을 선택하고 저장합니다.
+
+
+참고: Webhook를 편집하여 기존 정책에 연결할 수도 있습니다.
+
+image:ws_add_attack_policy.png["웹 후크 드롭다운을 보여 주는 공격 정책 대화 상자"]

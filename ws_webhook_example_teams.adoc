@@ -1,0 +1,60 @@
+---
+sidebar: sidebar 
+permalink: ws_webhook_example_teams.html 
+keywords: webhook, notification, Microsoft, Teams, integration 
+summary: Microsoft 팀이 보안에 대해 경고할 수 있도록 워크로드 보안 웹훅을 만듭니다 
+---
+= Microsoft 팀을 위한 워크로드 보안 Webhook 예
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Webhook을 사용하면 사용자 지정된 Webhook 채널을 사용하여 다양한 응용 프로그램에 경고 알림을 보낼 수 있습니다. 이 페이지에서는 팀을 위한 Webhook을 설정하는 예를 제공합니다.
+
+
+NOTE: 이 페이지는 변경될 수 있는 타사 지침을 참조합니다. 최신 정보는 를 link:https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook["팀 문서"]참조하십시오.
+
+
+
+== 팀 설정:
+
+. 팀에서 케밥을 선택하고 들어오는 Webhook를 검색합니다.
++
+image:Webhooks_Teams_Create_Webhook.png["팀 내 수신 Webhook"]
+
+. 팀에 추가 > 팀 선택 > 커넥터 설정 * 을 선택합니다.
+. Webhook URL을 복사합니다. 이를 Workload Security Webhook 구성에 붙여 넣어야 합니다.
+
+
+
+
+== 워크로드 보안 팀 생성 Webhook:
+
+. Admin > Notifications 로 이동한 후 _ "Workload Security Webhooks_tab 을 선택합니다. 새 Webhook을 생성하려면 _ + Webhook _ 을(를) 선택하십시오.
+. 웹후크에 의미 있는 이름을 지정합니다.
+. 템플릿 유형 _ 드롭다운에서 * 팀 * 을 선택합니다.
++
+image:ws_webhook_teams_example.png["워크로드 보안 팀 Webhook 예"]
+
+. 위의 URL을 _url_필드에 붙여 넣습니다.
+
+
+
+
+== Webhook를 통한 알림
+
+웹 후크를 통해 이벤트에 대해 알리려면 _ Workload Security > Policies _ 로 이동합니다. _ + 공격 정책 _ 또는 _ + 경고 정책 _ 을(를) 선택합니다.
+
+* 의미 있는 정책 이름을 입력합니다.
+* 필요한 공격 유형, 정책을 연결할 장치 및 필요한 조치를 선택합니다.
+* Webhooks Notifications_드롭다운 메뉴에서 필요한 팀 Webhook을 선택합니다. 정책을 저장합니다.
+
+
+참고: Webhook를 편집하여 기존 정책에 연결할 수도 있습니다.
+
+image:ws_add_attack_policy.png["웹 후크를 보여 주는 공격 정책 대화 상자를 추가합니다"]

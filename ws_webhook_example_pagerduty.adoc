@@ -28,7 +28,7 @@ NOTE: 이 페이지는 변경될 수 있는 타사 지침을 참조합니다. �
 +
 image:Webhooks_PagerDutyScreen1.png["PagerDuty 화면"]
 
-. 통합 키 * 를 보려면 _Integrations_탭을 선택합니다. 아래의 Data Infrastructure Insights Webhook을 생성할 때 이 키가 필요합니다.
+. 통합 키 * 를 보려면 _Integrations_탭을 선택합니다. 아래 워크로드 보안 웹후크를 생성할 때 이 키가 필요합니다.
 
 
 . 알림을 보려면 * 인시던트 * 또는 * 서비스 * 로 이동하십시오.

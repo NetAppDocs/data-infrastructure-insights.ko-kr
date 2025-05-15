@@ -49,9 +49,7 @@ security login rest-role create -role {role name} -api /api -access readonly
 security login rest-role create -role {role name} -api /api/cluster/agents -access all
 vserver services web access create -name spi -role {role name} -vserver {vserver name as retrieved above}
 ....
-
-
-. 다음 명령을 사용하여 읽기 전용 사용자를 생성합니다. create 명령을 실행하면 이 사용자의 암호를 입력하라는 메시지가 표시됩니다.
+. 다음 명령을 사용하여 읽기 전용 사용자를 생성합니다. create 명령을 실행하면 이 사용자의 암호를 입력하라는 메시지가 표시됩니다. 다음 명령에서 _ci_readonly_로 설정된 역할이 표시됩니다. 위의 3단계에서 다른 이름을 가진 역할을 생성하는 경우 대신 사용자 지정 역할 이름을 사용하십시오.
 
 
  security login create -user-or-group-name {username} -application http -authentication-method password -role {role name}

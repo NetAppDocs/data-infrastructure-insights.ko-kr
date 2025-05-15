@@ -105,12 +105,22 @@ sidebar:
         url: "/task_create_monitor.html"
       - title: 경고 보기 및 관리
         url: "/task_view_and_manage_alerts.html"
-      - title: 알림 수신자 구성
-        url: "/concept_notifications_email.html"
       - title: 시스템 정의 모니터
         url: "/task_system_monitors.html"
+      - title: 알림 수신자 구성
+        url: "/concept_notifications_email.html"
       - title: Webhook 알림
-        url: "/task_create_webhook.html"
+        entries:
+        - title: Webhook 구성
+          url: "/task_create_webhook.html"
+        - title: Webhook 예 - 코드 분리
+          url: "/task_webhook_example_discord.html"
+        - title: Webhook 예 - PagerDuty
+          url: "/task_webhook_example_pagerduty.html"
+        - title: Webhook 예 - Slack
+          url: "/task_webhook_example_slack.html"
+        - title: Webhook 예 - 팀
+          url: "/task_webhook_example_teams.html"
     - title: 주석 작업
       entries:
       - title: 주석 정의
@@ -263,8 +273,20 @@ sidebar:
       url: "/cs_restrict_user_access.html"
     - title: 랜섬웨어 공격 시뮬레이션
       url: "/concept_cs_attack_simulator.html"
-    - title: 알림
+    - title: 이메일 알림
       url: "/cs_notifications_email.html"
+    - title: Webhook 알림
+      entries:
+      - title: Webhook 생성 중
+        url: "/ws_notifications_using_webhooks.html"
+      - title: 코드 해제 Webhook 예
+        url: "/ws_webhook_example_discord.html"
+      - title: PagerDuty Webhook 예
+        url: "/ws_webhook_example_pagerduty.html"
+      - title: Slack Webhook 예
+        url: "/ws_webhook_example_slack.html"
+      - title: 팀 Webhook 예
+        url: "/ws_webhook_example_teams.html"
     - title: 워크로드 보안 API
       url: "/concept_cs_api.html"
     - title: SVM Collector 문제 해결
