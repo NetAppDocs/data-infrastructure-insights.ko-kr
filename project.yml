@@ -157,14 +157,6 @@ sidebar:
         url: "/concept_asset_page_overview.html"
       - title: 개체에 대한 컨텍스트 내 필터링
         url: "/concept_in_context_filters.html"
-      - title: 요약 및 토폴로지 섹션
-        url: "/concept_asset_summary_section.html"
-      - title: 전문가 보기 섹션
-        url: "/concept_asset_expert_view_section.html"
-      - title: 사용자 데이터 섹션
-        url: "/concept_asset_user_data_section.html"
-      - title: 관련 경고 섹션
-        url: "/concept_asset_alerts_section.html"
       - title: 스토리지 가상화
         url: "/concept_storage_virtualization.html"
       - title: 자산 검색에 대한 힌트 및 팁
