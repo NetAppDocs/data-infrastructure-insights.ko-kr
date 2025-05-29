@@ -1,0 +1,78 @@
+---
+sidebar: sidebar 
+permalink: task_dc_google_cloud_netapp_volumes.html 
+summary: Google Cloud NetApp 볼륨 데이터 수집기를 구성합니다 
+keywords: data collector, queries, create, google, cloud, volumes, 
+---
+= NetApp Google Cloud NetApp 볼륨 데이터 수집기
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+이 데이터 수집기는 Google NetApp Cloud Volumes 클라우드 플랫폼 구성의 인벤토리 및 성능 수집을 지원합니다. 이 수집기는 하나의 Google 조직 내의 모든 프로젝트 내의 모든 컴퓨팅 리소스를 검색하려고 합니다. Data Infrastructure Insights로 검색할 Google 조직이 여러 개 있는 경우 조직당 하나의 Data Infrastructure Insights 수집기를 배포해야 합니다.
+
+
+
+== 서비스 계정 요구 사항
+
+* 의 지침에 따라 서비스 계정을 만들어야 link:https://cloud.google.com/iam/docs/creating-managing-service-accounts["서비스 계정 생성/관리"]합니다. 이러한 서비스 계정은 사용자 이름으로 사용되는 ITS_clientId_라는 고유 ID로 식별됩니다.
+* 또한 의 지침에 따라 서비스 계정 키를 link:https://cloud.google.com/iam/docs/creating-managing-service-account-keys["서비스 계정 키 생성/관리"]생성합니다. 이 키는 json 파일로 다운로드될 수 있으며, 이 파일은 암호로 사용됩니다.
+* 서비스 계정은 _compute.readonly_,_monitoring.read_ 및 _cloud-platform_에 대해 범위가 지정되어야 합니다.
+
+
+
+
+== 구성
+
+[cols="2*"]
+|===
+| 필드에 입력합니다 | 설명 
+
+
+| 조직 ID입니다 | 이 수집기로 검색할 조직 ID입니다. 서비스 계정이 둘 이상의 조직을 볼 수 있는 경우 이 필드는 필수입니다 
+
+
+| 위치별로 GCNV 자산을 필터링하려면 '제외' 또는 '포함'을 선택하십시오 | 이 컬렉터는 기본적으로 조직 내의 모든 GCNV 볼륨을 검색하려고 하므로 기본적으로 Exclude(제외)로 설정됩니다. 
+
+
+| GCNV 제외/포함 위치 | 이 옵션은 기본적으로 비어 있으며 "제외" 또는 "포함" 옵션과 함께 사용됩니다. 세계의 특정 지역 내의 자산만을 발견하려는 경우, 이 두 가지 옵션은 수집기의 범위를 제한하기 위해 조작될 수 있습니다 
+
+
+| 프로젝트 ID | "제외 선택"..." 값의 값에 따라 검색 또는 검색에서 필터링하려는 프로젝트 ID 목록입니다. 기본 목록은 비어 있습니다 
+
+
+| 클라이언트 ID입니다 | Google Cloud Platform 구성의 클라이언트 ID입니다 
+
+
+| 여기에 Google 자격 증명 파일의 내용을 복사하여 붙여 넣습니다 | 클라우드 플랫폼 계정에 대한 Google 자격 증명을 이 필드에 복사합니다 
+|===
+
+
+== 고급 구성
+
+[cols="2*"]
+|===
+| 필드에 입력합니다 | 설명 
+
+
+| 재고 폴링 간격(분) | 기본값은 60분입니다 
+
+
+| REST API 호출에 AU Proxy를 사용합니다 | 이 확인란을 선택하면 컬렉터가 컬렉터가 상주하는 AU와 동일한 프록시를 사용하게 됩니다. 기본적으로 활성화되어 있지 않습니다. 즉, 수집기가 HTTPS API 호출을 Google에 직접 전송하려고 합니다. 
+
+
+| VM을 필터링할 키 및 값에 레이블을 지정합니다 | VM의 레이블 키 및 값과 일치하는 키와 값을 필터링하여 포함/제외할 VM(및 연결된 디스크)을 선택하려면 * + 필터 레이블 * 을 클릭합니다. 레이블 키는 필수 항목이며 레이블 값은 선택 사항입니다. 레이블 값이 비어 있으면 레이블 키와 일치하는 한 VM이 필터링됩니다. 
+
+
+| 성능 폴링 간격(초) | 기본값은 300초입니다 
+|===
+
+
+== 문제 해결
+
+이 데이터 수집기에 대한 추가 정보는 페이지 또는 에서 찾을 link:concept_requesting_support.html["지원"]link:reference_data_collector_support_matrix.html["Data Collector 지원 매트릭스"]수 있습니다.

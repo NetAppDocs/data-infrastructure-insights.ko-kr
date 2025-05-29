@@ -133,4 +133,6 @@ Webhook 알림은 정책과 연계되어 있습니다. 공격(RW/DD/WARN)이 발
 
 === 워크로드 보안 Webhook 예
 
-Webhook용 link:ws_webhook_example_pagerduty.html["PagerDuty"]Webhook용 link:ws_webhook_example_teams.html["팀"]Webhook용 Webhook용 Webhook용 Webhook link:ws_webhook_example_slack.html["슬랙"]link:ws_webhook_example_discord.html["불화"]
+용 Webhook link:ws_webhook_example_slack.html["슬랙"]
+
+Webhook용 link:ws_webhook_example_teams.html["팀"]Webhook용 Webhook용 Webhook용 Webhook link:ws_webhook_example_pagerduty.html["PagerDuty"]link:ws_webhook_example_discord.html["불화"]

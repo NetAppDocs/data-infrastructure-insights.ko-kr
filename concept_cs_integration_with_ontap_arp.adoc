@@ -49,9 +49,8 @@ ARP에 대한 추가 세부 정보 및 라이센스 요구 사항을 찾을 수 
 클러스터 자격 증명을 사용하여 _CsUser_의 경우 ONTAP 명령줄에서 다음을 수행합니다.
 
 ....
-security login rest-role create -role arwrole -api /api/storage/volumes -access readonly -vserver <cluster_name>
-security login rest-role create -api /api/security/anti-ransomware -access readonly  -role arwrole -vserver <cluster_name>
-security login create -user-or-group-name csuser -application http -authmethod password -role arwrole
+security login role create -role csrole -cmddirname "volume" -access readonly
+security login role create -role csrole -cmddirname "security anti-ransomware volume" -access readonly
 ....
 기타 구성에 대한 자세한 link:task_add_collector_svm.html["ONTAP 권한"]정보
 

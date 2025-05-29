@@ -7,6 +7,10 @@ summary: 워크로드 보안 데이터 수집기 추가
 = ONTAP SVM Data Collector 구성
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -20,7 +24,7 @@ summary: 워크로드 보안 데이터 수집기 추가
 +
 ** Data ONTAP 9.2 이상 버전 최상의 성능을 얻으려면 9.13.1 이상의 Data ONTAP 버전을 사용하십시오.
 ** SMB 프로토콜 버전 3.1 이하
-** ONTAP 9.15.1 이상이 설치된 NFS 4.1까지의 NFS 버전
+** NFS 4.1을 포함한 NFS 버전(NFS 4.1은 ONTAP 9.15 이상에서 지원됨)
 ** FlexGroup는 ONTAP 9.4 이상 버전에서 지원됩니다
 ** ONTAP Select가 지원됩니다
 
@@ -59,7 +63,7 @@ SVM 이름, CIFS 서버 이름 및 추가 필드가 반환됩니다.
 
 * SVM vsadmin 사용자의 암호를 설정합니다. 사용자 지정 사용자 또는 클러스터 관리자를 사용하는 경우 이 단계를 건너뜁니다. clustershell:> `security login password -username vsadmin -vserver svmname`
 * 외부 액세스를 위해 SVM vsadmin 사용자의 잠금을 해제합니다. 사용자 지정 사용자 또는 클러스터 관리자를 사용하는 경우 이 단계를 건너뜁니다. clustershell:> `security login unlock -username vsadmin -vserver svmname`
-* 데이터 LIF의 방화벽 정책이 'GMT'(이하 '데이터')로 설정되어 있는지 확인합니다. 전용 관리 lif를 사용하여 SVM.clustershell:> 을 추가하는 경우 이 단계를 건너뜁니다 `network interface modify -lif <SVM_data_LIF_name> -firewall-policy mgmt`
+* 데이터 LIF의 방화벽 정책이 '데이터'가 아닌 'GMT'(으)로 설정되어 있는지 확인합니다. 전용 관리 lif를 사용하여 SVM.clustershell:> 을 추가하는 경우 이 단계를 건너뜁니다 `network interface modify -lif <SVM_data_LIF_name> -firewall-policy mgmt`
 * 방화벽이 활성화된 경우 Data ONTAP 데이터 수집기를 사용하여 포트에 대한 TCP 트래픽을 허용하도록 정의된 예외가 있어야 합니다.
 +
 구성 정보는 을 link:concept_cs_agent_requirements.html["상담원 요구 사항"]참조하십시오. 이는 클라우드에 설치된 온프레미스 에이전트 및 에이전트에 적용됩니다.
@@ -110,17 +114,8 @@ image:ws_test_connection_success_example.png["Workload Security 'Test Connection
 
 클러스터 관리 자격 증명을 사용하는 경우 새 권한이 필요하지 않습니다.
 
-사용자에게 부여된 권한으로 사용자 지정 사용자(예: _CsUser_)를 사용하는 경우 아래 단계에 따라 사용자를 차단하는 워크로드 보안에 권한을 부여합니다.
+사용자에게 지정된 권한으로 사용자 지정 사용자(예: _CsUser_)를 사용하는 경우, 워크로드 보안에 권한을 부여하여 사용자를 차단하십시오. 의 단계를 link:cs_restrict_user_access.html["사용자 액세스 차단"]따릅니다.
 
-클러스터 자격 증명이 있는 CsUser의 경우 ONTAP 명령줄에서 다음을 수행하십시오.
-
-....
-security login role create -role csrole -cmddirname "vserver export-policy rule" -access all
-security login role create -role csrole -cmddirname set -access all
-security login role create -role csrole -cmddirname "vserver cifs session" -access all
-security login role create -role csrole -cmddirname "vserver services access-check authentication translate" -access all
-security login role create -role csrole -cmddirname "vserver name-mapping" -access all
-....
 
 
 == 사용 권한에 대한 참고 사항
@@ -131,6 +126,14 @@ security login role create -role csrole -cmddirname "vserver name-mapping" -acce
 
 클러스터 관리 관리자 사용자를 사용하여 워크로드 보안이 ONTAP SVM 데이터 수집기에 액세스할 수 없는 경우 아래 명령에 나와 있는 역할을 사용하여 "CsUser"라는 새 사용자를 생성할 수 있습니다. 클러스터 관리 IP를 사용하도록 워크로드 보안 데이터 수집기를 구성할 때 "CsUser"의 사용자 이름 "CsUser"와 암호를 사용합니다.
 
+참고: 사용자 정의 사용자에 대한 모든 기능 권한에 사용할 단일 역할을 만들 수 있습니다. 기존 사용자가 있는 경우 먼저 다음 명령을 사용하여 기존 사용자 및 역할을 삭제합니다.
+
+....
+security login delete -user-or-group-name csuser -application *
+security login role delete -role csrole -cmddirname *
+security login rest-role delete -role csrestrole -api *
+security login rest-role delete -role arwrole -api *
+....
 새 사용자를 생성하려면 클러스터 관리 관리자 사용자 이름/암호를 사용하여 ONTAP에 로그인하고 ONTAP 서버에서 다음 명령을 실행합니다.
 
  security login role create -role csrole -cmddirname DEFAULT -access readonly
@@ -142,8 +145,7 @@ security login role create -role csrole -cmddirname "event filter" -access all
 security login role create -role csrole -cmddirname "event notification destination" -access all
 security login role create -role csrole -cmddirname "event notification" -access all
 security login role create -role csrole -cmddirname "security certificate" -access all
-....
-....
+security login role create -role csrole -cmddirname "cluster application-record" -access all
 security login create -user-or-group-name csuser -application ontapi -authmethod password -role csrole
 security login create -user-or-group-name csuser -application ssh -authmethod password -role csrole
 security login create -user-or-group-name csuser -application http -authmethod password -role csrole
@@ -154,6 +156,13 @@ security login create -user-or-group-name csuser -application http -authmethod p
 
 클러스터 관리 관리자 사용자를 사용하여 워크로드 보안이 ONTAP SVM 데이터 수집기에 액세스할 수 없는 경우 아래 명령에 나와 있는 역할을 사용하여 "CsUser"라는 새 사용자를 생성할 수 있습니다. 워크로드 보안 데이터 수집기에서 SVM 관리 IP를 사용하도록 구성할 때 "CsUser"의 사용자 이름 "CsUser"와 암호를 사용합니다.
 
+참고: 사용자 정의 사용자에 대한 모든 기능 권한에 사용할 단일 역할을 만들 수 있습니다. 기존 사용자가 있는 경우 먼저 다음 명령을 사용하여 기존 사용자 및 역할을 삭제합니다.
+
+....
+security login delete -user-or-group-name csuser -application * -vserver <vservername>
+security login role delete -role csrole -cmddirname * -vserver <vservername>
+security login rest-role delete -role csrestrole -api * -vserver <vservername>
+....
 새 사용자를 생성하려면 클러스터 관리 관리자 사용자 이름/암호를 사용하여 ONTAP에 로그인하고 ONTAP 서버에서 다음 명령을 실행합니다. 쉽게 사용할 수 있도록 이러한 명령을 텍스트 편집기에 복사하고 ONTAP에서 다음 명령을 실행하기 전에 <vservername>을(를) SVM 이름으로 바꾸십시오.
 
  security login role create -vserver <vservername> -role csrole -cmddirname DEFAULT -access none
@@ -183,16 +192,10 @@ protbuf에 대한 특정 권한이 필요합니다(일부 또는 전부가 이�
 
 클러스터 모드:
 
-....
-security login rest-role create -role csrestrole -api /api/protocols/fpolicy -access all -vserver <cluster_name>
-security login create -user-or-group-name csuser -application http -authmethod password -role csrestrole
-....
+ security login role create -role csrole -cmddirname "vserver fpolicy" -access all
 SVM 모드:
 
-....
-security login rest-role create -role csrestrole -api /api/protocols/fpolicy -access all -vserver <svm_name>
-security login create -user-or-group-name csuser -application http -authmethod password -role csrestrole -vserver <svm_name>
-....
+ security login role create -vserver <vservername> -role csrole -cmddirname "vserver fpolicy" -access all
 
 
 === ONTAP 자율적 랜섬웨어 방어 및 ONTAP 액세스에 대한 권한이 거부되었습니다
@@ -243,7 +246,7 @@ ONTAP SVM 구성 페이지가 표시됩니다. 각 필드에 필요한 데이터
 | SVM 이름 | SVM 이름(클러스터 IP를 통해 연결할 때 이 필드 필요) 
 
 
-| 사용자 이름 | 클러스터 IP를 통해 추가할 때 SVM/클러스터에 액세스하는 사용자 이름 옵션은 1입니다. 클러스터 관리 2. 'CsUser' 3. CsUser와 유사한 역할을 가진 AD 사용자. SVM IP를 통해 추가할 때 옵션은 4.vsadmin 5입니다. 'CsUser' 6. CsUser와 유사한 역할을 하는 AD-사용자 이름입니다. 
+| 사용자 이름 | 클러스터 IP를 통해 추가할 때 SVM/클러스터에 액세스하는 사용자 이름 옵션은 1입니다. 클러스터 관리 2. 'CSUser' 3. CsUser와 유사한 역할을 가진 AD 사용자. SVM IP를 통해 추가할 때 옵션은 4.vsadmin 5입니다. 'CSUser'6. CsUser와 유사한 역할을 하는 AD-사용자 이름입니다. 
 
 
 | 암호 | 위의 사용자 이름에 대한 암호입니다 
@@ -277,9 +280,9 @@ ONTAP SVM 구성 페이지가 표시됩니다. 각 필드에 필요한 데이터
 . 데이터 수집기는 _Cluster IP_로 연결해야 합니다.
 . 언제든지 한 데이터 수집기가 실행 중이어야 하며, 다른 데이터 수집기는 오류가 발생합니다.
 +
-현재 '실행 중인' SVM의 데이터 수집기는 _ running _ 으로 표시됩니다. 현재 '가장 위에 있는' SVM의 데이터 수집기는 _Error_로 표시됩니다.
+현재 '실행 중인' SVM의 데이터 수집기가 _running_으로 표시됩니다. 현재 '최상위' SVM의 데이터 수집기가 _Error_로 표시됩니다.
 
-. 전환이 있을 때마다 데이터 수집기의 상태가 '실행 중'에서 '오류'로, 또는 그 반대로 변경됩니다.
+. 전환이 있을 때마다 데이터 수집기의 상태가 '실행 중'에서 '오류'로 변경되고 그 반대의 경우도 마찬가지입니다.
 . 데이터 수집기가 오류 상태에서 실행 상태로 이동하는 데 최대 2분이 걸립니다.
 
 
@@ -337,14 +340,14 @@ NOTE: 수집기에 제한된 사용자가 있는 경우 수집기를 일시 중�
 클러스터 모드:
 
 ....
-security login rest-role create -role csrestrole -api /api/protocols/fpolicy -access all -vserver <cluster-name>
-security login rest-role create -role csrestrole -api /api/cluster/jobs/ -access readonly -vserver <cluster-name>
+security login role create -role csrole -cmddirname "vserver fpolicy" -access all
+security login role create -role csrole -cmddirname "job show" -access readonly
 ....
 SVM 모드:
 
 ....
-security login rest-role create -role csrestrole -api /api/protocols/fpolicy -access all -vserver <vserver-name>
-security login rest-role create -role csrestrole -api /api/cluster/jobs/ -access readonly -vserver <vserver-name>
+security login role create -vserver <vservername> -role csrole -cmddirname "vserver fpolicy" -access all
+security login role create -vserver <vservername> -role csrole -cmddirname "job show" -access readonly
 ....
 
 

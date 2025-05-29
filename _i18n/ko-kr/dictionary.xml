@@ -2480,7 +2480,6 @@
   <block id="9599db26f78c533407593a1835c7f6dc" category="paragraph">자산을 선택하면 추가 자원 섹션에 표시됩니다. 자산에 대한 정보를 더 이상 보지 않으려면 휴지통 아이콘을 클릭하여 삭제합니다.</block>
   <block id="2d511a0af71415c4b6b394d9a1964225" category="summary">대부분의 개체 유형에 대해 자산 페이지를 표시할 수 있습니다.</block>
   <block id="033cb70e428cff3c1584d7206da08f9c" category="doc">자산 페이지 개요</block>
-  <block id="ab24a36f89b07d59e5cf53d5754754b1" category="paragraph">자산 페이지는 자산의 현재 상태를 요약하고 자산 및 관련 자산에 대한 추가 정보에 대한 링크를 포함합니다.</block>
   <block id="39e070e3a04350745af06b7d21eb87f6" category="section-title">자산 페이지 유형</block>
   <block id="03d9b057f92af8e6f6c95a445dacda02" category="paragraph">Data Infrastructure Insights는 다음 자산에 대한 자산 페이지를 제공합니다.</block>
   <block id="76c3fe1d90eec0f4dbe5dd8bf85ff05b" category="list-text">가상 머신</block>
@@ -2500,8 +2499,6 @@
   <block id="bbc155fb2b111bf61c4f5ff892915e6b" category="list-text">스위치</block>
   <block id="0ac79129f2a7ba5db5e1f4d755cb3231" category="list-text">패브릭</block>
   <block id="76ac23eeb60c7b4065805dfd0ddfebfd" category="section-title">표시된 데이터의 시간 범위를 변경합니다</block>
-  <block id="5e5521164b1b5af65706898441efc15d" category="paragraph">기본적으로 자산 페이지에는 지난 24시간 동안의 데이터가 표시되지만 표시되는 데이터 세그먼트는 다른 고정 시간 범위 또는 사용자 지정 시간 범위를 선택하여 변경하거나 더 적은 데이터 또는 더 많은 데이터를 볼 수 있습니다.</block>
-  <block id="8c4cd8b70017d76d9f40fc77fd6c6f13" category="paragraph">자산 유형에 관계없이 모든 자산 페이지에 있는 옵션을 사용하여 표시된 데이터의 시간 세그먼트를 변경할 수 있습니다. 시간 범위를 변경하려면 상단 표시줄에 표시된 시간 범위를 클릭하고 다음 시간 세그먼트 중에서 선택합니다.</block>
   <block id="a926f64f96f29ebfa9e64241032a55b2" category="list-text">마지막 15분</block>
   <block id="0fd65d7e147096c119c6900ed5b5a8cd" category="list-text">마지막 30분</block>
   <block id="5b1e7feb1c634d40cb2a44e9b6e49484" category="list-text">마지막 60분</block>
@@ -2516,7 +2513,6 @@
   <block id="015a82ad52283ebee50f2819fc99d3eb" category="list-text">최근 30일</block>
   <block id="31d24a48af5814ffeeb3d62fcd61c322" category="list-text">사용자 지정 시간 범위</block>
   <block id="993bb582982b324ee6465cc1d0c1a2bd" category="paragraph">사용자 지정 시간 범위를 사용하면 최대 31일 연속 선택할 수 있습니다. 이 범위에 대한 시작 시간 및 종료 시간을 설정할 수도 있습니다. 기본 시작 시간은 선택한 첫 날의 오전 12:00이고 기본 종료 시간은 선택한 마지막 날의 오후 11:59입니다. 적용 을 클릭하면 자산 페이지에 사용자 지정 시간 범위가 적용됩니다.</block>
-  <block id="ffe8a4f426307f8dd53338d7bc39db00" category="paragraph">자산 페이지 요약 섹션뿐 아니라 페이지의 모든 테이블 또는 사용자 정의 위젯에 있는 정보는 선택한 시간 범위에 따라 자동으로 새로 고쳐집니다. 현재 새로 고침 빈도는 요약 섹션의 오른쪽 상단 모서리와 페이지의 관련 테이블 또는 위젯에 표시됩니다.</block>
   <block id="4feea054535349a31f7c12b7dcbc4d2b" category="section-title">사용자 지정 위젯을 추가합니다</block>
   <block id="2c6503d76e77d1cf4b2836c66fb29d6e" category="paragraph">자체 위젯을 모든 자산 페이지에 추가할 수 있습니다. 추가한 위젯은 해당 유형의 모든 객체에 대한 자산 페이지에 표시됩니다. 예를 들어 스토리지 자산 페이지에 사용자 지정 위젯을 추가하면 모든 스토리지 자산에 대한 자산 페이지에 해당 위젯이 표시됩니다.</block>
   <block id="9dc6acc34988c6b63dea4000b689a580" category="summary">Data Infrastructure Insights의 자산 페이지 요약 섹션 개요</block>
@@ -5628,8 +5624,6 @@
   <block id="6e0dfd81ddc34b1c1736fb0d236a55db" category="paragraph"><block ref="6e0dfd81ddc34b1c1736fb0d236a55db" category="inline-image-macro-rx" type="image"></block></block>
   <block id="8e590479d69be0679e0d2b7c5a78d3ab" category="paragraph">클러스터 관리 자격 증명을 사용하여 Data Collector를 추가하는 경우 새 권한이 필요하지 않습니다.</block>
   <block id="a3fef797358352dd57f209719f4590ca" category="paragraph">사용자에게 부여된 권한이 있는 사용자 지정 사용자(예: _CsUser_)를 사용하여 수집기를 추가하는 경우, 아래 단계에 따라 ONTAP에 액세스 거부 이벤트를 등록하는 데 필요한 권한을 워크로드 보안에 부여합니다.</block>
-  <block id="b30a6e7a75eaf5af9f2106e8d96d324b" category="paragraph">cluster_credentials를 사용하는 CsUser의 경우 ONTAP 명령줄에서 다음 명령을 실행합니다. _csrestrole_은(는) 사용자 지정 역할이고 _csUser_는 ONTAP 사용자 지정 사용자입니다.</block>
-  <block id="7a1aa4b5b013e91e379aedbfb6a633f3" category="paragraph">csUser with_SVM_credentials의 경우 ONTAP 명령줄에서 다음 명령을 실행합니다.</block>
   <block id="6b112db6b76b4a3d519b727558f34cb6" category="section-title">액세스가 거부되었습니다</block>
   <block id="d3717aec38baca9f86dd49ee974d2ccf" category="paragraph">ONTAP 시스템에서 이벤트를 가져오면 워크로드 보안 포렌식 페이지에 액세스 거부 이벤트가 표시됩니다. 표시되는 정보 외에도 기어 아이콘에서 테이블에 _WARGED Activity_ 열을 추가하여 특정 작업에 대해 누락된 사용자 권한을 볼 수 있습니다.</block>
   <block id="fb4e4dc5cb185934a7a50a8b788d9a18" category="inline-image-macro">액세스 거부 이벤트의 예</block>
@@ -6120,7 +6114,6 @@
   <block id="0c4a0e9a569be65e94908f9222457694" category="inline-link-macro">사용자 디렉토리 수집기 문제 해결</block>
   <block id="fa754fd7176d2dbf75086e702bb8e0ba" category="cell">가능한 원인은 다음과 같습니다. 1. 아직 구성된 사용자 디렉토리 Collector가 없습니다. 하나를 추가하려면 * Workload Security &gt; Collector &gt; User Directory Collector * 로 이동하고 * + User Directory Collector * 를 클릭합니다. Active Directory_or_LDAP Directory Server_를 선택합니다. 2. 사용자 디렉터리 수집기가 구성되었지만 중지되었거나 오류 상태입니다. Collectors &gt; User Directory Collectors * 로 이동하여 상태를 확인하십시오. <block ref="700dae282c67631ab7fef060d50fba0f" category="inline-link-macro-rx"></block>문제 해결 팁은 설명서의 섹션을 참조하십시오. 올바르게 구성하면 24시간 내에 자동으로 이름이 확인됩니다. 그래도 해결되지 않으면 올바른 사용자 데이터 수집기를 추가했는지 확인합니다. 사용자가 실제로 추가된 Active Directory/LDAP Directory Server에 속하는지 확인합니다.</block>
   <block id="65524feb61d50c77bb7ba2638a763f8e" category="cell">일부 NFS 이벤트는 UI에서 표시되지 않습니다.</block>
-  <block id="57312d53719f5635163cdff04dd88136" category="cell">다음을 확인하십시오. 1. POSIX 속성이 설정된 AD 서버의 사용자 디렉토리 수집기는 UI에서 활성화된 unixid 속성으로 실행해야 합니다. 2. UI 3의 사용자 페이지에서 NFS 액세스를 수행하는 모든 사용자를 검색할 때 표시됩니다. 원시 이벤트(사용자가 아직 검색되지 않은 이벤트)는 NFS 4에서 지원되지 않습니다. NFS 내보내기에 대한 익명 액세스는 모니터링되지 않습니다. 5. NFS 버전이 NFS4.1 미만에서 사용되는지 확인합니다.</block>
   <block id="9bb3efbd29374edfd5411d3bf02b3b92" category="cell">Forensics_All Activity_or_Entities_pages의 필터에 별표(*)와 같은 와일드카드 문자가 포함된 일부 문자를 입력하면 페이지가 매우 느리게 로드됩니다.</block>
   <block id="e7b6c39291eb31c1a3a49eb83274bc99" category="cell">경로 필터를 사용할 때 "상태 코드 500/503으로 요청 실패" 오류가 발생합니다.</block>
   <block id="62ce499553ccf0270c3a01cc146e46fd" category="cell">레코드를 필터링하려면 더 작은 날짜 범위를 사용하십시오.</block>
@@ -8036,7 +8029,6 @@
   <block id="6b6a5e540baae01020db6abcb69752a2" category="list-text">이 데이터 수집기는 다음 구성 요소를 통해 지원됩니다.</block>
   <block id="b497cf0f1b1568d837947f6ad7ece7af" category="list-text">Data ONTAP 9.2 이상 버전 최상의 성능을 얻으려면 9.13.1 이상의 Data ONTAP 버전을 사용하십시오.</block>
   <block id="343a405f2f06197f662e42373c7fb059" category="list-text">SMB 프로토콜 버전 3.1 이하</block>
-  <block id="7c6a37577f49fc25a4c899cda17f9040" category="list-text">ONTAP 9.15.1 이상이 설치된 NFS 4.1까지의 NFS 버전</block>
   <block id="ca25fd447f71b95ab21d53b012fa1ddc" category="list-text">FlexGroup는 ONTAP 9.4 이상 버전에서 지원됩니다</block>
   <block id="1b1cd01c54254af639999400741a0b75" category="list-text">ONTAP Select가 지원됩니다</block>
   <block id="37f8c5eb442d46d5ec5da0275366c9c8" category="list-text">데이터 유형 SVM만 지원됩니다. 무한 확장 볼륨이 있는 SVM은 지원되지 않습니다.</block>
@@ -8061,7 +8053,6 @@
   <block id="2d3cc76ffef3ba66813c26ecf4f96b0f" category="list-text">방화벽이 활성화된 경우 Data ONTAP 데이터 수집기를 사용하여 포트에 대한 TCP 트래픽을 허용하도록 정의된 예외가 있어야 합니다.</block>
   <block id="1b44ec95d8bb09c8257712da31dde413" category="inline-link-macro">상담원 요구 사항</block>
   <block id="d47350de0cb738713602fc081af217e9" category="paragraph">구성 정보는 을 <block ref="66b24601b32ea1e28a736b303c9dda16" category="inline-link-macro-rx"></block>참조하십시오. 이는 클라우드에 설치된 온프레미스 에이전트 및 에이전트에 적용됩니다.</block>
-  <block id="0deb145e97d2a45a78872c8c8eb51e12" category="list-text">Cloud ONTAP SVM을 모니터링하기 위해 AWS EC2 인스턴스에 에이전트를 설치한 경우 에이전트와 스토리지는 동일한 VPC에 있어야 합니다. 개별 VPC에 있는 경우 VPC 간에 유효한 경로가 있어야 합니다.</block>
   <block id="5c62f1c9f30e0ad47fc12431846b6858" category="inline-link-macro">사용자 액세스 차단</block>
   <block id="3307ea9b101dea248dbf60bf6f93ed75" category="paragraph">다음 사항에 유의하십시오.<block ref="e513c094cbe732163e31cf30e277e8bc" category="inline-link-macro-rx"></block></block>
   <block id="0cd400e3d93cd7ed179f95d57d744891" category="section-title">사용 권한에 대한 참고 사항</block>
@@ -8092,7 +8083,6 @@
   <block id="c50f4a752643297cd09ba0deaf0c0827" category="cell">SVM 이름</block>
   <block id="fabfbae9b52bdb9c35688428560d23d0" category="cell">SVM 이름(클러스터 IP를 통해 연결할 때 이 필드 필요)</block>
   <block id="f6039d44b29456b20f8f373155ae4973" category="cell">사용자 이름</block>
-  <block id="1bcb892250552f8e5d36186788921c07" category="cell">클러스터 IP를 통해 추가할 때 SVM/클러스터에 액세스하는 사용자 이름 옵션은 1입니다. 클러스터 관리 2. 'CsUser' 3. CsUser와 유사한 역할을 가진 AD 사용자. SVM IP를 통해 추가할 때 옵션은 4.vsadmin 5입니다. 'CsUser' 6. CsUser와 유사한 역할을 하는 AD-사용자 이름입니다.</block>
   <block id="dc647eb65e6711e155375218212b3964" category="cell">암호</block>
   <block id="9333b5b26a1ca69c15cd77e46b9ddbf8" category="cell">위의 사용자 이름에 대한 암호입니다</block>
   <block id="1f7c7e6ee279ff06baf8503f5be616f2" category="cell">공유/볼륨 필터링</block>
@@ -8112,17 +8102,12 @@
   <block id="65b46bd8eed280f6feefa47f4a74d302" category="list-text">데이터 수집기 2개를 소스 SVM에 연결하고 다른 데이터 수집기를 타겟 SVM에 연결합니다.</block>
   <block id="d5d55b52a220ca4d14feac2aa8b83d23" category="list-text">데이터 수집기는 _Cluster IP_로 연결해야 합니다.</block>
   <block id="c2e2e688fedcc6b98883e05a15afc9b8" category="list-text">언제든지 한 데이터 수집기가 실행 중이어야 하며, 다른 데이터 수집기는 오류가 발생합니다.</block>
-  <block id="edf525ae0ad794e4070641e785a1a628" category="paragraph">현재 '실행 중인' SVM의 데이터 수집기는 _ running _ 으로 표시됩니다. 현재 '가장 위에 있는' SVM의 데이터 수집기는 _Error_로 표시됩니다.</block>
-  <block id="6d1fbd196541e759b0a79fdf2b671bcd" category="list-text">전환이 있을 때마다 데이터 수집기의 상태가 '실행 중'에서 '오류'로, 또는 그 반대로 변경됩니다.</block>
   <block id="34d88af94446d0d86575e402898fc1b0" category="list-text">데이터 수집기가 오류 상태에서 실행 상태로 이동하는 데 최대 2분이 걸립니다.</block>
   <block id="f0240b95ecfe16d637a84130b5ed57d9" category="section-title">서비스 정책</block>
   <block id="4cb8e0d8b1d299b402fd5ddce7d39cd5" category="paragraph">ONTAP* 버전 9.9.1 이상 * 과 함께 서비스 정책을 사용하는 경우 데이터 소스 수집기에 연결하려면 _data-FPolicy-client_service가 data service_data-nfs_ 및 /or_data-cifs_와 함께 필요합니다.</block>
   <block id="ee22588534e4e3b699a85e968f56f4a7" category="paragraph">9.9.1 이전의 ONTAP 버전에서는 _data-FPolicy-client_를 설정할 필요가 없습니다.</block>
   <block id="27f986eca60850ba6afaf4deb6c8be29" category="section-title">데이터 수집기 재생 - 일시 중지</block>
   <block id="37387a4cc8252dafbc2c17f057568ef6" category="paragraph">Data Collector가 _running_state인 경우 수집을 일시 중지할 수 있습니다. 수집기에 대한 "세 개의 점" 메뉴를 열고 일시 중지를 선택합니다. Collector가 일시 중지되는 동안 ONTAP에서 수집된 데이터는 없고 Collector에서 ONTAP로 전송되는 데이터는 없습니다. 즉, Fpolicy 이벤트가 ONTAP에서 데이터 수집기로, 그리고 그 안에서 데이터 인프라 Insights로 이동하지 않습니다.</block>
-  <block id="12a77ef251456c14c7516a531e07f62b" category="paragraph">Collector가 일시 중지된 동안 ONTAP에 새 볼륨 등이 생성되면 워크로드 보안이 데이터를 수집하지 않고 해당 볼륨 등이 대시보드나 테이블에 반영되지 않습니다.</block>
-  <block id="ac08b45e1e6b3f3cb0a5ffc7cb738447" category="list-text">일시 중지된 수집기에 구성된 설정에 따라 스냅샷 삭제가 수행되지 않습니다.</block>
-  <block id="4a0a97ef2afa5a536e5dc77411dedca9" category="list-text">ONTAP ARP와 같은 EMS 이벤트는 일시 중지된 Collector에서 처리되지 않습니다. 즉, ONTAP에서 랜섬웨어 공격을 식별하면 Data Infrastructure Insights 워크로드 보안이 해당 이벤트를 파악할 수 없습니다.</block>
   <block id="7e41836b686c17a31fd348a24ad244d1" category="list-text">일시 중지된 수집기에 대해 상태 알림 이메일이 전송되지 않습니다.</block>
   <block id="3683774ed8a4e1ec359bda17c740e07d" category="list-text">수동 또는 자동 작업(예: 스냅샷 또는 사용자 차단)은 일시 중지된 수집기에서 지원되지 않습니다.</block>
   <block id="fa80f305470263b5f75374e020afeacd" category="list-text">에이전트 또는 수집기 업그레이드, 에이전트 VM 다시 시작/재부팅 또는 에이전트 서비스 다시 시작 시 일시 중지된 수집기는 _Paused_state에 남아 있습니다.</block>
@@ -12167,7 +12152,6 @@
   <block id="4bffd602151b14e55ad1f19de262d0c1" category="list-text">SVM에 CIFS 서버가 구성되어 있는지 확인합니다. clustershell:&gt;<block ref="fafd8ff6ac4a59e73c5d4e3b47d545ee" prefix=" " category="inline-code"></block></block>
   <block id="52ea452f7c0975b526b909c63394b7e8" category="list-text">SVM vsadmin 사용자의 암호를 설정합니다. 사용자 지정 사용자 또는 클러스터 관리자를 사용하는 경우 이 단계를 건너뜁니다. clustershell:&gt;<block ref="73b77b9c99e693ec16bc3e4960672465" prefix=" " category="inline-code"></block></block>
   <block id="9b7edcaaf6b4a85dc972c92c9191eb04" category="list-text">외부 액세스를 위해 SVM vsadmin 사용자의 잠금을 해제합니다. 사용자 지정 사용자 또는 클러스터 관리자를 사용하는 경우 이 단계를 건너뜁니다. clustershell:&gt;<block ref="db25ee40fb860a97415dab9c598caaf9" prefix=" " category="inline-code"></block></block>
-  <block id="368c3bb96cbd7737c094fe94dfdedf94" category="list-text">데이터 LIF의 방화벽 정책이 'GMT'(이하 '데이터')로 설정되어 있는지 확인합니다. 전용 관리 lif를 사용하여 SVM.clustershell:&gt; 을 추가하는 경우 이 단계를 건너뜁니다<block ref="0197c7c6728dc0e945da717147320f69" prefix=" " category="inline-code"></block></block>
   <block id="c71b503670f2867f513635832d1599c3" category="paragraph"><block ref="c71b503670f2867f513635832d1599c3" category="inline-image-macro-rx" type="image"></block></block>
   <block id="d2b98171b3e920dab4bb3e92ccf4e89a" category="paragraph"><block ref="d2b98171b3e920dab4bb3e92ccf4e89a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="feacd3cef81abfcdbf59bda9ba5b97fd" category="paragraph"><block ref="feacd3cef81abfcdbf59bda9ba5b97fd" category="inline-image-macro-rx" type="image"></block></block>
@@ -12318,29 +12302,9 @@
   <block id="932f2c5acc21af69f8b6364c9253f343" category="cell">작업을 저장할 때 폴더에 "사용자 정의 보고서 - xxxxxx"의 콘텐츠 목록이 있는 "팀 콘텐츠"가 표시될 수 있습니다. 그러나 Cognos는 이 폴더가 쓰기 권한이 없는 "팀 콘텐츠" 폴더라고 생각하기 때문에 이 폴더에 작업을 저장할 수 없습니다.</block>
   <block id="68d49a29df93f86fad174957a3b64f3e" category="cell">해결 방법은 고유한 이름을 가진 새 폴더(예: "NewFolder")를 만들어 저장하거나 "내 콘텐츠"에 저장한 다음 "사용자 지정 보고서 - xxxxxx"로 복사/이동하는 것입니다.</block>
   <block id="6c64b0b8fa6a49a7d9d02dc05ff84dd9" category="paragraph">참고: 첫 번째 명령이 "리소스를 찾을 수 없음"을 반환하는 경우 다음 지침에 따라 이전 버전의 모니터링 운영자를 제거합니다.</block>
-  <block id="8f5d4322bbada1e271bc144d48fbd530" category="section-title">Kudbe-state-Metrics 카운터</block>
-  <block id="0868aed0151117af81e4d8a3bf48f5d1" category="paragraph">다음 링크를 사용하여 이러한 kubbe 상태 메트릭 카운터에 대한 정보에 액세스할 수 있습니다.</block>
-  <block id="dcd18b6a9c1c857332184b4ab6b6b876" category="inline-link">ConfigMap 메트릭입니다</block>
-  <block id="43c0e039eb7d522a6d4d124fdff7e06f" category="list-text"><block ref="43c0e039eb7d522a6d4d124fdff7e06f" category="inline-link-rx"></block></block>
-  <block id="9c6d0e0120fcf6c4d873e186cc9739bf" category="list-text"><block ref="9c6d0e0120fcf6c4d873e186cc9739bf" category="inline-link-rx"></block></block>
-  <block id="aa7c0000dea1ded472606bf83241d554" category="list-text"><block ref="aa7c0000dea1ded472606bf83241d554" category="inline-link-rx"></block></block>
-  <block id="3743b47b26a692a03362afc5a67c0463" category="inline-link">수신 메트릭</block>
-  <block id="4cb7ce0b5790952cc6bda2997a7dabc9" category="list-text"><block ref="4cb7ce0b5790952cc6bda2997a7dabc9" category="inline-link-rx"></block></block>
-  <block id="5fdc0df1bae486ee24716c612b24ca02" category="list-text"><block ref="5fdc0df1bae486ee24716c612b24ca02" category="inline-link-rx"></block></block>
-  <block id="8b04a06b05700061d42a433c93746a63" category="list-text"><block ref="8b04a06b05700061d42a433c93746a63" category="inline-link-rx"></block></block>
-  <block id="69207fca599a65027f8a0597b95b093d" category="list-text"><block ref="69207fca599a65027f8a0597b95b093d" category="inline-link-rx"></block></block>
-  <block id="ea541521b7c5e710af931c8e4f58eb87" category="inline-link">잔류 볼륨 클레임 메트릭</block>
-  <block id="628462d67f17543dc95a839333690c0e" category="list-text"><block ref="628462d67f17543dc95a839333690c0e" category="inline-link-rx"></block></block>
-  <block id="3962a47d5b09f2b1246c86d8bc272414" category="list-text"><block ref="3962a47d5b09f2b1246c86d8bc272414" category="inline-link-rx"></block></block>
-  <block id="5df76f1cf3ae3096632fd05036cd39a0" category="list-text"><block ref="5df76f1cf3ae3096632fd05036cd39a0" category="inline-link-rx"></block></block>
-  <block id="8f9fbab4275b3c6156f4a1e2bd589d5e" category="inline-link">비밀 지표</block>
-  <block id="94500053c0d8262e7a0caa0908ba6f8d" category="list-text"><block ref="94500053c0d8262e7a0caa0908ba6f8d" category="inline-link-rx"></block></block>
-  <block id="4e3e0b949c1506c4eb21f3ebfc141e3b" category="list-text"><block ref="4e3e0b949c1506c4eb21f3ebfc141e3b" category="inline-link-rx"></block></block>
-  <block id="3a41cf72ebe7dd71e2b8cb6f1a7e14ff" category="list-text"><block ref="3a41cf72ebe7dd71e2b8cb6f1a7e14ff" category="inline-link-rx"></block></block>
   <block id="dd76ae8de47aca7994545a7035613bf0" category="list-text">다음 명령을 사용하여 읽기 전용 사용자를 생성합니다. create 명령을 실행하면 이 사용자의 암호를 입력하라는 메시지가 표시됩니다. 다음 명령에서 _ci_readonly_로 설정된 역할이 표시됩니다. 위의 3단계에서 다른 이름을 가진 역할을 생성하는 경우 대신 사용자 지정 역할 이름을 사용하십시오.</block>
   <block id="7b8cb6a2da35e297a98a9c7f685b10bf" category="summary">워크로드 보안 경고 알림을 위한 Webhook을 생성합니다.</block>
   <block id="b4e56cbfee73fd0b031d980fbdbc1221" category="doc">Webhook를 사용한 워크로드 보안 알림</block>
-  <block id="bac104179c44c4bc668db684ba506bc9" category="paragraph">Webhook을 사용하면 사용자가 사용자 지정된 Webhook 채널을 사용하여 다양한 응용 프로그램에 중요 또는 경고 알림을 보낼 수 있습니다.</block>
   <block id="990e31b802a497274f77721882cb6da4" category="paragraph">대부분의 상용 응용 프로그램은 Slack, PagerDuty, Teams 및 Discord와 같은 표준 입력 인터페이스로 웹후크를 지원합니다. Workload Security는 사용자 정의 가능한 일반 Webhook 채널을 지원함으로써 이러한 전달 채널을 다수 지원할 수 있습니다. Webhook 구성에 대한 정보는 해당 응용 프로그램의 웹 사이트에서 확인할 수 있습니다. 예를 들어 Slack은 을 <block ref="467ef0b7b93a9b44aaca1d16165eef1f" category="inline-link-macro-rx"></block>제공합니다.</block>
   <block id="e62bbcee343d1c4078d7ed518ab7f3ee" category="paragraph">여러 개의 Webhook 채널을 생성할 수 있습니다. 각 채널은 다른 용도로 타겟팅되며, 별도의 애플리케이션, 다른 수신인 등을 생성할 수 있습니다</block>
   <block id="0326dc02270d26b9aa0fcc21670bbc3c" category="paragraph">Webhook 채널 인스턴스는 다음과 같은 요소로 구성됩니다</block>
@@ -12388,7 +12352,6 @@
   <block id="5d85e370b1d77d0446861bca3ba2923b" category="list-text">정책이 일시 중지되면 Webhook 알림이 트리거되지 않습니다.</block>
   <block id="a42fc48e948265e9bdcb235f801134f1" category="list-text">하나의 정책에 여러 개의 Webhook을 연결할 수 있지만, 하나의 정책에 webhook를 5개 이하로 연결하는 것이 좋습니다.</block>
   <block id="01b91c7ee988946f75e90ac744922e22" category="section-title">워크로드 보안 Webhook 예</block>
-  <block id="6357c8b51f784219ec3029dfa894719a" category="paragraph">Webhook용 <block ref="119cd804e167819a5b1cbe06f835cd07" category="inline-link-macro-rx"></block>Webhook용 <block ref="fd47f99f71f4060a45930a1b7d2d1fd6" category="inline-link-macro-rx"></block>Webhook용 Webhook용 Webhook용 Webhook <block ref="2990f1f56161b3387a3b4aed372cd205" category="inline-link-macro-rx"></block><block ref="9ec366bafa5f53c82668f1616a12e6a8" category="inline-link-macro-rx"></block></block>
   <block id="e37a0dbdff524f7df33c9b0829c33ade" category="summary">보안 경고를 위한 Discord용 Workload Security Webhook를 생성합니다</block>
   <block id="ecd55cea03da0e912d8c61fb0a4aae96" category="doc">워크로드 보안 웹후크 Discord의 예</block>
   <block id="a46dcf40ced5ca5e59453256043c2f70" category="admonition">이 페이지는 타사 지침을 참조하며, 이러한 지침은 변경될 수 있습니다. 최신 정보는 를 <block ref="d3daba8ef1153460be2adfd1c98aadd0" category="inline-link-macro-rx"></block>참조하십시오.</block>
@@ -12428,4 +12391,188 @@
   <block id="9129ee5b293413b88d69268ce77a5a06" category="sidebar">PagerDuty Webhook 예</block>
   <block id="63a04ee1b7791a07aa2f0767ceb2cb77" category="sidebar">Slack Webhook 예</block>
   <block id="b58ab179b4f6f21dfbd61177415644b6" category="sidebar">팀 Webhook 예</block>
+  <block id="bc3e4d08429f2fe83d93664409d90af3" category="paragraph">자산 랜딩 페이지는 자산의 현재 상태를 요약하고 자산 및 관련 자산에 대한 추가 정보에 대한 링크를 포함합니다.</block>
+  <block id="ce40e4e25f8e81c59a3e8ff8a7087d26" category="paragraph">랜딩 페이지는 요약, 성능 및 관련 리소스 정보와 함께 한 페이지 분량의 개체 보기를 제공합니다.</block>
+  <block id="537ff0ae72c035e90e343d13855ab696" category="inline-image-macro">새로운 LP 디자인</block>
+  <block id="515797dfe1a79b5ca70c9d78fd10a7f5" category="paragraph"><block ref="515797dfe1a79b5ca70c9d78fd10a7f5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="59e1a68528e01f267fb06f043e3f6327" category="section-title">요약 섹션</block>
+  <block id="858dfbd6c853feb2bf9e5e1995eb0ad0" category="paragraph">랜딩 페이지의 맨 위에는 처리량 또는 지연 시간과 같은 항목에 대한 최근 데이터 추세를 표시하는 스파크라인 그래프와 개체 정보 및 속성, 개체에 대해 경고를 표시할 수 있는 모니터가 여러 개 포함된 확장 요약 섹션이 있습니다.</block>
+  <block id="50fd8b4e8dccf53196cd167a3deffd99" category="paragraph">또한 Summary(요약) 섹션에는 자산에 할당된 주석을 변경할 수 있습니다.</block>
+  <block id="df32be42ce13a454a80490019d1e61b4" category="section-title">성능 섹션</block>
+  <block id="9d8de83ddf2f9a829649efb6cd6b5c2c" category="paragraph">성능 섹션에는 개체의 성능 데이터가 표시됩니다. 디스플레이에 처리량 또는 용량 같은 추가 차트를 추가하려면 _Settings_를 선택하고, 관련 리소스 또는 기여 리소스를 선택하여 객체와 함께 데이터를 차트로 작성합니다. 경합을 일으킬 가능성이 있는 장치도 성능 섹션에 나열됩니다. 데이터 수집기가 폴링 및 업데이트된 데이터를 획득하면 차트의 데이터가 자동으로 새로 고쳐집니다.</block>
+  <block id="aa59d67c2123f094d0d6798ffe651c4d" category="inline-xref">메트릭</block>
+  <block id="0be224f95f2ec766d623267c5fda4266" category="paragraph">선택한 기간에 대한 성능 차트에서 보려는 를 선택할 수 <block ref="87bce3adfac20fa01a38d970912dd0cf" category="inline-xref-macro-rx"></block>있습니다. Settings_드롭다운을 클릭하고 나열된 메트릭에서 선택합니다.</block>
+  <block id="7add752780e59436bc47146c3c66bf9a" category="paragraph">성능 데이터 외에 선택한 페이지 시간 범위 내에서 활성 상태이거나 활성 상태였던 알림도 표시됩니다.</block>
+  <block id="6e6214a2bb3a60c94d2966bb25b38e06" category="inline-image-macro">랜딩 페이지의 경고 예</block>
+  <block id="ef8eb8d1f2ede0808c0ea48d158421c2" category="paragraph"><block ref="ef8eb8d1f2ede0808c0ea48d158421c2" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e2f481c79142bc2991d1554a541a8f8e" category="paragraph">성능 섹션에 나열된 다음 장치 중에서 선택할 수 있습니다.</block>
+  <block id="091dc51965787a0cc358e64e6aefb6d2" category="list-text">주요 변경 사항</block>
+  <block id="4b8f9a34385a1bb63231b156c73a29b0" category="paragraph">최근 변경과 관련된 자산.</block>
+  <block id="3daa4fc9c3f0568d191d82716a583db7" category="section-title">추가 리소스 섹션을 참조하십시오</block>
+  <block id="53eff1e383b6c9cfcf6c62d1b80b41c8" category="paragraph">추가 리소스 섹션에는 현재 개체 형식과 관련된 리소스에 대한 데이터 표가 표시됩니다. 특정 자원에 초점을 맞추기 위해 이러한 테이블을 확장하거나 축소할 수 있습니다. 톱니바퀴 아이콘을 선택하면 추가 메트릭이나 속성이 테이블에 일시적으로 표시됩니다.</block>
+  <block id="561b6035e0c7c50948acedcd09074bae" category="paragraph">맞춤형 위젯은 랜딩 페이지 하단에서 성능 및 리소스 섹션 아래에 있습니다.</block>
+  <block id="183cc7e3db3df10d83d155985e0bd322" category="paragraph">기본적으로 자산 페이지에는 마지막 3시간 동안의 데이터가 표시되지만, 자산 유형에 관계없이 모든 자산 페이지에 있는 옵션을 사용하여 표시된 데이터의 시간 세그먼트를 변경할 수 있습니다. 시간 범위를 변경하려면 상단 표시줄에 표시된 시간 범위를 클릭하고 다음 시간 세그먼트 중에서 선택합니다.</block>
+  <block id="17657700724fba34bb1d9643fc1f8e8c" category="list-text">최근 14일</block>
+  <block id="75190982e0922ca96ba831f7c3eb9037" category="paragraph">페이지의 정보는 선택한 시간 범위에 따라 자동으로 새로 고쳐집니다. 현재 새로 고침 빈도는 요약 섹션의 오른쪽 상단 모서리와 페이지의 관련 테이블 또는 위젯에 표시됩니다.</block>
+  <block id="7da8efb3447cbcbdd54c3a4c0448213f" category="section-title">성능 메트릭 정의</block>
+  <block id="773a459dc0ea8ba03d599d96cb1af7ca" category="paragraph">성과 섹션에는 자산에 대해 선택한 기간을 기준으로 여러 메트릭이 표시될 수 있습니다. 각 메트릭은 자체 성능 차트에 표시됩니다. 표시할 데이터에 따라 차트에서 메트릭 및 관련 자산을 추가하거나 제거할 수 있습니다. 선택할 수 있는 메트릭은 자산 유형에 따라 다릅니다.</block>
+  <block id="5ff448003ebaf80171d13e6e73920334" category="section-title">2025년 5월</block>
+  <block id="66268370e652ac71b7a282f1564eada1" category="section-title">새로운 랜딩 페이지 를 통해 흐름을 원활하게 유지할 수 있습니다</block>
+  <block id="66b280f436bccd2b60ccd9302027e14f" category="paragraph">새롭게 디자인된 랜딩 페이지는 요약 데이터, 성능 차트, 상관 관계, 경고 및 변경 사항, 주요 리소스 등 필요한 모든 것을 하나의 보기에 표시합니다.</block>
+  <block id="36e271cbdb94338e583c8a62c222fc36" category="paragraph">이제 탭 사이를 이동하거나 문맥을 잃지 않고도 문제를 빠르게 해결하고 흐름을 유지할 수 있습니다.</block>
+  <block id="19e3e493fd61bfb542d63d1787a371fe" category="inline-image-macro">요약, 성능 및 추가 리소스 섹션의 배치를 보여주는 새로운 랜딩 페이지 설계</block>
+  <block id="330485c83d01a77d87026da4a94ee5a4" category="paragraph"><block ref="330485c83d01a77d87026da4a94ee5a4" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="931f1880ebd244ad86ecd6f673f150b9" category="paragraph">* 현재 워크로드 보안 경고에 Webhook 사용 가능 *</block>
+  <block id="400af3b7addfac8197f5d8e9203e17fa" category="paragraph">이제 워크로드 보안은 Slack, PagerDuty, Teams 등의 툴에 대한 즉시 사용 가능한 Webhook 알림을 지원합니다. 또한 메시지를 맞춤화하거나 다른 SIEM 또는 타사 애플리케이션과 통합할 수 있는 사용자 지정 가능한 템플릿을 제공합니다. 중요 알림을 기존 보안 워크플로에 직접 전달하여 팀이 보다 빠르게 조사하고 대응할 수 있도록 합니다.</block>
+  <block id="d64d4b328e6de76f90aacd35c6e7985f" category="inline-image-macro">워크로드 보안의 Webhook Slack 예, 너비 = 400</block>
+  <block id="5a19779f32afde4c275f9ab3837de731" category="paragraph"><block ref="5a19779f32afde4c275f9ab3837de731" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e0bd3b304cebb26b01fd47c884e1f734" category="paragraph">* 에이전트 간 워크로드 보안 수집기 마이그레이션 *</block>
+  <block id="5d6403d20353cb4ed26a5c052ec10b1c" category="paragraph">한 에이전트에서 다른 에이전트로 작업 부하 보안 수집기를 손쉽게 마이그레이션할 수 있으므로 에이전트 간에 수집기의 로드 밸런싱을 효율적으로 수행할 수 있습니다. 컬렉터를 편집하고 목록에서 대상 에이전트를 선택하는 것만큼 쉽게 마이그레이션할 수 있습니다.</block>
+  <block id="1ccc2eb64b83fa6e09434e4ea37a88d0" category="inline-image-macro">Collector 마이그레이션, 폭 = 500</block>
+  <block id="ae4259864b7d97f132cd52c694934b13" category="paragraph"><block ref="ae4259864b7d97f132cd52c694934b13" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8e65de736413fe1500e6421db8bcb338" category="section-title">.csv 비동기 내보내기</block>
+  <block id="8c4c6f4970d330396c4b6db8dbc2c199" category="paragraph">데이터를 .csv로 내보내려면 내보낼 데이터 양에 따라 몇 초에서 몇 시간 정도 걸릴 수 있습니다. 이제 Data Infrastructure Insights는 해당 데이터를 비동기식으로 내보내므로 .csv가 컴파일되는 동안에도 작업을 계속할 수 있습니다.</block>
+  <block id="81a50eeb7304ec057554482fccdab603" category="paragraph">오른쪽 상단 도구 모음에서 "벨" 아이콘을 선택하여 .csv 내보내기를 봅니다.</block>
+  <block id="8f1c70af5d4417d2923f1e69c6064742" category="inline-image-macro">종 아이콘 다운로드 가능한 .csv 내보내기 목록, 너비 = 400</block>
+  <block id="d85e1869f257ad55bcc4f32c8ffba364" category="paragraph"><block ref="d85e1869f257ad55bcc4f32c8ffba364" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="32d0bc5fe8f489a61bffe14dcdec5020" category="paragraph">cluster_credentials를 사용하는 CsUser의 경우 ONTAP 명령줄에서 다음 명령을 실행합니다. 이 사용 권한은 이미 있을 수 있습니다.</block>
+  <block id="f54a1c8b2b5e04dbd1979146ff5b8090" category="paragraph">csUser with_SVM_credentials의 경우 ONTAP 명령줄에서 다음 명령을 실행합니다. 이 사용 권한은 이미 있을 수 있습니다.</block>
+  <block id="1215f8190533dfdf63d2224a6d88266f" category="inline-link-macro">Google Cloud NetApp 볼륨</block>
+  <block id="3b2e5f3c488708db173b7fd97e0aec26" category="cell"><block ref="3b2e5f3c488708db173b7fd97e0aec26" category="inline-link-macro-rx"></block></block>
+  <block id="2be0c164ecf3c2c6516b43029ec5e92d" category="cell">다음을 확인하십시오. 1. POSIX 속성이 설정된 AD 서버의 사용자 디렉토리 수집기는 UI에서 활성화된 unixid 속성으로 실행해야 합니다. 2. UI 3의 사용자 페이지에서 NFS 액세스를 수행하는 모든 사용자를 검색할 때 표시됩니다. 원시 이벤트(사용자가 아직 검색되지 않은 이벤트)는 NFS 4에서 지원되지 않습니다. NFS 내보내기에 대한 익명 액세스는 모니터링되지 않습니다. 5. 사용되는 NFS 버전이 4.1 이하인지 확인하십시오. (NFS 4.1은 ONTAP 9.15 이상에서 지원됩니다.)</block>
+  <block id="673c98c370040e99535882f2b170dfb3" category="list-text">NFS 4.1을 포함한 NFS 버전(NFS 4.1은 ONTAP 9.15 이상에서 지원됨)</block>
+  <block id="1c869a5fff9c63089d6bb005e760cadf" category="list-text">데이터 LIF의 방화벽 정책이 '데이터'가 아닌 'GMT'(으)로 설정되어 있는지 확인합니다. 전용 관리 lif를 사용하여 SVM.clustershell:&gt; 을 추가하는 경우 이 단계를 건너뜁니다<block ref="0197c7c6728dc0e945da717147320f69" prefix=" " category="inline-code"></block></block>
+  <block id="5f0f73838943d279a29bfd722c6ee748" category="list-text">Cloud ONTAP SVM을 모니터링하기 위해 AWS EC2 인스턴스에 에이전트를 설치한 경우 에이전트와 스토리지는 동일한 VPC에 있어야 합니다. 개별 VPC에 있는 경우 VPC 간에 유효한 경로가 있어야 합니다.</block>
+  <block id="4c3f5841ac6077689c88403769e710fb" category="paragraph">사용자에게 지정된 권한으로 사용자 지정 사용자(예: _CsUser_)를 사용하는 경우, 워크로드 보안에 권한을 부여하여 사용자를 차단하십시오. 의 단계를 <block ref="e513c094cbe732163e31cf30e277e8bc" category="inline-link-macro-rx"></block>따릅니다.</block>
+  <block id="1b0825e538a70e8323fac1cbfe230ee5" category="paragraph">참고: 사용자 정의 사용자에 대한 모든 기능 권한에 사용할 단일 역할을 만들 수 있습니다. 기존 사용자가 있는 경우 먼저 다음 명령을 사용하여 기존 사용자 및 역할을 삭제합니다.</block>
+  <block id="91f83541442d1c49aaf40212bccffad1" category="paragraph">참고: 사용자 정의 사용자에 대한 모든 기능 권한에 사용할 단일 역할을 만들 수 있습니다. 기존 사용자가 있는 경우 먼저 다음 명령을 사용하여 기존 사용자 및 역할을 삭제합니다.</block>
+  <block id="858faeb682f19ff16f83d24c86cb97f7" category="cell">클러스터 IP를 통해 추가할 때 SVM/클러스터에 액세스하는 사용자 이름 옵션은 1입니다. 클러스터 관리 2. 'CSUser' 3. CsUser와 유사한 역할을 가진 AD 사용자. SVM IP를 통해 추가할 때 옵션은 4.vsadmin 5입니다. 'CSUser'6. CsUser와 유사한 역할을 하는 AD-사용자 이름입니다.</block>
+  <block id="0851edbfbb1a0406acbc79df15296b3f" category="paragraph">현재 '실행 중인' SVM의 데이터 수집기가 _running_으로 표시됩니다. 현재 '최상위' SVM의 데이터 수집기가 _Error_로 표시됩니다.</block>
+  <block id="046c8e391630ab49d75409e270a4f4b6" category="list-text">전환이 있을 때마다 데이터 수집기의 상태가 '실행 중'에서 '오류'로 변경되고 그 반대의 경우도 마찬가지입니다.</block>
+  <block id="7a69a2fce9a9acb9c8a84936863c1330" category="paragraph">Collector가 일시 중지된 동안 ONTAP에 새 볼륨 등이 생성되면 워크로드 보안이 데이터를 수집하지 않고 해당 볼륨 등이 대시보드나 테이블에 반영되지 않습니다.</block>
+  <block id="0d55775dbf06cf5596fe0f5c3363f19a" category="list-text">일시 중지된 수집기에 구성된 설정에 따라 스냅샷 삭제가 수행되지 않습니다.</block>
+  <block id="f8b4c5607366d38cf806b0860c9cc5e4" category="list-text">ONTAP ARP와 같은 EMS 이벤트는 일시 중지된 Collector에서 처리되지 않습니다. 즉, ONTAP에서 랜섬웨어 공격을 식별하면 Data Infrastructure Insights 워크로드 보안이 해당 이벤트를 파악할 수 없습니다.</block>
+  <block id="4f20cb3e8959a7865ba5aaa5af540ddb" category="section-title">오퍼레이터 구성/사용자 지정</block>
+  <block id="67dea165315ff79ce5620f051688d07c" category="paragraph">이 섹션에서는 운영자 구성을 사용자 지정하거나, 프록시를 사용하거나, 사용자 지정 또는 개인 Docker 리포지토리를 사용하거나, OpenShift를 사용하는 방법에 대한 정보를 제공합니다.</block>
+  <block id="d9a52817194c8be56b59a9d57114278a" category="section-title">설정 옵션</block>
+  <block id="cac54dc379f23a7aed8745bde8386662" category="inline-link-macro">사용 가능한 설정</block>
+  <block id="8baa15e22ac6c7ee4ce4e0a88da9798e" category="paragraph">가장 일반적으로 수정된 설정은 _AgentConfiguration_custom 리소스에서 구성할 수 있습니다. 운용자를 배포하기 전에 _operator-config.YAML_file을 편집하여 이 리소스를 편집할 수 있습니다. 이 파일에는 주석 처리된 설정 예가 포함되어 있습니다. 최신 버전의 연산자는 의 목록을 <block ref="d0a687c4569dc784e63f3960b33ab7c7" category="inline-link-macro-rx"></block>참조하십시오.</block>
+  <block id="27aa502b8f8f23143b77f0800d6dd42f" category="paragraph">다음 명령을 사용하여 연산자를 배포한 후에 이 리소스를 편집할 수도 있습니다.</block>
+  <block id="3ab04e244a91c8a73c48633c62ac613a" category="paragraph">배포된 버전의 운영자가 AgentConfiguration을 지원하는지 확인하려면 다음 명령을 실행합니다.</block>
+  <block id="51ba9262aad7e83aa5f74ed6dc93a039" category="paragraph">"서버에서 오류 발생(NotFound)" 메시지가 표시되는 경우 AgentConfiguration을 사용하려면 먼저 연산자를 업그레이드해야 합니다.</block>
+  <block id="7a7f1dddc2fef7ed16175a3e2e424b3f" category="paragraph">Kubernetes Monitoring Operator를 설치하기 위해 테넌트에서 프록시를 사용할 수 있는 두 위치가 있습니다. 이러한 시스템은 동일하거나 별도의 프록시 시스템일 수 있습니다.</block>
+  <block id="92caa6668b03ccf88ed2c1dbef632933" category="paragraph">이 중 하나 또는 둘 모두에 프록시를 사용하는 경우 Kubernetes 운영 모니터를 설치하려면 먼저 프록시가 Data Infrastructure Insights 환경과 통신할 수 있도록 구성되었는지 확인해야 합니다. 프록시가 있고 운영자를 설치하려는 서버/VM에서 Data Infrastructure Insights에 액세스할 수 있는 경우 프록시가 제대로 구성된 것일 수 있습니다.</block>
+  <block id="4cf131cb570986a48574d0708d4c8b35" category="paragraph">Kubernetes 운영 모니터를 설치하는 데 사용되는 프록시의 경우 Operator를 설치하기 전에 _http_proxy/https_proxy_environment 변수를 설정합니다. 일부 프록시 환경에서는 _no_proxy 환경_변수를 설정해야 할 수도 있습니다.</block>
+  <block id="e25c898cccd50c035eb1941a8411ba8b" category="paragraph">변수를 설정하려면 Kubernetes Monitoring Operator를 설치하기 * 전에 * 시스템에서 다음 단계를 수행하십시오.</block>
+  <block id="8abad16925d189288490bd9d8b5e034c" category="paragraph">Kubernetes 클러스터가 Data Infrastructure Insights 환경과 통신하는 데 사용되는 프록시의 경우 이 모든 지침을 읽은 후 Kubernetes Monitoring Operator를 설치합니다.</block>
+  <block id="6b883170f6284320691d7cfefa3f48e3" category="paragraph">Kubernetes 모니터링 연산자를 배포하기 전에 operator-config.yaml에서 AgentConfiguration의 프록시 섹션을 구성합니다.</block>
+  <block id="e79dbc8635cd754ff3943b0362cd5a36" category="paragraph">기본적으로 Kubernetes Monitoring Operator는 Data Infrastructure Insights 저장소에서 컨테이너 이미지를 가져옵니다. Kubernetes 클러스터를 모니터링 대상으로 사용하고 있고 해당 클러스터가 사용자 지정 또는 프라이빗 Docker 저장소 또는 컨테이너 레지스트리에서 컨테이너 이미지만을 가져오도록 구성된 경우, Kubernetes Monitoring Operator가 필요한 컨테이너에 대한 액세스를 구성해야 합니다.</block>
+  <block id="b1dbe9124bd000f8918a20bf61bc24f6" category="list-text">ci-kube-RBAC-프록시</block>
+  <block id="67efe5df179f0f50a5a5e82fd46a07fc" category="list-text">CI - KSM을 참조하십시오</block>
+  <block id="217b41d0f229477b95c3b46b9905e8a6" category="list-text">CI - 텔레그라프</block>
+  <block id="7357e4ce1b613c72370aa11b8881c327" category="list-text">CI 플루언트 비트</block>
+  <block id="fe05143e1e28d056a7092a13c7ef1fda" category="list-text">ci-cubernetes-event-exporter를 의미합니다</block>
+  <block id="ae233b4bee0ed9f611ffe211f5804e00" category="section-title">톨레러스와 얼룩을 볼 수 있습니다</block>
+  <block id="6aae913b976c156306d8a5cbbbc06ad5" category="inline-link-macro">상담원 구성 _ 에서</block>
+  <block id="d6f0c62217650cf8ede1bd5e1e862b5a" category="paragraph">NetApp-CI-Telegraf-DS_,_netapp-ci-fluent-bit-DS_ 및_netapp-ci-net-observer-L4-DS_Demets는 모든 노드에서 데이터를 올바르게 수집하기 위해 클러스터의 모든 노드에 Pod를 예약해야 합니다. 운용자는 잘 알려진 일부 * 얼룩을 견딜 수 있도록 구성되었습니다. 노드에 사용자 지정 테인트를 구성하여 모든 노드에서 Pod가 실행되지 않도록 설정한 경우, 해당 테인트에 대한 * 톨러레이션 * 을 생성할 수 있습니다<block ref="dc90f93af5ccf5020646213d9b7d2c3d" category="inline-link-macro-rx"></block>. 클러스터의 모든 노드에 사용자 지정 얼룩을 적용한 경우 운영자 포드를 예약 및 실행할 수 있도록 운영자 구축에 필요한 허용 오차도 추가해야 합니다.</block>
+  <block id="e1e08e40036f927a0e660c22aa837f88" category="inline-link-macro">오염과 내약입니다</block>
+  <block id="9680829f0eb82d9736ac7fe477135a87" category="paragraph">Kubernetes에 대해 <block ref="2a69bcb19ea6a4db3f5d1b466ff78e77" category="inline-link-macro-rx"></block>자세히 알아보십시오.</block>
+  <block id="fbc05142fc5476cd7c2dd603607412ee" category="inline-link-macro">* NetApp Kubernetes 모니터링 오퍼레이터 설치 * 페이지</block>
+  <block id="c425b824281c7958c5622dd1dc041533" category="paragraph">로 돌아갑니다 <block ref="6f93c3205a564eadff1f05e34704d40c" category="inline-link-macro-rx"></block></block>
+  <block id="d8c9294ea12d1c7d12e34008f3ecee39" category="section-title">비밀에 대한 참고 사항</block>
+  <block id="bd0f62d92c7b0e5d6e74b4447418c58b" category="paragraph">Kubernetes 모니터링 운영자가 클러스터 전체의 비밀을 볼 수 있는 권한을 제거하려면 설치하기 전에 _operator-setup.yaml_file 에서 다음 리소스를 삭제하십시오.</block>
+  <block id="1790cdbccc4ddd4389eb90d73e043f4b" category="paragraph">업그레이드인 경우 클러스터에서 리소스도 삭제합니다.</block>
+  <block id="a66e68a20b3b94a700f3a3b9baa06764" category="paragraph">변경 분석이 활성화된 경우 _AgentConfiguration_or_operator-config.yaml_를 수정하여 변경 관리 섹션의 주석을 해제하고 변경 관리 섹션 아래에 _kindsToIgnoreFromWatch: '"비밀"'_를 포함시킵니다. 이 줄에서 작은따옴표와 큰따옴표의 존재 및 위치를 확인합니다.</block>
+  <block id="435f137980b3b041bbc191c90260bf28" category="section-title">Kubernetes 모니터링 운영자 이미지 서명 확인</block>
+  <block id="d9348d075dc7b3c91cff99d56dfc327b" category="inline-link-macro">Kubernetes 문서</block>
+  <block id="d4f8460ff8f7a6b9a2f0fa99bf9124dd" category="paragraph">운용자의 이미지 및 배포한 모든 관련 이미지는 NetApp에 의해 서명됩니다. Cosign 도구를 사용하여 설치하기 전에 이미지를 수동으로 확인하거나 Kubernetes 승인 컨트롤러를 구성할 수 있습니다. 자세한 내용은 를 <block ref="1aa503106da392b948a493e0ecf5782d" category="inline-link-macro-rx"></block>참조하십시오.</block>
+  <block id="c26df34b044a0a427be188b6e37d45c2" category="paragraph">이미지 서명을 확인하는 데 사용되는 공개 키는 _선택 사항: 운영자 이미지를 개인 저장소에 업로드하십시오. &gt; 이미지 서명 공개 키 _ 의 모니터링 운영자 설치 타일에서 사용할 수 있습니다</block>
+  <block id="0bc181a97045ca85d89be70b124298b4" category="paragraph">이미지 서명을 수동으로 확인하려면 다음 단계를 수행하십시오.</block>
+  <block id="b08a05b2c1b7cc9bf90ee55d748a813c" category="list-text">Image Pull Snippet(이미지 가져오기 스니펫)을 복사하여 실행합니다</block>
+  <block id="2e9d4d6615af62102584a57c2c8ddacd" category="list-text">메시지가 나타나면 리포지토리 암호를 복사하여 입력합니다</block>
+  <block id="2cea2fa4f716d1fa2efbffe877eb702c" category="list-text">이미지 서명 공개 키(예: dii-image-signing.pub)를 저장합니다.</block>
+  <block id="55d6bfb079ee69230d07a9a9c1c17b66" category="list-text">코싸인을 사용하여 영상을 확인합니다. 다음 코사인 사용 예를 참조하십시오</block>
+  <block id="5961d0092306c169d325c3e662030e8e" category="paragraph">Kubernetes Monitoring Operator를 설정하는 데 문제가 발생할 경우 시도해 볼 수 있는 몇 가지 사항은 다음과 같습니다.</block>
+  <block id="3dcf0a51075fbcf98f9e53d661506adf" category="cell">Kubernetes 영구 볼륨과 해당 백엔드 스토리지 장치 간의 하이퍼링크/연결이 표시되지 않습니다. 내 Kubernetes 영구 볼륨은 스토리지 서버의 호스트 이름을 사용하여 구성됩니다.</block>
+  <block id="588706510a3c974b95453cecc3cb59d6" category="cell">기존 Telegraf 에이전트를 제거한 다음 최신 Telegraf 에이전트를 다시 설치하는 단계를 따릅니다. Telegraf 버전 2.0 이상을 사용 중이고 Kubernetes 클러스터 스토리지를 Data Infrastructure Insights에서 능동적으로 모니터링해야 합니다.</block>
+  <block id="a603e86bb87b54e9b7acc7e242269514" category="cell">E0901 15:21:39.962145 1 리플렉터.go:178]k8s.io/kbe-state-metrics/internal/store/builder.go:352: * v1.목록에 실패했습니다. MutatingWebhookConfiguration: 서버에서 요청된 리소스 E0901 15:21:43.168352.kIs.tu2o.tu2352: revm.u2352.u2352.u2o.testimeu2352.u2n.u2352.u2o.u2o.u2352.testime-ve-v</block>
+  <block id="0428b79968fc5aa0a5b6d427e6815d82" category="cell">이러한 메시지는 Kubernetes 버전이 1.20 미만인 경우 kube-state-metrics 버전 2.0.0 이상을 실행하는 경우에 발생할 수 있습니다. 쿠버네티스 버전을 얻으려면: _kubbctl version_kubbe-state-metrics 버전:_kubbectl deploy/kube-state-metrics-o jsonpath='{..image}'_이러한 메시지가 발생하지 않도록 사용자는 kube-state-metrics 구축을 수정하여 다음 Lallase를 비활성화할 수 있습니다._muthookconfigurations_webhookconfigurettal_configuretedconfig_webvalidateCLI_webvalidateusetausetausetauseusetausetauseuse 리소스 = certificationesigningrequests, configmap, crontobs, demonset, 배포, 끝점, 수평 포드자동크기, 링스, 작업, reflodritranges, namespaces, networkpolicies, nistentvolumes, persistentpersistent volumes, podin예산, replicatingfasts, repliceters, replicatingreallets, replicets, replicets, repliceties, replicenets, replicatingreenets, replicets, replicenets, replicets, service.networksets, service.sets, service.sets, vistenets, visteneties, replicaturies.networksets, service.sets, reseties.networksets, replicaturies, inations, replicaticaturies, replicaturies, replicaturies, inations validingwebhookconfigurations, volumeAttachments"</block>
+  <block id="b8ce784188c470b3c8ff0c7cc1a403e1" category="cell">Telegraf의 오류 메시지는 다음과 유사하지만 Telegraf가 시작되고 실행됩니다. Oct 11 14:23:41 IP-172-31-39-47 시스템[1]: 플러그인 기반 서버 에이전트를 시작하여 메트릭을 영향력 있는 xDB에 보고합니다. 10월 11일 14:23:41 IP-172-31-39-47 Telegraf[1827]: time="2021-10-11T14:23:41Z" level=error msg="캐시 디렉토리를 만들지 못했습니다. /etc/Telegraf/.cache/snowflake, err:mkdir/etc/Telegraf/.ca che: 권한이 거부되었습니다.\n"fc="gosnowflake.(* defaultLogger).Errorf" file="log.go:120" 10월 11:23:41 IP-1118-117-117-117-118-117-117" 오류: 무시되었습니다. open /etc/Telegraf/.cache/snowflake/OCSP_response_cache.json: no that file or directory \n" fc="gosnowflake.(* defaultLogger).Errorf" file="log.Go:120" Oct 11:41 IP-31-39-11:21:114:118-427:114:117-118-114:118-427] 텔레그라프 1.19.3 시작</block>
+  <block id="0ccd64b2e6202fbb544d22cd48a872b2" category="inline-link-macro">이 GitHub 기사를 참조하십시오</block>
+  <block id="8f176f657f418586c2a4828045ab0c37" category="cell">이는 알려진 문제입니다. <block ref="23bd9a1f0b26414ad35f4299a95464f0" category="inline-link-macro-rx"></block>자세한 내용은 을 참조하십시오. Telegraf가 실행 중인 경우 사용자는 이러한 오류 메시지를 무시할 수 있습니다.</block>
+  <block id="9aab00e938cede2932654042bc507309" category="cell">Kubernetes에서 Telegraf 포드가 "mountstats 정보 처리 중 오류: mountstats 파일을 열지 못했습니다. /hostfs/proc/1/mountstats, 오류: open/hostfs/proc/1/mountstats: 사용 권한이 거부되었습니다." 오류를 보고합니다.</block>
+  <block id="4123cf4f6521073cef46192908207644" category="cell">SELinux가 설정되어 있고 강제 적용되는 경우 Telegraf 포드가 Kubernetes 노드의 /proc/1/mountstats 파일에 액세스하지 못할 수 있습니다. 이 제한을 해결하려면 agentconfiguration을 편집하고 runPrivileged 설정을 활성화하십시오. 자세한 내용은 를 <block ref="f28efb863bb7dfcdf91b1badf5c0c340" category="inline-link-macro-rx"></block>참조하십시오.</block>
+  <block id="f997e79142f159c33823b9deeab809eb" category="cell">Kubernetes에서 Telegraf ReplicaSet Pod가 다음 오류를 보고합니다: inputs.prometheus] [플러그인 오류: keypair /etc/Kubernetes/PKI/etcd/server.crt: /etc/Kubernetes/PKI/etcd/server.key: open /etc/cubs/pi/etcd/server.crt: 해당 파일 또는 디렉토리가 없습니다</block>
+  <block id="9df12d675c4f61381132e45173ef90d0" category="cell">Telegraf ReplicaSet POD는 마스터나 etcd로 지정된 노드에서 실행되도록 설계되었습니다. ReplicaSet 포드가 이러한 노드 중 하나에서 실행되고 있지 않으면 이러한 오류가 발생합니다. 마스터/etcd 노드에 문제가 있는지 확인합니다. 만약 그렇다면, 텔레그라프 ReplicaSet, 텔레그라프-RS에 필요한 내약성을 추가한다. 예를 들어 ReplicaSet...kubtl을 편집하여 RS Telegraf-RS...를 편집하고 사양에 적절한 내약성을 추가합니다. 그런 다음 ReplicaSet 포드를 다시 시작합니다.</block>
+  <block id="7f213685ee85ff84e10c6c9b9c633789" category="cell">PSP/PSA 환경이 있습니다. 이 문제가 모니터링 오퍼레이터에게 영향을 미칩니까?</block>
+  <block id="55b27691d4a3ba1d0f59fb6a06ac2e22" category="cell">Kubernetes 클러스터가 PSP(Pod Security Policy) 또는 PSA(Pod Security Admission)를 적용한 상태에서 실행되는 경우 최신 Kubernetes Monitoring Operator로 업그레이드해야 합니다. 다음 단계에 따라 PSP/PSA를 지원하는 현재 오퍼레이터로 업그레이드합니다. 1. <block ref="a7177598d8f3c4f7d3503ecefe58c480" category="inline-xref-macro-rx"></block> 이전 모니터링 운영자: kubectl delete agent-monitoring-NetApp NetApp-n NetApp-monitoring kubectl delete ns NetApp-monitoring kubectl delete clusterrole agent-manager-proxy-role-metrics-reader-role2 클러스터 바인딩 role2 <block ref="6fd69549c3aeb303e3b2df8a94f1263f" category="inline-xref-macro-rx"></block> 모니터링 운영자의 최신 버전입니다.</block>
+  <block id="b10669273dd57c8fd5d2fe2a3b97e299" category="cell">오퍼레이터를 배포하는 데 문제가 발생했고 PSP/PSA를 사용하고 있습니다.</block>
+  <block id="f005ad36a865e60c2f589a58c0daafa5" category="cell">1. kubectl -n &lt;name-space&gt; edit agent 2 명령을 사용하여 에이전트를 편집합니다. '보안 - 정책 - 사용'을 '거짓'으로 표시합니다. 이렇게 하면 Pod 보안 정책 및 Pod 보안 입장이 비활성화되고 운영자가 배포할 수 있습니다. 다음 명령을 사용하여 확인합니다. kubbtl get psp(Pod 보안 정책이 제거되었음을 표시해야 함) kubctl get all-n &lt;namespace&gt; | grep -i psp(아무 것도 찾을 수 없다는 것을 표시해야 함)</block>
+  <block id="59e3026f71d01a624108642cdb778ebd" category="cell">"ImagePullBackoff" 오류가 표시됩니다</block>
+  <block id="43340e6cc4e88197d57f8d6d5ea50a46" category="inline-xref">자세히 보기</block>
+  <block id="31c512270381a100a1d6ed5460e4382a" category="cell">이러한 오류는 사용자 지정 또는 전용 Docker 리포지토리가 있고 Kubernetes Monitoring Operator가 해당 리포지토리를 제대로 인식하도록 아직 구성하지 않은 경우 나타날 수 있습니다. <block ref="64c2e35c96e92fc99426098fae703fff" category="inline-xref-macro-rx"></block> 사용자 지정/개인 저장소 구성 정보</block>
+  <block id="6da3e5f4ef4407262c741e8325a8249d" category="cell">모니터링 운영자 구축에 문제가 있는데 현재 설명서를 참조해도 문제를 해결하는 데 도움이 되지 않습니다.</block>
+  <block id="368fbe1d48012e8e4f24249e2b27a8dd" category="paragraph">다음 명령의 출력을 캡처하거나 기록해 두고 기술 지원 팀에 문의하십시오.</block>
+  <block id="70d79a6ca6098037988336f11346dce8" category="cell">Operator 네임스페이스의 NET-observer(워크로드 맵) 포드는 CrashLoopBackOff에 있습니다</block>
+  <block id="b1dd812a8bc65d5769e88b945f591999" category="cell">이러한 포드는 네트워크 관찰 가능성을 위한 워크로드 맵 데이터 수집기에 해당합니다. 다음을 시도해 보십시오. • 최소 커널 버전을 확인하려면 Pod 중 하나의 로그를 확인하십시오. 예:---{"CI-tenant-id":"your-tenant-id", "collector-cluster":"your-k8s-cluster-name","environment":"prod", "level":"error", "msg":"가 검증에 실패했습니다. 이유: 커널 버전 3.10.0이 최소 커널 버전 4.18.0", "시간":"2022-11-09T08:23:08Z"}------ • Net-observer Pod는 Linux 커널 버전이 4.18.0 이상이어야 합니다. "uname -r" 명령을 사용하여 커널 버전을 확인하고 해당 버전이 4.18.0 이상인지 확인합니다</block>
+  <block id="e49c236734fe2ea50ae36fcb5353eed9" category="cell">Pod는 운영자 네임스페이스(기본값: NetApp-모니터링)에서 실행되지만, 워크로드 맵 또는 Kubernetes 메트릭에 대한 UI에는 데이터가 표시되지 않습니다</block>
+  <block id="b301a7b156c241fb466de1bca776811c" category="cell">K8S 클러스터의 노드에서 시간 설정을 확인합니다. 정확한 감사 및 데이터 보고를 위해 NTP(Network Time Protocol) 또는 SNTP(Simple Network Time Protocol)를 사용하여 Agent 시스템의 시간을 동기화하는 것이 좋습니다.</block>
+  <block id="665dddc2adb2f34c745ef47345ee5e93" category="cell">Operator 네임스페이스의 일부 NET-observer Pod가 Pending 상태입니다</block>
+  <block id="c55a7a21faf06d9f162882100bc46e42" category="cell">Net-observer는 DemonSet로, k8s 클러스터의 각 노드에서 포드를 실행합니다. • Pending 상태인 POD를 확인하고 CPU 또는 메모리에 대한 리소스 문제가 발생하는지 확인합니다. 노드에서 필요한 메모리 및 CPU를 사용할 수 있는지 확인합니다.</block>
+  <block id="0b681475d547cee4e6a8aa2975d2a6ad" category="cell">Kubernetes 모니터링 운영자를 설치한 직후 [inputs.prometheus] 오류: 플러그인에서 \http://kube-state-metrics.&lt;namespace&gt;.svc.cluster.local:8080/metrics:get\http://kube-state-metrics.&lt;namespace&gt;.svc.cluster.local:8080/metrics:dial tcp:lookube-state-metrics.&lt;namespace&gt;.svc.no host cluster.local:no.local:no host.local:no.local:no</block>
+  <block id="d232f49a9877a99204dde54474c23ce6" category="cell">이 메시지는 일반적으로 새 오퍼레이터가 설치되어 있고 _Telegraf-RS_POD가 _KSM_POD가 가동되기 전에 작동 중일 때만 표시됩니다. 이러한 메시지는 모든 Pod가 실행되면 중지되어야 합니다.</block>
+  <block id="02230bab9788e4843408e124331bb1ca" category="cell">클러스터에 존재하는 Kubernetes CronJobs에 대해 어떤 메트릭도 수집되지 않습니다.</block>
+  <block id="b3b6bea000b13acbfcb412bad49ee494" category="cell">Kubernetes 버전을 확인합니다(예:<block ref="4fc58818ca77fb3a60cbd34a7f7d5071" prefix=" " category="inline-code"></block>). v1.20.x 이하일 경우 이는 예상되는 제한 사항입니다. Kubernetes Monitoring Operator와 함께 배포된 kube-state-metrics 릴리스는 v1.cronjob만 지원합니다. Kubernetes 1.20.x 이하에서는 crontjob 리소스가 v1beta.crontjob에 있습니다. 따라서 kube-state-metrics는 crontjob 리소스를 찾을 수 없습니다.</block>
+  <block id="45698e13b1c2f7241751839133834506" category="cell">운용자 설치 후, Telegraf-ds Pod는 CrashLoopBackOff로 진입하고 POD 로그는 "su:Authentication failure"를 나타낸다.</block>
+  <block id="e77701e8957afb414a45ca434ef7f000" category="cell">_AgentConfiguration_에서 Telegraf 섹션을 편집하고 _dockerMetricCollectionEnabled_를 false 로 설정합니다. 자세한 내용은 조작자를 <block ref="74a91e6274b6ee5f9fd240fb978eb1d9" category="inline-link-macro-rx"></block>참조하십시오. ... 사양 : ... 텔레그라프 : ...           -name:docker       run-mode:                    -DemonSet 대체:-key:docker_unix_sock_placeholder         값: unix://run/docker.sock... ...</block>
+  <block id="802997bcb8e9581226b3000b8b611b1c" category="cell">내 Telegraf 로그에 다음과 유사한 오류 메시지가 반복 표시됩니다: E! [agent] 출력에 쓰는 중 오류가 발생했습니다. http: POST "\https://&lt;tenant_url&gt;/REST/v1/lake/injest/influxdb": 컨텍스트 기한 초과(클라이언트. 헤더 대기 중 시간 초과)</block>
+  <block id="5a581223d2fea6c45a7ac1278334f8c1" category="cell">_AgentConfiguration_에서 Telegraf 섹션을 편집하고 increase_outputTimeout_을 10초로 편집합니다. 자세한 내용은 조작자를 <block ref="74a91e6274b6ee5f9fd240fb978eb1d9" category="inline-link-macro-rx"></block>참조하십시오.</block>
+  <block id="4f05106cca363b0f3c492314ab777534" category="cell">일부 이벤트 로그에 대한 _divedobject_data가 없습니다.</block>
+  <block id="67ee92e19812baa7cedb346320ca0182" category="cell">위 섹션의 단계를 수행했는지 <block ref="d9283cdb1b027ed2a61fa92c8dc3e314" category="inline-link-macro-rx"></block>확인하십시오.</block>
+  <block id="5e77ada1a807785ef1b03c3f1b96779c" category="cell">두 개의 모니터링 운영자 Pod가 실행 중인 것을 볼 수 있는데, 하나는 netapp-ci-monitoring-operator-&lt;pod&gt;이고 다른 하나는 monitoring-operator-&lt;pod&gt;입니다.</block>
+  <block id="1c1bebc9155c93bfe8263d7dd59e4d97" category="inline-xref">기존 연산자를 제거합니다</block>
+  <block id="3aadd91c93bca2d335851fd692f310be" category="inline-xref">새 장치를 장착하십시오</block>
+  <block id="c3a998877066e09c478b4163a26933ab" category="cell">2023년 10월 12일부터 Data Infrastructure Insights는 사용자에게 더 나은 서비스를 제공하기 위해 운영자를 재고했습니다. 변경 사항을 완전히 채택하려면 반드시 <block ref="860504374016936ed59489a365e20672" category="inline-xref-macro-rx"></block> AND를 준수해야  합니다.<block ref="26142c5a68eb5609ee139db77de754bb" category="inline-xref-macro-rx"></block></block>
+  <block id="d91f7c56a5bd6c0e9735fe39d7d2d1a6" category="cell">저의 Kubernetes 이벤트가 예기치 않게 Data Infrastructure Insights에 대한 보고를 중단했습니다.</block>
+  <block id="0f21fa822dc46792cc163d7e77fe6c2c" category="paragraph">이벤트 내보내기 포드의 이름을 검색합니다.</block>
+  <block id="9df5220f9f1e94f2849e58be10655af5" category="paragraph">"netapp-ci-event-exporter" 또는 "event-exporter"여야 합니다. 그런 다음 모니터링 에이전트를 편집하고<block ref="254deec50834604297ddd3caab0d8ce7" prefix=" " category="inline-code"></block> 이전 단계에서 찾은 적절한 이벤트 내보내기 포드 이름을 반영하도록 log_file 의 값을 설정합니다. 보다 구체적으로 log_file을 "/var/log/containers/netapp-ci-event-exporter.log" 또는 "/var/log/containers/event-exporter *.log"로 설정해야 합니다.</block>
+  <block id="fe98497efedbe156ecc4b953aea77e07" category="inline-xref">설치 제거</block>
+  <block id="7b4d917229221f1292dd0dc7b693cccf" category="inline-xref">다시 설치합니다</block>
+  <block id="e832e916ac4edbd5ff4fc3ce13949058" category="paragraph">또는 상담원과 <block ref="f33f6e060928000e7af3fed4c4e6c6a0" category="inline-xref-macro-rx"></block>함께 할 <block ref="eb03b2f692ebf826fa07016cc9fa15a6" category="inline-xref-macro-rx"></block>수도 있습니다.</block>
+  <block id="cacd73b257654b42f59477320860f203" category="cell">리소스 부족으로 인해 Kubernetes Monitoring Operator에 의해 구축된 Pod가 충돌하는 것을 볼 수 있습니다.</block>
+  <block id="1bf4c34fd6e2ff1bf1741953bce0f5e1" category="cell">필요한 경우 Kubernetes 모니터링 운영자를 <block ref="74a91e6274b6ee5f9fd240fb978eb1d9" category="inline-link-macro-rx"></block> 참조하여 CPU 및/또는 메모리 한도를 늘리십시오.</block>
+  <block id="d30a0cd77a13a9c540651e05cf93b85c" category="cell">이미지가 없거나 잘못된 구성으로 인해 NetApp-ci-kube-상태 메트릭 Pod가 시작되지 않거나 준비되지 않았습니다. 이제 StatefulSet이 중단되고 구성 변경 사항이 NetApp-ci-kube-state-metrics Pod에 적용되지 않습니다.</block>
+  <block id="54ddc3c7d064822eed932015d8740336" category="inline-link-macro">고장</block>
+  <block id="24842c3920322c32befcba0bfb6c67b4" category="cell">StatefulSet 이 <block ref="01cb4c066842f659530df33ef9ef5308" category="inline-link-macro-rx"></block>상태입니다. 구성 문제를 해결한 후에는 NetApp-ci-kube-state-metrics Pod를 바운스하게 만들 수 있습니다.</block>
+  <block id="ab53b155d3f5f63613ea9034aaafadbd" category="cell">Kubernetes Operator 업그레이드를 실행하고 ErrImagePull(이미지를 가져오지 못함)을 throw하는 후 NetApp-ci-kube-state-metrics Pod가 시작되지 않습니다.</block>
+  <block id="da4a57ccdb996916b48d63fa3e08bb40" category="cell">포드 재설정을 수동으로 시도하십시오.</block>
+  <block id="2bc94fccd24faa68b4153886af40ec57" category="cell">"이벤트가 maxEventAgeSeconds보다 오래된 것으로 폐기됨" 메시지가 Log Analysis에서 내 Kubernetes 클러스터에 대해 관찰되고 있습니다.</block>
+  <block id="6c71496a372f3b5c0cbc9e2eb84a5fd0" category="cell">Operator_agentconfiguration_을 수정하고 _event-exporter-maxEventAgeSeconds_(예: 60s), _event-exporter-kubeQPS_(예: 100) 및 _event-exporter-kubeBurst_(예: 500)를 증가시킵니다. 이러한 구성 옵션에 대한 자세한 내용은 <block ref="74a91e6274b6ee5f9fd240fb978eb1d9" category="inline-link-macro-rx"></block>페이지를 참조하십시오.</block>
+  <block id="7438b4e926a47d987228924d394e21fc" category="cell">Telegraf는 잠금 가능한 메모리가 부족하다는 경고 또는 충돌에 대해 경고합니다.</block>
+  <block id="9953ac1176fec4ceef2b233ecd286c7b" category="cell">기본 운영 체제/노드에서 Telegraf의 잠금 가능한 메모리 제한을 늘리십시오. 제한을 늘리는 것이 옵션이 아닌 경우 NKMO agentconfiguration과 set_unprotected_to_true_를 수정합니다. 그러면 Telegraf가 잠긴 메모리 페이지를 예약하지 않도록 지시합니다. 암호 해독된 암호가 디스크로 교체될 수 있기 때문에 보안 위험이 발생할 수 있지만 잠긴 메모리를 예약할 수 없는 환경에서 실행할 수 있습니다. _unprotected_configuration 옵션에 대한 자세한 내용은 <block ref="74a91e6274b6ee5f9fd240fb978eb1d9" category="inline-link-macro-rx"></block>페이지를 참조하십시오.</block>
+  <block id="d2402cb2e8bc53d6f0ea3a592a927071" category="cell">다음과 유사한 Telegraf의 경고 메시지가 표시됩니다. _W! [input.diskio] "vdc"에 대한 디스크 이름을 수집할 수 없습니다. /dev/vdc 읽기 오류: 해당 파일 또는 디렉토리 _</block>
+  <block id="d167beea70a778e86c7a57bc2bd4338a" category="inline-link-macro">오퍼레이터 구성 옵션</block>
+  <block id="1f3c6b9eb496e3586cb89ac14caca626" category="cell">Kubernetes 모니터링 운영자의 경우 이러한 경고 메시지는 양호하며 무시해도 됩니다.  또는 AgentConfiguration에서 Telegraf 섹션을 편집하고 _runDsPrivileged_를 true 로 설정합니다. 자세한 내용은 를 <block ref="ebda7113c4f0b0fd6090a6c2a6162dc1" category="inline-link-macro-rx"></block>참조하십시오.</block>
+  <block id="828b70096630fbae314b6b8a4022c2d3" category="cell">내 fluent-bit POD가 다음 오류로 인해 실패하고 있습니다. [2024/10/16 14:16:23] [ERROR] [/src/fluent-bit/plugins/in_tail/fs_fs_inotify.c:360 errno=24] 열려 있는 파일이 너무 많습니다. [ERROR</block>
+  <block id="4c7e0efe737f180965ee5c651fc247df" category="paragraph">클러스터에서 _fsnotify_settings를 변경해 보십시오.</block>
+  <block id="354078bb27a2ab00cc965db863bbe682" category="paragraph">Fluent-bit을 다시 시작합니다.</block>
+  <block id="1e5f8c710fd35d7d1072ae4bd3588a8f" category="paragraph">참고: 이러한 설정을 노드 재시작 시에도 계속 유지하려면 _/etc/sysctl.conf_에 다음 줄을 입력해야 합니다</block>
+  <block id="70d57a4cf0763cd6479ef380a0e3959d" category="cell">Telegraf DS pods는 TLS 인증서를 검증할 수 없기 때문에 Kubernetes 입력 플러그인에서 HTTP 요청을 하지 못하는 것과 관련된 오류를 보고하고 있습니다. 예: E! [input.kubernetes] 플러그인 오류: TLS를 가져오기 <block ref="67e388e14afab5b44ba05645532bfd4c" category="inline-link-rx"></block>위해 HTTP 요청을 하는 중 오류<block ref="67e388e14afab5b44ba05645532bfd4c" category="inline-link-rx"></block>: 인증서를 확인하지 못했습니다. x509: &lt;kubelet_IP&gt;에 대한 인증서의 유효성을 검사할 수 없습니다. IP SAN이 포함되어 있지 않습니다</block>
+  <block id="006f752e44410388cadd8f8a37ce069f" category="inline-link-macro">에이전트 구성</block>
+  <block id="e7367bd1ec175ef5c58d982c52bc4348" category="inline-link-macro">서버 TLSBootstrap</block>
+  <block id="eb693e07b3c7e38a77aa691eee254db7" category="cell">이 문제는 kubelet이 자체 서명된 인증서를 사용하고 있거나 지정된 인증서에 certificates_subject alternative Name_list에 &lt;kubelet_IP&gt;가 포함되어 있지 않은 경우에 발생합니다. 이 문제를 해결하기 위해 사용자는<block ref="1ff2a3d734af6ebdb77c417baa3479b1" category="inline-link-macro-rx"></block>, 및 set_Telegraf:insecureK8sSkipVerify_to_true_를 수정할 수 있습니다. 이렇게 하면 확인을 건너뛰도록 Telegraf 입력 플러그인이 구성됩니다. 또는 <block ref="9ed8afe3c99331fa3d23c13414b98aba" category="inline-link-macro-rx"></block>'certificates.k8s.io' API에서 인증서 요청을 트리거하는 kubelet을 구성할 수도 있습니다.</block>
+  <block id="9c9d5560c9fe980c9cfc837919c7ecfa" category="paragraph">모든 개체 특성(예: 스토리지 이름)을 경고 설명에 매개 변수로 추가할 수 있습니다. 예를 들어, "High Latency for Volume:_%%relatedObject.volume.name%%_, Storage:_%%relatedObject.storage.name%%_" 등과 같이 볼륨 이름 및 스토리지 이름에 대한 매개 변수를 설정할 수 있습니다.</block>
+  <block id="782368f0cf779dae181ca1a15b5e1609" category="paragraph">객체 특성(예: 스토리지 이름)을 Webhook에 매개 변수로 추가할 수 있습니다. 예를 들어, "High Latency for Volume:_%%relatedObject.volume.name%%_, Storage:_%%relatedObject.storage.name%%_" 같은 웹 후크 설명에서 볼륨 이름 및 스토리지 이름에 대한 매개 변수를 설정할 수 있습니다.</block>
+  <block id="f9bf728d80a2e93034e1980e4b769331" category="summary">Google Cloud NetApp 볼륨 데이터 수집기를 구성합니다</block>
+  <block id="61f5a9d6ac308733fa136e57d4b5632d" category="doc">NetApp Google Cloud NetApp 볼륨 데이터 수집기</block>
+  <block id="31a01859ca4a7c16eaa2d78f965019b1" category="paragraph">이 데이터 수집기는 Google NetApp Cloud Volumes 클라우드 플랫폼 구성의 인벤토리 및 성능 수집을 지원합니다. 이 수집기는 하나의 Google 조직 내의 모든 프로젝트 내의 모든 컴퓨팅 리소스를 검색하려고 합니다. Data Infrastructure Insights로 검색할 Google 조직이 여러 개 있는 경우 조직당 하나의 Data Infrastructure Insights 수집기를 배포해야 합니다.</block>
+  <block id="d0e30a72147518a811af49d61e436b72" category="cell">위치별로 GCNV 자산을 필터링하려면 '제외' 또는 '포함'을 선택하십시오</block>
+  <block id="4ffa818c022d19570d8e17b29333c422" category="cell">이 컬렉터는 기본적으로 조직 내의 모든 GCNV 볼륨을 검색하려고 하므로 기본적으로 Exclude(제외)로 설정됩니다.</block>
+  <block id="df737fe9add18ce2518a85be515b48fb" category="cell">GCNV 제외/포함 위치</block>
+  <block id="aeb2c618381901b42bfc96e1eaba0439" category="cell">이 옵션은 기본적으로 비어 있으며 "제외" 또는 "포함" 옵션과 함께 사용됩니다. 세계의 특정 지역 내의 자산만을 발견하려는 경우, 이 두 가지 옵션은 수집기의 범위를 제한하기 위해 조작될 수 있습니다</block>
+  <block id="cfb59ac35dea35081dc8e9a9e178e6fa" category="cell">REST API 호출에 AU Proxy를 사용합니다</block>
+  <block id="c31db4d5c88645987121fa14f303decf" category="cell">이 확인란을 선택하면 컬렉터가 컬렉터가 상주하는 AU와 동일한 프록시를 사용하게 됩니다. 기본적으로 활성화되어 있지 않습니다. 즉, 수집기가 HTTPS API 호출을 Google에 직접 전송하려고 합니다.</block>
+  <block id="86cdc2548407309cf22885284404c866" category="paragraph">Webhook을 사용하면 사용자가 사용자 지정된 Webhook 채널을 사용하여 다양한 응용 프로그램에 중요 또는 경고 알림을 보낼 수 있습니다.</block>
+  <block id="fc2d88a1f6b61e7bd83c4e85a527c903" category="paragraph">용 Webhook <block ref="2990f1f56161b3387a3b4aed372cd205" category="inline-link-macro-rx"></block></block>
+  <block id="a2a31fbada6144e8ed1aea34738b3286" category="paragraph">Webhook용 <block ref="fd47f99f71f4060a45930a1b7d2d1fd6" category="inline-link-macro-rx"></block>Webhook용 Webhook용 Webhook용 Webhook <block ref="119cd804e167819a5b1cbe06f835cd07" category="inline-link-macro-rx"></block><block ref="9ec366bafa5f53c82668f1616a12e6a8" category="inline-link-macro-rx"></block></block>
 </blocks>
