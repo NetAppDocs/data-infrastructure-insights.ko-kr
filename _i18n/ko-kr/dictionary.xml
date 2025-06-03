@@ -303,8 +303,6 @@
   <block id="e41f6efeb9a8c29ac8077a1348b68078" category="cell">클러스터의 암호입니다</block>
   <block id="444301801d58f01b1fb488fe224bb8c5" category="cell">하나 이상의 저장소가 생성되었다는 메시지가 표시됩니다.</block>
   <block id="7de7475f4bb973126434d7c3f9801f08" category="cell">클러스터가 올바르게 구성되어 있고 수집기가 단일 클러스터를 가리키고 있는지 확인합니다.</block>
-  <block id="fc971fc699329bc531b4d65ff180a629" category="cell">디스크 API가 더 많은 데이터를 반환한다는 경고가 수신되었습니다</block>
-  <block id="3cd62817285774be5e17bfa3b11a6309" category="cell">추가 데이터를 얻으려면 지원 부서에 문의하십시오.</block>
   <block id="aa7bcff87c480aa90d0e5d1001e89590" category="summary">VMware 데이터 수집기 구성 중</block>
   <block id="3642158841a114e36a8c869b919b1091" category="doc">VMware vSphere Data Collector 구성</block>
   <block id="2c2ae7694a57522d5f3200005b67fffd" category="paragraph">VMware vSphere용 데이터 수집기는 VM 게스트 및 ESXi 호스트 성능 및 구성 정보를 수집하며 vSphere 내의 모든 개체에 대해 읽기 전용 Privileges이 필요합니다. 2024년 8월 현재 vSphere Collector는 vSphere 환경의 로그 메시지와 일부 VMware 관련 메트릭을 추가로 제공합니다. Data Infrastructure Insights는 vSphere 8.0.1 이상의 환경에서만 VMware 로그 정보를 검색할 수 있습니다. 마찬가지로 공급업체별 메트릭은 vSphere 7+ 환경에서만 지원됩니다. 따라서 이전 vSphere 인스턴스를 가리키는 경우 해당 Collector에서 로그 및/또는 공급업체별 메트릭 확인란을 비활성화할 수 있습니다.</block>
@@ -1500,9 +1498,6 @@
   <block id="29e29650476f773b7c44149e72a13e69" category="list-text">* 해제 * 를 클릭하여 활성 경고 목록에서 경고를 제거합니다.</block>
   <block id="e8638926499f5e7bec918a2f4d6dc36a" category="paragraph">각 알림의 왼쪽에 있는 확인란을 선택하고 _Change Selected Alerts Status_를 클릭하여 여러 알림을 관리할 수 있습니다.</block>
   <block id="70a18f3fbffa69fc35378e4b2e87f766" category="paragraph">경고 ID를 클릭하면 경고 세부 정보 페이지가 열립니다.</block>
-  <block id="f7e83685d25e3038170e83ca19c3cbf0" category="section-title">경고 세부 정보 페이지</block>
-  <block id="b254b175b71c2c7dca19ba0dcbc5da07" category="paragraph">경고 세부 정보 페이지는 경고 조사관이 입력한 _ 요약 _, _ 전문가 보기 _ 개체 데이터와 관련된 그래프, 모든 _ 관련 자산 _ 및 _ 코멘트 _ 을 포함하여 경고에 대한 추가 세부 정보를 제공합니다.</block>
-  <block id="1b489429111564ed0ac0109b22575d28" category="paragraph"><block ref="1b489429111564ed0ac0109b22575d28" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0dc88092036f29d0c951123c9b9f932e" category="section-title">데이터가 없을 때 경고합니다</block>
   <block id="ffbb059fbd1b72fd858ad1db288acd16" category="paragraph">Data Infrastructure Insights와 같은 실시간 시스템에서는 모니터 분석을 트리거하여 알림 생성 여부를 결정하기 위해 다음 두 가지 중 하나에 의존합니다.</block>
   <block id="9f76cab36d38af05dce74499497c7b3b" category="list-text">다음 데이터 형식 도착</block>
@@ -12579,4 +12574,17 @@
   <block id="25663750e3a92ca79621844d9a055d8a" category="paragraph"><block ref="25663750e3a92ca79621844d9a055d8a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="44c7c3a77a122ce29cb93ab53513f83f" category="section-title">자산 이름의 쉼표</block>
   <block id="4d53c0239522855d4d60019758390f70" category="section-title">시간 형식인가, 아니면 시간 형식이 아닌가?</block>
+  <block id="3756ac460c094adc890ad7f26460010b" category="cell">35000-55000 을 참조하십시오</block>
+  <block id="0e948943e8277507eeeec08bbb91d3b4" category="cell">클러스터 관리 IP입니다</block>
+  <block id="8ad596bfbf4c5161efe95c1bf071f052" category="cell">ONTAP 클러스터 관리 IP에서 Workload Security Agent로의 *EMS 이벤트* 통신. ONTAP이 Workload Security Agent로 *EMS 이벤트*를 전송하려면 Workload Security Agent를 향하는 포트가 열려 있어야 하며, Workload Security Agent 자체의 방화벽(있는 경우)도 포함되어야 합니다. 이러한 포트를 * 모두 * 예약할 필요는 없지만 이 범위 내에 예약하는 포트가 있어야 합니다. 우선 100개 이하의 포트를 예약하여 필요한 경우 늘리는 것이 좋습니다.</block>
+  <block id="ab1259588b3e1ad3b770e413f8408667" category="cell">사용자 이름/서비스 계정</block>
+  <block id="2fde62a7ecea2efe8b301312f6a6b292" category="cell">비밀번호 / 비밀</block>
+  <block id="8ec2e527e4b860bd5119c6e2816e5f0e" category="cell">서비스 계정에 대한 조직 ID</block>
+  <block id="30993e7595c12ab5f7aa162f78a59c3b" category="cell">이는 "Organization:::nnnnnn-nnnn....."와 같은 전체 문자열이어야 합니다.</block>
+  <block id="2ce06c7c6b7a3d5ec1168fa41dc94826" category="cell">400[잘못된 요청] 오류로 폴링이 실패합니다... 잘못된 ManagedId...</block>
+  <block id="59e8601d861464a8b5978359c99a89b2" category="cell">조직 ID 필드에 값을 채웠지만 Rubrik 클러스터는 Rubrik의 오류 메시지에서 "ManagedId"로 언급했음에도 불구하고 해당 조직 ID가 유효한 조직 ID라고 믿지 않습니다.</block>
+  <block id="a6d988d681ec5a2ac741001e80c67bbc" category="section-title">알림 세부 정보 패널</block>
+  <block id="bb9284d1e6e1080190597d2d9826cc87" category="paragraph">알림 행을 선택하면 알림 세부 정보 패널이 열립니다. 알림 세부 정보 패널은 _요약_, 객체 데이터 관련 그래프를 보여주는 _전문가 보기_, _관련 자산_, 그리고 알림 조사자가 입력한 _코멘트_ 등 알림에 대한 추가 정보를 제공합니다.</block>
+  <block id="ce2f8058fa83417353b52945b6bfd42f" category="inline-image-macro">메트릭 알림 세부 정보 패널</block>
+  <block id="8f9a1f05fd3f7e730fd077aaaac2e6f0" category="paragraph"><block ref="8f9a1f05fd3f7e730fd077aaaac2e6f0" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>

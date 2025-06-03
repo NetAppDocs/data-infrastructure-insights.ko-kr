@@ -59,10 +59,13 @@ Data Infrastructure Insights는 Rubrik 데이터 수집기에서 다음 인벤�
 | IP | Rubrik 클러스터의 IP 주소 
 
 
-| 사용자 이름입니다 | 클러스터의 사용자 이름입니다 
+| 사용자 이름/서비스 계정 | 클러스터의 사용자 이름입니다 
 
 
-| 암호 | 클러스터의 암호입니다 
+| 비밀번호 / 비밀 | 클러스터의 암호입니다 
+
+
+| 서비스 계정에 대한 조직 ID | 이는 "Organization:::nnnnnn-nnnn....."와 같은 전체 문자열이어야 합니다. 
 |===
 
 
@@ -93,6 +96,6 @@ Data Infrastructure Insights는 Rubrik 데이터 수집기에서 다음 인벤�
 | 하나 이상의 저장소가 생성되었다는 메시지가 표시됩니다. | 클러스터가 올바르게 구성되어 있고 수집기가 단일 클러스터를 가리키고 있는지 확인합니다. 
 
 
-| 디스크 API가 더 많은 데이터를 반환한다는 경고가 수신되었습니다 | 추가 데이터를 얻으려면 지원 부서에 문의하십시오. 
+| 400[잘못된 요청] 오류로 폴링이 실패합니다... 잘못된 ManagedId... | 조직 ID 필드에 값을 채웠지만 Rubrik 클러스터는 Rubrik의 오류 메시지에서 "ManagedId"로 언급했음에도 불구하고 해당 조직 ID가 유효한 조직 ID라고 믿지 않습니다. 
 |===
 추가 정보는 페이지 또는 에서 찾을 link:concept_requesting_support.html["지원"]link:reference_data_collector_support_matrix.html["Data Collector 지원 매트릭스"]수 있습니다.
