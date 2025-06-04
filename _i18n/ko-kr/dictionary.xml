@@ -8509,21 +8509,8 @@
   <block id="bc781ab763b71df7b975bbfe7c860bba" category="paragraph">정보는 에서 찾을 <block ref="3147fac008aa304c440ef0d367c93828" category="inline-link-macro-rx"></block>수 있습니다.</block>
   <block id="dea8b0c01ac3c8f22d85423d187ec3d2" category="cell">Couchbase</block>
   <block id="64f2993184c14c565d6ba3100a20ca05" category="cell">인증 캐시 적중 인증 캐시 비적중 데이터베이스 읽기 데이터베이스 쓰기 열기 OS 파일 최대 요청 시간 최소 요청 시간 httpd 요청 메서드 복사 httpd 요청 메서드 삭제 httpd 요청 메서드 가져오기 요청 메서드 헤드 httpd 요청 메서드 게시 httpd 요청 메서드 상태 코드 200 상태 코드를 넣습니다 201 상태 코드 202 상태 코드 301 상태 코드 304 상태 코드 400 상태 코드 401 상태 코드 403 상태 코드 404 상태 코드 409 상태 코드 409 상태 코드 412 상태 코드 500</block>
-  <block id="d1f2d0eb68a6b45c8dc6a6dba792539e" category="summary">DCO 구성</block>
-  <block id="072a17ceb11d2f7027c8a1539261d0b0" category="doc">DC/OS Data Collector</block>
-  <block id="bba9e01ebd689f9c44999482a5a64c33" category="paragraph">Data Infrastructure Insights는 이 데이터 수집기를 사용하여 DC/OS에서 메트릭을 수집합니다.</block>
-  <block id="ada6106f548a6369154652d4ea69d9a1" category="list-text">관측성 &gt; 수집기 * 에서 * + Data Collector * 를 클릭합니다. DC/OS * 를 선택합니다.</block>
-  <block id="906f9dd57fb2872473e89e09bf5bf50e" category="list-text">DC/OS Configuration(DC/OS 구성) 화면의 지침에 따라 데이터 수집기를 구성합니다. 지침은 데이터 수집에 사용하는 운영 체제 또는 플랫폼의 유형에 따라 다릅니다.</block>
-  <block id="169d74d7790e089aeca58cb836db2fcc" category="inline-link">DC/OS 설명서</block>
-  <block id="b0f77e8918eef13e0142c8675b792231" category="paragraph">설정 정보는 에서 찾을<block ref="bcf6b27a44ba394f1a86a682cd050dc1" category="inline-link-rx"></block> 수 있습니다.</block>
   <block id="497031794414a552435f90151ac3b54b" category="cell">오브젝트</block>
   <block id="e2da36de4fe1aaf514aaef4ecca2c8ec" category="cell">식별자</block>
-  <block id="90fd43f146814c9c0cb1e9040b914fa0" category="cell">데이터 요소</block>
-  <block id="c43575a6656a31d36fd3cee9520b5838" category="cell">DCO_NODE</block>
-  <block id="a675bd36bf3917644534c43b4ba2e55f" category="cell">DCO_CONTAINER DCO_APP</block>
-  <block id="022435a7e2f917aa3bce64222061f83d" category="cell">클러스터 호스트 이름 경로(파일 시스템 필드에만 해당) 인터페이스(네트워크 필드에만 해당) container_id task_name</block>
-  <block id="2cf0eab79c0db36a5df9e2deeba2b2c2" category="cell">infloat(system_uptime) cpu_cornes(float) cpu_user(float) cpu_idle(float) cpu_wait(float) load_1min(float) load_5min(float) load_15min(float) filesystem_capacity_capacity(int_used_bytes(int) inode inode inode 사용 가능한 inode_free_ytes(inode) inode( inode_free_ytes) infloat_byte( inode) infloat) inode( infloat) infloat) byte( infloat) network_in_packets (float) network_out_packets (float) network_in_drop (float) network_in_errors (float) network_out_errors (float) process_count (float)</block>
-  <block id="bc9c01f26c422a397298e3d733c43cb5" category="paragraph">추가 정보는 페이지에서 찾을 수 <block ref="d34993add17c6dd464dba2ccd7f99cbb" category="inline-link-macro-rx"></block>있습니다.</block>
   <block id="0982f7ddf38c72531e91321d3b4e198e" category="summary">Docker 데이터 수집기 구성</block>
   <block id="d80788e8d22d139775039533ead6bae8" category="doc">Docker Data Collector 를 참조하십시오</block>
   <block id="7ab1583e1a436a4f564958859dce5c00" category="paragraph">Data Infrastructure Insights는 이 데이터 수집기를 사용하여 Docker에서 메트릭을 수집합니다.</block>
@@ -11381,7 +11368,6 @@
   <block id="7070fd1d7b5d144bd3131c3c2b7ee1ca" category="list-text">평가판 요청 * 을 선택합니다. 아직 BlueXP 에 등록하지 않은 경우 세부 정보를 입력하고 등록하십시오. 그렇지 않으면 로그인합니다.</block>
   <block id="e461fd437885ee63b7f00e77ade6b3cb" category="list-text">미팅을 예약하거나 평가판에 대해 담당자가 연락을 드릴 때까지 기다립니다.</block>
   <block id="44d2017272b4664ce749afa3c1fc2785" category="summary">SAN Analyzer는 테넌트의 자산에 대한 토폴로지를 제공합니다</block>
-  <block id="916cfef6f81652d81c744e0537c656b2" category="doc">SAN Analyzer 개요</block>
   <block id="a720fce5b3da4c111f19c80487c269cf" category="paragraph">SAN은 중요 워크로드를 처리하는 데 중요한 역할을 하지만 복잡성으로 인해 정전 및 고객 운영 중단이 발생할 수 있습니다. DII의 * SAN Analyzer * 를 사용하면 SAN 관리가 더 간단하고 효율적입니다. 이 강력한 툴은 VM/호스트 간의 상관 관계를 LUN 및 스토리지에 매핑하여 완벽한 가시성을 제공합니다.</block>
   <block id="b03a68ce04fd31de1bf167d4c6537d2f" category="paragraph">대화형 토폴로지 맵을 제공함으로써 SAN Analyzer를 사용하면 문제를 정확히 파악하고 변경 사항을 이해하며 데이터 흐름에 대한 이해도를 높일 수 있습니다. SAN Analyzer를 사용하여 복잡한 IT 환경에서 SAN 관리를 간소화하고 블록 워크로드에 대한 가시성을 높일 수 있습니다.</block>
   <block id="9c6601cca8cd67405c34e4897bb272f1" category="section-title">자산 간의 연결을 탐색합니다</block>
@@ -12587,4 +12573,10 @@
   <block id="bb9284d1e6e1080190597d2d9826cc87" category="paragraph">알림 행을 선택하면 알림 세부 정보 패널이 열립니다. 알림 세부 정보 패널은 _요약_, 객체 데이터 관련 그래프를 보여주는 _전문가 보기_, _관련 자산_, 그리고 알림 조사자가 입력한 _코멘트_ 등 알림에 대한 추가 정보를 제공합니다.</block>
   <block id="ce2f8058fa83417353b52945b6bfd42f" category="inline-image-macro">메트릭 알림 세부 정보 패널</block>
   <block id="8f9a1f05fd3f7e730fd077aaaac2e6f0" category="paragraph"><block ref="8f9a1f05fd3f7e730fd077aaaac2e6f0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5a71b3e73a269322067fedef6352832a" category="doc">SAN 분석기 개요</block>
+  <block id="308d93e3f78b9236fe8462a038df9e71" category="paragraph">환경에 다른 프로토콜이 있는 경우 iSCSI 또는 FC로 필터링할 수 있습니다.</block>
+  <block id="d0cb407e54552661d276105ea643b822" category="inline-image-macro">SAN 분석기 프로토콜</block>
+  <block id="1ba02fc2bd769c9cff9ca39f38c94497" category="paragraph"><block ref="1ba02fc2bd769c9cff9ca39f38c94497" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="69903a755173d1c4699b4fdd2f6091ea" category="paragraph">여러 ONTAP 모델이 모니터링 또는 알림에 사용할 수 있는 데이터 인프라 Insights에 대한 전력 메트릭을 제공합니다.</block>
+  <block id="dad21edfb3c02cb57e392a9d9a2e3eed" category="admonition">이 목록은 포괄적이지 않으며 변경될 수 있습니다. 일반적으로 목록에 있는 모델과 동일한 제품군에 속하는 모델은 지원 범위가 동일해야 하지만, 반드시 동일하다는 보장은 없습니다. 사용 중인 모델이 전력 메트릭을 지원하는지 확실하지 않으면 ONTAP 지원팀에 문의하십시오.</block>
 </blocks>
