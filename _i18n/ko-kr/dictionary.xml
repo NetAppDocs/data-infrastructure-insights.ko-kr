@@ -12581,4 +12581,13 @@
   <block id="f551ca729032aed761417786181395c8" category="paragraph">Data Infrastructure Insights는 Brocade FOS REST Collector를 사용하여 FabricOS(FabricOS) 펌웨어 8.2 이상을 실행하는 Brocade 스위치 장치의 인벤토리 및 성능을 검색합니다. 초기 8.2 FOS 릴리스에는 REST API 버그가 있을 수 있으니, 플랫폼에서 지원하는 최신 FOS 릴리스를 실행하는 것이 좋습니다.</block>
   <block id="882ec11eef2cffbd43db944e6046b98d" category="cell">오류: 인벤토리가 401 인증되지 않음...잘못된 세션 키...로 실패합니다.</block>
   <block id="fcad57aa5101382922e3f8fe687cf7b0" category="cell">이 버그는 HTTP 기본 인증을 제대로 지원하지 않는 8.2 FOS 초기 릴리스와 8.2.1c 릴리스의 일부에서 발견되는 버그입니다. 이후 8.2 또는 9.* 릴리스로 업그레이드하세요.</block>
+  <block id="94d267f658e04734eb2e098127293a89" category="section-title">2025년 6월</block>
+  <block id="b792c127dc9f478a7930f4bc0161feba" category="section-title">VM Analyzer: VM-스토리지 간 전체적인 가시성 및 문제 해결</block>
+  <block id="2d1fb0b32df39d06f41d0fd035211a2a" category="paragraph">DII의 *VM Analyzer* 기능은 가상화 환경에 대한 포괄적인 엔드 투 엔드 뷰를 제공합니다. VM Analyzer는 가상 머신에서 스토리지까지의 전체 경로를 매핑하여 문제 해결을 간소화하고, 사용자가 가상 디스크, VM, 호스트, 데이터스토어, 볼륨 및 스토리지 전반의 성능 문제를 신속하게 파악할 수 있도록 지원합니다. 직관적인 토폴로지 뷰, 필터링 및 세부적인 성능 지표를 통해 관리자는 병목 현상을 쉽게 파악하고, 트래픽 불균형을 분석하며, 전반적인 스토리지 성능을 최적화할 수 있습니다.</block>
+  <block id="8c044a5eedd54f1f8fba795eed42e6a6" category="inline-image-macro">스토리지 시스템의 VM Analyzer 토폴로지 맵</block>
+  <block id="a3c3da49bc8b32e34a738f7438c8a53d" category="paragraph"><block ref="a3c3da49bc8b32e34a738f7438c8a53d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d7633d5867fc4c2291155ab5b8e0b0f0" category="paragraph">이제 Data Infrastructure Insights Acquisition Unit과 함께 다음 운영 체제가 지원됩니다<block ref="6afa3e3eb626ea3ea6592dfd126d0ce7" category="inline-link-macro-rx"></block>.</block>
+  <block id="b25b84328544405f6b0ef29d21ec179a" category="list-text">데비안 (64비트) 12</block>
+  <block id="fc4f76c3c67141253726c8c6550bc344" category="list-text">Oracle Enterprise Linux(64비트) 9.6</block>
+  <block id="3f9083673db59761ee75134079acb794" category="list-text">Red Hat(64비트) 9.6</block>
 </blocks>

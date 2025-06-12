@@ -7,11 +7,39 @@ keywords: features
 = Data Infrastructure Insights의 새로운 기능
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
 NetApp은 제품과 서비스를 지속적으로 개선 및 개선하고 있습니다. 다음은 Data Infrastructure Insights(이전의 Cloud Insights)에서 사용할 수 있는 몇 가지 최신 기능입니다.
 
+
+
+== 2025년 6월
+
+
+
+=== VM Analyzer: VM-스토리지 간 전체적인 가시성 및 문제 해결
+
+DII의 *VM Analyzer* 기능은 가상화 환경에 대한 포괄적인 엔드 투 엔드 뷰를 제공합니다. VM Analyzer는 가상 머신에서 스토리지까지의 전체 경로를 매핑하여 문제 해결을 간소화하고, 사용자가 가상 디스크, VM, 호스트, 데이터스토어, 볼륨 및 스토리지 전반의 성능 문제를 신속하게 파악할 수 있도록 지원합니다. 직관적인 토폴로지 뷰, 필터링 및 세부적인 성능 지표를 통해 관리자는 병목 현상을 쉽게 파악하고, 트래픽 불균형을 분석하며, 전반적인 스토리지 성능을 최적화할 수 있습니다.
+
+image:vm_analyzer_example_with_panel.png["스토리지 시스템의 VM Analyzer 토폴로지 맵"]
+
+
+
+=== 운영 체제 지원
+
+이제 Data Infrastructure Insights Acquisition Unit과 함께 다음 운영 체제가 지원됩니다link:concept_acquisition_unit_requirements.html["이미 지원됩니다"].
+
+* 데비안 (64비트) 12
+* Oracle Enterprise Linux(64비트) 9.6
+* Red Hat(64비트) 9.6
+
+
+'''
 
 
 == 2025년 5월
