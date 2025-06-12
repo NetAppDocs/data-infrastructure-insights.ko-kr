@@ -10,7 +10,7 @@ summary: Brocade FOS REST 데이터 수집기를 구성하는 중입니다.
 
 
 [role="lead"]
-Data Infrastructure Insights는 Brocade FOS REST Collector를 사용하여 FabricOS(FabricOS) 펌웨어 8.2 이상을 실행하는 Brocade 스위치 장치의 인벤토리 및 성능을 검색합니다.
+Data Infrastructure Insights는 Brocade FOS REST Collector를 사용하여 FabricOS(FabricOS) 펌웨어 8.2 이상을 실행하는 Brocade 스위치 장치의 인벤토리 및 성능을 검색합니다. 초기 8.2 FOS 릴리스에는 REST API 버그가 있을 수 있으니, 플랫폼에서 지원하는 최신 FOS 릴리스를 실행하는 것이 좋습니다.
 
 참고: FOS의 기본 "사용자" 수준은 장치의 모든 논리적 측면을 Data Infrastructure Insights에서 볼 수 있는 기능이 충분하지 않습니다. "섀시 역할"이 활성화된 사용자 계정과 스위치에서 구성된 모든 가상 패브릭에 대한 권한이 필요합니다.
 
@@ -124,6 +124,9 @@ Data Infrastructure Insights는 Brocade FOS REST 데이터 수집기에서 다�
 
 
 | 테스트 기능은 프로토콜에 액세스할 수 없다는 경고 메시지를 표시합니다 | 특정 Brocade FOS 8.2+ 장치는 HTTP 또는 HTTPS에서만 통신하려고 합니다. - 스위치에 디지털 인증서가 설치되어 있는 경우 암호화되지 않은 HTTP와 HTTPS를 사용하여 통신하려고 하면 스위치에서 HTTP 오류가 발생합니다. 테스트 기능은 HTTP와 HTTPS 모두와 통신을 시도합니다. - 테스트에서 한 프로토콜이 통과한다고 말하면 수집기를 안전하게 저장할 수 있으며 다른 프로토콜이 실패해도 걱정할 필요가 없습니다. 수집기는 수집 중에 두 프로토콜을 모두 시도하며 두 프로토콜이 작동하지 않을 경우에만 실패합니다. 
+
+
+| 오류: 인벤토리가 401 인증되지 않음...잘못된 세션 키...로 실패합니다. | 이 버그는 HTTP 기본 인증을 제대로 지원하지 않는 8.2 FOS 초기 릴리스와 8.2.1c 릴리스의 일부에서 발견되는 버그입니다. 이후 8.2 또는 9.* 릴리스로 업그레이드하세요. 
 
 
 | 오류: "Data Infrastructure Insights가 잘못된 섀시 역할을 수신했습니다." | 이 데이터 원본에 구성된 사용자에게 섀시 역할 권한이 부여되었는지 확인합니다. 

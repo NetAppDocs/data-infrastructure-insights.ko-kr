@@ -9828,7 +9828,6 @@
   <block id="17f6f686e23fbca9f92a7a9926136c2d" category="cell">성능 수집이 "SNMP 요청 전송 중 시간 초과"와 함께 실패합니다.</block>
   <block id="e04ebf98a9012bb6a191a7804699c68b" category="summary">Brocade FOS REST 데이터 수집기를 구성하는 중입니다.</block>
   <block id="706579d23b1ddf6c6ff6115a0f9271b4" category="doc">Brocade FOS REST Data Collector</block>
-  <block id="eff72425072b480bbbaf5cf932ce0c52" category="paragraph">Data Infrastructure Insights는 Brocade FOS REST Collector를 사용하여 FabricOS(FabricOS) 펌웨어 8.2 이상을 실행하는 Brocade 스위치 장치의 인벤토리 및 성능을 검색합니다.</block>
   <block id="8712a2bc3286760646a66b8eaaabacac" category="paragraph">참고: FOS의 기본 "사용자" 수준은 장치의 모든 논리적 측면을 Data Infrastructure Insights에서 볼 수 있는 기능이 충분하지 않습니다. "섀시 역할"이 활성화된 사용자 계정과 스위치에서 구성된 모든 가상 패브릭에 대한 권한이 필요합니다.</block>
   <block id="2266e1fc2ce062b23521f809220d83a2" category="paragraph">다음은 FOS 디바이스에 대한 SSH 세션에서 Data Infrastructure Insights 사용에 대한 "최소 권한" 사용자 계정을 생성하는 방법의 예입니다.</block>
   <block id="87acb0f928436de44c10589e7dfad434" category="paragraph">userConfig--add NetAppCIUser-r user-l 1-128-c user-p QWERTY!</block>
@@ -11684,7 +11683,6 @@
   <block id="5136d67ed194c95ea9a2710028034652" category="list-text">VMware vCenter Server 8.0.3 빌드 - 24305161</block>
   <block id="24820d2348a2986c54e81b6bc96fb06f" category="list-text">VMware vCenter Server 8.0.3 빌드 - 24322831</block>
   <block id="ce70e0ca30a003d9df6c2c5bf545464a" category="paragraph">예상 관리 유닛 수가 1,000 이상인 경우 <block ref="a9a75603ab8aac3033fb50ea01ab50c4" category="inline-link-macro-rx"></block>버튼을 클릭하여 NetApp 세일즈 팀을 통해 구독하십시오.</block>
-  <block id="dde5131249fb4fdf0bb4b08bbcba4943" category="cell">다음 중 하나를 실행하는 컴퓨터: * AlmaLinux 9.3 ~ 9.5 * CentOS(64비트): 7.2 ~ 7.9, 8.1 ~ 8.4, Stream 8, Stream 9 * Debian(64비트): 9 ~ 11 * OpenSUSE Leap 15.1 ~ 15.6 * Oracle Enterprise Linux(64비트) 전용 서버가 권장됩니다. SELinux를 실행하는 경우 획득 장치 시스템에서 sudo semanage fcontext -a -t usr_t "/opt/NetApp/cloudinsights(/. *)?"sudo restorecon -R/opt/NetApp/cloudinsights 명령을 실행하는 것이 좋습니다</block>
   <block id="31192200d4ffdcb773965b28dbfbe0fd" category="cell">다음 중 하나의 라이센스 버전을 실행하는 컴퓨터: * Microsoft Windows 10 64비트 * Microsoft Windows 11 * Microsoft Windows Server 2012 * Microsoft Windows Server 2012 R2 * Microsoft Windows Server 2016 * Microsoft Windows Server 2019 * Microsoft Windows Server 2022 * Microsoft Windows Server 2025 이 컴퓨터에서는 다른 애플리케이션 레벨 소프트웨어를 실행하지 않아야 합니다. 전용 서버가 권장됩니다.</block>
   <block id="7f09a101a37de5c76c92d5d4c88ddd83" category="paragraph">VMware 데이터 수집기를 사용하면 Data Infrastructure Insights 주석을 VMware에 구성된 태그로 채울 수 있습니다. DII 주석 이름은 VMware * category * name과 동일해야 합니다. 그러면 태그는 범주와 동일한 이름의 DII 주석의 주석 값으로 적용됩니다. Data Infrastructure Insights는 항상 같은 이름의 텍스트 유형 주석을 채우고 다른 유형(숫자, 부울 등)의 주석을 채우려는 "최선의 시도"를 합니다. 주석이 다른 유형이고 데이터 수집기가 주석을 채우지 못할 경우 주석을 제거하고 텍스트 유형으로 다시 생성해야 할 수 있습니다.</block>
   <block id="a45c25e047c23be206aa7b3a16363223" category="section-title">Test Connectivity for Data Collectors</block>
@@ -12579,4 +12577,8 @@
   <block id="1ba02fc2bd769c9cff9ca39f38c94497" category="paragraph"><block ref="1ba02fc2bd769c9cff9ca39f38c94497" category="inline-image-macro-rx" type="image"></block></block>
   <block id="69903a755173d1c4699b4fdd2f6091ea" category="paragraph">여러 ONTAP 모델이 모니터링 또는 알림에 사용할 수 있는 데이터 인프라 Insights에 대한 전력 메트릭을 제공합니다.</block>
   <block id="dad21edfb3c02cb57e392a9d9a2e3eed" category="admonition">이 목록은 포괄적이지 않으며 변경될 수 있습니다. 일반적으로 목록에 있는 모델과 동일한 제품군에 속하는 모델은 지원 범위가 동일해야 하지만, 반드시 동일하다는 보장은 없습니다. 사용 중인 모델이 전력 메트릭을 지원하는지 확실하지 않으면 ONTAP 지원팀에 문의하십시오.</block>
+  <block id="cd016f59e3bce345c5a22a0c73b84bc2" category="cell">다음 중 하나의 라이선스 버전을 실행하는 컴퓨터: * AlmaLinux 9.3 ~ 9.5 * Centos(64비트): 7.2 ~ 7.9, 8.1 ~ 8.4, Stream 8, Stream 9 * Debian(64비트): 9 ~ 12 * OpenSUSE Leap 15.1 ~ 15.6 * Oracle Enterprise Linux(64비트): 7.5 ~ 7.9, 8.1 ~ 8.10, 9.3 ~ 9.6 * Red Hat(64비트): 7.2 ~ 7.9, 8.1 ~ 8.10, 9.1 ~ 9.6 * Rocky 9.0 ~ 9.5 * SUSE Linux Enterprise Server 15, 15 SP2 ~ 15 SP6 * Ubuntu Server: 18.04, 20.04, 22.04, 24.04 LTS * 위 플랫폼의 SELinux 이 컴퓨터에서는 다른 애플리케이션 수준 소프트웨어를 실행해서는 안 됩니다. 전용 서버가 권장됩니다. SELinux를 실행하는 경우 획득 장치 시스템에서 sudo semanage fcontext -a -t usr_t "/opt/NetApp/cloudinsights(/. *)?"sudo restorecon -R/opt/NetApp/cloudinsights 명령을 실행하는 것이 좋습니다</block>
+  <block id="f551ca729032aed761417786181395c8" category="paragraph">Data Infrastructure Insights는 Brocade FOS REST Collector를 사용하여 FabricOS(FabricOS) 펌웨어 8.2 이상을 실행하는 Brocade 스위치 장치의 인벤토리 및 성능을 검색합니다. 초기 8.2 FOS 릴리스에는 REST API 버그가 있을 수 있으니, 플랫폼에서 지원하는 최신 FOS 릴리스를 실행하는 것이 좋습니다.</block>
+  <block id="882ec11eef2cffbd43db944e6046b98d" category="cell">오류: 인벤토리가 401 인증되지 않음...잘못된 세션 키...로 실패합니다.</block>
+  <block id="fcad57aa5101382922e3f8fe687cf7b0" category="cell">이 버그는 HTTP 기본 인증을 제대로 지원하지 않는 8.2 FOS 초기 릴리스와 8.2.1c 릴리스의 일부에서 발견되는 버그입니다. 이후 8.2 또는 9.* 릴리스로 업그레이드하세요.</block>
 </blocks>
