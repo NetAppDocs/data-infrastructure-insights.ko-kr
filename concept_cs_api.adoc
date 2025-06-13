@@ -58,8 +58,8 @@ NOTE: 토큰은 클립보드로 복사하고 생성 과정 중에 저장하는 �
 
 예를 들어, 다음을 사용하여 스토리지 자산을 검색할 수 있습니다.
 
- curl https://<tenant_host_name>/rest/v1/cloudsecure/activities -H 'X-CloudInsights-ApiKey: <API_Access_Token>'
-여기서 _<API_Access_Token>_은 API 액세스 키를 생성하는 동안 저장한 토큰입니다.
+ curl https://<Workload Security tenant>/rest/v1/cloudsecure/activities -H 'X-CloudInsights-ApiKey: <API_Access_Token>'
+여기서 _<API_Access_Token>_은 API 액세스 키 생성 중에 저장한 토큰이고 _<Workload Security Tenant>_는 Workload Security 환경의 테넌트 URL입니다.
 
 자세한 정보는 * Admin > API Access * 의 _API Documentation_link에서 확인할 수 있습니다.
 
@@ -75,6 +75,6 @@ NOTE: 토큰은 클립보드로 복사하고 생성 과정 중에 저장하는 �
 
 [source]
 ----
-python3 data-export.py --tenant_url <tenant id>.cs01.cloudinsights.netapp.com --access_key %ACCESS_KEY% --path_filter "<dir path>" --user_name "<user>" --from_time "01-08-2024 00:00:00" --to_time "31-08-2024 23:59:59" --iteration_interval 12 --num_workers 3
+python3 data-export.py --tenant_url <Workload Security tenant> --access_key %ACCESS_KEY% --path_filter "<dir path>" --user_name "<user>" --from_time "01-08-2024 00:00:00" --to_time "31-08-2024 23:59:59" --iteration_interval 12 --num_workers 3
 ----
 주요 파라미터: - `--iteration_interval 12`: 요청한 시간 범위를 12시간 간격으로 분할합니다.  `--num_workers 3`-: 3개의 스레드를 사용하여 이러한 간격을 병렬로 가져옵니다.

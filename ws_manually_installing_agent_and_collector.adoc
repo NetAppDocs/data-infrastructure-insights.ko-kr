@@ -201,21 +201,24 @@ image:ws_agentsPageShowingConnected.png["연결된 에이전트를 표시하는 
 
 참고: 이 문서에는 "ONTAP SVM data collector"를 설치하는 지침이 포함되어 있습니다. "Cloud Volumes ONTAP 데이터 수집기" 및 "Amazon FSx for NetApp ONTAP 데이터 수집기"에도 동일한 단계가 적용됩니다.
 
-. Collector를 설치해야 하는 시스템으로 이동하여 "/tmp" 디렉토리 아래에 "Collector"라는 디렉토리를 생성합니다.
+. 수집기를 설치해야 하는 시스템으로 이동하여 _에이전트 설치 경로_ 디렉토리 아래에 _./tmp/collectors_라는 디렉토리를 만듭니다.
++
+참고: 에이전트가 _/opt/netapp_에 설치된 경우 _/opt/netapp/cloudsecure_로 이동합니다.
+
 +
 [listing]
 ----
-[root@demo-agent ~]# mkdir -p /tmp/collectors
+[root@demo-agent ~]# cd {agent-install-path}/cloudsecure
+[root@demo-agent ~]# mkdir -p ./tmp/collectors
 ----
-. “Collector” 디렉토리의 소유권을 “cssys:cssys”(에이전트 설치 중에 cssys 사용자 및 그룹이 생성됨)로 변경합니다.
+. 재귀적으로 _tmp_ 디렉토리의 소유권을 *cssys:cssys*로 변경합니다(cssys 사용자 및 그룹은 에이전트 설치 중에 생성됩니다).
 +
 [listing]
 ----
-[root@demo-agent /]# chown cssys:cssys /tmp/collectors
-[root@demo-agent /]# cd /tmp/
+[root@demo-agent /]# chown -R cssys:cssys tmp/
+[root@demo-agent /]# cd ./tmp
 [root@demo-agent tmp]# ll | grep collectors
 drwx------ 2 cssys         cssys 4096 Apr 26 15:56 collectors
-
 ----
 . 이제 Collector 버전과 UUID를 가져와야 합니다. "cloudsecure_config.collector-types" API로 이동합니다.
 . "cloudsecure_config.collector-types>/v1/cloudsecure/collector-types"(get) API 로 이동합니다. “collectorCategory” 드롭다운에서 수집기 유형을 “data”로 선택합니다. 모든 수집기 유형 세부 정보를 가져오려면 "모두"를 선택하십시오.
@@ -229,10 +232,13 @@ image:ws_collectorAPIShowingUUID.png["UUID를 표시하는 Collector API 응답�
 +
 image:ws_downloadCollectorByUUID.png["UUID로 Collector를 다운로드하는 API입니다"]
 
-.. 설치 관리자 파일이 다른 컴퓨터에 외부에서 다운로드되면 설치 관리자 파일을 에이전트가 실행 중인 시스템에 복사하고 "/tmp/collectors" 디렉토리에 저장합니다.
+.. 설치 프로그램 파일을 다른 컴퓨터에 외부에서 다운로드한 경우 에이전트가 실행 중인 시스템에 설치 프로그램 파일을 복사하여 _/{agent-install-path}/cloudsecure/tmp/collectors_ 디렉토리에 넣습니다.
 .. 또는 동일한 API에서 curl 명령을 복사하여 Collector를 설치할 시스템에서 직접 실행할 수 있습니다.
 +
 파일 이름은 다운로드 수집기 API의 응답 헤더에 있는 것과 동일해야 합니다. 아래 스크린샷을 참조하십시오.
+
++
+참고: 에이전트가 _/opt/netapp_에 설치된 경우 _/opt/netapp/cloudsecure/tmp/collectors_로 이동합니다.
 
 +
 image:ws_curl_command.png["난독 처리된 토큰을 보여 주는 Curl 명령의 예"]
@@ -240,21 +246,27 @@ image:ws_curl_command.png["난독 처리된 토큰을 보여 주는 Curl 명령�
 +
 [listing]
 ----
+[root@demo-agent collectors]# cd {agent-install-path}/cloudsecure/tmp/collectors
 [root@demo-agent collectors]# pwd
-/tmp/collectors
-[root@demo-agent collectors]# curl -X GET "https://netapp-demo.dev.cloudsecure.netapp.com/rest/v1/cloudsecure/collector-types/installers/1829df8a-c16d-45b1-b72a-ed5707129870" -H "accept: application/octet-stream" -H "X-CloudInsights-ApiKey: <<API Access Token>>" -o cs-ontap-dsc_1.286.0.zip
+/opt/netapp/cloudsecure/tmp/collectors
 
+[root@demo-agent collectors]# curl -X GET "https://netapp-demo.dev.cloudsecure.netapp.com/rest/v1/cloudsecure/collector-types/installers/1829df8a-c16d-45b1-b72a-ed5707129870" -H "accept: application/octet-stream" -H "X-CloudInsights-ApiKey: <<API Access Token>>" -o cs-ontap-dsc_1.286.0.zip
+----
+
+
+. 수집기 설치 프로그램 zip 파일의 소유권을 *cssys:cssys*로 변경합니다.
++
+[listing]
+----
 -rw------- 1 root root 50906252 Apr 26 16:11 cs-ontap-dsc_1.286.0.zip
 [root@demo-agent collectors]# chown cssys:cssys cs-ontap-dsc_1.286.0.zip
 [root@demo-agent collectors]# ll
 total 49716
 -rw------- 1 cssys cssys 50906252 Apr 26 16:11 cs-ontap-dsc_1.286.0.zip
 ----
-
-
 . Workload Security > Collector * 로 이동하고 * + Collector * 를 선택합니다. ONTAP SVM_collector를 선택합니다.
 . Collector 세부 정보 및 _Save_the Collector를 구성합니다.
-. “Save(저장)”를 클릭하면 에이전트 프로세스가 "/tmp/Collectors/" 디렉터리에서 Collector 설치 프로그램을 찾아 Collector를 설치합니다.
+. _저장_을 클릭하면 에이전트 프로세스가 _/{agent-install-path}/cloudsecure/tmp/collectors/_ 디렉토리에서 수집기 설치 프로그램을 찾아 수집기를 설치합니다.
 . 대체 옵션으로 UI를 통해 Collector를 추가하는 대신 API를 통해서도 추가할 수 있습니다.
 +
 .. "cloudsecure_config.collectors"> "/v1/cloudsecure/collectors"(POST) API로 이동합니다.
@@ -270,7 +282,7 @@ image:ws_collectorPageList.png["수집기를 보여 주는 UI 목록 페이지"]
 
 . 설치 후 정리.
 +
-.. Collector 설치에 성공하면 "/tmp/Collector" 디렉토리의 모든 파일을 삭제할 수 있습니다.
+.. 수집기 설치가 성공하면 _/{agent-install-path}/cloudsecure/tmp/collectors_ 디렉토리에 있는 모든 파일을 삭제할 수 있습니다.
 
 
 
@@ -281,16 +293,30 @@ image:ws_collectorPageList.png["수집기를 보여 주는 UI 목록 페이지"]
 
 참고: 이 문서에서는 LDAP Collector를 설치하는 단계에 대해 설명했습니다. AD Collector 설치에도 동일한 단계가 적용됩니다.
 
-. Collector를 설치해야 하는 시스템으로 이동하여 "/tmp" 디렉토리 아래에 "Collector"라는 디렉토리를 생성합니다.
+. 1. 수집기를 설치해야 하는 시스템으로 이동하여 _에이전트 설치 경로_ 디렉토리 아래에 _./tmp/collectors_라는 디렉토리를 만듭니다.
++
+참고: 에이전트가 _/opt/netapp_에 설치된 경우 _/opt/netapp/cloudsecure_로 이동합니다.
+
 +
 [listing]
 ----
-[root@demo-agent ~]# mkdir -p /tmp/collectors
-[root@demo-agent /]# chown cssys:cssys /tmp/collectors
-[root@demo-agent /]# cd /tmp/
+[root@demo-agent ~]# cd {agent-install-path}/cloudsecure
+[root@demo-agent ~]# mkdir -p ./tmp/collectors
+----
++
+.. _collectors_ 디렉토리의 소유권을 *cssys:cssys*로 변경합니다.
++
+[listing]
+----
+[root@demo-agent /]# chown -R cssys:cssys tmp/
+[root@demo-agent /]# cd ./tmp
+
 [root@demo-agent tmp]# ll | grep collectors
 drwx------ 2 cssys         cssys 4096 Apr 26 15:56 collectors
+
 ----
+
+
 . 이제 Collector의 버전과 UUID를 가져와야 합니다. "cloudsecure_config.collector-types" API로 이동합니다. collectorCategory 드롭다운에서 수집기 유형을 "user"로 선택합니다. 단일 요청에서 모든 수집기 유형 세부 정보를 가져오려면 "모두"를 선택하십시오.
 +
 image:ws_API_collector_all.png["API를 사용하여 모든 수집기를 가져옵니다"]
@@ -305,10 +331,13 @@ image:ws_LDAP_collector_UUID.png["LDAP 수집기 UUID를 보여 주는 API 응�
 +
 image:ws_LDAP_collector_UUID_download.png["API 및 다운로드 수집기에 대한 응답입니다"]
 
-.. 설치 관리자 파일이 다른 컴퓨터에 외부에서 다운로드되면 설치 관리자 파일을 에이전트가 실행 중인 시스템과 "/tmp/collectors" 디렉토리에 복사합니다.
+.. 설치 프로그램 파일을 다른 컴퓨터에 외부로 다운로드한 경우 에이전트가 실행 중인 시스템의 _/{agent-installation-path}/cloudsecure/tmp/collectors_ 디렉토리에 설치 프로그램 파일을 복사합니다.
 .. 또는 동일한 API에서 curl 명령을 복사하여 Collector를 설치해야 하는 시스템에서 직접 실행할 수 있습니다.
 +
 파일 이름은 다운로드 수집기 API의 응답 헤더에 있는 것과 동일해야 합니다. 아래 스크린샷을 참조하십시오.
+
++
+또한 에이전트가 _/opt/netapp_에 설치된 경우 _/opt/netapp/cloudsecure/tmp/collectors_로 이동합니다.
 
 +
 image:ws_curl_command.png["curl 명령 API"]
@@ -318,8 +347,10 @@ image:ws_curl_command.png["curl 명령 API"]
 +
 [listing]
 ----
+[root@demo-agent collectors]# cd {agent-install-path}/cloudsecure/tmp/collectors
 [root@demo-agent collectors]# pwd
-/tmp/collectors
+/opt/netapp/cloudsecure/tmp/collectors
+
 [root@demo-agent collectors]# curl -X GET "https://netapp-demo.dev.cloudsecure.netapp.com/rest/v1/cloudsecure/collector-types/installers/37fb37bd-6078-4c75-a64f-2b14cb1a1eb1" -H "accept: application/octet-stream" -H "X-CloudInsights-ApiKey: <<API Access Token>>" -o cs-ldap-dsc_1.322.0.zip
 ----
 . Collector 설치 프로그램 zip 파일의 소유권을 cssys:cssys로 변경합니다.
@@ -347,7 +378,7 @@ image:ws_LDAP_user_select.png["LDAP 사용자를 선택하기 위한 UI 창입�
 +
 image:ws_LDAP_user_Details.png["LDAP 사용자 세부 정보를 보여 주는 UI"]
 
-. “Save(저장)”를 클릭하면 에이전트 서비스가 "/tmp/Collectors/" 디렉터리에서 Collector 설치 프로그램을 찾아 Collector를 설치합니다.
+. _저장_을 클릭하면 에이전트 서비스는 _/{agent-install-path}/cloudsecure/tmp/collectors/_ 디렉토리에서 수집기 설치 프로그램을 찾아 해당 수집기를 설치합니다.
 . 대체 옵션으로 UI를 통해 Collector를 추가하는 대신 API를 통해서도 추가할 수 있습니다.
 +
 .. "cloudsecure_config.collectors"> "/v1/cloudsecure/collectors"(POST) API로 이동합니다.
@@ -363,7 +394,7 @@ image:ws_LDAP_collector_list.png["UI의 LDAP Collector 목록입니다"]
 
 . 설치 후 정리.
 +
-.. Collector 설치에 성공하면 "/tmp/Collector" 디렉토리의 모든 파일을 삭제할 수 있습니다.
+.. 수집기 설치가 성공하면 _/{agent-install-path}/cloudsecure/tmp/collectors_ 디렉토리에 있는 모든 파일을 삭제할 수 있습니다.
 
 
 
@@ -441,7 +472,7 @@ drwx------  3 cssys cssys 4096 Apr 26 16:39 data-collectors
 drwx------  2 root  root  4096 Apr 26 17:38 tmp
 
 ----
-.. 상담원은 "상담원" 페이지에 표시되고 '연결됨' 상태여야 합니다.
+.. 에이전트는 "에이전트" 페이지에 표시되어야 하며 '연결됨' 상태여야 합니다.
 +
 image:ws_agentsPageShowingConnected.png["연결된 상담원을 표시하는 UI"]
 
@@ -460,21 +491,24 @@ image:ws_agentsPageShowingConnected.png["연결된 상담원을 표시하는 UI"
 
 참고: 업그레이드 단계는 모든 유형의 Collector에 대해 동일합니다. 이 문서에서는 "ONTAP SVM" 수집기 업그레이드를 시연합니다.
 
-. Collector를 업그레이드해야 하는 시스템으로 이동하여 "/tmp/collectors" 디렉토리가 없는 경우 생성합니다.
+. 업그레이드해야 하는 수집기가 있는 시스템으로 이동하여 _에이전트 설치 경로_ 디렉토리 아래에 _./tmp/collectors_ 디렉토리를 만듭니다(아직 없으면).
++
+참고: 에이전트가 _/opt/netapp_에 설치된 경우 _/opt/netapp/cloudsecure_ 디렉토리로 이동합니다.
+
 +
 [listing]
 ----
-mkdir -p /tmp/collectors
+[root@demo-agent ~]# cd {agent-install-path}/cloudsecure
+[root@demo-agent ~]# mkdir -p ./tmp/collectors
 ----
 . "Collector" 디렉토리가 _cssys:cssys_에 의해 소유되었는지 확인하십시오.
 +
 [listing]
 ----
-[root@demo-agent /]# chown cssys:cssys /tmp/collectors
-[root@demo-agent /]# cd /tmp/
+[root@demo-agent /]# chown -R cssys:cssys tmp/
+[root@demo-agent /]# cd ./tmp
 [root@demo-agent tmp]# ll | grep collectors
 drwx------ 2 cssys         cssys 4096 Apr 26 15:56 collectors
-
 ----
 . swagger에서 "cloudsecure_config.collector-types" get API로 이동합니다. "collectorCategory" 드롭다운에서 "data"를 선택합니다(사용자 디렉토리 수집기의 경우 "user"를 선택하거나 "all"을 선택).
 +
@@ -485,7 +519,7 @@ image:ws_collector_uuid_and_version.png["Collector UUID 및 버전이 강조 표
 
 . 최신 Collector 설치 프로그램 파일을 다운로드합니다.
 +
-.. "cloudsecure_installers.collector"> "/v1/cloudsecure/collector-types/installers/{collectorTypeUUID}" API로 이동합니다. 이전 단계에서 복사한 "collectorTypeUUID"를 입력하십시오. 설치 프로그램을 "/tmp/collectors" 디렉토리에 다운로드합니다.
+.. _cloudsecure_installers.collector_ > _/v1/cloudsecure/collector-types/installers/{collectorTypeUUID}_ API로 이동합니다. 이전 단계에서 복사한 _collectorTypeUUID_를 입력합니다. _/{agent-install-path}/cloudsecure/tmp/collectors_ 디렉터리에 설치 프로그램을 다운로드합니다.
 .. 또는 동일한 API의 curl 명령을 사용할 수도 있습니다.
 +
 image:ws_curl_command_only.png["curl 명령 예"]
@@ -527,7 +561,7 @@ image:ws_svm_ontap_collector_upgrade_example_json.png["Swagger UI의 SVM 업그�
 
 . 업그레이드 후 정리:
 +
-.. Collector 업그레이드에 성공하면 "/tmp/Collector" 디렉토리의 모든 파일을 삭제할 수 있습니다.
+.. 수집기 업그레이드가 성공하면 _/{agent-install-path}/cloudsecure/tmp/collectors_ 디렉토리에 있는 모든 파일을 삭제할 수 있습니다.
 
 
 
@@ -540,7 +574,7 @@ image:ws_svm_ontap_collector_upgrade_example_json.png["Swagger UI의 SVM 업그�
 
 . AGENT014 오류
 +
-이 오류는 수집기 설치 파일이 "/tmp/collectors" 디렉토리에 없거나 액세스할 수 없는 경우에 발생합니다. 설치 프로그램 파일이 다운로드되었고 디렉터리 "Collector" 및 설치 관리자 zip 파일이 cssys:cssys에 의해 소유되었는지 확인하고 에이전트 서비스를 다시 시작합니다. "systemctl restart cloudsecure-agent.service”
+이 오류는 수집기 설치 프로그램 파일이 _/{agent-install-path}/cloudsecure/tmp/collectors_ 디렉터리에 없거나 액세스할 수 없는 경우 발생합니다. 설치 프로그램 파일이 다운로드되었는지, 그리고 _collectors_ 및 설치 프로그램 zip 파일의 전체 디렉터리 구조가 cssys:cssys의 소유인지 확인한 후, 에이전트 서비스를 다시 시작하세요: _systemctl restart cloudsecure-agent.service_.
 
 +
 image:ws_agent014_error.png["\"agent 014\" 오류 호버 팁을 보여 주는 UI 화면"]
