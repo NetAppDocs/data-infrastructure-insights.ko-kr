@@ -12626,4 +12626,6 @@
   <block id="34d4df065e8cb474864212e7cbd25aab" category="list-text">_cloudsecure_installers.collector_ &gt; _/v1/cloudsecure/collector-types/installers/{collectorTypeUUID}_ API로 이동합니다. 이전 단계에서 복사한 _collectorTypeUUID_를 입력합니다. _/{agent-install-path}/cloudsecure/tmp/collectors_ 디렉터리에 설치 프로그램을 다운로드합니다.</block>
   <block id="875ee097a763d140a4468d57aabb8d80" category="list-text">수집기 업그레이드가 성공하면 _/{agent-install-path}/cloudsecure/tmp/collectors_ 디렉토리에 있는 모든 파일을 삭제할 수 있습니다.</block>
   <block id="f7185660114f7b999956b1355a59005c" category="paragraph">이 오류는 수집기 설치 프로그램 파일이 _/{agent-install-path}/cloudsecure/tmp/collectors_ 디렉터리에 없거나 액세스할 수 없는 경우 발생합니다. 설치 프로그램 파일이 다운로드되었는지, 그리고 _collectors_ 및 설치 프로그램 zip 파일의 전체 디렉터리 구조가 cssys:cssys의 소유인지 확인한 후, 에이전트 서비스를 다시 시작하세요: _systemctl restart cloudsecure-agent.service_.</block>
+  <block id="7d7553997a3a5a75a3b0c10d87de471a" category="inline-link-macro">NetApp 영업 담당자에게 문의하세요.</block>
+  <block id="9cff751c63b93d5cf30de3f9b1c5ae37" category="admonition">보고 기능은 Data Infrastructure Insights에서 사용할 수 <block ref="e53fcfe2d8e430963458770e616738bd" category="inline-link-macro-rx"></block>있습니다. 보고 기능을 사용할 수 있는지 여부는 최소 설치 공간 요구 사항에 따라 달라집니다. <block ref="1609ad57ad0e13d165eb8d59f42fcd45" category="inline-link-macro-rx"></block> 자세한 내용은.</block>
 </blocks>
