@@ -2696,7 +2696,6 @@
   <block id="749376c343309b5abf1f8bc2f1e6e9f7" category="list-text">워크로드 보안 에이전트 시스템 자체에서 스크립트를 실행할 수 있으며 다른 Linux 시스템을 준비할 필요가 없습니다. 그러나 스크립트를 다른 시스템에서 실행하려면 스크립트를 복사하여 거기에서 실행하기만 하면 됩니다.</block>
   <block id="6a2eb10d0f7d8e6c5942069b7aa730bf" category="paragraph">Linux에서 NFS 내보내기를 마운트하려면</block>
   <block id="dd94533008fec4ee5889a56fd78e2a26" category="paragraph">NFS 버전 4.1을 마운트하지 마십시오. Fpolicy에서 지원되지 않습니다.</block>
-  <block id="6006ea3f9ae2b497be9e9bce2d0ead62" category="paragraph">Linux에서 CIFS를 마운트하려면</block>
   <block id="a22c6eb3597528c16b0d46880ae4b1ae" category="paragraph">다음으로 Data Collector를 설정합니다.</block>
   <block id="5e7fe8c41f8a34a29dc01b5eced565e8" category="list-text">아직 수행하지 않은 경우 워크로드 보안 에이전트를 구성합니다.</block>
   <block id="79e81469dc70b00e14fd266807fa2813" category="section-title">랜섬웨어 시뮬레이터 스크립트를 실행합니다</block>
@@ -11495,7 +11494,6 @@
   <block id="1f1f9d998591f96c2653327f9004b1a9" category="cell"><block ref="588cebdad26ee4a9a3bb08c290310eb7" category="inline-link-macro-rx"></block>Data Infrastructure Insights에서 수집 장치와 통신하는 데 사용되는 은 Data Infrastructure Insights와 Data Collector 자체 간에 통신하지 않습니다. 다음과 같은 몇 가지 방법을 시도해 볼 수 있습니다. 획득 장치가 FQDN을 확인하고 필요한 포트에 도달할 수 있는지 확인하십시오. 프록시가 오류 메시지의 지정된 끝점에 도달할 필요가 없는지 확인합니다. curl(말림)은 획득 장치와 끝점 사이의 통신을 테스트하는 데 사용할 수 있습니다. 이 테스트에 프록시를 사용하고 있지 * 않은지 확인하십시오. 예: root@acquisitionunit #curl-s-H accept: application/json-H "Content-type: application/json" -H API-key:&lt;데이터 수집기 자격 증명에 사용되는 api 키 -H secret-key:<block ref="ee10e7e073fdf55fff4a0c77a9c435fc" category="inline-link-macro-rx"></block>&lt;데이터 수집기 자격 증명에 사용된 비밀 키&gt;-X \https://&lt;AWS 지역 엔드포인트 가져오기&gt;:8080/v1/IP1/스토리지/IPRanges 를 참조하십시오.</block>
   <block id="1ec51096f7cea66fb872ea91910e89b9" category="paragraph">추가 문제 해결 정보는 에서 찾을 <block ref="6fe211aef2305839bd4b415ac3b03770" category="inline-link-macro-rx"></block>수 있습니다(지원 로그인 필요).</block>
   <block id="9e6e19182965cf2820f2a5f8cce84e8b" category="cell">AU가 SELinux에 설치된 경우 SE를 _permissive_mode로 설정해야 합니다. _Enforcing_mode는 지원되지 않습니다. SELinux를 허용 모드로 설정한 후 AU 서비스를 다시 시작합니다. <block ref="2aa71c1262c825b4349ce4125965fabb" category="inline-link-macro-rx"></block>..</block>
-  <block id="a0549e61b3931f3ffafdfcc909b88bf8" category="cell">다음 중 하나의 라이센스 버전을 실행하는 컴퓨터: * CentOS 9 Stream(64비트) * OpenSUSE Leap 15.3 - 15.5(64비트) * Oracle Linux 8.10(64비트), 9.1에서 9.4(64비트), SELinux * 9.4 - SELinux * 9.4, SUSE Linux(64비트), Linux 9.4 - 64 비트 Linux * 9.4 전용 서버가 권장됩니다.</block>
   <block id="af66622d3522b0b6fa496a47273bdb04" category="paragraph">데이터 수집기 지원 매트릭스는 공급업체 및 모델 정보를 포함하여 Data Infrastructure Insights에서 지원하는 데이터 수집기에 대한 참조를 제공합니다.</block>
   <block id="8892f0f7118a4e14ceef9a37218a5a33" category="cell">HP 3PAR 450 HP 3PAR 450 HP 3PAR 20450 HPE_3PAR 20800 HPE_3PAR 20850 HPE_3PAR 7200c HPE 3PAR 7200c HPE 3PAR 7400HP 3PAR 7400C 3PAR 74400 HP 3PAR 8200 3PAR_8440 3PAR_3PAR 8450</block>
   <block id="10fd66f5b4802aee3a88de2a537a57b4" category="cell">사용된 용량입니다</block>
@@ -12628,4 +12626,6 @@
   <block id="f7185660114f7b999956b1355a59005c" category="paragraph">이 오류는 수집기 설치 프로그램 파일이 _/{agent-install-path}/cloudsecure/tmp/collectors_ 디렉터리에 없거나 액세스할 수 없는 경우 발생합니다. 설치 프로그램 파일이 다운로드되었는지, 그리고 _collectors_ 및 설치 프로그램 zip 파일의 전체 디렉터리 구조가 cssys:cssys의 소유인지 확인한 후, 에이전트 서비스를 다시 시작하세요: _systemctl restart cloudsecure-agent.service_.</block>
   <block id="7d7553997a3a5a75a3b0c10d87de471a" category="inline-link-macro">NetApp 영업 담당자에게 문의하세요.</block>
   <block id="9cff751c63b93d5cf30de3f9b1c5ae37" category="admonition">보고 기능은 Data Infrastructure Insights에서 사용할 수 <block ref="e53fcfe2d8e430963458770e616738bd" category="inline-link-macro-rx"></block>있습니다. 보고 기능을 사용할 수 있는지 여부는 최소 설치 공간 요구 사항에 따라 달라집니다. <block ref="1609ad57ad0e13d165eb8d59f42fcd45" category="inline-link-macro-rx"></block> 자세한 내용은.</block>
+  <block id="49efdacfb2c6deb2da842846699cf1e7" category="cell">다음 중 하나의 라이선스 버전을 실행하는 컴퓨터: * AlmaLinux 9.4 및 9.5(64비트), SELinux 포함 * CentOS 9 Stream(64비트) * Debian 11(64비트) 및 12(64비트), SELinux 포함 * OpenSUSE Leap 15.3(64비트) ~ 15.6(64비트) * Oracle Linux 8.10(64비트), 9.1(64비트) ~ 9.6(64비트), SELinux 포함 * Red Hat Enterprise Linux 8.10(64비트), 9.1(64비트) ~ 9.6(64비트), SELinux 포함 * Rocky 9.4(64비트) 및 9.5(64비트), SELinux 포함 * SUSE Linux Enterprise Server 15 SP4(64비트) ~ 15 SP6 (64비트), SELinux 포함 * Ubuntu 20.04 LTS(64비트), 22.04 LTS(64비트), 24.04 LTS(64비트) 이 컴퓨터에서는 다른 애플리케이션 수준 소프트웨어를 실행해서는 안 됩니다. 전용 서버가 권장됩니다.</block>
+  <block id="edf63ae7e3cf0cd744884c156cab7abb" category="section-title">Linux에서 CIFS를 마운트하려면:</block>
 </blocks>
