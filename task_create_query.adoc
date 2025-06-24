@@ -37,6 +37,12 @@ image:QuerySelectColumns.png["열을 선택합니다"]
 
 
 
+== 실제로 확인해 보세요
+
+link:https://media.netapp.com/video-detail/d0530e0b-a222-52e7-92b1-dbeeee41b712/explore-and-analyze-with-queries-in-data-infrastructure-insights["Data Infrastructure Insights에서 쿼리를 사용하여 탐색하고 분석(비디오)"]
+
+
+
 == 집계, 단위, 조건부 서식 선택
 
 

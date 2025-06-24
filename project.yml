@@ -161,6 +161,12 @@ sidebar:
         url: "/concept_storage_virtualization.html"
       - title: 자산 검색에 대한 힌트 및 팁
         url: "/concept_searching_assets.html"
+    - title: 데이터 분석
+      entries:
+      - title: SAN 분석기
+        url: "/san_analyzer_overview.html"
+      - title: VM 분석기
+        url: "/vm_analyzer_overview.html"
     - title: 보고
       entries:
       - title: 보고 개요

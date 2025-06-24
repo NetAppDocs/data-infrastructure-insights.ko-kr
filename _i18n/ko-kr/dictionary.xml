@@ -2698,7 +2698,6 @@
   <block id="dd94533008fec4ee5889a56fd78e2a26" category="paragraph">NFS 버전 4.1을 마운트하지 마십시오. Fpolicy에서 지원되지 않습니다.</block>
   <block id="a22c6eb3597528c16b0d46880ae4b1ae" category="paragraph">다음으로 Data Collector를 설정합니다.</block>
   <block id="5e7fe8c41f8a34a29dc01b5eced565e8" category="list-text">아직 수행하지 않은 경우 워크로드 보안 에이전트를 구성합니다.</block>
-  <block id="79e81469dc70b00e14fd266807fa2813" category="section-title">랜섬웨어 시뮬레이터 스크립트를 실행합니다</block>
   <block id="1ccbd3884a5f46ebee24ea2d455e82c6" category="list-text">에이전트 상자에 로그인합니다.</block>
   <block id="b3431d54476e0f70ea6fc00bae48572b" category="summary">ONTAP SVM DSC를 설치하기 전에 이 스크립트를 실행하여 SVM의 이벤트 속도를 확인할 수 있습니다</block>
   <block id="2723c4d559ff96bb42870d86c109708e" category="doc">SVM Event Rate Checker(에이전트 크기 지정 가이드)</block>
@@ -12538,7 +12537,6 @@
   <block id="29acd3d3cfc5f8e3cb650abeb2622a68" category="cell">agentlogin.cs01-eu-1.cloudinsights.netapp.com</block>
   <block id="012f0abca78822d24d27455403c3d089" category="cell">agentlogin.cs01-ap-1.cloudinsights.netapp.com</block>
   <block id="5638f0cd643e22827b55eec8b52ab7e4" category="paragraph">여기서 _&lt;API_Access_Token&gt;_은 API 액세스 키 생성 중에 저장한 토큰이고 _&lt;Workload Security Tenant&gt;_는 Workload Security 환경의 테넌트 URL입니다.</block>
-  <block id="9e2b8018039d7d99b04df272bce4aba9" category="list-text">랜섬웨어 시뮬레이션 스크립트는 Linux에서만 작동합니다. 시뮬레이션 스크립트는 사용자가 ONTAP ARP를 Workload Security와 통합한 경우에도 높은 신뢰도의 경고를 생성해야 합니다.</block>
   <block id="61622ea1d4086909bd90c0efc1d6a2e5" category="list-text">워크로드 보안은 ONTAP 버전이 9.15 이상인 경우에만 NFS 4.1에서 생성된 이벤트와 경고를 감지합니다.</block>
   <block id="18ce72511b1d5c5efd6fbe69db6d9b27" category="list-text">사용자는 자신의 선호도와 시스템 요구 사항에 따라 Python이나 셸 스크립트를 선택할 수 있습니다.</block>
   <block id="9efded9e764f04e1a9d0996a56b10881" category="list-text">Python 스크립트에는 필수 설치가 필요합니다. Python을 사용하지 않으려면 셸 스크립트를 사용하세요.</block>
@@ -12628,4 +12626,23 @@
   <block id="9cff751c63b93d5cf30de3f9b1c5ae37" category="admonition">보고 기능은 Data Infrastructure Insights에서 사용할 수 <block ref="e53fcfe2d8e430963458770e616738bd" category="inline-link-macro-rx"></block>있습니다. 보고 기능을 사용할 수 있는지 여부는 최소 설치 공간 요구 사항에 따라 달라집니다. <block ref="1609ad57ad0e13d165eb8d59f42fcd45" category="inline-link-macro-rx"></block> 자세한 내용은.</block>
   <block id="49efdacfb2c6deb2da842846699cf1e7" category="cell">다음 중 하나의 라이선스 버전을 실행하는 컴퓨터: * AlmaLinux 9.4 및 9.5(64비트), SELinux 포함 * CentOS 9 Stream(64비트) * Debian 11(64비트) 및 12(64비트), SELinux 포함 * OpenSUSE Leap 15.3(64비트) ~ 15.6(64비트) * Oracle Linux 8.10(64비트), 9.1(64비트) ~ 9.6(64비트), SELinux 포함 * Red Hat Enterprise Linux 8.10(64비트), 9.1(64비트) ~ 9.6(64비트), SELinux 포함 * Rocky 9.4(64비트) 및 9.5(64비트), SELinux 포함 * SUSE Linux Enterprise Server 15 SP4(64비트) ~ 15 SP6 (64비트), SELinux 포함 * Ubuntu 20.04 LTS(64비트), 22.04 LTS(64비트), 24.04 LTS(64비트) 이 컴퓨터에서는 다른 애플리케이션 수준 소프트웨어를 실행해서는 안 됩니다. 전용 서버가 권장됩니다.</block>
   <block id="edf63ae7e3cf0cd744884c156cab7abb" category="section-title">Linux에서 CIFS를 마운트하려면:</block>
+  <block id="ee817f2b2a73b759041de15700c640ab" category="list-text">랜섬웨어 시뮬레이션 스크립트는 Linux에서만 작동합니다. 시뮬레이션 스크립트는 사용자가 ONTAP ARP를 Workload Security와 통합한 경우에도 높은 신뢰도의 경고를 생성해야 합니다.</block>
+  <block id="aeb28c68bc1dab765c30f59d6d996ff2" category="section-title">실제로 확인해 보세요</block>
+  <block id="c8d448b9409555cf2e8422b8c3317946" category="inline-link-macro">Data Infrastructure Insights에서 쿼리를 사용하여 탐색하고 분석(비디오)</block>
+  <block id="e0d2c40c23e890868e573da2463ab970" category="paragraph"><block ref="e0d2c40c23e890868e573da2463ab970" category="inline-link-macro-rx"></block></block>
+  <block id="dc144dad3008fbf761d88b6231252fe9" category="summary">VM Analyzer는 테넌트의 가상 자산에 대한 토폴로지를 제공합니다.</block>
+  <block id="12a96e4209d40670da1501e5ae32f7c1" category="doc">VM 분석기 개요</block>
+  <block id="90184485963d030ad4dd7567d71584f9" category="paragraph">DII의 *VM 분석기*를 사용하면 가상 자산 관리가 더욱 간편하고 효율적입니다. 이 강력한 도구는 VMDK/VM에서 호스트, 데이터 저장소, 내부 볼륨/볼륨, 스토리지에 이르기까지 종속성을 매핑하여 엔드 투 엔드 가시성을 제공합니다.</block>
+  <block id="28966c9414b6884efd36e8984f749976" category="paragraph">대화형 토폴로지 맵을 제공함으로써 VM Analyzer를 사용하면 문제를 정확히 파악하고 변경 사항을 이해하며 데이터 흐름에 대한 이해도를 높일 수 있습니다. VM 관리를 간소화하고 가상 워크로드에 대한 가시성을 높이세요.</block>
+  <block id="38bb6439d9226f9f886c24401bfc4271" category="paragraph"><block ref="38bb6439d9226f9f886c24401bfc4271" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f9b7a93ca7c70a47d59513eb8fc49881" category="paragraph">VM Analyzer를 보려면 * 관측성 &gt; 분석 &gt; VM Analyzer * 를 선택합니다. 애플리케이션, 가상 머신, 볼륨, 내부 볼륨에 대한 필터를 설정하거나, 직접 필터를 추가하세요. 연결된 오브젝트를 보여 주는 오브젝트의 지도가 표시됩니다. 해당 연결에 대한 트래픽 메트릭을 보려면 개체 위에 마우스를 올려 놓으십시오.</block>
+  <block id="7485c59fee0f1341e68427d50b2c0b5f" category="inline-image-macro">VM 분석기 성능 측정 항목 예</block>
+  <block id="09562317f0e4300c8d530df45c626200" category="paragraph"><block ref="09562317f0e4300c8d530df45c626200" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="fdbcd622aeb7794a55d5a3c57f4ed433" category="admonition">사용자가 추가할 수 있는 필터를 포함하여 대부분의 VM Analyzer 필터는 상황에 맞는 필터입니다. 이러한 필터 중 하나에서 개체를 선택하면 다른 필터 드롭다운에 표시되는 선택 항목이 선택한 객체와 함께 컨텍스트에서 새로 고쳐집니다.</block>
+  <block id="86975522d809db49e0c205d536440123" category="paragraph">개체 또는 그룹을 클릭하면 개체 및 해당 연결에 대한 추가 세부 정보를 제공하는 슬라이드 아웃 패널이 열립니다. 슬라이드아웃 패널에는 선택한 객체에 대한 세부 정보(예: 객체 유형에 따라 처리량 또는 사용률)를 제공하는 요약과 지연 시간 또는 IOPS와 같은 객체의 메트릭을 보여주는 차트가 표시됩니다. 추가 탭을 통해 관련 추가 리소스, 변경 사항 및 알림을 살펴볼 수 있습니다. 원하는 경우 차트에 상위 상관관계가 있거나 경합 중인 객체의 메트릭도 표시하도록 선택할 수 있습니다.</block>
+  <block id="d2471c4bc746eeea68ab17452321a403" category="inline-link-macro">VM Analyzer를 사용한 간소화된 문제 해결(비디오)</block>
+  <block id="6e27a8c95ed5ddbd5bf8c70b3cdcde35" category="paragraph"><block ref="6e27a8c95ed5ddbd5bf8c70b3cdcde35" category="inline-link-macro-rx"></block></block>
+  <block id="f463cb1a5df7d729d273f46c1e5cb861" category="sidebar">데이터 분석</block>
+  <block id="c917a46858bc7b65af2e1c90ee0a1453" category="sidebar">SAN 분석기</block>
+  <block id="2e2565dd8910383ad2b3626e2b5d37b2" category="sidebar">VM 분석기</block>
 </blocks>
