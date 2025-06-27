@@ -12,8 +12,8 @@ keywords: subscribe, trial, subscription, contract, raw capacity, region, data r
 [role="lead"]
 Data Infrastructure Insights를 시작하는 것은 다음 3단계만 거치면 됩니다.
 
-* NetApp의 모든 클라우드 서비스에 액세스하려면 에서 계정을 link:https://bluexp.netapp.com//["* NetApp BlueXP *"]등록하십시오.
-* Data Infrastructure Insights 무료 평가판을 신청하여 사용 가능한 기능을 살펴보십시오. 무료 평가판을 등록하려면:
+. NetApp의 모든 클라우드 서비스에 액세스하려면 에서 계정을 link:https://bluexp.netapp.com//["* NetApp BlueXP *"]등록하십시오.
+. Data Infrastructure Insights 무료 평가판을 신청하여 사용 가능한 기능을 살펴보십시오. 무료 평가판을 등록하려면:
 +
 ** 로 이동합니다 https://netapp.com[]
 ** 페이지 상단에서 * 구매 방법 * 을 선택합니다.
@@ -21,7 +21,19 @@ Data Infrastructure Insights를 시작하는 것은 다음 3단계만 거치면 
 ** 미팅을 예약하거나 평가판에 대해 담당자가 연락을 드릴 때까지 기다립니다.
 
 
-* * Data Infrastructure Insights에 가입 * 하여 link:https://bluexp.netapp.com/contact-cds["NetApp 영업"]직접 또는 을 통해 지속적으로 데이터에 액세스할 수 link:https://aws.amazon.com/marketplace/pp/prodview-pbc3h2mkgaqxe["AWS 마켓플레이스"]있습니다.
+. 다양한 유연한 구독 옵션을 통해 데이터에 지속적으로 중단 없이 액세스할 수 있도록 Data Infrastructure Insights를 *구독*하세요.
++
+** link:https://bluexp.netapp.com/contact-cds["NetApp 영업 직접"]
+** AWS 마켓플레이스:
++
+*** link:https://aws.amazon.com/marketplace/pp/prodview-axhuy7muvzfx2["정기 구독"]
+*** link:https://aws.amazon.com/marketplace/pp/prodview-rn4qwencpjpge["용량제 구독"]
+*** link:https://aws.amazon.com/marketplace/pp/prodview-nku57vjsqdwzu["고정 기반 + 선불 초과 요금 구독"]
+
+
+** link:https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.dii_premium["Azure 마켓플레이스 를 참조하십시오"] (모든 구독 옵션)
+
+
 
 
 등록 프로세스 중에 Data Infrastructure Insights 환경을 호스팅할 글로벌 지역을 선택할 수 있습니다. 자세한 내용은 데이터 인프라 인사이트 를 참조하십시오link:security_information_and_region.html["정보 및 지역"].
@@ -50,7 +62,7 @@ NOTE: Data Infrastructure Insights를 평가하는 데 추가 시간이 필요�
 
 === AWS 마켓플레이스를 통해 평가하십시오
 
-AWS Marketplace를 통해 무료 평가판을 등록할 수도 있습니다. AWS Marketplace 무료 평가판에서는 33일의 평가판 기간 동안 Data Infrastructure Insights에 액세스할 수 있으며 최대 499개의 <<observability-metering,관리 단위>>MU(Multi-up)까지 사용할 수 있습니다.
+AWS Marketplace를 통해 무료 평가판을 등록할 수도 있습니다. AWS Marketplace 무료 체험판을 이용하면 33일 동안 Data Infrastructure Insights를 사용할 수 있습니다.
 
 AWS Marketplace 무료 평가판을 연장할 수 없습니다. 평가 중에 언제든지 * Admin -> Subscription * 페이지를 방문하여 Data Infrastructure Insights Basic Edition으로 다운그레이드하거나 유료 Data Infrastructure Insights 구독으로 변경할 수 있습니다.
 

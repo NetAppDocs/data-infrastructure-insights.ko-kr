@@ -3946,10 +3946,8 @@
   <block id="f887dd4c6ffb2d6fd67813bccd44e611" category="paragraph">Data Infrastructure Insights를 시작하는 것은 다음 3단계만 거치면 됩니다.</block>
   <block id="21a763771df4e64b083a2b050ce81f09" category="inline-link-macro">* NetApp BlueXP *</block>
   <block id="6341e61d6dc641d29b3f2e7300137ea9" category="list-text">NetApp의 모든 클라우드 서비스에 액세스하려면 에서 계정을 <block ref="e0b3e45a049f223d3b91d005d1e31db5" category="inline-link-macro-rx"></block>등록하십시오.</block>
-  <block id="2ef085adce795622c057ad2ea6c13059" category="inline-link-macro">NetApp 영업</block>
   <block id="cab27dc53edb571cac663ce2e16450dc" category="inline-link-macro">AWS 마켓플레이스</block>
   <block id="7bc1d8b07dfc0e98950abc0c7f3979a5" category="inline-link-macro">정보 및 지역</block>
-  <block id="6c36c3c54c4f691f7ed13a16d49bbde7" category="paragraph">등록 프로세스 중에 Data Infrastructure Insights 환경을 호스팅할 글로벌 지역을 선택할 수 있습니다. 자세한 내용은 데이터 인프라 인사이트 를 참조하십시오<block ref="286a302a1ee50fd59eb368d3d9779037" category="inline-link-macro-rx"></block>.</block>
   <block id="ef66b5abbe1e0b79e23deb05dd2d11a9" category="admonition">비활성 Data Infrastructure Insights Basic Edition 환경이 삭제되고 해당 리소스가 회수됩니다. 연속 7일 동안 수집된 데이터가 없는 경우, 연속으로 30일 동안 사용자 활동이 없는 경우 환경은 비활성 상태로 간주됩니다. Data Infrastructure Insights는 알림을 전송하고 환경이 삭제되기 4일의 유예 기간을 제공합니다.</block>
   <block id="d618d9be50e37adf260935938e49af96" category="inline-image-macro">자물쇠</block>
   <block id="12ddfc86083937d7a126f2fd8615aa6b" category="inline-xref">모듈 평가</block>
@@ -3961,8 +3959,6 @@
   <block id="dcfc2d1a305cec73fa5f84fa3a0ed89c" category="paragraph">무료 평가판이 거의 끝나가면 Data Infrastructure Insights에 배너가 표시됩니다 배너 내에는 _View Subscription_link가 있으며, 이 링크를 클릭하면 * Admin -&gt; Subscription * 페이지가 열립니다. 관리자가 아닌 사용자는 배너를 볼 수 있지만 구독 페이지로 이동할 수 없습니다.</block>
   <block id="14e0941a34fd8121073e220481ffa66f" category="admonition">Data Infrastructure Insights를 평가하는 데 추가 시간이 필요하고 평가판이 4일 이내에 만료되도록 설정된 경우 30일 동안 평가판을 추가로 연장할 수 있습니다. 평가판을 한 번만 연장할 수 있습니다. 평가판이 만료된 경우 연장할 수 없습니다.</block>
   <block id="de41af8028b5287cc6d65bb0e73cae11" category="section-title">AWS 마켓플레이스를 통해 평가하십시오</block>
-  <block id="bc8745f374e91204332a0cd070e3c20c" category="inline-xref">관리 단위</block>
-  <block id="a1aea5576cb96c98e98a9642fc30f4b0" category="paragraph">AWS Marketplace를 통해 무료 평가판을 등록할 수도 있습니다. AWS Marketplace 무료 평가판에서는 33일의 평가판 기간 동안 Data Infrastructure Insights에 액세스할 수 있으며 최대 499개의 <block ref="74100db5c6c154a5b13e17b29feeccc3" category="inline-xref-macro-rx"></block>MU(Multi-up)까지 사용할 수 있습니다.</block>
   <block id="c66bd552dea63071ad19e124c869ab2e" category="paragraph">AWS Marketplace 무료 평가판을 연장할 수 없습니다. 평가 중에 언제든지 * Admin -&gt; Subscription * 페이지를 방문하여 Data Infrastructure Insights Basic Edition으로 다운그레이드하거나 유료 Data Infrastructure Insights 구독으로 변경할 수 있습니다.</block>
   <block id="03742c91392961db83c5540550a3500a" category="section-title">평가판이 만료된 경우 어떻게 합니까?</block>
   <block id="55b44e6cb866667b35e33325e5f2b246" category="paragraph">무료 평가판이 만료되었고 Data Infrastructure Insights를 아직 구독하지 않은 경우 구독할 때까지 기능이 제한됩니다. 데이터 수집이 중지될 수 있으며 몇 주 후에는 데이터 보존 정책에 따라 데이터가 삭제됩니다.</block>
@@ -11475,7 +11471,6 @@
   <block id="a25c3f0a67375ee45e02e2a95818cfb5" category="cell">구독을 구입하려면 NetApp 영업부에 문의하십시오</block>
   <block id="670521a1846ad94b7cc140e2678df21c" category="paragraph">이러한 기능 중 하나 이상을 미리 보려면 에 자세한 내용을 문의하십시오<block ref="02af545fedbe237243dabe2f44648f4d" category="inline-link-macro-rx"></block>.</block>
   <block id="16630d72023cbbf23b8ab69cac2b3ff7" category="paragraph">링크를 클릭하여 영업 지원을 요청할 수도 <block ref="6193a07b36740b6aedc4527702e204e2" category="inline-link-macro-rx"></block>있습니다.</block>
-  <block id="3fcd9845b26dde701c891681edc7b769" category="list-text">* Data Infrastructure Insights에 가입 * 하여 <block ref="326364f658f4dbd53be7e9aa308d8ef9" category="inline-link-macro-rx"></block>직접 또는 을 통해 지속적으로 데이터에 액세스할 수 <block ref="e91d3f98f4b43abdea3c839a7777954c" category="inline-link-macro-rx"></block>있습니다.</block>
   <block id="a42decca1d15ec644d4c66c06689344e" category="paragraph"><block ref="a4e343c69e2eae514016d98dfce8b36b" category="inline-link-macro-rx"></block>데이터 수집기를 사용하면 VMware에 구성된 동일한 이름의 태그로 Cloud Insights 텍스트 주석을 채울 수 있습니다.</block>
   <block id="0d0549b05d1645d38baa1a6cedaa7190" category="paragraph">Cloud Insights는 다양하고 흥미로운 새로운 미리 보기 기능을 정기적으로 강조하고 있습니다. 이러한 기능 중 하나 이상을 미리 보려면 에 자세한 내용을 문의하십시오<block ref="02af545fedbe237243dabe2f44648f4d" category="inline-link-macro-rx"></block>.</block>
   <block id="6230fc6d3836bf964eb587a1b21b5c48" category="admonition">현재 Premium Edition 고객이며 보고서를 보존하려면 이 내용을 읽어 <block ref="85f8206314043d7dd91d050def6a5cd1" category="inline-link-macro-rx"></block>보십시오.</block>
@@ -12645,4 +12640,18 @@
   <block id="f463cb1a5df7d729d273f46c1e5cb861" category="sidebar">데이터 분석</block>
   <block id="c917a46858bc7b65af2e1c90ee0a1453" category="sidebar">SAN 분석기</block>
   <block id="2e2565dd8910383ad2b3626e2b5d37b2" category="sidebar">VM 분석기</block>
+  <block id="35c091b25f788bb392ac1dd40614c3e3" category="list-text">다양한 유연한 구독 옵션을 통해 데이터에 지속적으로 중단 없이 액세스할 수 있도록 Data Infrastructure Insights를 *구독*하세요.</block>
+  <block id="a2282c5ca88a344b1bf947a11cb57bc8" category="inline-link-macro">NetApp 영업 직접</block>
+  <block id="dbed590bd111eb57145cd0aa78c71ccb" category="list-text"><block ref="dbed590bd111eb57145cd0aa78c71ccb" category="inline-link-macro-rx"></block></block>
+  <block id="fbb9a72326df00d6f836e5eea8110335" category="list-text">AWS 마켓플레이스:</block>
+  <block id="ec298b41c1e3f240e9fc796c682f69de" category="inline-link-macro">정기 구독</block>
+  <block id="f56e44396701dcd46539ca0e7b1b3320" category="list-text"><block ref="f56e44396701dcd46539ca0e7b1b3320" category="inline-link-macro-rx"></block></block>
+  <block id="d1517db071086971f3453ded8278c7a1" category="inline-link-macro">용량제 구독</block>
+  <block id="beb65c517e5736532dac13881b116755" category="list-text"><block ref="beb65c517e5736532dac13881b116755" category="inline-link-macro-rx"></block></block>
+  <block id="746580535bc19093643356f95bde7a34" category="inline-link-macro">고정 기반 + 선불 초과 요금 구독</block>
+  <block id="1c1852e9d80a834e93713a1f977f8284" category="list-text"><block ref="1c1852e9d80a834e93713a1f977f8284" category="inline-link-macro-rx"></block></block>
+  <block id="21e74b3c28d006317f38a2bc8eb1da3b" category="inline-link-macro">Azure 마켓플레이스 를 참조하십시오</block>
+  <block id="eaf0150fe02dfa14aeba907403d82430" category="list-text"><block ref="fbbacee6d384df67d0c4b258087bb5d8" category="inline-link-macro-rx"></block> (모든 구독 옵션)</block>
+  <block id="fbcb8e05bba1155469592f550e005cf6" category="paragraph">등록 프로세스 중에 Data Infrastructure Insights 환경을 호스팅할 글로벌 지역을 선택할 수 있습니다. 자세한 내용은 데이터 인프라 인사이트 를 참조하십시오<block ref="286a302a1ee50fd59eb368d3d9779037" category="inline-link-macro-rx"></block>.</block>
+  <block id="48a6157894b0b86c589decc577da9409" category="paragraph">AWS Marketplace를 통해 무료 평가판을 등록할 수도 있습니다. AWS Marketplace 무료 체험판을 이용하면 33일 동안 Data Infrastructure Insights를 사용할 수 있습니다.</block>
 </blocks>
