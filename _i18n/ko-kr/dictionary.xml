@@ -12654,5 +12654,5 @@
   <block id="eaf0150fe02dfa14aeba907403d82430" category="list-text"><block ref="fbbacee6d384df67d0c4b258087bb5d8" category="inline-link-macro-rx"></block> (모든 구독 옵션)</block>
   <block id="fbcb8e05bba1155469592f550e005cf6" category="paragraph">등록 프로세스 중에 Data Infrastructure Insights 환경을 호스팅할 글로벌 지역을 선택할 수 있습니다. 자세한 내용은 데이터 인프라 인사이트 를 참조하십시오<block ref="286a302a1ee50fd59eb368d3d9779037" category="inline-link-macro-rx"></block>.</block>
   <block id="48a6157894b0b86c589decc577da9409" category="paragraph">AWS Marketplace를 통해 무료 평가판을 등록할 수도 있습니다. AWS Marketplace 무료 체험판을 이용하면 33일 동안 Data Infrastructure Insights를 사용할 수 있습니다.</block>
-  <block id="1f06ee3cbbfb94c83d737186b4f510ac" category="admonition">모니터가 생성되면 DII는 이전 주의 기존 데이터를 검토하여 상당한 데이터 급증 또는 감소가 발생하는지 확인합니다. 이러한 데이터는 이상 징후로 간주됩니다. 모니터 생성 후 첫 주("학습" 단계)에는 경보의 "노이즈"가 증가할 가능성이 있습니다. 이러한 노이즈를 줄이기 위해 30분 이상 지속되는 급증 또는 감소만 이상 징후로 간주하여 경보를 생성합니다. 이후 주에는 더 많은 데이터를 분석함에 따라 노이즈가 일반적으로 감소하고, 그 이후에 발생하는 상당한 급증 또는 감소만 이상 징후로 간주됩니다.</block>
+  <block id="0fb60d67e2b52b6e6bca8533e617e698" category="admonition">모니터가 생성되면 DII는 이전 주의 기존 데이터를 검토하여 상당한 데이터 급증 또는 감소가 발생하는지 확인합니다. 이러한 데이터는 이상 징후로 간주됩니다. 모니터 생성 후 첫 주("학습" 단계)에는 경보의 "노이즈"가 증가할 가능성이 있습니다. 이러한 노이즈를 줄이기 위해 30분 이상 지속되는 급증 또는 감소만 이상 징후로 간주하여 경보를 생성합니다. 이후 주에 더 많은 데이터가 분석됨에 따라 노이즈는 일반적으로 줄어들고, 일정 기간 동안 지속되는 상당한 급증이나 감소는 이상 현상으로 간주됩니다.</block>
 </blocks>
