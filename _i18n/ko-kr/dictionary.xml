@@ -1651,9 +1651,7 @@
   <block id="c6e2ba85460afb33b2bbe0fcfd9a3568" category="paragraph"><block ref="c6e2ba85460afb33b2bbe0fcfd9a3568" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0adbbc22841794e4fddaba88c2c92a43" category="list-text">원하는 이벤트(위험, 경고, 해결됨)에 대해 "팀" 웹 후크를 선택합니다.</block>
   <block id="3cc4e4e22440eccabf6117795fc161eb" category="paragraph"><block ref="3cc4e4e22440eccabf6117795fc161eb" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="1d292eb6751a0db171502dec84f9f7c0" category="summary">NetApp Kubernetes Monitoring Operator는 다양한 구성 옵션을 제공합니다.</block>
   <block id="9c64a0e0a0e22cc18b7137e967889926" category="doc">Kubernetes 모니터링 운영자 구성 옵션</block>
-  <block id="f32519ffeecd98f4c4f06a7bf1c7a34c" category="paragraph">이 <block ref="025a80672f7feae526479c9984c435c7" category="inline-link-macro-rx"></block> 구성은 사용자 정의할 수 있습니다.</block>
   <block id="2d18be6c8402f4ca0cb26ce68adc0564" category="paragraph">아래 표에는 _AgentConfiguration_파일에 사용할 수 있는 옵션이 나와 있습니다.</block>
   <block id="b33aed8f3134996703dc39f9a7c95783" category="cell">에이전트</block>
   <block id="4e49d105e5ecfd95da78eb980f698488" category="cell">운용자가 설치할 수 있는 모든 구성품에 공통으로 적용되는 구성 옵션. 이러한 옵션은 "글로벌" 옵션으로 간주할 수 있습니다.</block>
@@ -1718,7 +1716,6 @@
   <block id="3b720d9649ae501d73e8f8c4a7a15348" category="cell">캡처할 리소스의 쉼표로 구분된 목록입니다. 예: cronjobs, demonsets, 배포, Ingresses, 작업, 네임스페이스, 노드, 영구 볼륨, 영구 볼륨, pods, replicasets, resourcecequotas, 서비스, statefulsets</block>
   <block id="d6c26478ca41a23cc9741a4e92576269" category="cell">공차</block>
   <block id="c511c601aee805f46f3767063104cdd8" category="cell">Kudbe-state-metrics 추가 공약입니다.</block>
-  <block id="cea61529c4fbcfd86c0a3459bc229a87" category="cell">kube-state-metrics가 캡처해야 하는 쉼표로 구분된 리소스 목록 +++ 예: crontobs=[*], demonsets=[*], 배포=[*], ingports=[*], 작업=[*], 네임스페이스=[*], 노드=[*], persistentvolumeclaims=[*], persistentvolumes=*], statestatestatestatesteasets=*], stequets=*] *], statestequets=</block>
   <block id="d795ec2d0a164433572a8d5d91b8fae0" category="cell">운용자의 로그 수집 및 설치를 사용자 정의할 수 있는 구성 옵션입니다</block>
   <block id="031104420a282e1bdb63e280c40a4938" category="cell">readFromHead(readFromHead</block>
   <block id="d7ff51440723c6bba696ef19f757a8af" category="cell">참/거짓, 유창한 비트가 로그에서 로그를 읽어야 합니다</block>
@@ -1753,8 +1750,6 @@
   <block id="6e753299d008aca89690ad5b5c6b784f" category="cell">change-observer-watch-RS에 대한 MEM 한계</block>
   <block id="582e83d73d36aa6674624867468704da" category="cell">change-observer-watch-RS에 대한 CPU 요청입니다</block>
   <block id="d73c96f8e69fcf08ffd440cc16f573af" category="cell">change-observer-watch-RS에 대한 MEM 요청</block>
-  <block id="5190879b0edfb4a53603a0ab23ab40e8" category="cell">FailureDeclarationIntervalMins 를 참조하십시오</block>
-  <block id="6e18e5efc4d170de4ac66b784ca443b6" category="cell">실패한 워크로드 배포가 실패로 표시되는 간격(분)입니다</block>
   <block id="c055d40d7bbe856522ad8c59006f6754" category="cell">deployAggrIntervalSeconds입니다</block>
   <block id="e06e4cc3c2b6796e0850387e7147734e" category="cell">작업 부하 배포 진행 중 이벤트가 전송되는 빈도입니다</block>
   <block id="43aa9b44901fa9982cd6c7faf3f97402" category="cell">비작업 로드 AggrIntervalSeconds입니다</block>
@@ -12473,15 +12468,10 @@
   <block id="eb693e07b3c7e38a77aa691eee254db7" category="cell">이 문제는 kubelet이 자체 서명된 인증서를 사용하고 있거나 지정된 인증서에 certificates_subject alternative Name_list에 &lt;kubelet_IP&gt;가 포함되어 있지 않은 경우에 발생합니다. 이 문제를 해결하기 위해 사용자는<block ref="1ff2a3d734af6ebdb77c417baa3479b1" category="inline-link-macro-rx"></block>, 및 set_Telegraf:insecureK8sSkipVerify_to_true_를 수정할 수 있습니다. 이렇게 하면 확인을 건너뛰도록 Telegraf 입력 플러그인이 구성됩니다. 또는 <block ref="9ed8afe3c99331fa3d23c13414b98aba" category="inline-link-macro-rx"></block>'certificates.k8s.io' API에서 인증서 요청을 트리거하는 kubelet을 구성할 수도 있습니다.</block>
   <block id="9c9d5560c9fe980c9cfc837919c7ecfa" category="paragraph">모든 개체 특성(예: 스토리지 이름)을 경고 설명에 매개 변수로 추가할 수 있습니다. 예를 들어, "High Latency for Volume:_%%relatedObject.volume.name%%_, Storage:_%%relatedObject.storage.name%%_" 등과 같이 볼륨 이름 및 스토리지 이름에 대한 매개 변수를 설정할 수 있습니다.</block>
   <block id="782368f0cf779dae181ca1a15b5e1609" category="paragraph">객체 특성(예: 스토리지 이름)을 Webhook에 매개 변수로 추가할 수 있습니다. 예를 들어, "High Latency for Volume:_%%relatedObject.volume.name%%_, Storage:_%%relatedObject.storage.name%%_" 같은 웹 후크 설명에서 볼륨 이름 및 스토리지 이름에 대한 매개 변수를 설정할 수 있습니다.</block>
-  <block id="f9bf728d80a2e93034e1980e4b769331" category="summary">Google Cloud NetApp 볼륨 데이터 수집기를 구성합니다</block>
-  <block id="61f5a9d6ac308733fa136e57d4b5632d" category="doc">NetApp Google Cloud NetApp 볼륨 데이터 수집기</block>
-  <block id="31a01859ca4a7c16eaa2d78f965019b1" category="paragraph">이 데이터 수집기는 Google NetApp Cloud Volumes 클라우드 플랫폼 구성의 인벤토리 및 성능 수집을 지원합니다. 이 수집기는 하나의 Google 조직 내의 모든 프로젝트 내의 모든 컴퓨팅 리소스를 검색하려고 합니다. Data Infrastructure Insights로 검색할 Google 조직이 여러 개 있는 경우 조직당 하나의 Data Infrastructure Insights 수집기를 배포해야 합니다.</block>
   <block id="d0e30a72147518a811af49d61e436b72" category="cell">위치별로 GCNV 자산을 필터링하려면 '제외' 또는 '포함'을 선택하십시오</block>
   <block id="4ffa818c022d19570d8e17b29333c422" category="cell">이 컬렉터는 기본적으로 조직 내의 모든 GCNV 볼륨을 검색하려고 하므로 기본적으로 Exclude(제외)로 설정됩니다.</block>
   <block id="df737fe9add18ce2518a85be515b48fb" category="cell">GCNV 제외/포함 위치</block>
-  <block id="aeb2c618381901b42bfc96e1eaba0439" category="cell">이 옵션은 기본적으로 비어 있으며 "제외" 또는 "포함" 옵션과 함께 사용됩니다. 세계의 특정 지역 내의 자산만을 발견하려는 경우, 이 두 가지 옵션은 수집기의 범위를 제한하기 위해 조작될 수 있습니다</block>
   <block id="cfb59ac35dea35081dc8e9a9e178e6fa" category="cell">REST API 호출에 AU Proxy를 사용합니다</block>
-  <block id="c31db4d5c88645987121fa14f303decf" category="cell">이 확인란을 선택하면 컬렉터가 컬렉터가 상주하는 AU와 동일한 프록시를 사용하게 됩니다. 기본적으로 활성화되어 있지 않습니다. 즉, 수집기가 HTTPS API 호출을 Google에 직접 전송하려고 합니다.</block>
   <block id="86cdc2548407309cf22885284404c866" category="paragraph">Webhook을 사용하면 사용자가 사용자 지정된 Webhook 채널을 사용하여 다양한 응용 프로그램에 중요 또는 경고 알림을 보낼 수 있습니다.</block>
   <block id="fc2d88a1f6b61e7bd83c4e85a527c903" category="paragraph">용 Webhook <block ref="2990f1f56161b3387a3b4aed372cd205" category="inline-link-macro-rx"></block></block>
   <block id="a2a31fbada6144e8ed1aea34738b3286" category="paragraph">Webhook용 <block ref="fd47f99f71f4060a45930a1b7d2d1fd6" category="inline-link-macro-rx"></block>Webhook용 Webhook용 Webhook용 Webhook <block ref="119cd804e167819a5b1cbe06f835cd07" category="inline-link-macro-rx"></block><block ref="9ec366bafa5f53c82668f1616a12e6a8" category="inline-link-macro-rx"></block></block>
@@ -12666,4 +12656,15 @@
   <block id="5fc13cc8fea1e8f6d7dfd8f19d75023f" category="cell">성능 수집이 실패합니다.....VF:nn, 오류: 액세스할 수 없습니다...</block>
   <block id="cda70acc46e3d1a4dc1d0f11bb28b33f" category="cell">여러 가상 패브릭이 활성화된 장치에서 SNMPv3를 사용하도록 DII 수집기를 구성했지만, SNMPv3 사용자에게 VF NN에 대한 권한이 없습니다. DII는 물리적 자산의 부분 검색을 지원하지 않습니다. DII는 항상 지정된 물리적 장치에 있는 모든 VF에 대한 성능 데이터를 검색하려고 시도하므로, DII가 가능한 128개의 모든 VF에 대한 액세스 권한을 사전에 부여해야 합니다.</block>
   <block id="8ff9d3e7325b20dc214cb38b6233f6c6" category="cell">SELinux가 설정되어 있고 강제 적용되는 경우 Telegraf 포드가 Kubernetes 노드의 /proc/1/mountstats 파일에 액세스하지 못할 수 있습니다. 이 제한을 해결하려면 agentconfiguration을 편집하고 runPrivileged 설정을 활성화하십시오. 자세한 내용은 OpenShift 지침을 참조하세요.</block>
+  <block id="a51d5815fff9d493e0bde769c3ac52cd" category="summary">Google Cloud NetApp Volumes 데이터 수집기를 구성합니다.</block>
+  <block id="a003df7b52c5682e8dd7ee12e523a2c8" category="doc">Google Cloud NetApp Volumes 데이터 수집기</block>
+  <block id="17dbbe1b03933e008635798c32e51898" category="paragraph">이 데이터 수집기는 Google Cloud NetApp Volumes 구성에서 인벤토리 및 성능 수집을 지원합니다. 이 수집기는 Google 조직 내 모든 프로젝트의 NetApp 볼륨과 스토리지 리소스를 검색합니다. Data Infrastructure Insights 로 모니터링하려는 Google 조직이 여러 개인 경우 조직당 하나의 수집기를 배포하세요.</block>
+  <block id="492f865b5fade01a28fef8824749466a" category="list-text">의 지침에 따라 서비스 계정을 만들어야 <block ref="c28b074b5309c5497b50c55bf7b3a88a" category="inline-link-macro-rx"></block>합니다. 이 서비스 계정은 _clientId_라는 고유 ID로 식별되며, 이는 사용자 이름으로 사용됩니다.</block>
+  <block id="44690d418c76e0ca92d23ed5623ea33b" category="cell">이 옵션은 기본적으로 비어 있으며, "제외" 또는 "포함" 옵션과 함께 사용됩니다. 특정 지역 내의 자산만 검색하려면 이 두 옵션을 사용하여 이 수집기의 범위를 제한하세요.</block>
+  <block id="c3fd7f4eb7ebff0a7ad57fe275b56834" category="cell">수집기가 해당 수집기가 있는 수집 단위와 동일한 프록시를 사용하도록 하려면 이 옵션을 선택하세요. 기본적으로 이 옵션은 비활성화되어 있으며, 이 경우 수집기는 HTTPS API 호출을 Google로 직접 전송하려고 시도합니다.</block>
+  <block id="ae4768c261eca8a6c88e3f5101e586e5" category="summary">AgentConfiguration 옵션을 사용하여 NetApp Kubernetes Monitoring Operator를 구성합니다.</block>
+  <block id="4b6ede77804c1986eba28cc32fdecda4" category="paragraph">그만큼 <block ref="025a80672f7feae526479c9984c435c7" category="inline-link-macro-rx"></block> AgentConfiguration 파일을 통해 광범위한 사용자 지정 옵션을 제공합니다. Telegraf, kube-state-metrics, 로그 수집, 워크로드 매핑, 변경 관리 등에 대한 리소스 제한, 수집 간격, 프록시 설정, 허용 오차 및 구성 요소별 설정을 구성하여 Kubernetes 환경의 모니터링을 최적화하세요.</block>
+  <block id="c84711fe6ad5fa23070462b2086412e2" category="cell">kube-state-metrics가 레이블을 캡처해야 하는 리소스의 쉼표로 구분된 목록 +++ 예: cronjobs=[*],daemonsets=[*],deployments=[*],ingresses=[*],jobs=[*],namespaces=[*],nodes=[*], persistentvolumeclaims=[*],persistentvolumes=[*],pods=[*],replicasets=[*],resourcequotas=[*],services=[*],statefulsets=[*] +++</block>
+  <block id="f7b8b6cbce2f95ef7109d41adce08b69" category="cell">workloadFailureDeclarationIntervalSeconds</block>
+  <block id="02c3ccd1d51babc54da2759d79e61c5c" category="cell">작업 부하의 배포가 성공하지 못할 경우 실패로 표시되는 간격(초)</block>
 </blocks>

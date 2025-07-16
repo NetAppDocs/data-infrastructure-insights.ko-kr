@@ -2,16 +2,19 @@
 sidebar: sidebar 
 permalink: telegraf_agent_k8s_config_options.html 
 keywords: telegraf, installation, install, agent, telegraf agent, kubernetes, eks, operator, k8s, options, configuration 
-summary: NetApp Kubernetes Monitoring Operator는 다양한 구성 옵션을 제공합니다. 
+summary: AgentConfiguration 옵션을 사용하여 NetApp Kubernetes Monitoring Operator를 구성합니다. 
 ---
 = Kubernetes 모니터링 운영자 구성 옵션
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-이 link:task_config_telegraf_agent_k8s.html#configuringcustomizing-the-operator["Kubernetes 모니터링 운영자"] 구성은 사용자 정의할 수 있습니다.
+그만큼 link:task_config_telegraf_agent_k8s.html#configuringcustomizing-the-operator["Kubernetes 모니터링 운영자"] AgentConfiguration 파일을 통해 광범위한 사용자 지정 옵션을 제공합니다. Telegraf, kube-state-metrics, 로그 수집, 워크로드 매핑, 변경 관리 등에 대한 리소스 제한, 수집 간격, 프록시 설정, 허용 오차 및 구성 요소별 설정을 구성하여 Kubernetes 환경의 모니터링을 최적화하세요.
 
 아래 표에는 _AgentConfiguration_파일에 사용할 수 있는 옵션이 나와 있습니다.
 
@@ -131,7 +134,7 @@ summary: NetApp Kubernetes Monitoring Operator는 다양한 구성 옵션을 제
 |  | 공차 | Kudbe-state-metrics 추가 공약입니다. 
 
 
-|  | 라벨 | kube-state-metrics가 캡처해야 하는 쉼표로 구분된 리소스 목록 +++ 예: crontobs=[*], demonsets=[*], 배포=[*], ingports=[*], 작업=[*], 네임스페이스=[*], 노드=[*], persistentvolumeclaims=[*], persistentvolumes=*], statestatestatestatesteasets=*], stequets=*] *], statestequets= 
+|  | 라벨 | kube-state-metrics가 레이블을 캡처해야 하는 리소스의 쉼표로 구분된 목록 +++ 예: cronjobs=[*],daemonsets=[*],deployments=[*],ingresses=[*],jobs=[*],namespaces=[*],nodes=[*], persistentvolumeclaims=[*],persistentvolumes=[*],pods=[*],replicasets=[*],resourcequotas=[*],services=[*],statefulsets=[*] +++ 
 
 
 | 로그 |  | 운용자의 로그 수집 및 설치를 사용자 정의할 수 있는 구성 옵션입니다 
@@ -200,7 +203,7 @@ summary: NetApp Kubernetes Monitoring Operator는 다양한 구성 옵션을 제
 |  | MemRequest입니다 | change-observer-watch-RS에 대한 MEM 요청 
 
 
-|  | FailureDeclarationIntervalMins 를 참조하십시오 | 실패한 워크로드 배포가 실패로 표시되는 간격(분)입니다 
+|  | workloadFailureDeclarationIntervalSeconds | 작업 부하의 배포가 성공하지 못할 경우 실패로 표시되는 간격(초) 
 
 
 |  | deployAggrIntervalSeconds입니다 | 작업 부하 배포 진행 중 이벤트가 전송되는 빈도입니다 
@@ -454,8 +457,8 @@ spec:
     # cpuRequest: '500m'
     # memRequest: '500Mi'
 
-    # # Interval in minutes after which a non-successful deployment of a workload will be marked as failed
-    # failureDeclarationIntervalMins: '30'
+    # # Interval after which a non-successful deployment of a workload will be marked as failed, in seconds
+    # workloadFailureDeclarationIntervalSeconds: '30'
 
     # # Frequency at which workload deployment in-progress events are sent
     # deployAggrIntervalSeconds: '300'
