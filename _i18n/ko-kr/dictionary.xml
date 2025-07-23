@@ -1656,11 +1656,8 @@
   <block id="b33aed8f3134996703dc39f9a7c95783" category="cell">에이전트</block>
   <block id="4e49d105e5ecfd95da78eb980f698488" category="cell">운용자가 설치할 수 있는 모든 구성품에 공통으로 적용되는 구성 옵션. 이러한 옵션은 "글로벌" 옵션으로 간주할 수 있습니다.</block>
   <block id="286bec770910c4da609323e21222e283" category="cell">dockerRepo</block>
-  <block id="55f37f5127b4085cc0881e89df336196" category="cell">DockerRepo는 Data Infrastructure Insights Docker 저장소와 비교하여 고객의 전용 Docker Repos에서 이미지를 가져오도록 재정의합니다. 기본값은 Data Infrastructure Insights Docker 저장소입니다</block>
   <block id="994be3a18bf7e0a16ab2be2d5c1643ae" category="cell">dockerImagePullSecret</block>
-  <block id="9f033a5b208feb9ef67ab1def3051525" category="cell">선택 사항: 고객의 비공개 리포의 비밀</block>
   <block id="343d28c140c3f5ce20a1ac3f8f7dae2c" category="cell">클러스터 이름</block>
-  <block id="5a550f6f445193e3c7e81200a2c9d8de" category="cell">모든 고객 클러스터에서 클러스터를 고유하게 식별하는 자유 텍스트 필드입니다. Data Infrastructure Insights 테넌트 전체에서 고유해야 합니다. 기본값은 고객이 "클러스터 이름" 필드의 UI에 입력하는 것입니다</block>
   <block id="5c7af4a6b686285084e62f255503c141" category="cell">프록시 형식: proxy:server:port:username:password:nProxy:isTelegyxyEnabled:isAuProxyEnabled:isFluentbitProxyEnabled:isCollectionorProxyEnabled:isCollectorProxyEnabled:</block>
   <block id="f8ac74d8a3668ddf89efeb8e806ca908" category="cell">프록시를 설정하는 선택 사항입니다. 일반적으로 고객의 기업 대리인입니다.</block>
   <block id="0c8011c6947aae43789eb8972c306e85" category="cell">작업자의 Telegraf 설치를 사용자 정의할 수 있는 구성 옵션</block>
@@ -1750,10 +1747,6 @@
   <block id="6e753299d008aca89690ad5b5c6b784f" category="cell">change-observer-watch-RS에 대한 MEM 한계</block>
   <block id="582e83d73d36aa6674624867468704da" category="cell">change-observer-watch-RS에 대한 CPU 요청입니다</block>
   <block id="d73c96f8e69fcf08ffd440cc16f573af" category="cell">change-observer-watch-RS에 대한 MEM 요청</block>
-  <block id="c055d40d7bbe856522ad8c59006f6754" category="cell">deployAggrIntervalSeconds입니다</block>
-  <block id="e06e4cc3c2b6796e0850387e7147734e" category="cell">작업 부하 배포 진행 중 이벤트가 전송되는 빈도입니다</block>
-  <block id="43aa9b44901fa9982cd6c7faf3f97402" category="cell">비작업 로드 AggrIntervalSeconds입니다</block>
-  <block id="cff422cbad1df823699a6830f754d451" category="cell">비워크로드 구축이 결합되고 전송되는 빈도입니다</block>
   <block id="6d53bc2f7711e2d9a24631defb23b18f" category="cell">TERmsToRedact 를 참조하십시오</block>
   <block id="532aa006f97c495d1734618405645779" category="cell">env 이름 및 데이터 맵에 사용되는 정규식 집합이며, 값이 "pwd", "password", "token", "apikey", "api-key", "jwt" 등의 용어가 교정됩니다.</block>
   <block id="44011a6b8af68cc46d2d0dfb669fd887" category="cell">AditionalKindsToWatch 를 참조하십시오</block>
@@ -11290,7 +11283,6 @@
   <block id="ca351e1a429ee72dbdb2061c22743ef6" category="list-text">관측성 &gt; 탐색 -&gt;+새 메트릭 쿼리 * 로 이동합니다.</block>
   <block id="5e7f24385025eba3461014d3d964455b" category="paragraph">비활성 장치를 제거하려면 제거할 장치를 선택하고 * Bulk Actions * 드롭다운에서 _Delete Inactive Devices_를 선택합니다.</block>
   <block id="72a442c57900f55848aa4acb856a507d" category="sidebar">비활성 장치 식별</block>
-  <block id="2f461803a8b3a27284482a32459a1078" category="cell">이거 <block ref="0dcd3ea27696029fecb8ccd7e247f633" category="inline-link-macro-rx"></block>봐요. setting_unprotected_는 Kubernetes 모니터링 운영자에게 플래그와 함께 Telegraf를 실행하도록 지시합니다.<block ref="3a41393afb053a415e6dc30cf704d899" prefix=" " category="inline-code"></block></block>
   <block id="0860569a69c3584507ee09f4be585418" category="cell">insecureK8sSkipVerify를 참조하십시오</block>
   <block id="3008cd3125cccc003fa13335717e556e" category="cell">Telegraf가 IP SAN 부족으로 인증서를 확인할 수 없는 경우 검증 건너뛰기를 활성화하십시오</block>
   <block id="9e43104f0687bd3a308759c5411641d7" category="paragraph"><block ref="9e43104f0687bd3a308759c5411641d7" category="inline-link-macro-rx"></block></block>
@@ -12663,10 +12655,20 @@
   <block id="44690d418c76e0ca92d23ed5623ea33b" category="cell">이 옵션은 기본적으로 비어 있으며, "제외" 또는 "포함" 옵션과 함께 사용됩니다. 특정 지역 내의 자산만 검색하려면 이 두 옵션을 사용하여 이 수집기의 범위를 제한하세요.</block>
   <block id="c3fd7f4eb7ebff0a7ad57fe275b56834" category="cell">수집기가 해당 수집기가 있는 수집 단위와 동일한 프록시를 사용하도록 하려면 이 옵션을 선택하세요. 기본적으로 이 옵션은 비활성화되어 있으며, 이 경우 수집기는 HTTPS API 호출을 Google로 직접 전송하려고 시도합니다.</block>
   <block id="ae4768c261eca8a6c88e3f5101e586e5" category="summary">AgentConfiguration 옵션을 사용하여 NetApp Kubernetes Monitoring Operator를 구성합니다.</block>
-  <block id="4b6ede77804c1986eba28cc32fdecda4" category="paragraph">그만큼 <block ref="025a80672f7feae526479c9984c435c7" category="inline-link-macro-rx"></block> AgentConfiguration 파일을 통해 광범위한 사용자 지정 옵션을 제공합니다. Telegraf, kube-state-metrics, 로그 수집, 워크로드 매핑, 변경 관리 등에 대한 리소스 제한, 수집 간격, 프록시 설정, 허용 오차 및 구성 요소별 설정을 구성하여 Kubernetes 환경의 모니터링을 최적화하세요.</block>
   <block id="c84711fe6ad5fa23070462b2086412e2" category="cell">kube-state-metrics가 레이블을 캡처해야 하는 리소스의 쉼표로 구분된 목록 +++ 예: cronjobs=[*],daemonsets=[*],deployments=[*],ingresses=[*],jobs=[*],namespaces=[*],nodes=[*], persistentvolumeclaims=[*],persistentvolumes=[*],pods=[*],replicasets=[*],resourcequotas=[*],services=[*],statefulsets=[*] +++</block>
   <block id="f7b8b6cbce2f95ef7109d41adce08b69" category="cell">workloadFailureDeclarationIntervalSeconds</block>
   <block id="02c3ccd1d51babc54da2759d79e61c5c" category="cell">작업 부하의 배포가 성공하지 못할 경우 실패로 표시되는 간격(초)</block>
   <block id="8edfed76354af11279c58c2d91948eda" category="cell">유창한 비트 컨테이너 로그 경로</block>
   <block id="3150c73f1d1522f3b831f0d591077194" category="cell">기본적으로 Fluentbit DaemonSet은 Kubernetes 컨테이너 로그에 액세스하고 읽기 위해 /var/log 및 /var/lib/docker/containers 호스트 경로를 마운트합니다. Kubernetes가 컨테이너 로그를 기본 위치가 아닌 다른 위치에 저장하도록 구성된 경우, 이 옵션을 사용하여 Fluentbit DaemonSet을 수정하여 기본 경로가 아닌 다른 경로를 마운트할 수 있습니다.</block>
+  <block id="7e5bd63d855501c5e08449ea5b593ee7" category="summary">인프라 상태 모니터링</block>
+  <block id="48f51aa9a5737857bbd298bfb874281e" category="doc">인프라 상태 모니터링</block>
+  <block id="a2c6fd0b23854404c386430346919db8" category="paragraph">그만큼 <block ref="025a80672f7feae526479c9984c435c7" category="inline-link-macro-rx"></block> AgentConfiguration 파일을 통해 광범위한 사용자 지정 옵션을 제공합니다. 리소스 제한, 수집 간격, 프록시 설정, 허용 오차 및 구성 요소별 설정을 구성하여 Kubernetes 환경의 모니터링을 최적화할 수 있습니다. 이러한 옵션을 사용하여 telegraf, kube-state-metrics, 로그 수집, 워크로드 매핑, 변경 관리 및 기타 모니터링 구성 요소를 사용자 지정할 수 있습니다.</block>
+  <block id="ea55ba51f0b69383ec5bb89cabada638" category="cell">Data Infrastructure Insights Docker 저장소 대신 고객의 개인 Docker 저장소에서 이미지를 가져오도록 dockerRepo를 재정의합니다. 기본값은 Data Infrastructure Insights Docker 저장소입니다.</block>
+  <block id="8e8bb119221ff93e3f93bea9ae89444f" category="cell">선택 사항: 고객의 개인 저장소에 대한 비밀입니다.</block>
+  <block id="82b5c50bc4616a08a16b907f9dd29573" category="cell">모든 고객 클러스터에서 클러스터를 고유하게 식별하는 자유 텍스트 필드입니다. 이 필드는 Data Infrastructure Insights 테넌트 전체에서 고유해야 합니다. 기본값은 고객이 UI에서 "클러스터 이름" 필드에 입력하는 내용입니다.</block>
+  <block id="d466d69e5a5f62e5d6773f7d399fe086" category="cell">이것을 보세요 <block ref="0dcd3ea27696029fecb8ccd7e247f633" category="inline-link-macro-rx"></block> . _unprotected_를 설정하면 Kubernetes Monitoring Operator가 Telegraf를 다음과 같이 실행하도록 지시합니다. <block ref="3a41393afb053a415e6dc30cf704d899" prefix=" " category="inline-code"></block> 깃발.</block>
+  <block id="fded60399ef22b3b04bd3856d344233b" category="cell">workloadDeployAggrIntervalSeconds</block>
+  <block id="f5d43bfb3eaf806884e4936fc4453865" category="cell">워크로드 배포가 결합되어 전송되는 빈도(초)</block>
+  <block id="fb937d63289578595fb05fc626554661" category="cell">nonWorkloadDeployAggrIntervalSeconds</block>
+  <block id="e4685d20c866cca50df5bea5e4230497" category="cell">비작업 부하 배포가 결합되어 전송되는 빈도(초)</block>
 </blocks>

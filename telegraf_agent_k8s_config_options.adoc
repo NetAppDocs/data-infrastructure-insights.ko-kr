@@ -14,7 +14,7 @@ summary: AgentConfiguration 옵션을 사용하여 NetApp Kubernetes Monitoring 
 
 
 [role="lead"]
-그만큼 link:task_config_telegraf_agent_k8s.html#configuringcustomizing-the-operator["Kubernetes 모니터링 운영자"] AgentConfiguration 파일을 통해 광범위한 사용자 지정 옵션을 제공합니다. Telegraf, kube-state-metrics, 로그 수집, 워크로드 매핑, 변경 관리 등에 대한 리소스 제한, 수집 간격, 프록시 설정, 허용 오차 및 구성 요소별 설정을 구성하여 Kubernetes 환경의 모니터링을 최적화하세요.
+그만큼 link:task_config_telegraf_agent_k8s.html#configuringcustomizing-the-operator["Kubernetes 모니터링 운영자"] AgentConfiguration 파일을 통해 광범위한 사용자 지정 옵션을 제공합니다. 리소스 제한, 수집 간격, 프록시 설정, 허용 오차 및 구성 요소별 설정을 구성하여 Kubernetes 환경의 모니터링을 최적화할 수 있습니다. 이러한 옵션을 사용하여 telegraf, kube-state-metrics, 로그 수집, 워크로드 매핑, 변경 관리 및 기타 모니터링 구성 요소를 사용자 지정할 수 있습니다.
 
 아래 표에는 _AgentConfiguration_파일에 사용할 수 있는 옵션이 나와 있습니다.
 
@@ -26,13 +26,13 @@ summary: AgentConfiguration 옵션을 사용하여 NetApp Kubernetes Monitoring 
 | 에이전트 |  | 운용자가 설치할 수 있는 모든 구성품에 공통으로 적용되는 구성 옵션. 이러한 옵션은 "글로벌" 옵션으로 간주할 수 있습니다. 
 
 
-|  | dockerRepo | DockerRepo는 Data Infrastructure Insights Docker 저장소와 비교하여 고객의 전용 Docker Repos에서 이미지를 가져오도록 재정의합니다. 기본값은 Data Infrastructure Insights Docker 저장소입니다 
+|  | dockerRepo | Data Infrastructure Insights Docker 저장소 대신 고객의 개인 Docker 저장소에서 이미지를 가져오도록 dockerRepo를 재정의합니다. 기본값은 Data Infrastructure Insights Docker 저장소입니다. 
 
 
-|  | dockerImagePullSecret | 선택 사항: 고객의 비공개 리포의 비밀 
+|  | dockerImagePullSecret | 선택 사항: 고객의 개인 저장소에 대한 비밀입니다. 
 
 
-|  | 클러스터 이름 | 모든 고객 클러스터에서 클러스터를 고유하게 식별하는 자유 텍스트 필드입니다. Data Infrastructure Insights 테넌트 전체에서 고유해야 합니다. 기본값은 고객이 "클러스터 이름" 필드의 UI에 입력하는 것입니다 
+|  | 클러스터 이름 | 모든 고객 클러스터에서 클러스터를 고유하게 식별하는 자유 텍스트 필드입니다. 이 필드는 Data Infrastructure Insights 테넌트 전체에서 고유해야 합니다. 기본값은 고객이 UI에서 "클러스터 이름" 필드에 입력하는 내용입니다. 
 
 
 |  | 프록시 형식: proxy:server:port:username:password:nProxy:isTelegyxyEnabled:isAuProxyEnabled:isFluentbitProxyEnabled:isCollectionorProxyEnabled:isCollectorProxyEnabled: | 프록시를 설정하는 선택 사항입니다. 일반적으로 고객의 기업 대리인입니다. 
@@ -107,7 +107,7 @@ summary: AgentConfiguration 옵션을 사용하여 NetApp Kubernetes Monitoring 
 |  | SkipProcessorsAfterAggregators 를 참조하십시오 | 을 참조하십시오 link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Telegraf 구성 문서"] 
 
 
-|  | 보호되지 않음 | 이거 link:https://community.influxdata.com/t/updating-telegraf-to-version-1-29-5-crashes-kubernetes-pod/33376["알려진 Telegraf 문제입니다"]봐요. setting_unprotected_는 Kubernetes 모니터링 운영자에게 플래그와 함께 Telegraf를 실행하도록 지시합니다. `--unprotected` 
+|  | 보호되지 않음 | 이것을 보세요 link:https://community.influxdata.com/t/updating-telegraf-to-version-1-29-5-crashes-kubernetes-pod/33376["알려진 Telegraf 문제입니다"] . _unprotected_를 설정하면 Kubernetes Monitoring Operator가 Telegraf를 다음과 같이 실행하도록 지시합니다.  `--unprotected` 깃발. 
 
 
 |  | insecureK8sSkipVerify를 참조하십시오 | Telegraf가 IP SAN 부족으로 인증서를 확인할 수 없는 경우 검증 건너뛰기를 활성화하십시오 
@@ -209,10 +209,10 @@ summary: AgentConfiguration 옵션을 사용하여 NetApp Kubernetes Monitoring 
 |  | workloadFailureDeclarationIntervalSeconds | 작업 부하의 배포가 성공하지 못할 경우 실패로 표시되는 간격(초) 
 
 
-|  | deployAggrIntervalSeconds입니다 | 작업 부하 배포 진행 중 이벤트가 전송되는 빈도입니다 
+|  | workloadDeployAggrIntervalSeconds | 워크로드 배포가 결합되어 전송되는 빈도(초) 
 
 
-|  | 비작업 로드 AggrIntervalSeconds입니다 | 비워크로드 구축이 결합되고 전송되는 빈도입니다 
+|  | nonWorkloadDeployAggrIntervalSeconds | 비작업 부하 배포가 결합되어 전송되는 빈도(초) 
 
 
 |  | TERmsToRedact 를 참조하십시오 | env 이름 및 데이터 맵에 사용되는 정규식 집합이며, 값이 "pwd", "password", "token", "apikey", "api-key", "jwt" 등의 용어가 교정됩니다. 
@@ -468,11 +468,11 @@ spec:
     # # Interval after which a non-successful deployment of a workload will be marked as failed, in seconds
     # workloadFailureDeclarationIntervalSeconds: '30'
 
-    # # Frequency at which workload deployment in-progress events are sent
-    # deployAggrIntervalSeconds: '300'
+    # # Frequency at which workload deployments are combined and sent, in seconds
+    # workloadDeployAggrIntervalSeconds: '300'
 
-    # # Frequency at which non-workload deployments are combined and sent
-    # nonWorkloadAggrIntervalSeconds: '15'
+    # # Frequency at which non-workload deployments are combined and sent, in seconds
+    # nonWorkloadDeployAggrIntervalSeconds: '15'
 
     # # A set of regular expressions used in env names and data maps whose value will be redacted
     # termsToRedact: '"pwd", "password", "token", "apikey", "api-key", "api_key", "jwt", "accesskey", "access_key", "access-key", "ca-file", "key-file", "cert", "cafile", "keyfile", "tls", "crt", "salt", ".dockerconfigjson", "auth", "secret"'
