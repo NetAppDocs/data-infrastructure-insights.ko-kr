@@ -3947,7 +3947,6 @@
   <block id="dcfc2d1a305cec73fa5f84fa3a0ed89c" category="paragraph">무료 평가판이 거의 끝나가면 Data Infrastructure Insights에 배너가 표시됩니다 배너 내에는 _View Subscription_link가 있으며, 이 링크를 클릭하면 * Admin -&gt; Subscription * 페이지가 열립니다. 관리자가 아닌 사용자는 배너를 볼 수 있지만 구독 페이지로 이동할 수 없습니다.</block>
   <block id="14e0941a34fd8121073e220481ffa66f" category="admonition">Data Infrastructure Insights를 평가하는 데 추가 시간이 필요하고 평가판이 4일 이내에 만료되도록 설정된 경우 30일 동안 평가판을 추가로 연장할 수 있습니다. 평가판을 한 번만 연장할 수 있습니다. 평가판이 만료된 경우 연장할 수 없습니다.</block>
   <block id="de41af8028b5287cc6d65bb0e73cae11" category="section-title">AWS 마켓플레이스를 통해 평가하십시오</block>
-  <block id="c66bd552dea63071ad19e124c869ab2e" category="paragraph">AWS Marketplace 무료 평가판을 연장할 수 없습니다. 평가 중에 언제든지 * Admin -&gt; Subscription * 페이지를 방문하여 Data Infrastructure Insights Basic Edition으로 다운그레이드하거나 유료 Data Infrastructure Insights 구독으로 변경할 수 있습니다.</block>
   <block id="03742c91392961db83c5540550a3500a" category="section-title">평가판이 만료된 경우 어떻게 합니까?</block>
   <block id="55b44e6cb866667b35e33325e5f2b246" category="paragraph">무료 평가판이 만료되었고 Data Infrastructure Insights를 아직 구독하지 않은 경우 구독할 때까지 기능이 제한됩니다. 데이터 수집이 중지될 수 있으며 몇 주 후에는 데이터 보존 정책에 따라 데이터가 삭제됩니다.</block>
   <block id="35b65825e5ac5124cb47e8b94e7e203a" category="paragraph">Data Infrastructure Insights에 가입했지만 구독이 만료된 경우, 구독을 갱신하기 위한 5일의 유예 기간이 주어집니다. 이 유예 기간 동안에는 모든 Data Infrastructure Insights 기능이 활성 상태로 유지됩니다.</block>
@@ -12671,4 +12670,5 @@
   <block id="f5d43bfb3eaf806884e4936fc4453865" category="cell">워크로드 배포가 결합되어 전송되는 빈도(초)</block>
   <block id="fb937d63289578595fb05fc626554661" category="cell">nonWorkloadDeployAggrIntervalSeconds</block>
   <block id="e4685d20c866cca50df5bea5e4230497" category="cell">비작업 부하 배포가 결합되어 전송되는 빈도(초)</block>
+  <block id="1cd8d8ba87dcbd642231ac1e1fb52f76" category="paragraph">AWS Marketplace 무료 평가판은 연장할 수 없습니다.</block>
 </blocks>

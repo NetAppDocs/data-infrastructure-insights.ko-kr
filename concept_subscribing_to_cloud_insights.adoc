@@ -64,7 +64,7 @@ NOTE: Data Infrastructure Insights를 평가하는 데 추가 시간이 필요�
 
 AWS Marketplace를 통해 무료 평가판을 등록할 수도 있습니다. AWS Marketplace 무료 체험판을 이용하면 33일 동안 Data Infrastructure Insights를 사용할 수 있습니다.
 
-AWS Marketplace 무료 평가판을 연장할 수 없습니다. 평가 중에 언제든지 * Admin -> Subscription * 페이지를 방문하여 Data Infrastructure Insights Basic Edition으로 다운그레이드하거나 유료 Data Infrastructure Insights 구독으로 변경할 수 있습니다.
+AWS Marketplace 무료 평가판은 연장할 수 없습니다.
 
 
 
