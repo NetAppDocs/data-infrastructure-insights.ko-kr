@@ -8020,8 +8020,6 @@
   <block id="eff16f7e2ed55dec2fc30b6481ebf593" category="paragraph">다음은 MetroCluster에 권장됩니다.</block>
   <block id="65b46bd8eed280f6feefa47f4a74d302" category="list-text">데이터 수집기 2개를 소스 SVM에 연결하고 다른 데이터 수집기를 타겟 SVM에 연결합니다.</block>
   <block id="d5d55b52a220ca4d14feac2aa8b83d23" category="list-text">데이터 수집기는 _Cluster IP_로 연결해야 합니다.</block>
-  <block id="c2e2e688fedcc6b98883e05a15afc9b8" category="list-text">언제든지 한 데이터 수집기가 실행 중이어야 하며, 다른 데이터 수집기는 오류가 발생합니다.</block>
-  <block id="34d88af94446d0d86575e402898fc1b0" category="list-text">데이터 수집기가 오류 상태에서 실행 상태로 이동하는 데 최대 2분이 걸립니다.</block>
   <block id="f0240b95ecfe16d637a84130b5ed57d9" category="section-title">서비스 정책</block>
   <block id="4cb8e0d8b1d299b402fd5ddce7d39cd5" category="paragraph">ONTAP* 버전 9.9.1 이상 * 과 함께 서비스 정책을 사용하는 경우 데이터 소스 수집기에 연결하려면 _data-FPolicy-client_service가 data service_data-nfs_ 및 /or_data-cifs_와 함께 필요합니다.</block>
   <block id="ee22588534e4e3b699a85e968f56f4a7" category="paragraph">9.9.1 이전의 ONTAP 버전에서는 _data-FPolicy-client_를 설정할 필요가 없습니다.</block>
@@ -12344,8 +12342,6 @@
   <block id="1b0825e538a70e8323fac1cbfe230ee5" category="paragraph">참고: 사용자 정의 사용자에 대한 모든 기능 권한에 사용할 단일 역할을 만들 수 있습니다. 기존 사용자가 있는 경우 먼저 다음 명령을 사용하여 기존 사용자 및 역할을 삭제합니다.</block>
   <block id="91f83541442d1c49aaf40212bccffad1" category="paragraph">참고: 사용자 정의 사용자에 대한 모든 기능 권한에 사용할 단일 역할을 만들 수 있습니다. 기존 사용자가 있는 경우 먼저 다음 명령을 사용하여 기존 사용자 및 역할을 삭제합니다.</block>
   <block id="858faeb682f19ff16f83d24c86cb97f7" category="cell">클러스터 IP를 통해 추가할 때 SVM/클러스터에 액세스하는 사용자 이름 옵션은 1입니다. 클러스터 관리 2. 'CSUser' 3. CsUser와 유사한 역할을 가진 AD 사용자. SVM IP를 통해 추가할 때 옵션은 4.vsadmin 5입니다. 'CSUser'6. CsUser와 유사한 역할을 하는 AD-사용자 이름입니다.</block>
-  <block id="0851edbfbb1a0406acbc79df15296b3f" category="paragraph">현재 '실행 중인' SVM의 데이터 수집기가 _running_으로 표시됩니다. 현재 '최상위' SVM의 데이터 수집기가 _Error_로 표시됩니다.</block>
-  <block id="046c8e391630ab49d75409e270a4f4b6" category="list-text">전환이 있을 때마다 데이터 수집기의 상태가 '실행 중'에서 '오류'로 변경되고 그 반대의 경우도 마찬가지입니다.</block>
   <block id="7a69a2fce9a9acb9c8a84936863c1330" category="paragraph">Collector가 일시 중지된 동안 ONTAP에 새 볼륨 등이 생성되면 워크로드 보안이 데이터를 수집하지 않고 해당 볼륨 등이 대시보드나 테이블에 반영되지 않습니다.</block>
   <block id="0d55775dbf06cf5596fe0f5c3363f19a" category="list-text">일시 중지된 수집기에 구성된 설정에 따라 스냅샷 삭제가 수행되지 않습니다.</block>
   <block id="f8b4c5607366d38cf806b0860c9cc5e4" category="list-text">ONTAP ARP와 같은 EMS 이벤트는 일시 중지된 Collector에서 처리되지 않습니다. 즉, ONTAP에서 랜섬웨어 공격을 식별하면 Data Infrastructure Insights 워크로드 보안이 해당 이벤트를 파악할 수 없습니다.</block>
@@ -12671,4 +12667,8 @@
   <block id="fb937d63289578595fb05fc626554661" category="cell">nonWorkloadDeployAggrIntervalSeconds</block>
   <block id="e4685d20c866cca50df5bea5e4230497" category="cell">비작업 부하 배포가 결합되어 전송되는 빈도(초)</block>
   <block id="1cd8d8ba87dcbd642231ac1e1fb52f76" category="paragraph">AWS Marketplace 무료 평가판은 연장할 수 없습니다.</block>
+  <block id="f9140e559462604832a886e4eb558360" category="list-text">언제든지 한 데이터 수집기는 실행 중이어야 하고, 다른 데이터 수집기는 _중지됨_으로 표시되어야 합니다.</block>
+  <block id="a2c39bece4ce05e23c13d7dc078d390f" category="paragraph">현재 '실행 중인' SVM의 데이터 수집기는 _실행 중_으로 표시됩니다.  현재 '중지된' SVM의 데이터 수집기는 _중지됨_으로 표시됩니다.</block>
+  <block id="e02fc5a08fc17a2cc71f90cc044645af" category="list-text">전환이 있을 때마다 데이터 수집기의 상태가 '실행 중'에서 '중지됨'으로 변경되고 그 반대의 경우도 마찬가지입니다.</block>
+  <block id="f2d8284860e834b1803b72a789ffeb84" category="list-text">데이터 수집기가 _중지_ 상태에서 _실행_ 상태로 전환하는 데 최대 2분이 걸립니다.</block>
 </blocks>
