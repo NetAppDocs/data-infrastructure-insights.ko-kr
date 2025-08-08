@@ -7,6 +7,10 @@ summary: Kubernetes용 데이터 수집기
 = 데이터 수집기: Kubernetes
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]

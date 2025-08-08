@@ -12655,8 +12655,6 @@
   <block id="02c3ccd1d51babc54da2759d79e61c5c" category="cell">작업 부하의 배포가 성공하지 못할 경우 실패로 표시되는 간격(초)</block>
   <block id="8edfed76354af11279c58c2d91948eda" category="cell">유창한 비트 컨테이너 로그 경로</block>
   <block id="3150c73f1d1522f3b831f0d591077194" category="cell">기본적으로 Fluentbit DaemonSet은 Kubernetes 컨테이너 로그에 액세스하고 읽기 위해 /var/log 및 /var/lib/docker/containers 호스트 경로를 마운트합니다. Kubernetes가 컨테이너 로그를 기본 위치가 아닌 다른 위치에 저장하도록 구성된 경우, 이 옵션을 사용하여 Fluentbit DaemonSet을 수정하여 기본 경로가 아닌 다른 경로를 마운트할 수 있습니다.</block>
-  <block id="7e5bd63d855501c5e08449ea5b593ee7" category="summary">인프라 상태 모니터링</block>
-  <block id="48f51aa9a5737857bbd298bfb874281e" category="doc">인프라 상태 모니터링</block>
   <block id="a2c6fd0b23854404c386430346919db8" category="paragraph">그만큼 <block ref="025a80672f7feae526479c9984c435c7" category="inline-link-macro-rx"></block> AgentConfiguration 파일을 통해 광범위한 사용자 지정 옵션을 제공합니다. 리소스 제한, 수집 간격, 프록시 설정, 허용 오차 및 구성 요소별 설정을 구성하여 Kubernetes 환경의 모니터링을 최적화할 수 있습니다. 이러한 옵션을 사용하여 telegraf, kube-state-metrics, 로그 수집, 워크로드 매핑, 변경 관리 및 기타 모니터링 구성 요소를 사용자 지정할 수 있습니다.</block>
   <block id="ea55ba51f0b69383ec5bb89cabada638" category="cell">Data Infrastructure Insights Docker 저장소 대신 고객의 개인 Docker 저장소에서 이미지를 가져오도록 dockerRepo를 재정의합니다. 기본값은 Data Infrastructure Insights Docker 저장소입니다.</block>
   <block id="8e8bb119221ff93e3f93bea9ae89444f" category="cell">선택 사항: 고객의 개인 저장소에 대한 비밀입니다.</block>
@@ -12667,8 +12665,9 @@
   <block id="fb937d63289578595fb05fc626554661" category="cell">nonWorkloadDeployAggrIntervalSeconds</block>
   <block id="e4685d20c866cca50df5bea5e4230497" category="cell">비작업 부하 배포가 결합되어 전송되는 빈도(초)</block>
   <block id="1cd8d8ba87dcbd642231ac1e1fb52f76" category="paragraph">AWS Marketplace 무료 평가판은 연장할 수 없습니다.</block>
-  <block id="f9140e559462604832a886e4eb558360" category="list-text">언제든지 한 데이터 수집기는 실행 중이어야 하고, 다른 데이터 수집기는 _중지됨_으로 표시되어야 합니다.</block>
-  <block id="a2c39bece4ce05e23c13d7dc078d390f" category="paragraph">현재 '실행 중인' SVM의 데이터 수집기는 _실행 중_으로 표시됩니다.  현재 '중지된' SVM의 데이터 수집기는 _중지됨_으로 표시됩니다.</block>
-  <block id="e02fc5a08fc17a2cc71f90cc044645af" category="list-text">전환이 있을 때마다 데이터 수집기의 상태가 '실행 중'에서 '중지됨'으로 변경되고 그 반대의 경우도 마찬가지입니다.</block>
   <block id="f2d8284860e834b1803b72a789ffeb84" category="list-text">데이터 수집기가 _중지_ 상태에서 _실행_ 상태로 전환하는 데 최대 2분이 걸립니다.</block>
+  <block id="da3fe25b9ad7a2bbb8f75a52d2d39828" category="summary">인프라 상태 모니터링</block>
+  <block id="0513a990ff8b7eb9d4d9e530e812b450" category="paragraph">ONTAP SVM 데이터 수집기를 사용하면 Workload Security에서 NetApp ONTAP 스토리지 가상 머신(SVM)의 파일 및 사용자 액세스 활동을 모니터링할 수 있습니다.  이 가이드에서는 ONTAP 환경에 대한 포괄적인 보안 모니터링을 제공하기 위해 SVM 데이터 수집기의 필수 구성 요소, 구성 및 관리 방법을 안내합니다.</block>
+  <block id="57da797adb74a055edb3de9c7e734b65" category="list-text">언제든지 현재 '실행 중인' SVM의 데이터 수집기는 _실행 중_으로 표시됩니다. 현재 '중지된' SVM의 데이터 수집기는 _중지됨_으로 표시됩니다.</block>
+  <block id="61dcd000a72340c1c72d4c7a96c2ec90" category="list-text">전환이 있을 때마다 데이터 수집기의 상태는 _실행 중_에서 _중지됨_으로 변경되고 그 반대의 경우도 마찬가지입니다.</block>
 </blocks>
