@@ -120,7 +120,6 @@
   <block id="5c60750a2abc4b9d7aa61cc76e102a94" category="cell">가능한 해결책: * 권장: 더 강력한(예 1024비트) RSA 키. * 권장하지 않음: JDK.certpath 제약 조건을 활용하도록 JVM java.security 구성을 수정하십시오. disabledAlgorithms 512비트 RSA 키를 허용합니다. 에서 JDK 7 업데이트 40 릴리스 노트를 참조하십시오 <block ref="ac06061ee1016775797c99e274153a15" category="inline-link-rx"></block></block>
   <block id="2b9be21f00b184f2a6ee90f1574df505" category="summary">ONTAP REST 데이터 수집기</block>
   <block id="e61b2d254813ba4e2bc2a8a223f0e0eb" category="doc">NetApp ONTAP REST 데이터 수집기</block>
-  <block id="550bad6f96e635103df31a148cb33c00" category="paragraph">이 데이터 수집기는 REST API 호출을 사용하여 ONTAP 9.14.1 이상을 실행하는 스토리지 시스템에서 인벤토리, EMS 로그 및 성능 데이터를 수집합니다. 이전 릴리스의 ONTAP 시스템의 경우 ZAPI 기반 "NetApp ONTAP 데이터 관리 소프트웨어" 수집기 유형을 사용하십시오.</block>
   <block id="a5bc5e25da90f0de3436e66f223df7bc" category="inline-link-macro">ONTAP 9.14.1 ONTAPI-REST 매핑</block>
   <block id="6e2fe63a1853939e7fbcdfb785f57e86" category="admonition">ONTAP REST Collector는 이전 ONTAPI 기반 Collector를 대체하는 용도로 사용할 수 있습니다. 따라서 수집되거나 보고되는 메트릭에는 차이가 있을 수 있습니다. ONTAPI와 REST의 차이점에 대한 자세한 내용은 설명서를 참조하십시오<block ref="239e0ab1e46437458ce3ffae42b58457" category="inline-link-macro-rx"></block>.</block>
   <block id="992ec6f152c405f64da205561d5810c3" category="list-text">필요한 액세스 권한이 있는 사용자 계정에 대한 액세스 권한이 있어야 합니다. 새 REST 사용자/역할을 생성하는 경우 관리자 권한이 필요합니다.</block>
@@ -3782,7 +3781,6 @@
   <block id="2240ee7d4e56b8ba7ac49b14311cdeed" category="inline-link-macro">NetApp 세일즈 팀</block>
   <block id="5fa0ef8fc40e60003288942e2da3e300" category="cell">* 피처 *</block>
   <block id="d972e288b86634fdb9a758828b4d511a" category="cell">ONTAP 콜드 스토리지 재확보</block>
-  <block id="e1f1a8af4cedab3466112b828b25b73f" category="cell">콜드 용량 및 기타 관련 메트릭이 있는 ONTAP 볼륨 워크로드의 시각화를 제공합니다.</block>
   <block id="5f06573aae905166447bf8d646c6bf89" category="summary">쿼리 개요</block>
   <block id="fadb076bccad39c075c50bfa7f81bc31" category="doc">쿼리에 사용된 자산</block>
   <block id="01baf5f78b2649e6a38c88d12944a3d9" category="paragraph">자산에 주석을 자동으로 할당하는 주석 규칙은 _ Require_a 쿼리입니다.</block>
@@ -6148,7 +6146,6 @@
   <block id="44b44ec49661da05e81e9deacf4859c9" category="list-text">멋집니다! 다음 단계 <block ref="30a61035c14bad051f5a421dfd3d3693" category="inline-link-macro-rx"></block> <block ref="e6669e87e16244b0fccfa5ac76c749db" category="inline-link-macro-rx"></block> <block ref="e09dedd8fbac179aa2311a644e5eafb9" category="inline-link-macro-rx"></block> <block ref="4a83477a1c1cd11a9cc88c7f83441cbd" category="inline-link-macro-rx"></block> <block ref="0a7046f023aad7ac467f1bc6bd4c7520" category="inline-link-macro-rx"></block></block>
   <block id="d17aef0dcce543eeda80f0586306b127" category="inline-link-macro">* 가입 *</block>
   <block id="f22fe88435293fe687ec1e801a002593" category="list-text">정말 멋진 곳이에요! 준비가 <block ref="ba6df6766cca6593f2f22c86bc0c10f1" category="inline-link-macro-rx"></block>됐어.</block>
-  <block id="a6a9e422cc6712614bdeb1c7c082055f" category="summary">Cloud Insights는 인프라 변경 사항을 추적하여 분석과 문제 해결이 용이합니다.</block>
   <block id="48ad331c1d02b88cdeaea9528083c718" category="doc">인프라 변경 분석</block>
   <block id="2309f522d85e82b60b3b59f8e753778b" category="section-title">인프라 변경 분석은 어떻게 도움이 됩니까?</block>
   <block id="9aad3ab86193ce06a9d17691b4d44ab4" category="paragraph">어떤 환경에서든 잘못 구성된 변경, 전원 손실 등으로 인해 리소스가 변경될 수 있습니다. 변경 분석은 단일 창을 통해 리소스 상태를 보고 가동 중단이나 계획된 변경과 상호 연관시킬 수 있습니다. 변경 사항은 각 재고 폴링(새 수집기의 첫 번째 폴링 이후)에서 계산됩니다.</block>
@@ -12666,8 +12663,38 @@
   <block id="e4685d20c866cca50df5bea5e4230497" category="cell">비작업 부하 배포가 결합되어 전송되는 빈도(초)</block>
   <block id="1cd8d8ba87dcbd642231ac1e1fb52f76" category="paragraph">AWS Marketplace 무료 평가판은 연장할 수 없습니다.</block>
   <block id="f2d8284860e834b1803b72a789ffeb84" category="list-text">데이터 수집기가 _중지_ 상태에서 _실행_ 상태로 전환하는 데 최대 2분이 걸립니다.</block>
-  <block id="da3fe25b9ad7a2bbb8f75a52d2d39828" category="summary">인프라 상태 모니터링</block>
   <block id="0513a990ff8b7eb9d4d9e530e812b450" category="paragraph">ONTAP SVM 데이터 수집기를 사용하면 Workload Security에서 NetApp ONTAP 스토리지 가상 머신(SVM)의 파일 및 사용자 액세스 활동을 모니터링할 수 있습니다.  이 가이드에서는 ONTAP 환경에 대한 포괄적인 보안 모니터링을 제공하기 위해 SVM 데이터 수집기의 필수 구성 요소, 구성 및 관리 방법을 안내합니다.</block>
   <block id="57da797adb74a055edb3de9c7e734b65" category="list-text">언제든지 현재 '실행 중인' SVM의 데이터 수집기는 _실행 중_으로 표시됩니다. 현재 '중지된' SVM의 데이터 수집기는 _중지됨_으로 표시됩니다.</block>
   <block id="61dcd000a72340c1c72d4c7a96c2ec90" category="list-text">전환이 있을 때마다 데이터 수집기의 상태는 _실행 중_에서 _중지됨_으로 변경되고 그 반대의 경우도 마찬가지입니다.</block>
+  <block id="342c42c2979927d6b0d68318cd6111a6" category="summary">Data Infrastructure Insights 인프라의 변경 사항을 추적하여 분석과 문제 해결을 용이하게 해줍니다.</block>
+  <block id="65be717dc296d58230cdf6471cf551c6" category="summary">성능, 용량, 구성 및 구성 요소 알림을 기반으로 한 통합 점수 매기기로 인프라 상태를 모니터링하여 사전에 문제를 해결하세요.</block>
+  <block id="48f51aa9a5737857bbd298bfb874281e" category="doc">인프라 상태 모니터링</block>
+  <block id="9af3e29dc9d4dd7c03ed034e837cae19" category="paragraph">Data Infrastructure Insights 스토리지 환경의 성능, 용량, 구성 및 구성 요소 상태를 추적하는 포괄적인 인프라 상태 모니터링을 제공합니다.  상태 점수는 이러한 범주에 대한 모니터 알림을 기반으로 계산되므로 시스템 상태를 통합적으로 확인하고 사전에 문제를 해결할 수 있습니다.</block>
+  <block id="6021dbd64d31bad79679304f2df95f96" category="section-title">인프라 상태 대시보드</block>
+  <block id="90fee6011aeb14ebd1b3f6d5319de775" category="admonition">인프라 상태 모니터링은<block ref="312c0c6b46ba32b4b11ba8c9da5788ed" category="inline-link-macro-rx"></block> 특징이며 변경될 수 있습니다.</block>
+  <block id="6d6ede202b061f87d3856c3a68a32733" category="paragraph">*관찰성 &gt; 분석*으로 이동하여 *인프라 상태*를 선택합니다.  대시보드는 아래 설명된 대로 모니터 알림 범주와 점수를 기반으로 시스템 상태에 대한 개요를 제공합니다.  조사 범위를 좁히려면 상단에 필터를 설정하세요.</block>
+  <block id="2fea58dd0f63d16cb2264053904f52cb" category="inline-image-macro">인프라 상태 개요</block>
+  <block id="de0fb65c9e3436d4f762f2f75c9c80b0" category="paragraph"><block ref="de0fb65c9e3436d4f762f2f75c9c80b0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1aa157ede793f01cc555adc2a30791e8" category="paragraph">기본적으로 상태 점수는 데이터 센터별로 그룹화됩니다. 세션에 가장 적합한 그룹화를 선택할 수 있습니다.</block>
+  <block id="066389fa03fcba02204f22926e22624e" category="section-title">인프라 상태를 확인하기 위해 모니터 구성</block>
+  <block id="a60dbecbd86aeef8b8d3aa2ad769c85b" category="paragraph">상태 점수는 시스템 상태 계산에 포함되도록 구성된 알림에 따라 결정됩니다.</block>
+  <block id="ee7e09ec846abc74e8ad67f86534b722" category="paragraph">인프라 객체에 대한 모니터를 생성할 때 모니터에서 발생한 알림을 계산에 포함할지 여부를 선택할 수 있습니다.  화면 하단에서 고급 구성을 확장하고 _인프라 상태 계산에 포함_을 선택합니다.  모니터에 대한 계산을 적용할 범주를 선택하세요.</block>
+  <block id="1498d49bfadff63838ea7195f135ac9e" category="list-text">*구성 요소 상태* - 팬 고장, 서비스 프로세서 오프라인 등</block>
+  <block id="6b97abbf6ca0e03a0cd3a9533866bf5f" category="list-text">*성능 상태* - 높은 스토리지 노드 활용도, 노드 지연 시간의 비정상적인 급증 등.</block>
+  <block id="bf79b02d39df2b08288a4abe2535b26a" category="list-text">*용량 상태* - 스토리지 풀 용량이 가득 차거나 LUN 스냅샷을 위한 공간이 부족한 등.</block>
+  <block id="c843c56f83e57485f38786634addb64f" category="list-text">*구성 상태* - 클라우드 계층에 접근할 수 없음, SnapMirror 관계가 동기화되지 않음 등.</block>
+  <block id="d40858c687455dd29e9ad9471cef9f13" category="inline-image-macro">상태 계산에 추가할 고급 구성을 모니터링합니다(너비=400)</block>
+  <block id="d3b587e592f9498e43468c5ad959f251" category="paragraph"><block ref="d3b587e592f9498e43468c5ad959f251" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d3146ac696d63c6e03b116d00c510d06" category="section-title">건강 점수 설명</block>
+  <block id="a0d13ceea9d5180b46f6c11f89216bc8" category="paragraph">점수는 0~100점 척도로 표시되며, 100점은 건강이 완벽한 상태를 의미합니다.  현재 또는 최근에 문제가 발생한 모니터링 인프라 객체는 다음 가중 평균에 따라 이 점수를 낮춥니다.</block>
+  <block id="ae476e1f9649f2266c271a5cdda0e9cc" category="list-text">구성 요소, 성능 또는 용량: 각각 30%</block>
+  <block id="c99f872e67eeb86518c37462b0a7f179" category="list-text">구성: 10%</block>
+  <block id="3488867800ace6ce0bd52ef898824a3d" category="paragraph">상태 점수는 다음과 같은 방식으로 인프라 상태 계산에 포함하도록 구성한 모니터에서 생성된 알림의 영향을 받습니다.</block>
+  <block id="be8af7f981a23068d2bbb2ca5b2a82e9" category="list-text">중요 알림은 _전체_ 카테고리 가중치로 상태 점수를 낮춥니다.</block>
+  <block id="a5d26862450bfc0c6b76f92767759d6f" category="list-text">경고 알림은 카테고리 가중치를 _절반_으로 낮춥니다.</block>
+  <block id="7641f230a605045bb26fee7202d471e4" category="paragraph">보고되지 않는 범주가 있으면 가중 평균이 그에 따라 조정됩니다.</block>
+  <block id="f4cd96b732f2628b044469cd1a104e85" category="paragraph">예를 들어: 구성 요소에 대한 1개의 중요 경고(-30)와 성능에 대한 1개의 경고 경고(30의 50% = -15)는 55(100에서 45를 뺀 값)의 상태 점수를 생성합니다.</block>
+  <block id="9a1645f81973ce35a5b8a3cb57dafb2e" category="paragraph">알림이 해결되면 이러한 건강 점수 감소는 점차 사라지고, 점수는 2시간 이내에 완전히 회복됩니다.</block>
+  <block id="3ad17df8e0c21cd3fba4fa89d748a88e" category="paragraph">이 데이터 수집기는 REST API 호출을 사용하여 ONTAP 9.14.1 이상을 실행하는 스토리지 시스템에서 인벤토리, EMS 로그 및 성능 데이터를 수집합니다.  이전 릴리스의 ONTAP 시스템의 경우 ZAPI 기반 "NetApp ONTAP 데이터 관리 소프트웨어" 수집기 유형을 사용하세요.</block>
+  <block id="93c13f56f33b4026f411d3de7b0577a5" category="paragraph">필요한 경우 SPI 액세스를 확인할 수 있습니다.</block>
 </blocks>

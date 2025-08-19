@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: infrastructure_change_analytics.html 
 keywords: changes, management, analysis, infra, infrastructure 
-summary: Cloud Insights는 인프라 변경 사항을 추적하여 분석과 문제 해결이 용이합니다. 
+summary: Data Infrastructure Insights 인프라의 변경 사항을 추적하여 분석과 문제 해결을 용이하게 해줍니다. 
 ---
 = 인프라 변경 분석
 :hardbreaks:

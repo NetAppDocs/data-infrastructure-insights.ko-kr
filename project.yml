@@ -82,7 +82,7 @@ sidebar:
       - title: 쿼리 수정 또는 삭제
         url: "/task_modify_delete_query.html"
       - title: 개체에 여러 응용 프로그램/주석 할당
-        url: "/task_query_assign_multiple_applicationss.html"
+        url: "/task_query_assign_multiple_applications.html"
       - title: 클립보드로 테이블 값 복사
         url: "/task_query_copy_table_values.html"
       - title: 로그를 쿼리하는 중입니다
@@ -171,6 +171,8 @@ sidebar:
         url: "/san_analyzer_overview.html"
       - title: VM 분석기
         url: "/vm_analyzer_overview.html"
+      - title: 인프라 상태 모니터링
+        url: "/monitor_infrastructure_health.html"
     - title: 보고
       entries:
       - title: 보고 개요
