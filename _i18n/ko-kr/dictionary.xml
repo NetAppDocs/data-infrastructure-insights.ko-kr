@@ -11206,7 +11206,6 @@
   <block id="3208596ca58c1fef6b7222123babb2fc" category="paragraph"><block ref="3208596ca58c1fef6b7222123babb2fc" category="inline-image-macro-rx" type="image"></block></block>
   <block id="9c55b8bf6c1b8aab646e91366d10f4c2" category="list-text">활동 기록 _ 을(를) 보여주는 그래프(선택한 글로벌 시간 범위 기준)</block>
   <block id="977eedf5743a236d4137f46ddfcd8dea" category="list-text">모든 활동 데이터 목록</block>
-  <block id="ce0a4ef9bdcf713141ba5af92b5449a2" category="list-text">그룹별 드롭다운은 사용자, 경로, 엔티티 유형 등을 기준으로 활동을 그룹화할 수 있는 옵션을 제공합니다</block>
   <block id="2f67a7ee2834facb4c2289f3f9f8a7b0" category="list-text">테이블 위에 있는 공통 경로 버튼을 클릭하면 엔터티 경로 세부 정보가 있는 슬라이드 아웃 패널을 볼 수 있습니다.</block>
   <block id="2b9b3cac1b8e073b6533f3389ac6ad5f" category="list-text">슬라이드 아웃 패널로 에 대한 링크를 사용하여 엔티티에 액세스한 * 사용자 *<block ref="62cf04ad66abc0c5964885d5ae0624ca" category="inline-link-macro-rx"></block>.</block>
   <block id="2c20ae8e4eac25c0be12e73a9aea15f8" category="list-text">첫 번째 레벨 폴더(루트) * 는 소문자인 엔터티 경로의 루트 디렉토리입니다.</block>
@@ -12697,4 +12696,5 @@
   <block id="9a1645f81973ce35a5b8a3cb57dafb2e" category="paragraph">알림이 해결되면 이러한 건강 점수 감소는 점차 사라지고, 점수는 2시간 이내에 완전히 회복됩니다.</block>
   <block id="3ad17df8e0c21cd3fba4fa89d748a88e" category="paragraph">이 데이터 수집기는 REST API 호출을 사용하여 ONTAP 9.14.1 이상을 실행하는 스토리지 시스템에서 인벤토리, EMS 로그 및 성능 데이터를 수집합니다.  이전 릴리스의 ONTAP 시스템의 경우 ZAPI 기반 "NetApp ONTAP 데이터 관리 소프트웨어" 수집기 유형을 사용하세요.</block>
   <block id="93c13f56f33b4026f411d3de7b0577a5" category="paragraph">필요한 경우 SPI 액세스를 확인할 수 있습니다.</block>
+  <block id="1895704ffbc6e56720172ab7d145f8ae" category="list-text">드롭다운을 기준으로 그룹화하면 사용자, 엔터티 유형 등에 따라 활동을 그룹화할 수 있는 옵션이 제공됩니다.</block>
 </blocks>
