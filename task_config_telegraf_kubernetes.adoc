@@ -41,7 +41,11 @@ NetApp Kubernetes 모니터링 오퍼레이터는 아래에 나열된 kube-state
 . 영구 볼륨 메트릭
 . 영구 볼륨 클레임 메트릭
 . POD 메트릭
-. ReplicaSet 메트릭입니다
-. 서비스 메트릭
-. StatefulSet 메트릭입니다
+. ReplicaSet 메트릭
+. 서비스 지표
+. StatefulSet 메트릭
+. 수평 Pod 자동 확장기 메트릭
+. 크론잡 메트릭스
+. 작업 지표
+. 리소스 할당량 메트릭
 
