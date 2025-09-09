@@ -10,24 +10,24 @@ keywords: time-to-live, TTL, downsampling, downsample, retention
 
 
 [role="lead"]
-Data Infrastructure Insights는 설정된 기간(에디션당) 동안 데이터를 유지하므로 수천 개의 데이터 포인트를 처리할 수 있습니다. 따라서 차트 및 표에 표시되기 전에 데이터를 다운샘플링할 수 있습니다.
+Data Infrastructure Insights 귀하의 구독에 따라 7일에서 13개월까지 다양한 기간 동안 데이터를 보관합니다.  대용량 데이터 세트를 표시할 때 통계적 정확성을 유지하면서 차트와 그래프의 효율적인 로드를 보장하기 위해 데이터를 다운샘플링할 수 있습니다.
 
 
 
 == 데이터 보존
 
-Data Infrastructure Insights는 현재 구독된 에디션에 의해 결정된 시간 동안 데이터를 보존합니다.
+Data Infrastructure Insights 귀하의 구독 유형에 따라 결정된 기간 동안 데이터를 보관합니다.
 
 |===
-| 발행 | 데이터 보존 
+| 구독 유형 | 데이터 보존 
 
 
-| 기본 | 7일 
+| 재판 | 7일 
 
 
-| 프리미엄 | 13개월 
+| 구독됨 | 13개월 
 |===
-각 에디션에서 사용할 수 있는 전체 기능 목록은 Data Infrastructure Insights link:https://bluexp.netapp.com/cloud-insights-pricing["에디션 및 가격"] 페이지를 참조하십시오.
+Data Infrastructure Insights 기능 및 가격 옵션에 대한 자세한 내용은 다음을 참조하세요.link:https://bluexp.netapp.com/cloud-insights-pricing["Data Infrastructure Insights 가격"] 페이지.
 
 
 

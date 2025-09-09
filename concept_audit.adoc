@@ -7,6 +7,10 @@ summary: 감사는 Data Infrastructure Insights 시스템의 시스템 및 사�
 = 감사
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -135,11 +139,13 @@ Data Infrastructure Insights에서 감사한 이벤트와 작업은 다음과 �
 
 == 감사 데이터 보존
 
-Data Infrastructure Insights가 감사 데이터를 유지하는 시간은 다음 에디션을 기준으로 합니다.
+Data Infrastructure Insights 감사 데이터를 보관하는 기간은 귀하의 구독에 따라 달라집니다.
 
-* Basic Edition: 감사 데이터는 30일 동안 보존됩니다
-* Standard 및 Premium Edition: 감사 데이터는 1년 + 1일 동안 보존됩니다
+* 시험 환경: 감사 데이터는 30일 동안 보관됩니다.
+* 구독 환경: 감사 데이터는 1년 + 1일 동안 보관됩니다.
 
+
+보존 시간보다 오래된 감사 항목은 자동으로 제거됩니다. 사용자 조작이 필요하지 않습니다.
 
 보존 시간보다 오래된 감사 항목은 자동으로 제거됩니다. 사용자 조작이 필요하지 않습니다.
 

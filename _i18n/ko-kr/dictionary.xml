@@ -2601,9 +2601,6 @@
   <block id="81e9e10a5416438d2549dae075160792" category="list-text">테이블의 오른쪽 위에 있는 _Export_ 버튼을 <block ref="7d9204e8192ad34899f7f874d914194c" category="inline-image-macro-rx" type="image"></block>클릭합니다.</block>
   <block id="7201440e51225680b60dccf28366c73d" category="paragraph">표시된 감사 이벤트는 최대 10,000개의 행까지 .csv 파일로 내보내집니다.</block>
   <block id="e229d51ca45046e23340982a0d911a30" category="section-title">감사 데이터 보존</block>
-  <block id="f16df2bb3736cac60f6b4d0b1344f646" category="paragraph">Data Infrastructure Insights가 감사 데이터를 유지하는 시간은 다음 에디션을 기준으로 합니다.</block>
-  <block id="6140d54709a2f0707aaa20367fd479a2" category="list-text">Basic Edition: 감사 데이터는 30일 동안 보존됩니다</block>
-  <block id="ef14a516a82a51d74eaeb8e2193667cb" category="list-text">Standard 및 Premium Edition: 감사 데이터는 1년 + 1일 동안 보존됩니다</block>
   <block id="7ad87c3be379b9de0a9009199fb5401c" category="paragraph">보존 시간보다 오래된 감사 항목은 자동으로 제거됩니다. 사용자 조작이 필요하지 않습니다.</block>
   <block id="231cf4c70d866b616c21baddaeed0696" category="section-title">문제 해결</block>
   <block id="c0e7fce2cca0be472d3098957e2a4864" category="paragraph">여기에서 감사 관련 문제를 해결할 수 있는 제안 사항을 찾을 수 있습니다.</block>
@@ -3798,7 +3795,6 @@
   <block id="4e4315d948ef3fd3aad9be88a442863d" category="paragraph"><block ref="4e4315d948ef3fd3aad9be88a442863d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="79bac41a8e857539d5a75dc7e93e17d8" category="summary">기술 자료 문서를 보거나 NetApp 커뮤니티에 연결하거나, 비디오를 보거나, 지원 요청을 위한 티켓을 열 수 있습니다.</block>
   <block id="69ac5d78c7ecb4ab9a461a7400773ec3" category="doc">지원을 요청하는 중입니다</block>
-  <block id="fbecb4e743bc1aa59e79031c4717bf84" category="paragraph">Data Infrastructure Insights에서 * 도움말 &gt; 지원 * 을 클릭하여 지원 옵션에 액세스할 수 있습니다. 사용 가능한 지원 옵션은 Data Infrastructure Insights Edition에 따라 다릅니다.</block>
   <block id="b9bfbe11ded79fa1b72b327d0497f9dd" category="inline-image-macro">지원 페이지</block>
   <block id="2a0a63dd16c8b87a179a933b2e9eb92e" category="paragraph"><block ref="2a0a63dd16c8b87a179a933b2e9eb92e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e9d356ec51ae4d84881e70ea3c98b6dc" category="section-title">지원 권한 활성화 중</block>
@@ -3826,9 +3822,6 @@
   <block id="d41c7a89c53943f7c86e80fe6a27b4dc" category="list-text">또한 새로운 NetApp 고객은 NSS(NetApp Support Site) 사용자 계정을 생성하여 향후 등록을 해야 하며 기술 지원 채팅 및 웹 티켓 지원을 위한 지원 포털에 액세스해야 합니다. 이 링크는 에<block ref="4b0df7f6652ef877e322a199d6b6edce" category="inline-link-rx"></block>있습니다. 프로세스를 신속하게 처리하기 위해 새로 등록된 Data Infrastructure Insights 일련 번호를 제공할 수 있습니다.</block>
   <block id="3757ee6dbdcabe2780104f98224939d5" category="list-text">Data Infrastructure Insights NetApp 일련 번호는 1회 등록입니다.</block>
   <block id="bc4afdcc32d9a7d1bc03c2d8ad5b1828" category="section-title">지원 정보 얻기</block>
-  <block id="1f3c67de4e7c07c414ec4689b1724561" category="paragraph">NetApp는 다양한 방식으로 데이터 인프라 인사이트를 지원합니다. 기술 자료(KB) 기사 또는 NetApp 커뮤니티 등 광범위한 무료 셀프 지원 옵션이 24x7 제공됩니다. Data Infrastructure Insights에 가입한 사용자의 경우 전화 또는 웹 티켓을 통해 기술 지원을 받을 수 있습니다. NSS(NetApp Support Site) SSO 계정은 케이스 관리와 함께 웹 티켓에 필요합니다.</block>
-  <block id="54b9dfbc2f7a4721e38bff7e643a574c" category="paragraph">모든 NetApp 스토리지 시스템에 적어도 프리미엄 지원 수준이 적용되는 한 * Support는 Basic Edition에서 제공됩니다.</block>
-  <block id="3b2314bf0168715cc6642c0246916477" category="paragraph">많은 NetApp 오퍼링에서 Data Infrastructure Insights Basic Edition이 패키지의 일부로 포함됩니다. Premium Edition으로 업그레이드하려면 영업 담당자에게 문의하십시오.</block>
   <block id="0ead5de583924ac8d48848b85f68e778" category="section-title">셀프 서비스 지원:</block>
   <block id="6c0afebc7e7822e3ca22734d7b5d42c0" category="paragraph">이러한 지원 옵션은 평가판 모드에서 사용할 수 있으며 연중무휴 24시간 무료로 제공됩니다.</block>
   <block id="5b6cf869265c13af8566f192b4ab3d2a" category="inline-link-macro">문서화</block>
@@ -3929,7 +3922,6 @@
   <block id="6341e61d6dc641d29b3f2e7300137ea9" category="list-text">NetApp의 모든 클라우드 서비스에 액세스하려면 에서 계정을 <block ref="e0b3e45a049f223d3b91d005d1e31db5" category="inline-link-macro-rx"></block>등록하십시오.</block>
   <block id="cab27dc53edb571cac663ce2e16450dc" category="inline-link-macro">AWS 마켓플레이스</block>
   <block id="7bc1d8b07dfc0e98950abc0c7f3979a5" category="inline-link-macro">정보 및 지역</block>
-  <block id="ef66b5abbe1e0b79e23deb05dd2d11a9" category="admonition">비활성 Data Infrastructure Insights Basic Edition 환경이 삭제되고 해당 리소스가 회수됩니다. 연속 7일 동안 수집된 데이터가 없는 경우, 연속으로 30일 동안 사용자 활동이 없는 경우 환경은 비활성 상태로 간주됩니다. Data Infrastructure Insights는 알림을 전송하고 환경이 삭제되기 4일의 유예 기간을 제공합니다.</block>
   <block id="d618d9be50e37adf260935938e49af96" category="inline-image-macro">자물쇠</block>
   <block id="12ddfc86083937d7a126f2fd8615aa6b" category="inline-xref">모듈 평가</block>
   <block id="9d7c20493442236d34ddee65579e8971" category="paragraph">Data Infrastructure Insights를 사용하는 동안 자물쇠 아이콘이 <block ref="3d68554889a6297f572b65a3534d0ef0" category="inline-image-macro-rx" type="image"></block>표시되면 이 기능을 현재 구독에서 사용할 수 없거나 제한된 형식으로 사용할 수 있음을 의미합니다. 전체 액세스를 위해 해당 기능을 구독하십시오. 일부 기능은 구독하기 전에 사용할 수 <block ref="7f89ca2c071a1700db286ba62f9d3c95" category="inline-xref-macro-rx"></block> 있습니다.</block>
@@ -4036,16 +4028,11 @@
   <block id="aa7aad98c338c5186d969cd18fc94b86" category="paragraph"><block ref="f3a940944ed2b77ff0757ee9675312e7" category="inline-link-macro-rx"></block>Data Infrastructure Insights * 도움말 &gt; Support * 페이지에서 자세한 문제 해결 및 기타  정보를 확인할 수 있습니다.</block>
   <block id="7f6383a46fdc2ac52c791c8ea4cf03b6" category="summary">데이터 보존 시간 및 다운샘플링에 대해 설명합니다</block>
   <block id="2acd8b96cc968efd569f0e0169390b9b" category="doc">데이터 보존 및 다운샘플링 데이터</block>
-  <block id="51eee046c9fbdc20d91f82f659d9904f" category="paragraph">Data Infrastructure Insights는 설정된 기간(에디션당) 동안 데이터를 유지하므로 수천 개의 데이터 포인트를 처리할 수 있습니다. 따라서 차트 및 표에 표시되기 전에 데이터를 다운샘플링할 수 있습니다.</block>
   <block id="fd8da5ef10133e4ba884d6f85e21c49d" category="section-title">데이터 보존</block>
-  <block id="79f48f9e4032922de4c24d6a18806c0c" category="paragraph">Data Infrastructure Insights는 현재 구독된 에디션에 의해 결정된 시간 동안 데이터를 보존합니다.</block>
-  <block id="226c03c443192cffffa4a924b4ccffde" category="cell">발행</block>
   <block id="972e73b7a882d0802a4e3a16946a2f94" category="cell">기본</block>
   <block id="374616a0b786e9bffadc7f28e68d6c59" category="cell">7일</block>
   <block id="8d5e7e72f12067991186cdf3cb7d5d9d" category="cell">프리미엄</block>
   <block id="025025548582d3777fd0b072c16e2656" category="cell">13개월</block>
-  <block id="a4d110a0ddc628e94b4e9223300af49b" category="inline-link-macro">에디션 및 가격</block>
-  <block id="cc0d9aba6833845d2acc4d718cf71f18" category="paragraph">각 에디션에서 사용할 수 있는 전체 기능 목록은 Data Infrastructure Insights <block ref="9f9283f57379e70b90560c22a58eac88" category="inline-link-macro-rx"></block> 페이지를 참조하십시오.</block>
   <block id="876f04f443f4acb1176812eb95c5206c" category="section-title">데이터 다운샘플링</block>
   <block id="832befb5fcd1bf513bc9413c7b9a2e13" category="paragraph">* Downsampling * 은 차트에 있는 데이터의 통계적 근사치를 제공하여 수집된 데이터의 정확한 뷰를 유지하는 동시에 모든 데이터 지점을 표시할 필요 없이 데이터를 효율적으로 파악할 수 있습니다.</block>
   <block id="b75dadfce21049a86b69409a71f9d89d" category="section-title">다운샘플링이 필요한 이유는 무엇입니까?</block>
@@ -9138,8 +9125,6 @@
   <block id="46152eb4e0d7febe5ed5ec5aa51b068f" category="admonition">관련 자산이 많은 환경의 경우 해당 자산에 대한 애플리케이션 할당 상속에 몇 분이 걸릴 수 있습니다. 관련 자산이 많은 경우 상속에 더 많은 시간을 할애하십시오.</block>
   <block id="f64880272c45a077dc9152ab7dd2f24a" category="paragraph">호스트에 애플리케이션을 할당한 후 나머지 자산을 애플리케이션에 할당할 수 있습니다. 응용 프로그램의 랜딩 페이지에 액세스하려면 * 관리 &gt; 응용 프로그램 * 을 클릭하고 생성한 응용 프로그램을 선택합니다.</block>
   <block id="91771bf0d5be307a250d706e57df1eb1" category="summary">성능 또는 인벤토리 임계값과 메트릭 또는 로그 조건에 대해 경고하는 모니터를 생성합니다.</block>
-  <block id="a0fb87896105c24e490432fa6ee285d3" category="paragraph">모니터를 생성하여 네트워크 리소스와 관련된 문제를 알리기 위해 알림을 트리거하는 임계값을 설정합니다. 예를 들어, 다양한 프로토콜에 대해 _ node write latency _ 에 대해 경고하는 모니터를 생성할 수 있습니다.</block>
-  <block id="bd49848e16630c106919628a09948a9c" category="admonition">모니터 및 경고는 모든 Data Infrastructure Insights 에디션에서 사용할 수 있지만 Basic Edition에는 다음 사항이 적용됩니다. * 한 번에 최대 5개의 사용자 지정 모니터만 활성화할 수 있습니다. 5개 이상의 모니터는 에서 생성되거나 _Paused_state로 이동됩니다. * VMDK, 가상 머신, 호스트 및 데이터 저장소 메트릭 모니터는 지원되지 않습니다. 이러한 메트릭에 대해 생성된 모니터가 있는 경우 일시 중지되고 Basic Edition으로 다운그레이드할 때 다시 시작할 수 없습니다.</block>
   <block id="3f5fb2a45a144339f9591a104342f79b" category="paragraph">모니터를 사용하면 스토리지, VM, EC2 및 포트와 같은 "인프라" 객체에서 생성되는 메트릭과 Kubernetes, ONTAP 고급 메트릭, Teleraf 플러그인과 같이 "통합" 데이터에 대한 임계값을 설정할 수 있습니다. 이러한 _metric_monitor는 경고 수준 또는 위험 수준 임계값을 초과할 때 사용자에게 경고합니다.</block>
   <block id="e730b9c349889018dc9deaccaa5a438b" category="paragraph">또한 지정된_log events_가 감지되면 경고를 트리거하는 모니터를 생성할 수도 있습니다.</block>
   <block id="b18c8095ec7b7cd0c63a4e28b715f6c1" category="inline-link-macro">시스템 정의 모니터</block>
@@ -11224,7 +11209,6 @@
   <block id="dac09bc6942369c2d0f8d36f26d2e201" category="cell">"/AutoDir1/AutoFile03242022/"</block>
   <block id="17411e5191f440928552bd359518e697" category="cell">Works; AutoDir1 및 AutoFile03242022와 일치하는 2단계 디렉터리와 일치하는 1단계 디렉터리의 모든 작업을 반환합니다(대소문자 구분 없음).</block>
   <block id="ee0b2f1c8ad7945cf603e8d752a5e7b5" category="inline-link-macro">Data Infrastructure Insights 에디션</block>
-  <block id="bbf9080a1bf1fb2f62558ce683d64be0" category="paragraph">Data Infrastructure Insights Basic 및 Premium 버전에서 사용할 수 있는 기능에 대한 전체 비교는 <block ref="49bb501f6c401ae5b06c3dbe5fc987bd" category="inline-link-macro-rx"></block>페이지를 참조하십시오.</block>
   <block id="3bbdd1e5a1fbf0d58680e594b8806722" category="section-title">Telegraf 패키지 체크섬 확인</block>
   <block id="7ff5578ba477d9e2321cffdc188dd439" category="paragraph">Data Infrastructure Insights 에이전트 설치 프로그램이 무결성 검사를 수행하지만 일부 사용자는 다운로드한 Telegraf 바이너리를 설치하기 전에 자체 검증을 수행할 수 있습니다. 이 작업은 설치 프로그램을 다운로드하고 다운로드한 패키지에 대한 체크섬을 생성한 다음 설치 지침에 표시된 값과 체크섬을 비교하여 수행할 수 있습니다.</block>
   <block id="741ebc51b7127a27c632897c49b71ad3" category="paragraph">기본 다운로드 및 설치 대신 다운로드 전용 작업을 수행하기 위해 사용자는 UI에서 얻은 에이전트 설치 명령을 편집하고 "설치" 옵션을 제거할 수 있습니다.</block>
@@ -12631,7 +12615,6 @@
   <block id="e4685d20c866cca50df5bea5e4230497" category="cell">비작업 부하 배포가 결합되어 전송되는 빈도(초)</block>
   <block id="1cd8d8ba87dcbd642231ac1e1fb52f76" category="paragraph">AWS Marketplace 무료 평가판은 연장할 수 없습니다.</block>
   <block id="f2d8284860e834b1803b72a789ffeb84" category="list-text">데이터 수집기가 _중지_ 상태에서 _실행_ 상태로 전환하는 데 최대 2분이 걸립니다.</block>
-  <block id="0513a990ff8b7eb9d4d9e530e812b450" category="paragraph">ONTAP SVM 데이터 수집기를 사용하면 Workload Security에서 NetApp ONTAP 스토리지 가상 머신(SVM)의 파일 및 사용자 액세스 활동을 모니터링할 수 있습니다.  이 가이드에서는 ONTAP 환경에 대한 포괄적인 보안 모니터링을 제공하기 위해 SVM 데이터 수집기의 필수 구성 요소, 구성 및 관리 방법을 안내합니다.</block>
   <block id="57da797adb74a055edb3de9c7e734b65" category="list-text">언제든지 현재 '실행 중인' SVM의 데이터 수집기는 _실행 중_으로 표시됩니다. 현재 '중지된' SVM의 데이터 수집기는 _중지됨_으로 표시됩니다.</block>
   <block id="61dcd000a72340c1c72d4c7a96c2ec90" category="list-text">전환이 있을 때마다 데이터 수집기의 상태는 _실행 중_에서 _중지됨_으로 변경되고 그 반대의 경우도 마찬가지입니다.</block>
   <block id="342c42c2979927d6b0d68318cd6111a6" category="summary">Data Infrastructure Insights 인프라의 변경 사항을 추적하여 분석과 문제 해결을 용이하게 해줍니다.</block>
@@ -12750,4 +12733,20 @@
   <block id="8a971d74114c901e6e49ec38adf35b17" category="list-text">크론잡 메트릭스</block>
   <block id="9184717578be39d9d8ce4dc4caf1561d" category="list-text">작업 지표</block>
   <block id="e68008fca3fcb96a93c82b9cf703aee3" category="list-text">리소스 할당량 메트릭</block>
+  <block id="c9714a192e747c57a94bb2f6639adb5b" category="paragraph">Data Infrastructure Insights 감사 데이터를 보관하는 기간은 귀하의 구독에 따라 달라집니다.</block>
+  <block id="25ce197231569d5340a6575531a40987" category="list-text">시험 환경: 감사 데이터는 30일 동안 보관됩니다.</block>
+  <block id="99ec4b43a691fff456c908babbf2e4b6" category="list-text">구독 환경: 감사 데이터는 1년 + 1일 동안 보관됩니다.</block>
+  <block id="8305fef4b296f66634635a66ae1c297a" category="paragraph">*도움말 &gt; 지원*을 선택하면 Data Infrastructure Insights 에서 사용 가능한 지원 옵션에 액세스할 수 있습니다.</block>
+  <block id="56f5911bfca7593d469553cb475e6033" category="paragraph">NetApp 다양한 방법으로 Data Infrastructure Insights 에 대한 지원을 제공합니다.  지식 기반(KB) 문서나 NetApp 커뮤니티 등 광범위한 무료 셀프 지원 옵션을 연중무휴로 이용할 수 있습니다.  Data Infrastructure Insights 에 가입한 사용자의 경우 전화나 웹 티켓팅을 통해 기술 지원을 받을 수 있습니다.  웹 티켓과 사례 관리를 위해서는 NetApp 지원 사이트(NSS) SSO 계정이 필요합니다.</block>
+  <block id="d9a8e11a5035deb3c16b4dd70ca066ca" category="paragraph">Data Infrastructure Insights 기능 및 가격 옵션에 대한 자세한 내용은 다음을 참조하세요.<block ref="49bb501f6c401ae5b06c3dbe5fc987bd" category="inline-link-macro-rx"></block> 페이지.</block>
+  <block id="bbfa6d956cfb6da0d57f5f523f9a05be" category="paragraph">Data Infrastructure Insights 귀하의 구독에 따라 7일에서 13개월까지 다양한 기간 동안 데이터를 보관합니다.  대용량 데이터 세트를 표시할 때 통계적 정확성을 유지하면서 차트와 그래프의 효율적인 로드를 보장하기 위해 데이터를 다운샘플링할 수 있습니다.</block>
+  <block id="b3fd89fffb7a017d757c048752783ccd" category="paragraph">Data Infrastructure Insights 귀하의 구독 유형에 따라 결정된 기간 동안 데이터를 보관합니다.</block>
+  <block id="4c52b16391c4a95b395f3762741ff88f" category="cell">구독 유형</block>
+  <block id="1b52c526b858eb9dd2c66da1c0b8f44d" category="cell">재판</block>
+  <block id="808c7457c768423c5651cbf676d9f6d7" category="cell">구독됨</block>
+  <block id="b56a9b49aabd38d375de7e8e4f8b5622" category="inline-link-macro">Data Infrastructure Insights 가격</block>
+  <block id="fc3f2409a092c3652206602369d9f86a" category="paragraph">Data Infrastructure Insights 기능 및 가격 옵션에 대한 자세한 내용은 다음을 참조하세요.<block ref="39a77f6e3fa694dcfc09652d16b8431a" category="inline-link-macro-rx"></block> 페이지.</block>
+  <block id="babe60c38b9af7eae2a65400f72c52c7" category="paragraph">ONTAP SVM 데이터 수집기를 사용하면 Workload Security에서 NetApp ONTAP 스토리지 가상 머신(SVM)의 파일 및 사용자 액세스 활동을 모니터링할 수 있습니다. 이 가이드에서는 ONTAP 환경에 대한 포괄적인 보안 모니터링을 제공하기 위해 SVM 데이터 수집기의 구성과 관리 방법을 안내합니다.</block>
+  <block id="097b5088c2a3d7584f939f2bcd00152f" category="admonition">글로벌 변화는 ONTAP 시스템에 잠재적인 영향을 미칠 수 있습니다.  다수의 데이터 수집기에 영향을 미치는 변경 작업은 비수요 시간에 하는 것이 좋습니다.</block>
+  <block id="3c86c080f12d925b5a5ec1ad14563f65" category="paragraph">인프라 리소스 전반에서 성능 임계값을 추적하고 이벤트와 이상을 기록하도록 모니터를 구성합니다.  노드 쓰기 지연 시간, 스토리지 용량, 애플리케이션 성능 등의 측정 항목에 대한 사용자 정의 알림을 만들고, 이러한 조건이 충족되면 알림을 받습니다.</block>
 </blocks>
