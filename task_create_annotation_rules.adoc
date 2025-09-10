@@ -7,6 +7,10 @@ keywords: annotate, annotation, rules
 = 주석 규칙 작성
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]

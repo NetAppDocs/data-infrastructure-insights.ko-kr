@@ -27,8 +27,6 @@ sidebar:
       url: "/security_admin_tool.html"
   - title: 시작하기
     entries:
-    - title: 피처 튜터리얼
-      url: "/concept_feature_tutorials.html"
     - title: 데이터 수집 중
       entries:
       - title: 개요

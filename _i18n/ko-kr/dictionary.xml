@@ -12557,8 +12557,6 @@
   <block id="09562317f0e4300c8d530df45c626200" category="paragraph"><block ref="09562317f0e4300c8d530df45c626200" category="inline-image-macro-rx" type="image"></block></block>
   <block id="fdbcd622aeb7794a55d5a3c57f4ed433" category="admonition">사용자가 추가할 수 있는 필터를 포함하여 대부분의 VM Analyzer 필터는 상황에 맞는 필터입니다. 이러한 필터 중 하나에서 개체를 선택하면 다른 필터 드롭다운에 표시되는 선택 항목이 선택한 객체와 함께 컨텍스트에서 새로 고쳐집니다.</block>
   <block id="86975522d809db49e0c205d536440123" category="paragraph">개체 또는 그룹을 클릭하면 개체 및 해당 연결에 대한 추가 세부 정보를 제공하는 슬라이드 아웃 패널이 열립니다. 슬라이드아웃 패널에는 선택한 객체에 대한 세부 정보(예: 객체 유형에 따라 처리량 또는 사용률)를 제공하는 요약과 지연 시간 또는 IOPS와 같은 객체의 메트릭을 보여주는 차트가 표시됩니다. 추가 탭을 통해 관련 추가 리소스, 변경 사항 및 알림을 살펴볼 수 있습니다. 원하는 경우 차트에 상위 상관관계가 있거나 경합 중인 객체의 메트릭도 표시하도록 선택할 수 있습니다.</block>
-  <block id="d2471c4bc746eeea68ab17452321a403" category="inline-link-macro">VM Analyzer를 사용한 간소화된 문제 해결(비디오)</block>
-  <block id="6e27a8c95ed5ddbd5bf8c70b3cdcde35" category="paragraph"><block ref="6e27a8c95ed5ddbd5bf8c70b3cdcde35" category="inline-link-macro-rx"></block></block>
   <block id="f463cb1a5df7d729d273f46c1e5cb861" category="sidebar">데이터 분석</block>
   <block id="c917a46858bc7b65af2e1c90ee0a1453" category="sidebar">SAN 분석기</block>
   <block id="2e2565dd8910383ad2b3626e2b5d37b2" category="sidebar">VM 분석기</block>
@@ -12749,4 +12747,10 @@
   <block id="babe60c38b9af7eae2a65400f72c52c7" category="paragraph">ONTAP SVM 데이터 수집기를 사용하면 Workload Security에서 NetApp ONTAP 스토리지 가상 머신(SVM)의 파일 및 사용자 액세스 활동을 모니터링할 수 있습니다. 이 가이드에서는 ONTAP 환경에 대한 포괄적인 보안 모니터링을 제공하기 위해 SVM 데이터 수집기의 구성과 관리 방법을 안내합니다.</block>
   <block id="097b5088c2a3d7584f939f2bcd00152f" category="admonition">글로벌 변화는 ONTAP 시스템에 잠재적인 영향을 미칠 수 있습니다.  다수의 데이터 수집기에 영향을 미치는 변경 작업은 비수요 시간에 하는 것이 좋습니다.</block>
   <block id="3c86c080f12d925b5a5ec1ad14563f65" category="paragraph">인프라 리소스 전반에서 성능 임계값을 추적하고 이벤트와 이상을 기록하도록 모니터를 구성합니다.  노드 쓰기 지연 시간, 스토리지 용량, 애플리케이션 성능 등의 측정 항목에 대한 사용자 정의 알림을 만들고, 이러한 조건이 충족되면 알림을 받습니다.</block>
+  <block id="7c2fe93d0a150c1ccb110c7be9ba4de5" category="inline-link-macro">NetApp 으로 강력한 대시보드 만들기(동영상), window=read-later</block>
+  <block id="87844637813d306b7e217695fa07af30" category="paragraph"><block ref="87844637813d306b7e217695fa07af30" category="inline-link-macro-rx"></block></block>
+  <block id="0fa83ca72fc86aac9bf3cb98f8457548" category="inline-link-macro">주석 및 주석 규칙(비디오), window=read-later</block>
+  <block id="7353b790cd233bfb4d223636cde644bc" category="paragraph"><block ref="7353b790cd233bfb4d223636cde644bc" category="inline-link-macro-rx"></block></block>
+  <block id="1fdb67257568169e128ab9cf001f8475" category="inline-link-macro">VM Analyzer를 사용한 간소화된 문제 해결(비디오), window=read-later</block>
+  <block id="b1cd067329cb001e27800ecd33c25fac" category="paragraph"><block ref="b1cd067329cb001e27800ecd33c25fac" category="inline-link-macro-rx"></block></block>
 </blocks>

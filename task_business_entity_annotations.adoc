@@ -7,6 +7,10 @@ summary: 업무 엔티티 주석은 업무 계층 구조의 자산을 모니터�
 = 업무 엔티티 주석
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
