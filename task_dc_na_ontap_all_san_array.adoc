@@ -1,12 +1,16 @@
 ---
 sidebar: sidebar 
 permalink: task_dc_na_ontap_all_san_array.html 
-keywords: data collector, ontap, ontap, CDOT, REST, SAN, ASA 
-summary: ONTAP All-SAN 어레이 데이터 수집기 
+keywords: data collector, ontap, ontap, CDOT, REST, SAN, ASA, r2 
+summary: 'ONTAP All-San Array 데이터(ASA r2) 수집기' 
 ---
-= NetApp ONTAP ASA(All-SAN 어레이) 데이터 수집기
+= NetApp ONTAP ASA r2(All-SAN Array) 데이터 수집기
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
