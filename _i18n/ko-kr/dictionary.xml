@@ -11249,7 +11249,6 @@
   <block id="72a442c57900f55848aa4acb856a507d" category="sidebar">비활성 장치 식별</block>
   <block id="0860569a69c3584507ee09f4be585418" category="cell">insecureK8sSkipVerify를 참조하십시오</block>
   <block id="3008cd3125cccc003fa13335717e556e" category="cell">Telegraf가 IP SAN 부족으로 인증서를 확인할 수 없는 경우 검증 건너뛰기를 활성화하십시오</block>
-  <block id="9e43104f0687bd3a308759c5411641d7" category="paragraph"><block ref="9e43104f0687bd3a308759c5411641d7" category="inline-link-macro-rx"></block></block>
   <block id="2b8272217b69f1c5b5ad5968f0bc0945" category="list-text">Data Infrastructure Insights 무료 평가판을 신청하여 사용 가능한 기능을 살펴보십시오. 무료 평가판을 등록하려면:</block>
   <block id="6d2404e5699069be70636f65562fe693" category="list-text">로 이동합니다<block ref="66922be03d9fc23a3ec9641b7884c8f2" category="inline-link-rx"></block></block>
   <block id="e78fd759357c2a61f07ddc6a902f9270" category="list-text">페이지 상단에서 * 구매 방법 * 을 선택합니다.</block>
@@ -11587,7 +11586,6 @@
   <block id="bc23aa0997542e15a65a21a96991960a" category="paragraph">The user can go to the add/edit collector page, enter the cluster level details (in Cluster Mode) or SVM level details (in SVM Mode), and click on the *Test Connection* button. Workload Security will then process the request and display an appropriate success or failure message.</block>
   <block id="e8f41baace36619af4a7292787a17936" category="inline-image-macro">Workload Security 'Test Connection' success message</block>
   <block id="e6ea93198fd78cbc89b93053e0d0b573" category="paragraph"><block ref="e6ea93198fd78cbc89b93053e0d0b573" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="c033c9dce9a48cc67d3409bab6aab6ba" category="paragraph"><block ref="c033c9dce9a48cc67d3409bab6aab6ba" category="inline-link-macro-rx"></block></block>
   <block id="88c55c9f00e518db40a6c680728b787f" category="section-title">2025년 3월</block>
   <block id="27e5c5c33051ef47e145b432e9e357db" category="section-title">효율적인 인프라 관리를 위한 향상된 상황에 맞는 탐색 기능</block>
   <block id="ca3a08b4a664d3460c1afb17ce14a0ca" category="paragraph">Data Infrastructure Insights를 활용하여 탁월한 운영을 실현함으로써 시간을 절약할 수 있습니다. 이제 모든 개체에서 자산 랜딩 페이지로 바로 이동할 수 있는 상황에 맞는 메뉴 링크를 추가하여 디바이스 성능 정보를 확인하고, 네트워크 토폴로지 시각화를 위한 SAN Analyzer, 운영 인식을 위한 로그 또는 구성 관리를 위한 Change Analyzer를 제공합니다.</block>
@@ -12754,4 +12752,6 @@
   <block id="cd0e26864bdcc93e571cf104049dc723" category="summary">ONTAP All-San Array 데이터(ASA r2) 수집기</block>
   <block id="4d632e035deea033a31abbef4a39ee80" category="doc">NetApp ONTAP ASA r2(All-SAN Array) 데이터 수집기</block>
   <block id="d97291003c6a6e6615571bf02531ca30" category="sidebar">ONTAP ASA (All-SAN 어레이) r2</block>
+  <block id="32344df03ee279db932571d5121eebc2" category="paragraph"><block ref="32344df03ee279db932571d5121eebc2" category="inline-link-macro-rx"></block></block>
+  <block id="af88d796899408a2445389775634dda1" category="paragraph"><block ref="af88d796899408a2445389775634dda1" category="inline-link-macro-rx"></block></block>
 </blocks>

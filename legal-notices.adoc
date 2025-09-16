@@ -43,6 +43,6 @@ link:https://www.netapp.com/company/legal/privacy-policy/["https://www.netapp.co
 
 포함: https://raw.githubusercontent.com/NetAppDocs/common/main/_include/open-source-notice-intro.adoc[]
 
-link:media/Data_Infrastructure_Insights-On-prem-Components-ReleaseNotice1.pdf["데이터 인프라 인사이트(이전의 Cloud Insights)를 위한 고지 사항"]
+link:media/DII_Notice-Sept_2025.pdf["데이터 인프라 인사이트(이전의 Cloud Insights)를 위한 고지 사항"]
 
-link:media/Data_Infrastructure_Insights_Workload_SecurityOn-prem_ComponentsNOTICE-1.pdf["워크로드 보안 공지(이전의 Cloud Secure)"]
+link:media/WS_Notice-Sept_2025.pdf["워크로드 보안 공지(이전의 Cloud Secure)"]
