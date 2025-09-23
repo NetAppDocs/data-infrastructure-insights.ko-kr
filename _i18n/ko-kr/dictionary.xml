@@ -2610,8 +2610,6 @@
   <block id="256a0ce1cb9ac99794371e404aa7446e" category="cell">맞춤형 모니터 구성의 내보내기는 일반적으로 새 기능을 개발 및 테스트하는 동안 NetApp 엔지니어가 사용합니다. 이 메시지가 표시되지 않을 것으로 예상되면 감사 대상 작업에 명명된 사용자의 작업을 탐색하거나 지원 부서에 문의하십시오.</block>
   <block id="03b8f305db2c82bc6a850a57ec12d044" category="summary">Agent로 사용하는 서버 또는 VM은 최소 요구 사항을 충족해야 합니다</block>
   <block id="a7ef8f0bed1d94220b7abd3877b10643" category="doc">워크로드 보안 에이전트 요구 사항</block>
-  <block id="b6818f4aea164eb8b94acf9d70d2e034" category="inline-link-macro">Agent를 설치합니다</block>
-  <block id="36bb58d4c9e71b2c4ea1af277d7e3a81" category="paragraph">데이터 수집기에서 정보를 얻으려면 사용자가 있어야 <block ref="8c7f43ef892529523b024d4c41e5a1ca" category="inline-link-macro-rx"></block>합니다. Agent를 설치하기 전에 운영 체제, CPU, 메모리 및 디스크 공간 요구 사항을 충족하는지 확인해야 합니다.</block>
   <block id="c441ee50c88f6e5e3a7c69fc69dad8b8" category="cell">명령</block>
   <block id="92094f10227c0d6e4da9a65b1cc23700" category="cell">설치를 위해 '압축 해제'가 필요합니다. 또한 설치, 스크립트 실행 및 제거에 'SUDO su –' 명령이 필요합니다.</block>
   <block id="805053e0ff5abb1e01f2d2ce7d07ad96" category="cell">CPU 코어 4개</block>
@@ -12534,7 +12532,6 @@
   <block id="f7185660114f7b999956b1355a59005c" category="paragraph">이 오류는 수집기 설치 프로그램 파일이 _/{agent-install-path}/cloudsecure/tmp/collectors_ 디렉터리에 없거나 액세스할 수 없는 경우 발생합니다. 설치 프로그램 파일이 다운로드되었는지, 그리고 _collectors_ 및 설치 프로그램 zip 파일의 전체 디렉터리 구조가 cssys:cssys의 소유인지 확인한 후, 에이전트 서비스를 다시 시작하세요: _systemctl restart cloudsecure-agent.service_.</block>
   <block id="7d7553997a3a5a75a3b0c10d87de471a" category="inline-link-macro">NetApp 영업 담당자에게 문의하세요.</block>
   <block id="9cff751c63b93d5cf30de3f9b1c5ae37" category="admonition">보고 기능은 Data Infrastructure Insights에서 사용할 수 <block ref="e53fcfe2d8e430963458770e616738bd" category="inline-link-macro-rx"></block>있습니다. 보고 기능을 사용할 수 있는지 여부는 최소 설치 공간 요구 사항에 따라 달라집니다. <block ref="1609ad57ad0e13d165eb8d59f42fcd45" category="inline-link-macro-rx"></block> 자세한 내용은.</block>
-  <block id="49efdacfb2c6deb2da842846699cf1e7" category="cell">다음 중 하나의 라이선스 버전을 실행하는 컴퓨터: * AlmaLinux 9.4 및 9.5(64비트), SELinux 포함 * CentOS 9 Stream(64비트) * Debian 11(64비트) 및 12(64비트), SELinux 포함 * OpenSUSE Leap 15.3(64비트) ~ 15.6(64비트) * Oracle Linux 8.10(64비트), 9.1(64비트) ~ 9.6(64비트), SELinux 포함 * Red Hat Enterprise Linux 8.10(64비트), 9.1(64비트) ~ 9.6(64비트), SELinux 포함 * Rocky 9.4(64비트) 및 9.5(64비트), SELinux 포함 * SUSE Linux Enterprise Server 15 SP4(64비트) ~ 15 SP6 (64비트), SELinux 포함 * Ubuntu 20.04 LTS(64비트), 22.04 LTS(64비트), 24.04 LTS(64비트) 이 컴퓨터에서는 다른 애플리케이션 수준 소프트웨어를 실행해서는 안 됩니다. 전용 서버가 권장됩니다.</block>
   <block id="edf63ae7e3cf0cd744884c156cab7abb" category="section-title">Linux에서 CIFS를 마운트하려면:</block>
   <block id="ee817f2b2a73b759041de15700c640ab" category="list-text">랜섬웨어 시뮬레이션 스크립트는 Linux에서만 작동합니다. 시뮬레이션 스크립트는 사용자가 ONTAP ARP를 Workload Security와 통합한 경우에도 높은 신뢰도의 경고를 생성해야 합니다.</block>
   <block id="aeb28c68bc1dab765c30f59d6d996ff2" category="section-title">실제로 확인해 보세요</block>
@@ -12639,7 +12636,6 @@
   <block id="9a1645f81973ce35a5b8a3cb57dafb2e" category="paragraph">알림이 해결되면 이러한 건강 점수 감소는 점차 사라지고, 점수는 2시간 이내에 완전히 회복됩니다.</block>
   <block id="3ad17df8e0c21cd3fba4fa89d748a88e" category="paragraph">이 데이터 수집기는 REST API 호출을 사용하여 ONTAP 9.14.1 이상을 실행하는 스토리지 시스템에서 인벤토리, EMS 로그 및 성능 데이터를 수집합니다.  이전 릴리스의 ONTAP 시스템의 경우 ZAPI 기반 "NetApp ONTAP 데이터 관리 소프트웨어" 수집기 유형을 사용하세요.</block>
   <block id="93c13f56f33b4026f411d3de7b0577a5" category="paragraph">필요한 경우 SPI 액세스를 확인할 수 있습니다.</block>
-  <block id="1895704ffbc6e56720172ab7d145f8ae" category="list-text">드롭다운을 기준으로 그룹화하면 사용자, 엔터티 유형 등에 따라 활동을 그룹화할 수 있는 옵션이 제공됩니다.</block>
   <block id="661407737232b02ed42fdcaccc52a989" category="summary">비즈니스 통찰력 질문에 답하는 데 도움이 되는 추천 대시보드를 가져올 수 있습니다.  이전에 내보낸 사용자 지정 대시보드를 가져올 수도 있습니다.</block>
   <block id="814e9312d5012962801c92801ada715a" category="doc">대시보드 가져오기</block>
   <block id="35642875ab84f7c01f7b4f8c5b7370eb" category="paragraph">Data Infrastructure Insights 데이터에 대한 비즈니스 통찰력을 제공하기 위해 다양한 권장 대시보드를 제공합니다.  각 대시보드에는 현재 테넌트에 대해 수집 중인 데이터와 관련된 특정 질문에 답하거나 특정 문제를 해결하는 데 도움이 되는 위젯이 포함되어 있습니다.  DII를 사용하면 유용한 대시보드를 내보내 다른 테넌트로 가져올 수도 있습니다.</block>
@@ -12755,4 +12751,10 @@
   <block id="af88d796899408a2445389775634dda1" category="paragraph"><block ref="af88d796899408a2445389775634dda1" category="inline-link-macro-rx"></block></block>
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">오픈소스</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">공지 파일은 NetApp 소프트웨어에서 사용되는 타사 저작권 및 라이선스에 대한 정보를 제공합니다.</block>
+  <block id="bee347f35c7a237c1f2d5d7193252244" category="inline-link-macro">Workload Security Agent 설치</block>
+  <block id="1de0df19f89310a1407a7686c6dcad7c" category="paragraph">당신은해야합니다<block ref="588188a9e8b5d243fbdbf4e2ce1c4421" category="inline-link-macro-rx"></block> 귀하의 데이터 수집자로부터 정보를 얻기 위해서입니다.  에이전트를 설치하기 전에 사용자 환경이 운영 체제, CPU, 메모리 및 디스크 공간 요구 사항을 충족하는지 확인하세요.</block>
+  <block id="0d9233050a9086b67df84f668963e42d" category="cell">다음 중 하나의 라이선스 버전을 실행하는 컴퓨터: * AlmaLinux 9.4(64비트) ~ 9.5(64비트), 10(64비트), SELinux 포함 * CentOS Stream 9(64비트) * Debian 11(64비트), 12(64비트), SELinux 포함 * OpenSUSE Leap 15.3(64비트) ~ 15.6(64비트) * Oracle Linux 8.10(64비트), 9.1(64비트) ~ 9.6(64비트), SELinux 포함 * Red Hat Enterprise Linux 8.10(64비트), 9.1(64비트) ~ 9.6(64비트), 10(64비트), SELinux 포함 * Rocky 9.4(64비트) ~ 9.6(64비트), SELinux 포함 * SUSE Linux Enterprise Server 15 SP4(64비트) ~ 15 SP6(64비트), SELinux 포함 * Ubuntu 20.04 LTS(64비트), 22.04 LTS(64비트), 24.04 LTS(64비트) 이 컴퓨터에서는 다른 애플리케이션 수준 소프트웨어를 실행하면 안 됩니다.  전용 서버를 권장합니다.</block>
+  <block id="caecf875ec87c246704ef07763a1f352" category="list-text">드롭다운으로 그룹화하면 사용자, 폴더, 엔터티 유형 등으로 활동을 그룹화할 수 있는 옵션이 제공됩니다.</block>
+  <block id="4372644de09f6a468879ea88e6579002" category="list-text">FlexCache 는 ONTAP 9.7 이상 버전의 NFS에서 지원됩니다.</block>
+  <block id="5a97d130bacafd15fd7701e8032dcd68" category="list-text">FlexCache 는 ONTAP 9.14.1 이상 버전의 SMB에서 지원됩니다.</block>
 </blocks>

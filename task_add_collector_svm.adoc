@@ -29,6 +29,8 @@ NOTE: 글로벌 변화는 ONTAP 시스템에 잠재적인 영향을 미칠 수 �
 ** SMB 프로토콜 버전 3.1 이하
 ** NFS 4.1을 포함한 NFS 버전(NFS 4.1은 ONTAP 9.15 이상에서 지원됨)
 ** FlexGroup는 ONTAP 9.4 이상 버전에서 지원됩니다
+** FlexCache 는 ONTAP 9.7 이상 버전의 NFS에서 지원됩니다.
+** FlexCache 는 ONTAP 9.14.1 이상 버전의 SMB에서 지원됩니다.
 ** ONTAP Select가 지원됩니다
 
 

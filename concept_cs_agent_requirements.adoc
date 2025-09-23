@@ -7,17 +7,21 @@ keywords: agent, Linux, requirements, docker, browsers, permissions, Network, Cl
 = 워크로드 보안 에이전트 요구 사항
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-데이터 수집기에서 정보를 얻으려면 사용자가 있어야 link:task_cs_add_agent.html["Agent를 설치합니다"]합니다. Agent를 설치하기 전에 운영 체제, CPU, 메모리 및 디스크 공간 요구 사항을 충족하는지 확인해야 합니다.
+당신은해야합니다link:task_cs_add_agent.html["Workload Security Agent 설치"] 귀하의 데이터 수집자로부터 정보를 얻기 위해서입니다.  에이전트를 설치하기 전에 사용자 환경이 운영 체제, CPU, 메모리 및 디스크 공간 요구 사항을 충족하는지 확인하세요.
 
 [cols="36,60"]
 |===
 | 구성 요소 | Linux 요구 사항 
 
 
-| 운영 체제 | 다음 중 하나의 라이선스 버전을 실행하는 컴퓨터: * AlmaLinux 9.4 및 9.5(64비트), SELinux 포함 * CentOS 9 Stream(64비트) * Debian 11(64비트) 및 12(64비트), SELinux 포함 * OpenSUSE Leap 15.3(64비트) ~ 15.6(64비트) * Oracle Linux 8.10(64비트), 9.1(64비트) ~ 9.6(64비트), SELinux 포함 * Red Hat Enterprise Linux 8.10(64비트), 9.1(64비트) ~ 9.6(64비트), SELinux 포함 * Rocky 9.4(64비트) 및 9.5(64비트), SELinux 포함 * SUSE Linux Enterprise Server 15 SP4(64비트) ~ 15 SP6 (64비트), SELinux 포함 * Ubuntu 20.04 LTS(64비트), 22.04 LTS(64비트), 24.04 LTS(64비트) 이 컴퓨터에서는 다른 애플리케이션 수준 소프트웨어를 실행해서는 안 됩니다. 전용 서버가 권장됩니다. 
+| 운영 체제 | 다음 중 하나의 라이선스 버전을 실행하는 컴퓨터: * AlmaLinux 9.4(64비트) ~ 9.5(64비트), 10(64비트), SELinux 포함 * CentOS Stream 9(64비트) * Debian 11(64비트), 12(64비트), SELinux 포함 * OpenSUSE Leap 15.3(64비트) ~ 15.6(64비트) * Oracle Linux 8.10(64비트), 9.1(64비트) ~ 9.6(64비트), SELinux 포함 * Red Hat Enterprise Linux 8.10(64비트), 9.1(64비트) ~ 9.6(64비트), 10(64비트), SELinux 포함 * Rocky 9.4(64비트) ~ 9.6(64비트), SELinux 포함 * SUSE Linux Enterprise Server 15 SP4(64비트) ~ 15 SP6(64비트), SELinux 포함 * Ubuntu 20.04 LTS(64비트), 22.04 LTS(64비트), 24.04 LTS(64비트) 이 컴퓨터에서는 다른 애플리케이션 수준 소프트웨어를 실행하면 안 됩니다.  전용 서버를 권장합니다. 
 
 
 | 명령 | 설치를 위해 '압축 해제'가 필요합니다. 또한 설치, 스크립트 실행 및 제거에 'SUDO su –' 명령이 필요합니다. 
