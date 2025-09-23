@@ -41,7 +41,11 @@ link:https://www.netapp.com/pdf.html?item=/media/11887-patentspage.pdf["https://
 
 link:https://www.netapp.com/company/legal/privacy-policy/["https://www.netapp.com/company/legal/privacy-policy/"^]
 
-포함: https://raw.githubusercontent.com/NetAppDocs/common/main/_include/open-source-notice-intro.adoc[]
+
+
+== 오픈소스
+
+공지 파일은 NetApp 소프트웨어에서 사용되는 타사 저작권 및 라이선스에 대한 정보를 제공합니다.
 
 link:media/DII_Notice-Sept_2025.pdf["데이터 인프라 인사이트(이전의 Cloud Insights)를 위한 고지 사항"]
 
