@@ -145,7 +145,7 @@ Data Infrastructure Insights 관측성 은 테넌트의 스토리지 계층에 �
 
 각 계층은 서로 다른 비율로 측정되며, 전체 합계는 가중 자격을 제공하기 위해 계산됩니다. 가중 사용량을 계산하는 공식은 다음과 같습니다.
 
- Weighted usage = Raw TiB + (0.1 x Object Tier Raw TiB) + (0.25 x Cloud Tier Provisioning TiB)
+ Weighted Capacity = Raw TiB + (0.1 x Object Tier Raw TiB) + (0.25 x Cloud Tier Provisioned TiB)
 이를 지원하기 위해 DII는 _subscribed_quantities를 기준으로 단일 * 가중 자격 * 번호를 계산합니다. 그런 다음 _discovered_storage를 기준으로 동일한 수를 계산하고 검색된 용량이 가중 권한보다 큰 경우에만 위반을 선언합니다. 따라서 각 계층에 대해 가입된 금액과 다른 수량을 유연하게 모니터링할 수 있습니다. DII에서는 검색된 총 스토리지가 가입된 가중 소유 권한 내에 있는 동안 이러한 수량을 모니터링할 수 있습니다.
 
 
