@@ -12,9 +12,15 @@ keywords: data collector, queries, create, storagegrid
 [role="lead"]
 NetApp StorageGRID 데이터 수집기는 StorageGRID 구성의 인벤토리 및 성능 수집을 지원합니다.
 
+[NOTE]
+====
+기본 하드웨어 토폴로지 및 구성에 관계 없이 모든 StorageGRID 시스템에서 DII 권한에 대한 일관된 측정을 제공하기 위해 Data Infrastructure Insights 물리적 디스크 레이아웃을 기반으로 하는 RAW 용량 대신 사용 가능한 총 용량(storagegrid_storage_utilization_total_space_bytes)을 사용합니다.
 
-NOTE: StorageGRID는 다른 물리적 TB에서 관리 단위 비율로 측정됩니다. 포맷되지 않은 40TB의 StorageGRID 용량마다 1로 충전됩니다.link:concept_subscribing_to_cloud_insights.html#pricing["관리 장치(MU)"]
+용량 기반 라이선스 모델을 사용하는 고객의 경우 StorageGRID "객체" 스토리지로 측정됩니다.
 
+레거시(MU) 라이선스 모델을 사용하는 고객의 경우 StorageGRID 1MU당 40TiB의 비율로 보조 스토리지로 측정됩니다.
+
+====
 
 
 == 용어
