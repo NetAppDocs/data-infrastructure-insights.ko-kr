@@ -2206,8 +2206,6 @@
   <block id="30136395f01879792198317c11831ea4" category="section-title">쿠버네티스</block>
   <block id="719a89b64a07694e338d45825fcd17f0" category="paragraph">이러한 명령은 기본 네임스페이스 "NetApp-모니터링"을 사용합니다. 고유한 네임스페이스를 설정한 경우 이러한 네임스페이스 및 모든 후속 명령 및 파일로 대체합니다.</block>
   <block id="cab974fdccabc8d42fdf59c797a3fc04" category="paragraph">참고: 최신 NetApp Kubernetes Monitoring Operator가 설치되어 있고 재생 가능한 API 액세스 토큰을 사용하는 경우, 만료되는 토큰이 자동으로 새/업데이트된 API 액세스 토큰으로 대체됩니다. 아래 나열된 수동 단계를 수행할 필요는 없습니다.</block>
-  <block id="d894fe24a5654169420a98540a56b302" category="list-text">NetApp Kubernetes Monitoring Operator를 편집합니다.</block>
-  <block id="a27d1e518922e9050e6e54ae8c965164" category="list-text">이전 API 토큰을 새 API 토큰으로 대체하여 _spec.output-sink.api-key_value를 수정합니다.</block>
   <block id="daed7387fa0b0965feb45d4dc3de1704" category="section-title">RHEL/CentOS 및 Debian/Ubuntu</block>
   <block id="779ce1f6c23a08b510ed7a6c996d255a" category="list-text">Telegraf 구성 파일을 편집하고 이전 API 토큰의 모든 인스턴스를 새 API 토큰으로 교체합니다.</block>
   <block id="e89f4056c39669637fb609320173681a" category="list-text">텔레그라프를 다시 시작합니다.</block>
@@ -3791,11 +3789,8 @@
   <block id="4e4315d948ef3fd3aad9be88a442863d" category="paragraph"><block ref="4e4315d948ef3fd3aad9be88a442863d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="79bac41a8e857539d5a75dc7e93e17d8" category="summary">기술 자료 문서를 보거나 NetApp 커뮤니티에 연결하거나, 비디오를 보거나, 지원 요청을 위한 티켓을 열 수 있습니다.</block>
   <block id="69ac5d78c7ecb4ab9a461a7400773ec3" category="doc">지원을 요청하는 중입니다</block>
-  <block id="b9bfbe11ded79fa1b72b327d0497f9dd" category="inline-image-macro">지원 페이지</block>
-  <block id="2a0a63dd16c8b87a179a933b2e9eb92e" category="paragraph"><block ref="2a0a63dd16c8b87a179a933b2e9eb92e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e9d356ec51ae4d84881e70ea3c98b6dc" category="section-title">지원 권한 활성화 중</block>
   <block id="27792947ed5d5da7c0d1f43327ed9dab" category="inline-xref">세부 정보</block>
-  <block id="7b205ab2cecff2344de68946f6fcafe2" category="paragraph">Data Infrastructure Insights는 평가판 모드에서 실행할 때 셀프 서비스 및 이메일 지원을 제공합니다. 서비스에 가입한 후에는 지원 권한을 활성화하는 것이 좋습니다. 지원 권한을 활성화하면 온라인 채팅, 웹 티켓 시스템 및 전화를 통해 기술 지원에 액세스할 수 있습니다. 기본 지원 모드는 등록이 완료될 때까지 셀프 서비스로 설정됩니다. <block ref="055db438ec51479bd53b937469434a7e" category="inline-xref-macro-rx"></block>아래를 참조하십시오.</block>
   <block id="933754a1936f865bf848ed02693c2c26" category="paragraph">최초 구독 프로세스 중에 Data Infrastructure Insights 인스턴스에서 "950"부터 20자릿수의 NetApp 일련 번호가 생성됩니다. 이 NetApp 일련 번호는 귀사의 계정과 연결된 Data Infrastructure Insights 가입을 나타냅니다. 지원 자격을 활성화하려면 NetApp 일련 번호를 등록해야 합니다. NetApp에서는 두 가지 지원 등록 옵션을 제공합니다.</block>
   <block id="cc8ae441e8fc2d8b41c5c0efa830b99e" category="list-text">기존 NetApp Support 사이트(NSS) SSO 계정을 가진 사용자(예: 현재 NetApp 고객)</block>
   <block id="0a0b0ec9b756ca7bf1c8323bc90df282" category="list-text">기존 NetApp Support Site(NSS) SSO 계정이 없는 새로운 NetApp 고객</block>
@@ -3815,7 +3810,6 @@
   <block id="9ff2e299ad4aa21f1b2da73ae35e14c1" category="paragraph"><block ref="9ff2e299ad4aa21f1b2da73ae35e14c1" category="inline-image-macro-rx" type="image"></block></block>
   <block id="d0666b8b7ae744d105cb544ddc03d8c8" category="list-text">Data Infrastructure Insights _ 을(를) 제품 라인으로 선택합니다. 청구 공급자(NetApp 또는 AWS)를 선택하고 Data Infrastructure Insights 사용자 인터페이스의 "도움말 &gt; 지원" 메뉴를 참조하여 일련 번호와 NetApp 구독 이름 또는 AWS 고객 ID를 제공하십시오.</block>
   <block id="310e9bfbb0987bc588b6f281357bc81c" category="list-text">오류가 발생하지 않으면 "Registration Submitted successfully(등록 제출됨)" 페이지로 이동합니다. 등록에 사용되는 NSS SSO 사용자 이름과 연결된 이메일 주소는 몇 시간 이내에 "Your product is now eligible for support"라는 이메일을 받게 됩니다.</block>
-  <block id="d41c7a89c53943f7c86e80fe6a27b4dc" category="list-text">또한 새로운 NetApp 고객은 NSS(NetApp Support Site) 사용자 계정을 생성하여 향후 등록을 해야 하며 기술 지원 채팅 및 웹 티켓 지원을 위한 지원 포털에 액세스해야 합니다. 이 링크는 에<block ref="4b0df7f6652ef877e322a199d6b6edce" category="inline-link-rx"></block>있습니다. 프로세스를 신속하게 처리하기 위해 새로 등록된 Data Infrastructure Insights 일련 번호를 제공할 수 있습니다.</block>
   <block id="3757ee6dbdcabe2780104f98224939d5" category="list-text">Data Infrastructure Insights NetApp 일련 번호는 1회 등록입니다.</block>
   <block id="bc4afdcc32d9a7d1bc03c2d8ad5b1828" category="section-title">지원 정보 얻기</block>
   <block id="0ead5de583924ac8d48848b85f68e778" category="section-title">셀프 서비스 지원:</block>
@@ -3838,7 +3832,6 @@
   <block id="d509e88fe0d420e546f838c2bf3149e4" category="list-text"><block ref="d509e88fe0d420e546f838c2bf3149e4" category="inline-link-macro-rx"></block></block>
   <block id="78ce7a1ba00884845ede733dc79b1141" category="inline-link-macro">* 지원 티켓 *</block>
   <block id="1ce9a43d63998783a781596de13b0965" category="list-text"><block ref="fa5b9c38e8e5b8e1f4e408b08ce16532" category="inline-link-macro-rx"></block></block>
-  <block id="2911a8a094a0fc515bf83ad1a0cf9eba" category="list-text">* 채팅 * - NetApp 지원 담당자와 연결하여 지원을 받을 수 있습니다(평일에만 해당). 채팅은 Data Infrastructure Insights 화면의 오른쪽 위에 있는 * 도움말 &gt; 라이브 채팅 * 메뉴 옵션에서 확인할 수 있습니다.</block>
   <block id="ac2ae10a8c7bd50e80c93d5e57fc84da" category="inline-link-macro">* 영업팀에 문의 *</block>
   <block id="30a12dfd5908adfdb9f06395cb4b5c34" category="paragraph">Data Infrastructure Insights 일련 번호는 서비스 내에 * 도움말 &gt; 지원 * 메뉴를 통해 표시됩니다. 서비스에 액세스하는 데 문제가 있고 이전에 NetApp에 일련 번호를 등록한 경우 다음과 같이 NetApp Support 사이트에서 Data Infrastructure Insights 일련 번호 목록을 볼 수도 있습니다.</block>
   <block id="290bf19e1ed3fabfc80a0ac6d77f6466" category="list-text">mysupport.netapp.com 에 로그인합니다</block>
@@ -12770,4 +12763,12 @@
   <block id="c17dfb3f3f4ae3af21c5846ff8667831" category="paragraph-title">부울 주석에 대한 참고 사항</block>
   <block id="86268b3f5a0b59ea7ad7bf21fde99e9d" category="paragraph">부울 주석을 필터링할 때 필터링할 다음 값이 표시될 수 있습니다.</block>
   <block id="5d7833cba1c63365c4f78e55d7a8df24" category="list-text">*없음*: 주석이 전혀 설정되지 않은 결과만 반환합니다.  "Null" 값이라고도 합니다.</block>
+  <block id="a647293570fb3320889a900012ccf294" category="list-text">새로운 API 토큰을 만듭니다.</block>
+  <block id="174f87cfebc7cef23d8e19f4467ca8a1" category="inline-link-macro">수동 업그레이드</block>
+  <block id="6f997cc44c9290ef243df8a0a553f20e" category="list-text">다음 단계를 따르세요.<block ref="6d9abfddb9977fcf24c6a9ba410ec405" category="inline-link-macro-rx"></block> 새로운 API 토큰을 선택합니다.</block>
+  <block id="5eb77ae291c88a890426b8950858cbcc" category="paragraph">참고: Kustomize와 같은 구성 관리 도구를 사용하여 NetApp Kubernetes Monitoring Operator를 관리하는 고객은 동일한 단계에 따라 업데이트된 YAML 세트를 생성하고 다운로드하여 저장소에 푸시할 수 있습니다.</block>
+  <block id="f407e820df29faa344002c82daa17ec2" category="inline-image-macro">지원 페이지, 너비=600</block>
+  <block id="b0baa05e4ca03a2c83cff1367375a3bf" category="paragraph"><block ref="b0baa05e4ca03a2c83cff1367375a3bf" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8c4e9ad03446638823176afd0e5f8ea8" category="paragraph">Data Infrastructure Insights 평가판 모드에서 실행할 때 셀프 서비스와 이메일 지원을 제공합니다.  서비스에 가입한 후에는 지원 자격을 활성화하는 것이 좋습니다.  지원 자격을 활성화하면 웹 티켓팅 시스템과 전화를 통해 기술 지원을 받을 수 있습니다.  등록이 완료될 때까지 기본 지원 모드는 셀프 서비스입니다.  보다<block ref="055db438ec51479bd53b937469434a7e" category="inline-xref-macro-rx"></block> 아래에.</block>
+  <block id="204d060241f7de3644e3ebeef168c8aa" category="list-text">새로운 NetApp 고객의 경우 향후 등록과 기술 지원 및 웹 티켓팅을 위한 지원 포털에 액세스하려면 NetApp 지원 사이트(NSS) 사용자 계정도 만들어야 합니다.  이 링크는 다음 위치에 있습니다.<block ref="4b0df7f6652ef877e322a199d6b6edce" category="inline-link-rx"></block> .  새로 등록한 Data Infrastructure Insights 일련번호를 제공하면 프로세스를 신속하게 진행할 수 있습니다.</block>
 </blocks>
