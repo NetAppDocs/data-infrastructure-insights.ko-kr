@@ -124,7 +124,7 @@ Data Infrastructure Insights는 최대 4개의 사용자 계정 역할(계정 �
 
 == 사용자를 초대하여 계정 만들기
 
-새 사용자 계정은 BlueXP를 통해 생성됩니다. 사용자는 이메일을 통해 보낸 초대에 응답할 수 있지만 BlueXP 계정이 없는 경우 사용자는 BlueXP 초대를 수락할 수 있도록 BlueXP에 등록해야 합니다.
+새로운 사용자 계정은 NetApp 콘솔을 통해 생성됩니다.  사용자는 이메일을 통해 전송된 초대에 응답할 수 있지만, 사용자에게 콘솔 계정이 없는 경우 초대를 수락하려면 가입해야 합니다.
 
 .시작하기 전에
 * 사용자 이름은 초대의 전자 메일 주소입니다.
@@ -209,18 +209,18 @@ image:Assign_Account_Owner.png["계정 소유자 선택을 보여 주는 사용�
 ID 페더레이션 사용:
 
 * 기업 디렉토리에서 고객의 자격 증명을 사용하여 고객의 ID 관리 시스템에 인증을 위임하고 MFA(Multi-Factor Authentication)와 같은 자동 인증 정책을 수행합니다.
-* 사용자는 모든 NetApp BlueXP 서비스(단일 사인온)에 한 번 로그인합니다.
+* 사용자는 모든 NetApp 콘솔 서비스에 한 번만 로그인합니다(Single Sign On).
 
 
-모든 클라우드 서비스의 NetApp BlueXP에서 사용자 계정을 관리합니다. 기본적으로 인증은 BlueXP 로컬 사용자 프로필을 통해 수행됩니다. 다음은 이 프로세스에 대한 간단한 개요입니다.
+모든 클라우드 서비스의 사용자 계정은 NetApp 콘솔에서 관리됩니다.  기본적으로 인증은 콘솔 로컬 사용자 프로필을 사용하여 수행됩니다.  해당 프로세스에 대한 간단한 개요는 다음과 같습니다.
 
-image:BlueXP_Authentication_Local.png["로컬을 사용한 BlueXP 인증"]
+image:Authentication_Local.png["로컬을 사용한 인증"]
 
-그러나 일부 고객은 자신의 ID 공급자를 사용하여 Data Infrastructure Insights 및 기타 NetApp BlueXP  서비스에 대한 사용자를 인증하려고 합니다. ID 페더레이션을 사용하면 NetApp BlueXP 계정은 회사 디렉터리의 자격 증명을 사용하여 인증됩니다.
+그러나 일부 고객은 자체 ID 공급자를 사용하여 Data Infrastructure Insights 및 기타 NetApp 콘솔 서비스에 대한 사용자를 인증하려고 합니다.  ID 페더레이션을 사용하면 NetApp 콘솔 계정은 회사 디렉토리의 자격 증명을 사용하여 인증됩니다.
 
 다음은 이 프로세스의 간단한 예입니다.
 
-image:BlueXP_Authentication_Federated.png["Federation을 사용한 BlueXP 인증"]
+image:Authentication_Federated.png["페더레이션을 사용한 인증"]
 
 위 다이어그램에서 사용자가 Data Infrastructure Insights에 액세스할 때 해당 사용자는 인증을 위해 고객의 ID 관리 시스템으로 연결됩니다. 계정이 인증되면 사용자는 Data Infrastructure Insights 테넌트 URL로 연결됩니다.
 
@@ -228,16 +228,16 @@ image:BlueXP_Authentication_Federated.png["Federation을 사용한 BlueXP 인증
 
 === ID 페더레이션을 사용하도록 설정하는 중입니다
 
-BlueXP는 Auth0을 사용하여 Identity Federation을 구현하고 ADFS(Active Directory Federation Services) 및 Microsoft Azure AD(Active Directory) 등의 서비스와 통합됩니다. ID 페더레이션을 구성하려면 을 link:https://services.cloud.netapp.com/misc/federation-support["BlueXP Federation 지침"]참조하십시오.
+콘솔은 Auth0를 사용하여 ID 페더레이션을 구현하고 ADFS(Active Directory Federation Services) 및 Microsoft Azure Active Directory(AD)와 같은 서비스와 통합합니다.  ID 페더레이션을 구성하려면 다음을 참조하세요.link:https://services.cloud.netapp.com/misc/federation-support["연방 지침"] .
 
 
-NOTE: 데이터 인프라 Insights에서 SSO를 사용하려면 먼저 BlueXP  ID 페더레이션을 구성해야 합니다.
+NOTE: Data Infrastructure Insights 에서 SSO를 사용하려면 먼저 Identity Federation을 구성해야 합니다.
 
-BlueXP 에서 변경되는 ID 페더레이션은 데이터 인프라 통찰력뿐만 아니라 모든 NetApp BlueXP  서비스에도 적용된다는 것을 이해하는 것이 중요합니다. 고객은 자신이 소유한 각 BlueXP 제품의 NetApp 팀과 이 변경 사항에 대해 논의하여 사용 중인 구성이 ID Federation과 연동되는지 또는 계정을 조정해야 하는 경우. 고객은 ID 페더레이션의 변경에 내부 SSO 팀을 참여시켜야 합니다.
+ID 페더레이션을 변경하면 Data Infrastructure Insights 뿐만 아니라 모든 NetApp 콘솔 서비스에도 적용된다는 점을 이해하는 것이 중요합니다.  고객은 자신이 소유한 각 제품의 NetApp 팀과 이러한 변경 사항을 논의하여 사용 중인 구성이 ID 페더레이션과 호환되는지 또는 모든 계정에 조정이 필요한지 확인해야 합니다.  고객 역시 ID 연합으로의 변경 작업에 내부 SSO 팀을 참여시켜야 합니다.
 
-또한 ID 페더레이션이 활성화되면 회사 ID 공급자를 변경(SAML에서 Microsoft AD로 이동)할 때 사용자 프로필을 업데이트하기 위해 BlueXP의 문제 해결/변경/주의가 필요할 수 있음을 인지해야 합니다.
+또한 ID 페더레이션이 활성화되면 회사의 ID 공급자에 대한 변경 사항(예: SAML에서 Microsoft AD로의 전환)으로 인해 사용자 프로필을 업데이트하기 위한 문제 해결/변경/주의가 필요할 가능성이 높다는 점을 알아두는 것도 중요합니다.
 
-이 문제나 기타 페더레이션 문제에 대해 에서 지원 티켓을 열고 "BlueXP .NetApp.com> 페더레이션 문제" 범주를 선택할 수 https://mysupport.netapp.com/site/help[] 있습니다.
+이 문제나 기타 연방 문제에 대해서는 다음에서 지원 티켓을 열 수 있습니다. https://mysupport.netapp.com/site/help[] .
 
 
 
@@ -246,9 +246,9 @@ BlueXP 에서 변경되는 ID 페더레이션은 데이터 인프라 통찰력�
 관리자는 사용자를 초대하는 것 외에도 사내 도메인의 모든 사용자를 개별적으로 초대하지 않고도 * SSO(Single Sign-On) 사용자 자동 프로비저닝 * 에 대한 Data Infrastructure Insights 액세스를 활성화할 수 있습니다. SSO를 사용하면 동일한 도메인 이메일 주소를 가진 모든 사용자가 회사 자격 증명을 사용하여 Data Infrastructure Insights에 로그인할 수 있습니다.
 
 
-NOTE: _SSO 사용자 자동 프로비저닝 _ 은(는) Data Infrastructure Insights Premium Edition에서 사용할 수 있으며, Data Infrastructure Insights에서 사용하려면 먼저 구성해야 합니다. SSO 사용자 자동 프로비저닝 구성에는 link:https://services.cloud.netapp.com/misc/federation-support["ID 페더레이션"]위의 섹션에 설명된 대로 NetApp BlueXP 를 통해 포함됩니다. 페더레이션을 사용하면 SAML(Security Assertion Markup Language) 및 OIDC(OpenID Connect)와 같은 공개 표준을 사용하여 기업 디렉터리의 자격 증명을 사용하여 NetApp BlueXP 계정에 액세스할 수 있습니다.
+NOTE: _SSO 사용자 자동 프로비저닝_은 Data Infrastructure Insights Premium Edition에서 사용할 수 있으며, Data Infrastructure Insights 에서 활성화하려면 먼저 구성해야 합니다.  SSO 사용자 자동 프로비저닝 구성에는 다음이 포함됩니다.link:https://services.cloud.netapp.com/misc/federation-support["ID 페더레이션"] 위 섹션에 설명된 대로 NetApp 콘솔을 통해.  페더레이션을 통해 단일 로그인 사용자는 SAML(Security Assertion Markup Language 2.0) 및 OIDC(OpenID Connect)와 같은 개방형 표준을 사용하여 회사 디렉토리의 자격 증명을 사용하여 NetApp 콘솔 계정에 액세스할 수 있습니다.
 
-SSO 사용자 자동 프로비저닝 _ 을(를) 구성하려면 * 관리자 > 사용자 관리 * 페이지에서 먼저 BlueXP ID 페더레이션을 설정해야 합니다. 배너에서 * Set Up Federation * 링크를 선택하여 BlueXP Federation으로 이동합니다. 구성이 완료되면 Data Infrastructure Insights 관리자가 SSO 사용자 로그인을 활성화할 수 있습니다. 관리자가 _SSO 사용자 자동 프로비저닝_ 을(를) 사용하도록 설정할 경우, 모든 SSO 사용자(예: 게스트 또는 사용자)의 기본 역할을 선택합니다. SSO를 통해 로그인하는 사용자는 이 기본 역할을 갖게 됩니다.
+_SSO 사용자 자동 프로비저닝_을 구성하려면 *관리자 > 사용자 관리* 페이지에서 먼저 ID 페더레이션을 설정해야 합니다.  배너에서 *페더레이션 설정* 링크를 선택하여 콘솔 페더레이션으로 진행하세요.  구성이 완료되면 Data Infrastructure Insights 관리자가 SSO 사용자 로그인을 활성화할 수 있습니다.  관리자가 _SSO 사용자 자동 프로비저닝_을 활성화하면 모든 SSO 사용자에 대한 기본 역할(예: 게스트 또는 사용자)을 선택합니다.  SSO를 통해 로그인하는 사용자는 해당 기본 역할을 갖게 됩니다.
 
 image:Roles_federation_Banner.png["페더레이션을 사용한 사용자 관리"]
 

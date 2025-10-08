@@ -170,7 +170,7 @@ Data Infrastructure Insights는 Brocade FC 스위치 데이터 수집기에서 �
 | 문제: | 다음을 시도해 보십시오. 
 
 
-| 성능 수집이 "SNMP 요청 전송 중 시간 초과"와 함께 실패합니다. | 쿼리 변수 및 스위치 구성에 따라 일부 쿼리가 기본 시간 제한을 초과할 수 있습니다. link:https://kb.netapp.com/Cloud/BlueXP/DII/Data_Infrastructure_Insights_Brocade_data_source_fails_performance_collection_with_a_timeout_due_to_default_SNMP_configuration["자세한 정보"].. 
+| 성능 수집이 "SNMP 요청 전송 중 시간 초과"와 함께 실패합니다. | 쿼리 변수와 스위치 구성에 따라 일부 쿼리는 기본 시간 제한을 초과할 수 있습니다. link:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs/Data_Infrastructure_Insights_Brocade_data_source_fails_performance_collection_with_a_timeout_due_to_default_SNMP_configuration["자세한 정보"] . 
 
 
 | ...SNMP 테이블에서 행 중복이 발견되었습니다...라는 오류로 성능 수집이 실패합니다. | DII에서 잘못된 SNMP 응답을 감지했습니다. FOS 8.2.3e를 사용 중일 가능성이 높습니다 . 8.2.3e2 이상으로 업그레이드하세요. 

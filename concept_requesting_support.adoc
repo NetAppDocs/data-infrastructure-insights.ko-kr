@@ -80,7 +80,7 @@ NetApp 다양한 방법으로 Data Infrastructure Insights 에 대한 지원을 
 
 이러한 지원 옵션은 평가판 모드에서 사용할 수 있으며 연중무휴 24시간 무료로 제공됩니다.
 
-* * https://kb.netapp.com/Cloud/BlueXP/DII[KnowledgeBase]*
+* * https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs [지식베이스]*
 +
 이 섹션의 링크를 클릭하면 NetApp Knowledgebase로 이동하고 관련 기사, 방법 등을 검색할 수 있습니다.
 
@@ -113,7 +113,7 @@ NOTE: NetApp 클라우드 제품을 사용하려면 에 등록해야 <<activatin
 * link:https://mysupport.netapp.com/portal?_nfpb=true&_st=initialPage=true&_pageLabel=submitcase["* 지원 티켓 *"]
 
 
-링크를 클릭하여 영업 지원을 요청할 수도 link:https://bluexp.netapp.com/contact-cds["* 영업팀에 문의 *"]있습니다.
+*영업팀에 문의* 링크를 클릭하여 영업 지원을 요청할 수도 있습니다.
 
 Data Infrastructure Insights 일련 번호는 서비스 내에 * 도움말 > 지원 * 메뉴를 통해 표시됩니다. 서비스에 액세스하는 데 문제가 있고 이전에 NetApp에 일련 번호를 등록한 경우 다음과 같이 NetApp Support 사이트에서 Data Infrastructure Insights 일련 번호 목록을 볼 수도 있습니다.
 

@@ -74,6 +74,6 @@ image:ProxyEndpoints_NewTable.png["프록시 끝점 테이블"]
 
 == 리소스
 
-추가 문제 해결 정보는 에서 찾을 link:https://kb.netapp.com/Cloud/BlueXP/DII["NetApp 기술 자료"]수 있습니다(지원 로그인 필요).
+추가 문제 해결 팁은 다음에서 찾을 수 있습니다.link:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs["NetApp 기술 자료"] (지원 로그인이 필요합니다).
 
 추가 지원 정보는 Data Infrastructure Insights  페이지에서 확인할 수 link:concept_requesting_support.html["지원"]있습니다.

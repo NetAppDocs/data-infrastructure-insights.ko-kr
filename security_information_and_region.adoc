@@ -40,7 +40,7 @@ Data Infrastructure Insights는 다음 정보를 저장합니다.
 
 * 사용자 액세스 데이터
 +
-사용자 권한 부여와 관련된 데이터를 포함하여 NetApp BlueXP 이 지역 데이터 인프라 인사이트 사이트와 통신할 수 있도록 하는 인증 및 액세스 정보입니다.
+NetApp 콘솔이 지역별 Data Infrastructure Insights 사이트와 통신할 수 있도록 하는 인증 및 액세스 정보(사용자 권한 부여와 관련된 데이터 포함)입니다.
 
 * 스토리지 워크로드 보안 사용자 디렉토리 데이터
 +
@@ -76,7 +76,7 @@ Data Infrastructure Insights는 환경이 생성되는 지역에 따라 정보�
 다음 정보는 Data Infrastructure Insights 환경을 호스팅하는 지역에 상관없이 미국에 있습니다.
 
 * 사이트/계정 소유자와 같은 환경 사이트("테넌트"라고도 함) 정보
-* 사용자 승인과 관련된 모든 작업을 포함하여 NetApp BlueXP 이 지역별 데이터 인프라 인사이트 사이트와 통신할 수 있도록 하는 정보.
+* NetApp 콘솔이 사용자 권한 부여와 관련된 모든 내용을 포함하여 지역별 Data Infrastructure Insights 사이트와 통신할 수 있도록 하는 정보입니다.
 * Data Infrastructure Insights 사용자와 테넌트 간의 관계와 관련된 정보입니다.
 
 

@@ -25,19 +25,19 @@ link:task_troubleshooting_linux_acquisition_unit_problems.html["Linux 획득 장
 | Data Infrastructure Insights는 6시간마다 자동으로 로그아웃됩니다 | 이는 비활성화된 브라우저 타사 쿠키가 원인입니다. 사용자는 모든 타사 쿠키를 사용하도록 브라우저를 구성하거나 더 좁은 예외 목록을 사용하여 Data Infrastructure Insights를 사용하도록 설정할 수 있습니다. 예: 브라우저의 설정을 엽니다. "모든 쿠키 허용" 옵션을 선택합니다. * 또는 * "타사 쿠키 차단"을 선택하고 _[\ *.]auth0.com_및 _[ *.]NetApp.com_에 대한 예외를 추가합니다. Microsoft Edge는 Chrome과 동일한 형식의 예외 항목을 접습니다. Firefox에서 쿠키 예외는 간단히 _auth0.com _ 및 _netapp.com _ 로 지정됩니다. 
 
 
-| BlueXP 계정이 있지만 BlueXP에 로그인할 수 없습니다. | 에서 티켓을 엽니다 https://mysupport.netapp.com/site/help[]. "blueXP.netapp.com > 계정/로그인 문제" 또는 "bluexp.netapp.com > 페더레이션 문제" 범주를 선택합니다. 이는 특히 BlueXP 문제 또는 질문을 대상으로 한 것입니다. 기타 모든 Data Infrastructure Insights 기술 지원 문제는 에 문의하십시오link:concept_requesting_support.html["NetApp 지원"]. 
+| 콘솔 계정이 있지만 로그인할 수 없습니다. | 티켓을 엽니다 https://mysupport.netapp.com/site/help[] .  카테고리 console.netapp.com > 계정/로그인 문제” 또는 console.netapp.com > 페더레이션 문제”를 선택하세요.  이 게시판은 콘솔 관련 문제나 질문에 대한 게시판입니다.  기타 모든 Data Infrastructure Insights 기술 지원 문제에 대해서는 다음 연락처로 문의하세요.link:concept_requesting_support.html["NetApp 지원"] . 
 
 
-| Data Infrastructure Insights에 초대를 받았지만 "인증되지 않음"이라는 메시지가 표시됩니다. | BlueXP 계정에 등록했는지 또는 조직에서 BlueXP를 통해 SSO 로그인을 사용하는지 확인하십시오. BlueXP  프로필 이메일 주소가 Data Infrastructure Insights 시작 이메일에 표시된 이메일 주소와 일치하는지 확인하십시오. 이메일이 일치하지 않으면 올바른 이메일 주소로 새 초대를 요청하십시오. 
+| Data Infrastructure Insights에 초대를 받았지만 "인증되지 않음"이라는 메시지가 표시됩니다. | 콘솔 계정에 가입했는지 또는 귀하의 조직에서 콘솔을 통한 SSO 로그인을 사용하는지 확인하세요.  귀하의 콘솔 프로필 이메일 주소가 Data Infrastructure Insights 환영 이메일에 표시된 이메일 주소와 일치하는지 확인하세요.  이메일 주소가 일치하지 않으면 올바른 이메일 주소로 새 초대장을 요청하세요. 
 
 
-| BlueXP 에서 로그아웃했고 Data Infrastructure Insights에서 자동으로 로그아웃되었습니다. | NetApp 클라우드 서비스 전체에서 SSO(Single Sign-On)가 모든 Data Infrastructure Insights 세션에서 로그아웃됩니다. 여러 Data Infrastructure Insights 계정에 액세스할 수 있는 경우 한 계정에서 로그아웃하면 모든 활성 세션이 로그아웃됩니다. 계정에 액세스하려면 다시 로그인하십시오. 
+| 콘솔에서 로그아웃했고 Data Infrastructure Insights 에서도 자동으로 로그아웃되었습니다. | NetApp 클라우드 서비스 전체에서 SSO(Single Sign-On)가 모든 Data Infrastructure Insights 세션에서 로그아웃됩니다. 여러 Data Infrastructure Insights 계정에 액세스할 수 있는 경우 한 계정에서 로그아웃하면 모든 활성 세션이 로그아웃됩니다. 계정에 액세스하려면 다시 로그인하십시오. 
 
 
-| 며칠 후에 자동으로 로그아웃되었습니다. | NetApp 클라우드 계정은 며칠 간격으로 다시 인증해야 합니다(현재 BlueXP 설정은 7일). 계정에 액세스하려면 다시 로그인하십시오. 
+| 며칠 후에 자동으로 로그아웃되었습니다. | NetApp Cloud 계정은 며칠마다 재인증이 필요합니다(현재 콘솔 설정은 7일입니다).  계정에 다시 로그인하세요. 
 
 
-| "더 이상 로그인할 수 없습니다"라는 오류 메시지가 나타납니다. | Data Infrastructure Insights에 대한 액세스 권한을 확인하려면 계정 관리자에게 문의하십시오. BlueXP  프로필 이메일 주소가 Data Infrastructure Insights 시작 이메일에 표시된 이메일 주소와 일치하는지 확인하십시오 
+| "더 이상 로그인할 수 없습니다"라는 오류 메시지가 나타납니다. | Data Infrastructure Insights 에 대한 액세스를 확인하려면 계정 관리자에게 문의하세요.  귀하의 콘솔 프로필 이메일 주소가 Data Infrastructure Insights 환영 이메일에 표시된 이메일 주소와 일치하는지 확인하세요. 
 
 
 | 기타 로그인 오류 | Chrome에서 시크릿 모드를 시도하거나 브라우저 기록, 쿠키 및 캐시를 지웁니다. 다른 브라우저 프로필(예 Chrome - 사람 추가). 
@@ -64,7 +64,7 @@ link:task_troubleshooting_linux_acquisition_unit_problems.html["Linux 획득 장
 
 == 리소스
 
-추가 문제 해결 정보는 에서 찾을 link:https://kb.netapp.com/Cloud/BlueXP/DII["NetApp 기술 자료"]수 있습니다(지원 로그인 필요).
+추가 문제 해결 팁은 다음에서 찾을 수 있습니다.link:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs["NetApp 기술 자료"] (지원 로그인이 필요합니다).
 
 추가 지원 정보는 Data Infrastructure Insights  페이지에서 확인할 수 link:concept_requesting_support.html["지원"]있습니다.
 
