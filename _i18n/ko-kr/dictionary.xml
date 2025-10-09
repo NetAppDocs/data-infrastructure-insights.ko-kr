@@ -12771,4 +12771,26 @@
   <block id="2f0b05ac17e2cbf6a46b1c047243119b" category="paragraph">문제가 발생하면 시도해 볼 수 있는 몇 가지 사항:</block>
   <block id="5ae21ce2895991936f988458e0d59550" category="cell">_trafficUtilization_ 또는 _trafficRate_와 같은 지표의 범례에서 &lt;0, =0 또는 &gt;0을 볼 수 있습니다.</block>
   <block id="08e0ca793e3dec21e2eea30949c98088" category="cell">이런 일은 0.000123처럼 측정값이 소수점 이하 두 자리 이하인 매우 드문 경우에 발생할 수 있습니다.  시간 창을 확장하면 지표를 더 효과적으로 분석하는 데 도움이 될 수 있습니다.</block>
+  <block id="99dfa28920a40a7be0858c50f989a3e5" category="section-title">2025년 10월</block>
+  <block id="7ce7a14f7a7ab13259d78d9c587f7511" category="section-title">인프라 상태: 스토리지 및 패브릭 위험에 대한 즉각적인 가시성</block>
+  <block id="6b389c7abe5315fe2f49fdfe2039f913" category="paragraph">새로운 *인프라 상태* 기능을 사용하면 스토리지와 패브릭 전반의 잠재적 위험을 즉시 파악할 수 있습니다.  단일 색상으로 구분된 대시보드를 통해 통합된 위험 가시성을 확보하고, 가동 중지 시간을 최소화하고 매출 손실을 빠르게 완화하는 데 도움이 됩니다.</block>
+  <block id="98c92459566d46664ff09992678f57e4" category="paragraph">100점 미만의 점수는 잠재적인 문제를 나타냅니다. 점수가 낮을수록 리소스의 건강성이 낮음을 의미합니다.  데이터 센터 또는 지역별로 리소스를 그룹화하여 직관적이고 통합된 상태 점수를 통해 중요한 영역의 우선순위를 쉽게 지정하고 문제를 해결할 수 있습니다.</block>
+  <block id="8d76e9d5c3edb494701feea84d6ebc83" category="inline-image-macro">빨간색, 주황색, 녹색 리소스 상태 점수를 표시하는 인프라 상태 대시보드, 너비=600</block>
+  <block id="09d53ec06bd688b410a942777bbb1b63" category="paragraph"><block ref="09d53ec06bd688b410a942777bbb1b63" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="95fe62dd1c108211a44df9ddcea7cb02" category="paragraph">버튼을 클릭하면 화면 슬라이드아웃 패널에서 자세한 정보를 볼 수 있으며, 주의가 필요한 문제를 빠르게 찾아내고 시스템의 보안과 복원력을 유지할 수 있습니다.</block>
+  <block id="5c15a89f3dfcc5cf28e75e2462b8b75d" category="inline-image-macro">인프라 상태 세부 정보 패널, 너비=600</block>
+  <block id="698352f404a2b3d6a5b56b12386329b8" category="paragraph"><block ref="698352f404a2b3d6a5b56b12386329b8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="df8b5251af7e98385c1a69f727713bf1" category="section-title">정확한 경보를 위한 다중 조건 모니터</block>
+  <block id="6709c50f3a253900061ba24b2457f82a" category="paragraph">모든 메트릭 모니터에 선택적 두 번째 조건을 추가하여 경고 소음을 줄이고 모니터링 정확도를 향상시킵니다.  두 가지 조건이 모두 충족될 때만 알림이 트리거되므로 사용자에게 가장 중요한 상황에 초점을 맞춘 더욱 타겟팅된 알림을 받을 수 있습니다.</block>
+  <block id="19d168d964447f9cb9ed51c40e9beb67" category="inline-image-macro">모니터에 두 번째 조건 추가, 너비=600</block>
+  <block id="4c1f0d772f71f8ead992bbfa6c328771" category="paragraph"><block ref="4c1f0d772f71f8ead992bbfa6c328771" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f36d230c5a43a53a188667b9257b8ddc" category="section-title">쿼리 개선 사항: 한눈에 보는 개체 세부 정보</block>
+  <block id="05814820cd0dcd3b5db2b55adc94c207" category="paragraph">객체 쿼리 결과 목록에서 행을 선택하면 선택한 객체에 대한 세부 정보 패널이 열립니다.  지표와 속성(객체 쿼리의 기본 보기), 알림 및 변경 사항, 성능 및 상태 점수를 빠르게 보거나 관련 리소스를 탐색해 보세요.  모든 관련 객체 정보를 손쉽게 확인할 수 있습니다.</block>
+  <block id="b398dd7f0628e0209062c867a19f996c" category="inline-image-macro">메트릭 및 속성 탭으로 기본 설정된 쿼리 슬라이드아웃 패널의 그림, 너비=600</block>
+  <block id="a8ee3fea585c41aa1d8564b06059227c" category="paragraph"><block ref="a8ee3fea585c41aa1d8564b06059227c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f410f0ddc632aab6b49db918a669ccd7" category="paragraph">두 가지 새로운 API를 사용하면 워크로드 보안 환경을 더욱 효과적으로 제어할 수 있습니다.</block>
+  <block id="ebf69be04c82e1675fd92ad104156771" category="list-text">_GET /rest/v1/cloudsecure/activities/groups_를 사용하여 그룹을 보고 관리하세요.</block>
+  <block id="2a6cfdee3521e533287663e97fd888a4" category="list-text">_POST /rest/v1/cloudsecure/collectors/{collector-uuid}/status_를 사용하여 데이터 수집기를 일시 중지하고 다시 시작합니다.</block>
+  <block id="faaf8042743d6c4413633d0cd0603f36" category="paragraph">또한, 워크로드 보안 역할 권한 검사의 보안이 한층 더 강화되었습니다.  보안이 강화됨에 따라 일부 기존 사용자는 수집기를 추가할 때 권한 문제를 겪을 수 있습니다.  다음 지침에 따라 사용자 권한을 확인하세요.<block ref="90660a14ff858b5310896684a88b82bc" category="inline-link-macro-rx"></block> .</block>
+  <block id="0b472b999667cd3663a08684d640b8a4" category="summary">2018-2019년 Data Infrastructure Insights 에서 사용 가능한 새로운 기능 및 기능</block>
 </blocks>
