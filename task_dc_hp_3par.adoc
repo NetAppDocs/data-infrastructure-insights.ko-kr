@@ -2,42 +2,42 @@
 sidebar: sidebar 
 permalink: task_dc_hp_3par.html 
 keywords: data collector, 3PAR, HP, HP 3PAR, HPE, 
-summary: 'HP Enterprise Alletra 9000/Primera(이전의 3PAR) 데이터 수집기 구성' 
+summary: 'HP Enterprise Alletra 9000 / Primera(이전 3PAR) 데이터 수집기 구성.' 
 ---
-= HP Enterprise Alletra 9000/Primera Storage 데이터 수집기
+= HP Enterprise Alletra 9000 / Primera 스토리지 데이터 수집기
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights는 HP Enterprise Alletra 9000/HP Enterprise Primera(이전 3PAR) 데이터 수집기를 사용하여 인벤토리 및 성능을 검색합니다.
+Data Infrastructure Insights HP Enterprise Alletra 9000 / HP Enterprise Primera(이전 3PAR) 데이터 수집기를 사용하여 인벤토리와 성능을 파악합니다.
 
 
 
-== 용어
+== 술어
 
-Data Infrastructure Insights는 이 데이터 수집기에서 다음과 같은 인벤토리 정보를 수집합니다. Data Infrastructure Insights에서 구입한 각 자산 유형에 대해 이 자산에 사용되는 가장 일반적인 용어가 표시되어 있습니다. 이 데이터 수집기를 보거나 문제를 해결할 때 다음 용어를 염두에 두십시오.
+Data Infrastructure Insights 이 데이터 수집기로부터 다음과 같은 인벤토리 정보를 수집합니다.  Data Infrastructure Insights 에서 수집한 각 자산 유형에 대해 해당 자산에 가장 일반적으로 사용되는 용어가 표시됩니다.  이 데이터 수집기를 보거나 문제를 해결할 때 다음 용어를 염두에 두십시오.
 
 [cols="2*"]
 |===
-| 필드에 입력합니다 | 설명 
+| 필드 | 설명 
 
 
-| 물리 디스크 | 디스크 
+| 물리적 디스크 | 디스크 
 
 
-| 스토리지 시스템 | 스토리지 
+| 저장 시스템 | 스토리지 
 
 
-| 컨트롤러 노드 | 스토리지 노드 
+| 컨트롤러 노드 | 저장 노드 
 
 
 | 공통 프로비저닝 그룹 | 스토리지 풀 
 
 
-| 가상 볼륨 | 볼륨 
+| 가상 볼륨 | 용량 
 |===
-참고: 이러한 용어 매핑은 일반적인 용어 매핑일 뿐이며 이 데이터 수집기의 모든 경우를 나타내는 것은 아닙니다.
+참고: 이는 일반적인 용어 매핑일 뿐이며 이 데이터 수집기의 모든 사례를 나타내지 않을 수 있습니다.
 
 
 
@@ -45,11 +45,11 @@ Data Infrastructure Insights는 이 데이터 수집기에서 다음과 같은 �
 
 이 데이터 수집기를 구성하려면 다음이 필요합니다.
 
-* InServ 클러스터의 IP 주소 또는 FQDN입니다
-* 인벤토리의 경우 StoreServ 서버에 대한 읽기 전용 사용자 이름 및 암호입니다
+* InServ 클러스터의 IP 주소 또는 FQDN
+* 재고의 경우 StoreServ Server에 대한 읽기 전용 사용자 이름 및 비밀번호
 * 성능을 위해 StoreServ 서버에 대한 읽기-쓰기 사용자 이름 및 암호
 * 포트 요구 사항: 22(인벤토리 수집), 5988 또는 5989(성능 수집) [참고: 성능은 StoreServ OS 3.x+에서 지원됩니다.]
-* 성능 수집을 위해 SSH를 통해 스토리지에 로그인하여 SMI-S가 설정되어 있는지 확인합니다.
+* 성능 수집을 위해 SSH를 통해 어레이에 로그인하여 SMI-S가 활성화되어 있는지 확인하세요.
 
 
 
@@ -58,22 +58,22 @@ Data Infrastructure Insights는 이 데이터 수집기에서 다음과 같은 �
 
 [cols="2*"]
 |===
-| 필드에 입력합니다 | 설명 
+| 필드 | 설명 
 
 
-| 스토리지 IP 주소입니다 | StoreServ 클러스터의 스토리지 IP 주소 또는 정규화된 도메인 이름입니다 
+| 저장 IP 주소 | StoreServ 클러스터의 스토리지 IP 주소 또는 정규화된 도메인 이름 
 
 
-| 사용자 이름 | StoreServ 서버의 사용자 이름입니다 
+| 사용자 이름 | StoreServ 서버의 사용자 이름 
 
 
-| 암호 | StoreServ 서버에 사용되는 암호입니다 
+| 비밀번호 | StoreServ 서버에 사용되는 비밀번호 
 
 
-| SMI-S 사용자 이름 | SMI-S Provider 호스트의 사용자 이름입니다 
+| SMI-S 사용자 이름 | SMI-S 공급자 호스트의 사용자 이름 
 
 
-| SMI-S 암호 | SMI-S Provider 호스트에 사용되는 암호입니다 
+| SMI-S 비밀번호 | SMI-S 공급자 호스트에 사용되는 비밀번호 
 |===
 
 
@@ -81,36 +81,36 @@ Data Infrastructure Insights는 이 데이터 수집기에서 다음과 같은 �
 
 [cols="2*"]
 |===
-| 필드에 입력합니다 | 설명 
+| 필드 | 설명 
 
 
-| 재고 폴링 간격(분) | 재고 조사 사이의 간격입니다. 기본값은 40분입니다. 
+| 재고 폴링 간격(분) | 재고 조사 간격. 기본값은 40분입니다. 
 
 
-| SMI-S 접속 | SMI-S 공급자에 연결하는 데 사용되는 프로토콜입니다 
+| SMI-S 연결 | SMI-S 공급자에 연결하는 데 사용되는 프로토콜 
 
 
-| SMI-S 기본 포트를 재정의합니다 | 비어 있는 경우 SMI-S 접속의 기본 포트를 사용하고, 그렇지 않은 경우 사용할 접속 포트를 입력합니다 
+| SMI-S 기본 포트 재정의 | 비어 있는 경우 SMI-S Connectivity의 기본 포트를 사용하고, 그렇지 않은 경우 사용할 연결 포트를 입력합니다. 
 
 
-| 성능 폴링 간격(초) | 성능 폴링 간격입니다. 기본값은 300초입니다. 
+| 성능 폴링 간격(초) | 성과 여론조사 간격. 기본값은 300초입니다. 
 |===
 
 
 == 문제 해결
 
-이 데이터 수집기에서 문제가 발생할 경우 다음과 같은 방법을 시도해 보십시오.
+이 데이터 수집기에 문제가 발생하면 시도해 볼 수 있는 몇 가지 사항은 다음과 같습니다.
 
 
 
-=== 인벤토리
+=== 목록
 
 [cols="2*"]
 |===
-| 문제: | 다음을 시도해 보십시오. 
+| 문제: | 다음을 시도해 보세요: 
 
 
-| "showsys" 명령으로 결과가 반환되지 않습니다. | 명령줄에서 "showsys" 및 "showversion -a"를 실행하고 버전이 스토리지에서 지원되는지 확인합니다. 
+| "showsys" 명령은 아무런 결과도 반환하지 않습니다. | 명령줄에서 "showsys"와 "showversion -a"를 실행하여 해당 버전이 어레이에서 지원되는지 확인합니다. 
 |===
 
 
@@ -118,15 +118,15 @@ Data Infrastructure Insights는 이 데이터 수집기에서 다음과 같은 �
 
 [cols="2*"]
 |===
-| 문제: | 다음을 시도해 보십시오. 
+| 문제: | 다음을 시도해 보세요: 
 
 
-| 연결 또는 로그인하지 못했습니다. 공급자 초기화에 실패했습니다. | 숫자로만 구성된 스토리지 이름은 SMI-S 서버에 문제를 일으킬 수 있습니다. 스토리지 이름을 변경해 보십시오. 
+| 연결 또는 로그인에 실패했습니다.  공급자 초기화에 실패했습니다. | 숫자로만 구성된 배열 이름은 SMI-S 서버에 문제를 일으킬 수 있습니다.  배열 이름을 변경해보세요. 
 
 
-| 구성된 SMI-S 사용자에게 도메인이 없습니다 | 구성된 SMI-S 사용자에게 적절한 도메인 권한을 부여합니다 
+| SMI-S 사용자가 구성한 도메인이 없습니다. | 구성된 SMI-S 사용자에게 적절한 도메인 권한을 부여합니다. 
 
 
-| Data Infrastructure Insights는 SMI-S 서비스에 연결/로그인할 수 없다고 합니다. | CI AU와 스토리지 사이에 5988 또는 5989로의 TCP 연결을 차단하는 방화벽이 없는지 확인합니다. 이 작업이 완료되고 방화벽이 없음을 확인한 경우 어레이에 SSH를 사용하고 "showcim" 명령을 사용하여 확인해야 합니다. 서비스 활성화 여부 확인 * HTTPS가 활성화되어 있는지 * HTTPS 포트는 5989여야 합니다. 모든 포트가 활성화되어 있으면 “stopcim”을 수행한 다음 “startcim”을 시도하여 CIM을 다시 시작할 수 있습니다(예 SMI-S 서비스). 
+| Data Infrastructure Insights SMI-S 서비스에 연결/로그인할 수 없다고 합니다. | CI AU와 어레이 사이에 CI AU가 5988 또는 5989에 TCP 연결을 하는 것을 차단하는 방화벽이 없는지 확인하세요.  이 작업이 완료되고 방화벽이 없는지 확인했다면 어레이에 SSH를 실행하고 "showcim" 명령을 사용하여 확인해야 합니다.  다음 사항을 확인하세요. * 서비스가 활성화되어 있는지 * HTTPS가 활성화되어 있는지 * HTTPS 포트가 5989인지 모든 사항이 해당되는 경우 "stopcim"을 시도한 다음 "startcim"을 실행하여 CIM(예: SMI-S 서비스)을 다시 시작할 수 있습니다. 
 |===
-추가 정보는 페이지 또는 에서 찾을 link:concept_requesting_support.html["지원"]link:reference_data_collector_support_matrix.html["Data Collector 지원 매트릭스"]수 있습니다.
+추가 정보는 다음에서 찾을 수 있습니다.link:concept_requesting_support.html["지원하다"] 페이지 또는link:reference_data_collector_support_matrix.html["데이터 수집기 지원 매트릭스"] .

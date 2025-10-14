@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_dc_emc_vnx_block.html 
 keywords: data collector, EMC, clariion, VNX block 
-summary: 'Dell EMC VNX Block Storage(이전 CLARiX)를 구성합니다.' 
+summary: 'DELL EMC VNX 블록 스토리지(이전 CLARiiON) 구성.' 
 ---
 = Dell EMC VNX Block Storage(NaviCLI) 데이터 수집기
 :hardbreaks:
@@ -10,17 +10,17 @@ summary: 'Dell EMC VNX Block Storage(이전 CLARiX)를 구성합니다.'
 
 
 [role="lead"]
-Data Infrastructure Insights는 Dell EMC VNX Block Storage(NaviSec) 데이터 수집기(이전의 CLARiX)를 사용하여 인벤토리 및 성능 데이터를 얻습니다.
+Data Infrastructure Insights Dell EMC VNX Block Storage(NaviSec) 데이터 수집기(이전 CLARiiON)를 사용하여 인벤토리 및 성능 데이터를 수집합니다.
 
 
 
-== 용어
+== 술어
 
-Data Infrastructure Insights는 EMC VNX Block Storage Data Collector에서 다음과 같은 인벤토리 정보를 가져옵니다. Data Infrastructure Insights에서 구입한 각 자산 유형에 대해 이 자산에 사용되는 가장 일반적인 용어가 표시되어 있습니다. 이 데이터 수집기를 보거나 문제를 해결할 때 다음 용어를 염두에 두십시오.
+Data Infrastructure Insights EMC VNX Block Storage 데이터 수집기에서 다음과 같은 인벤토리 정보를 수집합니다.  Data Infrastructure Insights 에서 수집한 각 자산 유형에 대해 해당 자산에 가장 일반적으로 사용되는 용어가 표시됩니다.  이 데이터 수집기를 보거나 문제를 해결할 때 다음 용어를 염두에 두십시오.
 
 [cols="2*"]
 |===
-| 공급업체/모델 기간 | Data Infrastructure Insights 용어 
+| 공급업체/모델 용어 | Data Infrastructure Insights 용어 
 
 
 | 디스크 | 디스크 
@@ -29,15 +29,15 @@ Data Infrastructure Insights는 EMC VNX Block Storage Data Collector에서 다�
 | 스토리지 | 스토리지 
 
 
-| 스토리지 프로세서 | 스토리지 노드 
+| 스토리지 프로세서 | 저장 노드 
 
 
-| 이 풀, RAID 그룹입니다 | 스토리지 풀 
+| 이 풀, RAID 그룹 | 스토리지 풀 
 
 
-| LUN입니다 | 볼륨 
+| LUN | 용량 
 |===
-참고: 이러한 용어 매핑은 일반적인 용어 매핑일 뿐이며 이 데이터 소스의 모든 경우를 나타내는 것은 아닙니다.
+참고: 이는 일반적인 용어 매핑일 뿐이며 이 데이터 소스의 모든 사례를 나타내지 않을 수 있습니다.
 
 
 
@@ -45,20 +45,20 @@ Data Infrastructure Insights는 EMC VNX Block Storage Data Collector에서 다�
 
 데이터를 수집하려면 다음 요구 사항을 충족해야 합니다.
 
-* 각 VNX 블록 스토리지 프로세서의 IP 주소입니다
-* VNX 블록 스토리지 시스템에 대한 읽기 전용 Navisphere 사용자 이름 및 암호입니다
-* Data Infrastructure Insights AU에 Naviseccli를 설치해야 합니다
-* 액세스 검증: Data Infrastructure Insights AU에서 사용자 이름과 암호를 사용하여 각 스토리지에 NaviSecCLI를 실행합니다.
+* 각 VNX 블록 스토리지 프로세서의 IP 주소
+* VNX 블록 스토리지 어레이에 대한 읽기 전용 Navisphere 사용자 이름 및 암호
+* NaviSecCli는 Data Infrastructure Insights AU에 설치되어야 합니다.
+* 액세스 검증: 사용자 이름과 비밀번호를 사용하여 Data Infrastructure Insights AU에서 각 어레이에 NaviSecCLI를 실행합니다.
 * 포트 요구 사항: 80, 443
-* naviseccli 버전이 스토리지의 최신 FLARE 코드와 일치해야 합니다
+* NaviSecCLI 버전은 어레이의 최신 FLARE 코드와 일치해야 합니다.
 * 성능을 위해서는 통계 로깅을 활성화해야 합니다.
 
 
 
 
-== Navisphere 명령줄 인터페이스 구문입니다
+== NaviSphere 명령줄 인터페이스 구문
 
-naviseccli.exe -h <IP address> -user <user> -password <password> -scope <scope, use 0 for global scope> -port <use 443 by default> 명령
+naviseccli.exe -h <IP 주소> -user <사용자> -password <암호> -scope <범위, 전역 범위의 경우 0 사용> -port <기본값으로 443 사용> command
 
 
 
@@ -66,19 +66,19 @@ naviseccli.exe -h <IP address> -user <user> -password <password> -scope <scope, 
 
 [cols="2*"]
 |===
-| 필드에 입력합니다 | 설명 
+| 필드 | 설명 
 
 
-| VNX Block 스토리지 IP 주소입니다 | VNX 블록 스토리지의 IP 주소 또는 정규화된 도메인 이름입니다 
+| VNX 블록 스토리지 IP 주소 | VNX 블록 스토리지의 IP 주소 또는 정규화된 도메인 이름 
 
 
-| 사용자 이름 | VNX 블록 스토리지 디바이스에 로그인하는 데 사용되는 이름입니다. 
+| 사용자 이름 | VNX 블록 스토리지 장치에 로그인하는 데 사용되는 이름입니다. 
 
 
-| 암호 | VNX 블록 스토리지 디바이스에 로그인하는 데 사용되는 암호입니다. 
+| 비밀번호 | VNX 블록 스토리지 장치에 로그인하는 데 사용되는 비밀번호입니다. 
 
 
-| naviseccli.exe 의 CLI 경로 | _naviseccli.exe_실행 파일이 포함된 폴더의 전체 경로입니다 
+| naviseccli.exe에 대한 CLI 경로 | _naviseccli.exe_ 실행 파일이 포함된 폴더의 전체 경로 
 |===
 
 
@@ -86,49 +86,49 @@ naviseccli.exe -h <IP address> -user <user> -password <password> -scope <scope, 
 
 [cols="2*"]
 |===
-| 필드에 입력합니다 | 설명 
+| 필드 | 설명 
 
 
-| 재고 폴링 간격(분) | 재고 조사 사이의 간격입니다. 기본값은 40분입니다. 
+| 재고 폴링 간격(분) | 재고 조사 간격.  기본값은 40분입니다. 
 
 
-| 범위 | 보안 클라이언트 범위 기본값은 Global 입니다. 
+| 범위 | 보안 클라이언트 범위.  기본값은 글로벌입니다. 
 
 
-| 성능 폴링 간격(초) | 성능 폴링 간격입니다. 기본값은 300초입니다. 
+| 성능 폴링 간격(초) | 성과 여론조사 간격. 기본값은 300초입니다. 
 |===
 
 
 == 문제 해결
 
-이 데이터 수집기에서 문제가 발생할 경우 다음과 같은 방법을 시도해 보십시오.
+이 데이터 수집기에 문제가 발생하면 시도해 볼 수 있는 몇 가지 사항은 다음과 같습니다.
 
 
 
-=== 인벤토리
+=== 목록
 
 [cols="2a, 2a"]
 |===
-| 문제: | 다음을 시도해 보십시오. 
+| 문제: | 다음을 시도해 보세요: 
 
 
  a| 
 오류:
 
-* 에이전트가 실행되고 있지
-* naviseccli를 찾지 못했습니다
+* 에이전트가 실행되지 않음
+* naviseccli를 찾을 수 없습니다.
 * 명령을 실행하지 못했습니다
 
  a| 
-* Navisphere CLI가 Cloud Insight 수집 장치에 설치되어 있는지 확인합니다
+* Cloud Insight Acquisition Unit에 NaviSphere CLI가 설치되어 있는지 확인하세요.
 * 데이터 수집기 구성 마법사에서 "보안 클라이언트 사용" 옵션을 선택하지 않았으며 Naviphere CLI의 비보안 버전이 설치되어 있지 않습니다.
-* 데이터 수집기 구성에서 Navisphere CLI 설치 디렉토리가 올바른지 확인합니다
-* Data Collector 구성에서 VNX 블록 스토리지의 IP가 올바른지 확인합니다.
-* Data Infrastructure Insights 수집 장치에서:
+* 데이터 수집기 구성에서 NaviSphere CLI 설치 디렉토리가 올바른지 확인하세요.
+* 데이터 수집기 구성에서 VNX 블록 스토리지의 IP가 올바른지 확인하세요.
+* Data Infrastructure Insights 인수 부서에서:
 +
 ** CMD를 엽니다.
-** 디렉토리를 구성된 설치 디렉토리로 변경합니다
-** "navicli -h{ip} getagent"를 입력하여 VNX 블록 스토리지 디바이스와 연결을 시도합니다({IP}를 실제 IP로 대체).
+** 구성된 설치 디렉토리로 디렉토리를 변경합니다.
+** “navicli -h {ip} getagent”를 입력하여 VNX 블록 스토리지 장치에 연결을 시도합니다({ip}를 실제 IP로 바꾸세요).
 
 
 
@@ -136,41 +136,41 @@ naviseccli.exe -h <IP address> -user <user> -password <password> -scope <scope, 
 
 
  a| 
-오류: 4.29 emc235848 emc241018 getall에서 호스트 별칭 정보를 구문 분석하지 못했습니다
+오류: 4.29 emc235848 emc241018 getall 호스트 별칭 정보를 구문 분석하지 못했습니다.
  a| 
-이는 스토리지 자체에 있는 호스트 이니시에이터 데이터베이스의 FLARE 29 손상 문제로 인해 발생할 수 있습니다. EMC 기술 자료 문서 emc235848, emc241018을 참조하십시오. 확인할 수도 있습니다 https://now.netapp.com/Knowledgebase/solutionarea.asp?id=kb58128[]
-
-
-
- a| 
-오류: 메타 LUN을 검색할 수 없습니다. Java-jar navicli.jar 실행 중 오류가 발생했습니다
- a| 
-* 보안 클라이언트를 사용하도록 데이터 수집기 구성 수정(권장)
-* NaviCLI.exe 또는 naviseccli.exe 의 CLI 경로에 navicli.jar 을 설치합니다
-* 참고: EMC Navisphere 버전 6.26에서는 navicli.jar 버전이 더 이상 사용되지 않습니다
-* navicli.jar 은 \http://powerlink.emc.com 에서 이용할 수 있습니다
-
+이는 어레이 자체의 호스트 이니시에이터 데이터베이스의 FLARE 29 손상 문제로 인해 발생할 가능성이 높습니다.  EMC 지식 기반 문서 emc235848, emc241018을 참조하세요.  또한 확인할 수 있습니다 https://now.netapp.com/Knowledgebase/solutionarea.asp?id=kb58128[]
 
 
 
  a| 
-오류: 구성된 IP 주소의 서비스 프로세서에서 스토리지 풀이 디스크를 보고하지 않습니다
+오류: Meta LUN을 검색할 수 없습니다.  java -jar navicli.jar 실행 중 오류가 발생했습니다.
  a| 
-두 서비스 프로세서 IP를 쉼표로 구분하여 데이터 수집기를 구성합니다
+* 보안 클라이언트를 사용하도록 데이터 수집기 구성을 수정합니다(권장)
+* navicli.exe 또는 naviseccli.exe의 CLI 경로에 navicli.jar를 설치합니다.
+* 참고: navicli.jar는 EMC Navisphere 버전 6.26부터 더 이상 사용되지 않습니다.
+* navicli.jar는 http://powerlink.emc.com 에서 사용할 수 있습니다.
+
+
+
+
+ a| 
+오류: 스토리지 풀이 구성된 IP 주소의 서비스 프로세서에 있는 디스크를 보고하지 않습니다.
+ a| 
+두 서비스 프로세서 IP를 쉼표로 구분하여 데이터 수집기를 구성합니다.
 
 
 
  a| 
-오류: 수정본 불일치 오류입니다
+오류: 개정판 불일치 오류
  a| 
-* 이 문제는 대개 VNX 블록 스토리지 디바이스에서 펌웨어를 업데이트하지만 NaviCLI.exe 설치를 업데이트하지 않아 발생합니다. 다른 펌웨어를 사용하는 다른 장치가 있지만 하나의 CLI만 설치된 경우(다른 펌웨어 버전 사용) 이 문제가 발생할 수도 있습니다.
-* 디바이스와 호스트가 모두 동일한 버전의 소프트웨어를 실행하고 있는지 확인합니다.
+* 이는 일반적으로 VNX 블록 스토리지 장치의 펌웨어를 업데이트했지만 NaviCLI.exe 설치를 업데이트하지 않은 경우에 발생합니다.  이는 서로 다른 펌웨어가 있는 여러 장치가 있지만 CLI가 하나만 설치되어 있고 펌웨어 버전이 다른 경우에도 발생할 수 있습니다.
+* 장치와 호스트가 모두 동일한 버전의 소프트웨어를 실행하고 있는지 확인하세요.
 +
-** Data Infrastructure Insights Acquisition Unit(Data Infrastructure Insights 획득 장치)에서 명령줄 창을 엽니다
-** 디렉토리를 구성된 설치 디렉토리로 변경합니다
-** "navicli -h <ip> getagent"를 입력하여 CLARiX 디바이스에 접속합니다.
-** 처음 두 줄의 버전 번호를 찾습니다. 예: “에이전트 수정: 6.16.2(0.1)”
-** 첫 번째 줄에서 버전을 찾아 비교합니다. 예: “Navisphere CLI 개정 6.07.00.04.07”
+** Data Infrastructure Insights Acquisition Unit에서 명령줄 창을 엽니다.
+** 구성된 설치 디렉토리로 디렉토리를 변경합니다.
+** "navicli -h <ip> getagent"를 입력하여 CLARiiON 장치에 연결합니다.
+** 첫 번째 줄에서 버전 번호를 찾으세요.  예: "에이전트 Rev: 6.16.2 (0.1)"
+** 첫 번째 줄의 버전을 찾아 비교해보세요.  예: “Navisphere CLI 개정판 6.07.00.04.07”
 
 
 
@@ -178,9 +178,9 @@ naviseccli.exe -h <IP address> -user <user> -password <password> -scope <scope, 
 
 
  a| 
-오류: 지원되지 않는 구성 - Fibre Channel 포트가 없습니다
+오류: 지원되지 않는 구성 - 파이버 채널 포트 없음
  a| 
-디바이스가 Fibre Channel 포트로 구성되어 있지 않습니다. 현재 FC 구성만 지원됩니다. 이 버전/펌웨어가 지원되는지 확인합니다.
+해당 장치는 파이버 채널 포트로 구성되지 않았습니다.  현재는 FC 구성만 지원됩니다.  이 버전/펌웨어가 지원되는지 확인하세요.
 
 |===
-추가 정보는 페이지 또는 에서 찾을 link:concept_requesting_support.html["지원"]link:reference_data_collector_support_matrix.html["Data Collector 지원 매트릭스"]수 있습니다.
+추가 정보는 다음에서 찾을 수 있습니다.link:concept_requesting_support.html["지원하다"] 페이지 또는link:reference_data_collector_support_matrix.html["데이터 수집기 지원 매트릭스"] .

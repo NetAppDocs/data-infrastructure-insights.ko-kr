@@ -4,60 +4,60 @@ permalink: task_config_telegraf_kafka.html
 keywords: telegraf, installation, install, kafka 
 summary: Kafka 데이터 수집기 구성 
 ---
-= Kafka 데이터 수집기
+= 카프카 데이터 수집기
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights는 이 데이터 수집기를 사용하여 Kafka에서 메트릭을 수집합니다.
+Data Infrastructure Insights 이 데이터 수집기를 사용하여 Kafka에서 지표를 수집합니다.
 
 
 
 == 설치
 
-. 관측성 > 수집기 * 에서 * + Data Collector * 를 클릭합니다. Kafka를 선택합니다.
+. *관찰성 > 수집기*에서 *+데이터 수집기*를 클릭합니다.  카프카를 선택하세요.
 +
-Telegraf 에이전트가 설치된 운영 체제 또는 플랫폼을 선택합니다.
+Telegraf 에이전트가 설치된 운영 체제 또는 플랫폼을 선택하세요.
 
-. 수집용 Agent를 아직 설치하지 않았거나 다른 운영 체제 또는 플랫폼에 대한 Agent를 설치하려면 _지침 표시_ 를 클릭하여 지침을 확장합니다link:task_config_telegraf_agent.html["에이전트 설치"].
-. 이 데이터 수집기에 사용할 Agent Access 키를 선택합니다. Agent 액세스 키 * 버튼을 클릭하여 새 Agent 액세스 키를 추가할 수 있습니다. 모범 사례: OS/플랫폼별로 데이터 수집기를 그룹화하려는 경우에만 다른 에이전트 액세스 키를 사용하십시오.
-. 구성 단계에 따라 데이터 수집기를 구성합니다. 지침은 데이터 수집에 사용하는 운영 체제 또는 플랫폼의 유형에 따라 다릅니다.
+. 수집을 위한 에이전트를 아직 설치하지 않았거나 다른 운영 체제 또는 플랫폼에 대한 에이전트를 설치하려는 경우 _지침 표시_를 클릭하여 확장합니다.link:task_config_telegraf_agent.html["에이전트 설치"] 지침.
+. 이 데이터 수집기와 함께 사용할 에이전트 액세스 키를 선택하세요.  *+ 에이전트 액세스 키* 버튼을 클릭하면 새로운 에이전트 액세스 키를 추가할 수 있습니다.  모범 사례: 데이터 수집기를 OS/플랫폼별로 그룹화하려는 경우에만 다른 에이전트 액세스 키를 사용하세요.
+. 데이터 수집기를 구성하려면 구성 단계를 따르세요.  지침은 데이터 수집에 사용하는 운영 체제나 플랫폼의 유형에 따라 다릅니다.
 
 
-image:KafkaDCConfigWindows.png["Kafka 구성"]
+image:KafkaDCConfigWindows.png["카프카 구성"]
 
 
 
 == 설정
 
-Kafka 플러그인은 Telegraf의 Jolokia 플러그인을 기반으로 합니다. 모든 Kafka 브로커로부터 정보를 수집해야 하는 요구 사항과 같이 JMX는 졸로키아를 통해 모든 구성 요소에 대해 구성 및 노출되어야 합니다.
+카프카 플러그인은 텔레그라프의 졸로키아 플러그인을 기반으로 합니다.  모든 Kafka 브로커에서 정보를 수집해야 하는 요구 사항으로, JMX는 모든 구성 요소에서 Jolokia를 통해 구성되고 노출되어야 합니다.
 
 
 
 === 호환성
 
-Kafka 버전 0.11.0.2에 따라 구성이 개발되었습니다.
+구성은 Kafka 버전 0.11.0.2를 기준으로 개발되었습니다.
 
 
 
-=== 설정 중입니다
+=== 설정 중
 
-아래의 모든 지침은 Kafka 설치 위치가 '/opt/Kafka'라고 가정합니다. 설치 위치를 반영하도록 아래 지침을 조정할 수 있습니다.
-
-
-
-==== 졸로키아 에이전트 용기
-
-Jolokia 에이전트 jar 파일이 있어야 하는 link:https://jolokia.org/download.html["다운로드되었습니다"]버전입니다. 시험 대상 버전은 졸로키아 에이전트 1.6.0이었습니다.
-
-아래 지침에서는 다운로드한 jar 파일(jolokia-jvm-1.6.0-agent.jar)이 '/opt/Kafka/libs/' 위치에 있다고 가정합니다.
+아래의 모든 지침은 카프카 설치 위치가 '/opt/kafka'라고 가정합니다.  아래 지침을 설치 위치에 맞게 조정할 수 있습니다.
 
 
 
-==== Kafka Brokers의
+==== 졸로키아 에이전트 자
 
-Kafka Brokers가 Jolokia API를 사용하도록 구성하려면 'Kafka-run-class.sh' 호출 바로 앞의 <Kafka_home>/bin/Kafka-server-start.sh에서 다음을 추가할 수 있습니다.
+Jolokia 에이전트 jar 파일은 다음 버전이어야 합니다.link:https://jolokia.org/download.html["다운로드됨"] .  테스트에 사용된 버전은 Jolokia 에이전트 1.6.0입니다.
+
+아래 지침에서는 다운로드한 jar 파일(jolokia-jvm-1.6.0-agent.jar)이 '/opt/kafka/libs/' 위치에 있다고 가정합니다.
+
+
+
+==== 카프카 브로커스
+
+Jolokia API를 노출하도록 Kafka Brokers를 구성하려면 'kafka-run-class.sh' 호출 바로 앞의 <KAFKA_HOME>/bin/kafka-server-start.sh에 다음을 추가할 수 있습니다.
 
 [listing]
 ----
@@ -65,25 +65,25 @@ export JMX_PORT=9999
 export RMI_HOSTNAME=`hostname -I`
 export KAFKA_JMX_OPTS="-javaagent:/opt/kafka/libs/jolokia-jvm-1.6.0-agent.jar=port=8778,host=0.0.0.0  -Dcom.sun.management.jmxremote.password.file=/opt/kafka/config/jmxremote.password -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname=$RMI_HOSTNAME -Dcom.sun.management.jmxremote.rmi.port=$JMX_PORT"
 ----
-위의 예는 'hostname -i'를 사용하여 'RMI_HOSTNAME' 환경 변수를 설정하는 것입니다. 여러 IP 시스템에서 RMI 연결에 관심 있는 IP를 수집하기 위해 이 설정을 변경해야 합니다.
+위의 예에서는 'hostname -I'를 사용하여 'RMI_HOSTNAME' 환경 변수를 설정하고 있습니다.  여러 IP 머신에서 RMI 연결에 필요한 IP를 수집하려면 이 설정을 조정해야 합니다.
 
-JMX(위 9999) 및 Jolokia(8778)에 대해 다른 포트를 선택할 수 있습니다. 졸로키아를 잠그기 위한 내부 IP가 있는 경우 "모두 캐치" 0.0.0.0을 자신의 IP로 대체할 수 있습니다. 이 IP는 Telegraf 플러그인에서 액세스할 수 있어야 합니다. 인증을 원하지 않는 경우 '-Dcom.sun.management.jmxremote.authenticate=false' 옵션을 사용할 수 있습니다. 사용에 따르는 위험은 사용자가 부담합니다.
+JMX(위의 9999)와 Jolokia(8778)에 대해 다른 포트를 선택할 수 있습니다.  Jolokia를 잠글 내부 IP가 있는 경우 "모두 포함" 0.0.0.0을 자신의 IP로 바꿀 수 있습니다.  이 IP는 Telegraf 플러그인에서 접근할 수 있어야 합니다.  인증을 원하지 않으면 '-Dcom.sun.management.jmxremote.authenticate=false' 옵션을 사용할 수 있습니다.  사용 시 모든 책임은 사용자에게 있습니다.
 
 
 
-== 개체 및 카운터
+== 객체 및 카운터
 
-다음 개체와 해당 카운터가 수집됩니다.
+다음 객체와 카운터가 수집됩니다.
 
 [cols="<.<,<.<,<.<"]
 |===
-| 오브젝트: | 식별자: | 특성: 
+| 물체: | 식별자: | 속성: 
 
 
-| Kafka 브로커 | 클러스터 네임스페이스 브로커 | 노드 이름 노드 IP입니다 
+| 카프카 브로커 | 클러스터 네임스페이스 브로커 | 노드 이름 노드 IP 
 |===
 
 
 == 문제 해결
 
-추가 정보는 페이지에서 찾을 수 link:concept_requesting_support.html["지원"]있습니다.
+추가 정보는 다음에서 찾을 수 있습니다.link:concept_requesting_support.html["지원하다"] 페이지.

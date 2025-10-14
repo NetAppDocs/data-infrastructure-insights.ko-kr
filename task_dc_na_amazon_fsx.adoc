@@ -2,65 +2,65 @@
 sidebar: sidebar 
 permalink: task_dc_na_amazon_fsx.html 
 keywords: 'data collector, stout, fsx, fsx-netapp, Amazon, AWS, cluster, volume, share, LUN"' 
-summary: NetApp ONTAP Data Collector용 Amazon FSx 
+summary: Amazon FSx for NetApp ONTAP 데이터 수집기 
 ---
-= NetApp ONTAP 데이터 수집기를 위한 Amazon FSx
+= Amazon FSx for NetApp ONTAP
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-이 데이터 수집기는 NetApp ONTAP용 Amazon FSx에서 인벤토리 및 성능 데이터를 가져옵니다. 이 데이터 수집기는 Data Infrastructure Insights 서비스 지역에서 점증적으로 사용할 수 있게 됩니다. Data Infrastructure Insights 환경에 이 수집기 아이콘이 보이지 않으면 영업 담당자에게 문의하십시오.
+이 데이터 수집기는 Amazon FSx for NetApp ONTAP 에서 인벤토리 및 성능 데이터를 수집합니다.  이 데이터 수집기는 Data Infrastructure Insights 서비스 지역 전체에서 점진적으로 제공될 예정입니다.  Data Infrastructure Insights 환경에서 이 수집기의 아이콘이 보이지 않으면 영업 담당자에게 문의하세요.
 
 
-NOTE: 이 데이터 인프라 인사이트 수집기에는 _Filesystem-scoped_role을 가진 ONTAP 사용자가 필요합니다. link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/roles-and-users.html["역할 및 규칙"]사용 가능한 옵션은 AWS  설명서를 검토하십시오. 현재 AWS는 Filesystem Scope인 _fsxadmin_의 한 가지 사용자 역할만 지원합니다. 이 역할은 Data Infrastructure Insights Collector에 사용되는 적절한 역할입니다. 사용자는 http, ontapi, ssh 등 세 가지 응용 프로그램을 모두 할당해야 합니다.
+NOTE: 이 Data Infrastructure Insights 수집기에는 _파일 시스템 범위_ 역할이 있는 ONTAP 사용자가 필요합니다.  AWS를 검토해 주세요link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/roles-and-users.html["역할 및 규칙"] 사용 가능한 옵션에 대한 설명서입니다.  현재 AWS는 파일 시스템 범위에서 _fsxadmin_이라는 한 가지 유형의 사용자 역할만 지원합니다.  이는 Data Infrastructure Insights 수집기에 사용하기에 적합한 역할입니다.  사용자는 http, ontapi, ssh라는 세 가지 애플리케이션을 모두 할당받아야 합니다.
 
 
 
-== 용어
+== 술어
 
-Data Infrastructure Insights는 FSx-NetApp 데이터 수집기에서 인벤토리 및 성능 데이터를 가져옵니다. 획득한 각 자산 유형에 대해 자산에 가장 일반적으로 사용되는 용어가 표시됩니다. 이 데이터 수집기를 보거나 문제를 해결할 때 다음 용어를 염두에 두십시오.
+Data Infrastructure Insights FSx- NetApp 데이터 수집기에서 인벤토리 및 성능 데이터를 수집합니다.  인수한 각 자산 유형에 대해 해당 자산에 사용되는 가장 일반적인 용어가 표시됩니다.  이 데이터 수집기를 보거나 문제를 해결할 때 다음 용어를 염두에 두십시오.
 
 [cols="2*"]
 |===
-| 공급업체/모델 기간 | Data Infrastructure Insights 용어 
+| 공급업체/모델 용어 | Data Infrastructure Insights 용어 
 
 
-| 클러스터 | 스토리지 
+| 무리 | 스토리지 
 
 
-| LUN입니다 | 볼륨 
+| LUN | 용량 
 
 
-| 볼륨 | 내부 볼륨 
+| 용량 | 내부 볼륨 
 |===
 
 
-== FSX-NetApp 용어
+== FSx- NetApp 용어
 
-다음 용어는 FSx-NetApp 스토리지 자산 랜딩 페이지에서 볼 수 있는 오브젝트 또는 참조에 적용됩니다. 이러한 용어 중 다수는 다른 데이터 수집기에도 적용됩니다.
+다음 용어는 FSx- NetApp 스토리지 자산 랜딩 페이지에서 찾을 수 있는 개체나 참조에 적용됩니다.  이러한 용어의 대부분은 다른 데이터 수집자에게도 적용됩니다.
 
 
 
 === 스토리지
 
-* 모델 – 이 클러스터 내에서 고유한 개별 모델 이름을 쉼표로 구분한 목록입니다.
+* 모델 – 이 클러스터 내의 고유하고 개별적인 모델 이름을 쉼표로 구분하여 나열한 목록입니다.
 * 공급업체 – AWS
-* 일련 번호 – 스토리지 일련 번호입니다.
+* 일련 번호 – 배열 일련 번호.
 * IP – 일반적으로 데이터 소스에 구성된 IP 또는 호스트 이름이 됩니다.
-* 물리적 용량 – FSx 파일 시스템에 할당된 모든 SSD 스토리지에 대한 기본 2 합계.
-* 지연 시간 – 읽기 및 쓰기 모두에서 호스트에서 발생하는 워크로드를 나타냅니다. Data Infrastructure Insights는 이러한 가치를 직접 소싱하는 것이 좋지만, 그렇게 할 경우에는 그렇지 않은 경우가 많습니다. Data Infrastructure Insights는 이러한 기능을 제공하는 어레이 대신 일반적으로 개별 내부 볼륨의 통계에서 도출된 IOPS 가중 계산을 수행합니다.
-* 처리량 – 내부 볼륨에서 집계됩니다. 관리 - 장치의 관리 인터페이스에 대한 하이퍼링크가 포함될 수 있습니다. 인벤토리 보고의 일부로 Data Infrastructure Insights 데이터 소스에 의해 프로그래밍 방식으로 생성되었습니다.
+* 원시 용량 – FSx 파일 시스템에 할당된 모든 SSD 스토리지의 2진 합입니다.
+* 대기 시간 - 호스트가 읽기와 쓰기 모두에서 작업 부하를 경험하는 것을 표현한 것입니다.  이상적으로는 Data Infrastructure Insights 이 가치를 직접 소싱하는 것이 좋지만, 그렇지 않은 경우가 많습니다.  이를 제공하는 배열 대신, Data Infrastructure Insights 일반적으로 개별 내부 볼륨의 통계에서 파생된 IOPS 가중치 계산을 수행합니다.
+* 처리량 – 내부 볼륨에서 집계됨.  관리 – 여기에는 장치의 관리 인터페이스에 대한 하이퍼링크가 포함될 수 있습니다.  인벤토리 보고의 일부로 Data Infrastructure Insights 데이터 소스에 의해 프로그래밍 방식으로 생성되었습니다.
 
 
 
 
 === 스토리지 풀
 
-* 스토리지 – 이 풀이 상주하는 스토리지 시스템입니다. 필수입니다.
-* 형식 - 가능성 목록 목록의 설명 값입니다. 일반적으로 "집계" 또는 "RAID 그룹"이 됩니다.
-* 용량 – 이 값은 논리적 사용 용량, 가용 용량 및 총 논리적 용량, 그리고 이 용량 전체에서 사용된 비율입니다.
-* IOPS – 이 스토리지 풀에 할당된 모든 볼륨의 IOPS 합계입니다.
+* 저장소 – 이 풀이 어떤 저장소 배열에 있는지.  필수적인.
+* 유형 – 가능성의 열거된 목록에서 나온 설명적 값입니다.  가장 일반적으로는 "집계" 또는 "RAID 그룹"입니다.
+* 용량 – 여기의 값은 논리적으로 사용된 용량, 사용 가능한 용량, 논리적 총 용량, 그리고 이들에 사용된 백분율입니다.
+* IOPS – 이 스토리지 풀에 할당된 모든 볼륨의 합계 IOPS입니다.
 * 처리량 – 이 스토리지 풀에 할당된 모든 볼륨의 총 처리량입니다.
 
 
@@ -68,10 +68,10 @@ Data Infrastructure Insights는 FSx-NetApp 데이터 수집기에서 인벤토�
 
 == 요구 사항
 
-다음은 이 데이터 수집기를 구성하고 사용하기 위한 요구 사항입니다.
+이 데이터 수집기를 구성하고 사용하기 위한 요구 사항은 다음과 같습니다.
 
-* ssh, ontapi, http 등 세 개의 응용 프로그램이 할당된 "fsxadmin" 역할의 계정에 액세스할 수 있어야 합니다
-* 계정 세부 정보에는 사용자 이름 및 암호가 포함됩니다.
+* "fsxadmin" 역할이 있는 계정에 액세스할 수 있어야 하며, 이 역할에는 ssh, ontapi, http라는 세 가지 애플리케이션이 할당되어야 합니다.
+* 계정 세부 정보에는 사용자 이름과 비밀번호가 포함됩니다.
 * 포트 요구 사항: 443
 
 
@@ -81,68 +81,68 @@ Data Infrastructure Insights는 FSx-NetApp 데이터 수집기에서 인벤토�
 
 [cols="2*"]
 |===
-| 필드에 입력합니다 | 설명 
+| 필드 | 설명 
 
 
-| NetApp 관리 IP | NetApp 클러스터의 IP 주소 또는 정규화된 도메인 이름입니다 
+| NetApp 관리 IP | NetApp 클러스터의 IP 주소 또는 정규화된 도메인 이름 
 
 
-| 사용자 이름 | NetApp 클러스터의 사용자 이름입니다 
+| 사용자 이름 | NetApp 클러스터의 사용자 이름 
 
 
-| 암호 | NetApp 클러스터의 암호입니다 
+| 비밀번호 | NetApp 클러스터의 비밀번호 
 |===
 
 
-== 고급 메트릭스
+== 고급 메트릭
 
-이 데이터 수집기는 NetApp ONTAP 스토리지용 FSx에서 다음 고급 메트릭을 수집합니다.
+이 데이터 수집기는 FSx for NetApp ONTAP 스토리지에서 다음과 같은 고급 메트릭을 수집합니다.
 
-* FPolicy를 참조하십시오
-* nfsv3를 참조하십시오
-* NFSv3:노드
-* nfsv4를 참조하십시오
-* nfsv4_1를 참조하십시오
-* NFSv4_1: node
-* NFSv4: node
-* policy_group입니다
-* qtree입니다
-* 볼륨
-* workload_volume
+* 정책
+* nfsv3
+* nfsv3:노드
+* nfsv4
+* nfsv4_1
+* nfsv4_1:노드
+* nfsv4:노드
+* 정책 그룹
+* 큐트리
+* 용량
+* 작업량_볼륨
 
 
-FSx CLI 및 API 명령은 Data Infrastructure Insights ZAPI가 수집하지 않는 일부 용량 값을 검색하므로 Data Infrastructure Insights에서 스토리지 풀에 대한 값 등 특정 용량 값이 FSx 자체에 있는 값과 다를 수 있습니다.
+FSx CLI 및 API 명령은 Data Infrastructure Insights ZAPI가 수집하지 않는 일부 용량 값을 검색하므로 특정 용량 값(예: 스토리지 풀의 값)은 FSx 자체와 Data Infrastructure Insights 에서 다를 수 있습니다.
 
 
 
 == 문제 해결
 
-이 데이터 수집기에서 문제가 발생할 경우 다음과 같은 방법을 시도해 보십시오.
+이 데이터 수집기에 문제가 발생하면 시도해 볼 수 있는 몇 가지 사항은 다음과 같습니다.
 
 
 
-=== 인벤토리
+=== 목록
 
 [cols="2*"]
 |===
-| 문제: | 다음을 시도해 보십시오. 
+| 문제: | 다음을 시도해 보세요: 
 
 
-| 수신 401 HTTP 응답 또는 13003 ZAPI 오류 코드 및 ZAPI는 "불충분한 권한" 또는 "이 명령에 대해 인증되지 않음"을 반환합니다. | 사용자 이름과 암호, 사용자 권한/권한을 확인합니다. 
+| 401 HTTP 응답 또는 13003 ZAPI 오류 코드를 수신하고 ZAPI가 "권한이 부족합니다" 또는 "이 명령에 대한 권한이 없습니다"를 반환합니다. | 사용자 이름과 비밀번호, 사용자 권한/허가를 확인하세요. 
 
 
-| ZAPI는 "cluster role is not cluster_mgmt LIF" 를 반환합니다. | AU는 클러스터 관리 IP와 통신해야 합니다. IP를 확인하고 필요한 경우 다른 IP로 변경합니다 
+| ZAPI가 "클러스터 역할이 cluster_mgmt LIF가 아닙니다"를 반환합니다. | AU는 클러스터 관리 IP와 통신해야 합니다.  IP를 확인하고 필요한 경우 다른 IP로 변경하세요. 
 
 
-| 재시도 후 ZAPI 명령이 실패합니다 | AU가 클러스터와 통신 문제를 겪고 있습니다. 네트워크, 포트 번호 및 IP 주소를 확인합니다. 또한 사용자는 AU 시스템의 명령줄에서 명령을 실행해야 합니다. 
+| 재시도 후 ZAPI 명령이 실패합니다. | AU는 클러스터와 통신 문제가 있습니다.  네트워크, 포트 번호, IP 주소를 확인하세요.  사용자는 AU 머신의 명령줄에서 명령을 실행해보아야 합니다. 
 
 
-| AU가 HTTP를 통해 ZAPI에 연결하지 못했습니다 | ZAPI 포트가 일반 텍스트를 허용하는지 확인합니다. AU가 SSL 소켓에 일반 텍스트를 보내려고 하면 통신이 실패합니다. 
+| AU가 HTTP를 통해 ZAPI에 연결하지 못했습니다. | ZAPI 포트가 일반 텍스트를 허용하는지 확인하세요.  AU가 SSL 소켓에 일반 텍스트를 보내려고 하면 통신이 실패합니다. 
 
 
-| SSLException 과 통신이 실패합니다 | AU가 파일러의 일반 텍스트 포트로 SSL을 전송하려고 합니다. ZAPI 포트가 SSL을 허용하는지 또는 다른 포트를 사용하는지 확인합니다. 
+| SSLException으로 인해 통신이 실패합니다. | AU는 파일러의 일반 텍스트 포트로 SSL을 보내려고 시도하고 있습니다.  ZAPI 포트가 SSL을 허용하는지 확인하거나 다른 포트를 사용하세요. 
 
 
-| 추가 연결 오류: ZAPI 응답에는 오류 코드 13001, "데이터베이스가 열려 있지 않습니다." ZAPI 오류 코드가 60이고 응답에는 "API가 시간에 완료되지 않았습니다."가 포함되어 있습니다. ZAPI 응답에는 "initialize_session() returned NULL environment" ZAPI가 포함되어 있습니다. ZAPI 오류 코드는 14007이고 응답에는 "노드가 정상 상태가 아닙니다"가 포함되어 있습니다. | 네트워크, 포트 번호 및 IP 주소를 확인합니다. 또한 사용자는 AU 시스템의 명령줄에서 명령을 실행해야 합니다. 
+| 추가 연결 오류: ZAPI 응답에 오류 코드 13001, "데이터베이스가 열려 있지 않습니다"가 있습니다. ZAPI 오류 코드는 60이고 응답에는 "API가 제 시간에 완료되지 않았습니다"가 포함됩니다. ZAPI 응답에는 "initialize_session()이 NULL 환경을 반환했습니다"가 포함됩니다. ZAPI 오류 코드는 14007이고 응답에는 "노드가 정상이 아닙니다"가 포함됩니다. | 네트워크, 포트 번호, IP 주소를 확인하세요.  사용자는 AU 머신의 명령줄에서 명령을 실행해보아야 합니다. 
 |===
-추가 정보는 페이지 또는 에서 찾을 link:concept_requesting_support.html["지원"]link:reference_data_collector_support_matrix.html["Data Collector 지원 매트릭스"]수 있습니다.
+추가 정보는 다음에서 찾을 수 있습니다.link:concept_requesting_support.html["지원하다"] 페이지 또는link:reference_data_collector_support_matrix.html["데이터 수집기 지원 매트릭스"] .

@@ -2,19 +2,19 @@
 sidebar: sidebar 
 permalink: kubernetes_landing_page.html 
 keywords: telegraf, installation, install, kubernetes, pods, clusters, filters, filtering, k8s 
-summary: Kubernetes 랜딩 페이지가 설명했습니다 
+summary: Kubernetes 랜딩 페이지 설명 
 ---
-= Kubernetes 클러스터 개요
+= 쿠버네티스 클러스터 개요
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights Kubernetes Explorer는 Kubernetes 클러스터의 전체 상태 및 사용량을 보여주기 위한 강력한 툴이며 조사 영역을 쉽게 드릴다운할 수 있습니다.
+Data Infrastructure Insights Kubernetes Explorer는 Kubernetes 클러스터의 전반적인 상태와 사용량을 표시하는 강력한 도구로, 조사 영역을 쉽게 자세히 살펴볼 수 있습니다.
 
-대시보드 > Kubernetes Explorer * 를 클릭하면 Kubernetes 클러스터 목록 페이지가 열립니다. 이 개요 페이지에는 테넌트의 Kubernetes 클러스터 표가 포함되어 있습니다.
+*대시보드 > Kubernetes Explorer*를 클릭하면 Kubernetes 클러스터 목록 페이지가 열립니다.  이 개요 페이지에는 테넌트의 Kubernetes 클러스터 표가 포함되어 있습니다.
 
-image:Kubernetes_List_Page_new.png["Kubernetes 목록 페이지"]
+image:Kubernetes_List_Page_new.png["쿠버네티스 목록 페이지"]
 
 
 
@@ -22,26 +22,26 @@ image:Kubernetes_List_Page_new.png["Kubernetes 목록 페이지"]
 
 클러스터 목록에는 테넌트의 각 클러스터에 대한 다음 정보가 표시됩니다.
 
-* 클러스터 * 이름 *. 클러스터 이름을 클릭하면 해당 클러스터에 대한 가 열립니다link:kubernetes_cluster_detail.html["* 상세 페이지 *"].
-* * 채도 * 백분율. 전체 채도란 CPU, 메모리 또는 저장소 채도가 가장 높은 것입니다.
-* 클러스터의 * 노드 수 * 입니다. 이 번호를 클릭하면 노드 목록 페이지가 열립니다.
-* 클러스터의 Pod 수 이 번호를 클릭하면 창 목록 페이지가 열립니다.
-* 클러스터의 * 네임스페이스 * 수입니다. 이 번호를 클릭하면 네임스페이스 목록 페이지가 열립니다.
-* 클러스터에 있는 * 워크로드 * 수. 이 번호를 클릭하면 워크로드 목록 페이지가 열립니다.
+* 클러스터 *이름*.  클러스터 이름을 클릭하면 다음이 열립니다.link:kubernetes_cluster_detail.html["*상세 페이지*"] 해당 클러스터에 대해서요.
+* *포화* 백분율.  전반적인 포화도는 CPU, 메모리 또는 저장소 포화도 중 가장 높은 수준입니다.
+* 클러스터의 *노드* 수.  이 숫자를 클릭하면 노드 목록 페이지가 열립니다.
+* 클러스터의 *Pod* 수.  이 번호를 클릭하면 Pod 목록 페이지가 열립니다.
+* 클러스터의 *네임스페이스* 수.  이 숫자를 클릭하면 네임스페이스 목록 페이지가 열립니다.
+* 클러스터의 *워크로드* 수.  이 숫자를 클릭하면 작업량 목록 페이지가 열립니다.
 
 
 
 
-== 필터 다듬기
+== 필터 개선
 
-필터링을 할 때 입력을 시작하면 현재 텍스트를 기반으로 * 와일드카드 필터 * 를 만들 수 있는 옵션이 표시됩니다. 이 옵션을 선택하면 와일드카드 식과 일치하는 모든 결과가 반환됩니다. NOT 또는 And를 사용하여 * 식 * 을 만들거나 "없음" 옵션을 선택하여 필드의 null 값을 필터링할 수도 있습니다.
+필터링을 할 때 입력을 시작하면 현재 텍스트를 기반으로 *와일드카드 필터*를 만들 수 있는 옵션이 제공됩니다.  이 옵션을 선택하면 와일드카드 표현식과 일치하는 모든 결과가 반환됩니다.  NOT 또는 AND를 사용하여 *표현식*을 만들 수도 있고, "없음" 옵션을 선택하여 필드에서 null 값을 필터링할 수도 있습니다.
 
-image:Filter_Kubernetes_Explorer.png["K8S 탐색기에서 와일드카드로 필터링"]
+image:Filter_Kubernetes_Explorer.png["K8S Explorer에서 와일드카드로 필터링"]
 
-와일드카드 또는 식(예 NOT, 및, "없음" 등)은 필터 필드에 진한 파란색으로 표시됩니다. 목록에서 직접 선택한 항목은 연한 파란색으로 표시됩니다.
+와일드카드나 표현식(예: NOT, AND, "없음" 등)을 기반으로 하는 필터는 필터 필드에 진한 파란색으로 표시됩니다.  목록에서 직접 선택한 항목은 밝은 파란색으로 표시됩니다.
 
-image:Filter_Kubernetes_Explorer_2.png["와일드카드와 선택한 항목을 표시하는 필터입니다"]
+image:Filter_Kubernetes_Explorer_2.png["와일드카드 및 선택된 항목을 표시하는 필터"]
 
-Kubernetes 필터는 상황에 따라 다릅니다. 예를 들어 특정 노드 페이지에 있는 경우 pod_NAME 필터는 해당 노드에 관련된 Pod만 나열합니다. 또한 특정 네임스페이스에 대한 필터를 적용하는 경우 pod_NAME 필터는 해당 네임스페이스에 있는 _ 및 _ 노드에 포드만 나열합니다.
+Kubernetes 필터는 상황에 따라 다릅니다. 즉, 예를 들어 특정 노드 페이지에 있는 경우 pod_name 필터는 해당 노드와 관련된 Pod만 나열합니다.  게다가 특정 네임스페이스에 대한 필터를 적용하면 pod_name 필터는 해당 노드와 해당 네임스페이스에 있는 포드만 나열합니다.
 
-와일드카드 및 식 필터링은 텍스트 또는 목록과 함께 사용할 수 있지만 수치, 날짜 또는 부울은 사용할 수 없습니다.
+와일드카드 및 표현식 필터링은 텍스트나 목록에서는 작동하지만 숫자, 날짜 또는 부울에서는 작동하지 않습니다.

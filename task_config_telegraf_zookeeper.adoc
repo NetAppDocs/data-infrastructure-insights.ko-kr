@@ -2,52 +2,52 @@
 sidebar: sidebar 
 permalink: task_config_telegraf_zookeeper.html 
 keywords: telegraf, installation, install, apache, zookeeper 
-summary: Apache ZooKeeper 데이터 수집기 구성 
+summary: Apache Zookeeper 데이터 수집기 구성 
 ---
-= ZooKeeper 데이터 수집기
+= 동물원 관리인 데이터 수집기
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights는 이 데이터 수집기를 사용하여 Apache ZooKeeper에서 메트릭을 수집합니다.
+Data Infrastructure Insights 이 데이터 수집기를 사용하여 Apache Zookeeper에서 지표를 수집합니다.
 
 
 
 == 설치
 
-. 관리자 > 데이터 수집기 * 에서 * + 데이터 수집기 * 를 클릭합니다. Apache ZooKeeper를 선택합니다.
+. *관리자 > 데이터 수집기*에서 *+데이터 수집기*를 클릭합니다.  Apache Zookeeper를 선택하세요.
 +
-Telegraf 에이전트가 설치된 운영 체제 또는 플랫폼을 선택합니다.
+Telegraf 에이전트가 설치된 운영 체제 또는 플랫폼을 선택하세요.
 
-. 수집용 Agent를 아직 설치하지 않았거나 다른 운영 체제 또는 플랫폼에 대한 Agent를 설치하려면 _지침 표시_ 를 클릭하여 지침을 확장합니다link:task_config_telegraf_agent.html["에이전트 설치"].
-. 이 데이터 수집기에 사용할 Agent Access 키를 선택합니다. Agent 액세스 키 * 버튼을 클릭하여 새 Agent 액세스 키를 추가할 수 있습니다. 모범 사례: OS/플랫폼별로 데이터 수집기를 그룹화하려는 경우에만 다른 에이전트 액세스 키를 사용하십시오.
-. 구성 단계에 따라 데이터 수집기를 구성합니다. 지침은 데이터 수집에 사용하는 운영 체제 또는 플랫폼의 유형에 따라 다릅니다.
+. 수집을 위한 에이전트를 아직 설치하지 않았거나 다른 운영 체제 또는 플랫폼에 대한 에이전트를 설치하려는 경우 _지침 표시_를 클릭하여 확장합니다.link:task_config_telegraf_agent.html["에이전트 설치"] 지침.
+. 이 데이터 수집기와 함께 사용할 에이전트 액세스 키를 선택하세요.  *+ 에이전트 액세스 키* 버튼을 클릭하면 새로운 에이전트 액세스 키를 추가할 수 있습니다.  모범 사례: 데이터 수집기를 OS/플랫폼별로 그룹화하려는 경우에만 다른 에이전트 액세스 키를 사용하세요.
+. 데이터 수집기를 구성하려면 구성 단계를 따르세요.  지침은 데이터 수집에 사용하는 운영 체제나 플랫폼의 유형에 따라 다릅니다.
 
 
-image:ZookeeperDCConfigLinux.png["ZooKeeper 구성"]
+image:ZookeeperDCConfigLinux.png["Zookeeper 구성"]
 
 
 
 == 설정
 
-최소한 ZooKeeper의 4자리 서버 명령 _mntr_,_SRVR_ 및 _stat_을 허용해야 합니다. _4lw.commands.whitelist=mntr, SRVR, stat_in the_zoo.cfg_file 형식을 사용하여 이러한 명령을 활성화할 수 있습니다. 구성에 필요한 다른 4개의 문자 명령이 있을 수 있습니다. link:https://zookeeper.apache.org/["ZooKeeper"]자세한 내용은 설명서를 참조하십시오.
+최소한 Zookeeper에 _mntr_, _srvr_, _stat_라는 4글자 서버 명령어를 허용해야 합니다.  다음 형식을 사용하여 이러한 명령을 활성화할 수 있습니다: _zoo.cfg_ 파일에서 _4lw.commands.whitelist=mntr, srvr, stat_.  구성에 필요한 다른 4글자 명령이 있을 수 있습니다.  를 참조하십시오link:https://zookeeper.apache.org/["동물원 관리인"] 자세한 내용은 설명서를 참조하세요.
 
 
 
-== 개체 및 카운터
+== 객체 및 카운터
 
-다음 개체와 해당 카운터가 수집됩니다.
+다음 객체와 카운터가 수집됩니다.
 
 [cols="<.<,<.<,<.<,<.<"]
 |===
-| 오브젝트: | 식별자: | 특성: | 데이터 요소: 
+| 물체: | 식별자: | 속성: | 데이터 포인트: 
 
 
-| ZooKeeper | 네임스페이스 서버 | 상태 노드 IP 노드 이름 포트 | 대략적인 데이터 크기 평균 지연 시간 천문력 최대 파일 설명자 수 최대 지연 시간 최소 대기 시간 활성 연결 수 열린 파일 설명자 수 처리되지 않은 요청 수 시계 수 Znode 수 
+| 동물원 관리인 | 네임스페이스 서버 | 상태 노드 IP 노드 이름 포트 | 대략적인 데이터 크기 평균 대기 시간 임시 파일 수 최대 파일 설명자 수 최대 대기 시간 최소 대기 시간 활성 연결 수 열린 파일 설명자 수 미해결 요청 감시 수 Znode 수 
 |===
 
 
 == 문제 해결
 
-추가 정보는 페이지에서 찾을 수 link:concept_requesting_support.html["지원"]있습니다.
+추가 정보는 다음에서 찾을 수 있습니다.link:concept_requesting_support.html["지원하다"] 페이지.

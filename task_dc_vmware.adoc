@@ -2,31 +2,31 @@
 sidebar: sidebar 
 permalink: task_dc_vmware.html 
 keywords: data collector, VMware, 
-summary: VMware 데이터 수집기 구성 중 
+summary: VMware 데이터 수집기 구성. 
 ---
-= VMware vSphere Data Collector 구성
+= VMware VSphere 데이터 수집기 구성
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-VMware vSphere용 데이터 수집기는 VM 게스트 및 ESXi 호스트 성능 및 구성 정보를 수집하며 vSphere 내의 모든 개체에 대해 읽기 전용 Privileges이 필요합니다. 2024년 8월 현재 vSphere Collector는 vSphere 환경의 로그 메시지와 일부 VMware 관련 메트릭을 추가로 제공합니다. Data Infrastructure Insights는 vSphere 8.0.1 이상의 환경에서만 VMware 로그 정보를 검색할 수 있습니다. 마찬가지로 공급업체별 메트릭은 vSphere 7+ 환경에서만 지원됩니다. 따라서 이전 vSphere 인스턴스를 가리키는 경우 해당 Collector에서 로그 및/또는 공급업체별 메트릭 확인란을 비활성화할 수 있습니다.
+VMware vSphere용 데이터 수집기는 VM 게스트와 ESXi 호스트 성능 및 구성 정보를 수집하며 vSphere 내의 모든 개체에 대한 읽기 전용 권한이 필요합니다.  2024년 8월부터 vSphere 수집기는 vSphere 환경의 로그 메시지와 일부 VMware 관련 메트릭도 가져옵니다.  Data Infrastructure Insights vSphere 8.0.1 이상 환경에서만 VMware 로그 정보를 검색할 수 있습니다.  마찬가지로 공급업체별 메트릭은 vSphere 7+ 환경에서만 지원됩니다.  따라서 이전 vSphere 인스턴스를 가리키는 경우 해당 수집기의 로그 및/또는 공급업체별 메트릭 확인란을 비활성화하는 것이 좋습니다.
 
 
 
-== 용어
+== 술어
 
-Data Infrastructure Insights는 VMware vSphere Data Collector에서 다음과 같은 인벤토리 정보를 가져옵니다. 획득한 각 자산 유형에 대해 자산에 가장 일반적으로 사용되는 용어가 표시됩니다. 이 데이터 수집기를 보거나 문제를 해결할 때 다음 용어를 염두에 두십시오.
+Data Infrastructure Insights VMware vSphere 데이터 수집기에서 다음과 같은 인벤토리 정보를 수집합니다.  인수한 각 자산 유형에 대해 해당 자산에 사용되는 가장 일반적인 용어가 표시됩니다.  이 데이터 수집기를 보거나 문제를 해결할 때 다음 용어를 염두에 두십시오.
 
 [cols="2*"]
 |===
-| 공급업체/모델 기간 | Data Infrastructure Insights 용어 
+| 공급업체/모델 용어 | Data Infrastructure Insights 용어 
 
 
 | 가상 디스크 | 디스크 
 
 
-| 호스트 | 호스트 
+| 주인 | 주인 
 
 
 | 가상 머신 | 가상 머신 
@@ -35,12 +35,12 @@ Data Infrastructure Insights는 VMware vSphere Data Collector에서 다음과 �
 | 데이터 저장소 | 데이터 저장소 
 
 
-| LUN입니다 | 볼륨 
+| LUN | 용량 
 
 
-| Fibre Channel 포트입니다 | 포트 
+| 파이버 채널 포트 | 포트 
 |===
-이러한 용어 매핑은 일반적인 용어 매핑일 뿐이며 이 데이터 수집기의 모든 경우를 나타내는 것은 아닙니다.
+이는 일반적인 용어 매핑일 뿐이며 이 데이터 수집기의 모든 사례를 나타내지 않을 수 있습니다.
 
 
 
@@ -48,32 +48,32 @@ Data Infrastructure Insights는 VMware vSphere Data Collector에서 다음과 �
 
 이 데이터 수집기를 구성하려면 다음 정보가 필요합니다.
 
-* Virtual Center 서버의 IP 주소입니다
-* Virtual Center의 읽기 전용 사용자 이름 및 암호
-* Virtual Center 내의 모든 개체에 대해 읽기 전용 권한이 필요합니다.
-* Virtual Center 서버에서 SDK 액세스 – 일반적으로 이미 설정되어 있습니다.
+* Virtual Center 서버의 IP 주소
+* Virtual Center의 읽기 전용 사용자 이름 및 비밀번호
+* Virtual Center 내의 모든 객체에 대해 읽기 전용 권한이 필요합니다.
+* Virtual Center 서버에서 SDK 액세스 - 일반적으로 이미 설정되어 있습니다.
 * 포트 요구 사항: http-80 https-443
 * 액세스 확인:
 +
-** 위의 사용자 이름과 암호를 사용하여 Virtual Center Client에 로그인합니다
-** SDK가 활성화되었는지 확인합니다. 텔넷 <VC_IP> 443
+** 위의 사용자 이름과 비밀번호를 사용하여 Virtual Center 클라이언트에 로그인하세요.
+** SDK가 활성화되었는지 확인하세요: telnet <vc_ip> 443
 
 
 
 
 
 
-== 설치 및 연결
+== 설정 및 연결
 
 [cols="2*"]
 |===
-| 필드에 입력합니다 | 설명 
+| 필드 | 설명 
 
 
-| 이름 | 데이터 수집기의 고유 이름입니다 
+| 이름 | 데이터 수집기의 고유 이름 
 
 
-| 획득 장치 | 획득 장치의 이름입니다 
+| 인수 단위 | 취득 단위명 
 |===
 
 
@@ -81,46 +81,46 @@ Data Infrastructure Insights는 VMware vSphere Data Collector에서 다음과 �
 
 [cols="2*"]
 |===
-| 필드에 입력합니다 | 설명 
+| 필드 | 설명 
 
 
-| 가상 센터 IP 주소 | Virtual Center의 IP 주소입니다 
+| 가상 센터 IP 주소 | 가상 센터의 IP 주소 
 
 
-| 사용자 이름입니다 | Virtual Center에 액세스하는 데 사용되는 사용자 이름입니다 
+| 사용자 이름 | 가상 센터에 액세스하는 데 사용되는 사용자 이름 
 
 
-| 암호 | Virtual Center에 액세스하는 데 사용되는 암호입니다 
+| 비밀번호 | 가상 센터에 접속하는 데 사용되는 비밀번호 
 |===
 
 
 == 고급 구성
 
-고급 구성 화면에서 * VM 성능 * 확인란을 선택하여 성능 데이터를 수집합니다. 인벤토리 수집은 기본적으로 사용하도록 설정됩니다. 다음 필드를 구성할 수 있습니다.
+고급 구성 화면에서 *VM 성능* 상자를 선택하여 성능 데이터를 수집합니다.  재고 수집은 기본적으로 활성화되어 있습니다.  다음 필드를 구성할 수 있습니다.
 
 [cols="2*"]
 |===
 
 
-| 필드에 입력합니다 | 설명 
+| 필드 | 설명 
 
 
 | 재고 폴링 간격(분) | 기본값은 20입니다 
 
 
-| VM 필터링 | 클러스터, 데이터 센터 또는 ESX 호스트를 선택합니다 
+| VM 필터링 | 클러스터, 데이터 센터 또는 ESX 호스트를 선택하세요 
 
 
-| 목록을 지정하려면 '제외' 또는 '포함'을 선택하십시오 | 필터 목록(클러스터, 데이터 센터 및/또는 ESX_host) 생성 
+| '제외' 또는 '포함'을 선택하여 목록을 지정하세요. | 필터 목록(CLUSTER, DATACENTER 및/또는 ESX_HOST)을 만듭니다. 
 
 
-| 재시도 횟수입니다 | 기본값은 3입니다 
+| 재시도 횟수 | 기본값은 3입니다 
 
 
 | 통신 포트 | 기본값은 443입니다 
 
 
-| 장치 목록 필터링... | 이 목록은 정확히 일치하는 문자열로 구성되어야 합니다. esx_host로 필터링하려는 경우 Data Infrastructure Insights 및 vSphere에 보고된 ESX 호스트의 정확한 "이름"을 쉼표로 구분하여 작성해야 합니다. 이러한 "이름"은 IP 주소, 단순 호스트 이름 또는 FQDN(정규화된 도메인 이름)일 수 있습니다. 이는 해당 호스트가 vSphere에 처음 추가될 때 이름이 어떻게 지정되었는지 기준으로 결정됩니다. 클러스터별로 필터링하는 경우 하이퍼바이저에서 CI가 보고한 Data Infrastructure Insights 스타일의 클러스터 이름을 사용합니다. - Data Infrastructure Insights는 vSphere 클러스터 이름에 vSphere 데이터센터 이름 앞에 슬래시("DC1/clusterA")를 붙입니다. Data Infrastructure Insights가 데이터 센터 DC1 내의 clusterA 하이퍼바이저에서 보고하는 클러스터 이름입니다. 
+| 장치 목록 필터링... | 이 목록은 정확한 문자열 일치로 구성되어야 합니다. ESX_HOST로 필터링하려는 경우 Data Infrastructure Insights 와 vSphere에 보고된 대로 ESX 호스트의 정확한 "이름"을 쉼표로 구분하여 목록을 작성해야 합니다.  이러한 "이름"은 IP 주소, 간단한 호스트 이름 또는 정규화된 도메인 이름(FQDN)일 수 있습니다. 이는 이러한 호스트가 원래 vSphere에 추가될 때 지정된 이름에 따라 결정됩니다.  CLUSTER로 필터링할 경우 CI가 하이퍼바이저에 보고한 Data Infrastructure Insights 스타일의 클러스터 이름을 사용합니다. Data Infrastructure Insights vSphere 클러스터 이름 앞에 vSphere 데이터 센터 이름과 슬래시를 붙입니다. "DC1/clusterA"는 Data Infrastructure Insights 데이터 센터 DC1 내의 clusterA에 있는 하이퍼바이저에 대해 보고하는 클러스터 이름입니다. 
 
 
 | 성능 폴링 간격(초) | 기본값은 300입니다 
@@ -129,41 +129,41 @@ Data Infrastructure Insights는 VMware vSphere Data Collector에서 다음과 �
 
 == VMware 태그를 Data Infrastructure Insights 주석에 매핑
 
-VMware 데이터 수집기를 사용하면 Data Infrastructure Insights 주석을 VMware에 구성된 태그로 채울 수 있습니다. DII 주석 이름은 VMware * category * name과 동일해야 합니다. 그러면 태그는 범주와 동일한 이름의 DII 주석의 주석 값으로 적용됩니다. Data Infrastructure Insights는 항상 같은 이름의 텍스트 유형 주석을 채우고 다른 유형(숫자, 부울 등)의 주석을 채우려는 "최선의 시도"를 합니다. 주석이 다른 유형이고 데이터 수집기가 주석을 채우지 못할 경우 주석을 제거하고 텍스트 유형으로 다시 생성해야 할 수 있습니다.
+VMware 데이터 수집기를 사용하면 VMware에 구성된 태그로 Data Infrastructure Insights 주석을 채울 수 있습니다.  DII 주석 이름은 VMware *category* 이름과 동일해야 합니다. 그런 다음 태그는 범주와 동일한 이름의 DII 주석의 주석 값으로 적용됩니다.  Data Infrastructure Insights 항상 동일한 이름의 텍스트 유형 주석을 채우고, 다른 유형(숫자, 부울 등)의 주석을 채우기 위해 최선을 다합니다.  주석이 다른 유형이고 데이터 수집기가 주석을 채우지 못하는 경우 주석을 제거하고 텍스트 유형으로 다시 만들어야 할 수도 있습니다.
 
-VMware 태그는 대소문자를 구분하지만 Data Infrastructure Insights 태그는 대소문자를 구분하지 않습니다. 따라서 Data Infrastructure Insights에서 "소유자"라는 주석을 작성하고 VMware에서 "소유자", "소유자" 및 "소유자"라는 태그를 생성하면 이러한 모든 "소유자" 변형은 Cloud Insight의 "소유자" 주석에 매핑됩니다.
+VMware 태그는 대소문자를 구분하지만, Data Infrastructure Insights 태그는 대소문자를 구분하지 않습니다.  따라서 Data Infrastructure Insights 에서 "OWNER"라는 이름의 주석을 생성하고 VMware에서 "OWNER", "Owner", "owner"라는 이름의 태그를 생성하면 이러한 모든 "owner" 변형이 Cloud Insight의 "OWNER" 주석에 매핑됩니다.
 
-다음 사항에 유의하십시오.
+다음 사항을 명심하세요.
 
-* Data Infrastructure Insights는 현재 NetApp 장치에 대한 지원 정보만 자동 게시합니다.
-* 이 지원 정보는 주석 형식으로 유지되므로 이를 쿼리하거나 대시보드에서 사용할 수 있습니다.
-* 사용자가 주석 값을 덮어쓰거나 비우는 경우 Data Infrastructure Insights에서 주석을 업데이트할 때 이 값은 하루에 한 번 자동으로 채워집니다.
+* Data Infrastructure Insights 현재 NetApp 장치에 대한 지원 정보만 자동으로 게시합니다.
+* 이러한 지원 정보는 주석 형태로 보관되므로, 이를 쿼리하거나 대시보드에서 사용할 수 있습니다.
+* 사용자가 주석 값을 덮어쓰거나 비우면 Data Infrastructure Insights 주석을 업데이트할 때 값이 자동으로 다시 채워집니다. Data Infrastructure Insights는 하루에 한 번씩 주석을 업데이트합니다.
 
 
 
 
 == 문제 해결
 
-이 데이터 수집기에서 문제가 발생할 경우 다음과 같은 방법을 시도해 보십시오.
+이 데이터 수집기에 문제가 발생하면 시도해 볼 수 있는 몇 가지 사항은 다음과 같습니다.
 
 
 
-=== 인벤토리
+=== 목록
 
 [cols="2*"]
 |===
-| 문제: | 다음을 시도해 보십시오. 
+| 문제: | 다음을 시도해 보세요: 
 
 
-| 오류: VM을 필터링하는 포함 목록은 비워 둘 수 없습니다 | 포함 목록을 선택한 경우 유효한 데이터 센터, 클러스터 또는 호스트 이름을 나열하여 VM을 필터링합니다 
+| 오류: VM을 필터링할 포함 목록은 비어 있을 수 없습니다. | 목록 포함을 선택한 경우 VM을 필터링하기 위해 유효한 데이터 센터, 클러스터 또는 호스트 이름을 나열하세요. 
 
 
-| 오류: IP에서 VirtualCenter에 대한 연결을 인스턴스화하지 못했습니다 | 가능한 해결 방법: * 입력한 자격 증명 및 IP 주소를 확인합니다. * VMware Infrastructure Client를 사용하여 Virtual Center와 통신해 보십시오. * Managed Object Browser(예: MOB)를 사용하여 Virtual Center와 통신해 보십시오. 
+| 오류: IP에서 VirtualCenter에 대한 연결을 인스턴스화하지 못했습니다. | 가능한 해결책: * 입력한 자격 증명과 IP 주소를 확인하세요.  * VMware Infrastructure Client를 사용하여 Virtual Center와 통신을 시도해 보세요.  * 관리형 개체 브라우저(예: MOB)를 사용하여 Virtual Center와 통신을 시도합니다. 
 
 
-| 오류: IP의 VirtualCenter에는 JVM에 필요한 일치하지 않는 인증서가 있습니다 | 가능한 해결책: * 권장: 더 강력한(예 1024비트) RSA 키. * 권장하지 않음: JDK.certpath 제약 조건을 활용하도록 JVM java.security 구성을 수정하십시오. disabledAlgorithms 512비트 RSA 키를 허용합니다. 을 link:http://www.oracle.com/technetwork/java/javase/7u40-relnotes-2004172.html["JDK 7 업데이트 40 릴리스 정보"]참조하십시오. 
+| 오류: IP의 VirtualCenter에 JVM이 요구하는 비준수 인증서가 있습니다. | 가능한 해결 방법: * 권장 사항: 더 강력한(예: 1024비트) RSA 키를 사용하여 Virtual Center에 대한 인증서를 다시 생성합니다.  * 권장하지 않음: JVM java.security 구성을 수정하여 jdk.certpath.disabledAlgorithms 제약 조건을 활용하여 512비트 RSA 키를 허용합니다. 보다 link:http://www.oracle.com/technetwork/java/javase/7u40-relnotes-2004172.html["JDK 7 업데이트 40 릴리스 노트"] . 
 
 
-| "VMware Logs 패키지는 버전 8.0.1 이하에서 VMware에서 지원되지 않습니다."라는 메시지가 표시됩니다. | VMware 8.0.1 이전 버전에서는 로그 수집이 지원되지 않습니다.  Data Infrastructure Insights 에서 로그 수집 기능을 사용하려면 VI Center Infrastructure를 버전 8.0.1 이상으로 업그레이드하세요.  자세한 내용은 여기를 참조하세요.link:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs/Data_Infrastructure_Insights_Brocade_data_source_fails_performance_collection_with_a_timeout_due_to_default_SNMP_configuration["KB 문서"] . 
+| "VMware Logs 패키지는 VMware 8.0.1 미만 버전에서는 지원되지 않습니다."라는 메시지가 표시됩니다. | VMware 8.0.1 이전 버전에서는 로그 수집이 지원되지 않습니다.  Data Infrastructure Insights 에서 로그 수집 기능을 사용하려면 VI Center Infrastructure를 버전 8.0.1 이상으로 업그레이드하세요.  자세한 내용은 여기를 참조하세요.link:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs/Data_Infrastructure_Insights_Brocade_data_source_fails_performance_collection_with_a_timeout_due_to_default_SNMP_configuration["KB 기사"] . 
 |===
-추가 정보는 페이지 또는 에서 찾을 link:concept_requesting_support.html["지원"]link:reference_data_collector_support_matrix.html["Data Collector 지원 매트릭스"]수 있습니다.
+추가 정보는 다음에서 찾을 수 있습니다.link:concept_requesting_support.html["지원하다"] 페이지 또는link:reference_data_collector_support_matrix.html["데이터 수집기 지원 매트릭스"] .

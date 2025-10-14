@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: ws_webhook_example_pagerduty.html 
 keywords: webhook, notification, PagerDuty, integration 
-summary: PagerDuty에 대한 워크로드 보안 Webhook를 생성하여 보안을 알립니다 
+summary: PagerDuty에 대한 보안 경고를 위한 Workload Security 웹훅을 생성합니다. 
 ---
-= PagerDuty에 대한 워크로드 보안 Webhook 예
+= PagerDuty를 위한 워크로드 보안 웹훅 예제
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,53 +14,53 @@ summary: PagerDuty에 대한 워크로드 보안 Webhook를 생성하여 보안�
 
 
 [role="lead"]
-Webhook을 사용하면 사용자 지정된 Webhook 채널을 사용하여 다양한 응용 프로그램에 경고 알림을 보낼 수 있습니다. 이 페이지에서는 PagerDuty에 대한 Webhook 설정에 대한 예를 제공합니다.
+웹훅을 사용하면 사용자는 사용자 정의된 웹훅 채널을 사용하여 다양한 애플리케이션에 알림을 보낼 수 있습니다.  이 페이지에서는 PagerDuty에 대한 웹훅을 설정하는 방법에 대한 예를 제공합니다.
 
 
-NOTE: 이 페이지는 변경될 수 있는 타사 지침을 참조합니다. 최신 정보는 를 link:https://support.pagerduty.com/docs/services-and-integrations["PagerDuty 문서"]참조하십시오.
+NOTE: 이 페이지는 변경될 수 있는 제3자 지침을 참조합니다.  를 참조하세요link:https://support.pagerduty.com/docs/services-and-integrations["PagerDuty 문서"] 최신 정보를 확인하세요.
 
 
 
 == PagerDuty 설정:
 
-. PagerDuty에서 * Services > Service Directory * 로 이동하고 * + New Service * 버튼을 클릭합니다.
-. _ 이름 _ 을(를) 입력하고 _ 직접 API 사용 _ 을(를) 선택합니다. Add Service _ 를 선택합니다.
+. PagerDuty에서 *서비스 > 서비스 디렉터리*로 이동한 다음 *+새 서비스* 버튼을 클릭합니다.
+. _이름_을 입력하고 _API를 직접 사용_을 선택하세요.  _서비스 추가_를 선택하세요.
 +
-image:Webhooks_PagerDutyScreen1.png["PagerDuty 화면"]
+image:Webhooks_PagerDutyScreen1.png["페이저듀티 화면"]
 
-. 통합 키 * 를 보려면 _Integrations_탭을 선택합니다. 아래 워크로드 보안 웹후크를 생성할 때 이 키가 필요합니다.
+. _통합_ 탭을 선택하여 *통합 키*를 확인하세요.  아래의 워크로드 보안 웹후크를 생성할 때 이 키가 필요합니다.
 
 
-. 알림을 보려면 * 인시던트 * 또는 * 서비스 * 로 이동하십시오.
+. 알림을 보려면 *사건* 또는 *서비스*로 이동하세요.
 +
-image:ws_pagerduty_incidents_list.png["PagerDuty 인시던트 목록 예, width=700"]
+image:ws_pagerduty_incidents_list.png["pagerduty 사건 목록 예시, 너비=700"]
 
 
 
 
 
-== 워크로드 보안 페이지 듀티 Webhook 생성:
+== 워크로드 보안 PagerDuty 웹훅 생성:
 
-* Admin > Notifications 로 이동한 후 _Workload Security Webhooks_tab 을 선택합니다. 새 Webhook을 생성하려면 '+Webhook'을 선택하십시오.
-* Webhook에 의미 있는 이름을 지정합니다.
-* 템플릿 유형 드롭다운에서 _PagerDuty Trigger_를 선택합니다.
-* _routingKey_라는 사용자 지정 매개 변수 암호를 만들고 이 값을 위에서 생성한 PagerDuty_Integration Key_로 설정합니다.
-
-
-image:Webhooks_Custom_Secret_Routing_Key.png["라우팅 키 설정, 폭 = 300"]
-
-image:ws_webhook_pagerduty_example.png["워크로드 보안 PagerDuty Webhook 예, width = 400"]
+* 관리 > 알림으로 이동하여 _워크로드 보안 웹훅_ 탭을 선택합니다.  새로운 웹훅을 만들려면 '+ 웹훅'을 선택하세요.
+* 웹훅에 의미 있는 이름을 지정하세요.
+* _템플릿 유형_ 드롭다운에서 _PagerDuty Trigger_를 선택합니다.
+* _routingKey_라는 사용자 지정 매개변수 비밀번호를 만들고 값을 위에서 만든 PagerDuty _Integration Key_로 설정합니다.
 
 
+image:Webhooks_Custom_Secret_Routing_Key.png["라우팅 키 설정, 너비=300"]
 
-== Webhook를 통한 알림
-
-* 웹 후크를 통해 이벤트에 대해 알리려면 _ Workload Security > Policies _ 로 이동합니다. _ + 공격 정책 _ 또는 _ + 경고 정책 _ 을(를) 선택합니다.
-* 의미 있는 정책 이름을 입력합니다.
-* 필수 공격 유형, 정책을 연결할 장치 및 필수 조치 를 선택합니다.
-* Webhooks Notifications_드롭다운 아래에서 필요한 PagerDuty Webhook를 선택합니다. 정책을 저장합니다.
+image:ws_webhook_pagerduty_example.png["워크로드 보안 pagerduty 웹훅 예시, 너비=400"]
 
 
-참고: Webhook를 편집하여 기존 정책에 연결할 수도 있습니다.
 
-image:ws_add_attack_policy.png["webhook, width=400을 보여주는 공격 정책 대화 상자를 추가합니다"]
+== Webhook을 통한 알림
+
+* 웹훅을 통해 이벤트를 알리려면 _워크로드 보안 > 정책_으로 이동하세요.  _+공격 정책_ 또는 _+경고 정책_을 선택하세요.
+* 의미 있는 정책 이름을 입력하세요.
+* 필요한 공격 유형, 정책을 첨부할 장치 및 필요한 작업을 선택합니다.
+* _웹훅 알림_ 드롭다운에서 필요한 PagerDuty 웹훅을 선택합니다. 정책을 저장합니다.
+
+
+참고: 웹후크는 기존 정책을 편집하여 첨부할 수도 있습니다.
+
+image:ws_add_attack_policy.png["웹훅을 표시하는 공격 정책 대화 상자 추가, 너비=400"]

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_dc_emc_unisphere.html 
 keywords: data collector, Unisphere, EMC 
-summary: Dell EMC Unisphere REST 데이터 수집기 구성 
+summary: Dell EMC Unisphere REST 데이터 수집기를 구성합니다. 
 ---
 = Dell EMC Unisphere REST 데이터 수집기 구성
 :hardbreaks:
@@ -10,4 +10,4 @@ summary: Dell EMC Unisphere REST 데이터 수집기 구성
 
 
 [role="lead"]
-이 페이지는 스터브입니다. 최신 Unisphere 설명서는 를 참조하십시오link:task_dc_emc_unisphere_rest.html["* 이 페이지 *"].
+이 페이지는 스텁입니다.  최신 Unisphere 설명서는 다음을 참조하세요.link:task_dc_emc_unisphere_rest.html["*이 페이지*"] .

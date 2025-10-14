@@ -2,36 +2,36 @@
 sidebar: sidebar 
 permalink: task_dc_rubrik_cdm.html 
 keywords: data collector, Rubrik, 
-summary: Rubrik CDM 데이터 수집기 구성 
+summary: Rubrik CDM 데이터 수집기를 구성합니다. 
 ---
-= Rubrik CDM Data Collector
+= Rubrik CDM 데이터 수집기
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights는 Rubrik 데이터 수집기를 사용하여 Rubrik 스토리지 어플라이언스로부터 인벤토리 및 성능 데이터를 가져옵니다.
+Data Infrastructure Insights Rubrik 데이터 수집기를 사용하여 Rubrik 스토리지 어플라이언스에서 인벤토리 및 성능 데이터를 수집합니다.
 
 
 
-== 용어
+== 술어
 
-Data Infrastructure Insights는 Rubrik 데이터 수집기에서 다음 인벤토리 정보를 가져옵니다. Data Infrastructure Insights에서 구입한 각 자산 유형에 대해 이 자산에 사용되는 가장 일반적인 용어가 표시되어 있습니다. 이 데이터 수집기를 보거나 문제를 해결할 때 다음 용어를 염두에 두십시오.
+Data Infrastructure Insights Rubrik 데이터 수집기에서 다음과 같은 인벤토리 정보를 수집합니다.  Data Infrastructure Insights 에서 수집한 각 자산 유형에 대해 해당 자산에 가장 일반적으로 사용되는 용어가 표시됩니다.  이 데이터 수집기를 보거나 문제를 해결할 때 다음 용어를 염두에 두십시오.
 
 [cols="2*"]
 |===
-| 공급업체/모델 기간 | Data Infrastructure Insights 용어 
+| 공급업체/모델 용어 | Data Infrastructure Insights 용어 
 
 
-| 클러스터 | 스토리지, 스토리지 풀 
+| 무리 | 보관, 보관 풀 
 
 
-| 노드 | 스토리지 노드 
+| 마디 | 저장 노드 
 
 
 | 디스크 | 디스크 
 |===
-참고: 이러한 용어 매핑은 일반적인 용어 매핑일 뿐이며 이 데이터 소스의 모든 경우를 나타내는 것은 아닙니다.
+참고: 이는 일반적인 용어 매핑일 뿐이며 이 데이터 소스의 모든 사례를 나타내지 않을 수 있습니다.
 
 
 
@@ -39,11 +39,11 @@ Data Infrastructure Insights는 Rubrik 데이터 수집기에서 다음 인벤�
 
 이 데이터 수집기를 구성하려면 다음이 필요합니다.
 
-* Data Infrastructure Insights 수집 장치가 Rubrik 클러스터에 대한 TCP 포트 443에 대한 연결을 시작합니다. 클러스터당 Collector 1개.
-* Rubrik 클러스터 IP 주소
-* 클러스터에 대한 사용자 이름 및 암호.
+* Data Infrastructure Insights 수집 부서는 Rubrik 클러스터에 TCP 포트 443을 통해 연결을 시작합니다.  클러스터당 수집기 1개.
+* 루브릭 클러스터 IP 주소.
+* 클러스터의 사용자 이름과 비밀번호입니다.
 * Rubrik 클러스터 IP 주소 또는 호스트 이름.
-* 기본 인증의 경우 클러스터에 대한 사용자 이름과 암호가 필요합니다. 서비스 계정 기반 인증을 사용하려면 서비스 계정, 암호 및 조직 ID가 필요합니다
+* 기본 인증의 경우 클러스터에 대한 사용자 이름과 비밀번호가 필요합니다.  서비스 계정 기반 인증을 사용하려면 서비스 계정, 비밀번호 및 조직 ID가 필요합니다.
 * 포트 요구 사항: HTTPS 443
 
 
@@ -53,16 +53,16 @@ Data Infrastructure Insights는 Rubrik 데이터 수집기에서 다음 인벤�
 
 [cols="2*"]
 |===
-| 필드에 입력합니다 | 설명 
+| 필드 | 설명 
 
 
-| IP | Rubrik 클러스터의 IP 주소 
+| 아이피 | Rubrik 클러스터의 IP 주소 
 
 
-| 사용자 이름/서비스 계정 | 클러스터의 사용자 이름입니다 
+| 사용자 이름/서비스 계정 | 클러스터의 사용자 이름 
 
 
-| 비밀번호 / 비밀 | 클러스터의 암호입니다 
+| 비밀번호 / 비밀 | 클러스터의 비밀번호 
 
 
 | 서비스 계정에 대한 조직 ID | 이는 "Organization:::nnnnnn-nnnn....."와 같은 전체 문자열이어야 합니다. 
@@ -82,20 +82,20 @@ Data Infrastructure Insights는 Rubrik 데이터 수집기에서 다음 인벤�
 
 == 문제 해결
 
-이 데이터 수집기에서 문제가 발생할 경우 다음과 같은 방법을 시도해 보십시오.
+이 데이터 수집기에 문제가 발생하면 시도해 볼 수 있는 몇 가지 사항은 다음과 같습니다.
 
 
 
-=== 인벤토리
+=== 목록
 
 [cols="2*"]
 |===
-| 문제: | 다음을 시도해 보십시오. 
+| 문제: | 다음을 시도해 보세요: 
 
 
-| 하나 이상의 저장소가 생성되었다는 메시지가 표시됩니다. | 클러스터가 올바르게 구성되어 있고 수집기가 단일 클러스터를 가리키고 있는지 확인합니다. 
+| 두 개 이상의 저장소가 생성되었다는 메시지를 받았습니다. | 클러스터가 올바르게 구성되었는지, 수집기가 단일 클러스터를 가리키는지 확인하세요. 
 
 
-| 400[잘못된 요청] 오류로 폴링이 실패합니다... 잘못된 ManagedId... | 조직 ID 필드에 값을 채웠지만 Rubrik 클러스터는 Rubrik의 오류 메시지에서 "ManagedId"로 언급했음에도 불구하고 해당 조직 ID가 유효한 조직 ID라고 믿지 않습니다. 
+| 400 [잘못된 요청] 오류로 폴링이 실패합니다. 관리 ID가 잘못되었습니다. | 조직 ID 필드에 값을 채웠지만 Rubrik 클러스터는 Rubrik의 오류 메시지에서 "ManagedId"로 언급되었음에도 불구하고 해당 조직 ID가 유효한 조직 ID라고 믿지 않습니다. 
 |===
-추가 정보는 페이지 또는 에서 찾을 link:concept_requesting_support.html["지원"]link:reference_data_collector_support_matrix.html["Data Collector 지원 매트릭스"]수 있습니다.
+추가 정보는 다음에서 찾을 수 있습니다.link:concept_requesting_support.html["지원하다"] 페이지 또는link:reference_data_collector_support_matrix.html["데이터 수집기 지원 매트릭스"] .

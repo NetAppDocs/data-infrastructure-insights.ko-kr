@@ -14,19 +14,19 @@ summary: AgentConfiguration 옵션을 사용하여 NetApp Kubernetes Monitoring 
 
 
 [role="lead"]
-그만큼 link:task_config_telegraf_agent_k8s.html#configuringcustomizing-the-operator["Kubernetes 모니터링 운영자"] AgentConfiguration 파일을 통해 광범위한 사용자 지정 옵션을 제공합니다. 리소스 제한, 수집 간격, 프록시 설정, 허용 오차 및 구성 요소별 설정을 구성하여 Kubernetes 환경의 모니터링을 최적화할 수 있습니다. 이러한 옵션을 사용하여 telegraf, kube-state-metrics, 로그 수집, 워크로드 매핑, 변경 관리 및 기타 모니터링 구성 요소를 사용자 지정할 수 있습니다.
+그만큼 link:task_config_telegraf_agent_k8s.html#configuringcustomizing-the-operator["쿠버네티스 모니터링 운영자"] AgentConfiguration 파일을 통해 광범위한 사용자 지정 옵션을 제공합니다. 리소스 제한, 수집 간격, 프록시 설정, 허용 오차 및 구성 요소별 설정을 구성하여 Kubernetes 환경의 모니터링을 최적화할 수 있습니다. 이러한 옵션을 사용하여 telegraf, kube-state-metrics, 로그 수집, 워크로드 매핑, 변경 관리 및 기타 모니터링 구성 요소를 사용자 지정할 수 있습니다.
 
-아래 표에는 _AgentConfiguration_파일에 사용할 수 있는 옵션이 나와 있습니다.
+아래 표는 _AgentConfiguration_ 파일에 대한 가능한 옵션을 나열합니다.
 
 [cols="1,1,2"]
 |===
-| 구성 요소 | 옵션을 선택합니다 | 설명 
+| 요소 | 옵션 | 설명 
 
 
-| 에이전트 |  | 운용자가 설치할 수 있는 모든 구성품에 공통으로 적용되는 구성 옵션. 이러한 옵션은 "글로벌" 옵션으로 간주할 수 있습니다. 
+| 대리인 |  | 운영자가 설치할 수 있는 모든 구성 요소에 공통적인 구성 옵션입니다.  이러한 옵션은 "글로벌" 옵션으로 간주될 수 있습니다. 
 
 
-|  | dockerRepo | Data Infrastructure Insights Docker 저장소 대신 고객의 개인 Docker 저장소에서 이미지를 가져오도록 dockerRepo를 재정의합니다. 기본값은 Data Infrastructure Insights Docker 저장소입니다. 
+|  | 도커리포 | Data Infrastructure Insights Docker 저장소 대신 고객의 개인 Docker 저장소에서 이미지를 가져오도록 dockerRepo를 재정의합니다. 기본값은 Data Infrastructure Insights Docker 저장소입니다. 
 
 
 |  | dockerImagePullSecret | 선택 사항: 고객의 개인 저장소에 대한 비밀입니다. 
@@ -35,178 +35,178 @@ summary: AgentConfiguration 옵션을 사용하여 NetApp Kubernetes Monitoring 
 |  | 클러스터 이름 | 모든 고객 클러스터에서 클러스터를 고유하게 식별하는 자유 텍스트 필드입니다. 이 필드는 Data Infrastructure Insights 테넌트 전체에서 고유해야 합니다. 기본값은 고객이 UI에서 "클러스터 이름" 필드에 입력하는 내용입니다. 
 
 
-|  | 프록시 형식: proxy:server:port:username:password:nProxy:isTelegyxyEnabled:isAuProxyEnabled:isFluentbitProxyEnabled:isCollectionorProxyEnabled:isCollectorProxyEnabled: | 프록시를 설정하는 선택 사항입니다. 일반적으로 고객의 기업 대리인입니다. 
+|  | 프록시 형식: 프록시: 서버: 포트: 사용자 이름: 비밀번호: noProxy: isTelegrafProxyEnabled: isAuProxyEnabled: isFluentbitProxyEnabled: isCollectorProxyEnabled: | 프록시 설정은 선택 사항입니다.  이는 일반적으로 고객의 회사 대리인입니다. 
 
 
-| 텔레그라프 |  | 작업자의 Telegraf 설치를 사용자 정의할 수 있는 구성 옵션 
+| 텔레그라프 |  | Operator의 Telegraf 설치를 사용자 정의할 수 있는 구성 옵션 
 
 
-|  | 수집 간격 | 메트릭 수집 간격(초)(최대 = 60초) 
+|  | 수집간격 | 메트릭 수집 간격(초)(최대 60초) 
 
 
-|  | dsCpuLimit 를 선택합니다 | Telegraf DS의 CPU 제한 
+|  | dsCpuLimit | Telegraf DS의 CPU 제한 
 
 
 |  | dsMemLimit | Telegraf DS의 메모리 제한 
 
 
-|  | dsCpuRequest 를 참조하십시오 | Telegraf DS에 대한 CPU 요청 
+|  | dsCpu요청 | Telegraf DS에 대한 CPU 요청 
 
 
-|  | dsMemRequest입니다 | Telegraf DS에 대한 메모리 요청 
+|  | dsMemRequest | Telegraf DS에 대한 메모리 요청 
 
 
-|  | rsCpuLimit | Telegraf RS의 CPU 제한 
+|  | rsCpuLimit | Telegraf rs의 CPU 제한 
 
 
-|  | 메모리 제한 | Telegraf RS의 메모리 제한 
+|  | rsMemLimit | Telegraf RS의 메모리 제한 
 
 
-|  | rsCpuRequest 를 참조하십시오 | Telegraf RS에 대한 CPU 요청 
+|  | rsCpu요청 | Telegraf rs에 대한 CPU 요청 
 
 
-|  | rsMemRequest입니다 | Telegraf RS에 대한 메모리 요청 
+|  | rsMemRequest | Telegraf rs에 대한 메모리 요청 
 
 
-|  | runPrivileged(권한이 | 권한 부여 모드에서 Telegraf DemonSet's_Telegraf-mountstats-poller_container를 실행합니다. Kubernetes 노드에서 SELinux가 활성화된 경우 이 값을 true로 설정합니다. 
+|  | 권한이 있는 실행 | 특권 모드에서 telegraf DaemonSet의 _telegraf-mountstats-poller_ 컨테이너를 실행합니다.  Kubernetes 노드에서 SELinux가 활성화된 경우 이 값을 true로 설정합니다. 
 
 
-|  | runDsPrivileged입니다 | 권한 있는 모드에서 Telegraf DemonSet의 Telegraf 컨테이너를 실행하려면 runDsPrivileged를 true로 설정합니다. 
+|  | runDs특권 | telegraf DaemonSet의 telegraf 컨테이너를 특권 모드로 실행하려면 runDsPrivileged를 true로 설정합니다. 
 
 
-|  | BatchSize(부atchSize) | 을 참조하십시오 link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Telegraf 구성 문서"] 
+|  | 배치 크기 | 보다link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Telegraf 구성 문서"] 
 
 
-|  | 백혈구 한계 | 을 참조하십시오 link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Telegraf 구성 문서"] 
+|  | 버퍼 제한 | 보다link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Telegraf 구성 문서"] 
 
 
-|  | RoundInterval(라운드 간격 | 을 참조하십시오 link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Telegraf 구성 문서"] 
+|  | 라운드 간격 | 보다link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Telegraf 구성 문서"] 
 
 
-|  | 콜렉션 지터 | 을 참조하십시오 link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Telegraf 구성 문서"] 
+|  | 컬렉션지터 | 보다link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Telegraf 구성 문서"] 
 
 
-|  | 정밀도 | 을 참조하십시오 link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Telegraf 구성 문서"] 
+|  | 정도 | 보다link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Telegraf 구성 문서"] 
 
 
-|  | FlushInterval(플러시간격 | 을 참조하십시오 link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Telegraf 구성 문서"] 
+|  | 플러시 간격 | 보다link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Telegraf 구성 문서"] 
 
 
-|  | 플러시지터 | 을 참조하십시오 link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Telegraf 구성 문서"] 
+|  | 플러시지터 | 보다link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Telegraf 구성 문서"] 
 
 
-|  | 출력 제한 시간 | 을 참조하십시오 link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Telegraf 구성 문서"] 
+|  | 출력시간 초과 | 보다link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Telegraf 구성 문서"] 
 
 
-|  | dsTolerations 를 선택합니다 | 텔레그라프 - DS 추가 허용. 
+|  | ds내성 | telegraf-ds 추가 허용 범위. 
 
 
-|  | RsTolerations를 선택합니다 | Telegraf-RS 추가 허용. 
+|  | rsTolerations | telegraf-rs 추가 허용 범위. 
 
 
-|  | SkipProcessorsAfterAggregators 를 참조하십시오 | 을 참조하십시오 link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Telegraf 구성 문서"] 
+|  | 스킵프로세서애그리게이터 | 보다link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Telegraf 구성 문서"] 
 
 
-|  | 보호되지 않음 | 이것을 보세요 link:https://community.influxdata.com/t/updating-telegraf-to-version-1-29-5-crashes-kubernetes-pod/33376["알려진 Telegraf 문제입니다"] . _unprotected_를 설정하면 Kubernetes Monitoring Operator가 Telegraf를 다음과 같이 실행하도록 지시합니다.  `--unprotected` 깃발. 
+|  | 보호되지 않은 | 이것을 보세요 link:https://community.influxdata.com/t/updating-telegraf-to-version-1-29-5-crashes-kubernetes-pod/33376["알려진 Telegraf 문제"] . _unprotected_를 설정하면 Kubernetes Monitoring Operator가 Telegraf를 다음과 같이 실행하도록 지시합니다.  `--unprotected` 깃발. 
 
 
-|  | insecureK8sSkipVerify를 참조하십시오 | Telegraf가 IP SAN 부족으로 인증서를 확인할 수 없는 경우 검증 건너뛰기를 활성화하십시오 
+|  | insecureK8sSkipVerify | IP SAN이 부족하여 Telegraf가 인증서를 확인할 수 없는 경우 확인 건너뛰기를 활성화해 보세요. 
 
 
-| Kudbe-state-metrics를 나타냅니다 |  | 작업자의 kudbe 상태 메트릭 설치를 사용자 지정할 수 있는 구성 옵션입니다 
+| kube-state-metrics |  | Operator의 kube 상태 메트릭 설치를 사용자 정의할 수 있는 구성 옵션 
 
 
-|  | cpuLimit | kubbe-state-metrics 구축을 위한 CPU 제한입니다 
+|  | CPU 제한 | kube-state-metrics 배포를 위한 CPU 제한 
 
 
-|  | MemLimit | kubbe-state-metrics 구축을 위한 MEM 한도 
+|  | 메모리 제한 | kube-state-metrics 배포에 대한 메모리 제한 
 
 
-|  | cpuRequest입니다 | kubbe 상태 메트릭 구축을 위한 CPU 요청입니다 
+|  | cpu요청 | kube state metrics 배포를 위한 CPU 요청 
 
 
-|  | MemRequest입니다 | MEM은 kudo 상태 메트릭 배포를 요청합니다 
+|  | 메모리 요청 | kube state 메트릭 배포를 위한 메모리 요청 
 
 
-|  | 리소스 | 캡처할 리소스의 쉼표로 구분된 목록입니다. 예: cronjobs, demonsets, 배포, Ingresses, 작업, 네임스페이스, 노드, 영구 볼륨, 영구 볼륨, pods, replicasets, resourcecequotas, 서비스, statefulsets 
+|  | 자원 | 캡처할 리소스를 쉼표로 구분하여 나열합니다. 예: cronjobs, daemonsets, deployments, ingresses, jobs, namespaces, nodes, persistentvolumeclaims, persistentvolumes, pods, replicasets, resourcequotas, services, statefulsets 
 
 
-|  | 공차 | Kudbe-state-metrics 추가 공약입니다. 
+|  | 관용 | kube-state-metrics 추가 허용 범위. 
 
 
 |  | 라벨 | kube-state-metrics가 레이블을 캡처해야 하는 리소스의 쉼표로 구분된 목록 +++ 예: cronjobs=[*],daemonsets=[*],deployments=[*],ingresses=[*],jobs=[*],namespaces=[*],nodes=[*], persistentvolumeclaims=[*],persistentvolumes=[*],pods=[*],replicasets=[*],resourcequotas=[*],services=[*],statefulsets=[*] +++ 
 
 
-| 로그 |  | 운용자의 로그 수집 및 설치를 사용자 정의할 수 있는 구성 옵션입니다 
+| 통나무 |  | 운영자의 로그 수집 및 설치를 사용자 정의할 수 있는 구성 옵션 
 
 
-|  | readFromHead(readFromHead | 참/거짓, 유창한 비트가 로그에서 로그를 읽어야 합니다 
+|  | 헤드에서 읽기 | 참/거짓, fluent bit가 head에서 로그를 읽어야 합니까? 
 
 
-|  | 시간 초과 | 시간 초과(초 
+|  | 타임아웃 | 시간 초과(초) 
 
 
-|  | dnsMode를 선택합니다 | TCP/UDP, DNS 모드 
+|  | DNS 모드 | TCP/UDP, DNS 모드 
 
 
-|  | 유창한 비트 내약성 | Fluent-bit-DS 추가 허용. 
+|  | 유창한 비트 허용 | fluent-bit-ds 추가 허용 범위. 
 
 
-|  | 이벤트-수출자-내약성 | 이벤트-수출자 추가 허용. 
+|  | 이벤트 내보내기 허용 | 이벤트 내보내기 추가 허용 범위. 
 
 
-|  | event-exporter-maxEventAgeSeconds입니다 | 이벤트 내보내기 최대 이벤트 기간. 을 참조하십시오 https://github.com/jkroepke/resmoio-kubernetes-event-exporter[] 
+|  | 이벤트 내보내기-maxEventAgeSeconds | 이벤트 내보내기 최대 이벤트 기간.  보다 https://github.com/jkroepke/resmoio-kubernetes-event-exporter[] 
 
 
-|  | 유창한 비트 컨테이너 로그 경로 | 기본적으로 Fluentbit DaemonSet은 Kubernetes 컨테이너 로그에 액세스하고 읽기 위해 /var/log 및 /var/lib/docker/containers 호스트 경로를 마운트합니다. Kubernetes가 컨테이너 로그를 기본 위치가 아닌 다른 위치에 저장하도록 구성된 경우, 이 옵션을 사용하여 Fluentbit DaemonSet을 수정하여 기본 경로가 아닌 다른 경로를 마운트할 수 있습니다. 
+|  | 유창한 비트 컨테이너 로그 경로 | 기본적으로 Fluentbit DaemonSet은 /var/log 및 /var/lib/docker/containers 호스트 경로를 마운트하여 Kubernetes 컨테이너 로그에 액세스하고 이를 읽습니다.  Kubernetes가 컨테이너 로그를 기본이 아닌 위치에 저장하도록 구성된 경우 이 옵션을 사용하여 Fluentbit DaemonSet을 수정하여 기본이 아닌 경로를 마운트합니다. 
 
 
-| 워크로드 맵 |  | 작업량 맵 수집 및 작업자의 설치를 사용자 지정할 수 있는 구성 옵션입니다. 
+| 워크로드 맵 |  | Operator의 작업 맵 수집 및 설치를 사용자 정의할 수 있는 구성 옵션입니다. 
 
 
-|  | cpuLimit | 순 관찰자 DS에 대한 CPU 제한입니다 
+|  | CPU 제한 | net observer ds에 대한 CPU 제한 
 
 
-|  | MemLimit | 순 관찰자 DS에 대한 MEM 한도 
+|  | 메모리 제한 | net observer ds에 대한 메모리 제한 
 
 
-|  | cpuRequest입니다 | net observer DS에 대한 CPU 요청입니다 
+|  | cpu요청 | net observer ds에 대한 CPU 요청 
 
 
-|  | MemRequest입니다 | net observer DS에 대한 MEM 요청 
+|  | 메모리 요청 | net observer ds에 대한 mem 요청 
 
 
-|  | MetricAggregationInterval입니다 | 메트릭 집계 간격(초 
+|  | 메트릭 집계 간격 | 메트릭 집계 간격(초) 
 
 
-|  | bpfPollInterval입니다 | BPF 폴링 간격(초 
+|  | bpfPollInterval | BPF 폴링 간격(초) 
 
 
-|  | enableDNSLookup | True/false, DNS 조회를 사용하도록 설정합니다 
+|  | DNSLookup 활성화 | true/false, DNS 조회 활성화 
 
 
-|  | L4-공차 | NET-observer-L4-DS 추가 허용 오차 
+|  | l4-내성 | net-observer-l4-ds 추가 허용 범위. 
 
 
-|  | runPrivileged(권한이 | 참/거짓 - Kubernetes 노드에서 SELinux가 활성화된 경우 runprivileged 를 true 로 설정합니다. 
+|  | 권한이 있는 실행 | true/false - Kubernetes 노드에서 SELinux가 활성화된 경우 runPrivileged를 true로 설정합니다. 
 
 
-| 변경 관리 |  | Kubernetes 변경 관리 및 분석에 대한 구성 옵션 
+| 변화 관리 |  | Kubernetes 변경 관리 및 분석을 위한 구성 옵션 
 
 
-|  | cpuLimit | change-observer-watch-RS에 대한 CPU 제한값입니다 
+|  | CPU 제한 | change-observer-watch-rs에 대한 CPU 제한 
 
 
-|  | MemLimit | change-observer-watch-RS에 대한 MEM 한계 
+|  | 메모리 제한 | change-observer-watch-rs에 대한 메모리 제한 
 
 
-|  | cpuRequest입니다 | change-observer-watch-RS에 대한 CPU 요청입니다 
+|  | cpu요청 | change-observer-watch-rs에 대한 CPU 요청 
 
 
-|  | MemRequest입니다 | change-observer-watch-RS에 대한 MEM 요청 
+|  | 메모리 요청 | change-observer-watch-rs에 대한 mem 요청 
 
 
-|  | workloadFailureDeclarationIntervalSeconds | 작업 부하의 배포가 성공하지 못할 경우 실패로 표시되는 간격(초) 
+|  | workloadFailureDeclarationIntervalSeconds | 작업 부하의 배포가 성공하지 못한 경우 배포가 실패로 표시되는 간격(초) 
 
 
 |  | workloadDeployAggrIntervalSeconds | 워크로드 배포가 결합되어 전송되는 빈도(초) 
@@ -215,25 +215,25 @@ summary: AgentConfiguration 옵션을 사용하여 NetApp Kubernetes Monitoring 
 |  | nonWorkloadDeployAggrIntervalSeconds | 비작업 부하 배포가 결합되어 전송되는 빈도(초) 
 
 
-|  | TERmsToRedact 를 참조하십시오 | env 이름 및 데이터 맵에 사용되는 정규식 집합이며, 값이 "pwd", "password", "token", "apikey", "api-key", "jwt" 등의 용어가 교정됩니다. 
+|  | 용어삭제 | 값이 삭제되는 환경 이름 및 데이터 맵에 사용되는 정규 표현식 세트 예시 용어: "pwd", "password", "token", "apikey", "api-key", "jwt" 
 
 
-|  | AditionalKindsToWatch 를 참조하십시오 | 수집기에서 감시하는 기본 종류 집합에서 볼 수 있는 추가 종류의 쉼표로 구분된 목록 
+|  | 추가적으로 주의해야 할 종류 | 수집기가 감시하는 기본 종류 집합에서 감시할 추가 종류의 쉼표로 구분된 목록 
 
 
-|  | KindsToIgnoreFromWatch 를 참조하십시오 | 수집기에서 감시하는 기본 종류의 집합에서 감시하는 것을 무시할 수 있는 쉼표로 구분된 종류의 목록입니다 
+|  | 시계에서 무시할 종류 | 수집기가 감시하는 기본 종류 집합에서 감시를 무시할 종류의 쉼표로 구분된 목록 
 
 
-|  | LogRecordAggrIntervalSeconds입니다 | 수집기에서 CI로 로그 레코드를 보내는 빈도입니다 
+|  | logRecordAggrIntervalSeconds | 수집기에서 CI로 로그 레코드가 전송되는 빈도 
 
 
-|  | 시계의 내약성 | change-observer-watch-DS 추가 허용 오차. 축약된 단일 선 형식만 해당. 예: '{key:taint1,operator:exists,effect:NoSchedule}, {key:taint2,operator:exists,effect:NoExecute}' 
+|  | 감시 관용 | change-observer-watch-ds 추가적인 허용 범위.  축약된 단일 행 형식만 가능합니다.  예: '{키: taint1, 연산자: 존재, 효과: NoSchedule},{키: taint2, 연산자: 존재, 효과: NoExecute}' 
 |===
 
 
-== AgentConfiguration 파일 예
+== 샘플 AgentConfiguration 파일
 
-다음은 샘플_AgentConfiguration_파일입니다.
+아래는 _AgentConfiguration_ 파일의 샘플입니다.
 
 [listing]
 ----

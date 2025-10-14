@@ -2,51 +2,51 @@
 sidebar: sidebar 
 permalink: task_dc_hds_hcp.html 
 keywords: data collector, Hitachi HDS, HCP 
-summary: HDS 데이터 수집기 구성 
+summary: HDS 데이터 수집기 구성. 
 ---
-= Hitachi HCP 데이터 수집기입니다
+= 히타치 HCP 데이터 수집기
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-이 데이터 수집기는 HCP 관리 API를 사용하는 HCP(Hitachi Content Platform)를 지원합니다.
+이 데이터 수집기는 HCP Management API를 사용하여 Hitachi Content Platform(HCP)을 지원합니다.
 
 
-NOTE: Hitachi Content Platform은 다른 원시 TB에서 관리 단위 비율로 측정되고 있습니다. 포맷되지 않은 HCP 용량은 40TB마다 1로 충전됩니다.link:concept_subscribing_to_cloud_insights.html#pricing["관리 장치(MU)"]
+NOTE: Hitachi Content Platform은 Raw TB와 Managed Unit의 요금이 다르게 측정됩니다.  포맷되지 않은 HCP 용량 40TB마다 1로 청구됩니다.link:concept_subscribing_to_cloud_insights.html#pricing["관리 단위(MU)"] .
 
 
 
-== 용어
+== 술어
 
-Data Infrastructure Insights는 Hitachi HCP 데이터 수집기에서 다음과 같은 인벤토리 정보를 수집합니다. Data Infrastructure Insights에서 구입한 각 자산 유형에 대해 이 자산에 사용되는 가장 일반적인 용어가 표시되어 있습니다. 이 데이터 수집기를 보거나 문제를 해결할 때 다음 용어를 염두에 두십시오.
+Data Infrastructure Insights Hitachi HCP 데이터 수집기에서 다음과 같은 인벤토리 정보를 수집합니다.  Data Infrastructure Insights 에서 수집한 각 자산 유형에 대해 해당 자산에 가장 일반적으로 사용되는 용어가 표시됩니다.  이 데이터 수집기를 보거나 문제를 해결할 때 다음 용어를 염두에 두십시오.
 
 [cols="2*"]
 |===
-| 공급업체/모델 기간 | Data Infrastructure Insights 용어 
+| 공급업체/모델 용어 | Data Infrastructure Insights 용어 
 
 
 | HCP 클러스터 | 스토리지 
 
 
-| 테넌트 | 스토리지 풀 
+| 거주자 | 스토리지 풀 
 
 
 |  | 네임스페이스 
 
 
-| 내부 볼륨 | 노드 
+| 내부 볼륨 | 마디 
 |===
-참고: 이러한 용어 매핑은 일반적인 용어 매핑일 뿐이며 이 데이터 수집기의 모든 경우를 나타내는 것은 아닙니다.
+참고: 이는 일반적인 용어 매핑일 뿐이며 이 데이터 수집기의 모든 사례를 나타내지 않을 수 있습니다.
 
 
 
-== 재고 요건
+== 재고 요구 사항
 
-재고 데이터를 수집하려면 다음이 있어야 합니다.
+재고 데이터를 수집하려면 다음이 필요합니다.
 
-* HCP 서버의 IP 주소입니다
-* HCP 소프트웨어 및 피어 권한에 대한 읽기 전용 사용자 이름 및 암호입니다
+* HCP 서버의 IP 주소
+* HCP 소프트웨어 및 피어 권한에 대한 읽기 전용 사용자 이름 및 비밀번호
 
 
 
@@ -55,22 +55,22 @@ Data Infrastructure Insights는 Hitachi HCP 데이터 수집기에서 다음과 
 
 [cols="2*"]
 |===
-| 필드에 입력합니다 | 설명 
+| 필드 | 설명 
 
 
-| HCP 호스트 | HCP 호스트의 IP 주소 또는 정규화된 도메인 이름입니다 
+| HCP 호스트 | HCP 호스트의 IP 주소 또는 정규화된 도메인 이름 
 
 
 | HCP 포트 | 기본값은 9090입니다 
 
 
-| HCP 사용자 ID입니다 | HCP 호스트의 사용자 이름입니다. 
+| HCP 사용자 ID | HCP 호스트의 사용자 이름입니다. 
 
 
-| HCP 암호 | HCP 호스트에 사용되는 암호입니다. 
+| HCP 비밀번호 | HCP 호스트에 사용되는 비밀번호입니다. 
 
 
-| HCP 인증 유형 | HCP_LOCAL 또는 ACTIVE_DIRECTORY 를 선택합니다 
+| HCP 인증 유형 | HCP_LOCAL 또는 ACTIVE_DIRECTORY를 선택하세요 
 |===
 
 
@@ -79,12 +79,12 @@ Data Infrastructure Insights는 Hitachi HCP 데이터 수집기에서 다음과 
 |===
 
 
-| 필드에 입력합니다 | 설명 
+| 필드 | 설명 
 
 
-| 재고 폴링 간격(분) | 재고 조사 사이의 간격입니다. 기본값은 60입니다. 
+| 재고 폴링 간격(분) | 재고 조사 간격.  기본값은 60입니다. 
 
 
-| 성능 폴링 간격(초) | 성능 폴링 간격입니다. 기본값은 900입니다. 
+| 성능 폴링 간격(초) | 성과 여론조사 간격.  기본값은 900입니다. 
 |===
-추가 정보는 페이지 또는 에서 찾을 link:concept_requesting_support.html["지원"]link:reference_data_collector_support_matrix.html["Data Collector 지원 매트릭스"]수 있습니다.
+추가 정보는 다음에서 찾을 수 있습니다.link:concept_requesting_support.html["지원하다"] 페이지 또는link:reference_data_collector_support_matrix.html["데이터 수집기 지원 매트릭스"] .

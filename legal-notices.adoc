@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= 법적 고지
+= 법적 고지 사항
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-법적 고지 사항은 저작권 선언, 상표, 특허 등에 대한 액세스를 제공합니다.
+법적 고지사항은 저작권 표시, 상표, 특허 등에 대한 정보를 제공합니다.
 
 
 
@@ -23,7 +23,7 @@ link:https://www.netapp.com/company/legal/copyright/["https://www.netapp.com/com
 
 == 상표
 
-NetApp, NetApp 로고, NetApp 상표 페이지에 나열된 마크는 NetApp Inc.의 상표입니다. 기타 회사 및 제품 이름은 해당 소유자의 상표일 수 있습니다.
+NETAPP, NETAPP 로고 및 NetApp 상표 페이지에 나열된 마크는 NetApp, Inc.의 상표입니다. 다른 회사 및 제품 이름은 해당 소유자의 상표일 수 있습니다.
 
 link:https://www.netapp.com/company/legal/trademarks/["https://www.netapp.com/company/legal/trademarks/"^]
 
@@ -31,13 +31,13 @@ link:https://www.netapp.com/company/legal/trademarks/["https://www.netapp.com/co
 
 == 특허
 
-NetApp 소유 특허 목록은 다음 사이트에서 확인할 수 있습니다.
+NetApp 이 소유한 현재 특허 목록은 다음에서 확인할 수 있습니다.
 
 link:https://www.netapp.com/pdf.html?item=/media/11887-patentspage.pdf["https://www.netapp.com/pdf.html?item=/media/11887-patentspage.pdf"^]
 
 
 
-== 개인 정보 보호 정책
+== 개인정보 보호정책
 
 link:https://www.netapp.com/company/legal/privacy-policy/["https://www.netapp.com/company/legal/privacy-policy/"^]
 
@@ -47,6 +47,6 @@ link:https://www.netapp.com/company/legal/privacy-policy/["https://www.netapp.co
 
 공지 파일은 NetApp 소프트웨어에서 사용되는 타사 저작권 및 라이선스에 대한 정보를 제공합니다.
 
-link:media/DII_Notice-Sept_2025.pdf["데이터 인프라 인사이트(이전의 Cloud Insights)를 위한 고지 사항"]
+link:media/DII_Notice-Sept_2025.pdf["Data Infrastructure Insights (이전 Cloud Insights)에 대한 알림"]
 
-link:media/WS_Notice-Sept_2025.pdf["워크로드 보안 공지(이전의 Cloud Secure)"]
+link:media/WS_Notice-Sept_2025.pdf["워크로드 보안(이전 Cloud Secure)에 대한 공지"]

@@ -2,53 +2,53 @@
 sidebar: sidebar 
 permalink: task_webhook_example_discord.html 
 keywords: webhook, notification, Discord, integration 
-summary: 불화를 위한 성능 또는 인벤토리 임계값에 대한 알림을 제공하는 웹 후크를 만듭니다 
+summary: Discord의 성능 또는 인벤토리 임계값에 대한 알림을 위한 웹훅을 만듭니다. 
 ---
-= 불화의 웹후크 예
+= Discord용 웹훅 예시
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Webhook을 사용하면 사용자 지정된 Webhook 채널을 사용하여 다양한 응용 프로그램에 경고 알림을 보낼 수 있습니다. 이 페이지에서는 불협화용 웹훅을 설정하는 예를 제공합니다.
+웹훅을 사용하면 사용자는 사용자 정의된 웹훅 채널을 사용하여 다양한 애플리케이션에 알림을 보낼 수 있습니다.  이 페이지에서는 Discord에 대한 웹훅을 설정하는 방법에 대한 예를 제공합니다.
 
 
-NOTE: 이 페이지는 변경될 수 있는 타사 지침을 참조합니다. 최신 정보는 를 link:https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks["불화 문서"]참조하십시오.
-
-
-
-== 불화 설정:
-
-* 불화에서 서버를 선택하고 텍스트 채널에서 채널 편집(기어 아이콘)을 선택합니다.
-* 통합 > Webhook 보기 * 를 선택하고 * 새 Webhook * 을 클릭합니다
-* Webhook URL을 복사합니다. 이를 Data Infrastructure Insights Webhook 구성에 붙여 넣어야 합니다.
+NOTE: 이 페이지는 변경될 수 있는 제3자 지침을 참조합니다.  를 참조하세요link:https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks["Discord 문서"] 최신 정보를 확인하세요.
 
 
 
+== Discord 설정:
 
-== Data Infrastructure Insights 생성 Webhook:
-
-. Data Infrastructure Insights에서 * Admin > Notifications * 로 이동하고 * Webhook * 탭을 선택합니다. 새 웹후크를 만들려면 * + 웹후크 * 를 클릭합니다.
-. 웹훅에 "불화"와 같은 의미 있는 이름을 지정합니다.
-. 템플릿 유형 _ 드롭다운에서 * 불화 * 를 선택합니다.
-. 위의 URL을 _url_필드에 붙여 넣습니다.
-
-
-image:Webhooks-Discord_example.png["불화 웹훅 템플릿"]
-
-
-NOTE: Webhook를 테스트하려면 메시지 본문의 URL 값을 유효한 URL(예: _https://NetApp.com_)로 임시 대체한 다음 _Test Webhook_ 버튼을 클릭합니다. 테스트가 완료되면 메시지 본문을 다시 설정해야 합니다.
+* Discord에서 서버를 선택하고 텍스트 채널 아래에서 채널 편집(기어 아이콘)을 선택합니다.
+* *통합 > 웹훅 보기*를 선택하고 *새 웹훅*을 클릭합니다.
+* Webhook URL을 복사합니다.  이것을 Data Infrastructure Insights 웹후크 구성에 붙여넣어야 합니다.
 
 
 
-== Webhook를 통한 알림
 
-웹 훅을 통해 이벤트에 대해 알리려면 Data Infrastructure Insights에서 * Alerts > Monitor * 로 이동하고 * + Monitor * 를 클릭하여 새 이벤트를 link:task_create_monitor.html["모니터링"]생성합니다.
+== Data Infrastructure Insights 웹훅 만들기:
 
-* 메트릭을 선택하고 모니터 조건을 정의합니다.
-* 팀 알림 설정 에서 * Webhook * 전달 방법 을 선택합니다.
-* 원하는 이벤트(위험, 경고, 해결)에 대해 "불화" 웹훅을 선택합니다.
+. Data Infrastructure Insights 에서 *관리자 > 알림*으로 이동하여 *웹후크* 탭을 선택합니다.  새로운 웹훅을 만들려면 *+웹훅*을 클릭하세요.
+. 웹훅에 "Discord"와 같이 의미 있는 이름을 지정합니다.
+. _템플릿 유형_ 드롭다운에서 *Discord*를 선택합니다.
+. 위의 URL을 _URL_ 필드에 붙여넣으세요.
+
+
+image:Webhooks-Discord_example.png["Discord 웹훅 템플릿"]
+
+
+NOTE: 웹훅을 테스트하려면 메시지 본문의 url 값을 유효한 URL(예: https://netapp.com)로 임시로 바꾼 다음 _웹훅 테스트_ 버튼을 클릭합니다.  테스트가 완료되면 메시지 본문을 원래대로 설정하세요.
+
+
+
+== Webhook을 통한 알림
+
+웹후크를 통해 이벤트를 알리려면 Data Infrastructure Insights 에서 *알림 > 모니터*로 이동하고 *+모니터*를 클릭하여 새 모니터를 만듭니다.link:task_create_monitor.html["감시 장치"] .
+
+* 측정 항목을 선택하고 모니터의 조건을 정의합니다.
+* _팀 알림 설정에서 *웹훅* 전달 방법을 선택하세요.
+* 원하는 이벤트(중요, 경고, 해결됨)에 대해 "Discord" 웹훅을 선택하세요.
 +
-image:Webhooks_Discord_Notifications.png["Webhook 알림"]
+image:Webhooks_Discord_Notifications.png["웹훅 알림"]
 
 

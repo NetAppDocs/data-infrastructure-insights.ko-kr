@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task_dc_ibm_ds.html 
 keywords: data collector, IBM DS6xxx, IBM DS6xxx, IBM, IBM DS 
-summary: 시스템 저장소 DS8000 시리즈 데이터 수집기 구성. 
+summary: 시스템 스토리지 DS8000 시리즈 데이터 수집기 구성. 
 ---
-= IBM 시스템 스토리지 DS8000 시리즈 데이터 수집기
+= IBM System Storage DS8000 시리즈 데이터 수집기
 :hardbreaks:
 :allow-uri-read: 
 
@@ -12,34 +12,34 @@ summary: 시스템 저장소 DS8000 시리즈 데이터 수집기 구성.
 [role="lead"]
 IBM DS(CLI) 데이터 수집기는 DS6xxx 및 DS8xxx 장치에 대한 인벤토리 및 성능 데이터 수집을 지원합니다.
 
-DS3xxx, DS4xxx 및 DS5xxx 장치는 에서 link:task_dc_na_eseries.html["NetApp E-Series 데이터 수집기"]지원됩니다. 지원되는 모델 및 펌웨어 버전은 Data Infrastructure Insights 지원 매트릭스를 참조하십시오.
+DS3xxx, DS4xxx 및 DS5xxx 장치는 다음에서 지원됩니다.link:task_dc_na_eseries.html["NetApp E-Series 데이터 수집기"] .  지원되는 모델과 펌웨어 버전은 Data Infrastructure Insights 지원 매트릭스를 참조하세요.
 
 
 
-== 용어
+== 술어
 
-Data Infrastructure Insights는 IBM DS 데이터 수집기에서 다음과 같은 인벤토리 정보를 수집합니다. Data Infrastructure Insights에서 구입한 각 자산 유형에 대해 이 자산에 사용되는 가장 일반적인 용어가 표시되어 있습니다. 이 데이터 수집기를 보거나 문제를 해결할 때 다음 용어를 염두에 두십시오.
+Data Infrastructure Insights IBM DS 데이터 수집기에서 다음과 같은 인벤토리 정보를 수집합니다.  Data Infrastructure Insights 에서 수집한 각 자산 유형에 대해 해당 자산에 가장 일반적으로 사용되는 용어가 표시됩니다.  이 데이터 수집기를 보거나 문제를 해결할 때 다음 용어를 염두에 두십시오.
 
 [cols="2*"]
 |===
-| 공급업체/모델 기간 | Data Infrastructure Insights 용어 
+| 공급업체/모델 용어 | Data Infrastructure Insights 용어 
 
 
 | 디스크 드라이브 모듈 | 디스크 
 
 
-| 스토리지 이미지 | 스토리지 
+| 저장 이미지 | 스토리지 
 
 
-| 익스텐트 풀 | 스토리지 노드 
+| 익스텐트 풀 | 저장 노드 
 
 
-| 고정 블록 볼륨 | 볼륨 
+| 고정 블록 볼륨 | 용량 
 
 
-| 호스트 FC 이니시에이터(매핑) | 볼륨 마스크 
+| 호스트 FC 이니시에이터(매핑됨) | 볼륨 마스크 
 |===
-참고: 일반적인 용어 매핑일 뿐이며 이 데이터 수집의 모든 경우를 나타내는 것은 아닙니다.
+참고: 이는 일반적인 용어 매핑일 뿐이며 이 데이터 수집기의 모든 사례를 나타내지 않을 수 있습니다.
 
 
 
@@ -47,10 +47,10 @@ Data Infrastructure Insights는 IBM DS 데이터 수집기에서 다음과 같�
 
 이 데이터 수집기를 구성하려면 다음이 필요합니다.
 
-* 각 DS 배열의 IP 주소입니다
-* 각 DS 어레이에 대한 읽기 전용 사용자 이름 및 암호
-* Data Infrastructure Insights AU:IBM_dscli_에 설치된 타사 소프트웨어
-* 액세스 유효성 검사: 사용자 이름과 암호를 사용하여 Run_dscli_commands 를 실행합니다
+* 각 DS 어레이의 IP 주소
+* 각 DS 어레이의 읽기 전용 사용자 이름 및 비밀번호
+* Data Infrastructure Insights AU에 설치된 타사 소프트웨어: IBM _dscli_
+* 액세스 검증: 사용자 이름과 비밀번호를 사용하여 _dscli_ 명령을 실행합니다.
 * 포트 요구 사항: 80, 443 및 1750
 
 
@@ -60,19 +60,19 @@ Data Infrastructure Insights는 IBM DS 데이터 수집기에서 다음과 같�
 
 [cols="2*"]
 |===
-| 필드에 입력합니다 | 설명 
+| 필드 | 설명 
 
 
-| DS 스토리지 | DS device의 IP 주소 또는 정규화된 도메인 이름입니다 
+| DS 스토리지 | DS 장치의 IP 주소 또는 정규화된 도메인 이름 
 
 
-| 사용자 이름 | DS CLI의 사용자 이름입니다 
+| 사용자 이름 | DS CLI의 사용자 이름 
 
 
-| 암호 | DS CLI의 암호입니다 
+| 비밀번호 | DS CLI의 비밀번호 
 
 
-| _dscli_실행 파일 경로입니다 | dscli_executable의 전체 경로입니다 
+| _dscli_ 실행 파일 경로 | _dscli_ 실행 파일의 전체 경로 
 |===
 
 
@@ -80,44 +80,44 @@ Data Infrastructure Insights는 IBM DS 데이터 수집기에서 다음과 같�
 
 [cols="2*"]
 |===
-| 필드에 입력합니다 | 설명 
+| 필드 | 설명 
 
 
-| 재고 폴링 간격(분) | 재고 조사 간격(분). 기본값은 40입니다. 
+| 재고 폴링 간격(분) | 재고 조사 간격(분)  기본값은 40입니다. 
 
 
-| 스토리지 표시 이름 | IBM DS 스토리지 어레이의 이름입니다 
+| 저장소 표시 이름 | IBM DS 스토리지 어레이의 이름 
 
 
-| 재고 제외 장치 | 인벤토리 수집에서 제외할 장치 일련 번호의 쉼표로 구분된 목록입니다 
+| 인벤토리 제외 장치 | 인벤토리 수집에서 제외할 장치 일련 번호의 쉼표로 구분된 목록 
 
 
 | 성능 폴링 간격(초) | 기본값은 300입니다. 
 
 
-| 성능 필터 유형 | Include(포함): 목록의 장치에서만 수집된 데이터입니다. 제외: 이러한 장치에서 데이터가 수집되지 않습니다 
+| 성능 필터 유형 | 포함 사항: 목록에 있는 장치에서만 수집된 데이터입니다.  제외: 이 기기의 데이터는 수집되지 않습니다. 
 
 
-| 성능 필터 장치 목록 | 성능 컬렉션에서 포함하거나 제외할 장치 ID의 쉼표로 구분된 목록입니다 
+| 성능 필터 장치 목록 | 성능 수집에 포함하거나 제외할 장치 ID의 쉼표로 구분된 목록 
 |===
 
 
 == 문제 해결
 
-이 데이터 수집기에서 문제가 발생할 경우 다음과 같은 방법을 시도해 보십시오.
+이 데이터 수집기에 문제가 발생하면 시도해 볼 수 있는 몇 가지 사항은 다음과 같습니다.
 
 
 
-=== 인벤토리
+=== 목록
 
 [cols="2*"]
 |===
-| 문제: | 다음을 시도해 보십시오. 
+| 문제: | 다음을 시도해 보세요: 
 
 
-| 오류 포함: CMUC00192E, CMUC00191E 또는 CMUC00190E | * 입력한 자격 증명 및 IP 주소를 확인합니다. * 웹 관리 콘솔\https://<ip>:8452/DS8000/콘솔을 통해 어레이와 통신하십시오. <ip>를 데이터 수집기가 구성된 IP로 교체합니다. 
+| 오류 포함: CMUC00192E, CMUC00191E 또는 CMUC00190E | * 입력한 자격 증명과 IP 주소를 확인하세요.  * 웹 관리 콘솔 \https://<ip>:8452/DS8000/Console을 통해 배열과 통신을 시도하세요.  <ip>를 데이터 수집기에 구성된 IP로 바꾸세요. 
 
 
-| 오류: * 프로그램을 실행할 수 없음 * 명령 실행 중 오류 | * 데이터 인프라 인사이트 획득 장치에서 CLI의 홈 디렉토리/lib에서 CMD * Open CLI.CFG 파일을 열고, Java_install 속성을 확인하고, 해당 환경에 맞게 값을 편집합니다. * 이 시스템에 설치된 Java 버전을 표시하고, "java-version"을 입력합니다. * CLI 명령에 지정된 IBM 스토리지 장치의 IP 주소를 Ping합니다. * 위 항목 모두 정상적으로 작동했다면 CLI 명령을 수동으로 실행하십시오 
+| 오류: * 프로그램을 실행할 수 없습니다. * 명령 실행 중 오류가 발생했습니다. | * Data Infrastructure Insights Acquisition Unit에서 CMD를 엽니다. * CLI의 홈 디렉토리/lib에서 CLI.CFG 파일을 열고 JAVA_INSTALL 속성을 확인하고 환경에 맞게 값을 편집합니다. * "java -version"을 입력하여 이 컴퓨터에 설치된 Java 버전을 표시합니다. * CLI 명령에서 지정한 IBM 스토리지 장치의 IP 주소를 ping합니다.  * 위의 모든 것이 정상적으로 작동하면 CLI 명령을 수동으로 실행하세요. 
 |===
-추가 정보는 페이지 또는 에서 찾을 link:concept_requesting_support.html["지원"]link:reference_data_collector_support_matrix.html["Data Collector 지원 매트릭스"]수 있습니다.
+추가 정보는 다음에서 찾을 수 있습니다.link:concept_requesting_support.html["지원하다"] 페이지 또는link:reference_data_collector_support_matrix.html["데이터 수집기 지원 매트릭스"] .

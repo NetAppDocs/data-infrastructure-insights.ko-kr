@@ -4,21 +4,21 @@ permalink: task_config_telegraf_elasticsearch.html
 keywords: telegraf, installation, install, ElasticSearch 
 summary: Elasticsearch 데이터 수집기 구성 
 ---
-= Elasticsearch Data Collector(Elasticsearch Data Collector)
+= Elasticsearch 데이터 수집기
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights는 이 데이터 수집기를 사용하여 Elasticsearch에서 메트릭을 수집합니다.
+Data Infrastructure Insights 이 데이터 수집기를 사용하여 Elasticsearch에서 메트릭을 수집합니다.
 
-. 관측성 > 수집기 * 에서 * + Data Collector * 를 클릭합니다. Elasticsearch를 선택합니다.
+. *관찰성 > 수집기*에서 *+데이터 수집기*를 클릭합니다.  Elasticsearch를 선택하세요.
 +
-Telegraf 에이전트가 설치된 운영 체제 또는 플랫폼을 선택합니다.
+Telegraf 에이전트가 설치된 운영 체제 또는 플랫폼을 선택하세요.
 
-. 수집용 Agent를 아직 설치하지 않았거나 다른 운영 체제 또는 플랫폼에 대한 Agent를 설치하려면 _지침 표시_ 를 클릭하여 지침을 확장합니다link:task_config_telegraf_agent.html["에이전트 설치"].
-. 이 데이터 수집기에 사용할 Agent Access 키를 선택합니다. Agent 액세스 키 * 버튼을 클릭하여 새 Agent 액세스 키를 추가할 수 있습니다. 모범 사례: OS/플랫폼별로 데이터 수집기를 그룹화하려는 경우에만 다른 에이전트 액세스 키를 사용하십시오.
-. 구성 단계에 따라 데이터 수집기를 구성합니다. 지침은 데이터 수집에 사용하는 운영 체제 또는 플랫폼의 유형에 따라 다릅니다.
+. 수집을 위한 에이전트를 아직 설치하지 않았거나 다른 운영 체제 또는 플랫폼에 대한 에이전트를 설치하려는 경우 _지침 표시_를 클릭하여 확장합니다.link:task_config_telegraf_agent.html["에이전트 설치"] 지침.
+. 이 데이터 수집기와 함께 사용할 에이전트 액세스 키를 선택하세요.  *+ 에이전트 액세스 키* 버튼을 클릭하면 새로운 에이전트 액세스 키를 추가할 수 있습니다.  모범 사례: 데이터 수집기를 OS/플랫폼별로 그룹화하려는 경우에만 다른 에이전트 액세스 키를 사용하세요.
+. 데이터 수집기를 구성하려면 구성 단계를 따르세요.  지침은 데이터 수집에 사용하는 운영 체제나 플랫폼의 유형에 따라 다릅니다.
 
 
 image:ElasticsearchDCConfigLinux.png["Elasticsearch 구성"]
@@ -27,26 +27,26 @@ image:ElasticsearchDCConfigLinux.png["Elasticsearch 구성"]
 
 == 설정
 
-정보는 에서 찾을 link:https://www.elastic.co/guide/index.html["Elasticsearch 문서"]수 있습니다.
+정보는 다음에서 찾을 수 있습니다.link:https://www.elastic.co/guide/index.html["Elasticsearch 문서"] .
 
 
 
-== 개체 및 카운터
+== 객체 및 카운터
 
-다음 개체와 해당 카운터가 수집됩니다.
+다음 객체와 카운터가 수집됩니다.
 
 [cols="<.<,<.<,<.<"]
 |===
-| 오브젝트: | 식별자: | 특성: 
+| 물체: | 식별자: | 속성: 
 
 
-| Elasticsearch Cluster(Elasticsearch 클러스터) | 네임스페이스 클러스터 | 노드 IP 노드 이름 클러스터 상태 
+| Elasticsearch 클러스터 | 네임스페이스 클러스터 | 노드 IP 노드 이름 클러스터 상태 
 
 
-| Elasticsearch Node(Elasticsearch 노드) | 네임스페이스 클러스터 ES 노드 ID ES 노드 IP ES 노드 | 영역 ID입니다 
+| Elasticsearch 노드 | 네임스페이스 클러스터 ES 노드 ID ES 노드 IP ES 노드 | 존 ID 
 |===
 
 
 == 문제 해결
 
-추가 정보는 페이지에서 찾을 수 link:concept_requesting_support.html["지원"]있습니다.
+추가 정보는 다음에서 찾을 수 있습니다.link:concept_requesting_support.html["지원하다"] 페이지.

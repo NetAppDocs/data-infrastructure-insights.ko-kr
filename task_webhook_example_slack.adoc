@@ -2,61 +2,61 @@
 sidebar: sidebar 
 permalink: task_webhook_example_slack.html 
 keywords: webhook, notification, Slack, integration 
-summary: Slack의 성능 또는 인벤토리 임계값에 대한 알림을 보낼 웹 후크를 만듭니다 
+summary: Slack의 성능 또는 재고 임계값에 대한 알림을 위한 웹훅을 만듭니다. 
 ---
-= Slack 의 Webhook 예제
+= Slack용 웹훅 예제
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Webhook을 사용하면 사용자 지정된 Webhook 채널을 사용하여 다양한 응용 프로그램에 경고 알림을 보낼 수 있습니다. 이 페이지에서는 Slack에 대한 Webhook을 설정하는 예를 제공합니다.
+웹훅을 사용하면 사용자는 사용자 정의된 웹훅 채널을 사용하여 다양한 애플리케이션에 알림을 보낼 수 있습니다.  이 페이지에서는 Slack에 대한 웹훅을 설정하는 방법에 대한 예를 제공합니다.
 
 
-NOTE: 이 페이지는 변경될 수 있는 타사 지침을 참조합니다. 최신 정보는 를 link:https://slack.com/help/articles/115005265063-Incoming-webhooks-for-Slack["슬랙 문서"]참조하십시오.
+NOTE: 이 페이지는 변경될 수 있는 제3자 지침을 참조합니다.  를 참조하세요link:https://slack.com/help/articles/115005265063-Incoming-webhooks-for-Slack["Slack 문서"] 최신 정보를 확인하세요.
 
 
 
-== 슬랙 예:
+== Slack 예:
 
-* 로 https://api.slack.com/apps[] 이동하여 새 앱 만들기 의미 있는 이름을 지정하고 Slack Workspace를 선택합니다.
+* 로 가다 https://api.slack.com/apps[] 새로운 앱을 만드세요.  의미 있는 이름을 지정하고 Slack 작업 공간을 선택하세요.
 +
-image:Webhooks_Slack_Create_Webhook.png["Slack Webhook 을 만듭니다"]
+image:Webhooks_Slack_Create_Webhook.png["Slack 웹훅 만들기"]
 
-* 들어오는 Webhook으로 이동하여 들어오는 Webhook_ 활성화, 새 Webhook_ 추가 요청 을 클릭하고 게시할 채널을 선택합니다.
-* Webhook URL을 복사합니다. 이를 Data Infrastructure Insights Webhook 구성에 붙여 넣어야 합니다.
-
-
-
-
-== Data Infrastructure Insights 생성 Webhook:
-
-. Data Infrastructure Insights에서 * Admin > Notifications * 로 이동하고 * Webhook * 탭을 선택합니다. 새 웹후크를 만들려면 * + 웹후크 * 를 클릭합니다.
-. 웹 후크에 "Slack Webhook"과 같은 의미 있는 이름을 지정합니다.
-. Template Type_드롭다운에서 * Slack * 을 선택합니다.
-. 위의 URL을 _url_필드에 붙여 넣습니다.
-
-
-image:Webhooks-Slack_example.png["슬랙 웹후크 템플릿"]
+* 수신 웹훅으로 가서 _수신 웹훅 활성화_를 클릭하고 _새 웹훅 추가 요청_을 클릭한 다음 게시할 채널을 선택합니다.
+* Webhook URL을 복사합니다.  이것을 Data Infrastructure Insights 웹후크 구성에 붙여넣어야 합니다.
 
 
 
-== Webhook를 통한 알림
 
-웹 훅을 통해 이벤트에 대해 알리려면 Data Infrastructure Insights에서 * Alerts > Monitor * 로 이동하고 * + Monitor * 를 클릭하여 새 이벤트를 link:task_create_monitor.html["모니터링"]생성합니다.
+== Data Infrastructure Insights 웹훅 만들기:
 
-* 메트릭을 선택하고 모니터 조건을 정의합니다.
-* 팀 알림 설정 에서 * Webhook * 전달 방법 을 선택합니다.
-* 원하는 이벤트(Critical, Warning, Resolved)에 대해 "Slack" 웹 후크를 선택합니다.
+. Data Infrastructure Insights 에서 *관리자 > 알림*으로 이동하여 *웹후크* 탭을 선택합니다.  새로운 웹훅을 만들려면 *+웹훅*을 클릭하세요.
+. 웹훅에 "Slack Webhook"과 같이 의미 있는 이름을 지정합니다.
+. _템플릿 유형_ 드롭다운에서 *Slack*을 선택합니다.
+. 위의 URL을 _URL_ 필드에 붙여넣으세요.
+
+
+image:Webhooks-Slack_example.png["Slack 웹훅 템플릿"]
+
+
+
+== Webhook을 통한 알림
+
+웹후크를 통해 이벤트를 알리려면 Data Infrastructure Insights 에서 *알림 > 모니터*로 이동하고 *+모니터*를 클릭하여 새 모니터를 만듭니다.link:task_create_monitor.html["감시 장치"] .
+
+* 측정 항목을 선택하고 모니터의 조건을 정의합니다.
+* _팀 알림 설정에서 *웹훅* 전달 방법을 선택하세요.
+* 원하는 이벤트(중요, 경고, 해결됨)에 대해 "Slack" 웹훅을 선택하세요.
 +
-image:Webhooks_Slack_Notifications.png["Webhook 알림"]
+image:Webhooks_Slack_Notifications.png["웹훅 알림"]
 
 
 
 
 
-==== 추가 정보:
+==== 자세한 정보:
 
-* 메시지 형식과 레이아웃을 수정하려면 을 참조하십시오 https://api.slack.com/messaging/composing[]
+* 메시지 형식 및 레이아웃을 수정하려면 다음을 참조하세요. https://api.slack.com/messaging/composing[]
 * 오류 처리: https://api.slack.com/messaging/webhooks#handling_errors[]
 

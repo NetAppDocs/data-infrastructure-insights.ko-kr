@@ -4,25 +4,25 @@ permalink: task_config_telegraf_hadoop.html
 keywords: telegraf, installation, install, Hadoop 
 summary: Hadoop 데이터 수집기 구성 
 ---
-= Hadoop Data Collector
+= Hadoop 데이터 수집기
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights는 이 데이터 수집기를 사용하여 Hadoop에서 메트릭을 수집합니다.
+Data Infrastructure Insights 이 데이터 수집기를 사용하여 Hadoop에서 지표를 수집합니다.
 
 
 
 == 설치
 
-. 관측성 > 수집기 * 에서 * + Data Collector * 를 클릭합니다. Hadoop 선택
+. *관찰성 > 수집기*에서 *+데이터 수집기*를 클릭합니다.  Hadoop을 선택하세요.
 +
-Telegraf 에이전트가 설치된 운영 체제 또는 플랫폼을 선택합니다.
+Telegraf 에이전트가 설치된 운영 체제 또는 플랫폼을 선택하세요.
 
-. 수집용 Agent를 아직 설치하지 않았거나 다른 운영 체제 또는 플랫폼에 대한 Agent를 설치하려면 _지침 표시_ 를 클릭하여 지침을 확장합니다link:task_config_telegraf_agent.html["에이전트 설치"].
-. 이 데이터 수집기에 사용할 Agent Access 키를 선택합니다. Agent 액세스 키 * 버튼을 클릭하여 새 Agent 액세스 키를 추가할 수 있습니다. 모범 사례: OS/플랫폼별로 데이터 수집기를 그룹화하려는 경우에만 다른 에이전트 액세스 키를 사용하십시오.
-. 구성 단계에 따라 데이터 수집기를 구성합니다. 지침은 데이터 수집에 사용하는 운영 체제 또는 플랫폼의 유형에 따라 다릅니다.
+. 수집을 위한 에이전트를 아직 설치하지 않았거나 다른 운영 체제 또는 플랫폼에 대한 에이전트를 설치하려는 경우 _지침 표시_를 클릭하여 확장합니다.link:task_config_telegraf_agent.html["에이전트 설치"] 지침.
+. 이 데이터 수집기와 함께 사용할 에이전트 액세스 키를 선택하세요.  *+ 에이전트 액세스 키* 버튼을 클릭하면 새로운 에이전트 액세스 키를 추가할 수 있습니다.  모범 사례: 데이터 수집기를 OS/플랫폼별로 그룹화하려는 경우에만 다른 에이전트 액세스 키를 사용하세요.
+. 데이터 수집기를 구성하려면 구성 단계를 따르세요.  지침은 데이터 수집에 사용하는 운영 체제나 플랫폼의 유형에 따라 다릅니다.
 
 
 image:HadoopDCConfigLinux-1.png["Hadoop 구성"] image:HadoopDCConfigLinux-2.png["Hadoop 구성"]
@@ -31,41 +31,41 @@ image:HadoopDCConfigLinux-1.png["Hadoop 구성"] image:HadoopDCConfigLinux-2.png
 
 == 설정
 
-전체 Hadoop 구축에는 다음 구성 요소가 포함됩니다.
+전체 Hadoop 배포에는 다음 구성 요소가 포함됩니다.
 
-* NameNode: HDFS(Hadoop Distributed File System) 운영 시스템입니다. 일련의 DataNode를 조정합니다.
-* Secondary NameNode: main NameNode에 대한 웜 페일오버입니다. Hadoop에서는 NameNode에 대한 프로모션이 자동으로 수행되지 않습니다. Secondary NameNode는 NameNode에서 정보를 수집하여 필요할 때 상향 이동할 수 있도록 준비합니다.
+* NameNode: Hadoop 분산 파일 시스템(HDFS)의 기본 시스템입니다.  일련의 DataNode를 조정합니다.
+* 보조 NameNode: 기본 NameNode에 대한 웜 페일오버입니다.  Hadoop에서는 NameNode로의 승격이 자동으로 발생하지 않습니다.  보조 NameNode는 NameNode로부터 정보를 수집하여 필요할 때 승격될 준비를 합니다.
 * DataNode: 데이터의 실제 소유자입니다.
-* ResourceManager: 컴퓨팅 운영 시스템(YARN)입니다. 일련의 NodeManager를 조정합니다.
-* NodeManager: 컴퓨팅 리소스로, 응용 프로그램 실행을 위한 실제 위치입니다.
-* JobHistoryServer: 모든 작업 내역 관련 요청을 처리합니다.
+* ResourceManager: 컴퓨팅 기본 시스템(Yarn).  일련의 NodeManager를 조정합니다.
+* NodeManager: 컴퓨팅 리소스.  애플리케이션을 실행하기 위한 실제 위치입니다.
+* JobHistoryServer: 모든 구직 기록 관련 요청을 처리하는 역할을 담당합니다.
 
 
-Hadoop 플러그인은 Telegraf의 Jolokia 플러그인을 기반으로 합니다. 모든 Hadoop 구성 요소에서 정보를 수집하는 요구 사항과 같이 JMX는 모든 구성 요소에서 Jolokia를 통해 구성 및 노출되어야 합니다.
+Hadoop 플러그인은 Telegraf의 Jolokia 플러그인을 기반으로 합니다.  모든 Hadoop 구성 요소에서 정보를 수집해야 하는 요구 사항으로, JMX는 모든 구성 요소에서 Jolokia를 통해 구성되고 노출되어야 합니다.
 
 
 
 === 호환성
 
-Hadoop 버전 2.9.2를 기준으로 구성이 개발되었습니다.
+구성은 Hadoop 버전 2.9.2를 기준으로 개발되었습니다.
 
 
 
-=== 설정 중입니다
+=== 설정하기
 
 
 
-==== 졸로키아 에이전트 용기
+==== 졸로키아 에이전트 자
 
-모든 개별 구성 요소의 경우 Jolokia 에이전트 JAR 파일 버전을 다운로드해야 합니다. 에 대해 테스트한 버전은 WAS입니다.link:https://jolokia.org/download.html["졸로키아 에이전트 1.6.0"]
+모든 개별 구성 요소에 대해 Jolokia 에이전트 jar 파일 버전을 다운로드해야 합니다.  테스트된 버전은 다음과 같습니다.link:https://jolokia.org/download.html["졸로키아 에이전트 1.6.0"] .
 
-아래 지침에서는 다운로드한 jar 파일(jolokia-jvm-1.6.0-agent.jar)이 '/opt/hADOOP/lib/' 위치에 있다고 가정합니다.
+아래 지침에서는 다운로드한 jar 파일(jolokia-jvm-1.6.0-agent.jar)이 '/opt/hadoop/lib/' 위치에 있다고 가정합니다.
 
 
 
-==== NameNode입니다
+==== 네임노드
 
-Jolokia API를 노출하도록 NameNode를 구성하려면 <Hadoop_HOME>/etc/Hadoop/Hadoop-env.sh에서 다음을 설정할 수 있습니다.
+Jolokia API를 노출하도록 NameNode를 구성하려면 <HADOOP_HOME>/etc/hadoop/hadoop-env.sh에서 다음을 설정할 수 있습니다.
 
 [listing]
 ----
@@ -74,9 +74,9 @@ You can choose a different port for JMX (8000 above) and Jolokia (7800). If you 
 ----
 
 
-==== Secondary NameNode입니다
+==== 보조 네임노드
 
-보조 NameNode를 구성하여 Jolokia API를 표시하려면 <Hadoop_HOME>/etc/Hadoop/Hadoop-env.sh에서 다음을 설정할 수 있습니다.
+Jolokia API를 노출하도록 Secondary NameNode를 구성하려면 <HADOOP_HOME>/etc/hadoop/hadoop-env.sh에서 다음을 설정할 수 있습니다.
 
 [listing]
 ----
@@ -85,9 +85,9 @@ You can choose a different port for JMX (8002 above) and Jolokia (7802). If you 
 ----
 
 
-==== DataNode 를 선택합니다
+==== 데이터노드
 
-Jolokia API를 노출하도록 DataNodes를 구성하려면 <Hadoop_HOME>/etc/Hadoop/Hadoop-env.sh에서 다음을 설정할 수 있습니다.
+Jolokia API를 노출하도록 DataNode를 구성하려면 <HADOOP_HOME>/etc/hadoop/hadoop-env.sh에서 다음을 설정할 수 있습니다.
 
 [listing]
 ----
@@ -96,9 +96,9 @@ You can choose a different port for JMX (8001 above) and Jolokia (7801). If you 
 ----
 
 
-==== ResourceManager 를 클릭합니다
+==== 리소스매니저
 
-ResourceManager를 구성하여 Jolokia API를 노출하려면 <Hadoop_HOME>/etc/Hadoop/Hadoop-env.sh에서 다음을 설정할 수 있습니다.
+Jolokia API를 노출하도록 ResourceManager를 구성하려면 <HADOOP_HOME>/etc/hadoop/hadoop-env.sh에서 다음을 설정할 수 있습니다.
 
 [listing]
 ----
@@ -107,9 +107,9 @@ You can choose a different port for JMX (8003 above) and Jolokia (7803). If you 
 ----
 
 
-==== NodeManager를 참조하십시오
+==== 노드매니저
 
-NodeManagers가 Jolokia API를 노출하도록 구성하려면 <Hadoop_HOME>/etc/Hadoop/Hadoop-env.sh에서 다음을 설정할 수 있습니다.
+NodeManagers가 Jolokia API를 노출하도록 구성하려면 <HADOOP_HOME>/etc/hadoop/hadoop-env.sh에서 다음을 설정할 수 있습니다.
 
 [listing]
 ----
@@ -118,9 +118,9 @@ You can choose a different port for JMX (8004 above) and Jolokia (7804). If you 
 ----
 
 
-==== JobHistoryServer를 참조하십시오
+==== JobHistoryServer
 
-JobHistoryServer가 Jolokia API를 표시하도록 구성하려면 <Hadoop_Home>/etc/Hadoop/Hadoop-env.sh에서 다음을 설정할 수 있습니다.
+Jolokia API를 노출하도록 JobHistoryServer를 구성하려면 <HADOOP_HOME>/etc/hadoop/hadoop-env.sh에서 다음을 설정할 수 있습니다.
 
 [listing]
 ----
@@ -129,34 +129,34 @@ You can choose a different port for JMX (8005 above) and Jolokia (7805). If you 
 ----
 
 
-== 개체 및 카운터
+== 객체 및 카운터
 
-다음 개체와 해당 카운터가 수집됩니다.
+다음 객체와 카운터가 수집됩니다.
 
 [cols="<.<,<.<,<.<"]
 |===
-| 오브젝트: | 식별자: | 특성: 
+| 물체: | 식별자: | 속성: 
 
 
-| Hadoop 보조 NameNode | 클러스터 네임스페이스 서버 | 노드 이름 노드 IP 컴파일 정보 버전 
+| Hadoop 보조 네임노드 | 클러스터 네임스페이스 서버 | 노드 이름 노드 IP 컴파일 정보 버전 
 
 
-| Hadoop NodeManager를 참조하십시오 | 클러스터 네임스페이스 서버 | 노드 이름 노드 IP입니다 
+| Hadoop 노드 매니저 | 클러스터 네임스페이스 서버 | 노드 이름 노드 IP 
 
 
-| Hadoop ResourceManager를 참조하십시오 | 클러스터 네임스페이스 서버 | 노드 이름 노드 IP입니다 
+| Hadoop 리소스 관리자 | 클러스터 네임스페이스 서버 | 노드 이름 노드 IP 
 
 
-| Hadoop DataNode를 참조하십시오 | 클러스터 네임스페이스 서버 | 노드 이름 노드 IP 클러스터 ID 버전 
+| 하둡 데이터노드 | 클러스터 네임스페이스 서버 | 노드 이름 노드 IP 클러스터 ID 버전 
 
 
-| Hadoop NameNode입니다 | 클러스터 네임스페이스 서버 | 노드 이름 노드 IP 트랜잭션 ID 마지막 로드 이후 마지막으로 쓴 시간 HA 상태 파일 시스템 상태 블록 풀 ID 클러스터 ID 컴파일 정보 고유 버전 수 버전 
+| Hadoop 네임노드 | 클러스터 네임스페이스 서버 | 노드 이름 노드 IP 트랜잭션 ID 마지막 로드 이후 마지막 쓰기 시간 편집 HA 상태 파일 시스템 상태 블록 풀 ID 클러스터 ID 컴파일 정보 고유 버전 개수 버전 
 
 
-| Hadoop JobHistoryServer를 참조하십시오 | 클러스터 네임스페이스 서버 | 노드 이름 노드 IP입니다 
+| Hadoop JobHistoryServer | 클러스터 네임스페이스 서버 | 노드 이름 노드 IP 
 |===
 
 
 == 문제 해결
 
-추가 정보는 페이지에서 찾을 수 link:concept_requesting_support.html["지원"]있습니다.
+추가 정보는 다음에서 찾을 수 있습니다.link:concept_requesting_support.html["지원하다"] 페이지.

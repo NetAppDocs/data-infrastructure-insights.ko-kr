@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_config_telegraf_agent.html 
 keywords: telegraf, agent, telegraf agent 
-summary: Data Infrastructure Insights는 Telegraf를 통합 데이터 수집을 위한 에이전트로 지원하며 Windows 또는 Linux에서 구성할 수 있습니다. 
+summary: Data Infrastructure Insights 통합 데이터 수집을 위한 에이전트로 Telegraf를 지원하며 Windows 또는 Linux에서 구성할 수 있습니다. 
 ---
 = 데이터 수집을 위한 에이전트 구성(Windows/Linux)
 :hardbreaks:
@@ -10,44 +10,44 @@ summary: Data Infrastructure Insights는 Telegraf를 통합 데이터 수집을 
 
 
 [role="lead"]
-Data Infrastructure Insights는 link:https://docs.influxdata.com/telegraf["텔레그라프"]통합 데이터 수집을 위한 에이전트로 를 사용합니다. Telegraf는 메트릭, 이벤트 및 로그를 수집 및 보고하는 데 사용할 수 있는 플러그인 기반 서버 에이전트입니다. 입력 플러그인은 시스템/OS에 직접 액세스하거나 타사 API를 호출하거나 구성된 스트림(예 Kafka, statsd 등). 출력 플러그인은 수집된 메트릭, 이벤트 및 로그를 에이전트에서 Data Infrastructure Insights로 전송하는 데 사용됩니다.
+Data Infrastructure Insights 사용link:https://docs.influxdata.com/telegraf["텔레그라프"] 통합 데이터 수집을 위한 에이전트로서. Telegraf는 메트릭, 이벤트, 로그를 수집하고 보고하는 데 사용할 수 있는 플러그인 기반 서버 에이전트입니다.  입력 플러그인은 시스템/OS에 직접 접근하거나, 타사 API를 호출하거나, 구성된 스트림(예: Kafka, statsD 등)을 수신하여 원하는 정보를 에이전트에 수집하는 데 사용됩니다.  출력 플러그인은 수집된 메트릭, 이벤트 및 로그를 에이전트에서 Data Infrastructure Insights 로 전송하는 데 사용됩니다.
 
-Kubernetes에 설치하는 방법에 대한 자세한 link:task_config_telegraf_agent_k8s.html["NetApp Kubernetes 모니터링 운영자"]내용은 페이지를 참조하십시오.
-
-
-NOTE: 정확한 감사 및 데이터 보고를 위해 * NTP(Network Time Protocol) * 또는 * SNTP(Simple Network Time Protocol) * 를 사용하여 Agent 시스템의 시간을 동기화하는 것이 좋습니다.
+Kubernetes에 설치하는 방법에 대한 정보는 다음을 참조하세요.link:task_config_telegraf_agent_k8s.html["NetApp Kubernetes 모니터링 운영자"] 페이지.
 
 
-NOTE: Agent를 설치하기 전에 설치 파일을 확인하려면 의 아래 섹션을 참조하십시오<<Telegraf 패키지 체크섬 확인>>.
+NOTE: 정확한 감사 및 데이터 보고를 위해서는 *네트워크 시간 프로토콜(NTP)* 또는 *단순 네트워크 시간 프로토콜(SNTP)*을 사용하여 에이전트 컴퓨터의 시간을 동기화하는 것이 좋습니다.
+
+
+NOTE: Agent를 설치하기 전에 설치 파일을 확인하려면 아래 섹션을 참조하세요.<<Telegraf 패키지 체크섬 확인>> .
 
 
 
-== Agent 설치
+== 에이전트 설치
 
-서비스 데이터 수집기를 설치하고 아직 Agent를 구성하지 않은 경우 해당 운영 체제에 대한 Agent를 먼저 설치하라는 메시지가 표시됩니다. 이 항목에서는 다음과 같은 운영 체제에 Telegraf 에이전트를 설치하는 지침을 제공합니다.
+서비스 데이터 수집기를 설치하고 아직 에이전트를 구성하지 않은 경우, 먼저 해당 운영 체제에 맞는 에이전트를 설치하라는 메시지가 표시됩니다.  이 항목에서는 다음 운영 체제에 Telegraf 에이전트를 설치하는 방법에 대한 지침을 제공합니다.
 
 * <<Windows>>
-* <<RHEL 및 CentOS>>
-* <<Ubuntu 및 Debian>>
+* <<RHEL과 CentOS>>
+* <<우분투와 데비안>>
 
 
-사용 중인 플랫폼에 관계없이 에이전트를 설치하려면 먼저 다음을 수행해야 합니다.
+플랫폼에 관계없이 에이전트를 설치하려면 먼저 다음을 수행해야 합니다.
 
-. 에이전트에 사용할 호스트에 로그인합니다.
-. Data Infrastructure Insights 환경에 로그인하고 * 관측성 > 수집기 * 로 이동합니다.
-. Data Collector * 를 클릭하고 설치할 데이터 수집기를 선택합니다.
-. 호스트에 적합한 플랫폼 선택(Windows, Linux)
-. 각 플랫폼의 나머지 단계를 따릅니다.
-
-
-
-NOTE: 호스트에 에이전트를 설치한 후에는 해당 호스트에 에이전트를 다시 설치할 필요가 없습니다.
+. 에이전트로 사용할 호스트에 로그인하세요.
+. Data Infrastructure Insights 환경에 로그인하고 *관찰성 > 수집기*로 이동합니다.
+. *+데이터 수집기*를 클릭하고 설치할 데이터 수집기를 선택하세요.
+. 호스트에 적합한 플랫폼(Windows, Linux)을 선택하세요
+. 각 플랫폼에 대한 나머지 단계를 따르세요.
 
 
-TIP: 서버/VM에 에이전트를 설치하면 Data Infrastructure Insights는 사용자가 구성하는 모든 데이터 수집기에서 수집하는 것 외에도 해당 시스템에서 메트릭을 수집합니다. 이러한 메트릭은 로 수집됩니다.link:task_config_telegraf_node.html[""노드" 메트릭"]
+
+NOTE: 호스트에 에이전트를 설치한 후에는 해당 호스트에 다시 에이전트를 설치할 필요가 없습니다.
 
 
-NOTE: 프록시를 사용하는 경우 Telegraf 에이전트를 설치하기 전에 해당 플랫폼의 프록시 지침을 읽으십시오.
+TIP: 서버/VM에 에이전트를 설치하면 Data Infrastructure Insights 사용자가 구성한 데이터 수집기에서 데이터를 수집하는 것 외에도 해당 시스템에서도 메트릭을 수집합니다.  이러한 측정항목은 다음과 같이 수집됩니다.link:task_config_telegraf_node.html[""노드" 메트릭"] .
+
+
+NOTE: 프록시를 사용하는 경우 Telegraf 에이전트를 설치하기 전에 해당 플랫폼의 프록시 지침을 읽으세요.
 
 
 
@@ -55,9 +55,9 @@ NOTE: 프록시를 사용하는 경우 Telegraf 에이전트를 설치하기 전
 
 Telegraf 로그 메시지는 기본적으로 stdout에서 다음 로그 파일로 리디렉션됩니다.
 
-* RHEL/CentOS:/var/log/Telegraf/telegraf.log
-* Ubuntu/Debian:/var/log/Telegraf/telegraf.log
-* Windows:C:\Program Files\Telegraf\telegraf.log
+* RHEL/CentOS: /var/log/telegraf/telegraf.log
+* 우분투/데비안: /var/log/telegraf/telegraf.log
+* 윈도우: C:\Program Files\telegraf\telegraf.log
 
 
 
@@ -66,41 +66,41 @@ Telegraf 로그 메시지는 기본적으로 stdout에서 다음 로그 파일�
 
 
 
-==== 전제 조건:
+==== 필수 조건:
 
-* PowerShell을 설치해야 합니다
-* 프록시 뒤에 있는 경우 * Windows*용 프록시 지원 구성 섹션의 지침을 따라야 합니다.
-
-
+* PowerShell을 설치해야 합니다.
+* 프록시를 사용하는 경우 *Windows에 대한 프록시 지원 구성* 섹션의 지침을 따라야 합니다.
 
 
-==== Windows에 대한 프록시 지원 구성
 
 
-NOTE: 환경에서 프록시를 사용하는 경우 를 설치하기 전에 이 섹션을 읽어 보십시오.
+==== Windows용 프록시 지원 구성
 
 
-NOTE: 아래 단계에서는 _http_proxy/https_proxy_environment 변수를 설정하는 데 필요한 작업을 간략히 설명합니다. 일부 프록시 환경에서는 _no_proxy 환경_변수를 설정해야 할 수도 있습니다.
+NOTE: 환경에서 프록시를 사용하는 경우 설치하기 전에 이 섹션을 읽어보세요.
 
-프록시 뒤에 있는 시스템의 경우, 다음과 같이 Telegraf 에이전트를 설치하기 전에 _https_proxy_and/or_http_proxy_environment 변수 * 를 설정하십시오.
+
+NOTE: 아래 단계에서는 _http_proxy/https_proxy_ 환경 변수를 설정하는 데 필요한 작업을 간략하게 설명합니다.  일부 프록시 환경에서는 사용자가 _no_proxy 환경 변수를 설정해야 할 수도 있습니다.
+
+프록시 뒤에 있는 시스템의 경우 Telegraf 에이전트를 설치하기 *전에* 다음을 수행하여 _https_proxy_ 및/또는 _http_proxy_ 환경 변수를 설정하세요.
 
  [System.Environment]:SetEnvironmentVariable(“https_proxy”, “<proxy_server>:<proxy_port>”, [System.EnvironmentVariableTarget]:Machine)
 
 
-==== 에이전트 설치 중
+==== 에이전트 설치
 
-image:AgentInstallWindows.png["Windows Agent 설치"]
+image:AgentInstallWindows.png["Windows 에이전트 설치"]
 
-.Windows에서 에이전트를 설치하는 단계:
-. 상담원 액세스 키를 선택합니다.
-. 에이전트 설치 대화 상자에서 명령 블록을 복사합니다. 클립보드 아이콘을 클릭하여 명령을 빠르게 클립보드에 복사할 수 있습니다.
+.Windows에 에이전트를 설치하는 단계:
+. 에이전트 액세스 키를 선택하세요.
+. 에이전트 설치 대화 상자에서 명령 블록을 복사합니다.  클립보드 아이콘을 클릭하면 명령을 빠르게 클립보드에 복사할 수 있습니다.
 . PowerShell 창을 엽니다
-. 명령을 PowerShell 창에 붙여넣고 Enter 키를 누릅니다.
-. 명령은 적절한 에이전트 설치 프로그램을 다운로드하고 설치하고 기본 구성을 설정합니다. 완료되면 에이전트 서비스가 다시 시작됩니다. 명령에 고유한 키가 있으며 24시간 동안 유효합니다.
-. 마침 * 또는 * 계속 * 을 클릭합니다
+. PowerShell 창에 명령을 붙여넣고 Enter를 누릅니다.
+. 이 명령을 실행하면 적절한 에이전트 설치 프로그램이 다운로드되고, 설치되고, 기본 구성이 설정됩니다.  완료되면 에이전트 서비스가 다시 시작됩니다.  해당 명령은 고유한 키를 가지고 있으며 24시간 동안 유효합니다.
+. *마침* 또는 *계속*을 클릭하세요.
 
 
-에이전트를 설치한 후 다음 명령을 사용하여 서비스를 시작/중지할 수 있습니다.
+에이전트가 설치된 후 다음 명령을 사용하여 서비스를 시작/중지할 수 있습니다.
 
 ....
 Start-Service telegraf
@@ -108,7 +108,7 @@ Stop-Service telegraf
 ....
 
 
-==== Agent를 제거합니다
+==== 에이전트 제거
 
 Windows에서 에이전트를 제거하려면 PowerShell 창에서 다음을 수행합니다.
 
@@ -118,22 +118,22 @@ Windows에서 에이전트를 제거하려면 PowerShell 창에서 다음을 수
 Stop-Service telegraf
 sc.exe delete telegraf
 ....
-. trustore에서 인증서를 제거합니다.
+. 트러스토어에서 인증서를 제거합니다.
 +
 ....
 cd Cert:\CurrentUser\Root
 //rm E5FB7B68C08B1CA902708584C274F8EFC7BE8ABC
 rm 1A918038E8E127BB5C87A202DF173B97A05B4996
 ....
-. C:\Program Files\Telegraf_폴더를 삭제하여 바이너리, 로그 및 구성 파일을 제거합니다
-. 레지스트리에서 _SYSTEM\CurrentControlSet\Services\EventLog\Application\Telegraf_key를 제거합니다
+. 바이너리, 로그 및 구성 파일을 제거하려면 _C:\Program Files\telegraf_ 폴더를 삭제하세요.
+. 레지스트리에서 _SYSTEM\CurrentControlSet\Services\EventLog\Application\telegraf_ 키를 제거합니다.
 
 
 
 
-==== Agent 업그레이드 중
+==== 에이전트 업그레이드
 
-Telegraf 에이전트를 업그레이드하려면 다음을 수행합니다.
+Telegraf 에이전트를 업그레이드하려면 다음을 수행하세요.
 
 . Telegraf 서비스를 중지하고 삭제합니다.
 +
@@ -141,22 +141,22 @@ Telegraf 에이전트를 업그레이드하려면 다음을 수행합니다.
 Stop-Service telegraf
 sc.exe delete telegraf
 ....
-. 레지스트리에서 _SYSTEM\CurrentControlSet\Services\EventLog\Application\Telegraf_key를 삭제합니다
-. Delete_C:\Program Files\Telegraf\Telegraf.conf _
-. Delete_C:\Program Files\Telegraf\Telegraf.exe_
-. link:#windows["새 에이전트를 설치합니다"]..
+. 레지스트리에서 _SYSTEM\CurrentControlSet\Services\EventLog\Application\telegraf_ 키를 삭제합니다.
+. _C:\Program Files\telegraf\telegraf.conf_ 삭제
+. _C:\Program Files\telegraf\telegraf.exe_ 삭제
+. link:#windows["새로운 에이전트를 설치하세요"] .
 
 
 
 
-=== RHEL 및 CentOS
+=== RHEL과 CentOS
 
 
 
-==== 전제 조건:
+==== 필수 조건:
 
-* curl, sudo, ping, sha256sum, openssl, 그리고 디미데드도 있습니다
-* 프록시 뒤에 있는 경우 * RHEL/CentOS * 용 프록시 지원 구성 섹션의 지침을 따라야 합니다.
+* 다음 명령을 사용할 수 있어야 합니다: curl, sudo, ping, sha256sum, openssl 및 dmidecode
+* 프록시를 사용하는 경우 *RHEL/CentOS에 대한 프록시 지원 구성* 섹션의 지침을 따라야 합니다.
 
 
 
@@ -164,45 +164,45 @@ sc.exe delete telegraf
 ==== RHEL/CentOS에 대한 프록시 지원 구성
 
 
-NOTE: 환경에서 프록시를 사용하는 경우 를 설치하기 전에 이 섹션을 읽어 보십시오.
+NOTE: 환경에서 프록시를 사용하는 경우 설치하기 전에 이 섹션을 읽어보세요.
 
 
-NOTE: 아래 단계에서는 _http_proxy/https_proxy_environment 변수를 설정하는 데 필요한 작업을 간략히 설명합니다. 일부 프록시 환경에서는 _no_proxy 환경_변수를 설정해야 할 수도 있습니다.
+NOTE: 아래 단계에서는 _http_proxy/https_proxy_ 환경 변수를 설정하는 데 필요한 작업을 간략하게 설명합니다.  일부 프록시 환경에서는 사용자가 _no_proxy 환경 변수를 설정해야 할 수도 있습니다.
 
-프록시 뒤에 있는 시스템의 경우 Telegraf 에이전트를 설치하기 전에 * 다음 단계를 수행하십시오.
+프록시 뒤에 있는 시스템의 경우 Telegraf 에이전트를 설치하기 *전에* 다음 단계를 수행하세요.
 
-. 현재 사용자에 대한 _https_proxy_and/or_http_proxy_environment 변수를 설정합니다.
+. 현재 사용자에 대해 _https_proxy_ 및/또는 _http_proxy_ 환경 변수를 설정합니다.
 +
  export https_proxy=<proxy_server>:<proxy_port>
-. /etc/default/Telegraf_를 생성하고 _https_proxy_and/or_http_proxy_variable 에 대한 정의를 삽입합니다.
+. _/etc/default/telegraf_를 만들고 _https_proxy_ 및/또는 _http_proxy_ 변수에 대한 정의를 삽입합니다.
 +
  https_proxy=<proxy_server>:<proxy_port>
 
 
 
 
-==== 에이전트 설치 중
+==== 에이전트 설치
 
-image:Agent_Requirements_Rhel.png["RHEL/CentOS 에이전트 설치"]
+image:Agent_Requirements_Rhel.png["Rhel/CentOS 에이전트 설치"]
 
 .RHEL/CentOS에 에이전트를 설치하는 단계:
-. 상담원 액세스 키를 선택합니다.
-. 에이전트 설치 대화 상자에서 명령 블록을 복사합니다. 클립보드 아이콘을 클릭하여 명령을 빠르게 클립보드에 복사할 수 있습니다.
+. 에이전트 액세스 키를 선택하세요.
+. 에이전트 설치 대화 상자에서 명령 블록을 복사합니다.  클립보드 아이콘을 클릭하면 명령을 빠르게 클립보드에 복사할 수 있습니다.
 . Bash 창을 엽니다
-. Bash 창에 명령을 붙여넣고 Enter 키를 누릅니다.
-. 명령은 적절한 에이전트 설치 프로그램을 다운로드하고 설치하고 기본 구성을 설정합니다. 완료되면 에이전트 서비스가 다시 시작됩니다. 명령에 고유한 키가 있으며 24시간 동안 유효합니다.
-. 마침 * 또는 * 계속 * 을 클릭합니다
+. Bash 창에 명령을 붙여넣고 Enter를 누릅니다.
+. 이 명령을 실행하면 적절한 에이전트 설치 프로그램이 다운로드되고, 설치되고, 기본 구성이 설정됩니다.  완료되면 에이전트 서비스가 다시 시작됩니다.  해당 명령은 고유한 키를 가지고 있으며 24시간 동안 유효합니다.
+. *마침* 또는 *계속*을 클릭하세요.
 
 
-에이전트를 설치한 후 다음 명령을 사용하여 서비스를 시작/중지할 수 있습니다.
+에이전트가 설치된 후 다음 명령을 사용하여 서비스를 시작/중지할 수 있습니다.
 
-운영 체제에서 systemd(CentOS 7+ 및 RHEL 7+)를 사용하는 경우:
+운영 체제가 systemd를 사용하는 경우(CentOS 7 이상 및 RHEL 7 이상):
 
 ....
 sudo systemctl start telegraf
 sudo systemctl stop telegraf
 ....
-운영 체제에서 systemd(CentOS 7+ 및 RHEL 7+)를 사용하지 않는 경우:
+운영 체제가 systemd를 사용하지 않는 경우(CentOS 7 이상 및 RHEL 7 이상):
 
 ....
 sudo service telegraf start
@@ -210,11 +210,11 @@ sudo service telegraf stop
 ....
 
 
-==== Agent를 제거합니다
+==== 에이전트 제거
 
 RHEL/CentOS에서 에이전트를 제거하려면 Bash 터미널에서 다음을 수행합니다.
 
-. Telegraf 서비스 중지:
+. Telegraf 서비스를 중지합니다.
 +
 ....
 systemctl stop telegraf (If your operating system is using systemd (CentOS 7+ and RHEL 7+)
@@ -223,7 +223,7 @@ systemctl stop telegraf (If your operating system is using systemd (CentOS 7+ an
 . Telegraf 에이전트를 제거합니다.
 +
  yum remove telegraf
-. 뒤에 남아 있을 수 있는 구성 또는 로그 파일을 제거합니다.
+. 남아 있을 수 있는 구성 또는 로그 파일을 제거하세요.
 +
 ....
 rm -rf /etc/telegraf*
@@ -233,11 +233,11 @@ rm -rf /var/log/telegraf*
 
 
 
-==== Agent 업그레이드 중
+==== 에이전트 업그레이드
 
-Telegraf 에이전트를 업그레이드하려면 다음을 수행합니다.
+Telegraf 에이전트를 업그레이드하려면 다음을 수행하세요.
 
-. Telegraf 서비스 중지:
+. Telegraf 서비스를 중지합니다.
 +
 ....
 systemctl stop telegraf (If your operating system is using systemd (CentOS 7+ and RHEL 7+)
@@ -246,19 +246,19 @@ systemctl stop telegraf (If your operating system is using systemd (CentOS 7+ an
 . 이전 Telegraf 에이전트를 제거합니다.
 +
  yum remove telegraf
-. link:#rhel-and-centos["새 에이전트를 설치합니다"]..
+. link:#rhel-and-centos["새로운 에이전트를 설치하세요"] .
 
 
 
 
-=== Ubuntu 및 Debian
+=== 우분투와 데비안
 
 
 
-==== 전제 조건:
+==== 필수 조건:
 
-* curl, sudo, ping, sha256sum, openssl, 그리고 디미데드도 있습니다
-* 프록시 뒤에 있는 경우 Ubuntu/Debian*용 프록시 지원 구성 섹션의 지침을 따라야 합니다.
+* 다음 명령을 사용할 수 있어야 합니다: curl, sudo, ping, sha256sum, openssl 및 dmidecode
+* 프록시를 사용하는 경우 *Ubuntu/Debian에 대한 프록시 지원 구성* 섹션의 지침을 따라야 합니다.
 
 
 
@@ -266,45 +266,45 @@ systemctl stop telegraf (If your operating system is using systemd (CentOS 7+ an
 ==== Ubuntu/Debian에 대한 프록시 지원 구성
 
 
-NOTE: 환경에서 프록시를 사용하는 경우 를 설치하기 전에 이 섹션을 읽어 보십시오.
+NOTE: 환경에서 프록시를 사용하는 경우 설치하기 전에 이 섹션을 읽어보세요.
 
 
-NOTE: 아래 단계에서는 _http_proxy/https_proxy_environment 변수를 설정하는 데 필요한 작업을 간략히 설명합니다. 일부 프록시 환경에서는 _no_proxy 환경_변수를 설정해야 할 수도 있습니다.
+NOTE: 아래 단계에서는 _http_proxy/https_proxy_ 환경 변수를 설정하는 데 필요한 작업을 간략하게 설명합니다.  일부 프록시 환경에서는 사용자가 _no_proxy 환경 변수를 설정해야 할 수도 있습니다.
 
-프록시 뒤에 있는 시스템의 경우 Telegraf 에이전트를 설치하기 전에 * 다음 단계를 수행하십시오.
+프록시 뒤에 있는 시스템의 경우 Telegraf 에이전트를 설치하기 *전에* 다음 단계를 수행하세요.
 
-. 현재 사용자에 대한 _https_proxy_and/or_http_proxy_environment 변수를 설정합니다.
+. 현재 사용자에 대해 _https_proxy_ 및/또는 _http_proxy_ 환경 변수를 설정합니다.
 +
  export https_proxy=<proxy_server>:<proxy_port>
-. /etc/default/telgraf를 만들고 _https_proxy_and/or_http_proxy_variable에 대한 정의를 삽입합니다.
+. /etc/default/telegraf를 만들고 _https_proxy_ 및/또는 _http_proxy_ 변수에 대한 정의를 삽입합니다.
 +
  https_proxy=<proxy_server>:<proxy_port>
 
 
 
 
-==== 에이전트 설치 중
+==== 에이전트 설치
 
-image:Agent_Requirements_Ubuntu.png["Ubuntu/Debian Agent 설치"]
+image:Agent_Requirements_Ubuntu.png["Ubuntu/Debian 에이전트 설치"]
 
 .Debian 또는 Ubuntu에 에이전트를 설치하는 단계:
-. 상담원 액세스 키를 선택합니다.
-. 에이전트 설치 대화 상자에서 명령 블록을 복사합니다. 클립보드 아이콘을 클릭하여 명령을 빠르게 클립보드에 복사할 수 있습니다.
+. 에이전트 액세스 키를 선택하세요.
+. 에이전트 설치 대화 상자에서 명령 블록을 복사합니다.  클립보드 아이콘을 클릭하면 명령을 빠르게 클립보드에 복사할 수 있습니다.
 . Bash 창을 엽니다
-. Bash 창에 명령을 붙여넣고 Enter 키를 누릅니다.
-. 명령은 적절한 에이전트 설치 프로그램을 다운로드하고 설치하고 기본 구성을 설정합니다. 완료되면 에이전트 서비스가 다시 시작됩니다. 명령에 고유한 키가 있으며 24시간 동안 유효합니다.
-. 마침 * 또는 * 계속 * 을 클릭합니다
+. Bash 창에 명령을 붙여넣고 Enter를 누릅니다.
+. 이 명령을 실행하면 적절한 에이전트 설치 프로그램이 다운로드되고, 설치되고, 기본 구성이 설정됩니다.  완료되면 에이전트 서비스가 다시 시작됩니다.  해당 명령은 고유한 키를 가지고 있으며 24시간 동안 유효합니다.
+. *마침* 또는 *계속*을 클릭하세요.
 
 
-에이전트를 설치한 후 다음 명령을 사용하여 서비스를 시작/중지할 수 있습니다.
+에이전트가 설치된 후 다음 명령을 사용하여 서비스를 시작/중지할 수 있습니다.
 
-운영 체제에서 systemd를 사용하는 경우:
+운영 체제가 systemd를 사용하는 경우:
 
 ....
 sudo systemctl start telegraf
 sudo systemctl stop telegraf
 ....
-운영 체제에서 systemd를 사용하지 않는 경우:
+운영 체제가 systemd를 사용하지 않는 경우:
 
 ....
 sudo service telegraf start
@@ -312,11 +312,11 @@ sudo service telegraf stop
 ....
 
 
-==== Agent를 제거합니다
+==== 에이전트 제거
 
 Ubuntu/Debian에서 에이전트를 제거하려면 Bash 터미널에서 다음을 실행합니다.
 
-. Telegraf 서비스 중지:
+. Telegraf 서비스를 중지합니다.
 +
 ....
 systemctl stop telegraf (If your operating system is using systemd)
@@ -325,7 +325,7 @@ systemctl stop telegraf (If your operating system is using systemd)
 . Telegraf 에이전트를 제거합니다.
 +
  dpkg -r telegraf
-. 뒤에 남아 있을 수 있는 구성 또는 로그 파일을 제거합니다.
+. 남아 있을 수 있는 구성 또는 로그 파일을 제거하세요.
 +
 ....
 rm -rf /etc/telegraf*
@@ -335,11 +335,11 @@ rm -rf /var/log/telegraf*
 
 
 
-==== Agent 업그레이드 중
+==== 에이전트 업그레이드
 
-Telegraf 에이전트를 업그레이드하려면 다음을 수행합니다.
+Telegraf 에이전트를 업그레이드하려면 다음을 수행하세요.
 
-. Telegraf 서비스 중지:
+. Telegraf 서비스를 중지합니다.
 +
 ....
 systemctl stop telegraf (If your operating system is using systemd)
@@ -348,31 +348,31 @@ systemctl stop telegraf (If your operating system is using systemd)
 . 이전 Telegraf 에이전트를 제거합니다.
 +
  dpkg -r telegraf
-. link:#ubuntu-and-debian["새 에이전트를 설치합니다"]..
+. link:#ubuntu-and-debian["새로운 에이전트를 설치하세요"] .
 
 
 
 
 == Telegraf 패키지 체크섬 확인
 
-Data Infrastructure Insights 에이전트 설치 프로그램이 무결성 검사를 수행하지만 일부 사용자는 다운로드한 Telegraf 바이너리를 설치하기 전에 자체 검증을 수행할 수 있습니다. 이 작업은 설치 프로그램을 다운로드하고 다운로드한 패키지에 대한 체크섬을 생성한 다음 설치 지침에 표시된 값과 체크섬을 비교하여 수행할 수 있습니다.
+Data Infrastructure Insights 에이전트 설치 프로그램은 무결성 검사를 수행하지만 일부 사용자는 다운로드한 Telegraf 바이너리를 설치하기 전에 직접 확인을 수행하려고 할 수 있습니다.  설치 프로그램을 다운로드하고 다운로드한 패키지에 대한 체크섬을 생성한 다음, 체크섬을 설치 지침에 표시된 값과 비교하면 됩니다.
 
 
 
-=== 설치하지 않고 설치 프로그램 패키지를 다운로드합니다
+=== 설치하지 않고 설치 프로그램 패키지를 다운로드하세요
 
-기본 다운로드 및 설치 대신 다운로드 전용 작업을 수행하기 위해 사용자는 UI에서 얻은 에이전트 설치 명령을 편집하고 "설치" 옵션을 제거할 수 있습니다.
+다운로드 전용 작업(기본 다운로드 및 설치와 반대)을 수행하려면 사용자는 UI에서 얻은 에이전트 설치 명령을 편집하고 "설치" 옵션을 제거할 수 있습니다.
 
-다음 단계를 수행하십시오.
+다음 단계를 따르세요.
 
-. 지시에 따라 Agent Installer 스니펫을 복사합니다.
-. 코드 조각을 명령 창에 붙여 넣는 대신 텍스트 편집기에 붙여 넣습니다.
-. 명령에서 뒤에 오는 "--install"(Linux) 또는 "-install"(Windows)을 제거합니다.
+. 지시된 대로 Agent Installer 스니펫을 복사합니다.
+. 스니펫을 명령 창에 붙여 넣는 대신 텍스트 편집기에 붙여 넣으세요.
+. 명령어에서 마지막의 "--install"(Linux) 또는 "-install"(Windows)을 제거합니다.
 . 텍스트 편집기에서 전체 명령을 복사합니다.
-. 이제 명령 창(작업 디렉토리)에 붙여넣고 실행합니다.
+. 이제 명령 창(작업 디렉토리)에 붙여넣고 실행하세요.
 
 
-Windows 이외의 경우(이러한 예는 Kubernetes에 해당하고, 실제 스크립트 이름은 다를 수 있음):
+Windows가 아닌 경우(이 예시는 Kubernetes에 대한 것이며 실제 스크립트 이름은 다를 수 있음):
 
 * 다운로드 및 설치(기본값):
 +
@@ -382,7 +382,7 @@ Windows 이외의 경우(이러한 예는 Kubernetes에 해당하고, 실제 스
  installerName=cloudinsights-ubuntu_debian.sh … && ./$installerName --download --verify
 
 
-창:
+윈도우:
 
 * 다운로드 및 설치(기본값):
 +
@@ -392,98 +392,98 @@ Windows 이외의 경우(이러한 예는 Kubernetes에 해당하고, 실제 스
  !$($installerName=".\cloudinsights-windows.ps1") … -and $(if(((Get-FileHash $installerName).Hash).ToLower() -eq "INSTALLER_CHECKSUM ") { &$installerName -download -verify } else { Write-Host "Install script checksum does not match"})"
 
 
-download-only 명령은 Data Infrastructure Insights에서 작업 디렉토리로 필요한 모든 아티팩트를 다운로드합니다. 아티팩트에는 다음이 포함되지만 이에 국한되지는 않습니다.
+다운로드 전용 명령은 Data Infrastructure Insights 에서 작업 디렉터리로 필요한 모든 아티팩트를 다운로드합니다.  유물에는 다음이 포함되지만 이에 국한되지는 않습니다.
 
 * 설치 스크립트
-* 환경 파일입니다
+* 환경 파일
 * Telegraf 바이너리
-* Telegraf 바이너리의 서명입니다
-* 이진 서명을 확인하는 공용 인증서입니다
+* Telegraf 바이너리에 대한 서명
+* 이진 서명을 검증하기 위한 공개 인증서
 
 
-DII에서 다운로드 및 복사된 설치 스니펫은 자동으로 설치 스크립트를 체크섬하고 Telegraf 바이너리의 서명은 설치 스크립트를 통해 확인됩니다.
+DII에서 다운로드하여 복사한 설치 스니펫은 자동으로 설치 스크립트의 체크섬을 계산하고, Telegraf 바이너리의 서명은 설치 스크립트에 의해 검증됩니다.
 
 
 
-=== 체크섬 값을 확인합니다
+=== 체크섬 값 확인
 
-체크섬 값을 생성하려면 해당 플랫폼에 대해 다음 명령을 수행합니다.
+체크섬 값을 생성하려면 해당 플랫폼에 맞는 다음 명령을 실행하세요.
 
-* RHEL/Ubuntu:
+* RHEL/우분투:
 +
  sha256sum <package_name>
-* 창:
+* 윈도우:
 +
  Get-FileHash telegraf.zip -Algorithm SHA256 | Format-List
 
 
 
 
-=== 다운로드한 패키지를 설치합니다
+=== 다운로드한 패키지를 설치하세요
 
-모든 아티팩트가 만족스럽게 확인되면 다음을 실행하여 에이전트 설치를 시작할 수 있습니다.
+모든 아티팩트가 만족스럽게 검증되면 다음을 실행하여 에이전트 설치를 시작할 수 있습니다.
 
-비 Windows:
+Windows가 아닌 경우:
 
  sudo -E -H ./<installation_script_name> --install
-창:
+윈도우:
 
  .\cloudinsights-windows.ps1 -install
 
 
 == API 액세스 토큰 생성 및 사용
 
-Telegraf 데이터 수집용 API 액세스 토큰을 생성하려면 다음 중 하나를 수행하십시오.
+Telegraf 데이터 수집을 위한 API 액세스 토큰을 생성하려면 다음 중 하나를 수행하세요.
 
 
 
-=== Data Collector 설치 페이지를 통해 만듭니다
+=== 데이터 수집기 설치 페이지를 통해 생성
 
-. 사용할 플랫폼(Windows, Linux)의 Data Collector 설치 페이지로 이동합니다.
-. API 액세스 토큰 단추를 사용하여 토큰을 생성합니다.
-. 이름을 입력하고 저장을 클릭합니다.
-. 이제 토큰 이름이 드롭다운에서 선택되고 Collector를 설치할 때 사용됩니다.
-
-
+. 사용하려는 플랫폼(Windows, Linux)에 맞는 Data Collector 설치 페이지로 이동합니다.
+. + API 액세스 토큰 버튼을 사용하여 토큰을 생성합니다.
+. 이름을 입력하고 저장을 클릭하세요.
+. 이제 드롭다운에서 토큰 이름을 선택해야 하며, 수집기를 설치할 때 이 이름이 사용됩니다.
 
 
-=== API 액세스 토큰을 수동으로 생성합니다
-
-. Admin > API Access 로 이동합니다.
-. API 액세스 토큰을 클릭합니다.
-. 이름을 입력하고 선택적으로 설명을 입력합니다.
-. "어떤 유형의 API를 사용하여 이 토큰을 호출할 수 있습니까?"에서 "데이터 수집"만 선택한 다음 "수집 장치"를 선택 취소합니다.
-. "Permissions"에서 Read/Write를 선택합니다.
-. "Kubernetes용 토큰 자동 회전"의 선택을 취소합니다.
 
 
-새로 생성된 API 액세스 토큰을 사용하려면 설치 프로그램 페이지의 "기존 API 액세스 토큰 선택 또는 새 토큰 생성" 드롭다운에서 토큰을 선택합니다. 다음 속성을 가진 토큰만 사용할 수 있습니다.
+=== API 액세스 토큰을 수동으로 생성
 
-* API 유형: "데이터 수집"만 해당
+. 관리>API 액세스로 이동합니다.
+. + API 액세스 토큰을 클릭하세요.
+. 이름과 설명(선택 사항)을 입력하세요.
+. "이 토큰은 어떤 유형의 API를 호출하는 데 사용됩니까?"에서 "데이터 수집"만 선택한 다음 "획득 단위"의 선택을 취소합니다.
+. "권한"에서 읽기/쓰기를 선택합니다.
+. "Kubernetes에 대한 토큰을 자동으로 회전"을 선택 해제합니다.
+
+
+새로 만든 API 액세스 토큰을 사용하려면 설치 프로그램 페이지의 "기존 API 액세스 토큰 선택 또는 새 토큰 만들기" 드롭다운에서 해당 토큰을 선택하세요.  다음 속성을 가진 토큰만 사용할 수 있습니다.
+
+* API 유형: "데이터 수집"만
 * 권한: 읽기/쓰기
-* Kubernetes 자동 회전: 끄기
+* Kubernetes 자동 회전: 꺼짐
 
 
 
 
 == 문제 해결
 
-상담원 설정에 문제가 있는 경우 다음과 같은 방법을 시도해 보십시오.
+에이전트 설정에 문제가 발생하면 시도해 볼 수 있는 몇 가지 사항:
 
 [cols="2*"]
 |===
-| 문제: | 다음을 시도해 보십시오. 
+| 문제: | 다음을 시도해 보세요: 
 
 
-| 새 플러그인을 구성하고 Telegraf를 다시 시작한 후 Teleraf가 시작되지 않습니다. 로그에 다음과 유사한 오류가 표시됩니다. "[텔레그라프] 에이전트 실행 중 오류: 구성 파일 /etc/Telegraf/Telegraf.d/클라우드.conf: plugin outputs.http: line <linenumber>: 구성에서 ["use_system_proxy"] 필드를 지정했지만 사용되지 않았습니다." | 설치된 Telegraf 버전이 오래되었습니다. 이 페이지의 단계를 따라 해당 플랫폼에 대해 Agent * 를 업그레이드합니다. 
+| 새로운 플러그인을 구성하고 Telegraf를 다시 시작한 후 Telegraf가 시작되지 않습니다.  로그는 다음과 유사한 오류를 나타냅니다. "[telegraf] 에이전트 실행 오류: 구성 파일 /etc/telegraf/telegraf.d/cloudinsights-default.conf를 로드하는 중 오류가 발생했습니다. 플러그인 출력.http: 줄 <줄 번호>: 구성에서 ["use_system_proxy"] 필드를 지정했지만 사용되지 않았습니다." | 설치된 Telegraf 버전이 오래되었습니다.  해당 플랫폼에 맞게 *에이전트를 업그레이드*하려면 이 페이지의 단계를 따르세요. 
 
 
-| 이전 설치에서 설치 프로그램 스크립트를 실행했는데 에이전트가 데이터를 전송하지 않습니다 | Telegraf 에이전트를 제거한 다음 설치 스크립트를 다시 실행합니다. 해당 플랫폼에 대해 이 페이지의 * 에이전트 업그레이드 * 단계를 따릅니다. 
+| 이전 설치에서 설치 프로그램 스크립트를 실행했는데 이제 에이전트가 데이터를 전송하지 않습니다. | Telegraf 에이전트를 제거한 다음 설치 스크립트를 다시 실행합니다.  이 페이지에서 해당 플랫폼에 맞는 *에이전트 업그레이드* 단계를 따르세요. 
 
 
-| Data Infrastructure Insights를 사용하여 에이전트를 이미 설치했습니다 | 호스트/VM에 이미 에이전트를 설치한 경우 에이전트를 다시 설치할 필요가 없습니다. 이 경우 Agent 설치 화면에서 해당 플랫폼 및 키를 선택하고 * 계속 * 또는 * 마침 * 을 클릭합니다. 
+| Data Infrastructure Insights 사용하여 이미 에이전트를 설치했습니다. | 호스트/VM에 이미 에이전트를 설치한 경우 에이전트를 다시 설치할 필요가 없습니다.  이 경우, 에이전트 설치 화면에서 적절한 플랫폼과 키를 선택하고 *계속* 또는 *마침*을 클릭하세요. 
 
 
-| 이미 에이전트가 설치되어 있지만 Data Infrastructure Insights 설치 프로그램을 사용하지 않고 있습니다 | 이전 에이전트를 제거하고 Data Infrastructure Insights Agent 설치를 실행하여 적절한 기본 구성 파일 설정을 확인합니다. 완료되면 * 계속 * 또는 * 마침 * 을 클릭합니다. 
+| Data Infrastructure Insights 설치 프로그램을 사용하지 않고 이미 에이전트를 설치했습니다. | 이전 에이전트를 제거하고 Data Infrastructure Insights Agent 설치를 실행하여 기본 구성 파일 설정이 올바르게 적용되도록 합니다.  완료되면 *계속* 또는 *마침*을 클릭하세요. 
 |===
-추가 정보는 페이지 또는 에서 찾을 link:concept_requesting_support.html["지원"]link:reference_data_collector_support_matrix.html["Data Collector 지원 매트릭스"]수 있습니다.
+추가 정보는 다음에서 찾을 수 있습니다.link:concept_requesting_support.html["지원하다"] 페이지 또는link:reference_data_collector_support_matrix.html["데이터 수집기 지원 매트릭스"] .

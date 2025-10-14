@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: dashboard_access_management.html 
-summary: 사용자가 만드는 대시보드가 공용 대시보드인지 아니면 비공개형인지 결정합니다. 
+summary: 사용자가 만든 대시보드를 공개할지 비공개로 할지 결정합니다. 
 keywords: dashboard, public, shared, private 
 ---
 = 대시보드 액세스 관리
@@ -11,16 +11,16 @@ keywords: dashboard, public, shared, private
 
 
 [role="lead"]
-Data Infrastructure Insights는 이제 작성하는 대시보드에 대한 액세스를 보다 효과적으로 제어할 수 있습니다. 그래프를 수정할 수 있는 사용자를 선택합니다. 사용자는 잠재적으로 민감한 정보에 대한 노출을 제어합니다. 대시보드를 비공개로 유지하면 조직의 다른 사용자가 시각화를 사용할 준비가 될 때까지 시각화를 마무리할 수 있습니다.
+이제 Data Infrastructure Insights 사용하면 사용자가 만든 대시보드에 대한 액세스를 더 효과적으로 제어할 수 있습니다.  그래프를 누가 수정할 수 있는지 선택하세요.  잠재적으로 민감한 정보에 대한 노출을 통제할 수 있습니다.  대시보드를 비공개로 유지하면 조직의 다른 사람들이 사용할 준비가 될 때까지 시각화를 마무리할 수 있습니다.
 
-image:Dashboard_Sharing_Options.png["대시보드 공유 옵션, 폭 = 300"]
+image:Dashboard_Sharing_Options.png["대시보드 공유 옵션, 너비=300"]
 
-기본적으로 새 대시보드를 만들면 해당 대시보드는 만든 사람만 볼 수 있습니다. 다른 사용자는 대시보드를 보거나 수정할 수 없습니다.
+기본적으로 새 대시보드를 만들면 해당 대시보드는 작성자인 본인에게만 표시됩니다.  다른 사용자는 대시보드를 볼 수 없고 수정할 수도 없습니다.
 
-대시보드를 완료한 후에는 조직의 다른 사용자가 볼 수 있도록 선택할 수 있습니다. 대시보드를 공유하려면 대시보드 목록에서 오른쪽 메뉴에서 _Share_ 를 선택합니다.
+대시보드를 완성하면 조직의 다른 사람들이 대시보드를 볼 수 있도록 허용할 수 있습니다.  대시보드를 공유하려면 대시보드 목록에서 오른쪽 메뉴의 _공유_를 선택하세요.
 
-image:dashboard_access_share_menu.png["메뉴에서 대시보드 액세스 공유를 선택합니다"]
+image:dashboard_access_share_menu.png["메뉴에서 대시보드 액세스 공유"]
 
-편집 또는 읽기 전용 권한으로 대시보드를 모든 사용자와 공유하거나 사용자를 선택할 수 있습니다.
+대시보드를 모든 사람과 공유하거나, 편집 또는 읽기 전용 권한을 가진 사용자를 선택하여 공유할 수 있습니다.
 
-image:dashboard_access_share_drop-down.png["편집 또는 읽기 권한이 있는 대시보드를 공유하는 드롭다운"]
+image:dashboard_access_share_drop-down.png["편집 또는 읽기 권한이 있는 대시보드를 공유하기 위한 드롭다운"]

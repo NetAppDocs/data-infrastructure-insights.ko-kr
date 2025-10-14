@@ -4,70 +4,70 @@ permalink: task_config_telegraf_apache.html
 keywords: telegraf, installation, install, apache 
 summary: Apache 데이터 수집기 구성 
 ---
-= Apache Data Collector
+= 아파치 데이터 수집기
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-이 데이터 수집기는 테넌트의 Apache 서버에서 데이터를 수집할 수 있습니다.
+이 데이터 수집기를 사용하면 테넌트의 Apache 서버에서 데이터를 수집할 수 있습니다.
 
-.필수 구성 요소
-* Apache HTTP Server를 설정하고 제대로 실행해야 합니다
-* 에이전트 호스트/VM에 대한 sudo 또는 관리자 권한이 있어야 합니다
-* 일반적으로 Apache_mod_status_module은 Apache 서버의 '/server-status?auto' 위치에 페이지를 노출하도록 구성됩니다. 사용 가능한 필드를 모두 수집하려면 _ExtendedStatus_옵션을 활성화해야 합니다. 서버 구성 방법에 대한 자세한 내용은 Apache 모듈 설명서를 참조하십시오. https://httpd.apache.org/docs/2.4/mod/mod_status.html#enable[]
+.필수 조건
+* Apache HTTP 서버를 설정하고 제대로 실행해야 합니다.
+* 에이전트 호스트/VM에 sudo 또는 관리자 권한이 있어야 합니다.
+* 일반적으로 Apache _mod_status_ 모듈은 Apache 서버의 '/server-status?auto' 위치에 페이지를 노출하도록 구성됩니다.  사용 가능한 모든 필드를 수집하려면 _ExtendedStatus_ 옵션을 활성화해야 합니다.  서버를 구성하는 방법에 대한 자세한 내용은 Apache 모듈 설명서를 참조하세요. https://httpd.apache.org/docs/2.4/mod/mod_status.html#enable[]
 
 
 
 
 == 설치
 
-. 관측성 > 수집기 * 에서 * + Data Collector * 를 클릭합니다. Apache를 선택합니다.
+. *관찰성 > 수집기*에서 *+데이터 수집기*를 클릭합니다.  Apache를 선택하세요.
 +
-Telegraf 에이전트가 설치된 운영 체제 또는 플랫폼을 선택합니다.
+Telegraf 에이전트가 설치된 운영 체제 또는 플랫폼을 선택하세요.
 
-. 수집용 Agent를 아직 설치하지 않았거나 다른 운영 체제 또는 플랫폼에 대한 Agent를 설치하려면 _지침 표시_ 를 클릭하여 지침을 확장합니다link:task_config_telegraf_agent.html["에이전트 설치"].
-. 이 데이터 수집기에 사용할 Agent Access 키를 선택합니다. Agent 액세스 키 * 버튼을 클릭하여 새 Agent 액세스 키를 추가할 수 있습니다. 모범 사례: OS/플랫폼별로 데이터 수집기를 그룹화하려는 경우에만 다른 에이전트 액세스 키를 사용하십시오.
-. 구성 단계에 따라 데이터 수집기를 구성합니다. 지침은 데이터 수집에 사용하는 운영 체제 또는 플랫폼의 유형에 따라 다릅니다.
+. 수집을 위한 에이전트를 아직 설치하지 않았거나 다른 운영 체제 또는 플랫폼에 대한 에이전트를 설치하려는 경우 _지침 표시_를 클릭하여 확장합니다.link:task_config_telegraf_agent.html["에이전트 설치"] 지침.
+. 이 데이터 수집기와 함께 사용할 에이전트 액세스 키를 선택하세요.  *+ 에이전트 액세스 키* 버튼을 클릭하면 새로운 에이전트 액세스 키를 추가할 수 있습니다.  모범 사례: 데이터 수집기를 OS/플랫폼별로 그룹화하려는 경우에만 다른 에이전트 액세스 키를 사용하세요.
+. 데이터 수집기를 구성하려면 구성 단계를 따르세요.  지침은 데이터 수집에 사용하는 운영 체제나 플랫폼의 유형에 따라 다릅니다.
 
 
-image:ApacheDCConfigLinux.png["Apache 구성"]
+image:ApacheDCConfigLinux.png["아파치 구성"]
 
 
 
 == 설정
 
-Apache의 HTTP Server용 Telegraf 플러그인은 활성화할 'od_status' 모듈에 의존합니다. 이 기능이 활성화되면 Apache의 HTTP Server는 브라우저에서 볼 수 있는 HTML 끝점을 노출하거나 모든 Apache의 HTTP Server 구성 상태를 추출하기 위해 스크레핑할 수 있습니다.
+Apache HTTP 서버용 Telegraf 플러그인은 'mod_status' 모듈이 활성화되어야 합니다.  이 기능을 활성화하면 Apache HTTP 서버는 브라우저에서 볼 수 있거나 Apache HTTP 서버 구성의 모든 상태를 추출하기 위해 스크래핑할 수 있는 HTML 엔드포인트를 노출합니다.
 
 
 
 === 호환성:
 
-Apache의 HTTP Server 버전 2.4.38을 기준으로 구성이 개발되었습니다.
+구성은 Apache HTTP 서버 버전 2.4.38을 기준으로 개발되었습니다.
 
 
 
 === mod_status 활성화:
 
-'od_status' 모듈을 활성화하고 노출하려면 다음 두 단계를 수행해야 합니다.
+'mod_status' 모듈을 활성화하고 노출하려면 두 단계가 필요합니다.
 
-* 모듈 활성화 중
-* 모듈에서 통계를 노출합니다
+* 활성화 모듈
+* 모듈에서 통계 노출
 
 
 
 
 === 활성화 모듈:
 
-모듈 로딩은 '/usr/local/apache/conf/httpd.conf' 아래의 config 파일에 의해 제어됩니다. 구성 파일을 편집하고 다음 행의 주석을 제거합니다.
+모듈 로딩은 '/usr/local/apache/conf/httpd.conf' 아래의 구성 파일에 의해 제어됩니다.  구성 파일을 편집하고 다음 줄의 주석 처리를 제거합니다.
 
  LoadModule status_module modules/mod_status.so
  Include conf/extra/httpd-info.conf
 
 
-=== 모듈에서 통계 노출:
+=== 모듈에서 통계 공개:
 
-'od_status'의 노출은 '/usr/local/apache2/conf/extra/httpd-info.conf' 아래의 구성 파일에 의해 제어됩니다. 해당 구성 파일에 다음 항목이 있는지 확인합니다(최소한 다른 보호 지침이 있음).
+'mod_status'의 노출은 '/usr/local/apache2/conf/extra/httpd-info.conf' 아래의 설정 파일에 의해 제어됩니다.  해당 구성 파일에 다음 내용이 있는지 확인하세요(적어도 다른 지시어는 있어야 합니다).
 
 [listing]
 ----
@@ -84,23 +84,23 @@ Apache의 HTTP Server 버전 2.4.38을 기준으로 구성이 개발되었습니
 #
 ExtendedStatus On
 ----
-'mod_status' 모듈에 대한 자세한 지침은 을 참조하십시오 link:https://httpd.apache.org/docs/2.4/mod/mod_status.html#enable["Apache 문서"]
+'mod_status' 모듈에 대한 자세한 지침은 다음을 참조하세요.link:https://httpd.apache.org/docs/2.4/mod/mod_status.html#enable["Apache 문서"]
 
 
 
-== 개체 및 카운터
+== 객체 및 카운터
 
-다음 개체와 해당 카운터가 수집됩니다.
+다음 객체와 카운터가 수집됩니다.
 
 [cols="<.<,<.<,<.<,<.<"]
 |===
-| 오브젝트: | 식별자: | 특성: | 데이터 요소: 
+| 물체: | 식별자: | 속성: | 데이터 포인트: 
 
 
-| 아파치 | 네임스페이스 서버 | 노드 IP 노드 이름 포트 상위 서버 구성 생성 상위 서버 MPM 생성 서버 가동 시간이 중지 중입니다 | 초당 요청당 바쁜 작업자 바이트 CPU 하위 시스템 CPU 하위 시스템 CPU 사용자 CPU 로드 CPU 시스템 CPU 사용자 비동기 연결 닫기 비동기 연결 연결 연결 유지 연결 쓰기 연결 요청 유휴 작업자당 총 기간 로드 평균(마지막 1m) 로드 평균(마지막 15m) 로드 평균(마지막 5m) 초당 프로세스 요청 수 총 액세스 총 기간 총 KBScoreytes 보드 폐쇄 점수보드 DNS 조회 점수보드 완료 점수보드 유휴 정리 점수판 유지 점수보드 열기 점수보드 읽기 점수보드 대기 시작 Scoreboard 전송 
+| 아파치 | 네임스페이스 서버 | 노드 IP 노드 이름 포트 상위 서버 구성 생성 상위 서버 MPM 생성 서버 가동 시간이 중지됨 | 바쁜 작업자 요청당 바이트 수 초당 바이트 수 CPU 자식 시스템 CPU 자식 사용자 CPU 부하 CPU 시스템 CPU 사용자 비동기 연결 종료 비동기 연결 유지 비동기 연결 쓰기 연결 요청당 총 기간 유휴 작업자 부하 평균(마지막 1m) 부하 평균(마지막 15m) 부하 평균(마지막 5m) 프로세스 초당 요청 총 액세스 총 기간 총 KByte 점수판 닫기 점수판 DNS 조회 점수판 완료 점수판 유휴 정리 점수판 유지 점수판 로깅 점수판 열기 점수판 읽기 점수판 전송 점수판 시작 점수판 대기 
 |===
 
 
 == 문제 해결
 
-추가 정보는 페이지에서 찾을 수 link:concept_requesting_support.html["지원"]있습니다.
+추가 정보는 다음에서 찾을 수 있습니다.link:concept_requesting_support.html["지원하다"] 페이지.

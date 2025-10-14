@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_dc_emc_isilon_rest.html 
 keywords: data collector, isilon, EMC, DELL, PowerScale 
-summary: Dell EMC Isilon/PowerScale REST 데이터 수집기 구성 
+summary: Dell EMC Isilon/PowerScale REST 데이터 수집기 구성. 
 ---
 = Dell EMC Isilon/PowerScale REST 데이터 수집기
 :hardbreaks:
@@ -10,26 +10,26 @@ summary: Dell EMC Isilon/PowerScale REST 데이터 수집기 구성
 
 
 [role="lead"]
-Data Infrastructure Insights는 Dell EMC Isilon/PowerScale REST 데이터 수집기를 사용하여 Dell EMC Isilon 또는 PowerScale 스토리지에서 인벤토리 및 성능 데이터를 가져옵니다. 이 Collector는 OneFS 8.0.0+를 실행하는 스토리지를 지원합니다.
+Data Infrastructure Insights Dell EMC Isilon/PowerScale REST 데이터 수집기를 사용하여 Dell EMC Isilon 또는 PowerScale 스토리지에서 인벤토리 및 성능 데이터를 수집합니다.  이 수집기는 OneFS 8.0.0 이상을 실행하는 어레이를 지원합니다.
 
 
 
-== 용어
+== 술어
 
-Data Infrastructure Insights는 이 데이터 수집기에서 다음과 같은 인벤토리 정보를 수집합니다. Data Infrastructure Insights에서 구입한 각 자산 유형에 대해 이 자산에 사용되는 가장 일반적인 용어가 표시되어 있습니다. 이 데이터 수집기를 보거나 문제를 해결할 때 다음 용어를 염두에 두십시오.
+Data Infrastructure Insights 이 데이터 수집기로부터 다음과 같은 인벤토리 정보를 수집합니다.  Data Infrastructure Insights 에서 수집한 각 자산 유형에 대해 해당 자산에 가장 일반적으로 사용되는 용어가 표시됩니다.  이 데이터 수집기를 보거나 문제를 해결할 때 다음 용어를 염두에 두십시오.
 
 [cols="2*"]
 |===
-| 공급업체/모델 기간 | Data Infrastructure Insights 용어 
+| 공급업체/모델 용어 | Data Infrastructure Insights 용어 
 
 
-| 드라이브 | 디스크 
+| 운전하다 | 디스크 
 
 
-| 클러스터 | 스토리지 
+| 무리 | 스토리지 
 
 
-| 노드 | 스토리지 노드 
+| 마디 | 저장 노드 
 
 
 | OneFS 파일 시스템 | 내부 볼륨 
@@ -38,9 +38,9 @@ Data Infrastructure Insights는 이 데이터 수집기에서 다음과 같은 �
 | OneFS 파일 시스템 | 스토리지 풀 
 
 
-| qtree입니다 | qtree입니다 
+| 큐트리 | 큐트리 
 |===
-참고: 이러한 용어 매핑은 일반적인 용어 매핑일 뿐이며 이 데이터 수집기의 모든 경우를 나타내는 것은 아닙니다.
+참고: 이는 일반적인 용어 매핑일 뿐이며 이 데이터 수집기의 모든 사례를 나타내지 않을 수 있습니다.
 
 
 
@@ -48,66 +48,66 @@ Data Infrastructure Insights는 이 데이터 수집기에서 다음과 같은 �
 
 이 데이터 수집기를 구성하려면 다음 정보가 필요합니다.
 
-* 사용자 계정 및 암호 이 계정은 admin/root가 아니어야 하지만 서비스 계정에 상당한 수의 읽기 전용 권한을 부여해야 합니다. 아래 표를 참조하십시오
-* Dell EMC Isilon/PowerScale 클러스터의 IP 주소/정규화된 도메인 이름입니다
+* 사용자 계정과 비밀번호.  이 계정은 admin/root일 필요는 없지만 서비스 계정에 상당한 수의 읽기 전용 권한을 부여해야 합니다. 아래 표를 참조하세요.
+* Dell EMC Isilon/PowerScale 클러스터의 IP 주소/정규화된 도메인 이름
 * 포트 8080에 대한 HTTPS 액세스
 * OneFS 8.0.0 이상을 실행하는 Isilon/PowerScale 클러스터
 
 
 [cols="3*"]
 |===
-| 권한 이름 | 설명 | R(읽기) 또는 RW(읽기+쓰기) 
+| 권한 이름 | 설명 | r(읽기) 또는 rw(읽기+쓰기) 
 
 
-| isi_PRIV_LOGIN_PAPI | 플랫폼 API | R 
+| ISI_PRIV_LOGIN_PAPI | 플랫폼 API | 아르 자형 
 
 
-| isi_PRIV_SYS_TIME | 시간 | R 
+| ISI_PRIV_SYS_TIME | 시간 | 아르 자형 
 
 
-| isi_PRIV_AUTH | 인증 | R 
+| ISI_PRIV_AUTH | 인증 | 아르 자형 
 
 
-| isi_PRIV_ROLE | 권한 | R 
+| ISI_PRIV_ROLE | 특권 | 아르 자형 
 
 
-| isi_PRIV_devices를 참조하십시오 | 장치 | R 
+| ISI_PRIV_DEVICES | 장치 | 아르 자형 
 
 
-| isi_PRIV_EVENT | 이벤트 | R 
+| ISI_PRIV_EVENT | 이벤트 | 아르 자형 
 
 
-| isi_PRIV_HDFS입니다 | HDFS입니다 | R 
+| ISI_PRIV_HDFS | HDFS | 아르 자형 
 
 
-| isi_PRIV_NDMP | NDMP | R 
+| ISI_PRIV_NDMP | NDMP | 아르 자형 
 
 
-| isi_PRIV_NETWORK | 네트워크 | R 
+| ISI_PRIV_NETWORK | 회로망 | 아르 자형 
 
 
-| isi_prIV_nfs를 선택합니다 | NFS 를 참조하십시오 | R 
+| ISI_PRIV_NFS | NFS | 아르 자형 
 
 
-| isi_PRIV_PAPI_CONFIG | 플랫폼 API를 구성합니다 | R 
+| ISI_PRIV_PAPI_구성 | 플랫폼 API 구성 | 아르 자형 
 
 
-| isi_PRIV_quota를 입력합니다 | 할당량 | R 
+| ISI_PRIV_쿼터 | 몫 | 아르 자형 
 
 
-| isi_PRIV_SmartPools를 참조하십시오 | SmartPools를 참조하십시오 | R 
+| ISI_PRIV_SMARTPOOLS | 스마트풀스 | 아르 자형 
 
 
-| isi_PRIV_smb입니다 | 중소기업 | R 
+| ISI_PRIV_SMB | 중소기업 | 아르 자형 
 
 
-| isi_PRIV_statistics | 통계 | R 
+| ISI_PRIV_STATISTICS | 통계 | 아르 자형 
 
 
-| isi_PRIV_SWIFT | 스위프트 | R 
+| ISI_PRIV_SWIFT | 스위프트 | 아르 자형 
 
 
-| isi_PRIV_JOB_ENGINE | 작업 엔진 | R 
+| ISI_PRIV_JOB_ENGINE | 작업 엔진 | 아르 자형 
 |===
 
 
@@ -115,16 +115,16 @@ Data Infrastructure Insights는 이 데이터 수집기에서 다음과 같은 �
 
 [cols="2*"]
 |===
-| 필드에 입력합니다 | 설명 
+| 필드 | 설명 
 
 
-| Isilon IP 주소입니다 | Isilon 스토리지의 IP 주소 또는 정규화된 도메인 이름입니다 
+| Isilon IP 주소 | Isilon 스토리지의 IP 주소 또는 정규화된 도메인 이름 
 
 
-| 사용자 이름 | Isilon의 사용자 이름입니다 
+| 사용자 이름 | Isilon의 사용자 이름 
 
 
-| 암호 | Isilon에 사용되는 암호입니다 
+| 비밀번호 | Isilon에 사용되는 비밀번호 
 |===
 
 
@@ -132,35 +132,35 @@ Data Infrastructure Insights는 이 데이터 수집기에서 다음과 같은 �
 
 [cols="2*"]
 |===
-| 필드에 입력합니다 | 설명 
+| 필드 | 설명 
 
 
 | HTTPS 포트 | 기본값은 8080입니다. 
 
 
-| 재고 폴링 간격(분) | 재고 조사 사이의 간격입니다. 기본값은 20입니다. 
+| 재고 폴링 간격(분) | 재고 조사 간격.  기본값은 20입니다. 
 
 
-| 성능 폴링 간격(초) | 성능 폴링 간격입니다. 기본값은 300입니다. 
+| 성능 폴링 간격(초) | 성과 여론조사 간격.  기본값은 300입니다. 
 |===
 
 
 == 문제 해결
 
-이 데이터 수집기에서 문제가 발생할 경우 다음과 같은 방법을 시도해 보십시오.
+이 데이터 수집기에 문제가 발생하면 시도해 볼 수 있는 몇 가지 사항은 다음과 같습니다.
 
 
 
-=== 인벤토리
+=== 목록
 
 [cols="2*"]
 |===
-| 문제: | 다음을 시도해 보십시오. 
+| 문제: | 다음을 시도해 보세요: 
 
 
-| "유효하지 않은 로그인 자격 증명" 오류 메시지 "역할 기반 관리를 위해 명령이 활성화되지 않았습니다. 루트 사용자 액세스가 필요합니다." | * 사용자가 장치에서 다음 명령을 실행할 수 있는 권한이 있는지 확인합니다. > isi version osrelease > isi status -q > isi status -n > isi devices -d %s > isi license * 마법사에 사용된 자격 증명이 장치 자격 증명과 일치하는지 확인합니다 
+| "잘못된 로그인 자격 증명"과 "역할 기반 관리에 사용할 수 없는 명령에는 루트 사용자 액세스가 필요합니다"라는 오류 메시지가 표시됩니다. | * 사용자에게 장치에서 다음 명령을 실행할 권한이 있는지 확인합니다. > isi version osrelease > isi status -q > isi status -n > isi devices -d %s > isi license * 마법사에서 사용된 자격 증명이 장치 자격 증명과 일치하는지 확인합니다. 
 
 
-| "내부 오류" 오류 메시지와 함께 "명령 <사용자 명령> 실행이 <현재 권한>과(와) 함께 실패했습니다. sudo 명령 실행 권한 문제" | 사용자에게 장치에서 다음 명령을 실행할 수 있는 sudo 권한이 있는지 확인합니다 
+| "내부 오류"와 함께 "명령 <사용자의 명령> 실행이 권한 <사용자의 현재 권한>으로 인해 실패했습니다."라는 오류 메시지가 표시됩니다.  Sudo 명령어 실행 권한 문제” | 사용자에게 장치에서 다음 명령을 실행할 수 있는 sudo 권한이 있는지 확인하세요. 
 |===
-추가 정보는 페이지 또는 에서 찾을 link:concept_requesting_support.html["지원"]link:reference_data_collector_support_matrix.html["Data Collector 지원 매트릭스"]수 있습니다.
+추가 정보는 다음에서 찾을 수 있습니다.link:concept_requesting_support.html["지원하다"] 페이지 또는link:reference_data_collector_support_matrix.html["데이터 수집기 지원 매트릭스"] .

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_dc_hds_nas.html 
 keywords: data collector, HDS HNAS, HDS NAS 
-summary: 'HDS NAS(HNAS) 데이터 수집기 구성' 
+summary: 'HDS NAS(HNAS) 데이터 수집기를 구성합니다.' 
 ---
 = Hitachi Vantara NAS 데이터 수집기 구성
 :hardbreaks:
@@ -10,29 +10,29 @@ summary: 'HDS NAS(HNAS) 데이터 수집기 구성'
 
 
 [role="lead"]
-Hitachi Vantara NAS 데이터 수집기는 HDS NAS 클러스터 검색을 지원하는 인벤토리 및 구성 데이터 수집기입니다. Data Infrastructure Insights는 NFS 및 CIFS 공유, 파일 시스템(내부 볼륨) 및 스팬(스토리지 풀)을 검색할 수 있도록 지원합니다.
+Hitachi Vantara NAS 데이터 수집기는 HDS NAS 클러스터 검색을 지원하는 인벤토리 및 구성 데이터 수집기입니다.  Data Infrastructure Insights NFS 및 CIFS 공유, 파일 시스템(내부 볼륨), 스팬(스토리지 풀)을 검색하는 기능을 지원합니다.
 
 
 
-== 용어
+== 술어
 
-Data Infrastructure Insights는 HNAS 데이터 수집기에서 다음과 같은 인벤토리 정보를 수집합니다. Data Infrastructure Insights에서 구입한 각 자산 유형에 대해 이 자산에 사용되는 가장 일반적인 용어가 표시되어 있습니다. 이 데이터 수집기를 보거나 문제를 해결할 때 다음 용어를 염두에 두십시오.
+Data Infrastructure Insights HNAS 데이터 수집기에서 다음과 같은 인벤토리 정보를 수집합니다.  Data Infrastructure Insights 에서 수집한 각 자산 유형에 대해 해당 자산에 가장 일반적으로 사용되는 용어가 표시됩니다.  이 데이터 수집기를 보거나 문제를 해결할 때 다음 용어를 염두에 두십시오.
 
 [cols="2*"]
 |===
-| 공급업체/모델 기간 | Data Infrastructure Insights 용어 
+| 공급업체/모델 용어 | Data Infrastructure Insights 용어 
 
 
-| 계층 | 디스크 그룹 
+| 층 | 디스크 그룹 
 
 
-| 클러스터 | 스토리지 
+| 무리 | 스토리지 
 
 
-| 노드 | 스토리지 노드 
+| 마디 | 저장 노드 
 
 
-| 스팬 | 스토리지 풀 
+| 기간 | 스토리지 풀 
 
 
 | 시스템 드라이브 | 백엔드 LUN 
@@ -40,16 +40,16 @@ Data Infrastructure Insights는 HNAS 데이터 수집기에서 다음과 같은 
 
 | 파일 시스템 | 내부 볼륨 
 |===
-참고: 이러한 용어 매핑은 일반적인 용어 매핑일 뿐이며 이 데이터 수집기의 모든 경우를 나타내는 것은 아닙니다.
+참고: 이는 일반적인 용어 매핑일 뿐이며 이 데이터 수집기의 모든 사례를 나타내지 않을 수 있습니다.
 
 
 
 == 요구 사항
 
-* 장치 IP 주소입니다
+* 장치 IP 주소
 * 포트 22, SSH 프로토콜
-* 사용자 이름 및 암호 권한 수준: 감독자
-* 참고: 이 데이터 수집기는 SSH 기반이므로 HNAS 자체의 TCP 22 또는 클러스터가 연결된 시스템 관리 장치(SMU)에 대해 SSH 세션을 시작할 수 있어야 합니다.
+* 사용자 이름 및 비밀번호 - 권한 수준: 관리자
+* 참고: 이 데이터 수집기는 SSH 기반이므로 이를 호스팅하는 AU는 HNAS 자체의 TCP 22 또는 클러스터가 연결된 시스템 관리 장치(SMU)에 대한 SSH 세션을 시작할 수 있어야 합니다.
 
 
 
@@ -58,16 +58,16 @@ Data Infrastructure Insights는 HNAS 데이터 수집기에서 다음과 같은 
 
 [cols="2*"]
 |===
-| 필드에 입력합니다 | 설명 
+| 필드 | 설명 
 
 
-| HNAS 호스트 | HNAS 관리 호스트의 IP 주소 또는 정규화된 도메인 이름입니다 
+| HNAS 호스트 | HNAS 관리 호스트의 IP 주소 또는 정규화된 도메인 이름 
 
 
-| 사용자 이름 | HNAS CLI의 사용자 이름입니다 
+| 사용자 이름 | HNAS CLI의 사용자 이름 
 
 
-| 암호 | HNAS CLI에 사용되는 암호입니다 
+| 비밀번호 | HNAS CLI에 사용되는 비밀번호 
 |===
 
 
@@ -75,32 +75,32 @@ Data Infrastructure Insights는 HNAS 데이터 수집기에서 다음과 같은 
 
 [cols="2*"]
 |===
-| 필드에 입력합니다 | 설명 
+| 필드 | 설명 
 
 
-| 재고 폴링 간격(분) | 재고 조사 사이의 간격입니다. 기본값은 30분입니다. 
+| 재고 폴링 간격(분) | 재고 조사 간격. 기본값은 30분입니다. 
 |===
 
 
 == 문제 해결
 
-이 데이터 수집기에서 문제가 발생할 경우 다음과 같은 방법을 시도해 보십시오.
+이 데이터 수집기에 문제가 발생하면 시도해 볼 수 있는 몇 가지 사항은 다음과 같습니다.
 
 
 
-=== 인벤토리
+=== 목록
 
 [cols="2*"]
 |===
-| 문제: | 다음을 시도해 보십시오. 
+| 문제: | 다음을 시도해 보세요: 
 
 
-| "연결 오류" 및 "셸 채널 설정 오류:" 또는 "쉘 채널 열기 오류" 오류 메시지 | 네트워크 연결 문제 또는 SSH가 잘못 구성되어 있을 수 있습니다. 대체 SSH 클라이언트와의 연결을 확인합니다 
+| "연결 오류"와 함께 "셸 채널 설정 오류:" 또는 "셸 채널 열기 오류" 오류 메시지가 표시됩니다. | 네트워크 연결 문제나 SSH가 잘못 구성된 것이 원인일 수 있습니다.  대체 SSH 클라이언트와의 연결 확인 
 
 
-| "Command: XXX has timed out" 오류 메시지와 함께 "Timeout" 또는 "Error Retrieving data"가 표시됩니다. | * 대체 SSH 클라이언트 * 증가 시간 초과로 명령을 시도하십시오 
+| "시간 초과" 또는 "데이터 검색 오류"와 함께 "명령: XXX의 시간이 초과되었습니다."라는 오류 메시지가 표시됩니다. | * 대체 SSH 클라이언트로 명령을 시도하세요. * 시간 초과를 늘리세요. 
 
 
-| "연결 중 오류 발생" 또는 "잘못된 로그인 자격 증명"과 "장치와 통신할 수 없음:" 오류 메시지 | * IP 주소 확인 * 사용자 이름 및 암호 확인 * 대체 SSH 클라이언트와의 연결 확인 
+| "연결 오류" 또는 "잘못된 로그인 자격 증명"과 함께 "장치와 통신할 수 없습니다."라는 오류 메시지가 표시됩니다. | * IP 주소 확인 * 사용자 이름 및 비밀번호 확인 * 대체 SSH 클라이언트와의 연결 확인 
 |===
-추가 정보는 페이지 또는 에서 찾을 link:concept_requesting_support.html["지원"]link:reference_data_collector_support_matrix.html["Data Collector 지원 매트릭스"]수 있습니다.
+추가 정보는 다음에서 찾을 수 있습니다.link:concept_requesting_support.html["지원하다"] 페이지 또는link:reference_data_collector_support_matrix.html["데이터 수집기 지원 매트릭스"] .

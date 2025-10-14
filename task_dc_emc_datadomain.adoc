@@ -2,31 +2,31 @@
 sidebar: sidebar 
 permalink: task_dc_emc_datadomain.html 
 keywords: data collector, Data Domain, EMC, DELL 
-summary: Dell EMC Data Domain 데이터 수집기 구성 
+summary: DELL EMC Data Domain 데이터 수집기를 구성합니다. 
 ---
-= Dell EMC Data Domain 데이터 수집기
+= DELL EMC Data Domain 데이터 수집기
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-이 데이터 수집기는 Dell EMC Data Domain 중복 제거 스토리지 시스템에서 인벤토리 및 성능 정보를 수집합니다. 이 데이터 수집기를 구성하려면 따라야 하는 특정 구성 지침 및 사용 권장 사항이 있습니다.
+이 데이터 수집기는 DELL EMC Data Domain 중복 제거 스토리지 시스템에서 인벤토리 및 성능 정보를 수집합니다.  이 데이터 수집기를 구성하려면 따라야 할 특정 구성 지침과 사용 권장 사항이 있습니다.
 
 
 
-== 용어
+== 술어
 
-Data Infrastructure Insights는 Data Domain Data Collector에서 다음과 같은 인벤토리 정보를 가져옵니다. Data Infrastructure Insights에서 구입한 각 자산 유형에 대해 이 자산에 사용되는 가장 일반적인 용어가 표시되어 있습니다. 이 데이터 수집기를 보거나 문제를 해결할 때 다음 용어를 염두에 두십시오.
+Data Infrastructure Insights Data Domain 데이터 수집기에서 다음과 같은 인벤토리 정보를 수집합니다.  Data Infrastructure Insights 에서 수집한 각 자산 유형에 대해 해당 자산에 가장 일반적으로 사용되는 용어가 표시됩니다.  이 데이터 수집기를 보거나 문제를 해결할 때 다음 용어를 염두에 두십시오.
 
 [cols="2*"]
 |===
-| 공급업체/모델 기간 | Data Infrastructure Insights 용어 
+| 공급업체/모델 용어 | Data Infrastructure Insights 용어 
 
 
 | 디스크 | 디스크 
 
 
-| 스토리지 | 스토리지 
+| 정렬 | 스토리지 
 
 
 | FC 포트 | 포트 
@@ -35,12 +35,12 @@ Data Infrastructure Insights는 Data Domain Data Collector에서 다음과 같�
 | 파일 시스템 | 내부 볼륨 
 
 
-| 할당량 | 할당량 
+| 몫 | 몫 
 
 
-| NFS 및 CIFS 공유 | 파일 공유 
+| NFS와 CIFS 공유 | 파일 공유 
 |===
-참고: 이러한 용어 매핑은 일반적인 용어 매핑일 뿐이며 이 데이터 콜릿의 모든 경우를 나타내는 것은 아닙니다.
+참고: 이는 일반적인 용어 매핑일 뿐이며 이 데이터 수집기의 모든 사례를 나타내지 않을 수 있습니다.
 
 
 
@@ -48,7 +48,7 @@ Data Infrastructure Insights는 Data Domain Data Collector에서 다음과 같�
 
 이 데이터 수집기를 구성하려면 다음 정보가 필요합니다.
 
-* Data Domain 디바이스의 IP 주소입니다
+* Data Domain 장치의 IP 주소
 * Data Domain 스토리지에 대한 읽기 전용 사용자 이름 및 암호
 * SSH 포트 22
 
@@ -59,16 +59,16 @@ Data Infrastructure Insights는 Data Domain Data Collector에서 다음과 같�
 
 [cols="2*"]
 |===
-| 필드에 입력합니다 | 설명 
+| 필드 | 설명 
 
 
-| IP 주소입니다 | Data Domain 스토리지 시스템의 IP 주소 또는 정규화된 도메인 이름입니다 
+| IP 주소 | Data Domain 스토리지 어레이의 IP 주소 또는 정규화된 도메인 이름 
 
 
-| 사용자 이름입니다 | Data Domain 스토리지 시스템의 사용자 이름입니다 
+| 사용자 이름 | Data Domain 스토리지 어레이의 사용자 이름 
 
 
-| 암호 | Data Domain 스토리지 시스템의 암호입니다 
+| 비밀번호 | Data Domain 스토리지 어레이의 비밀번호 
 |===
 
 
@@ -76,16 +76,16 @@ Data Infrastructure Insights는 Data Domain Data Collector에서 다음과 같�
 
 [cols="2*"]
 |===
-| 필드에 입력합니다 | 설명 
+| 필드 | 설명 
 
 
-| 재고 폴링 간격(분) | 재고 조사 사이의 간격입니다. 기본값은 20입니다. 
+| 재고 폴링 간격(분) | 재고 조사 간격.  기본값은 20입니다. 
 
 
-| SSH 포트 | SSH 서비스 포트입니다 
+| SSH 포트 | SSH 서비스 포트 
 |===
 
 
 == 문제 해결
 
-이 데이터 수집기에 대한 추가 정보는 페이지 또는 에서 찾을 link:concept_requesting_support.html["지원"]link:reference_data_collector_support_matrix.html["Data Collector 지원 매트릭스"]수 있습니다.
+이 데이터 수집기에 대한 추가 정보는 다음에서 찾을 수 있습니다.link:concept_requesting_support.html["지원하다"] 페이지 또는link:reference_data_collector_support_matrix.html["데이터 수집기 지원 매트릭스"] .

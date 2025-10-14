@@ -1,50 +1,50 @@
 ---
 sidebar: sidebar 
 permalink: reporting_create_example.html 
-summary: 이 절차를 사용하여 미리 정의된 Data Infrastructure Insights 보고서를 사용하여 보고서를 생성할 수 있습니다. 
+summary: 사전 정의된 Data Infrastructure Insights 보고서를 사용하여 보고서를 만들려면 다음 절차를 따르세요. 
 keywords: reporting, cognos, data warehouse, dwh, create, report 
 ---
-= 보고서 작성(예)
+= 보고서 만들기(예)
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-이 예제의 단계를 사용하여 여러 데이터 센터에서 스토리지 및 스토리지 풀의 물리적 용량에 대한 간단한 보고서를 생성할 수 있습니다.
+이 예제의 단계를 사용하여 여러 데이터 센터의 저장소와 저장소 풀의 물리적 용량에 대한 간단한 보고서를 생성합니다.
 
 .단계
-. 메뉴 > 콘텐츠 > 팀 콘텐츠 > 보고서 * 로 이동합니다
-. 화면 오른쪽 상단에서 * [New +] * 를 선택합니다
-. Report * 를 선택합니다
+. *메뉴 > 콘텐츠 > 팀 콘텐츠 > 보고서*로 이동합니다.
+. 화면 오른쪽 상단에서 *[새로 만들기 +]*를 선택하세요.
+. *신고*를 선택하세요
 +
 image:Reporting_New_Report.png["새 보고서 만들기"]
 
-. 템플릿 * 탭에서 _blank_를 선택합니다
+. *템플릿* 탭에서 _빈칸_을 선택하세요.
 +
-소스 및 데이터 탭이 표시됩니다
+소스 및 데이터 탭이 표시됩니다.
 
-. 열기 * 소스 + * 를 선택합니다
-. 팀 콘텐츠 * 에서 * 패키지 * 를 엽니다
+. 열기 *소스 선택 +*
+. *팀 콘텐츠*에서 *패키지*를 엽니다.
 +
 사용 가능한 패키지 목록이 표시됩니다.
 
-. 스토리지 및 스토리지 풀 용량 * 을 선택합니다 image:Reporting_Select_Source_For_Report.png["보고서 소스 선택"]
-. 열기 * 를 선택합니다
+. *저장소 및 저장 풀 용량*을 선택하세요image:Reporting_Select_Source_For_Report.png["보고서 소스 선택"]
+. *열기*를 선택하세요
 +
 보고서에 사용할 수 있는 스타일이 표시됩니다.
 
-. 목록 * 을 선택합니다
+. *목록*을 선택하세요
 +
-목록 및 쿼리에 적절한 이름을 추가합니다
+목록 및 쿼리에 적절한 이름을 추가합니다.
 
-. OK * 를 선택합니다
-. 물리적 용량 _ 을(를) 확장합니다
-. Data Center_의 가장 낮은 수준으로 확장합니다
-. 데이터 센터 _ 를 보고 미천장에 끌어다 놓습니다.
-. Capacity(MB) _ 을(를) 확장합니다
-. Capacity(MB)_를 보고 입천장에 끌어다 놓습니다.
-. Drag_Used Capacity (MB) _ 을(를) Reporting palate 로 이동합니다.
-. Run * (실행 *) 메뉴에서 출력 유형을 선택하여 보고서를 실행합니다.
+. *확인*을 선택하세요
+. _물리적 용량_ 확장
+. _데이터 센터_의 가장 낮은 레벨까지 확장
+. _데이터 센터_를 보고 팔레트로 끌어다 놓습니다.
+. _용량(MB)_ 확장
+. _용량(MB)_을 보고 팔레트로 끌어다 놓습니다.
+. _사용 용량(MB)_을 보고 팔레트로 끌어다 놓습니다.
+. *실행* 메뉴에서 출력 유형을 선택하여 보고서를 실행합니다.
 +
 image:Reporting_Running_A_Report.png["보고서 출력 선택"]
 
@@ -53,4 +53,4 @@ image:Reporting_Running_A_Report.png["보고서 출력 선택"]
 .결과
 다음과 유사한 보고서가 생성됩니다.
 
-image:Reporting-Example1.png["보고서 예"]
+image:Reporting-Example1.png["보고서 예시"]

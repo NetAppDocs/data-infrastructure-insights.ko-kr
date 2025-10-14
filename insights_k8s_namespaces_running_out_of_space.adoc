@@ -2,39 +2,39 @@
 sidebar: sidebar 
 permalink: insights_k8s_namespaces_running_out_of_space.html 
 keywords: insight, pv, persistent volume, backend 
-summary: 통찰력은 Kubernetes 공간이 가득 찰 가능성을 예측하는 데 도움이 될 수 있습니다. 
+summary: 통찰력을 통해 Kubernetes 공간이 언제 가득 찰지 예측할 수 있습니다. 
 ---
-= 인사이트: Kubernetes 네임스페이스가 공간 부족입니다
+= 통찰력: Kubernetes 네임스페이스 공간 부족
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-테넌트의 공간이 부족한 것은 결코 좋은 상황이 아닙니다. Data Infrastructure Insights를 사용하면 Kubernetes 영구 볼륨이 가득 차기 전의 시간을 예측할 수 있습니다.
+세입자가 집을 비울 공간이 부족한 상황은 결코 좋은 상황이 아닙니다.  Data Infrastructure Insights 사용하면 Kubernetes 영구 볼륨이 가득 차기 전까지 남은 시간을 예측할 수 있습니다.
 
-Space_Insight에서 실행되는 _Kubernetes 네임스페이스 를 사용하면 공간이 부족할 위험이 있는 Kubernetes 네임스페이스의 워크로드를 확인할 수 있으며, 각 영구 볼륨이 꽉 차게 되기 전의 남은 일 수에 대한 추정치가 있습니다.
+_Kubernetes 네임스페이스 공간 부족_ 인사이트는 각 영구 볼륨이 가득 차기까지 남은 일수를 추정하여 공간이 부족해질 위험이 있는 Kubernetes 네임스페이스의 워크로드를 보여줍니다.
 
-이 Insight는 * 대시보드 > 인사이트 * 로 이동하여 볼 수 있습니다.
+이 통찰력을 보려면 *대시보드 > 통찰력*으로 이동하세요.
 
-image:K8sRunningOutOfSpaceWorkloadList.png["공간이 부족할 위험이 있는 K8s 네임스페이스의 워크로드 목록"]
+image:K8sRunningOutOfSpaceWorkloadList.png["공간 부족 위험이 있는 K8s 네임스페이스의 워크로드 목록"]
 
-워크로드를 클릭하여 Insight의 세부 정보 페이지를 엽니다. 이 페이지에는 워크로드 용량 추세를 보여 주는 그래프와 다음을 보여 주는 표가 표시됩니다.
+Insight에 대한 세부 정보 페이지를 열려면 작업 부하를 클릭하세요.  이 페이지에서는 작업 부하 용량 추세를 보여주는 그래프와 다음 내용을 보여주는 표를 볼 수 있습니다.
 
-* 워크로드 이름
-* 영구 볼륨이 영향을 받습니다
-* 예상 전체 시간(일)
+* 작업 부하 이름
+* 영구 볼륨이 영향을 받음
+* 예상 완료 시간(일)
 * 영구 볼륨 용량
-* 백엔드 스토리지 리소스가 영향을 받으며, 현재 사용 중인 용량이 총 용량을 초과하게 됩니다. 이 링크를 클릭하면 백엔드 볼륨에 대한 상세 랜딩 페이지가 표시됩니다.
+* 백엔드 스토리지 리소스에 영향을 미쳐, 전체 용량 중 현재 용량이 사용되었습니다.  이 링크를 클릭하면 백엔드 볼륨에 대한 자세한 랜딩 페이지가 열립니다.
 
 
-image:K8sRunningOutOfSpaceWorkloadTable.png["세부 정보를 보여주는 워크로드 표"]
+image:K8sRunningOutOfSpaceWorkloadTable.png["세부 정보를 보여주는 작업량 표"]
 
 
 
-=== 공간이 부족할 경우 어떻게 해야 합니까?
+=== 공간이 부족하면 어떻게 해야 하나요?
 
-Insight(인사이트) 페이지에서 * + Show Recommendations(권장 사항 표시) * 를 클릭하여 가능한 해결책을 확인합니다. 공간 부족 시 가장 쉬운 옵션은 항상 용량을 추가하는 것입니다. Data Infrastructure Insights에서는 목표 60일 예측에 전체 시간을 늘려 줄 수 있는 최적의 용량을 보여줍니다. 다른 권장 사항도 나와 있습니다.
+인사이트 페이지에서 *+권장 사항 표시*를 클릭하여 가능한 솔루션을 확인하세요.  공간이 부족할 때 가장 쉬운 옵션은 항상 용량을 추가하는 것이며, Data Infrastructure Insights 목표 60일 예측에 대한 전체 완료 시간을 늘리기 위해 추가할 수 있는 최적의 용량을 보여줍니다.  다른 권장 사항도 표시됩니다.
 
-image:K8sRunningOutOfSpaceRecommendations.png["60일 TTF로 되돌리기 위한 추가 용량"]
+image:K8sRunningOutOfSpaceRecommendations.png["60일 TTF로 복귀할 수 있는 용량 추가"]
 
-또한 이 Insight에 대한 편리한 링크를 복사하여 페이지에 책갈피를 지정하거나 팀과 쉽게 공유할 수도 있습니다.
+여기에서 이 통찰력에 대한 편리한 링크를 복사하여 페이지를 북마크하거나 팀과 쉽게 공유할 수 있습니다.

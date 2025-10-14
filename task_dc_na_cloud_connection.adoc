@@ -1,16 +1,16 @@
 ---
 sidebar: sidebar 
 permalink: task_dc_na_cloud_connection.html 
-summary: ONTAP 9.9 이상의 데이터 수집기에 대한 NetApp 클라우드 연결을 구성합니다 
+summary: ONTAP 9.9+ 데이터 수집기를 위한 NetApp Cloud Connection 구성 
 keywords: data collector, NetApp, Cloud agent, ONTAP 
 ---
-= ONTAP 9.9 이상의 데이터 수집기를 위한 NetApp 클라우드 연결
+= ONTAP 9.9+ 데이터 수집기용 NetApp Cloud Connection
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-이 데이터 수집기는 ONTAP 9.9 + CVO, AFF 및 FAS 시스템의 데이터 수집을 지원하기 위해 클라우드 연결을 생성합니다.
+이 데이터 수집기는 ONTAP 9.9+ CVO, AFF, FAS 시스템에서 데이터 수집을 지원하기 위해 클라우드 연결을 생성합니다.
 
 
-NOTE: 이 데이터 수집기는 2023년 4월 4일부터 Data Infrastructure Insights에 더 이상 설치할 수 없으며, 2023년 7월 모든 Data Infrastructure Insights 설치에서 제거될 예정입니다.
+NOTE: 이 데이터 수집기는 2023년 4월 4일부터 Data Infrastructure Insights 에 설치할 수 없으며, 2023년 7월에 모든 Data Infrastructure Insights 설치에서 제거됩니다.

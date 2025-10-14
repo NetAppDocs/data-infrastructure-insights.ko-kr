@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_dc_brocade_bna.html 
 keywords: data collector, Brocade, BNA 
-summary: Brocade BNA Collector 구성. 
+summary: Brocade BNA 수집기 구성. 
 ---
 = Brocade Network Advisor 데이터 수집기
 :hardbreaks:
@@ -10,17 +10,17 @@ summary: Brocade BNA Collector 구성.
 
 
 [role="lead"]
-Data Infrastructure Insights는 Brocade Network Advisor 데이터 수집기를 사용하여 Brocade 스위치의 인벤토리 및 성능 데이터를 가져옵니다.
+Data Infrastructure Insights Brocade Network Advisor 데이터 수집기를 사용하여 Brocade 스위치에서 인벤토리 및 성능 데이터를 수집합니다.
 
 
 
-== 용어
+== 술어
 
-Data Infrastructure Insights는 Brocade Network Advisor 데이터 수집기에서 다음과 같은 인벤토리 정보를 수집합니다. Data Infrastructure Insights에서 구입한 각 자산 유형에 대해 이 자산에 사용되는 가장 일반적인 용어가 표시되어 있습니다. 이 데이터 수집기를 보거나 문제를 해결할 때 다음 용어를 염두에 두십시오.
+Data Infrastructure Insights Brocade Network Advisor 데이터 수집기에서 다음과 같은 인벤토리 정보를 수집합니다.  Data Infrastructure Insights 에서 수집한 각 자산 유형에 대해 해당 자산에 가장 일반적으로 사용되는 용어가 표시됩니다.  이 데이터 수집기를 보거나 문제를 해결할 때 다음 용어를 염두에 두십시오.
 
 [cols="2*"]
 |===
-| 공급업체/모델 기간 | Data Infrastructure Insights 용어 
+| 공급업체/모델 용어 | Data Infrastructure Insights 용어 
 
 
 | 스위치 | 스위치 
@@ -29,12 +29,12 @@ Data Infrastructure Insights는 Brocade Network Advisor 데이터 수집기에�
 | 포트 | 포트 
 
 
-| 가상 패브릭, 물리적 패브릭 | 패브릭 
+| 가상 패브릭, 물리적 패브릭 | 구조 
 
 
 | 논리 스위치 | 논리 스위치 
 |===
-참고: 이러한 용어 매핑은 일반적인 용어 매핑일 뿐이며 이 데이터 수집기의 모든 경우를 나타내는 것은 아닙니다.
+참고: 이는 일반적인 용어 매핑일 뿐이며 이 데이터 수집기의 모든 사례를 나타내지 않을 수 있습니다.
 
 
 
@@ -42,9 +42,9 @@ Data Infrastructure Insights는 Brocade Network Advisor 데이터 수집기에�
 
 이 데이터 수집기를 구성하려면 다음이 필요합니다.
 
-* Data Infrastructure Insights 수집 장치는 BNA 서버의 TCP 포트 443에 대한 연결을 시작합니다. BNA 서버는 버전 14.2.1 이상을 실행해야 합니다.
-* Brocade Network Advisor 서버 IP 주소입니다
-* 관리자 계정에 대한 사용자 이름 및 암호
+* Data Infrastructure Insights 수집 부서는 BNA 서버의 TCP 포트 443에 대한 연결을 시작합니다.  BNA 서버는 14.2.1 이상 버전을 실행해야 합니다.
+* Brocade Network Advisor 서버 IP 주소
+* 관리자 계정의 사용자 이름과 비밀번호
 * 포트 요구 사항: HTTP/HTTPS 443
 
 
@@ -54,19 +54,19 @@ Data Infrastructure Insights는 Brocade Network Advisor 데이터 수집기에�
 
 [cols="2*"]
 |===
-| 필드에 입력합니다 | 설명 
+| 필드 | 설명 
 
 
-| Brocade Network Advisor 서버 IP입니다 | Network Advisor 서버의 IP 주소입니다 
+| Brocade Network Advisor 서버 IP | Network Advisor 서버의 IP 주소 
 
 
-| 사용자 이름 | 스위치의 사용자 이름입니다 
+| 사용자 이름 | 스위치의 사용자 이름 
 
 
-| 사용자 이름 | 관리자 사용자 이름입니다 
+| 사용자 이름 | 관리자 사용자 이름 
 
 
-| 암호 | 관리자 암호입니다 
+| 비밀번호 | 관리자 비밀번호 
 |===
 
 
@@ -74,22 +74,22 @@ Data Infrastructure Insights는 Brocade Network Advisor 데이터 수집기에�
 
 [cols="2*"]
 |===
-| 필드에 입력합니다 | 설명 
+| 필드 | 설명 
 
 
 | 연결 유형 | HTTPS(기본 포트 443) 또는 HTTP(기본 포트 80) 
 
 
-| 연결 포트를 재정의합니다 | 비어 있는 경우 연결 유형 필드에서 기본 포트를 사용하고, 그렇지 않으면 사용할 연결 포트를 입력합니다 
+| 연결 포트 재정의 | 비어 있는 경우 연결 유형 필드에서 기본 포트를 사용하고, 그렇지 않은 경우 사용할 연결 포트를 입력합니다. 
 
 
-| 암호 | 스위치에 대한 암호입니다 
+| 비밀번호 | 스위치의 비밀번호 
 
 
 | 재고 폴링 간격(분) | 기본값은 40입니다 
 
 
-| 보고서 액세스 게이트웨이 | 액세스 게이트웨이 모드에 장치를 포함하려면 선택합니다 
+| 액세스 게이트웨이 보고서 | Access Gateway 모드에 장치를 포함하려면 체크하세요. 
 
 
 | 성능 폴링 간격(초) | 기본값은 1800입니다 
@@ -98,17 +98,17 @@ Data Infrastructure Insights는 Brocade Network Advisor 데이터 수집기에�
 
 == 문제 해결
 
-이 데이터 수집기에서 문제가 발생할 경우 다음과 같은 방법을 시도해 보십시오.
+이 데이터 수집기에 문제가 발생하면 시도해 볼 수 있는 몇 가지 사항은 다음과 같습니다.
 
 
 
-=== 인벤토리
+=== 목록
 
 [cols="2*"]
 |===
-| 문제: | 다음을 시도해 보십시오. 
+| 문제: | 다음을 시도해 보세요: 
 
 
-| 둘 이상의 노드가 Access Gateway 포트에 로그인되었거나 데이터 수집기가 Access Gateway 장치를 검색하지 못했다는 메시지를 받습니다. | NPV 디바이스가 올바르게 작동하고 있고 연결된 모든 WWN이 예상되는지 확인합니다. NPV 장치를 직접 얻지 마십시오. 대신 핵심 패브릭 스위치를 인수하면 NPV 장치 데이터가 수집됩니다. 
+| 2개 이상의 노드가 Access Gateway 포트에 로그인되어 있거나 데이터 수집기가 Access Gateway 장치를 검색하지 못했다는 메시지가 나타납니다. | NPV 장치가 올바르게 작동하는지, 연결된 모든 WWN이 예상대로인지 확인하세요.  NPV 장치를 직접 구입하지 마세요.  대신, 코어 패브릭 스위치를 획득하면 NPV 장치 데이터가 수집됩니다. 
 |===
-추가 정보는 페이지 또는 에서 찾을 link:concept_requesting_support.html["지원"]link:reference_data_collector_support_matrix.html["Data Collector 지원 매트릭스"]수 있습니다.
+추가 정보는 다음에서 찾을 수 있습니다.link:concept_requesting_support.html["지원하다"] 페이지 또는link:reference_data_collector_support_matrix.html["데이터 수집기 지원 매트릭스"] .

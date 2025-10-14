@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: reference_object_icons.html 
-summary: Data Infrastructure Insights 오브젝트 아이콘 참조. 
+summary: Data Infrastructure Insights 객체 아이콘 참조. 
 keywords: icons, assets, objects, reference, map 
 ---
-= 개체 아이콘 참조
+= 객체 아이콘 참조
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ keywords: icons, assets, objects, reference, map
 
 
 [role="lead"]
-Data Infrastructure Insights에 사용되는 오브젝트 아이콘입니다.
+Data Infrastructure Insights 에서 사용되는 개체 아이콘입니다.
 
 
 
@@ -24,12 +24,12 @@ image:Icon_Glossary.png["인프라 아이콘 참조"]
 
 
 
-== Kubernetes 아이콘:
+== 쿠버네티스 아이콘:
 
-image:K8sIconsWithLabels.png["Kubernetes 아이콘 참조, 너비 = 180"]
+image:K8sIconsWithLabels.png["Kubernetes 아이콘 참조, 너비=180"]
 
 
 
-== Kubernetes Network Performance Monitoring 및 Map 아이콘:
+== Kubernetes 네트워크 성능 모니터링 및 맵 아이콘:
 
-image:ServiceMap_Icons.png["Kubernetes Network Performance Monitoring and Map, 너비 = 640"]
+image:ServiceMap_Icons.png["Kubernetes 네트워크 성능 모니터링 및 맵, 너비=640"]

@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: concept_feature_tutorials.html 
-summary: Data Infrastructure Insights에는 다양한 작업을 수행하는 방법을 보여 주는 자습서가 포함되어 있습니다. 
+summary: Data Infrastructure Insights 에는 다양한 작업을 수행하는 방법을 보여주는 튜토리얼이 있습니다. 
 keywords: onboarding, getting started, video, tutorial, resolution, dashboard, query, troubleshooting 
 ---
-= 피처 튜터리얼
+= 기능 튜토리얼
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,27 +14,27 @@ keywords: onboarding, getting started, video, tutorial, resolution, dashboard, q
 
 
 [role="lead"]
-Data Infrastructure Insights에는 문제를 빠르고 쉽게 해결하고 기업 환경에 대한 통찰력을 제공할 수 있는 유용한 기능이 포함되어 있습니다. 강력한 쿼리를 사용하여 데이터를 쉽게 찾고, 대시보드에서 데이터를 시각화하고, 설정한 데이터 임계값에 대한 전자 메일 알림을 보낼 수 있습니다.
+Data Infrastructure Insights 문제를 빠르고 쉽게 해결하고 회사 환경에 대한 통찰력을 제공하는 데 유용한 기능이 가득합니다.  강력한 쿼리를 사용하여 데이터를 쉽게 찾고, 대시보드에서 데이터를 시각화하고, 설정한 데이터 임계값에 대한 이메일 알림을 보내세요.
 
 
 
-== 체크리스트 및 비디오 자습서
+== 체크리스트 및 비디오 튜토리얼
 
-Data Infrastructure Insights 테넌트에 표시되는 * 시작 체크리스트 * 에는 몇 가지 유용한 작업 및 개념 목록이 포함되어 있습니다. 체크리스트에서 항목을 선택하면 해당 개념에 대한 적절한 Data Infrastructure Insights 페이지로 이동합니다. 예를 들어, _Create a Dashboard_item을 클릭하면 Data Infrastructure Insights * Dashboards * 페이지가 열립니다.
+Data Infrastructure Insights 테넌트에 표시되는 *시작 체크리스트*에는 여러 가지 유용한 작업과 개념 목록이 포함되어 있습니다.  체크리스트에서 항목을 선택하면 해당 개념에 맞는 Data Infrastructure Insights 페이지로 이동합니다.  예를 들어, _대시보드 만들기_ 항목을 클릭하면 Data Infrastructure Insights *대시보드* 페이지가 열립니다.
 
-image:OnboardingChecklist.png["자습서 체크리스트 진행"]
+image:OnboardingChecklist.png["튜토리얼 체크리스트 진행 상황"]
 
-페이지 상단에는 대시보드를 만드는 방법을 보여주는 비디오 자습서에 대한 링크가 있습니다. 동영상을 원하는 횟수만큼 볼 수 있습니다. 해당 비디오에 대해 이 _link를 다시 표시하지 않습니다. 비디오를 해제할 때까지 대시보드 페이지로 이동할 때마다 사용할 수 있습니다.
+페이지 상단에는 대시보드를 만드는 방법을 보여주는 비디오 튜토리얼 링크가 있습니다.  _알았어요!를 클릭하기 전까지는 원하는 만큼 영상을 볼 수 있습니다.  다시 표시하지 마세요_ 해당 영상의 링크입니다.  대시보드 페이지로 갈 때마다 비디오를 볼 수 있으며, 닫을 때까지 계속 볼 수 있습니다.
 
-image:Startup-DashboardWatchVideo.png["비디오 링크 보기"]
+image:Startup-DashboardWatchVideo.png["영상 보기 링크"]
 
-비디오를 한 번 이상 시청한 후 체크리스트의 _ 대시보드 생성 _ 항목이 체크 아웃되어 튜토리얼을 완료했음을 나타냅니다. 그런 다음 다음 다음 자습서로 진행할 수 있습니다.
-
-
-NOTE: 원하는 순서대로 튜터리얼을 볼 수 있습니다.
+비디오를 한 번이라도 시청한 후 체크리스트의 _대시보드 만들기_ 항목이 체크되어 있으면 튜토리얼을 완료한 것입니다.  그러면 다음 튜토리얼로 넘어갈 수 있습니다.
 
 
+NOTE: 튜토리얼은 원하는 순서대로 볼 수 있으며, 종료할 때까지 원하는 횟수만큼 볼 수 있습니다.
 
-=== 점검 목록을 해제합니다
 
-검사 목록 맨 아래에 있는 _다시 표시 안 함_ 링크를 클릭할 때까지 시작 검사 목록이 표시됩니다. 체크리스트를 없앤 후에도 메시지 헤더 표시줄에서 각 자습서를 해제할 때까지 해당하는 각 Data Infrastructure Insights 페이지에서 자습서를 계속 사용할 수 있습니다.
+
+=== 체크리스트 폐기
+
+시작 체크리스트는 체크리스트 하단의 _다시 표시 안 함_ 링크를 클릭할 때까지 표시됩니다.  체크리스트를 닫은 후에도 각 Data Infrastructure Insights 페이지에서 튜토리얼을 계속 볼 수 있으며, 메시지 헤더 표시줄에서 각 튜토리얼을 닫을 때까지는 사용할 수 없습니다.

@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task_create_webhook.html 
 keywords: webhook, notification, slack, integration 
-summary: 성능 또는 인벤토리 임계값에 대한 경고를 표시할 모니터를 생성합니다 
+summary: 성능 또는 재고 임계값에 대한 경고를 위한 모니터 생성 
 ---
-= Webhook를 사용한 알림
+= Webhooks를 사용한 알림
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,87 +14,87 @@ summary: 성능 또는 인벤토리 임계값에 대한 경고를 표시할 모�
 
 
 [role="lead"]
-Webhook을 사용하면 사용자 지정된 Webhook 채널을 사용하여 다양한 응용 프로그램에 경고 알림을 보낼 수 있습니다.
+웹훅을 사용하면 사용자는 사용자 정의된 웹훅 채널을 사용하여 다양한 애플리케이션에 알림을 보낼 수 있습니다.
 
-Slack, PagerDuty, Teams, Teams, Teams 등 대부분의 상용 응용 프로그램은 Webhook를 표준 입력 인터페이스로 지원합니다. Data Infrastructure Insights는 일반 맞춤형 Webhook 채널을 지원하므로 이러한 제공 채널의 대부분을 지원할 수 있습니다. Webhook에 대한 정보는 이 응용 프로그램 웹 사이트에서 찾을 수 있습니다. 예를 들어 Slack은 을 link:https://api.slack.com/messaging/webhooks["유용한 가이드입니다"]제공합니다.
+많은 상업용 애플리케이션은 표준 입력 인터페이스로 웹훅을 지원합니다. 예를 들어 Slack, PagerDuty, Teams, Discord는 모두 웹훅을 지원합니다.  Data Infrastructure Insights 일반적이고 사용자 정의 가능한 웹훅 채널을 지원함으로써 이러한 다양한 제공 채널을 지원할 수 있습니다.  웹후크에 대한 정보는 이러한 애플리케이션 웹사이트에서 찾을 수 있습니다.  예를 들어 Slack은 다음을 제공합니다.link:https://api.slack.com/messaging/webhooks["이 유용한 가이드"] .
 
-여러 개의 웹후크 채널을 만들 수 있으며, 각 채널은 서로 다른 용도로 사용됩니다. 즉, 별도의 애플리케이션, 다른 수신자 등을 만들 수 있습니다
+여러 개의 웹훅 채널을 만들 수 있으며, 각 채널은 다른 목적, 즉 별도의 애플리케이션, 다른 수신자 등을 대상으로 합니다.
 
-Webhook 채널 인스턴스는 다음 요소로 구성됩니다.
+웹훅 채널 인스턴스는 다음 요소로 구성됩니다.
 
 |===
 
 
-| 이름 | 고유한 이름입니다 
+| 이름 | 고유 이름 
 
 
-| URL | URL 매개 변수와 함께 _http://_ 또는 _https://_ 접두사를 포함한 Webhook 대상 URL입니다 
+| URL | _http://_ 또는 _https://_ 접두사와 url 매개변수를 포함한 Webhook 대상 URL 
 
 
-| 방법 | GET, POST - 기본값은 POST입니다 
+| 방법 | GET, POST - 기본값은 POST입니다. 
 
 
-| 사용자 정의 머리글 | 여기에 사용자 정의 머리글 행을 지정합니다 
+| 사용자 정의 헤더 | 여기에 사용자 정의 헤더 줄을 지정하세요 
 
 
-| 메시지 본문 | 메시지 본문을 여기에 놓습니다 
+| 메시지 본문 | 여기에 메시지 본문을 입력하세요 
 
 
-| 기본 경고 매개변수 | 에는 webhook에 대한 기본 매개 변수가 나와 있습니다 
+| 기본 알림 매개변수 | 웹훅의 기본 매개변수를 나열합니다. 
 
 
-| 사용자 지정 매개 변수 및 암호 | 사용자 지정 매개 변수 및 암호를 사용하면 고유한 매개 변수와 암호와 같은 보안 요소를 추가할 수 있습니다 
+| 사용자 정의 매개변수 및 비밀 | 사용자 정의 매개변수 및 비밀을 사용하면 비밀번호와 같은 고유한 매개변수 및 보안 요소를 추가할 수 있습니다. 
 |===
 
 
-== Webhook 생성
+== 웹훅 생성
 
-Data Infrastructure Insights Webhook을 생성하려면 * Admin > Notifications * 로 이동하고 * Webhook * 탭을 선택합니다.
+Data Infrastructure Insights 웹훅을 생성하려면 *관리자 > 알림*으로 이동하여 *웹훅* 탭을 선택하세요.
 
-다음 이미지는 Slack에 대해 구성된 웹후크 예를 보여 줍니다.
+다음 이미지는 Slack에 대해 구성된 웹훅의 예를 보여줍니다.
 
-image:Webhook_Example_Slack.png["Webhook 예제"]
+image:Webhook_Example_Slack.png["웹훅 예제"]
 
-각 필드에 적절한 정보를 입력하고 완료되면 "저장"을 클릭합니다.
+각 필드에 적절한 정보를 입력하고 완료되면 "저장"을 클릭하세요.
 
-"Webhook 테스트" 버튼을 클릭하여 연결을 테스트할 수도 있습니다. 이렇게 하면 선택한 방법에 따라 정의된 URL에 "메시지 본문"(대체 없음)이 전송됩니다.
+"웹훅 테스트" 버튼을 클릭하여 연결을 테스트할 수도 있습니다.  이렇게 하면 선택된 방법에 따라 정의된 URL로 "메시지 본문"(대체 없음)이 전송됩니다.
 
-Data Infrastructure Insights Webhook은 여러 가지 기본 매개 변수로 구성됩니다. 또한 사용자 지정 매개 변수 또는 암호를 직접 만들 수도 있습니다.
+Data Infrastructure Insights 웹훅은 여러 개의 기본 매개변수로 구성됩니다.  또한, 사용자 정의 매개변수나 비밀번호를 직접 만들 수도 있습니다.
 
-image:Webhook_Default_Parameters.png["Data Infrastructure Insights 기본 Webhook 매개 변수"]
-
-
-
-=== 매개 변수: 해당 매개 변수는 무엇이며 어떻게 사용합니까?
-
-경고 매개 변수는 알림에 따라 채워지는 동적 값입니다. 예를 들어, _%%TriggeredOn%_ 매개 변수는 경고가 트리거된 개체로 대체됩니다.
-
-객체 특성(예: 스토리지 이름)을 Webhook에 매개 변수로 추가할 수 있습니다. 예를 들어, "High Latency for Volume:_%%relatedObject.volume.name%%_, Storage:_%%relatedObject.storage.name%%_" 같은 웹 후크 설명에서 볼륨 이름 및 스토리지 이름에 대한 매개 변수를 설정할 수 있습니다.
-
-이 섹션에서 대체는 "Webhook 테스트" 버튼을 클릭할 때 _not_Performed 가 됩니다. 이 버튼은 _%%_대체를 나타내는 페이로드를 전송하지만 데이터를 대체하지는 않습니다.
+image:Webhook_Default_Parameters.png["Data Infrastructure Insights 기본 웹훅 매개변수"]
 
 
 
-=== 사용자 지정 매개 변수 및 암호
+=== 매개변수: 매개변수란 무엇이고 어떻게 사용하나요?
 
-이 섹션에서는 원하는 사용자 지정 매개 변수 및/또는 암호를 추가할 수 있습니다. 보안상의 이유로 암호를 정의한 경우 웹 후크 생성자만 이 웹 후크 채널을 수정할 수 있습니다. 다른 사람에게는 읽기 전용입니다. URL/헤더에서 _%<secret_name>%%_(으)로 비밀을 사용할 수 있습니다.
+알림 매개변수는 알림마다 채워지는 동적 값입니다.  예를 들어, _%%TriggeredOn%%_ 매개변수는 경고가 발생한 개체로 대체됩니다.
+
+모든 개체 속성(예: 저장소 이름)을 웹후크에 매개변수로 추가할 수 있습니다.  예를 들어, "볼륨에 대한 높은 대기 시간: _%%relatedObject.volume.name%%_, 스토리지: _%%relatedObject.storage.name%%_"와 같이 웹훅 설명에 볼륨 이름과 스토리지 이름에 대한 매개변수를 설정할 수 있습니다.
+
+이 섹션에서는 "테스트 웹훅" 버튼을 클릭해도 대체가 수행되지 않습니다. 버튼을 클릭하면 _%%_ 대체 항목을 보여주는 페이로드가 전송되지만 데이터로 대체되지는 않습니다.
 
 
 
-=== Webhook 목록 페이지
+=== 사용자 정의 매개변수 및 비밀
 
-Webhooks 목록 페이지에 이름, 만든 사람, 만든 사람, 상태, 보안, 및 마지막으로 보고된 필드
+이 섹션에서는 원하는 사용자 정의 매개변수 및/또는 비밀번호를 추가할 수 있습니다.  보안상의 이유로 비밀이 정의된 경우 웹훅 생성자만 이 웹훅 채널을 수정할 수 있습니다.  다른 사람에게는 읽기 전용입니다.  URL/헤더에 _%%<secret_name>%%_ 형태로 비밀을 사용할 수 있습니다.
+
+
+
+=== 웹훅 목록 페이지
+
+웹후크 목록 페이지에는 이름, 생성자, 생성일, 상태, 보안 및 마지막 보고 필드가 표시됩니다.
 
 
 
 == 모니터에서 Webhook 알림 선택
 
-에서 Webhook 알림을 link:task_create_monitor.html["모니터링"]선택하려면 * Alerts > Manage Monitors * 로 이동하여 원하는 모니터를 선택하거나 새 모니터를 추가합니다. 팀 알림 설정 섹션에서 전달 방법으로 _Webhook_을 선택합니다. 경고 수준(위험, 경고, 해결)을 선택한 다음 원하는 웹 후크를 선택합니다.
+웹후크 알림을 선택하려면link:task_create_monitor.html["감시 장치"] *알림 > 모니터 관리*로 이동하여 원하는 모니터를 선택하거나 새 모니터를 추가합니다.  _팀 알림 설정_ 섹션에서 전달 방법으로 _웹훅_을 선택합니다.  경보 수준(중요, 경고, 해결됨)을 선택한 다음 원하는 웹후크를 선택합니다.
 
-image:Webhook_Monitor_Notify.png["Webhook 모니터 알림"]
+image:Webhook_Monitor_Notify.png["웹훅 모니터 알림"]
 
 
 
-== Webhook 예:
+== 웹훅 예시:
 
-Webhook용 link:task_webhook_example_pagerduty.html["PagerDuty"]Webhook용 link:task_webhook_example_teams.html["팀"]Webhook용 Webhook용 Webhook용 Webhook link:task_webhook_example_slack.html["슬랙"]link:task_webhook_example_discord.html["불화"]
+웹후크link:task_webhook_example_slack.html["느슨하게"] 웹후크link:task_webhook_example_pagerduty.html["페이저듀티"] 웹후크link:task_webhook_example_teams.html["팀"] 웹후크link:task_webhook_example_discord.html["불화"]

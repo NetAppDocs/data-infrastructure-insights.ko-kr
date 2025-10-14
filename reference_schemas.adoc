@@ -1,20 +1,20 @@
 ---
 sidebar: sidebar 
 permalink: reference_schemas.html 
-summary: Reporting과 함께 사용할 데이터 웨어하우스 스키마 다이어그램 및 테이블 
+summary: 보고와 함께 사용할 수 있는 데이터 웨어하우스 스키마 다이어그램 및 테이블 
 keywords: dwh, data warehouse, schema, reporting 
 ---
-= 데이터 인프라 인사이트 보고용 스키마
+= 보고를 위한 Data Infrastructure Insights 스키마
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-이 스키마 테이블 및 다이어그램은 Data Infrastructure Insights 보고에 대한 참조로 제공됩니다.
+이러한 스키마 테이블과 다이어그램은 Data Infrastructure Insights Reporting에 대한 참조로 제공됩니다.
 
-link:https://docs.netapp.com/us-en/cloudinsights/ci_reporting_database_schema.pdf["* 스키마 테이블 *"] PDF 형식. 링크를 클릭하여 열거나 마우스 오른쪽 단추를 클릭하고 _다른 이름으로 저장..._을 선택하여 다운로드합니다.
+link:https://docs.netapp.com/us-en/cloudinsights/ci_reporting_database_schema.pdf["*스키마 테이블*"].PDF 형식으로.  링크를 클릭하여 열거나 마우스 오른쪽 버튼을 클릭하고 _다른 이름으로 저장..._을 선택하여 다운로드하세요.
 
-link:reporting_schema_diagrams.html["* 스키마 다이어그램 *"]
+link:reporting_schema_diagrams.html["*스키마 다이어그램*"]
 
 
-NOTE: 보고 기능은 Data Infrastructure Insights에서 사용할 수 link:concept_subscribing_to_cloud_insights.html["Premium Edition을 참조하십시오"]있습니다.
+NOTE: 보고 기능은 Data Infrastructure Insights 에서 사용할 수 있습니다.link:concept_subscribing_to_cloud_insights.html["프리미엄 에디션"] .

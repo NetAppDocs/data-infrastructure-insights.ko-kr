@@ -2,15 +2,15 @@
 sidebar: sidebar 
 permalink: task_dc_brocade_sphereon_intrepid.html 
 keywords: data collector, Brocade, Sphereon Intrepid, 
-summary: Brocade Sphereon/Intrepid 스위치 데이터 수집기 구성 
+summary: Brocade Sphereon/Intrepid 스위치 데이터 수집기 ​​구성 
 ---
-= Brocade Sphereon/Intrepid 스위치 데이터 수집기 구성
+= Brocade Sphereon/Intrepid 스위치 데이터 수집기 ​​구성
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-데이터 인프라 인사이트는 Brocade Sphereon/Intrepid Switch(SNMP) 데이터 수집기를 사용하여 Brocade Sphereon 또는 Intrepid 스위치의 인벤토리를 검색합니다.
+Data Infrastructure Insights Brocade Sphereon/Intrepid Switch(SNMP) 데이터 수집기를 사용하여 Brocade Sphereon 또는 Intrepid 스위치의 인벤토리를 검색합니다.
 
 
 
@@ -18,10 +18,10 @@ summary: Brocade Sphereon/Intrepid 스위치 데이터 수집기 구성
 
 이 데이터 수집기를 구성하려면 다음 요구 사항을 충족해야 합니다.
 
-* Fabric의 모든 스위치에 IP 연결이 있어야 합니다. 패브릭에서 모든 스위치 검색 확인란을 선택한 경우 Data Infrastructure Insights는 패브릭의 모든 스위치를 식별하지만, 이러한 추가 스위치를 검색하려면 IP 연결이 필요합니다.
+* 패브릭의 모든 스위치에는 IP 연결이 있어야 합니다.  패브릭의 모든 스위치 검색 확인란을 선택하면 Data Infrastructure Insights 패브릭의 모든 스위치를 식별합니다. 하지만 이러한 추가 스위치를 검색하려면 해당 스위치에 대한 IP 연결이 필요합니다.
 * SNMP V1 또는 SNMP V2를 사용하는 경우 읽기 전용 커뮤니티 문자열입니다.
-* 조닝 정보를 얻기 위해 스위치에 대한 HTTP 액세스.
-* 스위치에 대한 snmpwalk 유틸리티를 실행하여 액세스 검증을 수행합니다(_<install_path>\bin\_ 참조).
+* 스위치에 대한 HTTP 액세스를 통해 구역 정보를 얻습니다.
+* 스위치에 snmpwalk 유틸리티를 실행하여 액세스 유효성 검사를 수행합니다(_<install_path>\bin\_ 참조).
 
 
 
@@ -30,22 +30,22 @@ summary: Brocade Sphereon/Intrepid 스위치 데이터 수집기 구성
 
 [cols="2*"]
 |===
-| 필드에 입력합니다 | 설명 
+| 필드 | 설명 
 
 
-| Sphereon 스위치 | 스위치의 IP 주소 또는 정규화된 도메인 이름입니다 
+| 스피리온 스위치 | 스위치의 IP 주소 또는 정규화된 도메인 이름 
 
 
 | SNMP 버전 | SNMP 버전 
 
 
-| SNMP 커뮤니티 문자열 | 스위치에 액세스하는 데 사용되는 SNMP 읽기 전용 커뮤니티 문자열입니다 
+| SNMP 커뮤니티 문자열 | 스위치에 액세스하는 데 사용되는 SNMP 읽기 전용 커뮤니티 문자열 
 
 
-| SNMP 사용자 이름입니다 | 스위치에 대한 SMI-S 사용자 이름(SNMP v3만 해당) 
+| SNMP 사용자 이름 | 스위치의 SMI-S 사용자 이름(SNMP v3 전용) 
 
 
-| SNMP 암호 | 스위치에 대한 SMI-S 암호(SNMP v3만 해당) 
+| SNMP 비밀번호 | 스위치용 SMI-S 암호(SNMP v3 전용) 
 |===
 
 
@@ -53,34 +53,34 @@ summary: Brocade Sphereon/Intrepid 스위치 데이터 수집기 구성
 
 [cols="2*"]
 |===
-| 필드에 입력합니다 | 설명 
+| 필드 | 설명 
 
 
-| 재고 폴링 간격(분) | 재고 조사 사이의 간격입니다. 기본값은 15분입니다. 
+| 재고 폴링 간격(분) | 재고 조사 간격. 기본값은 15분입니다. 
 
 
 | SNMP 인증 프로토콜 | SNMP 인증 프로토콜(SNMP v3만 해당) 
 
 
-| SNMP 개인 정보 보호 암호 | SNMP 개인 정보 보호 암호(SNMP v3만 해당) 
+| SNMP 개인 정보 비밀번호 | SNMP 개인 정보 비밀번호(SNMP v3 전용) 
 
 
-| SNMP 재시도 횟수 | SNMP 재시도 횟수입니다 
+| SNMP 재시도 횟수 | SNMP 재시도 횟수 
 
 
-| 패브릭 이름 | 데이터 수집기에서 보고할 Fabric 이름입니다. 패브릭 이름을 WWN으로 보고하려면 공백으로 두십시오. 
+| 원단 이름 | 데이터 수집기가 보고할 원단 이름입니다.  WWN으로 패브릭 이름을 보고하려면 비워 두세요. 
 
 
-| 트래핑을 활성화합니다 | 장치에서 SNMP 트랩을 수신할 때 획득을 활성화하려면 선택합니다. 트래핑 활성화를 선택한 경우 SNMP도 활성화해야 합니다. 
+| 트래핑 활성화 | 장치에서 SNMP 트랩을 수신하면 수집을 활성화하려면 선택합니다.  트래핑 사용을 선택한 경우 SNMP도 활성화해야 합니다. 
 
 
-| 트랩 사이의 최소 시간(초) | 트랩에 의해 트리거된 획득 시도 사이의 최소 시간입니다. 기본값은 10초입니다. 
+| 트랩 간 최소 시간(초) | 함정에 의해 유발된 획득 시도 사이의 최소 시간입니다. 기본값은 10초입니다. 
 
 
-| 성능 폴링 간격(초) | 성능 폴링 간격입니다. 기본값은 300초입니다. 
+| 성능 폴링 간격(초) | 성과 여론조사 간격. 기본값은 300초입니다. 
 |===
 
 
 == 문제 해결
 
-이 데이터 수집기에 대한 추가 정보는 페이지 또는 에서 찾을 link:concept_requesting_support.html["지원"]link:reference_data_collector_support_matrix.html["Data Collector 지원 매트릭스"]수 있습니다.
+이 데이터 수집기에 대한 추가 정보는 다음에서 찾을 수 있습니다.link:concept_requesting_support.html["지원하다"] 페이지 또는link:reference_data_collector_support_matrix.html["데이터 수집기 지원 매트릭스"] .

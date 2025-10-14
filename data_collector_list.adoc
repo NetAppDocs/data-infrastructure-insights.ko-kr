@@ -4,133 +4,133 @@ permalink: data_collector_list.html
 summary: 지원되는 데이터 수집기 목록입니다. 
 keywords: data collector, vendor, infrastructure, integration, service 
 ---
-= Data Infrastructure Insights 데이터 수집기 목록
+= Data Infrastructure Insights 데이터 수집기 ​​목록
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights는 여러 공급업체 및 서비스에서 제공하는 다양한 데이터 수집기를 지원합니다.
+Data Infrastructure Insights 다양한 공급업체와 서비스의 다양한 데이터 수집기를 지원합니다.
 
-데이터 수집기 는 다음 유형에 따라 분류됩니다.
+데이터 수집기는 다음 유형으로 분류됩니다.
 
-* 인프라: 스토리지 어레이, 스위치, 하이퍼바이저 또는 백업 장치와 같은 공급업체 장치에서 수집
-* 서비스: Kubernetes 또는 Docker와 같은 서비스에서 구입 통합 _ 이라고도 합니다.
+* 인프라: 스토리지 어레이, 스위치, 하이퍼바이저 또는 백업 장치와 같은 공급업체 장치에서 획득합니다.
+* 서비스: Kubernetes나 Docker와 같은 서비스에서 획득합니다.  _통합_이라고도 불립니다.
 
 
-Data Infrastructure Insights에서 지원하는 데이터 수집기의 사전순 목록:
+Data Infrastructure Insights 에서 지원하는 데이터 수집기의 알파벳순 목록:
 
 [cols="<,<"]
 |===
 | 데이터 수집기 | 유형 
 
 
-| link:task_dc_amazon_ec2.html["Amazon EC2 및 EBS"] | 검토할 수 있습니다 
+| link:task_dc_amazon_ec2.html["Amazon EC2 및 EBS"] | 하부 구조 
 
 
-| link:task_dc_aws_s3.html["스토리지로 AWS S3 저장"] | 인프라스트ure 
+| link:task_dc_aws_s3.html["AWS S3를 스토리지로 사용"] | 인프라 
 
 
-| link:task_dc_na_amazon_fsx.html["NetApp ONTAP용 Amazon FSx"] | 검토할 수 있습니다 
+| link:task_dc_na_amazon_fsx.html["Amazon FSx for NetApp ONTAP"] | 하부 구조 
 
 
 | link:task_config_telegraf_apache.html["아파치"] | 서비스 
 
 
-| link:task_dc_ms_anf.html["Azure NetApp Files"] | 검토할 수 있습니다 
+| link:task_dc_ms_anf.html["Azure NetApp Files"] | 하부 구조 
 
 
-| link:task_dc_ms_azure.html["Azure VM 및 VHD"] | 검토할 수 있습니다 
+| link:task_dc_ms_azure.html["Azure VM 및 VHD"] | 하부 구조 
 
 
-| link:task_dc_brocade_bna.html["BNA(Brocade Network Advisor)"] | 검토할 수 있습니다 
+| link:task_dc_brocade_bna.html["Brocade 네트워크 어드바이저(BNA)"] | 하부 구조 
 
 
-| link:task_dc_brocade_fc_switch.html["Brocade 파이버 채널 스위치"] | 검토할 수 있습니다 
+| link:task_dc_brocade_fc_switch.html["Brocade 파이버 채널 스위치"] | 하부 구조 
 
 
-| link:task_dc_brocade_rest.html["Brocade FOS REST"] | 검토할 수 있습니다 
+| link:task_dc_brocade_rest.html["Brocade FOS REST"] | 하부 구조 
 
 
-| link:task_dc_cisco_fc_switch.html["Cisco MDS 패브릭 스위치"] | 검토할 수 있습니다 
+| link:task_dc_cisco_fc_switch.html["Cisco MDS 패브릭 스위치"] | 하부 구조 
 
 
 | link:task_config_telegraf_consul.html["영사"] | 서비스 
 
 
-| link:task_config_telegraf_couchbase.html["바로 Couchbase입니다"] | 서비스 
+| link:task_config_telegraf_couchbase.html["카우치베이스"] | 서비스 
 
 
-| link:task_config_telegraf_couchdb.html["Couchbase"] | 서비스 
+| link:task_config_telegraf_couchdb.html["카우치DB"] | 서비스 
 
 
-| link:task_dc_cohesity_smartfiles.html["Cohesity SmartFiles를 참조하십시오"] | 검토할 수 있습니다 
+| link:task_dc_cohesity_smartfiles.html["코히시티 스마트파일"] | 하부 구조 
 
 
-| link:task_dc_emc_datadomain.html["Dell EMC Data Domain을 참조하십시오"] | 검토할 수 있습니다 
+| link:task_dc_emc_datadomain.html["Dell EMC 데이터 도메인"] | 하부 구조 
 
 
-| link:task_dc_emc_ecs.html["Dell EMC ECS를 참조하십시오"] | 검토할 수 있습니다 
+| link:task_dc_emc_ecs.html["델 EMC ECS"] | 하부 구조 
 
 
-| link:task_dc_emc_isilon.html["Dell EMC PowerScale(이전의 Isilon)"] | 검토할 수 있습니다 
+| link:task_dc_emc_isilon.html["Dell EMC PowerScale(이전 Isilon)"] | 하부 구조 
 
 
-| link:task_dc_emc_isilon_rest.html["Dell EMC Isilon/PowerScale REST"] | 검토할 수 있습니다 
+| link:task_dc_emc_isilon_rest.html["Dell EMC Isilon/PowerScale REST"] | 하부 구조 
 
 
-| link:task_dc_emc_powerstore.html["Dell EMC PowerStore"] | 검토할 수 있습니다 
+| link:task_dc_emc_powerstore.html["델 EMC 파워스토어"] | 하부 구조 
 
 
-| link:task_dc_emc_recoverpoint.html["Dell EMC RecoverPoint를 참조하십시오"] | 검토할 수 있습니다 
+| link:task_dc_emc_recoverpoint.html["Dell EMC 복구 포인트"] | 하부 구조 
 
 
-| link:task_dc_emc_scaleio.html["Dell EMC ScaleIO/PowerFlex를 참조하십시오"] | 검토할 수 있습니다 
+| link:task_dc_emc_scaleio.html["Dell EMC ScaleIO/PowerFlex"] | 하부 구조 
 
 
-| link:task_dc_emc_unity.html["Dell EMC Unity"] | 검토할 수 있습니다 
+| link:task_dc_emc_unity.html["델 EMC 유니티"] | 하부 구조 
 
 
-| link:task_dc_emc_unisphere_rest.html["Dell EMC Unisphere REST"] | 검토할 수 있습니다 
+| link:task_dc_emc_unisphere_rest.html["Dell EMC Unisphere REST"] | 하부 구조 
 
 
-| link:task_dc_emc_vmax_powermax.html["Dell EMC VMAX/PowerMax 장치 제품군"] | 검토할 수 있습니다 
+| link:task_dc_emc_vmax_powermax.html["Dell EMC VMAX/PowerMax 장치 제품군"] | 하부 구조 
 
 
-| link:task_dc_emc_vnx_block.html["Dell EMC VNX 블록 스토리지"] | 검토할 수 있습니다 
+| link:task_dc_emc_vnx_block.html["Dell EMC VNX 블록 스토리지"] | 하부 구조 
 
 
-| link:task_dc_emc_vnx_file.html["Dell EMC VNX File"] | 검토할 수 있습니다 
+| link:task_dc_emc_vnx_file.html["Dell EMC VNX 파일"] | 하부 구조 
 
 
-| link:task_dc_emc_vnx_unified.html["Dell EMC VNX 유니파이드"] | 검토할 수 있습니다 
+| link:task_dc_emc_vnx_unified.html["Dell EMC VNX 통합"] | 하부 구조 
 
 
-| link:task_dc_emc_vplex.html["Dell EMC VPLEX"] | 검토할 수 있습니다 
+| link:task_dc_emc_vplex.html["델 EMC VPLEX"] | 하부 구조 
 
 
-| link:task_dc_emc_xio.html["Dell EMC XtremIO"] | 검토할 수 있습니다 
+| link:task_dc_emc_xio.html["델 EMC 익스트림IO"] | 하부 구조 
 
 
-| link:task_dc_dell_xc_series.html["Dell XC 시리즈"] | 검토할 수 있습니다 
+| link:task_dc_dell_xc_series.html["Dell XC 시리즈"] | 하부 구조 
 
 
-| link:task_config_telegraf_docker.html["Docker 를 참조하십시오"] | 서비스 
+| link:task_config_telegraf_docker.html["도커"] | 서비스 
 
 
-| link:task_config_telegraf_elasticsearch.html["Elasticsearch(Elasticsearch)"] | 서비스 
+| link:task_config_telegraf_elasticsearch.html["엘라스틱서치"] | 서비스 
 
 
 | link:task_config_telegraf_flink.html["플링크"] | 서비스 
 
 
-| link:task_dc_fujitsu_eternus.html["후지쯔 ETERNUS DX"] | 검토할 수 있습니다 
+| link:task_dc_fujitsu_eternus.html["후지쯔 ETERNUS DX"] | 하부 구조 
 
 
-| link:task_dc_google_cloud.html["Google 컴퓨팅 및 스토리지"] | 검토할 수 있습니다 
+| link:task_dc_google_cloud.html["Google 컴퓨팅 및 스토리지"] | 하부 구조 
 
 
-| link:task_dc_google_cloud_netapp_volumes.html["Google Cloud NetApp 볼륨"] | 검토할 수 있습니다 
+| link:task_dc_google_cloud_netapp_volumes.html["Google Cloud NetApp Volumes"] | 하부 구조 
 
 
 | link:task_config_telegraf_hadoop.html["하둡"] | 서비스 
@@ -139,49 +139,49 @@ Data Infrastructure Insights에서 지원하는 데이터 수집기의 사전순
 | link:task_config_telegraf_haproxy.html["HAProxy"] | 서비스 
 
 
-| link:task_dc_hds_hcp.html["Hitachi Content Platform(HCP)"] | 검토할 수 있습니다 
+| link:task_dc_hds_hcp.html["히타치 콘텐츠 플랫폼(HCP)"] | 하부 구조 
 
 
-| link:task_dc_hds_commandsuite.html["Hitachi Vantara Command Suite"] | 검토할 수 있습니다 
+| link:task_dc_hds_commandsuite.html["히타치 반타라 커맨드 스위트"] | 하부 구조 
 
 
-| link:task_dc_hds_nas.html["Hitachi Vantara NAS 플랫폼"] | 검토할 수 있습니다 
+| link:task_dc_hds_nas.html["히타치 반타라 NAS 플랫폼"] | 하부 구조 
 
 
-| link:task_dc_hds_ops_center.html["Hitachi Ops 센터"] | 검토할 수 있습니다 
+| link:task_dc_hds_ops_center.html["히타치 옵스 센터"] | 하부 구조 
 
 
-| link:task_dc_hpe_nimble.html["HP Enterprise Alletra 6000(이전의 Nimble) 스토리지"] | 검토할 수 있습니다 
+| link:task_dc_hpe_nimble.html["HP Enterprise Alletra 6000(이전 Nimble) 스토리지"] | 하부 구조 
 
 
-| link:task_dc_hp_3par.html["HP Enterprise Alletra 9000/Primera(이전 3PAR) 스토리지"] | 검토할 수 있습니다 
+| link:task_dc_hp_3par.html["HP Enterprise Alletra 9000 / Primera(이전 3PAR) 스토리지"] | 하부 구조 
 
 
-| link:task_dc_hpe_commandview.html["HP Enterprise 명령 보기"] | 검토할 수 있습니다 
+| link:task_dc_hpe_commandview.html["HP 엔터프라이즈 커맨드 뷰"] | 하부 구조 
 
 
-| link:task_dc_huawei_oceanstor.html["Huawei OceanStor 및 Dorado Devices"] | 검토할 수 있습니다 
+| link:task_dc_huawei_oceanstor.html["Huawei OceanStor 및 Dorado 장치"] | 하부 구조 
 
 
-| link:task_dc_ibm_cleversafe.html["IBM Cleversafe"] | 검토할 수 있습니다 
+| link:task_dc_ibm_cleversafe.html["IBM 클레버세이프"] | 하부 구조 
 
 
-| link:task_dc_ibm_cs.html["IBM CS 시리즈"] | 검토할 수 있습니다 
+| link:task_dc_ibm_cs.html["IBM CS 시리즈"] | 하부 구조 
 
 
-| link:task_dc_ibm_powervm.html["IBM PowerVM"] | 검토할 수 있습니다 
+| link:task_dc_ibm_powervm.html["IBM 파워VM"] | 하부 구조 
 
 
-| link:task_dc_ibm_svc.html["IBM SVC(SAN Volume Controller)"] | 검토할 수 있습니다 
+| link:task_dc_ibm_svc.html["IBM SAN 볼륨 컨트롤러(SVC)"] | 하부 구조 
 
 
-| link:task_dc_ibm_ds.html["IBM 시스템 스토리지 DS8000 시리즈"] | 검토할 수 있습니다 
+| link:task_dc_ibm_ds.html["IBM 시스템 스토리지 DS8000 시리즈"] | 하부 구조 
 
 
-| link:task_dc_ibm_xiv.html["IBM XIV 및 A9000 스토리지"] | 검토할 수 있습니다 
+| link:task_dc_ibm_xiv.html["IBM XIV 및 A9000 스토리지"] | 하부 구조 
 
 
-| link:task_dc_infinidat_infinibox.html["Infinidat .Box"] | 검토할 수 있습니다 
+| link:task_dc_infinidat_infinibox.html["인피니닷 인피니박스"] | 하부 구조 
 
 
 | link:task_config_telegraf_jvm.html["자바"] | 서비스 
@@ -190,7 +190,7 @@ Data Infrastructure Insights에서 지원하는 데이터 수집기의 사전순
 | link:task_config_telegraf_kafka.html["카프카"] | 서비스 
 
 
-| link:task_config_telegraf_kapacitor.html["Kapacitor"] | 서비스 
+| link:task_config_telegraf_kapacitor.html["커패시터"] | 서비스 
 
 
 | link:task_config_telegraf_kibana.html["키바나"] | 서비스 
@@ -199,119 +199,119 @@ Data Infrastructure Insights에서 지원하는 데이터 수집기의 사전순
 | link:task_config_telegraf_agent_k8s.html["쿠버네티스"] | 서비스 
 
 
-| link:task_dc_lenovo.html["Lenovo HX 시리즈"] | 검토할 수 있습니다 
+| link:task_dc_lenovo.html["레노버 HX 시리즈"] | 하부 구조 
 
 
 | link:task_config_telegraf_memcached.html["멤캐시드"] | 서비스 
 
 
-| link:task_dc_ms_anf.html["Microsoft Azure NetApp Files를 참조하십시오"] | 검토할 수 있습니다 
+| link:task_dc_ms_anf.html["Microsoft Azure NetApp Files"] | 하부 구조 
 
 
-| link:task_dc_ms_hyperv.html["Microsoft Hyper-V를 참조하십시오"] | 검토할 수 있습니다 
+| link:task_dc_ms_hyperv.html["마이크로소프트 하이퍼-V"] | 하부 구조 
 
 
-| link:task_config_telegraf_mongodb.html["MongoDB"] | 서비스 
+| link:task_config_telegraf_mongodb.html["몽고디비"] | 서비스 
 
 
 | link:task_config_telegraf_mysql.html["MySQL"] | 서비스 
 
 
-| link:task_dc_na_cloud_volumes_ontap.html["NetApp Cloud Volumes ONTAP를 참조하십시오"] | 검토할 수 있습니다 
+| link:task_dc_na_cloud_volumes_ontap.html["NetApp Cloud Volumes ONTAP"] | 하부 구조 
 
 
-| link:task_dc_na_cloud_volumes.html["AWS용 NetApp Cloud Volumes Services"] | 검토할 수 있습니다 
+| link:task_dc_na_cloud_volumes.html["AWS용 NetApp Cloud Volumes 서비스"] | 하부 구조 
 
 
-| link:task_dc_na_cloud_connection.html["ONTAP 9.9 이상을 위한 NetApp 클라우드 연결"] | 검토할 수 있습니다 
+| link:task_dc_na_cloud_connection.html["ONTAP 9.9+용 NetApp 클라우드 연결"] | 하부 구조 
 
 
-| link:task_dc_na_7mode.html["NetApp Data ONTAP 7-Mode 를 참조하십시오"] | 검토할 수 있습니다 
+| link:task_dc_na_7mode.html["NetApp Data ONTAP 7-Mode"] | 하부 구조 
 
 
-| link:task_dc_na_eseries.html["NetApp E-Series를 통해 비즈니스 이점을 제공합니다"] | 검토할 수 있습니다 
+| link:task_dc_na_eseries.html["NetApp E-시리즈"] | 하부 구조 
 
 
-| link:task_dc_netapp_eseries_rest.html["NetApp E-Series REST"] | 검토할 수 있습니다 
+| link:task_dc_netapp_eseries_rest.html["NetApp E-시리즈 REST"] | 하부 구조 
 
 
-| link:task_dc_na_amazon_fsx.html["NetApp ONTAP용 Amazon FSx"] | 검토할 수 있습니다 
+| link:task_dc_na_amazon_fsx.html["Amazon FSx for NetApp ONTAP"] | 하부 구조 
 
 
-| link:task_dc_na_hci.html["NetApp HCI 가상 센터"] | 검토할 수 있습니다 
+| link:task_dc_na_hci.html["NetApp HCI 가상 센터"] | 하부 구조 
 
 
-| link:task_dc_na_cdot.html["NetApp ONTAP 데이터 관리 소프트웨어"] | 검토할 수 있습니다 
+| link:task_dc_na_cdot.html["NetApp ONTAP 데이터 관리 소프트웨어"] | 하부 구조 
 
 
-| link:task_dc_na_ontap_rest.html["NetApp ONTAP REST 수집기입니다"] | 검토할 수 있습니다 
+| link:task_dc_na_ontap_rest.html["NetApp ONTAP REST 수집기"] | 하부 구조 
 
 
-| link:task_dc_na_ontap_all_san_array.html["NetApp ONTAP ASA r2(All-SAN Array) 컬렉터"] | 검토할 수 있습니다 
+| link:task_dc_na_ontap_all_san_array.html["NetApp ONTAP ASA r2(All-SAN Array) 컬렉터"] | 하부 구조 
 
 
-| link:task_dc_na_cdot.html["NetApp ONTAP Select를 참조하십시오"] | 검토할 수 있습니다 
+| link:task_dc_na_cdot.html["NetApp ONTAP Select"] | 하부 구조 
 
 
-| link:task_dc_na_solidfire.html["NetApp SolidFire All-Flash 어레이"] | 검토할 수 있습니다 
+| link:task_dc_na_solidfire.html["NetApp SolidFire 올플래시 어레이"] | 하부 구조 
 
 
-| link:task_dc_na_storagegrid.html["NetApp StorageGRID를 참조하십시오"] | 검토할 수 있습니다 
+| link:task_dc_na_storagegrid.html["NetApp StorageGRID"] | 하부 구조 
 
 
-| link:task_config_telegraf_netstat.html["netstat"] | 서비스 
+| link:task_config_telegraf_netstat.html["넷스탯"] | 서비스 
 
 
-| link:task_config_telegraf_nginx.html["Nginx"] | 서비스 
+| link:task_config_telegraf_nginx.html["엔진엑스"] | 서비스 
 
 
-| link:task_config_telegraf_node.html["노드"] | 서비스 
+| link:task_config_telegraf_node.html["마디"] | 서비스 
 
 
-| link:task_dc_nutanix.html["Nutanix NX 시리즈"] | 검토할 수 있습니다 
+| link:task_dc_nutanix.html["Nutanix NX 시리즈"] | 하부 구조 
 
 
-| link:task_config_telegraf_openzfs.html["OpenZFS 를 선택합니다"] | 서비스 
+| link:task_config_telegraf_openzfs.html["오픈ZFS"] | 서비스 
 
 
-| link:task_dc_oracle_zfs.html["Oracle ZFS Storage Appliance"] | 검토할 수 있습니다 
+| link:task_dc_oracle_zfs.html["Oracle ZFS 스토리지 어플라이언스"] | 하부 구조 
 
 
-| link:task_config_telegraf_postgresql.html["PostgreSQL"] | 서비스 
+| link:task_config_telegraf_postgresql.html["포스트그레스큐엘"] | 서비스 
 
 
-| link:task_config_telegraf_puppetagent.html["Puppet 에이전트"] | 서비스 
+| link:task_config_telegraf_puppetagent.html["꼭두각시 요원"] | 서비스 
 
 
-| link:task_dc_pure_flasharray.html["Pure Storage 플래시 어레이"] | 검토할 수 있습니다 
+| link:task_dc_pure_flasharray.html["퓨어스토리지 플래시어레이"] | 하부 구조 
 
 
-| link:task_dc_redhat_virtualization.html["Red Hat 가상화"] | 검토할 수 있습니다 
+| link:task_dc_redhat_virtualization.html["레드햇 가상화"] | 하부 구조 
 
 
-| link:task_config_telegraf_redis.html["레드입니다"] | 서비스 
+| link:task_config_telegraf_redis.html["레디스"] | 서비스 
 
 
-| link:task_config_telegraf_rethinkdb.html["RethinkDB를 참조하십시오"] | 서비스 
+| link:task_config_telegraf_rethinkdb.html["리씽크DB"] | 서비스 
 
 
-| link:task_config_telegraf_agent.html#rhel-and-centos["RHEL 및 앰프, CentOS"] | 서비스 
+| link:task_config_telegraf_agent.html#rhel-and-centos["RHEL 및 CentOS"] | 서비스 
 
 
-| link:task_dc_rubrik_cdm.html["Rubrik CDM 스토리지"] | 검토할 수 있습니다 
+| link:task_dc_rubrik_cdm.html["루브릭 CDM 스토리지"] | 하부 구조 
 
 
-| link:task_config_telegraf_agent.html#ubuntu-and-debian["Ubuntu 및 amp;데비안"] | 서비스 
+| link:task_config_telegraf_agent.html#ubuntu-and-debian["우분투  데비안"] | 서비스 
 
 
-| link:task_dc_vast_datastore.html["VAST 데이터스토어"] | 검토할 수 있습니다 
+| link:task_dc_vast_datastore.html["VAST 데이터스토어"] | 하부 구조 
 
 
-| link:task_dc_vmware.html["VMware vSphere를 참조하십시오"] | 검토할 수 있습니다 
+| link:task_dc_vmware.html["VMware vSphere"] | 하부 구조 
 
 
 | link:task_config_telegraf_agent.html#windows["Windows"] | 서비스 
 
 
-| link:task_config_telegraf_zookeeper.html["ZooKeeper"] | 서비스 
+| link:task_config_telegraf_zookeeper.html["동물원 관리인"] | 서비스 
 |===

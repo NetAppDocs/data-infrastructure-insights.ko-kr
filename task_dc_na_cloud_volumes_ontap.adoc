@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task_dc_na_cloud_volumes_ontap.html 
-summary: NetApp Cloud Volumes ONTAP 데이터 수집기를 구성합니다 
+summary: NetApp Cloud Volumes ONTAP 데이터 수집기 ​​구성 
 keywords: data collector, NetApp, Cloud, ONTAP 
 ---
 = NetApp Cloud Volumes ONTAP 데이터 수집기
@@ -18,16 +18,16 @@ keywords: data collector, NetApp, Cloud, ONTAP
 
 [cols="2*"]
 |===
-| 필드에 입력합니다 | 설명 
+| 필드 | 설명 
 
 
-| NetApp 관리 IP 주소입니다 | 클라우드 볼륨 ONTAP의 IP 주소입니다 
+| NetApp 관리 IP 주소 | Cloud Volumens ONTAP 의 IP 주소 
 
 
-| 사용자 이름 | Cloud Volumes ONTAP의 사용자 이름입니다 
+| 사용자 이름 | Cloud Volumes ONTAP 의 사용자 이름 
 
 
-| 암호 | 위 사용자의 암호입니다 
+| 비밀번호 | 위 사용자의 비밀번호 
 |===
 
 
@@ -35,46 +35,46 @@ keywords: data collector, NetApp, Cloud, ONTAP
 
 [cols="2*"]
 |===
-| 필드에 입력합니다 | 설명 
+| 필드 | 설명 
 
 
-| 연결 유형 | HTTPS 권장. 기본 포트도 표시합니다. 
+| 연결 유형 | HTTPS를 권장합니다.  기본 포트도 표시합니다. 
 
 
-| 통신 포트를 재정의합니다 | 기본값이 아닌 경우 사용할 포트입니다. 
+| 통신 포트 재정의 | 기본값이 아닌 경우 사용할 포트입니다. 
 
 
 | 재고 폴링 간격(분) | 기본값은 60분입니다. 
 
 
-| 인벤토리 동시 스레드 수입니다 | 동시 스레드 수입니다. 
+| 인벤토리 동시 스레드 수 | 동시 스레드 수. 
 
 
-| HTTPS에 TLS를 강제로 적용합니다 | HTTPS를 통해 TLS를 강제 적용합니다 
+| HTTPS에 TLS 강제 적용 | HTTPS를 통한 TLS 강제 적용 
 
 
-| 자동으로 넷그룹을 조회합니다 | 자동으로 넷그룹을 조회합니다 
+| 자동으로 넷그룹 조회 | 자동으로 넷그룹 조회 
 
 
-| 넷그룹 확장 | 쉘 또는 파일을 선택합니다 
+| 넷그룹 확장 | 셸 또는 파일 선택 
 
 
-| HTTP 읽기 제한 시간(초 | 기본값은 30초입니다 
+| HTTP 읽기 시간 초과(초) | 기본값은 30초입니다 
 
 
-| 응답을 UTF-8로 강제 적용합니다 | 응답을 UTF-8로 강제 적용합니다 
+| UTF-8로 응답 강제 적용 | UTF-8로 응답 강제 적용 
 
 
 | 성능 폴링 간격(분) | 기본값은 900초입니다. 
 
 
-| 성능 동시 스레드 수입니다 | 동시 스레드 수입니다. 
+| 성능 동시 스레드 수 | 동시 스레드 수. 
 
 
-| 고급 카운터 데이터 수집 | Data Infrastructure Insights가 아래 목록에서 고급 메트릭을 수집하도록 하려면 이 옵션을 선택합니다. 
+| 고급 카운터 데이터 수집 | 아래 목록에서 고급 지표를 Data Infrastructure Insights 에서 수집하려면 이 항목을 선택하세요. 
 |===
 
 
 == 문제 해결
 
-이 데이터 수집기에 대한 추가 정보는 페이지 또는 에서 찾을 link:concept_requesting_support.html["지원"]link:reference_data_collector_support_matrix.html["Data Collector 지원 매트릭스"]수 있습니다.
+이 데이터 수집기에 대한 추가 정보는 다음에서 찾을 수 있습니다.link:concept_requesting_support.html["지원하다"] 페이지 또는link:reference_data_collector_support_matrix.html["데이터 수집기 지원 매트릭스"] .

@@ -2,48 +2,48 @@
 sidebar: sidebar 
 permalink: task_dc_emc_scaleio.html 
 keywords: data collector, scaleIO, PowerFlex EMC, DELL 
-summary: Dell EMC ScaleIO/PowerFlex 데이터 수집기 구성 
+summary: DELL EMC ScaleIO/PowerFlex 데이터 수집기 구성. 
 ---
-= Dell EMC ScaleIO/PowerFlex 데이터 수집기
+= DELL EMC ScaleIO/PowerFlex 데이터 수집기
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-ScaleIO/PowerFlex 데이터 수집기는 ScaleIO 및 PowerFlex 스토리지에서 인벤토리 정보를 수집합니다. 이 데이터 수집기를 구성하려면 ScaleIO/PowerFlex 게이트웨이 주소와 관리자 사용자 이름 및 암호가 필요합니다.
+ScaleIO/PowerFlex 데이터 수집기는 ScaleIO 및 PowerFlex 스토리지에서 인벤토리 정보를 수집합니다.  구성을 위해 이 데이터 수집기에는 ScaleIO/PowerFlex 게이트웨이 주소와 관리자 사용자 이름 및 비밀번호가 필요합니다.
 
 
 
-== 용어
+== 술어
 
-Data Infrastructure Insights는 ScaleIO/PowerFlex 데이터 수집기에서 다음과 같은 인벤토리 정보를 수집합니다. Data Infrastructure Insights에서 구입한 각 자산 유형에 대해 이 자산에 사용되는 가장 일반적인 용어가 표시되어 있습니다. 이 데이터 수집기를 보거나 문제를 해결할 때 다음 용어를 염두에 두십시오.
+Data Infrastructure Insights ScaleIO/PowerFlex 데이터 수집기에서 다음과 같은 인벤토리 정보를 수집합니다.  Data Infrastructure Insights 에서 수집한 각 자산 유형에 대해 해당 자산에 가장 일반적으로 사용되는 용어가 표시됩니다.  이 데이터 수집기를 보거나 문제를 해결할 때 다음 용어를 염두에 두십시오.
 
 [cols="2*"]
 |===
-| 공급업체/모델 기간 | Data Infrastructure Insights 용어 
+| 공급업체/모델 용어 | Data Infrastructure Insights 용어 
 
 
-| MDM(Meta Data Manager) 클러스터 | 스토리지 
+| MDM(메타 데이터 관리자) 클러스터 | 스토리지 
 
 
-| SDS(ScaleIO/PowerFlex 데이터 서버) | 스토리지 노드 
+| SDS(ScaleIO/PowerFlex 데이터 서버) | 저장 노드 
 
 
 | 스토리지 풀 | 스토리지 풀 
 
 
-| 볼륨 | 볼륨 
+| 용량 | 용량 
 
 
 | 장치 | 디스크 
 |===
-참고: 이러한 용어 매핑은 일반적인 용어 매핑일 뿐이며 이 데이터 수집기의 모든 경우를 나타내는 것은 아닙니다.
+참고: 이는 일반적인 용어 매핑일 뿐이며 이 데이터 수집기의 모든 사례를 나타내지 않을 수 있습니다.
 
 
 
 == 요구 사항
 
-* Admin 사용자 계정에 대한 읽기 전용 액세스
+* 관리자 사용자 계정에 대한 읽기 전용 액세스
 * 포트 요구 사항: HTTPS 포트 443
 
 
@@ -53,26 +53,26 @@ Data Infrastructure Insights는 ScaleIO/PowerFlex 데이터 수집기에서 다�
 
 [cols="2*"]
 |===
-| 필드에 입력합니다 | 설명 
+| 필드 | 설명 
 
 
 | ScaleIO/PowerFlex 게이트웨이 | 쉼표(,) 또는 세미콜론(;)으로 구분된 ScaleIO/PowerFlex 게이트웨이의 IP 주소 또는 FQDN 
 
 
-| 사용자 이름 | ScaleIO/PowerFlex 장치에 로그인하는 데 사용되는 관리자 사용자 이름입니다 
+| 사용자 이름 | ScaleIO/PowerFlex 장치에 로그인하는 데 사용되는 관리자 사용자 이름 
 
 
-| 암호 | ScaleIO/PowerFlex 장치에 로그인하는 데 사용되는 암호입니다 
+| 비밀번호 | ScaleIO/PowerFlex 장치에 로그인하는 데 사용되는 비밀번호 
 |===
 
 
 == 고급 구성
 
-인벤토리 확인란을 클릭하여 인벤토리 수집을 활성화합니다.
+재고 수집을 활성화하려면 재고 확인란을 클릭하세요.
 
 [cols="2*"]
 |===
-| 필드에 입력합니다 | 설명 
+| 필드 | 설명 
 
 
 | HTTPS 포트 | 443 
@@ -87,4 +87,4 @@ Data Infrastructure Insights는 ScaleIO/PowerFlex 데이터 수집기에서 다�
 
 == 문제 해결
 
-추가 정보는 페이지 또는 에서 찾을 link:concept_requesting_support.html["지원"]link:reference_data_collector_support_matrix.html["Data Collector 지원 매트릭스"]수 있습니다.
+추가 정보는 다음에서 찾을 수 있습니다.link:concept_requesting_support.html["지원하다"] 페이지 또는link:reference_data_collector_support_matrix.html["데이터 수집기 지원 매트릭스"] .

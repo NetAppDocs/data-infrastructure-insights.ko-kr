@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: security_information_and_region.html 
-summary: Data Infrastructure Insights는 릴리즈 라이프사이클 전반에서 보안 모범 사례를 준수합니다. 
+summary: Data Infrastructure Insights 릴리스 수명 주기 전반에 걸쳐 보안 모범 사례를 따릅니다. 
 keywords: security, risk, protection 
 ---
 = 정보 및 지역
@@ -10,96 +10,96 @@ keywords: security, risk, protection
 
 
 [role="lead"]
-NetApp은 고객 정보의 보안을 매우 중요하게 생각합니다. Data Infrastructure Insights에서 정보를 저장하는 방법과 위치를 확인하십시오.
+NetApp 고객 정보의 보안을 매우 중요하게 생각합니다.  Data Infrastructure Insights 정보를 저장하는 방법과 위치는 다음과 같습니다.
 
 
 
-== Data Infrastructure Insights는 어떤 정보를 저장합니까?
+== Data Infrastructure Insights 어떤 정보를 저장합니까?
 
-Data Infrastructure Insights는 다음 정보를 저장합니다.
+Data Infrastructure Insights 다음 정보를 저장합니다.
 
 * 성능 데이터
 +
-성능 데이터는 모니터링되는 장치/소스의 성능에 대한 정보를 제공하는 시계열 데이터입니다. 예를 들어, 스토리지 시스템에서 제공되는 입출력 수, FiberChannel 포트의 처리량, 웹 서버에서 제공하는 페이지 수, 데이터베이스의 응답 시간 등이 여기에 포함됩니다.
+성능 데이터는 모니터링되는 장치/소스의 성능에 대한 정보를 제공하는 시계열 데이터입니다.  예를 들어, 여기에는 스토리지 시스템에서 전달된 IO 수, 파이버채널 포트의 처리량, 웹 서버에서 전달된 페이지 수, 데이터베이스의 응답 시간 등이 포함됩니다.
 
 * 재고 데이터
 +
-인벤토리 데이터는 모니터링되는 디바이스/소스와 해당 소스 구성 방법을 설명하는 메타데이터로 구성됩니다. 여기에는 설치된 하드웨어 및 소프트웨어 버전, 스토리지 시스템의 디스크 및 LUN, CPU 코어, 가상 머신의 RAM 및 디스크, 데이터베이스의 테이블스페이스, SAN 스위치의 포트 수와 유형, 디렉토리/파일 이름(스토리지 워크로드 보안이 설정된 경우) 등이 포함됩니다
+인벤토리 데이터는 모니터링되는 장치/소스와 해당 장치/소스의 구성 방법을 설명하는 메타데이터로 구성됩니다.  여기에는 설치된 하드웨어 및 소프트웨어 버전, 스토리지 시스템의 디스크 및 LUN, CPU 코어, 가상 머신의 RAM 및 디스크, 데이터베이스의 테이블스페이스, SAN 스위치의 포트 수 및 유형, 디렉토리/파일 이름(스토리지 워크로드 보안이 활성화된 경우) 등이 포함됩니다.
 
 * 구성 데이터
 +
-이 요약에는 모니터링된 장치의 호스트 이름 또는 IP 주소, 폴링 간격, 시간 초과 값 등 고객 인벤토리 및 작업을 관리하는 데 사용되는 고객이 제공한 구성 데이터가 요약되어 있습니다
+여기에는 고객 인벤토리와 운영을 관리하는 데 사용되는 고객이 제공한 구성 데이터(예: 모니터링되는 장치의 호스트 이름 또는 IP 주소, 폴링 간격, 시간 초과 값 등)가 요약되어 있습니다.
 
-* 비밀
+* 기미
 +
-비밀은 Data Infrastructure Insights Acquisition Unit에서 고객 장치 및 서비스에 액세스하는 데 사용하는 자격 증명으로 구성됩니다. 이러한 자격 증명은 강력한 비대칭 암호화를 사용하여 암호화되며 개인 키는 획득 장치에만 저장되며 고객 환경을 떠나지 않습니다. 권한 있는 Data Infrastructure Insights SRE도 이 설계 때문에 일반 텍스트로 고객 비밀에 액세스할 수 없습니다.
+비밀은 Data Infrastructure Insights 인수 부서에서 고객 기기와 서비스에 액세스하는 데 사용하는 자격 증명으로 구성됩니다.  이러한 자격 증명은 강력한 비대칭 암호화를 사용하여 암호화되며, 개인 키는 인수 단위에만 저장되고 고객 환경 외부로 절대 유출되지 않습니다.  이러한 설계로 인해 권한이 있는 Data Infrastructure Insights SRE조차도 일반 텍스트 형태의 고객 비밀에 액세스할 수 없습니다.
 
-* 기능 데이터
+* 기능적 데이터
 +
-이 데이터는 NetApp에서 클라우드 데이터 서비스를 제공하여 생성되는 것으로, 클라우드 데이터 서비스의 개발, 구축, 운영, 유지보수, 보안에 대해 NetApp에 알려줍니다. 기능 데이터에는 고객 정보 또는 개인 정보가 포함되어 있지 않습니다.
+이는 NetApp 이 클라우드 데이터 서비스를 제공함으로써 생성된 데이터로, NetApp 클라우드 데이터 서비스를 개발, 배포, 운영, 유지관리 및 보안하는 데 필요한 정보를 제공합니다.  기능적 데이터에는 고객 정보나 개인 정보가 포함되지 않습니다.
 
 * 사용자 액세스 데이터
 +
-NetApp 콘솔이 지역별 Data Infrastructure Insights 사이트와 통신할 수 있도록 하는 인증 및 액세스 정보(사용자 권한 부여와 관련된 데이터 포함)입니다.
+NetApp Console 지역별 Data Infrastructure Insights 사이트와 통신할 수 있도록 하는 인증 및 액세스 정보(사용자 권한 부여와 관련된 데이터 포함)입니다.
 
 * 스토리지 워크로드 보안 사용자 디렉토리 데이터
 +
-워크로드 보안 기능이 활성화되어 있고 고객이 사용자 디렉토리 수집기를 사용하도록 선택한 경우 시스템은 사용자 표시 이름, 회사 이메일 주소 및 Active Directory에서 수집한 기타 정보를 저장합니다.
+워크로드 보안 기능이 활성화되어 있고 고객이 사용자 디렉터리 수집기를 활성화하기로 선택한 경우, 시스템은 Active Directory에서 수집된 사용자 표시 이름, 회사 이메일 주소 및 기타 정보를 저장합니다.
 
 
 
 
-NOTE: 사용자 디렉토리 데이터는 Data Infrastructure Insights/Workload Security 자체의 사용자에 대한 데이터가 아니라 워크로드 보안 사용자 디렉토리 데이터 수집기에서 수집한 사용자 디렉토리 정보를 말합니다.
+NOTE: 사용자 디렉토리 데이터는 Workload Security 사용자 디렉토리 데이터 수집기가 수집한 사용자 디렉토리 정보를 의미하며, Data Infrastructure Insights/Workload Security 사용자에 대한 데이터는 아닙니다.
 
-* 인프라 및 서비스 리소스에서 명시적 개인 데이터 * 가 수집되지 않습니다. 수집된 정보는 성능 메트릭, 구성 정보 및 인프라 메타데이터로만 구성되며, NetApp의 자동 지원 및 ActiveIQ를 비롯한 수많은 공급업체 Phone-Home과 매우 유사합니다. 그러나 고객의 명명 규칙에 따라 공유, 볼륨, VM, qtree, 응용 프로그램 등에 개인 식별 정보가 포함될 수 있습니다.
+인프라 및 서비스 리소스에서 명시적인 개인 데이터는 수집되지 않습니다.  수집된 정보는 NetApp 자동 지원 및 ActiveIQ를 포함한 많은 공급업체의 전화 상담 서비스와 마찬가지로 성능 측정 항목, 구성 정보 및 인프라 메타데이터로만 구성됩니다.  그러나 고객의 명명 규칙에 따라 공유, 볼륨, VM, Q트리, 애플리케이션 등의 데이터에는 개인 식별 정보가 포함될 수 있습니다.
 
-워크로드 보안이 설정된 경우 시스템은 SMB 또는 기타 공유에서 파일 및 디렉토리 이름을 추가로 확인합니다. 여기에는 개인 식별 정보가 포함될 수 있습니다. 고객이 워크로드 보안 사용자 디렉토리 수집기를 활성화하면(기본적으로 Active Directory를 통해 Windows SID를 사용자 이름에 매핑), 표시 이름, 회사 이메일 주소 및 선택된 추가 속성이 Data Infrastructure Insights에 의해 수집되고 저장됩니다.
+워크로드 보안이 활성화된 경우 시스템은 개인 식별 정보가 포함되어 있을 수 있는 SMB 또는 기타 공유의 파일 및 디렉터리 이름도 추가로 살펴봅니다.  고객이 Workload Security User Directory Collector(기본적으로 Active Directory를 통해 Windows SID를 사용자 이름에 매핑)를 활성화하는 경우, 표시 이름, 회사 이메일 주소 및 선택한 추가 속성은 Data Infrastructure Insights 에서 수집하여 저장합니다.
 
-또한 Data Infrastructure Insights에 대한 액세스 로그는 유지 관리되며 서비스에 로그인하는 데 사용되는 사용자의 IP 및 이메일 주소를 포함합니다.
+또한, Data Infrastructure Insights 에 대한 액세스 로그가 유지 관리되며, 이 로그에는 서비스에 로그인하는 데 사용된 사용자의 IP 및 이메일 주소가 포함됩니다.
 
 
 
-== 내 정보는 어디에 저장됩니까?
+== 내 정보는 어디에 저장되나요?
 
-Data Infrastructure Insights는 환경이 생성되는 지역에 따라 정보를 저장합니다.
+Data Infrastructure Insights 환경이 생성된 지역에 따라 정보를 저장합니다.
 
-다음 정보는 호스트 영역에 저장됩니다.
+다음 정보는 호스트 지역에 저장됩니다.
 
-* 카운터 및 성능 메트릭을 포함한 원격 측정 및 자산/객체 정보
-* 획득 장치 정보
-* 기능 데이터
-* Data Infrastructure Insights 내의 사용자 활동에 대한 정보 감사
+* 카운터 및 성능 측정 항목을 포함한 원격 측정 및 자산/객체 정보
+* 인수 단위 정보
+* 기능적 데이터
+* Data Infrastructure Insights 내 사용자 활동에 대한 감사 정보
 * 워크로드 보안 Active Directory 정보
 * 워크로드 보안 감사 정보
 
 
-다음 정보는 Data Infrastructure Insights 환경을 호스팅하는 지역에 상관없이 미국에 있습니다.
+다음 정보는 Data Infrastructure Insights 환경을 호스팅하는 지역과 관계없이 미국에 보관됩니다.
 
-* 사이트/계정 소유자와 같은 환경 사이트("테넌트"라고도 함) 정보
-* NetApp 콘솔이 사용자 권한 부여와 관련된 모든 내용을 포함하여 지역별 Data Infrastructure Insights 사이트와 통신할 수 있도록 하는 정보입니다.
-* Data Infrastructure Insights 사용자와 테넌트 간의 관계와 관련된 정보입니다.
-
-
+* 사이트/계정 소유자와 같은 환경 사이트(때때로 "테넌트"라고 함) 정보입니다.
+* NetApp Console 지역별 Data Infrastructure Insights 사이트와 통신할 수 있도록 하는 정보로, 사용자 권한 부여와 관련된 모든 정보가 포함됩니다.
+* Data Infrastructure Insights 사용자와 테넌트 간의 관계에 대한 정보입니다.
 
 
-=== 호스트 영역
 
-호스트 영역은 다음과 같습니다.
 
-* 미국: 동쪽편 - 1
-* EMEA: EU-CENTRAL-1
-* APAC: AP-남동-2
+=== 호스트 지역
+
+호스트 지역은 다음과 같습니다.
+
+* 미국: us-east-1
+* EMEA: eu-central-1
+* 아시아 태평양: ap-southeast-2
 
 
 
 
 == 추가 정보
 
-다음 링크에서 NetApp의 개인 정보 보호 및 보안에 대해 자세히 확인할 수 있습니다.
+다음 링크에서 NetApp의 개인정보 보호 및 보안에 대해 자세히 알아볼 수 있습니다.
 
-* link:https://www.netapp.com/us/company/trust-center/index.aspx["보안 센터"]
-* link:https://www.netapp.com/us/company/trust-center/privacy/data-location-cross-border-transfers.aspx["국가 간 데이터 전송"]
-* link:https://www.netapp.com/us/company/trust-center/privacy/bcr-binding-corporate-rules.aspx["기업 규칙을 구속하는 중입니다"]
-* link:https://www.netapp.com/us/company/trust-center/transparency/third-party-data-requests.aspx["타사 데이터 요청에 대한 응답"]
-* link:https://www.netapp.com/us/company/trust-center/privacy/privacy-principles-security-safeguards.aspx["NetApp 개인 정보 보호 원칙"]
+* link:https://www.netapp.com/us/company/trust-center/index.aspx["신뢰 센터"]
+* link:https://www.netapp.com/us/company/trust-center/privacy/data-location-cross-border-transfers.aspx["국경 간 데이터 전송"]
+* link:https://www.netapp.com/us/company/trust-center/privacy/bcr-binding-corporate-rules.aspx["구속력 있는 기업 규칙"]
+* link:https://www.netapp.com/us/company/trust-center/transparency/third-party-data-requests.aspx["제3자 데이터 요청에 응답"]
+* link:https://www.netapp.com/us/company/trust-center/privacy/privacy-principles-security-safeguards.aspx["NetApp 개인정보 보호 원칙"]
 

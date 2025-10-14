@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: concept_ws_integration_with_ontap_access_denied.html 
-summary: 워크로드 보안은 ONTAP와 통합되어 액세스 거부 이벤트를 수신하고 추가적인 분석 및 자동 응답 계층을 제공합니다. 
+summary: Workload Security는 ONTAP 과 통합되어 액세스 거부 이벤트를 수신하고 추가적인 분석 및 자동 응답 계층을 제공합니다. 
 keywords: ransomware, ARP, Protection, Security, access 
 ---
-= ONTAP 액세스와의 통합이 거부되었습니다
+= ONTAP 액세스와의 통합이 거부되었습니다.
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,40 +14,40 @@ keywords: ransomware, ARP, Protection, Security, access
 
 
 [role="lead"]
-ONTAP 액세스 거부 기능은 NAS 환경(NFS 및 SMB)에서 워크로드 분석을 사용하여 실패한 파일 작업을 사전에 감지하여 경고합니다(예: 권한이 없는 작업을 수행하려는 사용자). 특히 보안 관련 오류의 경우 이러한 파일 작업 알림 실패 시 초기에 내부자 공격을 차단하는 데 도움이 됩니다.
+ONTAP 액세스 거부 기능은 NAS 환경(NFS 및 SMB)에서 작업 부하 분석을 사용하여 실패한 파일 작업(즉, 사용자가 권한이 없는 작업을 수행하려는 경우)을 사전에 감지하고 경고합니다.  이러한 실패한 파일 작업 알림은(특히 보안 관련 실패의 경우) 초기 단계에서 내부자 공격을 차단하는 데 더욱 도움이 됩니다.
 
-Data Infrastructure Insights 워크로드 보안은 ONTAP과 통합되어 액세스 거부 이벤트를 수신하고 추가적인 분석 및 자동 응답 계층을 제공합니다.
+Data Infrastructure Insights Workload Security는 ONTAP 과 통합되어 액세스 거부 이벤트를 수신하고 추가적인 분석 및 자동 대응 계층을 제공합니다.
 
 
 
-== 필수 구성 요소
+== 필수 조건
 
 * 최소 ONTAP 버전: 9.13.0.
-* 워크로드 보안 관리자는 고급 구성 아래에서 _액세스 거부 이벤트 모니터링_ 확인란을 선택하여 새 수집기를 추가하거나 기존 수집기를 편집하는 동안 액세스 거부 기능을 활성화해야 합니다.
+* 워크로드 보안 관리자는 새로운 수집기를 추가하거나 기존 수집기를 편집하는 동안 고급 구성에서 _액세스 거부 이벤트 모니터링_ 확인란을 선택하여 액세스 거부 기능을 활성화해야 합니다.
 
 
-image:WS_Access_Denied_Enable_in_Collector.png["ONTAP Collector 고급 구성에서 액세스 거부됨 을 설정합니다"]
+image:WS_Access_Denied_Enable_in_Collector.png["ONTAP 수집기 고급 구성에서 액세스 거부 활성화"]
 
 
 
 == 사용자 권한이 필요합니다
 
-클러스터 관리 자격 증명을 사용하여 Data Collector를 추가하는 경우 새 권한이 필요하지 않습니다.
+클러스터 관리 자격 증명을 사용하여 데이터 수집기를 추가한 경우 새로운 권한이 필요하지 않습니다.
 
-사용자에게 부여된 권한이 있는 사용자 지정 사용자(예: _CsUser_)를 사용하여 수집기를 추가하는 경우, 아래 단계에 따라 ONTAP에 액세스 거부 이벤트를 등록하는 데 필요한 권한을 워크로드 보안에 부여합니다.
+사용자 지정 사용자(예: _csuser_)를 사용하여 Collector를 추가하고 해당 사용자에게 권한이 부여된 경우 아래 단계에 따라 Workload Security에 ONTAP 에서 액세스 거부 이벤트에 등록하는 데 필요한 권한을 부여합니다.
 
-cluster_credentials를 사용하는 CsUser의 경우 ONTAP 명령줄에서 다음 명령을 실행합니다. 이 사용 권한은 이미 있을 수 있습니다.
+_cluster_ 자격 증명이 있는 csuser의 경우 ONTAP 명령줄에서 다음 명령을 실행합니다.  이 권한이 이미 존재할 수도 있습니다.
 
  security login role create -role csrole -cmddirname "vserver fpolicy" -access all
-csUser with_SVM_credentials의 경우 ONTAP 명령줄에서 다음 명령을 실행합니다. 이 사용 권한은 이미 있을 수 있습니다.
+_SVM_ 자격 증명을 사용하는 csuser의 경우 ONTAP 명령줄에서 다음 명령을 실행합니다.  이 권한이 이미 존재할 수도 있습니다.
 
  security login role create -vserver <vservername> -role csrole -cmddirname "vserver fpolicy" -access all
-기타 구성에 대한 자세한 link:task_add_collector_svm.html["ONTAP 권한"]정보
+다른 구성에 대해 자세히 알아보세요link:task_add_collector_svm.html["ONTAP 권한"] .
 
 
 
-== 액세스가 거부되었습니다
+== 액세스 거부 이벤트
 
-ONTAP 시스템에서 이벤트를 가져오면 워크로드 보안 포렌식 페이지에 액세스 거부 이벤트가 표시됩니다. 표시되는 정보 외에도 기어 아이콘에서 테이블에 _WARGED Activity_ 열을 추가하여 특정 작업에 대해 누락된 사용자 권한을 볼 수 있습니다.
+ONTAP 시스템에서 이벤트를 수집하면 워크로드 보안 포렌식 페이지에 액세스 거부 이벤트가 표시됩니다.  표시된 정보 외에도 기어 아이콘에서 표에 _원하는 활동_ 열을 추가하여 특정 작업에 대해 누락된 사용자 권한을 볼 수 있습니다.
 
-image:WS_Access_Denied_Example_Event_1.png["액세스 거부 이벤트의 예"]
+image:WS_Access_Denied_Example_Event_1.png["액세스 거부 이벤트 예"]
