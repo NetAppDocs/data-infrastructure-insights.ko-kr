@@ -20145,7 +20145,6 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 * 9.11.1P7
 * 9.11.1P8
 * 9.11.1P9
-* 9.11.1X12
 * 9.12.1
 * 9.12.1P1
 * 9.12.1P10
@@ -20198,9 +20197,6 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 * 9.14.1P8
 * 9.14.1P8D5
 * 9.14.1P9
-* 9.14.1X14
-* 9.14.1X20
-* 9.14.1X24
 * 9.15.0P1
 * 9.15.0P2
 * 9.15.1
@@ -20214,15 +20210,9 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 * 9.15.1P7
 * 9.15.1P7D4
 * 9.15.1P8
-* 9.15.1X19
-* 9.15.1X27
 * 9.16.1
 * 9.16.1P1
-* 9.16.1X16
-* 9.16.1X26
-* 9.16.1X29
 * 9.17.1
-* 9.17.1X7
 * 9.2.0P3
 * 9.2.0P4
 * 9.3.0P15
@@ -20275,7 +20265,6 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 * 9.7.0P7
 * 9.7.0P8
 * 9.7.0P9
-* 9.7.0X17
 * 9.8.0
 * 9.8.0P1
 * 9.8.0P10
@@ -20283,7 +20272,6 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 * 9.8.0P12
 * 9.8.0P13
 * 9.8.0P14
-* 9.8.0P14X5
 * 9.8.0P15
 * 9.8.0P16
 * 9.8.0P17
@@ -20313,7 +20301,6 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 * 9.9.1P2
 * 9.9.1P20
 * 9.9.1P3
-* 9.9.1P5X2
 * 9.9.1P6
 * 9.9.1P7
 * 9.9.1P9
@@ -22436,9 +22423,6 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 * NetApp 릴리스 9.16.1: 2025년 1월 18일 토요일 19:31:15 UTC
 * NetApp 릴리스 9.16.1P1: 2025년 2월 14일 금요일 03:53:50 UTC
 * NetApp 릴리스 9.16.1RC1: 2024년 11월 4일 월요일 오전 10시 39분 46초 UTC
-* NetApp 릴리스 9.16.1X26: 2024년 12월 9일 월요일 오전 10시 27분 42초 UTC
-* NetApp 릴리스 9.16.1X29: 2025년 1월 12일 일요일 오전 11시 18분 25초 UTC
-* NetApp 릴리스 9.17.1X7: 2025년 2월 14일 금요일 11:21:52 UTC
 * NetApp 릴리스 Clawhammer__9.14.1: 2024년 5월 18일 토요일 09:23:49 UTC
 * NetApp 릴리스 Cloudstream__9.16.1: 2024년 11월 4일 월요일 오전 5시 51분 46초 UTC
 * NetApp 릴리스 Cloudstream__9.16.1: 2025년 3월 13일 목요일 20:55:54 UTC
