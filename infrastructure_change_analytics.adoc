@@ -7,6 +7,10 @@ summary: Data Infrastructure Insights 인프라의 변경 사항을 추적하여
 = 인프라 변화 분석
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -37,6 +41,12 @@ image:infraChange_filter_dropdown.png["인프라 변경 필터링 드롭다운"]
 필터 설정 아래의 상태 섹션에서 주요 알림이나 변경 사항으로 바로 이동할 수 있으며, 현재 가장 많은 알림이 있는 상위 3개 리소스도 확인할 수 있습니다.
 
 image:Change_Analysis_filters_and_status.png["상태 및 알림 및 변경 사항에 대한 빠른 링크"]
+
+
+
+== 장기 경고에 대한 참고 사항
+
+24시간 이상 활성 상태를 유지하는 알림은 24시간마다 알림 및 변경 사항 목록에 표시되므로 동일한 알림이 여러 번 나열되는 것을 볼 수 있습니다. 이러한 각 알림은 동일한 알림 ID, 동일한 시작 시간 등을 가지며, 알림이 해결될 때까지 "알림" 상태를 유지합니다.
 
 
 

@@ -8745,7 +8745,6 @@
   <block id="6a0fb4ccd9df37a4928d666f900fc111" category="list-text">9.11.1P7</block>
   <block id="ee297c3ee4d46f935bc45d0d064be8f4" category="list-text">9.11.1P8</block>
   <block id="ac844c749ee94b582ae244c828b00311" category="list-text">9.11.1P9</block>
-  <block id="b50ef0c82f2cb86e10106d6dcf4be872" category="list-text">9.11.1X12</block>
   <block id="eba1f3287bdc33dfa25c084b5e15a4c5" category="list-text">9.12.1</block>
   <block id="b5c4301816e6af2bf88c788518733eb7" category="list-text">9.12.1P1</block>
   <block id="8f54fbf368765fd506959c0f94135922" category="list-text">9.12.1P10</block>
@@ -8798,9 +8797,6 @@
   <block id="ebbe4cbae17517c84e54eba083c8da4b" category="list-text">9.14.1P8</block>
   <block id="d73363717d834d4a2ab99eeb68453131" category="list-text">9.14.1P8D5</block>
   <block id="f8a8cd0923816d5b6d78f88100eeeb74" category="list-text">9.14.1P9</block>
-  <block id="86259c42e39aca9d604557fc0df7cdfd" category="list-text">9.14.1X14</block>
-  <block id="e2a6950e117d892956cab85ead3b8f5f" category="list-text">9.14.1X20</block>
-  <block id="2f550d4ca52f3cf0205b3dc3813685a1" category="list-text">9.14.1X24</block>
   <block id="d9df468f7ec059062fe27406e7e15237" category="list-text">9.15.0P1</block>
   <block id="d8fde17f7482290d3fc56b981fe6e5f3" category="list-text">9.15.0P2</block>
   <block id="120ae360daecd24b580b71f9f2766bbc" category="list-text">9.15.1</block>
@@ -8814,15 +8810,9 @@
   <block id="a94def7bd8645fffeb7856a0b730acfb" category="list-text">9.15.1P7</block>
   <block id="cc1e51f6714a9a4de877bfe5d6abc663" category="list-text">9.15.1P7D4</block>
   <block id="fd43304224fcabc307d59c5ec05b2dec" category="list-text">9.15.1P8</block>
-  <block id="988a2f8f75724c92369ef7cf6c1af9c3" category="list-text">9.15.1X19</block>
-  <block id="398a2f5fbfe6d752b77067052fc148f5" category="list-text">9.15.1X27</block>
   <block id="0bd0e673df4c14cae45a11fac30c530b" category="list-text">9.16.1</block>
   <block id="5329b0514f6808bed8f7ea91aa5dfffe" category="list-text">9.16.1P1</block>
-  <block id="38581ea3df1d6327e2ef6aa30a992d3d" category="list-text">9.16.1X16</block>
-  <block id="309cc4b6e6becf1dabfbf424307d63a3" category="list-text">9.16.1X26</block>
-  <block id="abcfd7456fda735d64d7072f1f14b7a9" category="list-text">9.16.1X29</block>
   <block id="81e76ca235a16e1d875f94529d326de0" category="list-text">9.17.1</block>
-  <block id="c4e97bb93085dd52655d04ae6039f80d" category="list-text">9.17.1X7</block>
   <block id="ede0f5d55262ef3a8fefabdc493d497d" category="list-text">9.2.0P3</block>
   <block id="db3defc5982e5a3ab1c7c23c3b9bd186" category="list-text">9.2.0P4</block>
   <block id="b7cc677864a8a148a8f6712077c927d6" category="list-text">9.3.0P15</block>
@@ -8875,7 +8865,6 @@
   <block id="300af83339932c117e40a26058e99342" category="list-text">9.7.0P7</block>
   <block id="7bf36aff015b9cae71de886282513b8d" category="list-text">9.7.0P8</block>
   <block id="ce901682465ebe915d94307190f673c8" category="list-text">9.7.0P9</block>
-  <block id="3944340f50ba82bd002202199d7abe5e" category="list-text">9.7.0X17</block>
   <block id="b986ed6de4db8c07091d6f0b537ea702" category="list-text">9.8.0</block>
   <block id="da6f3108688381d819a41aa913cf1e19" category="list-text">9.8.0P1</block>
   <block id="deb8a9119a167f8fa049b82613624fbc" category="list-text">9.8.0P10</block>
@@ -8883,7 +8872,6 @@
   <block id="85c61f496ad4ea3c959fecea506ac58e" category="list-text">9.8.0P12</block>
   <block id="3c92472032750ed4a2c0e27d1800b25e" category="list-text">9.8.0P13</block>
   <block id="7f9b4710e7cd1de83b1d2aacebadcc53" category="list-text">9.8.0P14</block>
-  <block id="0125e3652c60c88a180594ab60564bba" category="list-text">9.8.0P14X5</block>
   <block id="8c5f541323d4aa6813a524fbf9dd59a8" category="list-text">9.8.0P15</block>
   <block id="4a6dae456f8b918b4c60072a72969636" category="list-text">9.8.0P16</block>
   <block id="8a3155dbb9a7e427a5aefa328145b791" category="list-text">9.8.0P17</block>
@@ -8913,7 +8901,6 @@
   <block id="f42881361c9c6865d49fd05bf347146a" category="list-text">9.9.1P2</block>
   <block id="d4960421bee21c61ebf8d27b38d6080a" category="list-text">9.9.1P20</block>
   <block id="7d6a08d11ebcd453bf13060310fcfeeb" category="list-text">9.9.1P3</block>
-  <block id="f9d157259fbe48b272c368d76bb54049" category="list-text">9.9.1P5X2</block>
   <block id="baf935f699cf2fba569f01e21467a7d7" category="list-text">9.9.1P6</block>
   <block id="5c5ab1439f6ac62d53efee3758d3c999" category="list-text">9.9.1P7</block>
   <block id="f6d334c5abfc986211c0472ba79714a7" category="list-text">9.9.1P9</block>
@@ -8955,9 +8942,6 @@
   <block id="7fdbd16e1ff751fad04600d723d8011d" category="list-text">NetApp 릴리스 9.16.1: 2025년 1월 18일 토요일 19:31:15 UTC</block>
   <block id="88021ecf50f7541d3d24492a191e471b" category="list-text">NetApp 릴리스 9.16.1P1: 2025년 2월 14일 금요일 03:53:50 UTC</block>
   <block id="652755e90249a76ef63d7204d6ab39ec" category="list-text">NetApp 릴리스 9.16.1RC1: 2024년 11월 4일 월요일 오전 10시 39분 46초 UTC</block>
-  <block id="e47d8be37475d6721d2595b43299102a" category="list-text">NetApp 릴리스 9.16.1X26: 2024년 12월 9일 월요일 오전 10시 27분 42초 UTC</block>
-  <block id="7faf1c14f22abc4af287a0938e0e11d4" category="list-text">NetApp 릴리스 9.16.1X29: 2025년 1월 12일 일요일 오전 11시 18분 25초 UTC</block>
-  <block id="047366cbe3a752b392b76ee3de5a0693" category="list-text">NetApp 릴리스 9.17.1X7: 2025년 2월 14일 금요일 11:21:52 UTC</block>
   <block id="7012035b5539239acce1eeb19262a908" category="list-text">NetApp 릴리스 Clawhammer__9.14.1: 2024년 5월 18일 토요일 09:23:49 UTC</block>
   <block id="85d028d27872290fedf829049ad47f51" category="list-text">NetApp 릴리스 Cloudstream__9.16.1: 2024년 11월 4일 월요일 오전 5시 51분 46초 UTC</block>
   <block id="efb74c609c847e1c896c8b72027c2404" category="list-text">NetApp 릴리스 Cloudstream__9.16.1: 2025년 3월 13일 목요일 20:55:54 UTC</block>
@@ -11403,7 +11387,6 @@
   <block id="46152eb4e0d7febe5ed5ec5aa51b068f" category="admonition">관련 자산이 대량으로 있는 환경의 경우 해당 자산에 대한 애플리케이션 할당을 상속하는 데 몇 분이 걸릴 수 있습니다.  관련 자산이 많은 경우 상속이 이루어지는 데 더 많은 시간이 소요될 수 있습니다.</block>
   <block id="f64880272c45a077dc9152ab7dd2f24a" category="paragraph">호스트를 애플리케이션에 할당한 후 나머지 자산을 애플리케이션에 할당할 수 있습니다.  애플리케이션의 랜딩 페이지에 액세스하려면 *관리 &gt; 애플리케이션*을 클릭하고 생성한 애플리케이션을 선택하세요.</block>
   <block id="91771bf0d5be307a250d706e57df1eb1" category="summary">성과나 재고 임계값, 지표나 로그 조건에 대한 알림을 제공하는 모니터를 만듭니다.</block>
-  <block id="3c86c080f12d925b5a5ec1ad14563f65" category="paragraph">인프라 리소스 전반에서 성능 임계값을 추적하고 이벤트와 이상을 기록하도록 모니터를 구성합니다. 노드 쓰기 지연 시간, 스토리지 용량, 애플리케이션 성능 등의 측정 항목에 대한 사용자 정의 알림을 만들고, 이러한 조건이 충족되면 알림을 받습니다.</block>
   <block id="3f5fb2a45a144339f9591a104342f79b" category="paragraph">모니터를 사용하면 스토리지, VM, EC2, 포트와 같은 "인프라" 객체에서 생성된 메트릭과 Kubernetes, ONTAP 고급 메트릭, Telegraf 플러그인에 대해 수집된 "통합" 데이터에 대한 임계값을 설정할 수 있습니다.  이러한 _메트릭_ 모니터는 경고 수준이나 위험 수준 임계값을 넘으면 경고를 보냅니다.</block>
   <block id="e730b9c349889018dc9deaccaa5a438b" category="paragraph">지정된 _로그 이벤트_가 감지되면 경고, 중요 또는 정보 수준의 알림을 트리거하는 모니터를 생성할 수도 있습니다.</block>
   <block id="b18c8095ec7b7cd0c63a4e28b715f6c1" category="inline-link-macro">시스템 정의 모니터</block>
@@ -11425,13 +11408,11 @@
   <block id="313acdf9633421e44aea4a9be12b5071" category="list-text">드롭다운에서 모니터링할 개체 유형과 메트릭을 검색하여 선택합니다.</block>
   <block id="0afd1ac0e8283e24d8739752316dccba" category="paragraph">모니터링할 개체 속성이나 메트릭을 좁히기 위해 필터를 설정할 수 있습니다.</block>
   <block id="02421e310193c48e3a305e97cbba58c2" category="paragraph"><block ref="02421e310193c48e3a305e97cbba58c2" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="8ce06b1a529052723e1fb36a1c2f1a25" category="admonition">다중 조건 모니터(예: IOPS &gt; X, 지연 시간 &gt; Y)를 생성하려면 첫 번째 조건을 임계값으로, 두 번째 조건을 필터로 정의합니다.</block>
   <block id="9ef1d5830a24b9e150ec53e978038289" category="section-title">모니터의 조건을 정의합니다.</block>
   <block id="2e75e9aa28dbca090ee157cf8d539e66" category="list-text">모니터링할 대상과 지표를 선택한 후 경고 수준 및/또는 위험 수준 임계값을 설정합니다.</block>
   <block id="734f668bd72716899c84bbaedc8d2564" category="list-text">예시에서는 _경고_ 수준에 200을 입력합니다.  이 경고 수준을 나타내는 점선이 예시 그래프에 표시됩니다.</block>
   <block id="a86a316c20ed3c30474a8a9bcbca7f2f" category="list-text">_Critical_ 수준에 400을 입력합니다.  이 중요 수준을 나타내는 점선이 예제 그래프에 표시됩니다.</block>
   <block id="d00ff899ed7e3bcc490e418870ed0ce4" category="paragraph">그래프는 과거 데이터를 표시합니다.  그래프의 경고 및 위험 수준 선은 모니터를 시각적으로 표현한 것이므로, 각 경우에 모니터가 경고를 발생시킬 수 있는 시점을 쉽게 확인할 수 있습니다.</block>
-  <block id="390f4b7f0b6066d4e61aa66cd61b3e6c" category="list-text">발생 간격으로 _15분_ 동안 _계속_을 선택합니다.</block>
   <block id="750f553c0f9776809a020b980f3dc25a" category="paragraph">임계값이 초과되는 순간 경고를 발생시키거나 임계값이 일정 기간 동안 지속적으로 초과될 때까지 기다릴 수 있습니다.  우리의 예에서, 총 IOPS가 경고 또는 위험 수준을 넘어설 때마다 알림을 받고 싶지는 않지만, 모니터링되는 객체가 이러한 수준 중 하나를 최소 15분 동안 지속적으로 초과할 때만 알림을 받고 싶습니다.</block>
   <block id="812faed524486085f300f8e0bdba77fe" category="inline-image-macro">모니터의 조건을 정의하세요</block>
   <block id="be0ee88944c0674ffaad4c460224553f" category="paragraph"><block ref="be0ee88944c0674ffaad4c460224553f" category="inline-image-macro-rx" type="image"></block></block>
@@ -12791,4 +12772,18 @@
   <block id="28e97b05d7843c83bb08415c5082b313" category="cell">HNAS CLI의 사용자 이름</block>
   <block id="e6b3fd45be3338656848da520c7d3b38" category="cell">HNAS CLI에 사용되는 비밀번호</block>
   <block id="211449d2ea5f24bf5e1532a0d2c631b8" category="cell">재고 조사 간격. 기본값은 30분입니다.</block>
+  <block id="b6c4679bc199e5db8f88b60803f5ca85" category="section-title">장기 경고에 대한 참고 사항</block>
+  <block id="83e49813b50f1fc5e03ffde57c985102" category="paragraph">24시간 이상 활성 상태를 유지하는 알림은 24시간마다 알림 및 변경 사항 목록에 표시되므로 동일한 알림이 여러 번 나열되는 것을 볼 수 있습니다. 이러한 각 알림은 동일한 알림 ID, 동일한 시작 시간 등을 가지며, 알림이 해결될 때까지 "알림" 상태를 유지합니다.</block>
+  <block id="079090a1dc96bbd4e45426ceeedd592f" category="summary">자동화된 경고 및 알림을 통해 인프라 성능, 용량 임계값 및 중요 이벤트를 사전에 추적하기 위한 사용자 지정 메트릭 및 로그 모니터를 만듭니다.</block>
+  <block id="883d09869adb0b8fae6c4387af23b6d4" category="paragraph">인프라 리소스 전반에서 성능 임계값을 추적하고 이벤트와 이상을 기록하도록 모니터를 구성합니다. 노드 쓰기 지연 시간, 스토리지 용량, 애플리케이션 성능 등의 측정 항목에 대한 사용자 정의 알림을 만들고, 이러한 조건이 충족되면 알림을 받습니다.</block>
+  <block id="a7cd6a99f9ca0fccc58590218d395239" category="paragraph">메트릭 모니터는 스토리지, 스위치, 호스트, VM 등의 인벤토리 객체와 ONTAP Advanced 또는 Kubernetes 데이터와 같은 통합 메트릭에 적용됩니다. 재고 객체를 모니터링할 때 "그룹화 기준" 방법을 선택할 수 없다는 점에 유의하세요. 그러나 통합 데이터를 모니터링할 때는 그룹화가 허용됩니다.</block>
+  <block id="70b37ea4cf45e401178bb71faa1e50fe" category="section-title">다중 조건 모니터</block>
+  <block id="6e8d7620a4a0bc7614ae9936242cc79e" category="paragraph">두 번째 조건을 추가하여 메트릭 모니터를 더욱 세분화할 수 있습니다. "+보조 메트릭 조건 추가" 프롬프트를 확장하고 추가 조건을 구성하기만 하면 됩니다.</block>
+  <block id="c7c9e436435c4770e86c98098336f9a2" category="inline-image-macro">두 번째 조건을 설정하다</block>
+  <block id="8047e4ba43998007d5db74d70e51011b" category="paragraph"><block ref="8047e4ba43998007d5db74d70e51011b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="53cd31c5f3906e17dd7f8643c332ec08" category="paragraph">두 가지 조건이 모두 충족되면 모니터에서 경고가 표시됩니다.</block>
+  <block id="440695f7e9d74e3d3294a5cd9405bf75" category="paragraph">두 번째 조건은 "AND"로만 설정할 수 있으며, 두 번째 조건 중 하나에 대해서만 알림을 설정할 수 없습니다.</block>
+  <block id="f5efcf93de96054f67b29d58662ad5c6" category="list-text">발생 간격으로 _15분_ 동안 _계속_을 선택합니다.</block>
+  <block id="95e94216ef8b85a76727809c3dfcbcc0" category="inline-link-macro">ONTAP 데이터 관리</block>
+  <block id="2520cfbb37bc8bbd2fc91278c73eb838" category="list-text">ONTAP REST 수집기에서는 Fpolicy 메트릭이 지원되지 않습니다(Workload Security 데이터 수집기는 FPolicy 서버를 사용하고, FPolicy 메트릭을 사용하면 Workload Security 데이터 수집 활동을 모니터링할 수 있음). Fpolicy 지표를 지원하려면 다음을 사용하세요. <block ref="5887f651a571af9233df120cb7d32347" category="inline-link-macro-rx"></block> 수집기.</block>
 </blocks>

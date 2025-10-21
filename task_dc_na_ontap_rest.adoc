@@ -32,6 +32,7 @@ NOTE: ONTAP REST 컬렉터는 이전 ONTAPI 기반 컬렉터를 대체하는 데
 
 * ONTAP 버전 9.14.1 이상.
 * 포트 요구 사항: 443
+* ONTAP REST 수집기에서는 Fpolicy 메트릭이 지원되지 않습니다(Workload Security 데이터 수집기는 FPolicy 서버를 사용하고, FPolicy 메트릭을 사용하면 Workload Security 데이터 수집 활동을 모니터링할 수 있음). Fpolicy 지표를 지원하려면 다음을 사용하세요. link:task_dc_na_cdot.html["ONTAP 데이터 관리"] 수집기.
 
 
 
