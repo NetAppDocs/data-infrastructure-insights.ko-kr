@@ -12776,7 +12776,6 @@
   <block id="83e49813b50f1fc5e03ffde57c985102" category="paragraph">24시간 이상 활성 상태를 유지하는 알림은 24시간마다 알림 및 변경 사항 목록에 표시되므로 동일한 알림이 여러 번 나열되는 것을 볼 수 있습니다. 이러한 각 알림은 동일한 알림 ID, 동일한 시작 시간 등을 가지며, 알림이 해결될 때까지 "알림" 상태를 유지합니다.</block>
   <block id="079090a1dc96bbd4e45426ceeedd592f" category="summary">자동화된 경고 및 알림을 통해 인프라 성능, 용량 임계값 및 중요 이벤트를 사전에 추적하기 위한 사용자 지정 메트릭 및 로그 모니터를 만듭니다.</block>
   <block id="883d09869adb0b8fae6c4387af23b6d4" category="paragraph">인프라 리소스 전반에서 성능 임계값을 추적하고 이벤트와 이상을 기록하도록 모니터를 구성합니다. 노드 쓰기 지연 시간, 스토리지 용량, 애플리케이션 성능 등의 측정 항목에 대한 사용자 정의 알림을 만들고, 이러한 조건이 충족되면 알림을 받습니다.</block>
-  <block id="a7cd6a99f9ca0fccc58590218d395239" category="paragraph">메트릭 모니터는 스토리지, 스위치, 호스트, VM 등의 인벤토리 객체와 ONTAP Advanced 또는 Kubernetes 데이터와 같은 통합 메트릭에 적용됩니다. 재고 객체를 모니터링할 때 "그룹화 기준" 방법을 선택할 수 없다는 점에 유의하세요. 그러나 통합 데이터를 모니터링할 때는 그룹화가 허용됩니다.</block>
   <block id="70b37ea4cf45e401178bb71faa1e50fe" category="section-title">다중 조건 모니터</block>
   <block id="6e8d7620a4a0bc7614ae9936242cc79e" category="paragraph">두 번째 조건을 추가하여 메트릭 모니터를 더욱 세분화할 수 있습니다. "+보조 메트릭 조건 추가" 프롬프트를 확장하고 추가 조건을 구성하기만 하면 됩니다.</block>
   <block id="c7c9e436435c4770e86c98098336f9a2" category="inline-image-macro">두 번째 조건을 설정하다</block>
@@ -12786,4 +12785,16 @@
   <block id="f5efcf93de96054f67b29d58662ad5c6" category="list-text">발생 간격으로 _15분_ 동안 _계속_을 선택합니다.</block>
   <block id="95e94216ef8b85a76727809c3dfcbcc0" category="inline-link-macro">ONTAP 데이터 관리</block>
   <block id="2520cfbb37bc8bbd2fc91278c73eb838" category="list-text">ONTAP REST 수집기에서는 Fpolicy 메트릭이 지원되지 않습니다(Workload Security 데이터 수집기는 FPolicy 서버를 사용하고, FPolicy 메트릭을 사용하면 Workload Security 데이터 수집 활동을 모니터링할 수 있음). Fpolicy 지표를 지원하려면 다음을 사용하세요. <block ref="5887f651a571af9233df120cb7d32347" category="inline-link-macro-rx"></block> 수집기.</block>
+  <block id="b2422fa602be830d9f1a2469dd70ca20" category="inline-link-macro">NetApp ONTAP AFX</block>
+  <block id="83cd27100a931554f0e05219011edf39" category="cell"><block ref="83cd27100a931554f0e05219011edf39" category="inline-link-macro-rx"></block></block>
+  <block id="14ec544dd26342f2315dc51923b34e66" category="summary">ONTAP AFX 컬렉터</block>
+  <block id="aaab7580be4232835e9f12e5691f118f" category="doc">NetApp ONTAP AFX 데이터 수집기</block>
+  <block id="e395c9addcba424f5bda562994dfecbe" category="cell">볼륨/ FlexVol/ FlexGroup</block>
+  <block id="1574b47ca9477a3fc7635017b8f4ca0b" category="cell">Qtree/FlexTree</block>
+  <block id="16aac8a4d65f63c39da98362e32e250d" category="cell">Qtree (유형: Explixit/Default)</block>
+  <block id="84ace9fb8e132c96d1dfcd31447efedc" category="cell">S3 버킷</block>
+  <block id="1143dbaa613581e6f7e9245d88a5a30d" category="cell">Qtree (유형: 버킷)</block>
+  <block id="26beb8e28a6498b161cc513e4d05c9f5" category="cell">StoragePod/StorageAvailabilityZone</block>
+  <block id="474d2ef9225b003245e9f5a40297e1e8" category="cell">SVM(스토리지 가상 머신)</block>
+  <block id="07ab2cfb4a15dea7a3c4679e886966f3" category="sidebar">ONTAP AFX</block>
 </blocks>

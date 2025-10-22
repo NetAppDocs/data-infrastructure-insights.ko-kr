@@ -247,6 +247,9 @@ Data Infrastructure Insights 에서 지원하는 데이터 수집기의 알파�
 | link:task_dc_na_ontap_rest.html["NetApp ONTAP REST 수집기"] | 하부 구조 
 
 
+| link:task_dc_na_ontap_afx.html["NetApp ONTAP AFX"] | 하부 구조 
+
+
 | link:task_dc_na_ontap_all_san_array.html["NetApp ONTAP ASA r2(All-SAN Array) 컬렉터"] | 하부 구조 
 
 
