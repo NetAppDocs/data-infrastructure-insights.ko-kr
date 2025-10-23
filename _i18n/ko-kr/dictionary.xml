@@ -558,17 +558,6 @@
   <block id="34727dd01aaa3e0d53fd68d429bbff53" category="doc">ONTAP 9.9+ 데이터 수집기용 NetApp Cloud Connection</block>
   <block id="0803ffc49bb5d009027ad578d29858b8" category="paragraph">이 데이터 수집기는 ONTAP 9.9+ CVO, AFF, FAS 시스템에서 데이터 수집을 지원하기 위해 클라우드 연결을 생성합니다.</block>
   <block id="fb915b764f3baecfa629ff22686e14ee" category="admonition">이 데이터 수집기는 2023년 4월 4일부터 Data Infrastructure Insights 에 설치할 수 없으며, 2023년 7월에 모든 Data Infrastructure Insights 설치에서 제거됩니다.</block>
-  <block id="aa660f33d4c20ae2b92aa73acb4c5828" category="summary">AWS 데이터 수집기를 위한 NetApp Cloud Volumes 서비스 구성</block>
-  <block id="6d719c7976115879cdcafb7922e7e5fd" category="doc">AWS 데이터 수집기용 NetApp Cloud Volumes 서비스</block>
-  <block id="85930060216df642a21fd8c262d1cc6c" category="paragraph">이 데이터 수집기는 AWS 구성을 위한 NetApp Cloud Volumes Services의 인벤토리 수집을 지원합니다.</block>
-  <block id="4aacf3bc449dad1d249c2fd81ea2e532" category="cell">클라우드 볼륨 지역</block>
-  <block id="4378310503f4a4c4ba83139f38afb7b2" category="cell">AWS용 NetApp Cloud Volumes 서비스 지역</block>
-  <block id="d876ff8da67c3731ae25d8335a4168b4" category="cell">API 키</block>
-  <block id="66859c6a7a598a12f20c8244126d4b34" category="cell">Cloud Volumes API 키</block>
-  <block id="5eb6bb157528b365f84c27bb4784031b" category="cell">비밀 키</block>
-  <block id="9447267c06cce84dba179c481872fb16" category="cell">클라우드 볼륨 비밀 키</block>
-  <block id="36d35d8bdb33f254c1406a404bc7c125" category="cell">다음과 유사한 오류가 발생했습니다. '요청 실행 실패: &lt;AWS 지역 엔드포인트&gt;:8080 [&lt;AWS 지역 엔드포인트&gt;/AWS 지역 엔드포인트 IP&gt;]에 연결 실패: 연결 시간 초과: GET \https://&lt;AWS 지역 엔드포인트 FQDN&gt;:8080/v1/Storage/IPRanges HTTP/1.1'</block>
-  <block id="f51fb2108c9628f317aa92174475a004" category="cell">그만큼<block ref="588cebdad26ee4a9a3bb08c290310eb7" category="inline-link-macro-rx"></block> Data Infrastructure Insights 에서 인수 부서와 통신하는 데 사용되는 데이터는 Data Infrastructure Insights 와 데이터 수집기 ​​자체 간에는 통신하지 않습니다.  시도해 볼 수 있는 몇 가지 사항은 다음과 같습니다. 수집 단위가 FQDN을 확인하고 필요한 포트에 도달할 수 있는지 확인하세요.  오류 메시지에서 지정된 엔드포인트에 도달하는 데 프록시가 필요하지 않은지 확인하세요.  Curl은 수집 장치와 엔드포인트 간의 통신을 테스트하는 데 사용할 수 있습니다.  이 테스트에서는 프록시를 사용하지 *않도록* 주의하세요.  예: root@acquisitionunit# curl -s -H accept:application/json -H "Content-type: application/json" -H api-key:&lt;데이터 수집기 ​​자격 증명에 사용되는 API 키 -H secret-key:&lt;데이터 수집기 ​​자격 증명에 사용되는 비밀 키&gt; -X GET \https://&lt;AWS 지역 엔드포인트&gt;:8080/v1/Storage/IPRanges</block>
   <block id="47407ceeb441f7c5d1eac8ca6060c4b7" category="summary">NetApp Cloud Volumes ONTAP 데이터 수집기 ​​구성</block>
   <block id="a7544b3f9e0cc7c642c8b55af45cc192" category="doc">NetApp Cloud Volumes ONTAP 데이터 수집기</block>
   <block id="2285e08ef18a1a3f2e02b335409147d7" category="paragraph">이 데이터 수집기는 Cloud Volumes ONTAP 구성에서 인벤토리 수집을 지원합니다.</block>
@@ -787,8 +776,6 @@
   <block id="bca66716b9ca2d13a4c28be69b276777" category="cell">3.3</block>
   <block id="caab88a7f89273838ab79f84c1c8a49d" category="summary">NetApp E-Series REST 데이터 수집기를 구성합니다.</block>
   <block id="7d9a2bf43caef4a2c2ccab31b58ad1fb" category="doc">NetApp E-Series REST 데이터 수집기</block>
-  <block id="02bbac9de1d6cf62350e13b0ebc66279" category="paragraph">NetApp E-Series REST 데이터 수집기는 인벤토리 및 성능 데이터를 수집합니다.  수집기는 동일한 구성을 사용하고 동일한 데이터를 보고하는 펌웨어 7.x+를 지원합니다.  REST 수집기는 스토리지 풀의 암호화 상태와 관련 디스크 및 볼륨의 암호화 상태를 모니터링하고 스토리지 노드 CPU 사용률을 성능 카운터로 제공합니다. 이 기능은 기존 SANtricity E-Series 수집기에서는 제공되지 않습니다.</block>
-  <block id="06026757f9dde1467a9d040a8e0ca5e8" category="paragraph">Cloud Insight는 REST를 사용하여 NetApp E-Series에서 다음과 같은 인벤토리 정보를 수집합니다.  인수한 각 자산 유형에 대해 해당 자산에 사용되는 가장 일반적인 용어가 표시됩니다.  이 데이터 수집기를 보거나 문제를 해결할 때 다음 용어를 염두에 두십시오.</block>
   <block id="199cdaad4b2e2da65f3c12904a570c15" category="inline-link-macro">E-시리즈 SANtricity API</block>
   <block id="025b66c3feb7622d3e2d83b097539fc0" category="list-text">이 수집기는 *기본 REST API 기능*을 갖춘 E-시리즈 모델 배열만 지원합니다.  E-Series 조직은 이전 E-Series 어레이를 위한 오프 어레이 설치 가능 REST API 배포판을 제공합니다. 이 수집기는 해당 시나리오를 지원하지 않습니다.  이전 배열을 사용하는 사용자는 계속해서 Data Infrastructure Insights 사용해야 합니다.<block ref="1e9e2e04984e423436b9d1423e41c8ce" category="inline-link-macro-rx"></block> 수집기.</block>
   <block id="1dec37be48852b1e80d1d4ddd48a1698" category="list-text">"E-시리즈 컨트롤러 IP 주소" 필드는 쉼표로 구분된 2개의 IP/호스트 이름 문자열을 지원합니다. 수집기는 첫 번째 IP/호스트 이름에 접근할 수 없는 경우 두 번째 IP/호스트 이름을 지능적으로 시도합니다.</block>
@@ -3139,7 +3126,6 @@
   <block id="140864078aeca1c7c35b4beb33c53c34" category="sidebar">마이크로소프트</block>
   <block id="c5865855c43d734069987786177edd98" category="sidebar">하이퍼-V</block>
   <block id="117bdbda976fe8b3212bc3b6327a0a1b" category="sidebar">Cloud Volumes ONTAP</block>
-  <block id="b81efc5684c71c82d1f7592812e5af66" category="sidebar">AWS용 Cloud Volumes 서비스</block>
   <block id="d97291003c6a6e6615571bf02531ca30" category="sidebar">ONTAP ASA (All-SAN 어레이) r2</block>
   <block id="9c58e11f96200548fd2f5932b391509a" category="sidebar">ONTAP 데이터 관리 소프트웨어</block>
   <block id="bf9973f393dbc9824e3e96f831e12c25" category="sidebar">ONTAP REST 수집기</block>
@@ -7050,8 +7036,6 @@
   <block id="16442b20a2319083af65dedb2d7e942e" category="paragraph">대시보드를 모든 사람과 공유하거나, 편집 또는 읽기 전용 권한을 가진 사용자를 선택하여 공유할 수 있습니다.</block>
   <block id="1dcba5cd7d6049883623c0653a2031f6" category="inline-image-macro">편집 또는 읽기 권한이 있는 대시보드를 공유하기 위한 드롭다운</block>
   <block id="ac0466f21ebde71eed9f3673b4c7da1b" category="paragraph"><block ref="ac0466f21ebde71eed9f3673b4c7da1b" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="3305ac26b15ec00c4372c85a08bb7042" category="summary">지원되는 데이터 수집기 목록입니다.</block>
-  <block id="3a6b9b02361ff37889bb4453f5ce5933" category="doc">Data Infrastructure Insights 데이터 수집기 ​​목록</block>
   <block id="4a67aaff87a4b62a93d49b26e8eab486" category="paragraph">Data Infrastructure Insights 다양한 공급업체와 서비스의 다양한 데이터 수집기를 지원합니다.</block>
   <block id="247727b698ccc6204ad7466cac97b566" category="paragraph">데이터 수집기는 다음 유형으로 분류됩니다.</block>
   <block id="3688337d7dae83e1ae45c29303993fc2" category="list-text">인프라: 스토리지 어레이, 스위치, 하이퍼바이저 또는 백업 장치와 같은 공급업체 장치에서 획득합니다.</block>
@@ -7190,8 +7174,6 @@
   <block id="4d9746bceefe2b6bd2586d1c3e4d2733" category="cell"><block ref="4d9746bceefe2b6bd2586d1c3e4d2733" category="inline-link-macro-rx"></block></block>
   <block id="b988e43525055930d8d214d3116d4c04" category="inline-link-macro">NetApp Cloud Volumes ONTAP</block>
   <block id="ecf8390ebf4bfbf85b7308b7ca58aaa1" category="cell"><block ref="ecf8390ebf4bfbf85b7308b7ca58aaa1" category="inline-link-macro-rx"></block></block>
-  <block id="91cd47436c04c106182959241ee93b9d" category="inline-link-macro">AWS용 NetApp Cloud Volumes 서비스</block>
-  <block id="3d569988d784be7b4a432df70e13153d" category="cell"><block ref="3d569988d784be7b4a432df70e13153d" category="inline-link-macro-rx"></block></block>
   <block id="acb242e4a47b7f1537825e1c4eacc87a" category="inline-link-macro">ONTAP 9.9+용 NetApp 클라우드 연결</block>
   <block id="32b322f0c18e116c5d878598d8fedae2" category="cell"><block ref="32b322f0c18e116c5d878598d8fedae2" category="inline-link-macro-rx"></block></block>
   <block id="995d9995da501d3734932d95524f1a35" category="inline-link-macro">NetApp Data ONTAP 7-Mode</block>
@@ -12797,4 +12779,9 @@
   <block id="26beb8e28a6498b161cc513e4d05c9f5" category="cell">StoragePod/StorageAvailabilityZone</block>
   <block id="474d2ef9225b003245e9f5a40297e1e8" category="cell">SVM(스토리지 가상 머신)</block>
   <block id="07ab2cfb4a15dea7a3c4679e886966f3" category="sidebar">ONTAP AFX</block>
+  <block id="8a3c7a91b37c85b11fcedc99bf01705d" category="summary">Data Infrastructure Insights 에서 지원하는 모든 데이터 수집기의 알파벳순 참조 목록으로, 인프라 및 서비스 유형별로 정리되어 있습니다.</block>
+  <block id="3f98097ad0f17344bf7bd5127344ba03" category="doc">Data Infrastructure Insights 데이터 수집기 ​​참조 목록</block>
+  <block id="a7cd6a99f9ca0fccc58590218d395239" category="paragraph">메트릭 모니터는 스토리지, 스위치, 호스트, VM 등의 인벤토리 객체와 ONTAP Advanced 또는 Kubernetes 데이터와 같은 통합 메트릭에 적용됩니다. 재고 객체를 모니터링할 때 "그룹화 기준" 방법을 선택할 수 없다는 점에 유의하세요. 그러나 통합 데이터를 모니터링할 때는 그룹화가 허용됩니다.</block>
+  <block id="c712dc09bb9c9243894a5127306517ba" category="paragraph">NetApp E-Series REST 데이터 수집기는 인벤토리, 로그 및 성능 데이터를 수집합니다. 수집기는 동일한 구성을 사용하고 동일한 데이터를 보고하는 펌웨어 7.x+를 지원합니다.  REST 수집기는 스토리지 풀, 디스크 및 볼륨의 암호화 상태, 스토리지 노드 CPU 사용률, 기존 SANtricity E-Series 수집기에서 제공되지 않는 로그 기능을 모니터링합니다.</block>
+  <block id="e997ccbcc3dc041951b04d1a57ba2999" category="paragraph">Data Infrastructure Insights REST를 사용하여 NetApp E-Series에서 다음과 같은 인벤토리 정보를 수집합니다. 인수한 각 자산 유형에 대해 해당 자산에 사용되는 가장 일반적인 용어가 표시됩니다. 이 데이터 수집기를 보거나 문제를 해결할 때 다음 용어를 염두에 두십시오.</block>
 </blocks>

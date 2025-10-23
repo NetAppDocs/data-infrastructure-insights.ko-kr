@@ -1,12 +1,16 @@
 ---
 sidebar: sidebar 
 permalink: data_collector_list.html 
-summary: 지원되는 데이터 수집기 목록입니다. 
+summary: Data Infrastructure Insights 에서 지원하는 모든 데이터 수집기의 알파벳순 참조 목록으로, 인프라 및 서비스 유형별로 정리되어 있습니다. 
 keywords: data collector, vendor, infrastructure, integration, service 
 ---
-= Data Infrastructure Insights 데이터 수집기 ​​목록
+= Data Infrastructure Insights 데이터 수집기 ​​참조 목록
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -218,9 +222,6 @@ Data Infrastructure Insights 에서 지원하는 데이터 수집기의 알파�
 
 
 | link:task_dc_na_cloud_volumes_ontap.html["NetApp Cloud Volumes ONTAP"] | 하부 구조 
-
-
-| link:task_dc_na_cloud_volumes.html["AWS용 NetApp Cloud Volumes 서비스"] | 하부 구조 
 
 
 | link:task_dc_na_cloud_connection.html["ONTAP 9.9+용 NetApp 클라우드 연결"] | 하부 구조 
