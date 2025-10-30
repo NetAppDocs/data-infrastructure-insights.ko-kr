@@ -12784,4 +12784,13 @@
   <block id="a7cd6a99f9ca0fccc58590218d395239" category="paragraph">메트릭 모니터는 스토리지, 스위치, 호스트, VM 등의 인벤토리 객체와 ONTAP Advanced 또는 Kubernetes 데이터와 같은 통합 메트릭에 적용됩니다. 재고 객체를 모니터링할 때 "그룹화 기준" 방법을 선택할 수 없다는 점에 유의하세요. 그러나 통합 데이터를 모니터링할 때는 그룹화가 허용됩니다.</block>
   <block id="c712dc09bb9c9243894a5127306517ba" category="paragraph">NetApp E-Series REST 데이터 수집기는 인벤토리, 로그 및 성능 데이터를 수집합니다. 수집기는 동일한 구성을 사용하고 동일한 데이터를 보고하는 펌웨어 7.x+를 지원합니다.  REST 수집기는 스토리지 풀, 디스크 및 볼륨의 암호화 상태, 스토리지 노드 CPU 사용률, 기존 SANtricity E-Series 수집기에서 제공되지 않는 로그 기능을 모니터링합니다.</block>
   <block id="e997ccbcc3dc041951b04d1a57ba2999" category="paragraph">Data Infrastructure Insights REST를 사용하여 NetApp E-Series에서 다음과 같은 인벤토리 정보를 수집합니다. 인수한 각 자산 유형에 대해 해당 자산에 사용되는 가장 일반적인 용어가 표시됩니다. 이 데이터 수집기를 보거나 문제를 해결할 때 다음 용어를 염두에 두십시오.</block>
+  <block id="57e1771ce1e6d595e42a3b886ca50109" category="section-title">2025년 11월</block>
+  <block id="62a254ee95eae896e983f0fa134680f4" category="section-title">개인화된 홈페이지 설정</block>
+  <block id="090655f61ce1a2016b2b1f7d8a300b0d" category="paragraph">_모든_ Data Infrastructure Insights 페이지를 개인화된 홈페이지로 설정하여 일일 모니터링 워크플로를 간소화하세요. 각 사용자는 자신에게 중요한 사항(중요 대시보드, 알림, 인프라 상태, 워크로드 보안 등)에 초점을 맞춰 다른 홈페이지를 선택할 수 있습니다.</block>
+  <block id="7ddd781b2ae78fc386e83cd8e2c0692e" category="inline-image-macro">홈페이지 설정, width=300</block>
+  <block id="55cc3fafb7135c031d4e8b64565d201a" category="paragraph"><block ref="55cc3fafb7135c031d4e8b64565d201a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7cbf92f9cdc81c507070533c182c6855" category="section-title">자동 대시보드 그룹화로 체계적으로 정리하세요</block>
+  <block id="344e2ec56c6114e245d66d3978073950" category="paragraph">가져온 갤러리 대시보드를 자동으로 논리적인 카테고리로 정리하는 지능형 그룹화 기능으로 대시보드 경험을 혁신하세요. 새로운 그룹화 기능을 사용하면 대시보드 가져오기가 매우 간편해지고, 각 대시보드를 기능과 사용자 환경과의 관련성에 따라 적절한 그룹에 배치할 수 있습니다.</block>
+  <block id="251972b93cab79073298e6ad6678a0be" category="inline-image-macro">가져오기 중 갤러리 그룹, 너비=500</block>
+  <block id="99d6cc3c987c34af31c72d3213e5e764" category="paragraph"><block ref="99d6cc3c987c34af31c72d3213e5e764" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
