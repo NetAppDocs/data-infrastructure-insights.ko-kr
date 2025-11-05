@@ -7,6 +7,10 @@ summary: 요약.
 = 구성된 데이터 수집기 관리
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
