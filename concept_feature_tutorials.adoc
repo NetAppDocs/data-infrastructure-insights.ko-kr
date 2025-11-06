@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: concept_feature_tutorials.html 
-summary: Data Infrastructure Insights 에는 다양한 작업을 수행하는 방법을 보여주는 튜토리얼이 있습니다. 
+summary: 단계별 비디오 튜토리얼을 통해 대시보드, 쿼리, 모니터링, 문제 해결과 같은 Data Infrastructure Insights 기능을 완벽하게 익힐 수 있습니다. 
 keywords: onboarding, getting started, video, tutorial, resolution, dashboard, query, troubleshooting 
 ---
-= 기능 튜토리얼
+= 비디오 튜토리얼 시작하기
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ keywords: onboarding, getting started, video, tutorial, resolution, dashboard, q
 
 
 [role="lead"]
-Data Infrastructure Insights 문제를 빠르고 쉽게 해결하고 회사 환경에 대한 통찰력을 제공하는 데 유용한 기능이 가득합니다.  강력한 쿼리를 사용하여 데이터를 쉽게 찾고, 대시보드에서 데이터를 시각화하고, 설정한 데이터 임계값에 대한 이메일 알림을 보내세요.
+단계별 비디오 가이드와 진행 상황 체크리스트가 포함된 기능 튜토리얼을 통해 Data Infrastructure Insights 효율적으로 학습하세요.  대시보드 만들기, 쿼리 작성, 모니터링 설정, 문제 해결과 같은 필수 기술을 실습 튜토리얼을 통해 빠르게 생산성을 높일 수 있도록 익혀보세요.
 
 
 
@@ -38,3 +38,19 @@ NOTE: 튜토리얼은 원하는 순서대로 볼 수 있으며, 종료할 때까
 === 체크리스트 폐기
 
 시작 체크리스트는 체크리스트 하단의 _다시 표시 안 함_ 링크를 클릭할 때까지 표시됩니다.  체크리스트를 닫은 후에도 각 Data Infrastructure Insights 페이지에서 튜토리얼을 계속 볼 수 있으며, 메시지 헤더 표시줄에서 각 튜토리얼을 닫을 때까지는 사용할 수 없습니다.
+
+
+
+== 비디오 튜토리얼
+
+자세한 내용을 알아보려면 다음 영상을 시청하세요.
+
+link:https://media.netapp.com/video-detail/248621bd-6619-5dc8-9718-5d78d0fd21da/turn-raw-data-into-actionable-insights["원시 데이터를 실행 가능한 통찰력으로 전환"^]
+
+link:https://media.netapp.com/video-detail/5a293f3c-c655-5879-9133-1a32aaa140e8/create-powerful-dashboards-with-netapp["NetApp 으로 강력한 대시보드 만들기"^]
+
+link:https://media.netapp.com/video-detail/0e62b784-8456-5ef7-8879-f0352135a0f1/simplified-troubleshooting-with-vm-analyzer["VM Analyzer를 사용한 간소화된 문제 해결"^]
+
+link:https://media.netapp.com/video-detail/d0530e0b-a222-52e7-92b1-dbeeee41b712/explore-and-analyze-with-queries-in-data-infrastructure-insights["Data Infrastructure Insights 에서 쿼리를 사용하여 탐색하고 분석하세요."^]
+
+link:https://media.netapp.com/video-detail/43497a8e-f648-56b7-9bc7-8d5d4274510f/proactive-infrastructure-monitoring-with-alerts-and-monitors["알림 및 모니터를 통한 사전 예방적 인프라 모니터링"^]

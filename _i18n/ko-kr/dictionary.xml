@@ -188,13 +188,7 @@
   <block id="ad99b83e7b10ea825777161cb8f5594b" category="cell">* 입력한 자격 증명과 IP 주소를 확인하세요.  * 웹 관리 콘솔 \https://&lt;ip&gt;:8452/DS8000/Console을 통해 배열과 통신을 시도하세요.  &lt;ip&gt;를 데이터 수집기에 구성된 IP로 바꾸세요.</block>
   <block id="b18a21f855b9b4e7ca0fae5355812eb5" category="cell">오류: * 프로그램을 실행할 수 없습니다. * 명령 실행 중 오류가 발생했습니다.</block>
   <block id="79766e839f35eb1cc1188445059bba75" category="cell">* Data Infrastructure Insights Acquisition Unit에서 CMD를 엽니다. * CLI의 홈 디렉토리/lib에서 CLI.CFG 파일을 열고 JAVA_INSTALL 속성을 확인하고 환경에 맞게 값을 편집합니다. * "java -version"을 입력하여 이 컴퓨터에 설치된 Java 버전을 표시합니다. * CLI 명령에서 지정한 IBM 스토리지 장치의 IP 주소를 ping합니다.  * 위의 모든 것이 정상적으로 작동하면 CLI 명령을 수동으로 실행하세요.</block>
-  <block id="c5c601f0f7513cb66c54f7740aebd769" category="summary">IBM TotalStorage DS4000 데이터 수집기</block>
-  <block id="bb368e45192fd41360b40a61c441bbf7" category="paragraph">이 데이터 수집기는 IBM DS4000 스토리지 시스템에서 인벤토리 및 성능 정보를 수집합니다.  가능한 구성은 두 가지(펌웨어 6.x 및 펌웨어 7.x+)이며, 두 구성 모두 동일한 값을 갖습니다.</block>
-  <block id="f8defa21a7abf462d74f023cc11be1db" category="paragraph">Data Infrastructure Insights IBM DS4000 데이터 수집기에서 다음과 같은 인벤토리 정보를 수집합니다.  인수한 각 자산 유형에 대해 해당 자산에 사용되는 가장 일반적인 용어가 표시됩니다.  이 데이터 수집기를 보거나 문제를 해결할 때 다음 용어를 염두에 두십시오.</block>
   <block id="0951a6690e5dc87411346792c9f941c7" category="cell">볼륨 그룹</block>
-  <block id="d9dc66c5dd0daf41b61af8de89a60066" category="list-text">각 DS5 또는 FAStT 어레이의 IP 주소</block>
-  <block id="90708586f8afae2670c5e389c5b3df37" category="list-text">어레이의 두 컨트롤러의 IP 주소를 ping하여 액세스 검증</block>
-  <block id="d0ad61d8d4e1d5d38bb6b0cb90a5d934" category="list-text">포트 요구 사항: 2463</block>
   <block id="86c00393c5a1dba7b670a90d957d105e" category="cell">Array SANtricity Controller IP의 쉼표로 구분된 목록</block>
   <block id="f9cba995b86ac6c96d9d30c9ced7c828" category="cell">어레이 컨트롤러에 대한 IP 주소 및/또는 정규화된 도메인 이름</block>
   <block id="123823c1c5909eba4c00c4d8585c250f" category="cell">기본값은 30분입니다</block>
@@ -4108,26 +4102,14 @@
   <block id="33b013de46ebfe3f233e12e26bb762a4" category="paragraph">쿼리와 필터에서 반환된 객체는 다음 그림에 표시된 객체와 유사합니다.  '태그'가 할당된 객체는 주석이고, 태그가 없는 객체는 성능 카운터 또는 객체 속성입니다.</block>
   <block id="3424b9554ebd571fa4ee62bd540c81dd" category="inline-image-macro">필터에서 반환된 객체</block>
   <block id="5ffcd444715146c4b8ef3c2e14e25859" category="paragraph"><block ref="5ffcd444715146c4b8ef3c2e14e25859" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="d7eb8ab1e688454eec9d83c8277b00fe" category="section-title">그룹화 및 집계</block>
   <block id="3d0486264987eff198cb8489a591c919" category="section-title">그룹화(롤링업)</block>
-  <block id="e251f9ae37a0914ac3ed0861aee9d003" category="paragraph">위젯에 표시되는 데이터는 수집 중에 수집된 기본 데이터 포인트에서 그룹화(때로는 롤업이라고 함)됩니다.  예를 들어, 시간 경과에 따른 스토리지 IOPS를 보여주는 선형 차트 위젯이 있는 경우 빠른 비교를 위해 각 데이터 센터에 대한 별도의 선을 보고 싶을 수 있습니다.  다음 중 한 가지 방법으로 이 데이터를 그룹화할 수 있습니다.</block>
   <block id="fec05a93bc2859fa296e20fb09a6d339" category="list-text">*평균*: 각 줄을 기본 데이터의 _평균_으로 표시합니다.</block>
   <block id="c4006c924bdf8bc80ddcd09bd46d0666" category="list-text">*최대값*: 각 줄을 기본 데이터의 _최대값_으로 표시합니다.</block>
   <block id="fdf509d52d13201cead39e938712c689" category="list-text">*최소*: 각 줄을 기본 데이터의 _최소_로 표시합니다.</block>
   <block id="1a284984e082a2cc2ceecd12b5c25e50" category="list-text">*합계*: 각 줄을 기본 데이터의 _합계_로 표시합니다.</block>
-  <block id="fada1c7705d134b1361677f79eef7e6a" category="list-text">*개수*: 지정된 기간 내에 데이터를 보고한 개체의 _개수_를 표시합니다.  대시보드 시간 범위에 따라 _전체 시간 창_을 선택할 수 있습니다.</block>
-  <block id="d186cba97a995601fc12d97defd879c7" category="paragraph">그룹화 방법을 설정하려면 다음을 수행하세요.</block>
-  <block id="0886591e8bd637066947802b2c681da8" category="list-text">위젯 쿼리에서 자산 유형과 메트릭(예: _저장소_) 및 메트릭(예: _성능 IOPS 전체_)을 선택합니다.</block>
-  <block id="843784684ad8439aa0ddfe813cac8e16" category="list-text">*그룹*의 경우 롤업 방법(예: _평균_)을 선택하고 데이터를 롤업할 속성이나 메트릭(예: _데이터 센터_)을 선택합니다.</block>
-  <block id="5545e86f2a092d7eeeeae79320003a7a" category="paragraph">위젯은 자동으로 업데이트되어 각 데이터 센터의 데이터를 보여줍니다.</block>
-  <block id="9b3328ae96bacd8c344b3f781d9113c0" category="paragraph">또한 기본 데이터 전체를 차트나 표로 그룹화할 수도 있습니다.  이 경우 위젯의 각 쿼리에 대해 단일 줄이 표시되며, 여기에는 기본 자산 전체에 대한 선택한 메트릭의 평균, 최소값, 최대값, 합계 또는 개수가 표시됩니다.</block>
-  <block id="28c428ed363d0e9575a830fcfb080fe3" category="paragraph">"전체"로 데이터가 그룹화된 위젯의 범례를 클릭하면 위젯에서 사용된 첫 번째 쿼리의 결과를 보여주는 쿼리 페이지가 열립니다.</block>
   <block id="12d9c21e855587068144e1be92c3bc96" category="paragraph">쿼리에 대한 필터를 설정한 경우, 필터링된 데이터를 기준으로 데이터가 그룹화됩니다.</block>
-  <block id="4bb74590cbf2f4d72c628f06e53c55b9" category="paragraph">위젯을 필드별로 그룹화하기로 선택한 경우(예: _모델_)에도 해당 필드의 데이터를 차트나 표에 올바르게 표시하려면 해당 필드별로 필터링해야 합니다.</block>
   <block id="d86c1c1f96efbca023a6312f2655cdd2" category="section-title">데이터 집계</block>
-  <block id="757a30a76f00d417fdea69085d4444a4" category="paragraph">해당 데이터를 속성별로 롤업하기 전에 데이터 포인트를 분, 시간 또는 일 버킷으로 집계하여 시계열 차트(선, 영역 등)를 더욱 세부적으로 정렬할 수 있습니다(선택한 경우).  데이터 포인트를 _평균, 최대값, 최소값, 합계_ 또는 _개수_에 따라 집계하도록 선택할 수 있습니다.</block>
   <block id="a10dce4cf3b20fcc81ffdd73fff68459" category="paragraph">짧은 간격과 긴 시간 범위가 결합되면 "집계 간격으로 인해 데이터 포인트가 너무 많아졌습니다."라는 경고가 발생할 수 있습니다.  간격이 짧고 대시보드 기간을 7일로 늘리면 이런 현상이 나타날 수 있습니다.  이 경우 Insight는 더 짧은 시간 프레임을 선택할 때까지 집계 간격을 일시적으로 늘립니다.</block>
-  <block id="6d984d3ac5f53bc70c9ce3bedb56f658" category="paragraph">막대형 차트 위젯과 단일 값 위젯에서도 데이터를 집계할 수 있습니다.</block>
   <block id="abbc6ae3194254cb0a6cd47c50a20631" category="paragraph">대부분의 자산 카운터는 기본적으로 _평균_으로 집계됩니다.  일부 카운터는 기본적으로 _Max_, _Min_ 또는 _Sum_으로 집계됩니다.  예를 들어, 포트 오류는 기본적으로 _Sum_으로 집계되고, 스토리지 IOPS는 _Average_로 집계됩니다.</block>
   <block id="806da624ec9d79eaa05cce82c4860377" category="section-title">상위/하위 결과 표시</block>
   <block id="30481770dde0dcefc7b5810b7184ac11" category="paragraph">차트 위젯에서는 롤업된 데이터에 대한 *상위* 또는 *하위* 결과를 표시할 수 있으며, 제공된 드롭다운 목록에서 표시할 결과 수를 선택할 수 있습니다.  테이블 위젯에서는 원하는 열을 기준으로 정렬할 수 있습니다.</block>
@@ -4680,9 +4662,7 @@
   <block id="d7ea4828749f5ad072aad31fed4a03a1" category="paragraph">*호스트 이름:* US-BV-M11</block>
   <block id="6d7440617347d4c460f065f3f403cc7e" category="paragraph">*정규식:* SRV_USBV([A-Za-z0-9]+)_F[12]</block>
   <block id="bf3f7ef872246f009e37d0a4c0951049" category="paragraph">*형식:* US-BV-\1</block>
-  <block id="08b3c5691f5c3cb584dc1a3ec5321962" category="summary">Data Infrastructure Insights 에는 다양한 작업을 수행하는 방법을 보여주는 튜토리얼이 있습니다.</block>
   <block id="5b425cd08035f29c3dad5d45f1d2ea6e" category="doc">기능 튜토리얼</block>
-  <block id="f96c0cb8e557b8c2286592a385c5fd6e" category="paragraph">Data Infrastructure Insights 문제를 빠르고 쉽게 해결하고 회사 환경에 대한 통찰력을 제공하는 데 유용한 기능이 가득합니다.  강력한 쿼리를 사용하여 데이터를 쉽게 찾고, 대시보드에서 데이터를 시각화하고, 설정한 데이터 임계값에 대한 이메일 알림을 보내세요.</block>
   <block id="7dc1d63676b307452b778906ec63a727" category="section-title">체크리스트 및 비디오 튜토리얼</block>
   <block id="9a3ddb6d99b9ffb5f7473690abc9fb52" category="paragraph">Data Infrastructure Insights 테넌트에 표시되는 *시작 체크리스트*에는 여러 가지 유용한 작업과 개념 목록이 포함되어 있습니다.  체크리스트에서 항목을 선택하면 해당 개념에 맞는 Data Infrastructure Insights 페이지로 이동합니다.  예를 들어, _대시보드 만들기_ 항목을 클릭하면 Data Infrastructure Insights *대시보드* 페이지가 열립니다.</block>
   <block id="06bc4be9452f8162d26f7cb4b4d2e0b2" category="inline-image-macro">튜토리얼 체크리스트 진행 상황</block>
@@ -11695,9 +11675,7 @@
   <block id="874db297b2254479eeb702a2d7fa8dab" category="list-text">*삭제*를 클릭하세요.</block>
   <block id="e08b25c0c2d46e96d0ac5d6faca80bbf" category="paragraph">시스템에 *에이전트 삭제* 페이지가 표시됩니다.</block>
   <block id="bd69c8c7685e8cb8cbe42da9c5c9d5e0" category="list-text">삭제를 확인하려면 *삭제*를 클릭하세요.</block>
-  <block id="3e68378ba1d3b7f2245578e342bed0be" category="summary">몇 가지 간단한 단계를 통해 Workload Security를 사용할 수 있습니다.</block>
   <block id="bba50a707846a3806736dc01f6354532" category="doc">워크로드 보안 시작하기</block>
-  <block id="0506b86e6f0cdfab05c9570568f031d8" category="paragraph">Workload Security를 사용하여 사용자 활동을 모니터링하려면 먼저 완료해야 할 구성 작업이 있습니다.</block>
   <block id="f827ca5aa861a4bddcbc872872858f88" category="paragraph">워크로드 보안 시스템은 에이전트를 사용하여 스토리지 시스템에서 액세스 데이터를 수집하고 디렉토리 서비스 서버에서 사용자 정보를 수집합니다.</block>
   <block id="b69df43565e372517a8522587f62a492" category="paragraph">데이터 수집을 시작하려면 먼저 다음을 구성해야 합니다.</block>
   <block id="eaeb30f9f18e0c50b178676f3eaef45f" category="cell">일</block>
@@ -11706,20 +11684,12 @@
   <block id="7db04bd496cdb9ab394c662c3f00f7ed" category="paragraph"><block ref="7db04bd496cdb9ab394c662c3f00f7ed" category="inline-link-macro-rx"></block></block>
   <block id="0e46a6bad3878362e846c7b92d82bf81" category="inline-link-macro">에이전트 추가</block>
   <block id="8a48ba26234a2f9778b42b78c443e637" category="paragraph"><block ref="8a48ba26234a2f9778b42b78c443e637" category="inline-link-macro-rx"></block></block>
-  <block id="5b9de2c90171387a124d93a9f2da96f0" category="inline-link-macro">*비디오*: 에이전트 배포</block>
-  <block id="4e7bc63fc55f6e0ea38b5aaf46f782fa" category="paragraph"><block ref="4e7bc63fc55f6e0ea38b5aaf46f782fa" category="inline-link-macro-rx"></block></block>
   <block id="ea7a70b573d06d2b749ceca1ebd27807" category="cell">사용자 디렉토리 커넥터 구성</block>
   <block id="3989712b3613cd2576d0059b20b345ce" category="inline-link-macro">사용자 디렉토리 커넥터 추가</block>
-  <block id="938c31c8b36e8eb1b4defe3caa95717e" category="inline-link-macro">*비디오*: Active Directory 연결</block>
-  <block id="8946e54a232a494e5ad35eb956c130ee" category="cell"><block ref="d49a8da0de1eee7dc793284699bb0bab" category="inline-link-macro-rx"></block> <block ref="e2ee1872ae14f9b079a5e15b45b85992" category="inline-link-macro-rx"></block></block>
   <block id="6e043661fa5856f26501d44b41838596" category="cell">데이터 수집기 구성</block>
-  <block id="9a588e9b6b88f5c90c86bde96fc3f0c1" category="inline-link-macro">*비디오*: ONTAP SVM 연결</block>
-  <block id="b0bdf1289c168696fcf69f90ddc82ab2" category="cell">*워크로드 보안 &gt; 수집기*를 클릭합니다. 구성하려는 데이터 수집기를 클릭합니다.  설명서의 데이터 수집기 공급업체 참조 섹션을 참조하세요.<block ref="49902fc743c67e64ddcf4901ef2c69bf" category="inline-link-macro-rx"></block></block>
   <block id="a1d0a98f6922d21edbc391782fbb69e3" category="cell">사용자 계정 생성</block>
   <block id="8e9fceaaf84bd1591dc11726965a5b35" category="inline-link-macro">사용자 계정 관리</block>
   <block id="a6fe30cef6ad189dc3685c855c858b10" category="cell"><block ref="a6fe30cef6ad189dc3685c855c858b10" category="inline-link-macro-rx"></block></block>
-  <block id="82cb9bc9a2d4a2705c91af9df596adb3" category="inline-link-macro">*동영상*: 문제 해결</block>
-  <block id="23911ec6737c5f573a24c330a412e271" category="cell"><block ref="23911ec6737c5f573a24c330a412e271" category="inline-link-macro-rx"></block></block>
   <block id="100c37ccf9bdbedac2e35d90d41d3be9" category="inline-link-macro">이 가이드를 참조하세요</block>
   <block id="2e51f9cf2f419fb083d896473cf49193" category="paragraph">워크로드 보안은 다른 도구와도 통합될 수 있습니다.  예를 들어,<block ref="4ccd3ce9fc5ce8804b14aeb0860cf515" category="inline-link-macro-rx"></block> Splunk와의 통합에 관하여.</block>
   <block id="90fbffa9ff3e21a719cc9451531fc673" category="summary">워크로드 보안 사용자 계정은 Data Infrastructure Insights 사용자 관리를 통해 관리됩니다.</block>
@@ -12793,4 +12763,33 @@
   <block id="344e2ec56c6114e245d66d3978073950" category="paragraph">가져온 갤러리 대시보드를 자동으로 논리적인 카테고리로 정리하는 지능형 그룹화 기능으로 대시보드 경험을 혁신하세요. 새로운 그룹화 기능을 사용하면 대시보드 가져오기가 매우 간편해지고, 각 대시보드를 기능과 사용자 환경과의 관련성에 따라 적절한 그룹에 배치할 수 있습니다.</block>
   <block id="251972b93cab79073298e6ad6678a0be" category="inline-image-macro">가져오기 중 갤러리 그룹, 너비=500</block>
   <block id="99d6cc3c987c34af31c72d3213e5e764" category="paragraph"><block ref="99d6cc3c987c34af31c72d3213e5e764" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5ec1b38643878459e136106056fc3081" category="section-title">그룹화, 식별 및 집계</block>
+  <block id="dc185a282a5cd3225e8cc57b4b6b6aa1" category="paragraph">위젯에 표시되는 데이터는 수집 중에 수집된 기본 데이터 포인트에서 그룹화(때로는 롤업이라고 함)됩니다. 예를 들어, 시간 경과에 따른 스토리지 IOPS를 보여주는 선형 차트 위젯이 있는 경우 빠른 비교를 위해 각 데이터 센터에 대한 별도의 선을 보고 싶을 수 있습니다. "그룹화 기준" 필드에서 개체 유형 자체를 선택하면 위젯 유형에 따라 각 개체에 대한 개별 선, 영역, 막대, 열 등을 볼 수 있습니다.  해당 개체의 목록에서 사용 가능한 모든 속성을 기준으로 그룹화할 수 있습니다.  예를 들어, 내부 볼륨의 데이터를 볼 때 저장소 이름별로 데이터를 그룹화할 수 있습니다.</block>
+  <block id="fa0e168aa1b39e8090932eea11026412" category="paragraph">통합된 데이터를 보려면 그룹화 기준 속성을 제거하세요. 그러면 기본적으로 "전체"로 그룹화됩니다.</block>
+  <block id="fbcd269f31c4ab263533f3645a1a728a" category="paragraph">다음 중 한 가지 방법으로 이 데이터를 집계할 수 있습니다.</block>
+  <block id="06156308540648c4641a0a9cb567eaed" category="paragraph">대시보드를 볼 때, "전체"로 데이터가 그룹화된 위젯의 범례를 선택하면 위젯에서 사용된 첫 번째 쿼리의 결과를 보여주는 쿼리 페이지가 열립니다.</block>
+  <block id="6882d2460edb6d055bfb008888648c98" category="section-title">사용자 정의 데이터 식별</block>
+  <block id="66cbbbe1e48b5652dacf30cdc0a8c109" category="paragraph">사용자 정의 데이터를 기반으로 위젯을 만들거나 수정하는 경우, 식별 속성이 없으면 위젯에 데이터가 제대로 표시되지 않을 수 있습니다.  DII가 위젯에 대해 선택한 객체를 식별할 수 없는 경우 "그룹화 기준" 영역에 _고급 구성_ 링크가 표시됩니다.  이것을 확장하여 데이터를 식별할 속성을 선택합니다.</block>
+  <block id="d489c8cc0112182e1e9478e7c22dd3f8" category="inline-image-macro">알 수 없는 데이터에 대한 드롭다운을 통해 식별</block>
+  <block id="355bd56539964e29708b9c4df7942fc1" category="paragraph"><block ref="355bd56539964e29708b9c4df7942fc1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6aa8e407f2a6d45ee7e0e895bfb9b4c6" category="paragraph">해당 데이터가 속성별로 롤업되기 전에 분, 시간 또는 일 버킷으로 데이터 포인트를 집계하여 차트를 더욱 정렬할 수 있습니다(선택한 경우). 데이터 포인트를 _평균, 최대값, 최소값, 합계_ 또는 _개수_에 따라 집계하도록 선택할 수 있습니다.</block>
+  <block id="64e6afd71183834ff1036fd74f3e716e" category="summary">단계별 비디오 튜토리얼을 통해 대시보드, 쿼리, 모니터링, 문제 해결과 같은 Data Infrastructure Insights 기능을 완벽하게 익힐 수 있습니다.</block>
+  <block id="2ad37fcdfb757474e55b13972a8ba843" category="doc">비디오 튜토리얼 시작하기</block>
+  <block id="606714bccc97b2ecd8ce8598c5298ddd" category="paragraph">단계별 비디오 가이드와 진행 상황 체크리스트가 포함된 기능 튜토리얼을 통해 Data Infrastructure Insights 효율적으로 학습하세요.  대시보드 만들기, 쿼리 작성, 모니터링 설정, 문제 해결과 같은 필수 기술을 실습 튜토리얼을 통해 빠르게 생산성을 높일 수 있도록 익혀보세요.</block>
+  <block id="1ca1d3208fe70423d28d5346749bf725" category="section-title">비디오 튜토리얼</block>
+  <block id="f21521c513fcb8f1320750785f983ea4" category="paragraph">자세한 내용을 알아보려면 다음 영상을 시청하세요.</block>
+  <block id="efaefb91e104bcd35299c23da0236416" category="inline-link-macro">원시 데이터를 실행 가능한 통찰력으로 전환</block>
+  <block id="ae64c1ecf9b0637af4d421aec17b6b0f" category="paragraph"><block ref="ae64c1ecf9b0637af4d421aec17b6b0f" category="inline-link-macro-rx"></block></block>
+  <block id="260eb4e78ceb606b62c775c5fb398a50" category="inline-link-macro">NetApp 으로 강력한 대시보드 만들기</block>
+  <block id="765364e45c00e9c6747f8f72be907378" category="paragraph"><block ref="765364e45c00e9c6747f8f72be907378" category="inline-link-macro-rx"></block></block>
+  <block id="da2548febb74b05443083a5c4cb3bb98" category="inline-link-macro">VM Analyzer를 사용한 간소화된 문제 해결</block>
+  <block id="15235b29b13942ecccd882101e412b45" category="paragraph"><block ref="15235b29b13942ecccd882101e412b45" category="inline-link-macro-rx"></block></block>
+  <block id="b8563bbbe56bf52b001d27bc746ae8f7" category="inline-link-macro">Data Infrastructure Insights 에서 쿼리를 사용하여 탐색하고 분석하세요.</block>
+  <block id="cd85347613a114ab9748f0f1a561065c" category="paragraph"><block ref="cd85347613a114ab9748f0f1a561065c" category="inline-link-macro-rx"></block></block>
+  <block id="77354ced7e95147c4c951948901aa87b" category="inline-link-macro">알림 및 모니터를 통한 사전 예방적 인프라 모니터링</block>
+  <block id="08e9d4de145fab52e35be03578b2cb95" category="paragraph"><block ref="08e9d4de145fab52e35be03578b2cb95" category="inline-link-macro-rx"></block></block>
+  <block id="bc0e5d8878e85d65aed637113d5bef42" category="summary">사용자 활동을 모니터링하고 보안 위협을 감지하기 위해 워크로드 보안 에이전트와 데이터 수집기를 배포합니다.</block>
+  <block id="f6bd61a684c7e1301e78da3db50d1837" category="paragraph">워크로드 보안은 사용자 활동을 모니터링하고 스토리지 환경에서 잠재적인 보안 위협을 감지하는 데 도움이 됩니다.  모니터링을 시작하기 전에 에이전트, 데이터 수집기, 디렉터리 서비스를 구성하여 포괄적인 보안 모니터링의 기반을 마련해야 합니다.</block>
+  <block id="d49a8da0de1eee7dc793284699bb0bab" category="cell"><block ref="d49a8da0de1eee7dc793284699bb0bab" category="inline-link-macro-rx"></block></block>
+  <block id="adf5d1319b5bafa4d304b195ab11a3ac" category="cell">*워크로드 보안 &gt; 수집기*를 클릭합니다. 구성하려는 데이터 수집기를 클릭합니다. 수집기 정보는 설명서의 데이터 수집기 공급업체 참조 섹션을 참조하세요.</block>
 </blocks>
