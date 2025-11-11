@@ -401,8 +401,6 @@ sidebar:
           url: "/task_dc_ibm_cs.html"
         - title: 시스템 스토리지 DS8000 시리즈
           url: "/task_dc_ibm_ds.html"
-        - title: 파워VM
-          url: "/task_dc_ibm_powervm.html"
         - title: San 볼륨 컨트롤러(SVC)
           url: "/task_dc_ibm_svc.html"
         - title: XIV/A9000

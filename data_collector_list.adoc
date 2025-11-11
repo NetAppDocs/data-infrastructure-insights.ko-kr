@@ -173,9 +173,6 @@ Data Infrastructure Insights 에서 지원하는 데이터 수집기의 알파�
 | link:task_dc_ibm_cs.html["IBM CS 시리즈"] | 하부 구조 
 
 
-| link:task_dc_ibm_powervm.html["IBM 파워VM"] | 하부 구조 
-
-
 | link:task_dc_ibm_svc.html["IBM SAN 볼륨 컨트롤러(SVC)"] | 하부 구조 
 
 
