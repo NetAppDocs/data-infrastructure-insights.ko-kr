@@ -27,12 +27,12 @@ sidebar:
       url: "/security_admin_tool.html"
   - title: 시작하기
     entries:
+    - title: 기능 튜토리얼
+      url: "/concept_feature_tutorials.html"
     - title: 데이터 수집
       entries:
       - title: 개요
         url: "/task_getting_started_with_cloud_insights.html"
-      - title: 기능 튜토리얼
-        url: "/concept_feature_tutorials.html"
       - title: 인수 단위 요구 사항
         url: "/concept_acquisition_unit_requirements.html"
       - title: 수집 단위 구성
