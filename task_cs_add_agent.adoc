@@ -2,15 +2,19 @@
 sidebar: sidebar 
 permalink: task_cs_add_agent.html 
 keywords: agent, Workload Security, installation, Cloud Secure 
-summary: 워크로드 보안 에이전트 추가 
+summary: 워크로드 보안 에이전트는 사용자 활동을 모니터링하고 스토리지 환경에서 보안 위협을 감지합니다. 
 ---
-= 워크로드 보안 에이전트 설치
+= 워크로드 보안 에이전트 배포
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Workload Security(이전 Cloud Secure)는 하나 이상의 에이전트를 사용하여 사용자 활동 데이터를 수집합니다.  에이전트는 테넌트의 장치에 연결하여 분석을 위해 Workload Security SaaS 계층으로 전송되는 데이터를 수집합니다.  보다link:concept_cs_agent_requirements.html["에이전트 요구 사항"] 에이전트 VM을 구성하려면.
+워크로드 보안 에이전트는 사용자 활동을 모니터링하고 스토리지 인프라 전반에서 잠재적인 보안 위협을 감지하는 데 필수적입니다. 이 가이드에서는 사용자 환경에 에이전트를 배포하는 방법에 대한 단계별 지침을 제공합니다. 시작하기 전에 에이전트 서버가 다음 사항을 충족하는지 확인하십시오. link:concept_cs_agent_requirements.html["시스템 요구 사항"].
 
 
 
@@ -22,8 +26,23 @@ Workload Security(이전 Cloud Secure)는 하나 이상의 에이전트를 사�
 
 
 
-NOTE: 글로벌 변화는 ONTAP 시스템에 잠재적인 영향을 미칠 수 있습니다. 다수의 데이터 수집기에 영향을 미치는 변경 작업은 비수요 시간에 하는 것이 좋습니다.
 
+== 모범 사례
+
+Workload Security 에이전트를 구성하기 전에 다음 사항을 염두에 두십시오.
+
+[cols="1,3"]
+|===
+
+
+| 일시 정지 및 재개 | 일시 중지: ONTAP 에서 fpolicies를 제거합니다. 일반적으로 고객이 에이전트 VM 재부팅이나 스토리지 교체 등 상당한 시간이 소요될 수 있는 확장된 유지 관리 활동을 수행할 때 사용됩니다. 재개: ONTAP 에 fpolicies를 다시 추가합니다. 
+
+
+| 고정 및 고정 해제 | 고정 해제는 최신 버전(사용 가능한 경우)을 즉시 가져오고 에이전트와 수집기를 업그레이드합니다. 이 업그레이드 중에 fpolicies의 연결이 끊어지고 다시 연결됩니다. 이 기능은 자동 업그레이드의 타이밍을 제어하려는 고객을 위해 설계되었습니다. 
+
+
+| 권장 접근 방식 | 대규모 구성의 경우 수집기를 일시 중지하는 대신 고정 및 고정 해제를 사용하는 것이 좋습니다. 고정 해제 및 고정 해제를 사용하는 동안 일시 정지 및 재개할 필요가 없습니다. 고객은 에이전트와 수집가를 고정해 두고, 새 버전에 대한 이메일 알림을 받으면 30일 기간 내에 에이전트를 하나씩 선택적으로 업그레이드할 수 있습니다. 이 접근 방식은 fpolicies에 대한 지연 영향을 최소화하고 업그레이드 프로세스에 대한 더 큰 제어력을 제공합니다. 
+|===
 
 
 == 에이전트 설치 단계
@@ -34,7 +53,7 @@ NOTE: 글로벌 변화는 ONTAP 시스템에 잠재적인 영향을 미칠 수 �
 시스템에 에이전트 추가 페이지가 표시됩니다.
 
 +
-image:Add-agent-1.png["워크로드 보안 에이전트 추가"]
+image::Add-agent-1.png[워크로드 보안 에이전트 추가]
 
 . 에이전트 서버가 최소 시스템 요구 사항을 충족하는지 확인하세요.
 . 에이전트 서버가 지원되는 Linux 버전을 실행하고 있는지 확인하려면 _지원되는 버전(i)_을 클릭합니다.
@@ -46,7 +65,7 @@ image:CloudSecureAgentWithProxy_Instructions.png["프록시를 사용한 에이�
 . 터미널 창에서 설치 명령을 실행합니다.
 . 설치가 성공적으로 완료되면 시스템에 다음 메시지가 표시됩니다.
 +
-image:new-agent-detect.png["에이전트 설치 성공 메시지"]
+image::new-agent-detect.png[에이전트 설치 성공 메시지]
 
 
 
