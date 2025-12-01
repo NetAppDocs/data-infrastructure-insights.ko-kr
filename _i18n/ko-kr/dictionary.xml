@@ -7749,9 +7749,7 @@
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">오픈소스</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">공지 파일은 NetApp 소프트웨어에서 사용되는 타사 저작권 및 라이선스에 대한 정보를 제공합니다.</block>
   <block id="c7f50a9f133f1f71a9f91fe12f7c7f7e" category="inline-link-macro">Data Infrastructure Insights (이전 Cloud Insights)에 대한 알림</block>
-  <block id="32344df03ee279db932571d5121eebc2" category="paragraph"><block ref="32344df03ee279db932571d5121eebc2" category="inline-link-macro-rx"></block></block>
   <block id="4d8cd5134c1193f4d301c7e6bcaa38a7" category="inline-link-macro">워크로드 보안(이전 Cloud Secure)에 대한 공지</block>
-  <block id="af88d796899408a2445389775634dda1" category="paragraph"><block ref="af88d796899408a2445389775634dda1" category="inline-link-macro-rx"></block></block>
   <block id="65be717dc296d58230cdf6471cf551c6" category="summary">성능, 용량, 구성 및 구성 요소 알림을 기반으로 한 통합 점수 매기기로 인프라 상태를 모니터링하여 사전에 문제를 해결하세요.</block>
   <block id="48f51aa9a5737857bbd298bfb874281e" category="doc">인프라 상태 모니터링</block>
   <block id="9af3e29dc9d4dd7c03ed034e837cae19" category="paragraph">Data Infrastructure Insights 스토리지 환경의 성능, 용량, 구성 및 구성 요소 상태를 추적하는 포괄적인 인프라 상태 모니터링을 제공합니다. 상태 점수는 이러한 범주에 대한 모니터 알림을 기반으로 계산되므로 시스템 상태를 통합적으로 확인하고 사전에 문제를 해결할 수 있습니다.</block>
@@ -12774,4 +12772,6 @@
   <block id="2a0a2208c984d848c76e3dc480d25f5a" category="cell">대규모 구성의 경우 수집기를 일시 중지하는 대신 고정 및 고정 해제를 사용하는 것이 좋습니다. 고정 및 고정 해제를 사용하는 동안 일시 정지 및 재개가 필요하지 않습니다. 고객은 에이전트와 수집가를 고정해 두고, 새 버전에 대한 이메일 알림을 받으면 30일 기간 내에 에이전트를 하나씩 선택적으로 업그레이드할 수 있습니다. 이 접근 방식은 fpolicies에 대한 지연 영향을 최소화하고 업그레이드 프로세스에 대한 더 큰 제어력을 제공합니다.</block>
   <block id="4c4482e1695529fa7b313efe35876587" category="cell">다음 중 하나의 라이선스 버전을 실행하는 컴퓨터: * Microsoft Windows 11 * Microsoft Windows Server 2016 * Microsoft Windows Server 2019 * Microsoft Windows Server 2022 * Microsoft Windows Server 2025 이 컴퓨터에서는 다른 애플리케이션 수준 소프트웨어를 실행해서는 안 됩니다. 전용 서버를 권장합니다.</block>
   <block id="96e0bc41f601636412c93ccf60fffb89" category="cell">인수 단위에서 *.cloudinsights.netapp.com 또는 Data Infrastructure Insights 테넌트(예: \https://&lt;tenant_id&gt;.c01.cloudinsights.netapp.com)로의 100Mbps/1Gbps 이더넷 연결, 고정 IP 주소, 포트 80 또는 443(아웃바운드) 연결이 필요합니다.  수집 단위와 각 데이터 수집기 ​​간의 요구 사항에 대해서는 해당 지침을 참조하십시오.<block ref="be56515064596049a4b61d9d1a149cf9" category="inline-link-macro-rx"></block> . 조직에서 인터넷 접속을 위해 프록시 사용이 필요한 경우 조직의 프록시 동작을 이해하고 Data Infrastructure Insights 작동하도록 특정 예외를 찾아야 할 수도 있습니다. 예를 들어, 귀하의 조직에서는 기본적으로 액세스를 차단하고 예외적으로 특정 웹 사이트/도메인에만 액세스를 허용합니까?  그렇다면 예외 목록에 다음 도메인을 추가해야 합니다: *.cloudinsights.netapp.com 자세한 내용은 프록시에 대해 읽어보세요.<block ref="05c875968683001fc59f206218314b72" category="inline-link-macro-rx"></block> 또는<block ref="554efdd06704a764ab0a7e3947e279ff" category="inline-link-macro-rx"></block> .</block>
+  <block id="122dd1e429ff23356474c1c076ac2789" category="paragraph"><block ref="122dd1e429ff23356474c1c076ac2789" category="inline-link-macro-rx"></block></block>
+  <block id="a4c2ef5fd8277b59eacc9e5d6fd74bfa" category="paragraph"><block ref="a4c2ef5fd8277b59eacc9e5d6fd74bfa" category="inline-link-macro-rx"></block></block>
 </blocks>
