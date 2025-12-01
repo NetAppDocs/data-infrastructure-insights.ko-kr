@@ -5,8 +5,17 @@ summary: 인수 단위로 사용하는 서버나 VM은 최소 요구 사항을 �
 keywords: AU, acquisition unit, requirements, sizing 
 ---
 = 인수 단위 요구 사항
+:toc: macro
 :hardbreaks:
+:toclevels: 1
 :allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
 
 
 [role="lead"]
@@ -22,7 +31,7 @@ keywords: AU, acquisition unit, requirements, sizing
 | 요소 | 리눅스 요구 사항 | Windows 요구 사항 
 
 
-| 운영 체제 | 다음 중 하나의 라이선스 버전을 실행하는 컴퓨터: * AlmaLinux 9.3 ~ 9.5 * Centos(64비트): 7.2 ~ 7.9, 8.1 ~ 8.4, Stream 8, Stream 9 * Debian(64비트): 9 ~ 12 * OpenSUSE Leap 15.1 ~ 15.6 * Oracle Enterprise Linux(64비트): 7.5 ~ 7.9, 8.1 ~ 8.10, 9.3 ~ 9.6 * Red Hat(64비트): 7.2 ~ 7.9, 8.1 ~ 8.10, 9.1 ~ 9.6 * Rocky 9.0 ~ 9.5 * SUSE Linux Enterprise Server 15, 15 SP2 ~ 15 SP6 * Ubuntu Server: 18.04, 20.04, 22.04, 24.04 LTS * 위 플랫폼에서 SELinux를 실행하면 안 됩니다. 이 컴퓨터에서는 다른 애플리케이션 수준 소프트웨어를 실행해서는 안 됩니다. 전용 서버를 권장합니다.  SELinux를 사용하는 경우 수집 단위 시스템에서 다음 명령을 실행하는 것이 좋습니다. sudo semanage fcontext -a -t usr_t "/opt/netapp/cloudinsights(/.*)?" sudo restorecon -R /opt/netapp/cloudinsights | 다음 중 하나의 라이선스 버전을 실행하는 컴퓨터: * Microsoft Windows 10 64비트 * Microsoft Windows 11 * Microsoft Windows Server 2012 * Microsoft Windows Server 2012 R2 * Microsoft Windows Server 2016 * Microsoft Windows Server 2019 * Microsoft Windows Server 2022 * Microsoft Windows Server 2025 이 컴퓨터에서는 다른 애플리케이션 수준 소프트웨어를 실행해서는 안 됩니다. 전용 서버를 권장합니다. 
+| 운영 체제 | 다음 중 하나의 라이선스 버전을 실행하는 컴퓨터: * AlmaLinux 9.3 ~ 9.5 * Centos(64비트): 7.2 ~ 7.9, 8.1 ~ 8.4, Stream 8, Stream 9 * Debian(64비트): 9 ~ 12 * OpenSUSE Leap 15.1 ~ 15.6 * Oracle Enterprise Linux(64비트): 7.5 ~ 7.9, 8.1 ~ 8.10, 9.3 ~ 9.6 * Red Hat(64비트): 7.2 ~ 7.9, 8.1 ~ 8.10, 9.1 ~ 9.6 * Rocky 9.0 ~ 9.5 * SUSE Linux Enterprise Server 15, 15 SP2 ~ 15 SP6 * Ubuntu Server: 18.04, 20.04, 22.04, 24.04 LTS * 위 플랫폼에서 SELinux를 실행하면 안 됩니다. 이 컴퓨터에서는 다른 애플리케이션 수준 소프트웨어를 실행해서는 안 됩니다. 전용 서버를 권장합니다.  SELinux를 사용하는 경우 수집 단위 시스템에서 다음 명령을 실행하는 것이 좋습니다. sudo semanage fcontext -a -t usr_t "/opt/netapp/cloudinsights(/.*)?" sudo restorecon -R /opt/netapp/cloudinsights | 다음 중 하나의 라이선스 버전을 실행하는 컴퓨터: * Microsoft Windows 11 * Microsoft Windows Server 2016 * Microsoft Windows Server 2019 * Microsoft Windows Server 2022 * Microsoft Windows Server 2025 이 컴퓨터에서는 다른 애플리케이션 수준 소프트웨어를 실행해서는 안 됩니다. 전용 서버를 권장합니다. 
 
 
 | CPU | 2개의 CPU 코어 | 같은 
@@ -34,7 +43,7 @@ keywords: AU, acquisition unit, requirements, sizing
 | 사용 가능한 디스크 공간 | 50GB(100GB 권장) Linux의 경우 디스크 공간은 다음과 같이 할당해야 합니다. /opt/netapp 10GB(대규모 환경의 경우 20GB) /var/log/netapp 40GB(대규모 환경의 경우 80GB) /tmp 설치 중 사용 가능한 최소 1GB | 50GB 
 
 
-| 회로망 | 인수 단위에서 *.cloudinsights.netapp.com 또는 Data Infrastructure Insights 테넌트(예: \https://<tenant_id>.c01.cloudinsights.netapp.com)로의 100Mbps/1Gbps 이더넷 연결, 고정 IP 주소, 포트 80 또는 443(아웃바운드) 연결이 필요합니다.  수집 단위와 각 데이터 수집기 ​​간의 요구 사항에 대해서는 해당 지침을 참조하십시오.link:data_collector_list.html["데이터 수집기"] .  조직에서 인터넷 접속을 위해 프록시 사용이 필요한 경우 조직의 프록시 동작을 이해하고 Data Infrastructure Insights 작동하도록 특정 예외를 찾아야 할 수도 있습니다.  예를 들어, 귀하의 조직에서는 기본적으로 액세스를 차단하고 예외적으로 특정 웹 사이트/도메인에만 액세스를 허용합니까?  그렇다면 예외 목록에 다음 도메인을 추가해야 합니다: *.cloudinsights.netapp.com 자세한 내용은 프록시에 대해 읽어보세요.link:task_troubleshooting_linux_acquisition_unit_problems.html#considerations-about-proxies-and-firewalls["여기(리눅스)"] 또는link:task_troubleshooting_windows_acquisition_unit_problems.html#considerations-about-proxies-and-firewalls["여기(윈도우)"] .  AU에서 Data Infrastructure Insights 로의 "아웃바운드"에는 포트 443이 열려 있어야 합니다. | 같은 
+| 회로망 | 인수 단위에서 *.cloudinsights.netapp.com 또는 Data Infrastructure Insights 테넌트(예: \https://<tenant_id>.c01.cloudinsights.netapp.com)로의 100Mbps/1Gbps 이더넷 연결, 고정 IP 주소, 포트 80 또는 443(아웃바운드) 연결이 필요합니다.  수집 단위와 각 데이터 수집기 ​​간의 요구 사항에 대해서는 해당 지침을 참조하십시오.link:data_collector_list.html["데이터 수집기"] . 조직에서 인터넷 접속을 위해 프록시 사용이 필요한 경우 조직의 프록시 동작을 이해하고 Data Infrastructure Insights 작동하도록 특정 예외를 찾아야 할 수도 있습니다. 예를 들어, 귀하의 조직에서는 기본적으로 액세스를 차단하고 예외적으로 특정 웹 사이트/도메인에만 액세스를 허용합니까?  그렇다면 예외 목록에 다음 도메인을 추가해야 합니다: *.cloudinsights.netapp.com 자세한 내용은 프록시에 대해 읽어보세요.link:task_troubleshooting_linux_acquisition_unit_problems.html#considerations-about-proxies-and-firewalls["여기(리눅스)"] 또는link:task_troubleshooting_windows_acquisition_unit_problems.html#considerations-about-proxies-and-firewalls["여기(윈도우)"] . | 같은 
 
 
 | 권한 | 인수 단위 서버에 대한 sudo 권한.  /tmp는 exec 기능으로 마운트되어야 합니다. | 획득 단위 서버에 대한 관리자 권한 
