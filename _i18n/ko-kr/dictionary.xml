@@ -5336,7 +5336,6 @@
   <block id="e3afed0047b08059d0fada10f400c1e5" category="cell">관리자</block>
   <block id="305de530147912d72a50568ee4d65d26" category="cell">계정 소유자</block>
   <block id="ab0ef3e5340f5400b9f95e43d3b79222" category="cell">관리자와 동일</block>
-  <block id="631b24afac365e771fc775aeb7fec0ad" category="cell">관리자와 동일하며 SSO 인증 및 ID 연합 구성을 관리합니다.  추가 소유자를 할당할 수도 있습니다.</block>
   <block id="7b7bc2512ee1fedcd76bdc68926d4f7b" category="cell">관리자</block>
   <block id="3e2b646677d9c80b1923b7be8d77407e" category="cell">모든 관찰 기능을 수행할 수 있으며, 데이터 수집기를 관리할 수도 있습니다.</block>
   <block id="364b5d76e543eea85436eecd771ddf9b" category="cell">알림, 포렌식, 데이터 수집기, 자동 응답 정책, 보안을 위한 API 토큰 등 모든 보안 기능을 수행할 수 있습니다.  관리자는 다른 사용자를 초대할 수도 있지만 보안 역할만 할당할 수 있습니다.</block>
@@ -12774,4 +12773,5 @@
   <block id="15944853c960b4d108dec6e022392050" category="paragraph"><block ref="15944853c960b4d108dec6e022392050" category="inline-link-macro-rx"></block></block>
   <block id="7d7c3dfbfa0b1113cc98af5bc93293c2" category="inline-link-macro">Workload Security(이전 Cloud Secure)에 대한 알림, window=_blank</block>
   <block id="c69944d365e084328c890394ddd7fec5" category="paragraph"><block ref="c69944d365e084328c890394ddd7fec5" category="inline-link-macro-rx"></block></block>
+  <block id="f17c7e32a4fcdb4c787f412cf3181bea" category="cell">관리자와 동일하며 SSO 인증 및 ID 연합 구성을 관리합니다. 관리 서비스 공급자(MSP) 마스터 테넌트에 추가 소유자를 할당하고 클라이언트를 추가할 수도 있습니다.</block>
 </blocks>
