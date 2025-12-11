@@ -12772,4 +12772,33 @@
   <block id="cd013bdb6b746502669588c8bf28fe47" category="paragraph">*문제점:* 워크로드 보안을 활성화한 후 ONTAP 성능에 문제가 발생합니다. 지연 시간이 간헐적으로 높아지고, IOP가 간헐적으로 낮아집니다.  *다음과 같이 시도해 보세요:* ONTAP 워크로드 보안과 함께 사용할 때 ONTAP 에서 지연 문제가 발생할 수 있습니다.  다음과 같이 몇 가지 가능한 이유가 있습니다.<block ref="5b7caa0ef6cc830703e594488c525913" category="inline-link-macro-rx"></block> ,<block ref="b861ec6ca06b8e18b9d090dd75b00a26" category="inline-link-rx"></block> ,<block ref="a5fade3ab29d18b9b976189fcb9919ed" category="inline-link-rx"></block> ,<block ref="8899da2205eee6e62b28641da3533e12" category="inline-link-rx"></block> ,<block ref="c9d1d03c1b92a8bbffc617ad493e8619" category="inline-link-rx"></block> . 이러한 문제는 모두 ONTAP 9.13.1 이상에서 해결되었습니다. 이후 버전 중 하나를 사용하는 것이 좋습니다.</block>
   <block id="c8a935e32ab223552b7728caf4cbcd40" category="paragraph">*문제:* 컬렉터가 "커넥터가 오류 상태입니다"라는 메시지와 함께 오류 상태에 있습니다.  실패 원인: SVM &lt;SVM 이름&gt;에 영구 저장소를 구성하는 데 실패했습니다.  이유: SVM "&lt;SVM 이름&gt;"에서 볼륨 "&lt;볼륨 이름&gt;"에 적합한 집계를 찾을 수 없습니다.  이유: 현재 집계 "&lt;aggregateName&gt;"에 대한 성능 정보를 사용할 수 없습니다.  몇 분 기다렸다가 명령어를 다시 시도해 보세요. 서비스 이름: 감사. 실패 이유: SVM에서 영구 저장소를 구성하지 못했습니다 &lt;svm name=""&gt;.&lt;/svm&gt; 이유: &lt;volumename&gt;SVM "&lt;svm name=""&gt;"&lt;/svm&gt;에서&lt;/volumename&gt; 볼륨 ""에 적합한 애그리게이트를 찾을 수 없습니다. 이유: 애그리게이트 ""에 대한 성능 정보를 &lt;aggregatename&gt;현재 사용할 수 없습니다.&lt;/aggregatename&gt; 몇 분 정도 기다렸다가 명령을 다시 시도하십시오.</block>
   <block id="807b576f46b09baeb51689a411fd7e90" category="paragraph">*다음 방법을 시도해 보세요:* 몇 분 정도 기다린 후 수집기를 다시 시작하세요.</block>
+  <block id="1da664a432a920207ac67730bfcf1104" category="summary">보고서에 사용할 주석을 게시하고 게시 취소하는 방법을 알아보세요.</block>
+  <block id="d0f8afd8d5b97350096da4410f6ef70a" category="doc">보고서 작성을 위한 주석 게시 및 게시 취소</block>
+  <block id="13e4b27f5005e5c64c5a41690660de1d" category="paragraph">보고서 및 데이터 웨어하우스에서 사용할 주석을 게시하는 방법과 더 이상 필요하지 않을 때 주석을 올바르게 게시 취소하는 방법을 알아보세요.</block>
+  <block id="f3b7c338e6a3f535c74857d42d70a81c" category="section-title">보고서 작성을 위한 주석 게시</block>
+  <block id="327b3bc4d967a2317701d7010944307f" category="paragraph">Data Infrastructure Insights 에서 주석을 생성한 후에는 보고서에서 사용할 수 있도록 게시할 수 있습니다.</block>
+  <block id="0caee252e5487de862dbefa3eec1a462" category="section-title">주석 게시 단계</block>
+  <block id="29f6016632227f8bf6976c7869bc72c3" category="list-text">*관찰 가능성 &gt; 보강 &gt; 주석* 페이지로 이동하여 _보고용 주석_ 탭을 선택합니다.</block>
+  <block id="9e504f94b5be9a2b018e55cf728ac22a" category="list-text">게시하려는 주석을 찾으세요.</block>
+  <block id="35e76d3e8b05c29f4ff6b2da44ea4921" category="list-text">주석을 선택하고 _보고서에 게시_를 선택합니다.  또한 '이력 데이터에 적용'을 선택하여 이력 보고서를 실행할 때 주석을 사용할 수 있습니다.</block>
+  <block id="30931bf6e020a646ad57086874ca6074" category="list-text">주석이 게시되면 보고서 작성에 사용할 수 있게 됩니다.</block>
+  <block id="396e1f080d09a5d2f02eb4001ac6fc8c" category="list-text">주석은 다음 ETL 실행 후 보고서 작성에 사용할 수 있도록 게시됩니다.</block>
+  <block id="5717734bfc2f355942edbd3696406818" category="paragraph">주석을 참조하는 모든 보고서는 게시된 값을 사용합니다.  게시 후 주석을 수정하는 경우, 변경 사항이 보고서에 반영되도록 다시 게시해야 할 수 있습니다.</block>
+  <block id="ebcb6aeee3884fde3993f0df7ebca547" category="section-title">보고서용 주석 게시 취소</block>
+  <block id="161b2f38480450dbc7b8b35dc2e547c6" category="paragraph">보고서에서 더 이상 사용되지 않도록 주석을 제거하거나 게시 취소해야 하는 경우가 있을 수 있습니다.  예를 들어, 주석이 더 이상 필요하지 않거나 보고서에 나타나서는 안 되는 오래된 정보를 포함하고 있을 수 있습니다.</block>
+  <block id="52de2e815a8847eed14eefcdb8df04e2" category="section-title">주석 게시 취소 방법</block>
+  <block id="56b5e5aeff1cd3d66dfa9e7aae2e1fb8" category="paragraph">주석 게시를 취소하기 전에, 이 작업이 해당 주석을 사용하는 기존 보고서에 영향을 미친다는 점에 유의하십시오.  보고서에서 주석 참조를 제거하려면 편집 또는 전문 서비스 지원이 필요할 수 있습니다.</block>
+  <block id="537ba4575bf20a44a021d6a6c2160c2f" category="list-text">Data Infrastructure Insights 사용자 인터페이스에서 '보고서용 주석' 탭으로 이동합니다.</block>
+  <block id="0baff86dba25c761b8e10de5e631d2da" category="list-text">게시를 취소하려는 주석을 찾으세요.</block>
+  <block id="f4f03ad26635dcdf26cd79ebbdf3f095" category="list-text">주석이 게시된 각 객체에 대해 주석 선택을 해제하고 [저장]을 선택합니다.</block>
+  <block id="1e45f500f939c3c6933da32b0094ed0c" category="list-text">해당 주석을 참조하는 쿼리나 규칙을 모두 제거하여 "사용 중"으로 표시되지 않도록 하십시오.</block>
+  <block id="612361128d3425b6d566099c3a73e114" category="list-text">주석은 다음 ETL 실행 후 게시되지 않습니다.</block>
+  <block id="80186bee24a1384dd0fdcbe103ad297a" category="list-text">ETL이 완료되면 테넌트 측에서 더 이상 필요하지 않은 경우 주석 목록에서 해당 주석을 삭제할 수 있습니다.</block>
+  <block id="69ba397c22afed002692190d13724b2e" category="paragraph">주석은 적절하게 게시 해제될 때까지 데이터 웨어하우스에 계속 표시됩니다.  주석 페이지에서 주석을 삭제하기 전에 먼저 게시를 취소하지 않으면 오래된 데이터가 남아 기존 보고서에 나타날 수 있습니다.  위의 게시 취소 단계를 따라 완전히 삭제하십시오.</block>
+  <block id="fde5f00a6e30ac6f54a7295f2e712c69" category="section-title">기존 보고서에 미치는 영향</block>
+  <block id="046dafc771f597ba528c92397d5f99e6" category="paragraph">주석을 삭제하거나 게시를 취소하면 해당 주석을 참조하는 기존 보고서를 수정해야 할 수 있습니다. 다음 사항을 고려하세요.</block>
+  <block id="3c26ba7c1113869b4804e6a406f52ba7" category="list-text">주석을 필터 또는 차원으로 사용하는 보고서는 업데이트해야 합니다.</block>
+  <block id="c77b295eb8d3480880ff044a7823cdd9" category="list-text">종속 보고서를 업데이트하지 않고 주석을 제거하면 해당 보고서에서 오류가 발생하거나 예상치 못한 결과가 나타날 수 있습니다.</block>
+  <block id="3da85052d2ffffd1cb6352186fe0393a" category="list-text">복잡한 시나리오에서는 보고서 오류를 수정하는 데 전문가의 도움이 필요할 수 있습니다.</block>
+  <block id="4f9b9c5804f57ab98a1eb0bbdc93ee28" category="paragraph">주석에 의존하는 모든 보고서는 게시를 취소하기 전에 검토하는 것이 좋습니다.</block>
 </blocks>
