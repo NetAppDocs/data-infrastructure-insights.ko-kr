@@ -2406,8 +2406,6 @@
   <block id="9308a4a251c0b6f099fc32506e41c24d" category="inline-image-macro">워크로드 보안 수집기 오류 자세한 링크</block>
   <block id="6a6fcf99d83d56b2429dfa3ef83b50a0" category="paragraph"><block ref="6a6fcf99d83d56b2429dfa3ef83b50a0" category="inline-image-macro-rx" type="image"></block></block>
   <block id="182ce87180fe5b09fa1710d1b249ecf0" category="paragraph">알려진 문제와 해결 방법은 아래와 같습니다.</block>
-  <block id="23d35f04a6305a542c62e0793452c9ad" category="paragraph">*문제:* 데이터 수집기가 잠시 실행되다가 임의의 시간 후에 중지되고 "오류 메시지: 커넥터가 오류 상태입니다."라는 오류 메시지가 나타납니다.  서비스 이름: 감사.  실패 이유: 외부 fpolicy 서버가 과부하되었습니다.</block>
-  <block id="85501d33ecd840c5761971c7b55e894c" category="paragraph">*다음을 시도해 보세요.* ONTAP 의 이벤트 비율은 에이전트 상자가 처리할 수 있는 것보다 훨씬 높았습니다.  그래서 연결이 종료되었습니다.</block>
   <block id="6cbdb7b222e25139b815f11a8bf316b0" category="paragraph">연결이 끊어졌을 때 CloudSecure에서 최대 트래픽을 확인하세요.  *CloudSecure &gt; 활동 포렌식 &gt; 모든 활동* 페이지에서 확인할 수 있습니다.</block>
   <block id="fb318561d723fea4bf5cfc32c9f76869" category="paragraph">최대 집계 트래픽이 Agent Box에서 처리할 수 있는 것보다 높은 경우 Agent Box에서 Collector 배포 크기를 조정하는 방법에 대한 이벤트 속도 검사기 페이지를 참조하세요.</block>
   <block id="df5d9f6706ba32a91dad936fdd8c31ec" category="paragraph">2021년 3월 4일 이전에 에이전트가 에이전트 상자에 설치된 경우 에이전트 상자에서 다음 명령을 실행하세요.</block>
@@ -2474,13 +2472,6 @@
   <block id="1728bd23561a7ad8c0a5ece1af1fc9e1" category="inline-link">1438207</block>
   <block id="36e30a439910e67f76754ab0874aef1b" category="inline-link">1479704</block>
   <block id="7e18cc81c15bd72df03b7461c26d6e4a" category="inline-link">1354659</block>
-  <block id="fde38d88f8244f8a7b724b900bd7e422" category="paragraph">|워크로드 보안을 활성화한 후 ONTAP 성능에 영향을 미칩니다. 지연 시간이 불규칙적으로 높아지고 IOP가 불규칙적으로 낮아집니다.  | ONTAP Workload Security와 함께 사용하는 경우 가끔 ONTAP 에서 지연 문제가 발생할 수 있습니다.  이에 대한 가능한 이유는 다음과 같습니다.<block ref="5b7caa0ef6cc830703e594488c525913" category="inline-link-macro-rx"></block> ,<block ref="b861ec6ca06b8e18b9d090dd75b00a26" category="inline-link-rx"></block> ,<block ref="a5fade3ab29d18b9b976189fcb9919ed" category="inline-link-rx"></block> ,<block ref="8899da2205eee6e62b28641da3533e12" category="inline-link-rx"></block> ,<block ref="c9d1d03c1b92a8bbffc617ad493e8619" category="inline-link-rx"></block> .  이러한 문제는 모두 ONTAP 9.13.1 이상에서 해결되었습니다. 이후 버전 중 하나를 사용하는 것이 좋습니다.</block>
-  <block id="392c3c278e79c8048452de58dff9fd56" category="paragraph">*문제:* 데이터 수집기에 오류가 있어 이 오류 메시지가 표시됩니다.  “오류: 커넥터가 오류 상태입니다.  서비스 이름: 감사.  실패 이유: SVM svm_test에 대한 정책을 구성하지 못했습니다.  사유: zapi 필드(이벤트)에 값이 없습니다.  “ *이것을 시도해 보세요:*</block>
-  <block id="bcb838cbc5adbbb585ffd4e501e4b07b" category="list-text">NFS 서비스만 구성된 새로운 SVM으로 시작합니다.</block>
-  <block id="55007273037aed04d07e70999d5153b2" category="list-text">Workload Security에 ONTAP SVM 데이터 수집기를 추가합니다.  Workload Security에서 ONTAP SVM 데이터 수집기를 추가하는 동안 CIFS가 SVM에 대한 허용 프로토콜로 구성됩니다.</block>
-  <block id="c5e48108c2128269b181c77142f6e2c0" category="list-text">Workload Security의 데이터 수집기에 오류가 표시될 때까지 기다리세요.</block>
-  <block id="bc71f49bfafa6a1dbe64216acd61b88e" category="list-text">CIFS 서버가 SVM에 구성되어 있지 않으므로 왼쪽에 표시된 오류는 Workload Security에서 표시됩니다.</block>
-  <block id="10b2e2acac1b3fff1d033229848652e2" category="list-text">ONTAP SVM 데이터 수집기를 편집하고 허용된 프로토콜로 CIF의 선택을 취소합니다.  데이터 수집기를 저장합니다.  NFS 프로토콜만 활성화된 상태로 실행됩니다.</block>
   <block id="8202c6a36256606217ad100be587d707" category="paragraph">*문제:* 데이터 수집기에서 다음 오류 메시지가 표시됩니다. "오류: 2번의 재시도 내에 수집기의 상태를 확인하지 못했습니다. 수집기를 다시 시작해 보세요(오류 코드: AGENT008)".  *이걸 시도해보세요:*</block>
   <block id="f2e1c8f11a6d114e56889c093ddb4738" category="list-text">데이터 수집기 페이지에서 오류가 발생한 데이터 수집기의 오른쪽으로 스크롤하여 3개 점 메뉴를 클릭합니다.  _편집_을 선택하세요.  데이터 수집기의 비밀번호를 다시 입력하세요.  _저장_ 버튼을 눌러 데이터 수집기를 저장합니다.  데이터 수집기가 다시 시작되면 오류가 해결될 것입니다.</block>
   <block id="96f9921aa76d3057450b4f8f037c88c6" category="list-text">에이전트 머신에는 CPU나 RAM 여유 공간이 충분하지 않아 DSC가 실패하는 것입니다.  머신의 에이전트에 추가된 데이터 수집기의 수를 확인하세요.  20이 넘을 경우, Agent 머신의 CPU와 RAM 용량을 늘려주세요.  CPU와 RAM이 늘어나면 DSC는 초기화 상태로 전환되고, 그다음에는 자동으로 실행 상태로 전환됩니다.  사이즈 가이드를 살펴보세요<block ref="830ad31fe88c5bf31dcfcc5f15ccdf0e" category="inline-link-macro-rx"></block> .</block>
@@ -9903,7 +9894,6 @@
   <block id="3f1a7a2048c619e7b3997ddc8b02ae5e" category="inline-link-macro">구성되어야 합니다</block>
   <block id="6c1006735c24c4966ad5668af1361000" category="list-text">에이전트<block ref="a64dfb2e19772579ec5e757e77e2d502" category="inline-link-macro-rx"></block> 데이터 수집기를 구성하기 전에.</block>
   <block id="3db922049dfe42d0844cfa65ca213434" category="list-text">사용자 디렉터리 커넥터가 제대로 구성되어 있는지 확인하세요. 그렇지 않으면 이벤트에서 "활동 포렌식" 페이지에 실제 사용자 이름(Active Directory에 저장된 이름)이 아닌 인코딩된 사용자 이름이 표시됩니다.</block>
-  <block id="b8667da3102e0adbbd2fe25017f00394" category="list-text">• ONTAP 영구 저장소는 9.14.1부터 지원됩니다.</block>
   <block id="1c0d6e11904414aa4c18ec80cc712c68" category="list-text">최적의 성능을 위해서는 FPolicy 서버를 스토리지 시스템과 동일한 서브넷에 구성해야 합니다.</block>
   <block id="94a83cc87aa6db24b6f7e05b3ab3031d" category="list-text">다음 두 가지 방법 중 하나를 사용하여 SVM을 추가해야 합니다.</block>
   <block id="f27bbbf5360c428e454f91df4646ca7c" category="list-text">클러스터 IP, SVM 이름, 클러스터 관리 사용자 이름과 비밀번호를 사용합니다.  *_추천하는 방법입니다._*</block>
@@ -9912,7 +9902,6 @@
   <block id="4f063ab303b475997c571fed2a4d2d7e" category="inline-xref">“권한에 대한 참고 사항”</block>
   <block id="63d71c9c8919be72ed5d5d19a3aea524" category="list-text">전체 관리자 클러스터/SVM 관리 사용자 이름 및 비밀번호를 사용할 수 없거나 사용할 의향이 없는 경우 다음에서 언급한 대로 권한이 낮은 사용자 지정 사용자를 만들 수 있습니다.<block ref="00e97c40bcd2b78ce8600bf90267e3e7" category="inline-xref-macro-rx"></block> 아래 섹션을 참조하세요.  이 사용자 지정 사용자는 SVM 또는 클러스터 액세스를 위해 생성될 수 있습니다.</block>
   <block id="eb75aeb3b4b2b9734ba3e52f5483f0b2" category="inline-link-macro">ONTAP 문서</block>
-  <block id="af3222f57064502de0a6067116f97f3e" category="list-text">o 아래 "권한에 대한 참고 사항" 섹션에 언급된 대로 최소한 csrole의 권한이 있는 역할이 있는 AD 사용자를 사용할 수도 있습니다.  또한 다음을 참조하세요<block ref="d4aa194db895e3203d834756bc431bad" category="inline-link-macro-rx"></block> .</block>
   <block id="af53996a121bcf0b43c612a8465b5398" category="list-text">다음 명령을 실행하여 SVM에 올바른 애플리케이션이 설정되었는지 확인하세요.</block>
   <block id="cce32d87b6a1e3cf5567d9c84f96be3f" category="inline-image-macro">SVM 명령 출력 예</block>
   <block id="d056d5eb1e184e9c1ac10b7b898406c4" category="paragraph">출력 예:<block ref="c5dea5ffbc3dcabd33992848de2142cc" category="inline-image-macro-rx" type="image"></block></block>
@@ -12774,4 +12763,13 @@
   <block id="7d7c3dfbfa0b1113cc98af5bc93293c2" category="inline-link-macro">Workload Security(이전 Cloud Secure)에 대한 알림, window=_blank</block>
   <block id="c69944d365e084328c890394ddd7fec5" category="paragraph"><block ref="c69944d365e084328c890394ddd7fec5" category="inline-link-macro-rx"></block></block>
   <block id="f17c7e32a4fcdb4c787f412cf3181bea" category="cell">관리자와 동일하며 SSO 인증 및 ID 연합 구성을 관리합니다. 관리 서비스 공급자(MSP) 마스터 테넌트에 추가 소유자를 할당하고 클라이언트를 추가할 수도 있습니다.</block>
+  <block id="6794662d08bc33fcbd95c93345331eb3" category="list-text">ONTAP 영구 저장소는 9.14.1 버전부터 지원됩니다.</block>
+  <block id="19d46baa06f3b8d834f231a48a441888" category="inline-link-macro">KB 정책 모범 사례 관련 문서</block>
+  <block id="0623520805216507062e9d9ca05fa78b" category="list-text">워크로드 보안 FPolicy 구성에 대한 포괄적인 모범 사례 및 권장 사항은 다음을 참조하십시오.<block ref="97c620a93781a0c1a84d537888788cd2" category="inline-link-macro-rx"></block> .</block>
+  <block id="12e43e942c5c37f57af4651b24d50099" category="list-text">아래 "권한에 대한 참고 사항" 섹션에 언급된 것처럼 최소한 csrole 권한을 가진 역할이 있는 AD 사용자를 사용할 수도 있습니다.  또한 다음을 참조하십시오.<block ref="d4aa194db895e3203d834756bc431bad" category="inline-link-macro-rx"></block> .</block>
+  <block id="17783c6591a255b301970d912178040b" category="paragraph">*문제:* 데이터 수집기가 잠시 실행되다가 임의의 시간 후에 중지되고 "오류 메시지: 커넥터가 오류 상태입니다."라는 오류 메시지가 나타납니다. 서비스 이름: 감사. 실패 이유: 외부 fpolicy 서버가 과부하되었습니다. *다음을 시도해 보세요.* ONTAP 의 이벤트 비율은 에이전트 상자가 처리할 수 있는 것보다 훨씬 높았습니다. 그래서 연결이 종료되었습니다.</block>
+  <block id="2e67c3e48e3cc19256e526889902b06c" category="paragraph">{비어 있는}</block>
+  <block id="cd013bdb6b746502669588c8bf28fe47" category="paragraph">*문제점:* 워크로드 보안을 활성화한 후 ONTAP 성능에 문제가 발생합니다. 지연 시간이 간헐적으로 높아지고, IOP가 간헐적으로 낮아집니다.  *다음과 같이 시도해 보세요:* ONTAP 워크로드 보안과 함께 사용할 때 ONTAP 에서 지연 문제가 발생할 수 있습니다.  다음과 같이 몇 가지 가능한 이유가 있습니다.<block ref="5b7caa0ef6cc830703e594488c525913" category="inline-link-macro-rx"></block> ,<block ref="b861ec6ca06b8e18b9d090dd75b00a26" category="inline-link-rx"></block> ,<block ref="a5fade3ab29d18b9b976189fcb9919ed" category="inline-link-rx"></block> ,<block ref="8899da2205eee6e62b28641da3533e12" category="inline-link-rx"></block> ,<block ref="c9d1d03c1b92a8bbffc617ad493e8619" category="inline-link-rx"></block> . 이러한 문제는 모두 ONTAP 9.13.1 이상에서 해결되었습니다. 이후 버전 중 하나를 사용하는 것이 좋습니다.</block>
+  <block id="c8a935e32ab223552b7728caf4cbcd40" category="paragraph">*문제:* 컬렉터가 "커넥터가 오류 상태입니다"라는 메시지와 함께 오류 상태에 있습니다.  실패 원인: SVM &lt;SVM 이름&gt;에 영구 저장소를 구성하는 데 실패했습니다.  이유: SVM "&lt;SVM 이름&gt;"에서 볼륨 "&lt;볼륨 이름&gt;"에 적합한 집계를 찾을 수 없습니다.  이유: 현재 집계 "&lt;aggregateName&gt;"에 대한 성능 정보를 사용할 수 없습니다.  몇 분 기다렸다가 명령어를 다시 시도해 보세요. 서비스 이름: 감사. 실패 이유: SVM에서 영구 저장소를 구성하지 못했습니다 &lt;svm name=""&gt;.&lt;/svm&gt; 이유: &lt;volumename&gt;SVM "&lt;svm name=""&gt;"&lt;/svm&gt;에서&lt;/volumename&gt; 볼륨 ""에 적합한 애그리게이트를 찾을 수 없습니다. 이유: 애그리게이트 ""에 대한 성능 정보를 &lt;aggregatename&gt;현재 사용할 수 없습니다.&lt;/aggregatename&gt; 몇 분 정도 기다렸다가 명령을 다시 시도하십시오.</block>
+  <block id="807b576f46b09baeb51689a411fd7e90" category="paragraph">*다음 방법을 시도해 보세요:* 몇 분 정도 기다린 후 수집기를 다시 시작하세요.</block>
 </blocks>

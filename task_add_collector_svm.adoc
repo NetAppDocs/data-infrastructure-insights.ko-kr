@@ -35,8 +35,12 @@ ONTAP SVM 데이터 수집기를 사용하면 Workload Security에서 NetApp ONT
 * SVM에는 여러 하위 유형이 있습니다.  이 중에서 _default_, _sync_source_, _sync_destination_만 지원됩니다.
 * 에이전트link:task_cs_add_agent.html["구성되어야 합니다"] 데이터 수집기를 구성하기 전에.
 * 사용자 디렉터리 커넥터가 제대로 구성되어 있는지 확인하세요. 그렇지 않으면 이벤트에서 "활동 포렌식" 페이지에 실제 사용자 이름(Active Directory에 저장된 이름)이 아닌 인코딩된 사용자 이름이 표시됩니다.
-* • ONTAP 영구 저장소는 9.14.1부터 지원됩니다.
+* ONTAP 영구 저장소는 9.14.1 버전부터 지원됩니다.
 * 최적의 성능을 위해서는 FPolicy 서버를 스토리지 시스템과 동일한 서브넷에 구성해야 합니다.
+
+
+[[fpolicy-best-practices]]
+* 워크로드 보안 FPolicy 구성에 대한 포괄적인 모범 사례 및 권장 사항은 다음을 참조하십시오.link:https://kb.netapp.com/on-prem/ontap/da/NAS/NAS-KBs/DII_Storage_Workload_Security__Fpolicy_Best_Practice_and_Recommendations["KB 정책 모범 사례 관련 문서"^] .
 * 다음 두 가지 방법 중 하나를 사용하여 SVM을 추가해야 합니다.
 +
 ** 클러스터 IP, SVM 이름, 클러스터 관리 사용자 이름과 비밀번호를 사용합니다.  *_추천하는 방법입니다._*
@@ -47,7 +51,7 @@ ONTAP SVM 데이터 수집기를 사용하면 Workload Security에서 NetApp ONT
 ** SVM Vserver 관리 IP, 사용자 이름 및 비밀번호를 사용하여
 ** 전체 관리자 클러스터/SVM 관리 사용자 이름 및 비밀번호를 사용할 수 없거나 사용할 의향이 없는 경우 다음에서 언급한 대로 권한이 낮은 사용자 지정 사용자를 만들 수 있습니다.<<a-note-about-permissions,“권한에 대한 참고 사항”>> 아래 섹션을 참조하세요.  이 사용자 지정 사용자는 SVM 또는 클러스터 액세스를 위해 생성될 수 있습니다.
 +
-*** o 아래 "권한에 대한 참고 사항" 섹션에 언급된 대로 최소한 csrole의 권한이 있는 역할이 있는 AD 사용자를 사용할 수도 있습니다.  또한 다음을 참조하세요link:https://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.pow-adm-auth-rbac%2FGUID-0DB65B04-71DB-43F4-9A0F-850C93C4896C.html["ONTAP 문서"] .
+*** 아래 "권한에 대한 참고 사항" 섹션에 언급된 것처럼 최소한 csrole 권한을 가진 역할이 있는 AD 사용자를 사용할 수도 있습니다.  또한 다음을 참조하십시오.link:https://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.pow-adm-auth-rbac%2FGUID-0DB65B04-71DB-43F4-9A0F-850C93C4896C.html["ONTAP 문서"] .
 
 
 
