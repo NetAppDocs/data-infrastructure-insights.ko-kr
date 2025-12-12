@@ -43,9 +43,9 @@ NetApp Console 계정이 있으면 간단히 *로그인*을 선택하세요.link
 
 == Data Infrastructure Insights 무료 평가판 시작하기
 
-Data Infrastructure Insights 에 처음 로그인하는 경우 Data Infrastructure Insights 서비스에서 *무료 평가판 시작*을 클릭하세요.  Data Infrastructure Insights 이용하면 회사의 테넌트를 만드는 과정을 안내받을 수 있으며, 테넌트가 상주할 지역을 선택할 수도 있습니다.
+Data Infrastructure Insights 에 처음 로그인하시는 경우, Data Infrastructure Insights 제공하는 모든 기능에 대한 정보를 읽어보시고, 준비가 되셨으면 *체험판 요청*을 클릭하여 정보를 입력해 주세요.
 
-image:trial_region_selector.png["Data Infrastructure Insights 테넌트를 호스팅할 지역 선택"]
+평가판 테넌트 설정의 일환으로 테넌트를 호스팅할 리전을 선택하고 AWS 또는 Azure 중 어느 곳에서 테넌트를 호스팅할지 결정해야 합니다.
 
 테넌트 생성이 완료되면 콘솔 자격 증명을 사용하여 로그인하고 Data Infrastructure Insights 의 무료 30일 평가판을 시작하세요.  이 체험판을 통해 Data Infrastructure Insights 제공하는 기능을 탐색해 볼 수 있습니다.
 

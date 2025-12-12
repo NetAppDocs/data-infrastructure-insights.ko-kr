@@ -2275,128 +2275,7 @@
   <block id="ae4768c261eca8a6c88e3f5101e586e5" category="summary">AgentConfiguration 옵션을 사용하여 NetApp Kubernetes Monitoring Operator를 구성합니다.</block>
   <block id="9c64a0e0a0e22cc18b7137e967889926" category="doc">Kubernetes 모니터링 운영자 구성 옵션</block>
   <block id="a2c6fd0b23854404c386430346919db8" category="paragraph">그만큼 <block ref="025a80672f7feae526479c9984c435c7" category="inline-link-macro-rx"></block> AgentConfiguration 파일을 통해 광범위한 사용자 지정 옵션을 제공합니다. 리소스 제한, 수집 간격, 프록시 설정, 허용 오차 및 구성 요소별 설정을 구성하여 Kubernetes 환경의 모니터링을 최적화할 수 있습니다. 이러한 옵션을 사용하여 telegraf, kube-state-metrics, 로그 수집, 워크로드 매핑, 변경 관리 및 기타 모니터링 구성 요소를 사용자 지정할 수 있습니다.</block>
-  <block id="2d18be6c8402f4ca0cb26ce68adc0564" category="paragraph">아래 표는 _AgentConfiguration_ 파일에 대한 가능한 옵션을 나열합니다.</block>
-  <block id="b33aed8f3134996703dc39f9a7c95783" category="cell">대리인</block>
-  <block id="4e49d105e5ecfd95da78eb980f698488" category="cell">운영자가 설치할 수 있는 모든 구성 요소에 공통적인 구성 옵션입니다.  이러한 옵션은 "글로벌" 옵션으로 간주될 수 있습니다.</block>
-  <block id="286bec770910c4da609323e21222e283" category="cell">도커리포</block>
-  <block id="ea55ba51f0b69383ec5bb89cabada638" category="cell">Data Infrastructure Insights Docker 저장소 대신 고객의 개인 Docker 저장소에서 이미지를 가져오도록 dockerRepo를 재정의합니다. 기본값은 Data Infrastructure Insights Docker 저장소입니다.</block>
-  <block id="994be3a18bf7e0a16ab2be2d5c1643ae" category="cell">dockerImagePullSecret</block>
-  <block id="8e8bb119221ff93e3f93bea9ae89444f" category="cell">선택 사항: 고객의 개인 저장소에 대한 비밀입니다.</block>
-  <block id="343d28c140c3f5ce20a1ac3f8f7dae2c" category="cell">클러스터 이름</block>
-  <block id="82b5c50bc4616a08a16b907f9dd29573" category="cell">모든 고객 클러스터에서 클러스터를 고유하게 식별하는 자유 텍스트 필드입니다. 이 필드는 Data Infrastructure Insights 테넌트 전체에서 고유해야 합니다. 기본값은 고객이 UI에서 "클러스터 이름" 필드에 입력하는 내용입니다.</block>
-  <block id="5c7af4a6b686285084e62f255503c141" category="cell">프록시 형식: 프록시: 서버: 포트: 사용자 이름: 비밀번호: noProxy: isTelegrafProxyEnabled: isAuProxyEnabled: isFluentbitProxyEnabled: isCollectorProxyEnabled:</block>
-  <block id="f8ac74d8a3668ddf89efeb8e806ca908" category="cell">프록시 설정은 선택 사항입니다.  이는 일반적으로 고객의 회사 대리인입니다.</block>
-  <block id="0c8011c6947aae43789eb8972c306e85" category="cell">Operator의 Telegraf 설치를 사용자 정의할 수 있는 구성 옵션</block>
-  <block id="fe071453b5b9af9d9a481afb504f78cb" category="cell">수집간격</block>
-  <block id="43087b2e6dfc2a4eecd03be4305fb0cb" category="cell">메트릭 수집 간격(초)(최대 60초)</block>
-  <block id="2129471bf14899d19206e2b1aa6c00ca" category="cell">dsCpuLimit</block>
-  <block id="718918f6bff9fdd2a6292afbe4549d0b" category="cell">Telegraf DS의 CPU 제한</block>
-  <block id="5eeea2f6351dff2df3a80bcff5cdd5be" category="cell">dsMemLimit</block>
-  <block id="bf35f5b9d6933443b78e7cd6b5b24039" category="cell">Telegraf DS의 메모리 제한</block>
-  <block id="32baad7599efdd63fc7dd0ebd6fb0462" category="cell">dsCpu요청</block>
-  <block id="fb50fe579fe2186737910f4faafbfae2" category="cell">Telegraf DS에 대한 CPU 요청</block>
-  <block id="4fd630053ba42e53bf847444b5857abf" category="cell">dsMemRequest</block>
-  <block id="03a9d404d5e9073d007d6e38a710ebb1" category="cell">Telegraf DS에 대한 메모리 요청</block>
-  <block id="00edda16a430ed1a43f73b6b6f8e5230" category="cell">rsCpuLimit</block>
-  <block id="be5f478627c9d3676f638d423c9b320b" category="cell">Telegraf rs의 CPU 제한</block>
-  <block id="19db0dd97225788d8cd2ac82554de9d3" category="cell">rsMemLimit</block>
-  <block id="7ad3bdf2f332902d109247d0c3970fb4" category="cell">Telegraf RS의 메모리 제한</block>
-  <block id="1be922c4a70261e6656d70f9cc86dde2" category="cell">rsCpu요청</block>
-  <block id="76b9e3aaffb44c3c4a7084bd7430088d" category="cell">Telegraf rs에 대한 CPU 요청</block>
-  <block id="b3e9404f7fb1acb7c3d66e587a4c411b" category="cell">rsMemRequest</block>
-  <block id="dce1fa2cb47347aa09d7dceac624c5f7" category="cell">Telegraf rs에 대한 메모리 요청</block>
-  <block id="6fd605953233d5564943f85815683d62" category="cell">권한이 있는 실행</block>
-  <block id="03d93e1826c4b75f5882487510637b6a" category="cell">특권 모드에서 telegraf DaemonSet의 _telegraf-mountstats-poller_ 컨테이너를 실행합니다.  Kubernetes 노드에서 SELinux가 활성화된 경우 이 값을 true로 설정합니다.</block>
-  <block id="324bdfa0e3afdc96a6b7ec1a6d383285" category="cell">runDs특권</block>
-  <block id="853d5e0ee500d0a29752a0f7c287f08d" category="cell">telegraf DaemonSet의 telegraf 컨테이너를 특권 모드로 실행하려면 runDsPrivileged를 true로 설정합니다.</block>
-  <block id="986b07451fa1766c43f2eead1470731c" category="cell">배치 크기</block>
-  <block id="f73038607dbfd988c8ed06aa707b67b6" category="inline-link-macro">Telegraf 구성 문서</block>
-  <block id="4a686d41d5d06d7af488bce13a4b6b1c" category="cell">보다<block ref="1220f98ff4e67fb30a54b092e87489e7" category="inline-link-macro-rx"></block></block>
-  <block id="977c5d665ca82fa3d9d007ab47991cab" category="cell">버퍼 제한</block>
-  <block id="3d5beabcc75357b9f0517b37a51d848b" category="cell">라운드 간격</block>
-  <block id="0457354b493031778121a8634e49db5e" category="cell">컬렉션지터</block>
-  <block id="e2794d8f12719281eff5601251c8a680" category="cell">정도</block>
-  <block id="43a58acb58cbbbfc1abb27f189ec375c" category="cell">플러시 간격</block>
-  <block id="e177bfc26cdd2bb790365e538eef32a6" category="cell">플러시지터</block>
-  <block id="8bdbcdcecbcc5e3e45877e3a15ebe124" category="cell">출력시간 초과</block>
-  <block id="bb0a12c3834207119851374142a76ac0" category="cell">ds내성</block>
-  <block id="77e9ea38d66b01840eaf712dab598ce0" category="cell">telegraf-ds 추가 허용 범위.</block>
-  <block id="569d3e422e1e57a8d8f17b102bb10bfc" category="cell">rsTolerations</block>
-  <block id="0a1cb9f6e7c89d89c765fdd1efa6183b" category="cell">telegraf-rs 추가 허용 범위.</block>
-  <block id="6b0d087c4bacdd4357f49c495293bdde" category="cell">스킵프로세서애그리게이터</block>
-  <block id="412ea2434c00799606f268b4aa2b35dc" category="cell">보호되지 않은</block>
-  <block id="9091b3fb9f4d43844af8dc0a973c67e0" category="inline-link-macro">알려진 Telegraf 문제</block>
-  <block id="d466d69e5a5f62e5d6773f7d399fe086" category="cell">이것을 보세요 <block ref="0dcd3ea27696029fecb8ccd7e247f633" category="inline-link-macro-rx"></block> . _unprotected_를 설정하면 Kubernetes Monitoring Operator가 Telegraf를 다음과 같이 실행하도록 지시합니다. <block ref="3a41393afb053a415e6dc30cf704d899" prefix=" " category="inline-code"></block> 깃발.</block>
-  <block id="0860569a69c3584507ee09f4be585418" category="cell">insecureK8sSkipVerify</block>
-  <block id="3008cd3125cccc003fa13335717e556e" category="cell">IP SAN이 부족하여 Telegraf가 인증서를 확인할 수 없는 경우 확인 건너뛰기를 활성화해 보세요.</block>
-  <block id="81beb48dd63a014bf8c446eeeb319a2e" category="cell">Operator의 kube 상태 메트릭 설치를 사용자 정의할 수 있는 구성 옵션</block>
-  <block id="8804d25db5f16b9db006116b6edf45bc" category="cell">CPU 제한</block>
-  <block id="8b673d5f702e58efd947465ead5c9647" category="cell">kube-state-metrics 배포를 위한 CPU 제한</block>
-  <block id="65a010afe1e2186ecb5c9ef8cf978e2d" category="cell">메모리 제한</block>
-  <block id="e49ddab01d68c08aeef7fdff59e6def6" category="cell">kube-state-metrics 배포에 대한 메모리 제한</block>
-  <block id="664e65ce2a5a996437f898217e74c9dd" category="cell">cpu요청</block>
-  <block id="3237c3bd0df775b78c9dafaf3c9bf9e6" category="cell">kube state metrics 배포를 위한 CPU 요청</block>
-  <block id="c8f947b6b972e9866cc682a82d5ec34a" category="cell">메모리 요청</block>
-  <block id="03dd8511b379b0b92595299b980d36e4" category="cell">kube state 메트릭 배포를 위한 메모리 요청</block>
-  <block id="55b558c7ef820e6e00e5993b9e55d93b" category="cell">자원</block>
-  <block id="3b720d9649ae501d73e8f8c4a7a15348" category="cell">캡처할 리소스를 쉼표로 구분하여 나열합니다. 예: cronjobs, daemonsets, deployments, ingresses, jobs, namespaces, nodes, persistentvolumeclaims, persistentvolumes, pods, replicasets, resourcequotas, services, statefulsets</block>
-  <block id="d6c26478ca41a23cc9741a4e92576269" category="cell">관용</block>
-  <block id="c511c601aee805f46f3767063104cdd8" category="cell">kube-state-metrics 추가 허용 범위.</block>
-  <block id="c84711fe6ad5fa23070462b2086412e2" category="cell">kube-state-metrics가 레이블을 캡처해야 하는 리소스의 쉼표로 구분된 목록 +++ 예: cronjobs=[*],daemonsets=[*],deployments=[*],ingresses=[*],jobs=[*],namespaces=[*],nodes=[*], persistentvolumeclaims=[*],persistentvolumes=[*],pods=[*],replicasets=[*],resourcequotas=[*],services=[*],statefulsets=[*] +++</block>
-  <block id="d795ec2d0a164433572a8d5d91b8fae0" category="cell">운영자의 로그 수집 및 설치를 사용자 정의할 수 있는 구성 옵션</block>
-  <block id="031104420a282e1bdb63e280c40a4938" category="cell">헤드에서 읽기</block>
-  <block id="d7ff51440723c6bba696ef19f757a8af" category="cell">참/거짓, fluent bit가 head에서 로그를 읽어야 합니까?</block>
-  <block id="90272dda245ae1fb3cf197e91a8689dc" category="cell">타임아웃</block>
-  <block id="6136e8e4f59c6ebf3a47733e15cd8f8f" category="cell">시간 초과(초)</block>
-  <block id="a28f540659f42fa52be34b45558bb6c6" category="cell">DNS 모드</block>
-  <block id="5c0864cc25dbf397d47948de9ac342f1" category="cell">TCP/UDP, DNS 모드</block>
-  <block id="7e7b391c65060e4613a7fb96bfd2ef31" category="cell">유창한 비트 허용</block>
-  <block id="035bf5f67349238f72eae5d508efac99" category="cell">fluent-bit-ds 추가 허용 범위.</block>
-  <block id="8776d1f0ee4232b1c2ff5bc38e4b2603" category="cell">이벤트 내보내기 허용</block>
-  <block id="bac5ce71f32beb834c27a988cad33543" category="cell">이벤트 내보내기 추가 허용 범위.</block>
-  <block id="b6544593f70ff0a8915cbd1f9aabb49f" category="cell">이벤트 내보내기-maxEventAgeSeconds</block>
-  <block id="ec57a05c2326d433af7b24b3adb77f1a" category="cell">이벤트 내보내기 최대 이벤트 기간.  보다<block ref="6708727d05fa40eed58ce8404e60b4a3" category="inline-link-rx"></block></block>
-  <block id="8edfed76354af11279c58c2d91948eda" category="cell">유창한 비트 컨테이너 로그 경로</block>
-  <block id="3150c73f1d1522f3b831f0d591077194" category="cell">기본적으로 Fluentbit DaemonSet은 /var/log 및 /var/lib/docker/containers 호스트 경로를 마운트하여 Kubernetes 컨테이너 로그에 액세스하고 이를 읽습니다.  Kubernetes가 컨테이너 로그를 기본이 아닌 위치에 저장하도록 구성된 경우 이 옵션을 사용하여 Fluentbit DaemonSet을 수정하여 기본이 아닌 경로를 마운트합니다.</block>
-  <block id="6f70b1b29646b4f3864aa8abbbca1c59" category="cell">워크로드 맵</block>
-  <block id="f39ed19a7c5e5e2b0cff68ee1bedc0ef" category="cell">Operator의 작업 맵 수집 및 설치를 사용자 정의할 수 있는 구성 옵션입니다.</block>
-  <block id="27f8013ee549a9c4b57f90e2187cfe5f" category="cell">net observer ds에 대한 CPU 제한</block>
-  <block id="579e696b8054af08af33dfd55dfad78b" category="cell">net observer ds에 대한 메모리 제한</block>
-  <block id="967cc12aa2f5f95e9e26d28fae3bd7b3" category="cell">net observer ds에 대한 CPU 요청</block>
-  <block id="0ae1bca85ce414d0f1862e84b9f66acc" category="cell">net observer ds에 대한 mem 요청</block>
-  <block id="1de805c2687b2c30b46a937270519488" category="cell">메트릭 집계 간격</block>
-  <block id="8d5efaeb90931394d0afdcc8d00b6b90" category="cell">메트릭 집계 간격(초)</block>
-  <block id="c561450e999b4dfedfdbbc8b48e36db7" category="cell">bpfPollInterval</block>
-  <block id="a75c6546b06d6f58867213c5349a5f15" category="cell">BPF 폴링 간격(초)</block>
-  <block id="3b7c5615013c6b42362845591653e503" category="cell">DNSLookup 활성화</block>
-  <block id="1d2b775d8b166dda0a22ca0ffa3f537c" category="cell">true/false, DNS 조회 활성화</block>
-  <block id="287ab13fa00dc2700e0567bc50f5a663" category="cell">l4-내성</block>
-  <block id="bef6178937f26cf5776d5c67e6c1d23c" category="cell">net-observer-l4-ds 추가 허용 범위.</block>
-  <block id="e04813a849ce9da2afe9f3bfcaf85f0e" category="cell">true/false - Kubernetes 노드에서 SELinux가 활성화된 경우 runPrivileged를 true로 설정합니다.</block>
-  <block id="78835e1c315b219e4c62fc613fdfd311" category="cell">변화 관리</block>
-  <block id="02b609b32da65dbc17b9446c8542f3dd" category="cell">Kubernetes 변경 관리 및 분석을 위한 구성 옵션</block>
-  <block id="75f551b07991fea9589bce25b6abb363" category="cell">change-observer-watch-rs에 대한 CPU 제한</block>
-  <block id="6e753299d008aca89690ad5b5c6b784f" category="cell">change-observer-watch-rs에 대한 메모리 제한</block>
-  <block id="582e83d73d36aa6674624867468704da" category="cell">change-observer-watch-rs에 대한 CPU 요청</block>
-  <block id="d73c96f8e69fcf08ffd440cc16f573af" category="cell">change-observer-watch-rs에 대한 mem 요청</block>
-  <block id="f7b8b6cbce2f95ef7109d41adce08b69" category="cell">workloadFailureDeclarationIntervalSeconds</block>
-  <block id="02c3ccd1d51babc54da2759d79e61c5c" category="cell">작업 부하의 배포가 성공하지 못한 경우 배포가 실패로 표시되는 간격(초)</block>
-  <block id="fded60399ef22b3b04bd3856d344233b" category="cell">workloadDeployAggrIntervalSeconds</block>
-  <block id="f5d43bfb3eaf806884e4936fc4453865" category="cell">워크로드 배포가 결합되어 전송되는 빈도(초)</block>
-  <block id="fb937d63289578595fb05fc626554661" category="cell">nonWorkloadDeployAggrIntervalSeconds</block>
-  <block id="e4685d20c866cca50df5bea5e4230497" category="cell">비작업 부하 배포가 결합되어 전송되는 빈도(초)</block>
-  <block id="6d53bc2f7711e2d9a24631defb23b18f" category="cell">용어삭제</block>
-  <block id="532aa006f97c495d1734618405645779" category="cell">값이 삭제되는 환경 이름 및 데이터 맵에 사용되는 정규 표현식 세트 예시 용어: "pwd", "password", "token", "apikey", "api-key", "jwt"</block>
-  <block id="44011a6b8af68cc46d2d0dfb669fd887" category="cell">추가적으로 주의해야 할 종류</block>
-  <block id="ac3fd52049b8a2c3ba2e8b8a5eff74e0" category="cell">수집기가 감시하는 기본 종류 집합에서 감시할 추가 종류의 쉼표로 구분된 목록</block>
-  <block id="20e3bce2d07b4e6d70959f7793b18bc9" category="cell">시계에서 무시할 종류</block>
-  <block id="003936f0b815c468a99ed57f900f3d8a" category="cell">수집기가 감시하는 기본 종류 집합에서 감시를 무시할 종류의 쉼표로 구분된 목록</block>
-  <block id="eee9690c1174453d706353a8a678c8a1" category="cell">logRecordAggrIntervalSeconds</block>
-  <block id="284d60e68534479175e5c3f018cecc45" category="cell">수집기에서 CI로 로그 레코드가 전송되는 빈도</block>
-  <block id="73f0200abaec8d804a671e6ce4dac861" category="cell">감시 관용</block>
-  <block id="bab1b701df004b067b068da86a62e2cf" category="cell">change-observer-watch-ds 추가적인 허용 범위.  축약된 단일 행 형식만 가능합니다.  예: '{키: taint1, 연산자: 존재, 효과: NoSchedule},{키: taint2, 연산자: 존재, 효과: NoExecute}'</block>
   <block id="349a396fe021418ac0edbee3b447f4d5" category="section-title">샘플 AgentConfiguration 파일</block>
-  <block id="05275b3b3aecea67df39f7c8383f0251" category="paragraph">아래는 _AgentConfiguration_ 파일의 샘플입니다.</block>
   <block id="d16d9bd2acb667a5f9b107ea67afbca8" category="summary">워크로드 보안 데이터 수집기 문제 해결</block>
   <block id="f9d23cdace7f417c3e782c1bc693dd56" category="doc">ONTAP SVM 데이터 수집기 ​​문제 해결</block>
   <block id="cd340fe1a6cf5e3a42e4f1d2eae63efb" category="paragraph">워크로드 보안은 데이터 수집기를 사용하여 장치에서 파일 및 사용자 액세스 데이터를 수집합니다.  여기에서는 이 수집기와 관련된 문제를 해결하기 위한 팁을 찾을 수 있습니다.</block>
@@ -10102,9 +9981,6 @@
   <block id="a46b8a484704b65f978247cb9b3901aa" category="paragraph">이메일 주소와 비밀번호를 입력하세요.  그러면 NetApp의 클라우드 서비스 페이지로 이동하게 됩니다.</block>
   <block id="4ec4e4954d48db50650c5ec49007cf27" category="paragraph">*분석 및 제어 &gt; 관찰성*으로 이동하여 Data Infrastructure Insights 에 대해 알아보거나 데모를 요청하세요.</block>
   <block id="eeecd13aa136e65aaedc64374c7415bc" category="section-title">Data Infrastructure Insights 무료 평가판 시작하기</block>
-  <block id="f596c7c5f04ed4be7cad8a6bac5f0b64" category="paragraph">Data Infrastructure Insights 에 처음 로그인하는 경우 Data Infrastructure Insights 서비스에서 *무료 평가판 시작*을 클릭하세요.  Data Infrastructure Insights 이용하면 회사의 테넌트를 만드는 과정을 안내받을 수 있으며, 테넌트가 상주할 지역을 선택할 수도 있습니다.</block>
-  <block id="d6fc6f290827ae120b8547b3660afe0e" category="inline-image-macro">Data Infrastructure Insights 테넌트를 호스팅할 지역 선택</block>
-  <block id="0959e45a1edcdcaa7f540365665b3986" category="paragraph"><block ref="0959e45a1edcdcaa7f540365665b3986" category="inline-image-macro-rx" type="image"></block></block>
   <block id="13d2916279db639fea18a00088e8cb21" category="paragraph">테넌트 생성이 완료되면 콘솔 자격 증명을 사용하여 로그인하고 Data Infrastructure Insights 의 무료 30일 평가판을 시작하세요.  이 체험판을 통해 Data Infrastructure Insights 제공하는 기능을 탐색해 볼 수 있습니다.</block>
   <block id="3b1f676d06286548e11b332567f42bbd" category="inline-link-macro">구독을 시작하세요</block>
   <block id="b48d78927dd619cab2e6b7fde5ffb6b1" category="paragraph">무료 체험 기간 동안 다음을 수행할 수 있습니다.<block ref="822a67eb96671d13fff372a75b259713" category="inline-link-macro-rx"></block> 언제든지 Data Infrastructure Insights 에 문의하세요.  구독하면 현재 구독에 따라 Data Infrastructure Insights 기능을 사용할 수 있습니다.</block>
@@ -12801,4 +12677,7 @@
   <block id="c77b295eb8d3480880ff044a7823cdd9" category="list-text">종속 보고서를 업데이트하지 않고 주석을 제거하면 해당 보고서에서 오류가 발생하거나 예상치 못한 결과가 나타날 수 있습니다.</block>
   <block id="3da85052d2ffffd1cb6352186fe0393a" category="list-text">복잡한 시나리오에서는 보고서 오류를 수정하는 데 전문가의 도움이 필요할 수 있습니다.</block>
   <block id="4f9b9c5804f57ab98a1eb0bbdc93ee28" category="paragraph">주석에 의존하는 모든 보고서는 게시를 취소하기 전에 검토하는 것이 좋습니다.</block>
+  <block id="84782b0fddf642f36f6d0ca7585d8709" category="paragraph">Data Infrastructure Insights 에 처음 로그인하시는 경우, Data Infrastructure Insights 제공하는 모든 기능에 대한 정보를 읽어보시고, 준비가 되셨으면 *체험판 요청*을 클릭하여 정보를 입력해 주세요.</block>
+  <block id="513dc3996a984c81efa261ee7da82ea7" category="paragraph">평가판 테넌트 설정의 일환으로 테넌트를 호스팅할 리전을 선택하고 AWS 또는 Azure 중 어느 곳에서 테넌트를 호스팅할지 결정해야 합니다.</block>
+  <block id="29ecb4e96ebb9048c6e2055bd8edfec9" category="paragraph">아래는 각 옵션에 대한 설명이 포함된 _AgentConfiguration_ 파일의 예시입니다.</block>
 </blocks>

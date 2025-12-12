@@ -7,6 +7,10 @@ summary: Telegraf 데이터 표시 옵션
 = 지표 변환
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
