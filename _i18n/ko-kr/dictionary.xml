@@ -9981,12 +9981,10 @@
   <block id="a46b8a484704b65f978247cb9b3901aa" category="paragraph">이메일 주소와 비밀번호를 입력하세요.  그러면 NetApp의 클라우드 서비스 페이지로 이동하게 됩니다.</block>
   <block id="4ec4e4954d48db50650c5ec49007cf27" category="paragraph">*분석 및 제어 &gt; 관찰성*으로 이동하여 Data Infrastructure Insights 에 대해 알아보거나 데모를 요청하세요.</block>
   <block id="eeecd13aa136e65aaedc64374c7415bc" category="section-title">Data Infrastructure Insights 무료 평가판 시작하기</block>
-  <block id="13d2916279db639fea18a00088e8cb21" category="paragraph">테넌트 생성이 완료되면 콘솔 자격 증명을 사용하여 로그인하고 Data Infrastructure Insights 의 무료 30일 평가판을 시작하세요.  이 체험판을 통해 Data Infrastructure Insights 제공하는 기능을 탐색해 볼 수 있습니다.</block>
   <block id="3b1f676d06286548e11b332567f42bbd" category="inline-link-macro">구독을 시작하세요</block>
   <block id="b48d78927dd619cab2e6b7fde5ffb6b1" category="paragraph">무료 체험 기간 동안 다음을 수행할 수 있습니다.<block ref="822a67eb96671d13fff372a75b259713" category="inline-link-macro-rx"></block> 언제든지 Data Infrastructure Insights 에 문의하세요.  구독하면 현재 구독에 따라 Data Infrastructure Insights 기능을 사용할 수 있습니다.</block>
   <block id="2c4bb88652ba26d23266d851053ba465" category="section-title">Sign in 하고 가세요</block>
   <block id="27e0956311428740c19b40a7a971c7ef" category="inline-link-macro">클라우드 서비스</block>
-  <block id="d97af656d080e05ccc035b1948ac30b8" category="paragraph">테넌트가 생성되면 언제든지 NetApp Console 포털에 로그인하여 다음으로 이동할 수 있습니다.<block ref="37a150e92f05332b5bc5a56046c3177c" category="inline-link-macro-rx"></block> 페이지로 이동하여 * Data Infrastructure Insights 로 이동*을 선택하세요.</block>
   <block id="206cb1224c200bbbd73cfa4118ad7c1e" category="paragraph">예를 들어, 브라우저를 Data Infrastructure Insights 테넌트 URL로 직접 열 수도 있습니다.</block>
   <block id="9834a50024d1c9eb92d1d75e4f1fc3fa" category="paragraph">각 사용자의 초대 이메일에도 URL이 포함되어 간편하게 접속하고 북마크할 수 있습니다.  사용자가 아직 콘솔에 로그인하지 않은 경우 로그인하라는 메시지가 표시됩니다.</block>
   <block id="955402d5e1e7fb2ed3dc9cdbbcb35826" category="admonition">새로운 사용자는 테넌트 URL에 액세스하기 전에 콘솔 액세스에 가입해야 합니다.</block>
@@ -12680,4 +12678,19 @@
   <block id="84782b0fddf642f36f6d0ca7585d8709" category="paragraph">Data Infrastructure Insights 에 처음 로그인하시는 경우, Data Infrastructure Insights 제공하는 모든 기능에 대한 정보를 읽어보시고, 준비가 되셨으면 *체험판 요청*을 클릭하여 정보를 입력해 주세요.</block>
   <block id="513dc3996a984c81efa261ee7da82ea7" category="paragraph">평가판 테넌트 설정의 일환으로 테넌트를 호스팅할 리전을 선택하고 AWS 또는 Azure 중 어느 곳에서 테넌트를 호스팅할지 결정해야 합니다.</block>
   <block id="29ecb4e96ebb9048c6e2055bd8edfec9" category="paragraph">아래는 각 옵션에 대한 설명이 포함된 _AgentConfiguration_ 파일의 예시입니다.</block>
+  <block id="0a511b85d77f15f39fbbd23442b32001" category="section-title">2025년 12월</block>
+  <block id="02c6c8e70973eaa6f06450fcaad33a5f" category="section-title">공유 쿼리를 사용하여 쿼리 액세스를 제어하세요.</block>
+  <block id="2432d631102e473d4b496edccabf444a" category="paragraph">사용자가 생성한 쿼리를 세부적인 권한 제어를 통해 공유하세요. 수정을 방지하려면 읽기 전용 뷰어 모드를 선택하고, 변경을 허용하려면 편집 모드를 선택하십시오. 개인 쿼리는 생성자만 액세스할 수 있으며, 공유 쿼리는 주석 규칙에서 활용하거나 특수 용도에 맞게 복제할 수 있으므로 조직 전체에서 쿼리 사용 및 수정 방식을 완벽하게 제어할 수 있습니다.</block>
+  <block id="867eb02418c63590934857d7248297ed" category="inline-image-macro">쿼리에 대한 권한 설정, 너비=200</block>
+  <block id="1001d997566a254eb622fa8e13c87f5d" category="paragraph"><block ref="1001d997566a254eb622fa8e13c87f5d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ca03196cfb39c0ee19d1e348fea01c6d" category="paragraph">또한, '게스트' 역할을 가진 사용자는 이제 자신만의 비공개 쿼리를 생성하고 관리할 수 있습니다.</block>
+  <block id="793292eddcb4bfdfa889302640316870" category="section-title">모니터 관리 시 더 나은 필터링 기능</block>
+  <block id="de71fd4a5b1b28ac72eda2e9287c745a" category="paragraph">모니터 목록 및 그룹 필터링 기능이 개선되어 와일드카드 지원, 다중 필터, 포함/제외 기능 등이 추가되었습니다.</block>
+  <block id="b1dd7c1a42d0a77cdb3443ba1c0f97c3" category="inline-image-macro">새 모니터 필터링, 너비=500</block>
+  <block id="7bf60aa4367d13bdf4be42c9055afecc" category="paragraph"><block ref="7bf60aa4367d13bdf4be42c9055afecc" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f3dd02ae7c2c35817a35bc27eb8af50f" category="section-title">더욱 깔끔한 대시보드 시각화</block>
+  <block id="6838668755c364765b40cf38648de55f" category="paragraph">개선된 대시보드 디자인으로 가장 중요한 정보를 한눈에 확인할 수 있습니다. 위젯을 구분하는 그림자 테두리를 추가하여 시각적 명확성을 높이고, 구분선을 제거하여 화면 혼잡을 줄이고 데이터 분석에 집중할 수 있도록 했습니다. 이러한 개선 사항을 통해 더욱 깔끔하고 직관적인 대시보드 환경을 구축하여 추세와 이상 징후를 더 빠르고 쉽게 파악할 수 있습니다.</block>
+  <block id="d388ca982366ad7a8a7a165d21919f84" category="paragraph">테넌트 생성이 완료되면 콘솔 자격 증명을 사용하여 로그인하고 Data Infrastructure Insights 의 무료 30일 평가판을 시작하세요. 이 체험판을 통해 Data Infrastructure Insights 제공하는 기능을 탐색해 볼 수 있습니다.</block>
+  <block id="a361d4c5b26cab224e5aad972ef9f92f" category="paragraph">테넌트가 생성되면 언제든지 NetApp BlueXP 포털에 로그인하여 해당 페이지로 이동하면 됩니다. <block ref="37a150e92f05332b5bc5a56046c3177c" category="inline-link-macro-rx"></block> 해당 페이지에서 * Data Infrastructure Insights 로 이동*을 선택합니다.</block>
+  <block id="ed35afa558b996b37265533db9af5399" category="sidebar">보고서에 주석 게시하기</block>
 </blocks>
