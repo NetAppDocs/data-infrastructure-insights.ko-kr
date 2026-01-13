@@ -2522,11 +2522,8 @@
   <block id="5e0f4fcd8e020652408a2ed8c1c6513d" category="list-text">다른 NetApp Cloud Central 제품으로 전환할 수 있는 메뉴가 화면 오른쪽 상단으로 이동되었습니다.</block>
   <block id="f998abe6d6e1433185e617432fa562a7" category="summary">경고를 줄이려면 허용되는 파일 형식 목록에 파일 확장자를 추가하세요.</block>
   <block id="2b38e4e9371e68c324f4d975aeec0b8b" category="doc">허용된 파일 유형 정책</block>
-  <block id="3a0a3011be8f34f267c24177c748de10" category="paragraph">알려진 파일 확장자에 대한 랜섬웨어 공격이 감지되고 알림 화면에서 알림이 생성되면 해당 파일 확장자를 _허용되는 파일 형식_ 목록에 추가하여 불필요한 알림이 생성되는 것을 방지할 수 있습니다.</block>
   <block id="66c0454949e8e45058f66b8dbe1d1a38" category="paragraph">*작업 부하 보안 &gt; 정책*으로 이동하여 _허용되는 파일 유형 정책_ 탭으로 이동합니다.</block>
   <block id="8c06b62ca830efbad93bfb2ce294e0ef" category="paragraph"><block ref="8c06b62ca830efbad93bfb2ce294e0ef" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="bdf27b4c983630ae6531f89136fe0963" category="paragraph">_허용되는 파일 형식_ 목록에 추가되면 해당 허용된 파일 형식에 대한 랜섬웨어 공격 경고가 생성되지 않습니다.  _허용되는 파일 유형_ 정책은 랜섬웨어 감지에만 적용됩니다.</block>
-  <block id="492f463a35ea215d77ae021c64cddb64" category="paragraph">예를 들어, _test.txt_라는 이름의 파일이 _test.txt.abc_로 이름이 바뀌고 Workload Security가 _.abc_ 확장자로 인해 랜섬웨어 공격을 감지하는 경우, _.abc_ 확장자를 _허용되는 파일 형식_ 목록에 추가할 수 있습니다.  목록에 추가된 후에는 _.abc_ 확장자를 가진 파일을 대상으로 랜섬웨어 공격이 더 이상 발생하지 않습니다.</block>
   <block id="b778d3252b5cc52999f0c844a033362f" category="paragraph">허용되는 파일 유형은 정확한 일치(예: ".abc") 또는 표현식(예: ".*type", ".type*" 또는 "*type*")일 수 있습니다.  “.a*c”, “.p*f” 유형의 표현식은 지원되지 않습니다.</block>
   <block id="3ee2ba16702e3b406dd125b347f5f30b" category="summary">Workload Security 에이전트는 수동으로 설치하거나 업데이트할 수 있으므로 테넌트에 설치된 소프트웨어를 보다 효과적으로 제어할 수 있습니다.</block>
   <block id="5ecfbb1f5f3536161517dc33155eaa58" category="doc">Workload Security Agent 및 Collector 수동 설치</block>
@@ -2914,9 +2911,7 @@
   <block id="abc492c54ab99cf963d50d67acb42565" category="sidebar">이벤트 요금 확인기(에이전트 규모 가이드)</block>
   <block id="a8df87f53c1b831dfc886e69dec19144" category="sidebar">활동 포렌식 - 모든 활동</block>
   <block id="f9aae5fda8d810a29f12d1e61b4ab25f" category="sidebar">사용자</block>
-  <block id="9b5911ec569b49f0ae81ecb2c9067806" category="sidebar">ONTAP 자율형 랜섬웨어 보호 통합</block>
   <block id="1c31d515d2e78422350a8dfc6a331a38" category="sidebar">ONTAP 액세스 거부 통합</block>
-  <block id="c52c39354f4ad29d5eea2036eb6bf8a9" category="sidebar">랜섬웨어 공격 시뮬레이션</block>
   <block id="c836566b25407f9b00af0ee750a250a6" category="sidebar">웹후크 만들기</block>
   <block id="8c4223ab469f8b3e9d1aa30d51cf4390" category="sidebar">Discord 웹훅 예시</block>
   <block id="9129ee5b293413b88d69268ce77a5a06" category="sidebar">PagerDuty 웹훅 예제</block>
@@ -3568,7 +3563,6 @@
   <block id="710c77cfc8d2136c51aad6a8316043b9" category="cell">*이걸 시도해보세요:*</block>
   <block id="3e31734df6f02c9ad9cd0dc7c1f65a98" category="cell">모니터가 내보내졌다는 감사 메시지가 표시됩니다.</block>
   <block id="256a0ce1cb9ac99794371e404aa7446e" category="cell">사용자 정의 모니터 구성 내보내기는 일반적으로 NetApp 엔지니어가 새로운 기능을 개발하고 테스트하는 동안 사용됩니다.  이 메시지가 나타날 것이라고 예상하지 못했다면 감사된 작업에 이름이 언급된 사용자의 작업을 살펴보거나 지원팀에 문의하세요.</block>
-  <block id="03b8f305db2c82bc6a850a57ec12d044" category="summary">에이전트로 사용하는 서버 또는 VM은 최소 요구 사항을 충족해야 합니다.</block>
   <block id="a7ef8f0bed1d94220b7abd3877b10643" category="doc">워크로드 보안 에이전트 요구 사항</block>
   <block id="bee347f35c7a237c1f2d5d7193252244" category="inline-link-macro">Workload Security Agent 설치</block>
   <block id="1de0df19f89310a1407a7686c6dcad7c" category="paragraph">당신은해야합니다<block ref="588188a9e8b5d243fbdbf4e2ce1c4421" category="inline-link-macro-rx"></block> 귀하의 데이터 수집자로부터 정보를 얻기 위해서입니다. 에이전트를 설치하기 전에 사용자 환경이 운영 체제, CPU, 메모리 및 디스크 공간 요구 사항을 충족하는지 확인하세요.</block>
@@ -3621,7 +3615,6 @@
   <block id="46a1d0dbde96d466dadd916b9b7a7d65" category="section-title">시스템 크기 조정</block>
   <block id="b81e4f797b30e131d43ea14e3bc8322c" category="inline-link-macro">이벤트 요금 확인기</block>
   <block id="1a46e02a3754d0daf83001fffc7c7c46" category="paragraph">를 참조하십시오<block ref="fd6f609b977fb641a06defa631019934" category="inline-link-macro-rx"></block> 사이즈에 대한 정보는 설명서를 참조하세요.</block>
-  <block id="dda85f45002252de774eae20d8d3bb21" category="summary">Workload Security에는 CMDB 등 다른 애플리케이션과 통합하기 위한 강력한 API가 포함되어 있습니다.</block>
   <block id="0865b3ed9f5211e6fe35eddac5b1aaa3" category="doc">워크로드 보안 API</block>
   <block id="1b1fb3360bd2eea985279f6fcc2ef45f" category="paragraph">Workload Security API를 사용하면 NetApp 고객과 ISV(독립 소프트웨어 공급업체)가 Workload Security를 ​​CMDB나 다른 티켓팅 시스템 등의 다른 애플리케이션과 통합할 수 있습니다.</block>
   <block id="1a152a606ca16a6eef5f2e9ac9b4c824" category="paragraph">API 접근을 위한 요구 사항:</block>
@@ -3642,11 +3635,7 @@
   <block id="9691b74510440e767ebe140708556d4a" category="paragraph">스크립트는 _/opt/netapp/cloudsecure/agent/export-script_에 있습니다.  같은 디렉토리에 있는 README 파일에 사용 지침이 나와 있습니다.</block>
   <block id="b33ce51cf90f2cebc1848ee9bdd86a73" category="paragraph">스크립트를 호출하는 명령의 예는 다음과 같습니다.</block>
   <block id="4cee2cbc95e55efcd827954ec63679ef" category="paragraph">주요 매개변수: -<block ref="86768c9197497f61803d2cccda886c2b" prefix=" " category="inline-code"></block> : 요청된 시간 범위를 12시간 간격으로 나눕니다.  -<block ref="90bf4ae9a260a1dab39cf85f9b78e62f" prefix=" " category="inline-code"></block> : 3개의 스레드를 사용하여 이러한 간격을 병렬로 가져옵니다.</block>
-  <block id="d26ec9bd59920d141e6767082f0524dc" category="summary">스크립트를 사용하면 워크로드 보안을 테스트하거나 시연하기 위해 랜섬웨어 공격을 시뮬레이션할 수 있습니다.</block>
-  <block id="fca4fedbe53af4420a279beead573bdf" category="doc">워크로드 보안: 공격 시뮬레이션</block>
-  <block id="85bec7dd725b26542ae7c0d1c759836a" category="paragraph">이 페이지의 지침에 따라 포함된 랜섬웨어 시뮬레이션 스크립트를 사용하여 워크로드 보안을 테스트하거나 시연하기 위한 공격을 시뮬레이션할 수 있습니다.</block>
   <block id="c8722d0a5f0f718756806afb0f63faf3" category="section-title">시작하기 전에 주의할 사항</block>
-  <block id="ee817f2b2a73b759041de15700c640ab" category="list-text">랜섬웨어 시뮬레이션 스크립트는 Linux에서만 작동합니다.  시뮬레이션 스크립트는 사용자가 ONTAP ARP를 Workload Security와 통합한 경우에도 높은 신뢰도의 경고를 생성해야 합니다.</block>
   <block id="61622ea1d4086909bd90c0efc1d6a2e5" category="list-text">워크로드 보안은 ONTAP 버전이 9.15 이상인 경우에만 NFS 4.1에서 생성된 이벤트와 알림을 감지합니다.</block>
   <block id="16fa78539f96944e79f64b961036e74d" category="list-text">스크립트는 Workload Security 에이전트 설치 파일과 함께 제공됩니다.  Workload Security 에이전트가 설치된 모든 컴퓨터에서 사용할 수 있습니다.</block>
   <block id="749376c343309b5abf1f8bc2f1e6e9f7" category="list-text">Workload Security 에이전트 머신 자체에서 스크립트를 실행할 수 있으므로 다른 Linux 머신을 준비할 필요가 없습니다.  하지만 다른 시스템에서 스크립트를 실행하고 싶다면, 스크립트를 복사해서 해당 시스템에서 실행하면 됩니다.</block>
@@ -3698,7 +3687,6 @@
   <block id="9adc0908c00f75ca29814b238088a0cd" category="list-text">이렇게 하면 "test_dataset"이라는 디렉토리 아래의 마운트 폴더 내부에 다양한 확장자를 가진 비어 있지 않은 파일 100개가 생성됩니다.</block>
   <block id="155946ddf8d31167ae2abad50439caac" category="section-title">수집기를 재개합니다</block>
   <block id="58d83dc1e6706a52cd311f9c66f193d5" category="paragraph">이 단계를 따르기 전에 수집기를 일시 중지한 경우 샘플 파일이 생성되면 수집기를 다시 시작하세요.</block>
-  <block id="e6e76755f42136002c51ecb7c7acc410" category="paragraph">랜섬웨어 알림을 생성하려면 Workload Security에서 랜섬웨어 알림을 시뮬레이션하는 포함된 스크립트를 실행할 수 있습니다.</block>
   <block id="210e93b8c7253e00f2206b155a242c53" category="list-text">에이전트 설치 디렉토리(%AGENT_INSTALL_DIR/agent/install/ransomware_simulation/shell/simulate_attack.sh)에서 스크립트를 대상 마운트 위치로 복사합니다.</block>
   <block id="66a8eca27475656430ae411ce0277447" category="list-text">마운트된 디렉토리(예: /root/demo) 내의 스크립트를 사용하여 다음 명령을 실행하여 테스트 데이터 세트를 암호화합니다.</block>
   <block id="71242fab4b4978991a34104b8fa81ff5" category="list-text">이렇게 하면 "test_dataset" 디렉토리에 생성된 샘플 파일이 암호화됩니다.</block>
@@ -3710,7 +3698,6 @@
   <block id="bb37a91d3a7d038f7f196d7f342f5d41" category="list-text">9.11.1보다 높은 SVM의 ONTAP 버전을 모니터링했습니다.</block>
   <block id="9ce553df4934ac43b957143d21b265ff" category="list-text">ONTAP 자율 랜섬웨어 보호 구성됨</block>
   <block id="ea7f417542fef98806d54f7dcd8a2d26" category="list-text">워크로드 보안 데이터 수집기가 클러스터 모드에 추가되었습니다.</block>
-  <block id="7a59fff38776feaa8a27e18c15f3f839" category="paragraph">Workload Security는 사용자 행동을 기반으로 랜섬웨어 패턴을 감지하고 ONTAP ARP는 파일의 암호화 활동을 기반으로 랜섬웨어 활동을 감지합니다.</block>
   <block id="59c0cecf99f5b7877b7f320da1734140" category="paragraph">조건이 충족되면 Workload Security는 알림을 높은 신뢰도 알림으로 표시합니다.</block>
   <block id="560a82b95d26c61a25e2894422b4eec0" category="paragraph">알림 목록 페이지의 높은 신뢰도 알림 예:</block>
   <block id="dfbab6292d93300a244b9e81de9798af" category="inline-image-macro">높은 신뢰도 경보 예시, 목록 페이지</block>
@@ -3719,9 +3706,7 @@
   <block id="4864e30f3543ce6ffefe6866cd4df439" category="inline-image-macro">높은 신뢰도 경고 예시, 세부 정보 페이지</block>
   <block id="8901b7a1034f6e31fa7c2f5929bdd211" category="paragraph"><block ref="8901b7a1034f6e31fa7c2f5929bdd211" category="inline-image-macro-rx" type="image"></block></block>
   <block id="36aed75d347e158fecfc525dc1d66a22" category="section-title">경고를 여러 번 트리거합니다.</block>
-  <block id="95d269995653ffa8a24d0a028366adbc" category="paragraph">Workload Security는 사용자 행동을 학습하고 동일한 사용자에게 24시간 이내에 랜섬웨어 공격이 반복되는 경우 알림을 생성하지 않습니다.</block>
   <block id="7000a55791f1de1983f9adc601ad2e4e" category="paragraph">다른 사용자로 새로운 알림을 생성하려면 동일한 단계(테스트 데이터를 만든 다음 테스트 데이터를 암호화)를 다시 따르세요.</block>
-  <block id="b3431d54476e0f70ea6fc00bae48572b" category="summary">이 스크립트는 ONTAP SVM DSC를 설치하기 전에 SVM의 이벤트 비율을 확인하기 위해 실행될 수 있습니다.</block>
   <block id="2723c4d559ff96bb42870d86c109708e" category="doc">SVM 이벤트 비율 검사기(에이전트 크기 조정 가이드)</block>
   <block id="0a2bd44573247d8e7748ce7d2d2a4b8f" category="paragraph">이벤트 비율 검사기는 ONTAP SVM 데이터 수집기를 설치하기 전에 SVM에서 NFS/SMB 결합 이벤트 비율을 검사하여 하나의 에이전트 머신이 모니터링할 수 있는 SVM의 수를 확인하는 데 사용됩니다.  이벤트 비율 검사기를 크기 조정 가이드로 사용하여 보안 환경을 계획하세요.</block>
   <block id="40202f910a40e1ff8a02506c288b507e" category="paragraph">에이전트는 최대 50개의 데이터 수집기를 지원할 수 있습니다.</block>
@@ -3774,9 +3759,7 @@
   <block id="ecb5fa18c7cd0623faea3969f936f4c3" category="cell">아니요. SVM 수가 늘어나도 스크립트는 최대 5분 동안만 실행됩니다.</block>
   <block id="ce3d712deda180dd445bfed60562d712" category="cell">기존 에이전트로 이벤트 비율 검사기를 실행하면 어떻게 되나요?</block>
   <block id="697ee668360d1c19e858e5fdd25062e6" category="cell">이미 존재하는 에이전트에 대해 이벤트 비율 검사기를 실행하면 SVM에서 지연 시간이 증가할 수 있습니다.  이벤트 요금 검사가 실행되는 동안 이러한 증가는 일시적인 성격을 갖습니다.</block>
-  <block id="e885f70b36e77978775e5bda02528ac9" category="summary">Workload Security는 ONTAP Autonomous Ransomware Protection과 통합되어 랜섬웨어 감지 기능을 개선합니다.</block>
   <block id="c296d8324f9fa4f890b4ead0f69bfac3" category="doc">ONTAP 자율형 랜섬웨어 보호와 통합</block>
-  <block id="d444ab62db0a690e837242dfd8b87acc" category="paragraph">ONTAP 자율형 랜섬웨어 보호(ARP) 기능은 NAS(NFS 및 SMB) 환경에서 워크로드 분석을 사용하여 랜섬웨어 공격을 나타낼 수 있는 비정상적인 파일 내 활동을 사전에 감지하고 경고합니다.</block>
   <block id="6c92285fa6d3e827b198d120ea3ac674" category="inline-link-macro">여기</block>
   <block id="383c3a61ab1ee0baf884d10441d965bd" category="paragraph">ARP에 대한 추가 세부 정보 및 라이센스 요구 사항은 다음과 같습니다.<block ref="aaf4977c10e4402f9516d11af3df8368" category="inline-link-macro-rx"></block> .</block>
   <block id="ff6fdbfb37dfe403ad9c574855ccdb01" category="paragraph">Workload Security는 ONTAP 과 통합되어 ARP 이벤트를 수신하고 추가적인 분석 및 자동 응답 계층을 제공합니다.</block>
@@ -3801,7 +3784,6 @@
   <block id="e0e1895e03a77da5552db43fbdeaeea6" category="paragraph">ARP 이벤트로 인해 생성된 경고 샘플은 아래와 같습니다.</block>
   <block id="b83a60c5de546ea3d085bb1ce6636d9a" category="inline-image-macro">랜섬웨어 경고 상단 섹션</block>
   <block id="ed862f710faf8808be6c0eb3e9619e30" category="paragraph"><block ref="4f633f9ad87e78d3d93ed9f152d5549a" category="inline-image-macro-rx" type="image"></block> <block ref="45e1a131f383b4a3d591b6b7f4008d87" category="inline-image-macro-rx" type="image"></block> <block ref="1fc0e7df8bd287d2b4b5569c861bc29d" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="333fa709635d0e011dd99c908e02bd40" category="paragraph">높은 신뢰도 배너는 공격에서 랜섬웨어 동작과 함께 파일 암호화 활동이 나타났음을 나타냅니다.  암호화된 파일 그래프는 ARP 솔루션이 볼륨 암호화 활동을 감지한 타임스탬프를 나타냅니다.</block>
   <block id="e646e16bee8b32e6ea29e30d01970a6c" category="section-title">제한 사항</block>
   <block id="56684562f1f82eb99e69650845acd6ad" category="paragraph">Workload Security에서 SVM을 모니터링하지 않지만 ONTAP 에서 ARP 이벤트를 생성한 경우 Workload Security에서 해당 이벤트를 계속 수신하여 표시합니다.  하지만 알림과 관련된 법의학적 정보와 사용자 매핑은 캡처되거나 표시되지 않습니다.</block>
   <block id="1f8b585533464977d763d893abd63588" category="paragraph">알려진 문제와 해결 방법은 다음 표에 설명되어 있습니다.</block>
@@ -6673,7 +6655,6 @@
   <block id="fb4e4dc5cb185934a7a50a8b788d9a18" category="inline-image-macro">액세스 거부 이벤트 예</block>
   <block id="ad7abfbe23406b97a783bcc153795841" category="paragraph"><block ref="ad7abfbe23406b97a783bcc153795841" category="inline-image-macro-rx" type="image"></block></block>
   <block id="f765e14da4a389313572532a2db01804" category="summary">워크로드 보안은 비정상적인 사용자 활동이나 잠재적 공격이 발생할 경우 알림을 생성합니다.  알림 페이지에는 이러한 활동이 나열되어 있어 빠르고 쉽게 조사할 수 있습니다.</block>
-  <block id="42dbd44948498b2c6399cada3f8bce3c" category="paragraph">워크로드 보안 알림 페이지는 최근 공격 및/또는 경고에 대한 타임라인을 표시하고 각 문제에 대한 세부 정보를 볼 수 있도록 해줍니다.</block>
   <block id="ec463f286fdd66eb02ef994e465aa5ef" category="inline-image-macro">알림 목록</block>
   <block id="710f7e812945643ee105a9bd2d01a01f" category="paragraph"><block ref="710f7e812945643ee105a9bd2d01a01f" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b92071d61c88498171928745ca53078b" category="section-title">알리다</block>
@@ -6718,12 +6699,9 @@
   <block id="98d65924ba5e4c9e08f01233aceb15b8" category="list-text">공격 중 파일 활동을 보여주는 그래프</block>
   <block id="150371e71cf9ac0249f420076a2e5358" category="section-title">관련 사용자 섹션:</block>
   <block id="db67b2fbfe663dec3bafb30754f82043" category="paragraph">이 섹션에서는 사용자의 주요 활동 그래프를 포함하여 잠재적인 공격에 연루된 사용자에 대한 세부 정보를 보여줍니다.</block>
-  <block id="7cbf4ba3df1c84539924c37da16db19b" category="paragraph">알림 페이지(이 예시는 잠재적인 랜섬웨어 공격을 보여줍니다):<block ref="5ff4dcf9689ef64057d8e82508557b5f" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="6c9d686a827f50aa2feb7087b665c481" category="paragraph">세부 정보 페이지(이 예는 잠재적인 랜섬웨어 공격을 보여줍니다):<block ref="9d19bd7639e249113839e28d2fea9963" category="inline-image-macro-rx" type="image"></block></block>
   <block id="6baf1e00d599761ac0cdbee221c4569c" category="section-title">_스냅샷 찍기_ 작업</block>
   <block id="37fa3057780441193fd46b687aef4974" category="paragraph">Workload Security는 악성 활동이 감지되면 자동으로 스냅샷을 찍어 데이터를 보호하고 데이터가 안전하게 백업되도록 보장합니다.</block>
   <block id="7683f342a6f18a36645f19f6332de56e" category="inline-link-macro">자동 응답 정책</block>
-  <block id="d27b2fb629cc2c24086da7257eb32814" category="paragraph">정의할 수 있습니다<block ref="5def0187ac3a4d928905bc1e2b8dece3" category="inline-link-macro-rx"></block> 랜섬웨어 공격이나 기타 비정상적인 사용자 활동이 감지되면 스냅샷을 찍습니다.  알림 페이지에서 수동으로 스냅샷을 찍을 수도 있습니다.</block>
   <block id="bf69429297f9f42186bf9ad016e6efd6" category="section-title">알림 알림</block>
   <block id="8c8959fb2c9aef71d75a9af4ab87c3ee" category="paragraph">알림에 대한 모든 작업에 대해 알림 이메일 알림이 알림 수신자 목록으로 전송됩니다.  알림 수신자를 구성하려면 *관리자 &gt; 알림*을 클릭하고 각 수신자의 이메일 주소를 입력하세요.</block>
   <block id="2c4a65782f3fcd193e8e3aab503fa515" category="section-title">보존 정책</block>
@@ -6740,7 +6718,6 @@
   <block id="1e325041509ea982dbf0cb285dc1f84d" category="cell">이는 드문 경우입니다.  이런 문제가 발생하는 경우 ONTAP 에 로그인하여 이전 알림에 대한 스냅샷을 수동으로 찍으세요.</block>
   <block id="7490716e612a9644196d7f0a4d26b1fe" category="cell">_알림 세부 정보_ 페이지에서 _스냅샷 찍기_ 버튼 아래에 "마지막 시도가 실패했습니다" 오류 메시지가 표시됩니다.  오류 위에 마우스를 올리면 "ID가 있는 데이터 수집기에 대한 API 명령 호출 시간이 초과되었습니다."라는 메시지가 표시됩니다.</block>
   <block id="f538ceb4d07ca88305f431846ed6973f" category="cell">ONTAP 에서 SVM의 LIF가 _비활성화_ 상태인 경우 SVM 관리 IP를 통해 워크로드 보안에 데이터 수집기가 추가되면 이런 일이 발생할 수 있습니다.  ONTAP 에서 특정 LIF를 활성화하고 Workload Security에서 _스냅샷 수동 촬영_을 트리거합니다.  그러면 스냅샷 작업이 성공합니다.</block>
-  <block id="5439b902968ffabf767c31e6ae62e61b" category="summary">잠재적 공격(랜섬웨어 등) 및/또는 활동 경고에 대한 자동 응답 정책을 설정할 수 있습니다.</block>
   <block id="df6a21f670066b82b5409a049dec0efe" category="doc">자동 응답 정책</block>
   <block id="e5da02c738b911c42fb0a45a5b76c8d9" category="paragraph">대응 정책은 공격이나 비정상적인 사용자 동작이 발생할 경우 스냅샷을 찍거나 사용자 액세스를 제한하는 등의 작업을 실행합니다.</block>
   <block id="8816114441548a7f4d390de764f25ad9" category="paragraph">특정 기기나 모든 기기에 정책을 설정할 수 있습니다.  응답 정책을 설정하려면 *관리 &gt; 자동 응답 정책*을 선택하고 해당 *+정책* 버튼을 클릭합니다.  공격이나 경고에 대한 정책을 만들 수 있습니다.</block>
@@ -6767,9 +6744,7 @@
   <block id="b979e86b9a609c9d9015d0b66fb3475b" category="paragraph">고급 머신 러닝과 사용자 행동의 이상 감지를 통해 비정상적인 데이터 접근에 대한 경고를 제공합니다.</block>
   <block id="9c0408c775a2b61052a2e700a89f396f" category="section-title">규정 준수</block>
   <block id="8e1e51e30cfb4cb618e7ad56db2cefcd" category="paragraph">온프레미스 또는 클라우드에 저장된 중요한 회사 데이터에 대한 사용자 데이터 액세스를 감사하여 회사 규정 준수를 보장하세요.</block>
-  <block id="cf10c2b301ad472a4aba146a0e505098" category="summary">워크로드 보안 경고 알림을 위한 이메일 주소를 추가합니다.</block>
   <block id="12c5785c0da06ba105803155a192752d" category="doc">알림, 경고 및 에이전트/데이터 소스 수집기 상태에 대한 이메일 알림 구성</block>
-  <block id="9491cdf060c59bf0f883c94db8cfe73d" category="paragraph">Workload Security 알림 수신자를 구성하려면 *관리자 &gt; 알림*을 클릭하고 각 수신자의 해당 섹션에 이메일 주소를 입력합니다.</block>
   <block id="d788a1b203813004b96af5724b63cb70" category="section-title">잠재적 공격 경고 및 알림</block>
   <block id="0913d37e3bac65fbe05c7263d286ef60" category="paragraph">_잠재적 공격_ 경고 알림을 보내려면 _잠재적 공격 경고 보내기_ 섹션에 수신자의 이메일 주소를 입력하세요.  알림에 대한 모든 작업에 대해 알림 수신자 목록에 이메일 알림이 전송됩니다.</block>
   <block id="971a81b1c11c1b1948e93ef28402c3f4" category="paragraph">_경고_ 알림을 보내려면 _경고 알림 보내기_ 섹션에 수신자의 이메일 주소를 입력하세요.</block>
@@ -6779,7 +6754,6 @@
   <block id="cfbd8d8f411f08c4641b2905bdc80139" category="list-text">건강 경고는 담당자/수금원이 최소 1시간 이상 보고를 중단한 후에만 전송됩니다.</block>
   <block id="c973f23a4328dc0e33a2614912736bb0" category="list-text">에이전트나 데이터 수집기가 장시간 연결이 끊긴 경우에도 지정된 24시간 동안 의도된 수신자에게 이메일 알림이 한 번만 전송됩니다.</block>
   <block id="30a17963216c2665ef68b2a0cba05de6" category="list-text">에이전트에 오류가 발생하는 경우, 알림이 한 번 전송됩니다(수집기당 하나가 아님).  이메일에는 영향을 받은 모든 SVM 목록이 포함됩니다.</block>
-  <block id="6aa9d0b40df0476a0e5d6cba51a44816" category="list-text">Active Directory 수집 실패는 경고로 보고되며, 랜섬웨어 감지에는 영향을 미치지 않습니다.</block>
   <block id="1c694b0b295603bad9f0fa0c7f151567" category="list-text">시작하기 설정 목록에 이제 새로운 _이메일 알림 구성_ 단계가 포함되었습니다.</block>
   <block id="3b1c56e7c6b15724089ac1fbd8291af2" category="section-title">에이전트 및 데이터 수집기 업그레이드 알림 수신</block>
   <block id="1f56a492ab24b15ab7bdf4b716067acd" category="list-text">"데이터 수집 건강 알림"에 이메일 ID를 입력하세요.</block>
@@ -6787,10 +6761,7 @@
   <block id="f7e530357a9fe13372b34f49bcbf5513" category="list-text">에이전트 및 데이터 수집기 업그레이드 이메일 알림은 계획된 업그레이드 1일 전에 해당 이메일 ID로 전송됩니다.</block>
   <block id="be8e3ac01b05912cba21f26369a5a852" category="cell">"데이터 수집기 상태 알림"에 이메일 ID가 있지만 알림을 받지 못하고 있습니다.</block>
   <block id="3cd7d46a06774e1cc6f2ece4407891a3" category="cell">알림 이메일은 NetApp Data Infrastructure Insights 도메인(_accounts@service.cloudinsights.netapp.com_)에서 전송됩니다.  일부 회사는 외부 도메인에서 들어오는 이메일을 차단합니다.  NetApp Data Infrastructure Insights 도메인의 외부 알림이 허용 목록에 포함되어 있는지 확인하세요.</block>
-  <block id="392b73413f817556c91d974c59c48d26" category="summary">Workload Security를 사용하면 의심되는 방해 행위가 발생할 경우 사용자 액세스를 제한할 수 있습니다.</block>
   <block id="680aba4527b5f65899e6a3d8b5ef2457" category="doc">사용자 액세스 차단</block>
-  <block id="54fc3d93cd49948e1764882084d106cc" category="paragraph">공격이 감지되면 Workload Security는 사용자가 파일 시스템에 액세스하는 것을 차단하여 공격을 막을 수 있습니다.  자동 응답 정책을 사용하여 자동으로 액세스를 차단하거나 알림 또는 사용자 세부 정보 페이지에서 수동으로 액세스를 차단할 수 있습니다.</block>
-  <block id="7aedbe09972610c1d6a6d90587580682" category="paragraph">사용자 액세스를 차단할 경우 차단 기간을 정의해야 합니다.  선택한 기간이 끝나면 사용자 액세스가 자동으로 복원됩니다.  SMB 및 NFS 프로토콜 모두에 대한 액세스 차단이 지원됩니다.</block>
   <block id="036ce35e40fa3fbcc9c9e500c29c6bf9" category="paragraph">사용자는 SMB에 대해 직접 차단되고, 공격을 일으키는 호스트 머신의 IP 주소는 NFS에 대해 차단됩니다.  해당 머신 IP 주소는 Workload Security에서 모니터링하는 스토리지 가상 머신(SVM)에 액세스하는 것이 차단됩니다.</block>
   <block id="f19379ce165a902f81548ae9d7b2e07c" category="paragraph">예를 들어, Workload Security가 10개의 SVM을 관리하고 그 중 4개의 SVM에 대해 자동 응답 정책이 구성되어 있다고 가정해 보겠습니다.  공격이 4개의 SVM 중 하나에서 시작된 경우, 사용자 액세스는 10개의 SVM 모두에서 차단됩니다.  원래 SVM에서 스냅샷이 계속 생성됩니다.</block>
   <block id="7dd607950e587603a00a1a965723c7c1" category="paragraph">SMB용으로 구성된 SVM 1개, NFS용으로 구성된 SVM 1개, NFS와 SMB용으로 구성된 나머지 2개로 구성된 SVM이 4개 있는 경우, 공격이 4개 SVM 중 하나에서 시작되면 모든 SVM이 차단됩니다.</block>
@@ -9995,7 +9966,6 @@
   <block id="c4207c205277b5cad1577163a6bae022" category="admonition">Data Infrastructure Insights 에서 로그아웃하면 Console에서도 로그아웃됩니다.  콘솔 로그인을 사용하는 다른 NetApp Cloud 서비스에서도 로그아웃됩니다.</block>
   <block id="8463a61dd94ff5934036d4c8a8936e32" category="section-title">비활성 시간 초과</block>
   <block id="db8ff6a5dfcebcb4f9f3077c3acd8c0a" category="paragraph">기본적으로 콘솔은 6시간(360분) 동안 활동이 없으면 사용자를 로그아웃합니다.  활동에 관계없이 사용자는 7일 후에 로그아웃됩니다.</block>
-  <block id="5b5f6636f455e00151ff6c4d5e1be19c" category="summary">워크로드 보안은 데이터 수집기를 사용하여 장치에서 파일 및 사용자 액세스 데이터를 수집합니다.</block>
   <block id="fde8afa3fd65a9f38d9b11377453846e" category="doc">Amazon FSx for NetApp ONTAP Cloud Volumes ONTAP 및 Amazon FSx 구성</block>
   <block id="c45671a9389f697917f0b33d12822c51" category="section-title">Cloud Volumes ONTAP 스토리지 구성</block>
   <block id="2ffc6472f9d6abaf761bbe2e6a0385ce" category="paragraph">Workload Security Agent를 호스팅하기 위해 단일 노드/HA AWS 인스턴스를 구성하려면 OnCommand Cloud Volumes ONTAP 설명서를 참조하세요.<block ref="caca64b8e9927e0ea8e8b0158b9e47cd" category="inline-link-rx"></block></block>
@@ -12617,10 +12587,8 @@
   <block id="f6bd61a684c7e1301e78da3db50d1837" category="paragraph">워크로드 보안은 사용자 활동을 모니터링하고 스토리지 환경에서 잠재적인 보안 위협을 감지하는 데 도움이 됩니다.  모니터링을 시작하기 전에 에이전트, 데이터 수집기, 디렉터리 서비스를 구성하여 포괄적인 보안 모니터링의 기반을 마련해야 합니다.</block>
   <block id="d49a8da0de1eee7dc793284699bb0bab" category="cell"><block ref="d49a8da0de1eee7dc793284699bb0bab" category="inline-link-macro-rx"></block></block>
   <block id="adf5d1319b5bafa4d304b195ab11a3ac" category="cell">*워크로드 보안 &gt; 수집기*를 클릭합니다. 구성하려는 데이터 수집기를 클릭합니다. 수집기 정보는 설명서의 데이터 수집기 공급업체 참조 섹션을 참조하세요.</block>
-  <block id="a893b5195474a4c9b110269be2b309ef" category="summary">워크로드 보안 에이전트는 사용자 활동을 모니터링하고 스토리지 환경에서 보안 위협을 감지합니다.</block>
   <block id="9997d0de04e698d72bb27c409e5255ee" category="doc">워크로드 보안 에이전트 배포</block>
   <block id="c3c0e3736c092f9f194505694468ca8b" category="inline-link-macro">시스템 요구 사항</block>
-  <block id="9d604ddbc2f20e3c4cd0e75c950e6c53" category="paragraph">워크로드 보안 에이전트는 사용자 활동을 모니터링하고 스토리지 인프라 전반에서 잠재적인 보안 위협을 감지하는 데 필수적입니다. 이 가이드에서는 사용자 환경에 에이전트를 배포하는 방법에 대한 단계별 지침을 제공합니다. 시작하기 전에 에이전트 서버가 다음 사항을 충족하는지 확인하십시오. <block ref="e9ae60f62ad52c07bed4d959ac93cbbc" category="inline-link-macro-rx"></block>.</block>
   <block id="cd47dd01745339787e4c7300389401f2" category="section-title">모범 사례</block>
   <block id="5f1d8e43e03545d4e832f35d2653f7ff" category="paragraph">Workload Security 에이전트를 구성하기 전에 다음 사항을 염두에 두십시오.</block>
   <block id="1d0bcc6be95579ec1173901dc82ecc6d" category="cell">일시 정지 및 재개</block>
@@ -12693,4 +12661,40 @@
   <block id="d388ca982366ad7a8a7a165d21919f84" category="paragraph">테넌트 생성이 완료되면 콘솔 자격 증명을 사용하여 로그인하고 Data Infrastructure Insights 의 무료 30일 평가판을 시작하세요. 이 체험판을 통해 Data Infrastructure Insights 제공하는 기능을 탐색해 볼 수 있습니다.</block>
   <block id="a361d4c5b26cab224e5aad972ef9f92f" category="paragraph">테넌트가 생성되면 언제든지 NetApp BlueXP 포털에 로그인하여 해당 페이지로 이동하면 됩니다. <block ref="37a150e92f05332b5bc5a56046c3177c" category="inline-link-macro-rx"></block> 해당 페이지에서 * Data Infrastructure Insights 로 이동*을 선택합니다.</block>
   <block id="ed35afa558b996b37265533db9af5399" category="sidebar">보고서에 주석 게시하기</block>
+  <block id="d19e16fd482ca29d2c0ef4fb8523357a" category="summary">최적의 성능과 데이터 수집을 위해 워크로드 보안 에이전트 배포 환경이 최소 운영 체제, CPU, 메모리 및 디스크 공간 요구 사항을 충족하는지 확인하십시오.</block>
+  <block id="c4942feafc272d7da2ce90634dc0120d" category="summary">안전한 토큰 기반 인증을 사용하는 REST API를 통해 워크로드 보안 데이터에 액세스하여 CMDB, 티켓팅 시스템 및 기타 엔터프라이즈 애플리케이션과 통합할 수 있습니다.</block>
+  <block id="3dec3952c02d73a04d326f3624f668f6" category="summary">포함된 시뮬레이션 스크립트를 사용하여 공격을 시뮬레이션함으로써 워크로드 보안 탐지 기능을 테스트하고 검증하여 경고 생성 및 대응 정책을 확인합니다.</block>
+  <block id="c7ea3cec531081ee09f563d84422d157" category="doc">워크로드 보안: 비정상적인 파일 변조 시뮬레이션</block>
+  <block id="3e350b01c804205b973dbd44adc54728" category="paragraph">이 페이지의 지침에 따라 포함된 파일 변조 시뮬레이션 스크립트를 사용하여 워크로드 보안을 테스트하거나 시연하기 위한 파일 변조를 시뮬레이션할 수 있습니다.</block>
+  <block id="67f556940660f0bafe2738969d389877" category="list-text">파일 변조 시뮬레이션 스크립트는 Linux에서만 작동합니다. 시뮬레이션 스크립트는 사용자가 ONTAP ARP를 워크로드 보안과 통합한 경우 높은 신뢰도의 경고를 생성해야 합니다.</block>
+  <block id="6465f8a9b5dccc316104b56b41de2db0" category="paragraph">파일 변조 경고를 생성하려면 워크로드 보안에서 파일 변조 경고를 시뮬레이션하는 포함된 스크립트를 실행하면 됩니다.</block>
+  <block id="2a9bccccecd980381e18178287c921b4" category="paragraph">워크로드 보안은 사용자 행동을 기반으로 파일 변조 패턴을 감지하는 반면, ONTAP ARP는 파일 내 암호화 활동을 기반으로 파일 변조 활동을 감지합니다.</block>
+  <block id="a68622796ba5ea9694219b0cbfbae6b0" category="paragraph">워크로드 보안은 사용자 행동을 학습하여 동일 사용자에 대해 24시간 이내에 파일 변조 공격이 반복될 경우 경고를 생성하지 않습니다.</block>
+  <block id="d1de6a785681750f7fd87d382642893e" category="paragraph">r--- 사이드바: 사이드바 영구 링크: concept_cs_event_rate_checker.html 요약: SVM 이벤트 속도 검사기를 사용하여 NFS/SMB 이벤트 속도를 측정하고 워크로드 보안 데이터 수집기를 배포하기 전에 최적의 에이전트 크기를 결정합니다. 키워드: 이벤트, 검사기, 속도, 크기 조정, 클라우드 보안 ---</block>
+  <block id="8013d871b4070a5d3848e4faa21e67d9" category="summary">상관 분석, 자동화된 대응 및 포렌식 조사 기능을 위해 워크로드 보안을 ONTAP 자율 보호 기능과 통합하여 공격 탐지 기능을 강화하십시오.</block>
+  <block id="0ed52d2d20f5fbf80a330283d4aa9a72" category="paragraph">ONTAP 자율 보호 기능은 NAS(NFS 및 SMB) 환경에서 워크로드 분석을 사용하여 악의적인 공격이나 무단 데이터 수정을 나타낼 수 있는 파일 내 비정상적인 활동을 사전에 감지하고 경고합니다.</block>
+  <block id="8ec1d8886c9b4b48a45eb683d80b184e" category="paragraph">높은 신뢰도 배너는 해당 공격이 파일 암호화 활동과 함께 파일 변조 행위를 보였음을 나타냅니다. 암호화된 파일 그래프는 ARP 솔루션이 볼륨 암호화 활동을 감지한 시점을 타임스탬프로 나타냅니다.</block>
+  <block id="56adf418335195f68828ddd83fd50548" category="paragraph">워크로드 보안 경고 페이지는 탐지된 위협 및 경고에 대한 포괄적인 타임라인과 자세한 조사 도구를 제공합니다. 보안 사고를 효율적으로 조사하고 대응하기 위해 알림 세부 정보를 확인하고, 상태 업데이트를 관리하고, 기준별로 필터링하고, 사용자 활동을 추적할 수 있습니다.</block>
+  <block id="3ba65a7b57bde3d2f95e6dad96e575d5" category="inline-image-macro">파일 변조 경고 예시</block>
+  <block id="f1f63c95d00cc2549a1787fe41e36715" category="paragraph">경고 페이지(이 예시는 파일 변조 공격 가능성을 보여줍니다): <block ref="6a7e65573e881b5b52bf16119aa9b16d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="41a5a43c24278078d3b80a7578a3a1c3" category="inline-image-macro">파일 변조 상세 페이지 예시</block>
+  <block id="4a4a4b8fd74bec537d778837186d3eec" category="paragraph">상세 페이지 (이 예시는 파일 변조 공격 가능성을 보여줍니다): <block ref="0c605ac34e65472f084a8e37ac3dc156" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4b4fbdbe248fc035585aeb5a0e8087c0" category="paragraph">정의할 수 있습니다 <block ref="5def0187ac3a4d928905bc1e2b8dece3" category="inline-link-macro-rx"></block> 파일 변조 공격이나 기타 비정상적인 사용자 활동이 감지될 때 스냅샷을 찍는 기능입니다. 알림 페이지에서 수동으로 스냅샷을 찍을 수도 있습니다.</block>
+  <block id="a9996cbd4cac46323215dfb495845c42" category="summary">보안 사고 발생 시 스냅샷 생성, 사용자 접근 제한, 위협 및 의심스러운 행위에 대한 웹훅 알림 등 즉각적인 조치를 취할 수 있도록 자동 대응 정책을 구성하십시오.</block>
+  <block id="1d78ee56ccc2ec0a973d6c1b8dc3539f" category="summary">스토리지 워크로드 보안의 내부자 위협 탐지, 하이브리드 환경 전반에 걸친 중앙 집중식 가시성, 그리고 이상 징후 탐지 및 규정 준수를 위한 고급 머신 러닝 기능을 통해 데이터를 보호하세요.</block>
+  <block id="271be754535c9ed78f2f75d64082cbe9" category="summary">잠재적 공격, 보안 경고 및 에이전트/데이터 수집기 상태에 대한 알림을 실시간으로 수신하도록 이메일 알림을 구성하십시오.</block>
+  <block id="b149bcf300f96b3d1dca583412de6c8a" category="paragraph">이메일 알림을 통해 잠재적인 공격, 보안 경고 및 인프라 상태 문제에 대한 정보를 발생 즉시 받아볼 수 있습니다. 관리자 &gt; 알림 설정에서 수신자 이메일 주소를 구성하여 각 수신자의 역할에 맞춘 실시간 알림을 받도록 설정하세요.</block>
+  <block id="94563d75d3a246c950039b0a255e3ddb" category="list-text">Active Directory 컬렉션 실패는 경고로 보고되며 위협 탐지에는 영향을 미치지 않습니다.</block>
+  <block id="44b44dae2990432b7bd93090c41c82f9" category="summary">탐지된 공격을 즉시 차단하려면 손상된 사용자의 접근을 자동으로 또는 수동으로 제한하여 여러 스토리지 볼륨에 걸쳐 파일 시스템에 대한 추가 손상을 방지하십시오.</block>
+  <block id="3ae0920baa189ad91236ecb40a2f8386" category="doc">공격 방지를 위해 사용자 접근을 차단합니다.</block>
+  <block id="f5e00f5f92f705e11a73ffc71d728163" category="paragraph">탐지된 공격은 즉시 차단해야 합니다. 손상된 사용자의 접근을 차단하여 추가적인 데이터 손상이나 유출을 방지하십시오. 워크로드 보안은 자동 대응 정책을 통한 자동 차단과 경고 또는 사용자 세부 정보 페이지에서의 수동 개입을 모두 지원하여 보안 대응을 유연하게 제어할 수 있도록 합니다. 접근 제한은 모니터링되는 모든 스토리지 볼륨에 자동으로 적용되며, 자동 복원을 위한 시간 제한이 있습니다.</block>
+  <block id="686e492758f398a51b847e4945a5c465" category="summary">Cloud Volumes ONTAP 및 Amazon FSx for NetApp ONTAP 용 워크로드 보안 데이터 수집기를 설정하여 클라우드 스토리지 인프라 전반에서 파일 액세스, 사용자 활동을 모니터링하고 위협을 탐지하십시오.</block>
+  <block id="5afd7fa5e62c2403ed8182f2954c6011" category="paragraph">Cloud Volumes ONTAP 및 Amazon FSx for NetApp ONTAP 용 워크로드 보안 데이터 수집기를 구성하여 클라우드 스토리지 인프라 전반의 파일 및 사용자 액세스를 모니터링하세요. 이 가이드는 AWS에 에이전트를 배포하고 클라우드 스토리지 인스턴스에 연결하는 방법에 대한 단계별 지침을 제공합니다.</block>
+  <block id="c2ba90ec94460d090816ee7ba6a3ed97" category="summary">워크로드 보안 에이전트를 배포하여 사용자 활동을 모니터링하고, 보안 위협을 탐지하고, 스토리지 인프라를 보호하십시오.</block>
+  <block id="515af4442237a2919b0f5a1e82922445" category="paragraph">워크로드 보안 에이전트는 스토리지 인프라 전반에서 사용자 활동을 모니터링하고 잠재적인 보안 위협을 탐지하는 데 필수적입니다. 이 가이드는 단계별 설치 지침, 에이전트 관리 모범 사례(일시 중지/재개 및 고정/고정 해제 기능 포함), 배포 후 구성 요구 사항을 제공합니다. 시작하기 전에 에이전트 서버가 다음 요구 사항을 충족하는지 확인하십시오. <block ref="e9ae60f62ad52c07bed4d959ac93cbbc" category="inline-link-macro-rx"></block>.</block>
+  <block id="db1a2df035e9cd0bcdfb55db52e3e64b" category="paragraph">알려진 파일 확장자에 대한 파일 변조 공격이 감지되어 경고 화면에 경고가 생성되는 경우, 불필요한 경고를 방지하기 위해 해당 파일 확장자를 _허용된 파일 형식_ 목록에 추가할 수 있습니다.</block>
+  <block id="8d791b80cd3ffee28fe92eaeb570182d" category="paragraph">허용된 파일 형식 목록에 추가되면 해당 파일 형식에 대해서는 파일 변조 공격 경고가 생성되지 않습니다. _허용 파일 형식_ 정책은 파일 변조 감지에만 적용된다는 점에 유의하십시오.</block>
+  <block id="7af3f2f9c8eaa3a8ff61f839001e8ca0" category="paragraph">예를 들어, _test.txt_라는 파일의 이름이 _test.txt.abc_로 변경되었는데 워크로드 보안에서 _.abc_ 확장자 때문에 파일 변조 공격으로 감지하는 경우, _.abc_ 확장자를 _허용된 파일 형식_ 목록에 추가할 수 있습니다. 해당 목록에 추가된 후에는 _.abc_ 확장자를 가진 파일에 대해 더 이상 파일 변조 공격이 발생하지 않습니다.</block>
+  <block id="374bdbda42629b3859daec6506078b36" category="sidebar">ONTAP 자율 보호 통합</block>
+  <block id="5273cec606b6768f8394e2ae1566c7f6" category="sidebar">공격 시뮬레이션</block>
 </blocks>

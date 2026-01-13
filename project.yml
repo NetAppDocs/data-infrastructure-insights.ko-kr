@@ -271,13 +271,13 @@ sidebar:
       url: "/cs_automated_response_policies.html"
     - title: 허용된 파일 유형 정책
       url: "/ws_allowed_file_types.html"
-    - title: ONTAP 자율형 랜섬웨어 보호 통합
+    - title: ONTAP 자율 보호 통합
       url: "/concept_cs_integration_with_ontap_arp.html"
     - title: ONTAP 액세스 거부 통합
       url: "/concept_ws_integration_with_ontap_access_denied.html"
     - title: 사용자 액세스 차단
       url: "/cs_restrict_user_access.html"
-    - title: 랜섬웨어 공격 시뮬레이션
+    - title: 공격 시뮬레이션
       url: "/concept_cs_attack_simulator.html"
     - title: 이메일 알림
       url: "/cs_notifications_email.html"

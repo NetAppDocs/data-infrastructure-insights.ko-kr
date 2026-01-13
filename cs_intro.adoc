@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: cs_intro.html 
 keywords: CloudSecure, Cloud Secure 
-summary: 개요 
+summary: 스토리지 워크로드 보안의 내부자 위협 탐지, 하이브리드 환경 전반에 걸친 중앙 집중식 가시성, 그리고 이상 징후 탐지 및 규정 준수를 위한 고급 머신 러닝 기능을 통해 데이터를 보호하세요. 
 ---
 = 스토리지 워크로드 보안에 관하여
 :hardbreaks:

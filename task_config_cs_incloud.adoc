@@ -2,15 +2,19 @@
 sidebar: sidebar 
 permalink: task_config_cs_incloud.html 
 keywords: Cloud, Storage, AWS, Cloud Volumes, Cloud ONTAP, firewall, VPC, Subnet,  cloud secure 
-summary: 워크로드 보안은 데이터 수집기를 사용하여 장치에서 파일 및 사용자 액세스 데이터를 수집합니다. 
+summary: Cloud Volumes ONTAP 및 Amazon FSx for NetApp ONTAP 용 워크로드 보안 데이터 수집기를 설정하여 클라우드 스토리지 인프라 전반에서 파일 액세스, 사용자 활동을 모니터링하고 위협을 탐지하십시오. 
 ---
 = Amazon FSx for NetApp ONTAP Cloud Volumes ONTAP 및 Amazon FSx 구성
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-워크로드 보안은 데이터 수집기를 사용하여 장치에서 파일 및 사용자 액세스 데이터를 수집합니다.
+Cloud Volumes ONTAP 및 Amazon FSx for NetApp ONTAP 용 워크로드 보안 데이터 수집기를 구성하여 클라우드 스토리지 인프라 전반의 파일 및 사용자 액세스를 모니터링하세요. 이 가이드는 AWS에 에이전트를 배포하고 클라우드 스토리지 인스턴스에 연결하는 방법에 대한 단계별 지침을 제공합니다.
 
 
 

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept_ws_integration_with_ontap_access_denied.html 
 summary: Workload Security는 ONTAP 과 통합되어 액세스 거부 이벤트를 수신하고 추가적인 분석 및 자동 응답 계층을 제공합니다. 
-keywords: ransomware, ARP, Protection, Security, access 
+keywords: ransomware, ARP, Protection, Security, access, tampering 
 ---
 = ONTAP 액세스와의 통합이 거부되었습니다.
 :hardbreaks:

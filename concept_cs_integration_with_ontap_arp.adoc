@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_cs_integration_with_ontap_arp.html 
-summary: Workload Security는 ONTAP Autonomous Ransomware Protection과 통합되어 랜섬웨어 감지 기능을 개선합니다. 
+summary: 상관 분석, 자동화된 대응 및 포렌식 조사 기능을 위해 워크로드 보안을 ONTAP 자율 보호 기능과 통합하여 공격 탐지 기능을 강화하십시오. 
 keywords: ransomware, ARP, Protection, Security 
 ---
 = ONTAP 자율형 랜섬웨어 보호와 통합
@@ -10,7 +10,7 @@ keywords: ransomware, ARP, Protection, Security
 
 
 [role="lead"]
-ONTAP 자율형 랜섬웨어 보호(ARP) 기능은 NAS(NFS 및 SMB) 환경에서 워크로드 분석을 사용하여 랜섬웨어 공격을 나타낼 수 있는 비정상적인 파일 내 활동을 사전에 감지하고 경고합니다.
+ONTAP 자율 보호 기능은 NAS(NFS 및 SMB) 환경에서 워크로드 분석을 사용하여 악의적인 공격이나 무단 데이터 수정을 나타낼 수 있는 파일 내 비정상적인 활동을 사전에 감지하고 경고합니다.
 
 ARP에 대한 추가 세부 정보 및 라이센스 요구 사항은 다음과 같습니다.link:https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html["여기"] .
 
@@ -62,7 +62,7 @@ ARP 이벤트로 인해 생성된 경고 샘플은 아래와 같습니다.
 
 image:CS_Ransomware_Example_1.png["랜섬웨어 경고 상단 섹션"] image:CS_Ransomware_Example_2.png["랜섬웨어 경고 상단 섹션"] image:CS_Ransomware_Example_3.png["랜섬웨어 경고 상단 섹션"]
 
-높은 신뢰도 배너는 공격에서 랜섬웨어 동작과 함께 파일 암호화 활동이 나타났음을 나타냅니다.  암호화된 파일 그래프는 ARP 솔루션이 볼륨 암호화 활동을 감지한 타임스탬프를 나타냅니다.
+높은 신뢰도 배너는 해당 공격이 파일 암호화 활동과 함께 파일 변조 행위를 보였음을 나타냅니다. 암호화된 파일 그래프는 ARP 솔루션이 볼륨 암호화 활동을 감지한 시점을 타임스탬프로 나타냅니다.
 
 
 
