@@ -4,7 +4,7 @@ permalink: concept_cs_attack_simulator.html
 keywords: ransomware, simulation, simulator, restrict, attack 
 summary: 포함된 시뮬레이션 스크립트를 사용하여 공격을 시뮬레이션함으로써 워크로드 보안 탐지 기능을 테스트하고 검증하여 경고 생성 및 대응 정책을 확인합니다. 
 ---
-= 워크로드 보안: 비정상적인 파일 변조 시뮬레이션
+= 워크로드 보안: 파일 변조 시뮬레이션
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

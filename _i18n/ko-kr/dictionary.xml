@@ -6661,7 +6661,6 @@
   <block id="7397074a443dab350a0b46b445bd42b6" category="paragraph">경고 목록에는 선택한 시간 범위 내에 발생한 잠재적 공격 및/또는 경고의 총 수를 보여주는 그래프가 표시되고, 그 뒤에 해당 시간 범위 내에 발생한 공격 및/또는 경고 목록이 표시됩니다.  그래프에서 시작 시간과 종료 시간 슬라이더를 조정하여 시간 범위를 변경할 수 있습니다.</block>
   <block id="183537e26fed4b4329d37cb02da5ae53" category="paragraph">각 알림에 대해 다음 사항이 표시됩니다.</block>
   <block id="0a36ca304e21eb8063b7869dea7a355b" category="paragraph">*잠재적 공격:*</block>
-  <block id="8a684cc8084b02b93384f0bfc436d63c" category="list-text">_잠재적 공격_ 유형(예: 랜섬웨어 또는 방해 공작)</block>
   <block id="b81879140b6197b1eee86a1d325a0a81" category="list-text">잠재적 공격이 감지된 날짜 및 시간</block>
   <block id="5efe06a62d35c2fe7354ce05b69e8db6" category="list-text">경고의 _상태_:</block>
   <block id="f0617472d6b597b6d93003c4c1003ad6" category="list-text">*새로 만들기*: 이는 새 알림의 기본값입니다.</block>
@@ -6687,9 +6686,7 @@
   <block id="95951a9f2b55d55d45a17decd61a620c" category="list-text">_공격/경고_의 유형</block>
   <block id="3cd43e4673aa76de346f402ec291bd4a" category="list-text">경고/알림을 트리거한 작업을 수행한 _사용자_</block>
   <block id="f5d13b5070432d74ba3be2fb78559747" category="section-title">알림 세부 정보 페이지</block>
-  <block id="acd90b04487305df2bc9ead72d1b4d5b" category="paragraph">알림 목록 페이지에서 알림 링크를 클릭하면 해당 알림에 대한 세부 정보 페이지가 열립니다.  경고 세부 정보는 공격이나 경고의 유형에 따라 달라질 수 있습니다.  예를 들어, 랜섬웨어 공격 세부 정보 페이지에는 다음 정보가 표시될 수 있습니다.</block>
   <block id="328e24be37340d63de24fd6618cca8e1" category="section-title">요약 섹션:</block>
-  <block id="8771316aacd1c4b06854e0e9f30a545c" category="list-text">공격 유형(랜섬웨어, 방해 공작) 및 경고 ID(Workload Security에서 할당)</block>
   <block id="d5a18d6d3a7fe43fabf57a19bb702f39" category="list-text">공격이 감지된 날짜 및 시간</block>
   <block id="9edcf7f99dfc7a9e521c7ad085287595" category="list-text">수행된 작업(예: 자동 스냅샷이 생성됨)  스냅샷 시간은 요약 섹션 바로 아래에 표시됩니다.))</block>
   <block id="680ed5ca6ba49d9bc8a5ffda83850464" category="list-text">상태(신규, 진행 중 등)</block>
@@ -12664,13 +12661,11 @@
   <block id="d19e16fd482ca29d2c0ef4fb8523357a" category="summary">최적의 성능과 데이터 수집을 위해 워크로드 보안 에이전트 배포 환경이 최소 운영 체제, CPU, 메모리 및 디스크 공간 요구 사항을 충족하는지 확인하십시오.</block>
   <block id="c4942feafc272d7da2ce90634dc0120d" category="summary">안전한 토큰 기반 인증을 사용하는 REST API를 통해 워크로드 보안 데이터에 액세스하여 CMDB, 티켓팅 시스템 및 기타 엔터프라이즈 애플리케이션과 통합할 수 있습니다.</block>
   <block id="3dec3952c02d73a04d326f3624f668f6" category="summary">포함된 시뮬레이션 스크립트를 사용하여 공격을 시뮬레이션함으로써 워크로드 보안 탐지 기능을 테스트하고 검증하여 경고 생성 및 대응 정책을 확인합니다.</block>
-  <block id="c7ea3cec531081ee09f563d84422d157" category="doc">워크로드 보안: 비정상적인 파일 변조 시뮬레이션</block>
   <block id="3e350b01c804205b973dbd44adc54728" category="paragraph">이 페이지의 지침에 따라 포함된 파일 변조 시뮬레이션 스크립트를 사용하여 워크로드 보안을 테스트하거나 시연하기 위한 파일 변조를 시뮬레이션할 수 있습니다.</block>
   <block id="67f556940660f0bafe2738969d389877" category="list-text">파일 변조 시뮬레이션 스크립트는 Linux에서만 작동합니다. 시뮬레이션 스크립트는 사용자가 ONTAP ARP를 워크로드 보안과 통합한 경우 높은 신뢰도의 경고를 생성해야 합니다.</block>
   <block id="6465f8a9b5dccc316104b56b41de2db0" category="paragraph">파일 변조 경고를 생성하려면 워크로드 보안에서 파일 변조 경고를 시뮬레이션하는 포함된 스크립트를 실행하면 됩니다.</block>
   <block id="2a9bccccecd980381e18178287c921b4" category="paragraph">워크로드 보안은 사용자 행동을 기반으로 파일 변조 패턴을 감지하는 반면, ONTAP ARP는 파일 내 암호화 활동을 기반으로 파일 변조 활동을 감지합니다.</block>
   <block id="a68622796ba5ea9694219b0cbfbae6b0" category="paragraph">워크로드 보안은 사용자 행동을 학습하여 동일 사용자에 대해 24시간 이내에 파일 변조 공격이 반복될 경우 경고를 생성하지 않습니다.</block>
-  <block id="d1de6a785681750f7fd87d382642893e" category="paragraph">r--- 사이드바: 사이드바 영구 링크: concept_cs_event_rate_checker.html 요약: SVM 이벤트 속도 검사기를 사용하여 NFS/SMB 이벤트 속도를 측정하고 워크로드 보안 데이터 수집기를 배포하기 전에 최적의 에이전트 크기를 결정합니다. 키워드: 이벤트, 검사기, 속도, 크기 조정, 클라우드 보안 ---</block>
   <block id="8013d871b4070a5d3848e4faa21e67d9" category="summary">상관 분석, 자동화된 대응 및 포렌식 조사 기능을 위해 워크로드 보안을 ONTAP 자율 보호 기능과 통합하여 공격 탐지 기능을 강화하십시오.</block>
   <block id="0ed52d2d20f5fbf80a330283d4aa9a72" category="paragraph">ONTAP 자율 보호 기능은 NAS(NFS 및 SMB) 환경에서 워크로드 분석을 사용하여 악의적인 공격이나 무단 데이터 수정을 나타낼 수 있는 파일 내 비정상적인 활동을 사전에 감지하고 경고합니다.</block>
   <block id="8ec1d8886c9b4b48a45eb683d80b184e" category="paragraph">높은 신뢰도 배너는 해당 공격이 파일 암호화 활동과 함께 파일 변조 행위를 보였음을 나타냅니다. 암호화된 파일 그래프는 ARP 솔루션이 볼륨 암호화 활동을 감지한 시점을 타임스탬프로 나타냅니다.</block>
@@ -12697,4 +12692,9 @@
   <block id="7af3f2f9c8eaa3a8ff61f839001e8ca0" category="paragraph">예를 들어, _test.txt_라는 파일의 이름이 _test.txt.abc_로 변경되었는데 워크로드 보안에서 _.abc_ 확장자 때문에 파일 변조 공격으로 감지하는 경우, _.abc_ 확장자를 _허용된 파일 형식_ 목록에 추가할 수 있습니다. 해당 목록에 추가된 후에는 _.abc_ 확장자를 가진 파일에 대해 더 이상 파일 변조 공격이 발생하지 않습니다.</block>
   <block id="374bdbda42629b3859daec6506078b36" category="sidebar">ONTAP 자율 보호 통합</block>
   <block id="5273cec606b6768f8394e2ae1566c7f6" category="sidebar">공격 시뮬레이션</block>
+  <block id="5da98f5c78418524ecf144084929f19e" category="doc">워크로드 보안: 파일 변조 시뮬레이션</block>
+  <block id="e192cb4cca3f754a1b50fdf853ce74a4" category="summary">SVM 이벤트 속도 검사기를 사용하여 NFS/SMB 이벤트 속도를 측정하고 워크로드 보안 데이터 수집기를 배포하기 전에 최적의 에이전트 크기를 결정하십시오.</block>
+  <block id="ec054c68e1c4c037a34f69b34cbcf8ae" category="list-text">잠재적 공격 유형(예: 파일 변조 또는 시스템 파괴 행위)</block>
+  <block id="5d6d5d308daaaae7ed88d035f629ea81" category="paragraph">알림 목록 페이지에서 알림 링크를 클릭하면 해당 알림에 대한 상세 페이지를 열 수 있습니다. 경고 세부 정보는 공격 또는 경고 유형에 따라 다를 수 있습니다. 예를 들어, 파일 변조 공격 상세 정보 페이지에는 다음과 같은 정보가 표시될 수 있습니다.</block>
+  <block id="a93ee3ea015fa995d5cf6a3a088e6f7b" category="list-text">공격 유형(파일 변조, 파괴 행위) 및 경고 ID(워크로드 보안에서 할당)</block>
 </blocks>
