@@ -4,7 +4,7 @@ permalink: concept_cs_event_rate_checker.html
 summary: SVM 이벤트 속도 검사기를 사용하여 NFS/SMB 이벤트 속도를 측정하고 워크로드 보안 데이터 수집기를 배포하기 전에 최적의 에이전트 크기를 결정하십시오. 
 keywords: event, checker, rate, sizing, cloud secure 
 ---
-= SVM 이벤트 비율 검사기(에이전트 크기 조정 가이드)
+= 이벤트 발생률 확인 도구: 에이전트 규모 산정 가이드
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,9 +14,7 @@ keywords: event, checker, rate, sizing, cloud secure
 
 
 [role="lead"]
-이벤트 비율 검사기는 ONTAP SVM 데이터 수집기를 설치하기 전에 SVM에서 NFS/SMB 결합 이벤트 비율을 검사하여 하나의 에이전트 머신이 모니터링할 수 있는 SVM의 수를 확인하는 데 사용됩니다.  이벤트 비율 검사기를 크기 조정 가이드로 사용하여 보안 환경을 계획하세요.
-
-에이전트는 최대 50개의 데이터 수집기를 지원할 수 있습니다.
+데이터 수집기를 배포하기 전에 SVM에서 생성되는 NFS 및 SMB 이벤트 발생률을 측정하여 최적의 Agent 시스템 크기를 결정하십시오. Event Rate Checker 스크립트를 사용하면 용량 제한(Agent당 최대 50개의 데이터 수집기)을 파악하고 Agent 인프라가 예상되는 이벤트 볼륨을 처리하여 안정적인 위협 탐지를 수행할 수 있는지 확인할 수 있습니다.
 
 
 
