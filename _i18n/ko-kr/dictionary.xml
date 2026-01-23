@@ -3564,8 +3564,6 @@
   <block id="3e31734df6f02c9ad9cd0dc7c1f65a98" category="cell">모니터가 내보내졌다는 감사 메시지가 표시됩니다.</block>
   <block id="256a0ce1cb9ac99794371e404aa7446e" category="cell">사용자 정의 모니터 구성 내보내기는 일반적으로 NetApp 엔지니어가 새로운 기능을 개발하고 테스트하는 동안 사용됩니다.  이 메시지가 나타날 것이라고 예상하지 못했다면 감사된 작업에 이름이 언급된 사용자의 작업을 살펴보거나 지원팀에 문의하세요.</block>
   <block id="a7ef8f0bed1d94220b7abd3877b10643" category="doc">워크로드 보안 에이전트 요구 사항</block>
-  <block id="bee347f35c7a237c1f2d5d7193252244" category="inline-link-macro">Workload Security Agent 설치</block>
-  <block id="1de0df19f89310a1407a7686c6dcad7c" category="paragraph">당신은해야합니다<block ref="588188a9e8b5d243fbdbf4e2ce1c4421" category="inline-link-macro-rx"></block> 귀하의 데이터 수집자로부터 정보를 얻기 위해서입니다. 에이전트를 설치하기 전에 사용자 환경이 운영 체제, CPU, 메모리 및 디스크 공간 요구 사항을 충족하는지 확인하세요.</block>
   <block id="0d9233050a9086b67df84f668963e42d" category="cell">다음 중 하나의 라이선스 버전을 실행하는 컴퓨터: * AlmaLinux 9.4(64비트) ~ 9.5(64비트), 10(64비트), SELinux 포함 * CentOS Stream 9(64비트) * Debian 11(64비트), 12(64비트), SELinux 포함 * OpenSUSE Leap 15.3(64비트) ~ 15.6(64비트) * Oracle Linux 8.10(64비트), 9.1(64비트) ~ 9.6(64비트), SELinux 포함 * Red Hat Enterprise Linux 8.10(64비트), 9.1(64비트) ~ 9.6(64비트), 10(64비트), SELinux 포함 * Rocky 9.4(64비트) ~ 9.6(64비트), SELinux 포함 * SUSE Linux Enterprise Server 15 SP4(64비트) ~ 15 SP6(64비트), SELinux 포함 * Ubuntu 20.04 LTS(64비트), 22.04 LTS(64비트), 24.04 LTS(64비트) 이 컴퓨터에서는 다른 애플리케이션 수준 소프트웨어를 실행하면 안 됩니다. 전용 서버를 권장합니다.</block>
   <block id="c441ee50c88f6e5e3a7c69fc69dad8b8" category="cell">명령</block>
   <block id="92094f10227c0d6e4da9a65b1cc23700" category="cell">설치하려면 '압축 해제'가 필요합니다.  또한, 설치, 스크립트 실행, 제거에는 'sudo su –' 명령이 필요합니다.</block>
@@ -3616,7 +3614,6 @@
   <block id="b81e4f797b30e131d43ea14e3bc8322c" category="inline-link-macro">이벤트 요금 확인기</block>
   <block id="1a46e02a3754d0daf83001fffc7c7c46" category="paragraph">를 참조하십시오<block ref="fd6f609b977fb641a06defa631019934" category="inline-link-macro-rx"></block> 사이즈에 대한 정보는 설명서를 참조하세요.</block>
   <block id="0865b3ed9f5211e6fe35eddac5b1aaa3" category="doc">워크로드 보안 API</block>
-  <block id="1b1fb3360bd2eea985279f6fcc2ef45f" category="paragraph">Workload Security API를 사용하면 NetApp 고객과 ISV(독립 소프트웨어 공급업체)가 Workload Security를 ​​CMDB나 다른 티켓팅 시스템 등의 다른 애플리케이션과 통합할 수 있습니다.</block>
   <block id="1a152a606ca16a6eef5f2e9ac9b4c824" category="paragraph">API 접근을 위한 요구 사항:</block>
   <block id="c32ef84ff5ca99a73e37c8f28fa25ae5" category="list-text">API 토큰 관리 작업은 관리자 역할을 가진 Workload Security 사용자가 수행합니다.</block>
   <block id="1a996d988f997b5127990972bac65132" category="paragraph">최신 API 정보는 Workload Security에 로그인하여 *관리자 &gt; API 액세스*로 이동하면 확인할 수 있습니다.  *API 문서* 링크를 클릭하세요.  API 문서는 Swagger 기반으로, API에 대한 간략한 설명과 사용 정보를 제공하고 테넌트에서 API를 시험해 볼 수 있도록 해줍니다.</block>
@@ -3650,7 +3647,6 @@
   <block id="6a2eb10d0f7d8e6c5942069b7aa730bf" category="section-title">Linux에서 NFS 내보내기를 마운트하려면:</block>
   <block id="dd94533008fec4ee5889a56fd78e2a26" category="paragraph">NFS 버전 4.1을 마운트하지 마세요. Fpolicy에서 지원하지 않습니다.</block>
   <block id="edf63ae7e3cf0cd744884c156cab7abb" category="section-title">Linux에서 CIFS를 마운트하려면:</block>
-  <block id="d39b1e189739fcc0a92bdb5bb1b3e4d0" category="section-title">ONTAP Autonomous 랜섬웨어 보호 활성화(선택 사항):</block>
   <block id="ad3dd38cdf18de03b5ea7c975f541873" category="paragraph">ONTAP 클러스터 버전이 9.11.1 이상인 경우 ONTAP 명령 콘솔에서 다음 명령을 실행하여 ONTAP 랜섬웨어 보호 서비스를 활성화할 수 있습니다.</block>
   <block id="a22c6eb3597528c16b0d46880ae4b1ae" category="paragraph">다음으로, 데이터 수집기를 설정합니다.</block>
   <block id="5e7fe8c41f8a34a29dc01b5eced565e8" category="list-text">아직 구성하지 않았다면 Workload Security 에이전트를 구성합니다.</block>
@@ -4766,8 +4762,6 @@
   <block id="53a0194fe3f870afed16b77d60056dfb" category="paragraph"><block ref="53a0194fe3f870afed16b77d60056dfb" category="inline-image-macro-rx" type="image"></block></block>
   <block id="2fae32629d4ef4fc6341f1751b405e45" category="section-title">보안</block>
   <block id="45d58050fc83f658d533966b07ead592" category="inline-link-macro">* ONTAP 9를 위한 NetApp 보안 강화 가이드*</block>
-  <block id="95d10eb69527c16122bd44ec553d0f7c" category="paragraph">보안 대시보드를 사용하면 하드웨어 및 소프트웨어 볼륨 암호화, 랜섬웨어 방지 상태, 클러스터 인증 방법에 대한 차트를 표시하여 현재 보안 상황을 즉시 파악할 수 있습니다.  보안 기준은 다음에서 정의된 권장 사항을 기반으로 평가됩니다.<block ref="a1c84b5f46cbbd9a263e3a5732ed7485" category="inline-link-macro-rx"></block> .</block>
-  <block id="c3ccbe813e27865c5c1154a78b3b9abd" category="paragraph">암호화 또는 랜섬웨어 방지 기능 중 하나를 선택하여 사용자 환경을 자세히 살펴보세요.</block>
   <block id="48709e503decae3f55aa524537948025" category="inline-image-macro">ONTAP Essentials 보안 대시보드</block>
   <block id="1c29918b357b596e616f50e0877d45de" category="paragraph"><block ref="1c29918b357b596e616f50e0877d45de" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ac05d0fca214dab8244e52fd39ca3562" category="inline-link-macro">클러스터 규정 준수 범주</block>
@@ -4845,16 +4839,9 @@
   <block id="b865b0f0f94674aa0d7878e2253f2c1b" category="doc">미리보기 기능 및 기능</block>
   <block id="8a0d14c15291ab894b50ee0f241e5564" category="paragraph">Data Infrastructure Insights _미리보기_ 방식으로 새로운 기능과 특징을 강조합니다.  미리보기 기능은 제한된 환경이나 제한된 용량으로 제공됩니다.</block>
   <block id="43680febd505de2083039d0fe7ca8947" category="paragraph">이러한 기능 중 하나 이상을 미리 보고 싶으시다면 NetApp 영업팀에 문의하여 자세한 정보를 얻으세요.</block>
-  <block id="5f06573aae905166447bf8d646c6bf89" category="summary">쿼리 개요</block>
-  <block id="fadb076bccad39c075c50bfa7f81bc31" category="doc">쿼리에 사용된 자산</block>
-  <block id="aa62093500fa6cc2a1aea70e53e331b8" category="paragraph">쿼리를 사용하면 사용자가 선택한 기준(예: 주석)에 따라 테넌트의 자산과 메트릭을 세부적으로 검색하여 네트워크를 모니터링하고 문제를 해결할 수 있습니다.</block>
-  <block id="01baf5f78b2649e6a38c88d12944a3d9" category="paragraph">자산에 자동으로 주석을 할당하는 주석 규칙에는 쿼리가 _필요합니다_.</block>
   <block id="9d35c72b549fae1c4f5338d76241f908" category="paragraph">테넌트의 물리적 또는 가상 인벤토리 자산(및 관련 메트릭)을 쿼리하거나 Kubernetes나 ONTAP Advanced Data와 같은 통합을 통해 제공되는 메트릭을 쿼리할 수 있습니다.</block>
   <block id="5d7a3696457a40dffd58bd71e9fde963" category="section-title">재고 자산</block>
-  <block id="a53ff308ba1fe0b1b1c8fad46fc5711f" category="paragraph">다음 자산 유형은 쿼리, 대시보드 위젯 및 사용자 정의 자산 랜딩 페이지에서 사용할 수 있습니다.  필터, 표현식, 표시에 사용할 수 있는 필드와 카운터는 자산 유형에 따라 다릅니다.  모든 자산을 모든 위젯 유형에서 사용할 수 있는 것은 아닙니다.</block>
-  <block id="1859b7335980eb552916a01fd55cb7e4" category="list-text">일반 장치</block>
   <block id="9effcdd7159a9a08dcdb0202ae58c1a8" category="list-text">iSCSI 세션</block>
-  <block id="9dd74c86de55dd54fcf3bc98e9bfa861" category="list-text">iSCSI 네트워크 포털</block>
   <block id="ac70412e939d72a9234cdebb1af5867b" category="list-text">길</block>
   <block id="d2d5c3e087f684e56b5b81d6212d7ccb" category="list-text">몫</block>
   <block id="5a95a425f74314a96f13a2f136992178" category="list-text">공유하다</block>
@@ -7329,7 +7316,6 @@
   <block id="9ea8e80fba8d6edb71449d6ac523870d" category="list-text">리소스 활용 최적화</block>
   <block id="f7c53246bda8892727562ecf03b2af88" category="list-text">질문에 답하기 위해 디스플레이 노이즈를 최소화하는 고급 필터가 있는 내장형 또는 사용자 정의형 대시보드</block>
   <block id="5f0e583e0b23c4014b3313af93160414" category="list-text">ONTAP 스토리지 작업의 상태를 확인하세요 </block>
-  <block id="30b80265dc62edf963a3ac0e34dc03e5" category="list-text">랜섬웨어나 데이터 파괴 공격으로부터 가장 귀중한 비즈니스 자산인 데이터를 보호하세요</block>
   <block id="bf647454e36069fd16f1a7a35cf6a865" category="section-title">시작하기</block>
   <block id="5abbdfc8c583cbf03ce02e46c06a6aa5" category="inline-link-macro">*시작하기*</block>
   <block id="f4c2bc844e861dbf16d626ef6fe4fa50" category="list-text">어떻게 해야 하나요<block ref="bdc33e916e289637bc8ce0319e314c7f" category="inline-link-macro-rx"></block> Data Infrastructure Insights 활용하세요?</block>
@@ -12654,7 +12640,6 @@
   <block id="d388ca982366ad7a8a7a165d21919f84" category="paragraph">테넌트 생성이 완료되면 콘솔 자격 증명을 사용하여 로그인하고 Data Infrastructure Insights 의 무료 30일 평가판을 시작하세요. 이 체험판을 통해 Data Infrastructure Insights 제공하는 기능을 탐색해 볼 수 있습니다.</block>
   <block id="a361d4c5b26cab224e5aad972ef9f92f" category="paragraph">테넌트가 생성되면 언제든지 NetApp BlueXP 포털에 로그인하여 해당 페이지로 이동하면 됩니다. <block ref="37a150e92f05332b5bc5a56046c3177c" category="inline-link-macro-rx"></block> 해당 페이지에서 * Data Infrastructure Insights 로 이동*을 선택합니다.</block>
   <block id="ed35afa558b996b37265533db9af5399" category="sidebar">보고서에 주석 게시하기</block>
-  <block id="d19e16fd482ca29d2c0ef4fb8523357a" category="summary">최적의 성능과 데이터 수집을 위해 워크로드 보안 에이전트 배포 환경이 최소 운영 체제, CPU, 메모리 및 디스크 공간 요구 사항을 충족하는지 확인하십시오.</block>
   <block id="c4942feafc272d7da2ce90634dc0120d" category="summary">안전한 토큰 기반 인증을 사용하는 REST API를 통해 워크로드 보안 데이터에 액세스하여 CMDB, 티켓팅 시스템 및 기타 엔터프라이즈 애플리케이션과 통합할 수 있습니다.</block>
   <block id="3dec3952c02d73a04d326f3624f668f6" category="summary">포함된 시뮬레이션 스크립트를 사용하여 공격을 시뮬레이션함으로써 워크로드 보안 탐지 기능을 테스트하고 검증하여 경고 생성 및 대응 정책을 확인합니다.</block>
   <block id="3e350b01c804205b973dbd44adc54728" category="paragraph">이 페이지의 지침에 따라 포함된 파일 변조 시뮬레이션 스크립트를 사용하여 워크로드 보안을 테스트하거나 시연하기 위한 파일 변조를 시뮬레이션할 수 있습니다.</block>
@@ -12701,4 +12686,23 @@
   <block id="87f1c49b01ac2f7b86716ee6218bc5f6" category="paragraph">스냅샷 생성 및 삭제를 허용하는 명령:</block>
   <block id="7842bb93d1b19afc39c751d0dddcf4ac" category="paragraph">사용자 차단을 허용하는 명령어:</block>
   <block id="6a1af23a5137b0b5dbe87d4b59b0deeb" category="list-text">EMS 이벤트(예: ONTAP ARP)는 일시 중지된 수집기에서 처리되지 않습니다. 즉, ONTAP가 파일 변조 공격을 식별하더라도 Data Infrastructure Insights Workload Security는 해당 이벤트를 수집할 수 없습니다.</block>
+  <block id="afcbb40976cebf8be35fcb3f20455f79" category="summary">Workload Security 에이전트는 스토리지 인프라 전반에서 파일 액세스를 효과적으로 모니터링하고 보안 위협을 탐지하기 위해 특정 운영 체제, CPU, 메모리 및 디스크 공간 사양이 필요합니다.</block>
+  <block id="97c248485e6832f3e4517d8b6d423060" category="inline-link-macro">Workload Security 에이전트 설치</block>
+  <block id="6acb715af86a62a0077ac01d43f7b01c" category="paragraph">최적의 모니터링 및 위협 탐지 성능을 보장하려면 최소 운영 체제, CPU, 메모리 및 디스크 공간 요구 사항을 충족하는 전용 서버에 Workload Security 에이전트를 배포하십시오. 이 가이드에서는 <block ref="4ce477e73552de4dc5af67c1b8fdac41" category="inline-link-macro-rx"></block> 전에 필요한 하드웨어 및 네트워크 요구 사항을 명시하며, 지원되는 Linux 배포판, 네트워크 연결 규칙 및 시스템 크기 조정 지침을 포함합니다.</block>
+  <block id="37e0d4c7df80d6e4c0423f121f2d93d8" category="paragraph">안전한 토큰 기반 인증으로 보호되는 REST API를 사용하여 Workload Security를 엔터프라이즈 생태계에 통합하세요. 포렌식 활동 데이터를 검색하고, API 액세스 토큰을 관리하고, CMDB, 티켓팅 시스템 및 기타 애플리케이션과의 맞춤형 통합을 개발할 수 있습니다. 대화형 Swagger 문서는 완벽한 API 사양을 제공하며 엔드포인트를 직접 테스트할 수 있도록 지원합니다.</block>
+  <block id="949cc8d1af819d8e6ec37390121bfa5f" category="section-title">ONTAP 자율형 랜섬웨어 보호 활성화(선택 사항):</block>
+  <block id="67a5e480424bf6f9914a3b18393465e6" category="paragraph">보안 대시보드는 하드웨어 및 소프트웨어 볼륨 암호화, 파일 변조 방지 상태, 클러스터 인증 방법 등을 차트로 보여주어 현재 보안 상황을 즉시 파악할 수 있도록 해줍니다. 보안 기준은 <block ref="a1c84b5f46cbbd9a263e3a5732ed7485" category="inline-link-macro-rx"></block>에 정의된 권장 사항을 기반으로 평가됩니다.</block>
+  <block id="7b46122c94da7a23999d34f71661a1c2" category="paragraph">암호화 또는 파일 변조 방지 수를 선택하여 환경을 자세히 살펴보십시오.</block>
+  <block id="07a15244af601ef7f53e10ad7cf2a65e" category="summary">인벤토리 자산 및 통합 메트릭을 쿼리하여 스토리지, 컴퓨팅 및 네트워크 리소스를 포함한 전체 인프라 전반의 성능을 모니터링, 문제 해결 및 분석합니다.</block>
+  <block id="c1dac515d770b50607db68702d91b2dd" category="doc">자산 및 메트릭 쿼리</block>
+  <block id="c154de8d96ee3aafd9f63d6d8b3821af" category="paragraph">주석과 같은 사용자 지정 기준을 기반으로 인프라의 물리적 및 가상 자산을 쿼리하여 성능을 모니터링하고, 문제를 해결하며, 세부적인 검색을 수행할 수 있습니다. Data Infrastructure Insights는 스토리지 어레이 및 호스트부터 애플리케이션 및 가상 머신에 이르기까지 다양한 자산 유형에 대한 쿼리를 지원하며, Kubernetes, Docker 및 ONTAP Advanced Data의 통합 메트릭을 통해 포괄적인 가시성을 제공합니다.</block>
+  <block id="a4814d069f57e94e2edb62e919af014a" category="paragraph">에셋에 자동으로 주석을 할당하는 주석 규칙에는 모든 사용자와 공유된 쿼리가 필요합니다. 쿼리 공유에 대한 자세한 내용은 아래를 참조하세요.</block>
+  <block id="0ee1f19142dfe0c3765dfcf205abe414" category="paragraph">모든 인벤토리(인프라라고도 함) 자산 유형(스토리지, 스위치, VM, 애플리케이션 등)은 쿼리, 대시보드 위젯 및 사용자 지정 자산 랜딩 페이지에서 사용할 수 있습니다. 필터, 표현식 및 표시에 사용할 수 있는 필드와 카운터는 자산 유형에 따라 다릅니다.</block>
+  <block id="b4ca152efced4e02c83a7d308fb6c8f9" category="section-title">쿼리 공유</block>
+  <block id="272c613cf4f758ba99243b78ee690f84" category="paragraph">쿼리를 보고 편집할 수 있는 사용자를 선택하여 쿼리에 대한 액세스를 제어합니다. 기본적으로 새 쿼리는 비공개이며 사용자만 볼 수 있으며, 유연한 권한 수준(읽기 전용 또는 편집)으로 특정 사용자 또는 전체 조직과 공유하도록 선택할 수 있습니다.</block>
+  <block id="72d8dd50b70908191773606963bf3036" category="paragraph">쿼리를 모든 사람과 공유하거나 편집 또는 읽기 전용 권한을 가진 사용자를 선택하여 공유할 수 있습니다.</block>
+  <block id="b01d373f18f5a51146c5d824cbfb409e" category="admonition">계정 소유자 권한이 있는 사용자는 개인 정보 보호 설정에 관계없이 모든 쿼리를 볼 수 있습니다.</block>
+  <block id="7143e0c9aefa0103fd7fde4a2b1f1e3c" category="doc">알림 이해 및 조사</block>
+  <block id="a760de6056552c07e9447d9e4aa8ddd8" category="list-text">가장 소중한 비즈니스 자산인 데이터를 파일 변조 또는 데이터 파괴 공격으로부터 보호하세요</block>
+  <block id="ad616b1714b32991576ec7cd2b8832a8" category="sidebar">대시보드 액세스 관리</block>
 </blocks>

@@ -67,7 +67,7 @@ mount -t cifs //10.193.77.91/sharedfolderincluster /root/destinationfolder/ -o u
 ----
 
 
-==== ONTAP Autonomous 랜섬웨어 보호 활성화(선택 사항):
+==== ONTAP 자율형 랜섬웨어 보호 활성화(선택 사항):
 
 ONTAP 클러스터 버전이 9.11.1 이상인 경우 ONTAP 명령 콘솔에서 다음 명령을 실행하여 ONTAP 랜섬웨어 보호 서비스를 활성화할 수 있습니다.
 

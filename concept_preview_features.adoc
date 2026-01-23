@@ -7,6 +7,10 @@ keywords: coming soon, preview,
 = 미리보기 기능 및 기능
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]

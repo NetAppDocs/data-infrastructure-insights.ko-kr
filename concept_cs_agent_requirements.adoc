@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_cs_agent_requirements.html 
-summary: 최적의 성능과 데이터 수집을 위해 워크로드 보안 에이전트 배포 환경이 최소 운영 체제, CPU, 메모리 및 디스크 공간 요구 사항을 충족하는지 확인하십시오. 
+summary: Workload Security 에이전트는 스토리지 인프라 전반에서 파일 액세스를 효과적으로 모니터링하고 보안 위협을 탐지하기 위해 특정 운영 체제, CPU, 메모리 및 디스크 공간 사양이 필요합니다. 
 keywords: agent, Linux, requirements, docker, browsers, permissions, Network, Cloud Secure 
 ---
 = 워크로드 보안 에이전트 요구 사항
@@ -14,7 +14,7 @@ keywords: agent, Linux, requirements, docker, browsers, permissions, Network, Cl
 
 
 [role="lead"]
-당신은해야합니다link:task_cs_add_agent.html["Workload Security Agent 설치"] 귀하의 데이터 수집자로부터 정보를 얻기 위해서입니다. 에이전트를 설치하기 전에 사용자 환경이 운영 체제, CPU, 메모리 및 디스크 공간 요구 사항을 충족하는지 확인하세요.
+최적의 모니터링 및 위협 탐지 성능을 보장하려면 최소 운영 체제, CPU, 메모리 및 디스크 공간 요구 사항을 충족하는 전용 서버에 Workload Security 에이전트를 배포하십시오. 이 가이드에서는 link:task_cs_add_agent.html["Workload Security 에이전트 설치"] 전에 필요한 하드웨어 및 네트워크 요구 사항을 명시하며, 지원되는 Linux 배포판, 네트워크 연결 규칙 및 시스템 크기 조정 지침을 포함합니다.
 
 [cols="36,60"]
 |===

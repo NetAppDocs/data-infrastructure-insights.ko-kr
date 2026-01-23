@@ -7,6 +7,10 @@ keywords: dashboard, widget, ontap, overview, insight
 = ONTAP 필수 사항
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -72,9 +76,9 @@ image:DataProtectionDashboard_ClusterList.png["데이터 보호 클러스터 목
 
 == 보안
 
-보안 대시보드를 사용하면 하드웨어 및 소프트웨어 볼륨 암호화, 랜섬웨어 방지 상태, 클러스터 인증 방법에 대한 차트를 표시하여 현재 보안 상황을 즉시 파악할 수 있습니다.  보안 기준은 다음에서 정의된 권장 사항을 기반으로 평가됩니다.link:https://www.netapp.com/pdf.html?item=/media/10674-tr4569.pdf["* ONTAP 9를 위한 NetApp 보안 강화 가이드*"] .
+보안 대시보드는 하드웨어 및 소프트웨어 볼륨 암호화, 파일 변조 방지 상태, 클러스터 인증 방법 등을 차트로 보여주어 현재 보안 상황을 즉시 파악할 수 있도록 해줍니다. 보안 기준은 link:https://www.netapp.com/pdf.html?item=/media/10674-tr4569.pdf["* ONTAP 9를 위한 NetApp 보안 강화 가이드*"]에 정의된 권장 사항을 기반으로 평가됩니다.
 
-암호화 또는 랜섬웨어 방지 기능 중 하나를 선택하여 사용자 환경을 자세히 살펴보세요.
+암호화 또는 파일 변조 방지 수를 선택하여 환경을 자세히 살펴보십시오.
 
 image:OE_SecurityDashboard.png["ONTAP Essentials 보안 대시보드"]
 
