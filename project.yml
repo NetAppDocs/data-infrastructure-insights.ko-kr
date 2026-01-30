@@ -15,8 +15,6 @@ sidebar:
     url: "/index.html"
   - title: 새로운 소식
     url: "/concept_whats_new.html"
-  - title: Data Infrastructure Insights 등록
-    url: "/task_cloud_insights_onboarding_1.html"
   - title: 보안
     entries:
     - title: 보안 관행
