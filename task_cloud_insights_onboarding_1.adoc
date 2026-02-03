@@ -1,0 +1,19 @@
+---
+sidebar: sidebar 
+permalink: task_cloud_insights_onboarding_1.html 
+summary: Data Infrastructure Insights 에 가입하고 테넌트를 생성합니다. 
+keywords: onboarding, new user 
+---
+= Data Infrastructure Insights 온보딩
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Data Infrastructure Insights 사용하려면 먼저 * NetApp Console* 포털에 가입해야 합니다.  이미 NetApp Console 로그인이 있는 경우 몇 가지 간단한 단계만 거치면 Data Infrastructure Insights 의 무료 평가판을 시작할 수 있습니다.
+
+안내 사항이 업데이트 중입니다. 나중에 다시 확인해 주세요.
