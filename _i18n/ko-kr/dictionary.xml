@@ -3153,7 +3153,6 @@
   <block id="129f8880167531920bb3396830948e86" category="cell">리눅스 요구 사항</block>
   <block id="033d64e0352a24070b4d6ba6e37207af" category="cell">Windows 요구 사항</block>
   <block id="696c660ff8d9323e55146a6dbd4e4088" category="cell">운영 체제</block>
-  <block id="cd016f59e3bce345c5a22a0c73b84bc2" category="cell">다음 중 하나의 라이선스 버전을 실행하는 컴퓨터: * AlmaLinux 9.3 ~ 9.5 * Centos(64비트): 7.2 ~ 7.9, 8.1 ~ 8.4, Stream 8, Stream 9 * Debian(64비트): 9 ~ 12 * OpenSUSE Leap 15.1 ~ 15.6 * Oracle Enterprise Linux(64비트): 7.5 ~ 7.9, 8.1 ~ 8.10, 9.3 ~ 9.6 * Red Hat(64비트): 7.2 ~ 7.9, 8.1 ~ 8.10, 9.1 ~ 9.6 * Rocky 9.0 ~ 9.5 * SUSE Linux Enterprise Server 15, 15 SP2 ~ 15 SP6 * Ubuntu Server: 18.04, 20.04, 22.04, 24.04 LTS * 위 플랫폼에서 SELinux를 실행하면 안 됩니다. 이 컴퓨터에서는 다른 애플리케이션 수준 소프트웨어를 실행해서는 안 됩니다. 전용 서버를 권장합니다.  SELinux를 사용하는 경우 수집 단위 시스템에서 다음 명령을 실행하는 것이 좋습니다. sudo semanage fcontext -a -t usr_t "/opt/netapp/cloudinsights(/.*)?" sudo restorecon -R /opt/netapp/cloudinsights</block>
   <block id="2b55387dd066c5bac646ac61543d152d" category="cell">CPU</block>
   <block id="36b415ace97b614344903d1d039cc60d" category="cell">2개의 CPU 코어</block>
   <block id="c90a13d8ec8fe53c6bb33fe10af6f2fe" category="cell">같은</block>
@@ -12693,4 +12692,5 @@
   <block id="3771b23dadd43c39046622dbcb4c17e4" category="list-text">"Test Webhook"을 클릭하여 오류가 없는지 확인하십시오.</block>
   <block id="c20e86538672d1ab3ab8e3a5c2961e28" category="list-text">웹훅을 저장합니다.</block>
   <block id="beda12a678062ce581606c88344f4e06" category="sidebar">Teams Webhook 예시</block>
+  <block id="e18f38a263784d686e9a0d45d5416285" category="cell">다음 운영 체제 중 하나의 라이선스 버전이 설치된 컴퓨터: * AlmaLinux 9.5, 10 * Centos(64비트): Stream 9 * Debian(64비트): 11~13 * OpenSUSE Leap 15.2~15.6, 16 * Oracle Enterprise Linux(64비트): 8.10, 9.2, 9.4, 9.6, 10 * Red Hat(64비트): 8.10, 9.2, 9.4, 9.6, 10 * Rocky 9.2~9.6 * SUSE Linux Enterprise Server 15 SP4~15 SP7, 16 * Ubuntu Server: 20.04, 22.04, 24.04 LTS * 위 플랫폼에 SELinux 설치 이 컴퓨터에는 다른 응용 프로그램 수준의 소프트웨어가 실행되어서는 안 됩니다. 전용 서버를 사용하는 것이 좋습니다. SELinux 환경에서 실행 중인 경우, 수집 장치 시스템에서 다음 명령을 실행하는 것이 좋습니다: sudo semanage fcontext -a -t usr_t "/opt/netapp/cloudinsights(/.*)?" sudo restorecon -R /opt/netapp/cloudinsights</block>
 </blocks>

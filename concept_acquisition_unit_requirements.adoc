@@ -5,17 +5,12 @@ summary: 인수 단위로 사용하는 서버나 VM은 최소 요구 사항을 �
 keywords: AU, acquisition unit, requirements, sizing 
 ---
 = 인수 단위 요구 사항
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
 :nofooter: 
 :icons: font
 :linkattrs: 
 :imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]
@@ -31,7 +26,7 @@ keywords: AU, acquisition unit, requirements, sizing
 | 요소 | 리눅스 요구 사항 | Windows 요구 사항 
 
 
-| 운영 체제 | 다음 중 하나의 라이선스 버전을 실행하는 컴퓨터: * AlmaLinux 9.3 ~ 9.5 * Centos(64비트): 7.2 ~ 7.9, 8.1 ~ 8.4, Stream 8, Stream 9 * Debian(64비트): 9 ~ 12 * OpenSUSE Leap 15.1 ~ 15.6 * Oracle Enterprise Linux(64비트): 7.5 ~ 7.9, 8.1 ~ 8.10, 9.3 ~ 9.6 * Red Hat(64비트): 7.2 ~ 7.9, 8.1 ~ 8.10, 9.1 ~ 9.6 * Rocky 9.0 ~ 9.5 * SUSE Linux Enterprise Server 15, 15 SP2 ~ 15 SP6 * Ubuntu Server: 18.04, 20.04, 22.04, 24.04 LTS * 위 플랫폼에서 SELinux를 실행하면 안 됩니다. 이 컴퓨터에서는 다른 애플리케이션 수준 소프트웨어를 실행해서는 안 됩니다. 전용 서버를 권장합니다.  SELinux를 사용하는 경우 수집 단위 시스템에서 다음 명령을 실행하는 것이 좋습니다. sudo semanage fcontext -a -t usr_t "/opt/netapp/cloudinsights(/.*)?" sudo restorecon -R /opt/netapp/cloudinsights | 다음 중 하나의 라이선스 버전을 실행하는 컴퓨터: * Microsoft Windows 11 * Microsoft Windows Server 2016 * Microsoft Windows Server 2019 * Microsoft Windows Server 2022 * Microsoft Windows Server 2025 이 컴퓨터에서는 다른 애플리케이션 수준 소프트웨어를 실행해서는 안 됩니다. 전용 서버를 권장합니다. 
+| 운영 체제 | 다음 운영 체제 중 하나의 라이선스 버전이 설치된 컴퓨터: * AlmaLinux 9.5, 10 * Centos(64비트): Stream 9 * Debian(64비트): 11~13 * OpenSUSE Leap 15.2~15.6, 16 * Oracle Enterprise Linux(64비트): 8.10, 9.2, 9.4, 9.6, 10 * Red Hat(64비트): 8.10, 9.2, 9.4, 9.6, 10 * Rocky 9.2~9.6 * SUSE Linux Enterprise Server 15 SP4~15 SP7, 16 * Ubuntu Server: 20.04, 22.04, 24.04 LTS * 위 플랫폼에 SELinux 설치 이 컴퓨터에는 다른 응용 프로그램 수준의 소프트웨어가 실행되어서는 안 됩니다. 전용 서버를 사용하는 것이 좋습니다. SELinux 환경에서 실행 중인 경우, 수집 장치 시스템에서 다음 명령을 실행하는 것이 좋습니다: sudo semanage fcontext -a -t usr_t "/opt/netapp/cloudinsights(/.*)?" sudo restorecon -R /opt/netapp/cloudinsights | 다음 중 하나의 라이선스 버전을 실행하는 컴퓨터: * Microsoft Windows 11 * Microsoft Windows Server 2016 * Microsoft Windows Server 2019 * Microsoft Windows Server 2022 * Microsoft Windows Server 2025 이 컴퓨터에서는 다른 애플리케이션 수준 소프트웨어를 실행해서는 안 됩니다. 전용 서버를 권장합니다. 
 
 
 | CPU | 2개의 CPU 코어 | 같은 
