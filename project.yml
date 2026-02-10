@@ -291,7 +291,7 @@ sidebar:
         url: "/ws_webhook_example_pagerduty.html"
       - title: Slack 웹훅 예제
         url: "/ws_webhook_example_slack.html"
-      - title: 팀 웹훅 예시
+      - title: Teams Webhook 예시
         url: "/ws_webhook_example_teams.html"
     - title: 워크로드 보안 API
       url: "/concept_cs_api.html"

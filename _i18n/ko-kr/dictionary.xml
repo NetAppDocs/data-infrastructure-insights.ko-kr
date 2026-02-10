@@ -2915,7 +2915,6 @@
   <block id="8c4223ab469f8b3e9d1aa30d51cf4390" category="sidebar">Discord 웹훅 예시</block>
   <block id="9129ee5b293413b88d69268ce77a5a06" category="sidebar">PagerDuty 웹훅 예제</block>
   <block id="63a04ee1b7791a07aa2f0767ceb2cb77" category="sidebar">Slack 웹훅 예제</block>
-  <block id="b58ab179b4f6f21dfbd61177415644b6" category="sidebar">팀 웹훅 예시</block>
   <block id="1cbe7bb88b925457e4ab9451a6815eb8" category="sidebar">일반적인 문제 해결</block>
   <block id="e59c20e4502fa7c4c12360e970a6f517" category="sidebar">데이터 수집기 오류 조사</block>
   <block id="7ab310c8ba4437b4e355389703868682" category="sidebar">참조 및 지원</block>
@@ -12693,4 +12692,5 @@
   <block id="32d27ad98b4b043c62f61de16291608e" category="list-text">Power Automate Flows를 사용하는 경우 URL의 쿼리 매개변수는 인코딩된 형식입니다. 입력하기 전에 URL을 디코딩해야 합니다.</block>
   <block id="3771b23dadd43c39046622dbcb4c17e4" category="list-text">"Test Webhook"을 클릭하여 오류가 없는지 확인하십시오.</block>
   <block id="c20e86538672d1ab3ab8e3a5c2961e28" category="list-text">웹훅을 저장합니다.</block>
+  <block id="beda12a678062ce581606c88344f4e06" category="sidebar">Teams Webhook 예시</block>
 </blocks>
