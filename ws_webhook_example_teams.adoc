@@ -46,6 +46,100 @@ image:ws_webhook_teams_example.png["워크로드 보안 팀 웹훅 예시"]
 
 
 
+=== 적응형 카드 템플릿을 사용하여 Teams 알림을 만드는 단계
+
+. 메시지 본문을 다음 템플릿으로 바꾸십시오.
++
+....
+  {
+  "type": "message",
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.2",
+        "body": [
+          {
+            "type": "TextBlock",
+            "text": "%%severity%% Alert: %%synopsis%%",
+            "wrap": true,
+            "weight": "Bolder",
+            "size": "Large"
+          },
+          {
+            "type": "TextBlock",
+            "text": "%%detected%%",
+            "wrap": true,
+            "isSubtle": true,
+            "spacing": "Small"
+          },
+          {
+            "type": "FactSet",
+            "facts": [
+              {
+                "title": "User",
+                "value": "%%userName%%"
+              },
+              {
+                "title": "Attack/Abnormal Behavior",
+                "value": "%%type%%"
+              },
+              {
+                "title": "Action taken",
+                "value": "%%actionTaken%%"
+              },
+              {
+                "title": "Files encrypted",
+                "value": "%%filesEncrypted%%"
+              },
+              {
+                "title": "Encrypted files suffix",
+                "value": "%%encryptedFilesSuffix%%"
+              },
+              {
+                "title": "Files deleted",
+                "value": "%%filesDeleted%%"
+              },
+              {
+                "title": "Activity Change Rate",
+                "value": "%%changePercentage%%"
+              },
+              {
+                "title": "Severity",
+                "value": "%%severity%%"
+              },
+              {
+                "title": "Status",
+                "value": "%%status%%"
+              },
+              {
+                "title": "Notes",
+                "value": "%%note%%"
+              }
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "type": "Action.OpenUrl",
+            "title": "View Details",
+            "url": "https://%%cloudInsightsHostname%%/%%alertDetailsPageUrl%%"
+          }
+        ]
+      }
+    }
+  ]
+}
+....
+. Power Automate Flows를 사용하는 경우 URL의 쿼리 매개변수는 인코딩된 형식입니다. 입력하기 전에 URL을 디코딩해야 합니다.
+. "Test Webhook"을 클릭하여 오류가 없는지 확인하십시오.
+. 웹훅을 저장합니다.
+
+
+
+
 == Webhook을 통한 알림
 
 웹훅을 통해 이벤트를 알리려면 _워크로드 보안 > 정책_으로 이동하세요.  _+공격 정책_ 또는 _+경고 정책_을 선택하세요.
