@@ -7,6 +7,10 @@ keywords: data collector, queries, create, storagegrid
 = NetApp StorageGRID 데이터 수집기
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -51,7 +55,7 @@ Data Infrastructure Insights NetApp StorageGRID 수집기에서 다음과 같은
 
 * StorageGRID 호스트 IP 주소
 * 메트릭 쿼리 및 테넌트 액세스 역할이 할당된 사용자의 사용자 이름 및 비밀번호
-* 포트 443
+* 포트 443(또는 구성된 경우 8443)
 
 
 

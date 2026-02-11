@@ -12693,4 +12693,5 @@
   <block id="c20e86538672d1ab3ab8e3a5c2961e28" category="list-text">웹훅을 저장합니다.</block>
   <block id="beda12a678062ce581606c88344f4e06" category="sidebar">Teams Webhook 예시</block>
   <block id="e18f38a263784d686e9a0d45d5416285" category="cell">다음 운영 체제 중 하나의 라이선스 버전이 설치된 컴퓨터: * AlmaLinux 9.5, 10 * Centos(64비트): Stream 9 * Debian(64비트): 11~13 * OpenSUSE Leap 15.2~15.6, 16 * Oracle Enterprise Linux(64비트): 8.10, 9.2, 9.4, 9.6, 10 * Red Hat(64비트): 8.10, 9.2, 9.4, 9.6, 10 * Rocky 9.2~9.6 * SUSE Linux Enterprise Server 15 SP4~15 SP7, 16 * Ubuntu Server: 20.04, 22.04, 24.04 LTS * 위 플랫폼에 SELinux 설치 이 컴퓨터에는 다른 응용 프로그램 수준의 소프트웨어가 실행되어서는 안 됩니다. 전용 서버를 사용하는 것이 좋습니다. SELinux 환경에서 실행 중인 경우, 수집 장치 시스템에서 다음 명령을 실행하는 것이 좋습니다: sudo semanage fcontext -a -t usr_t "/opt/netapp/cloudinsights(/.*)?" sudo restorecon -R /opt/netapp/cloudinsights</block>
+  <block id="ddb78a0715fab46562d8ee8102cea78c" category="list-text">포트 443(또는 구성된 경우 8443)</block>
 </blocks>
