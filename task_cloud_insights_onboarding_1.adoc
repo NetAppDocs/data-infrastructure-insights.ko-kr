@@ -14,6 +14,56 @@ keywords: onboarding, new user
 
 
 [role="lead"]
-Data Infrastructure Insights 사용하려면 먼저 * NetApp Console* 포털에 가입해야 합니다.  이미 NetApp Console 로그인이 있는 경우 몇 가지 간단한 단계만 거치면 Data Infrastructure Insights 의 무료 평가판을 시작할 수 있습니다.
+Data Infrastructure Insights 작업을 시작하기 전에 NetApp Console 포털에 가입해야 합니다. 이미 NetApp Console 로그인이 있는 경우 몇 가지 간단한 단계를 거쳐 Data Infrastructure Insights 무료 평가판을 시작할 수 있습니다.
 
-안내 사항이 업데이트 중입니다. 나중에 다시 확인해 주세요.
+
+
+== NetApp Console 계정 생성하기
+
+NetApp의 클라우드 서비스를 시작하려면 link:https://console.netapp.com/["* NetApp Console*"^]로 이동하여 *시작하기*를 클릭하십시오.
+
+* 아직 가입하지 않으셨다면 * Sign Up * 을 선택하십시오
+* 유효한 회사 이메일 주소를 입력하고 비밀번호를 선택하세요.
+* 회사 이름과 전체 이름을 입력합니다.
+* 이용약관에 동의하고 * 계속 * 을 선택합니다.
+* Console에서 시작 워크플로를 안내합니다.
+
+
+
+
+=== 이미 NetApp Console 로그인 계정이 있는 경우는 어떻게 해야 하나요?
+
+NetApp Console 계정이 있으면 link:https://console.netapp.com/["NetApp Console"] 포털 페이지에서 *로그인*을 선택하기만 하면 됩니다.
+
+화면 상단의 드롭다운에서 조직을 선택합니다.
+
+왼쪽 상단의 기본 메뉴에서 *거버넌스 > Data Infrastructure Insights*를 선택합니다.
+
+
+
+== Data Infrastructure Insights 무료 체험 시작하기
+
+준비가 되면 *30일 무료 체험 시작*을 선택합니다. 사이트를 호스팅할 지역을 선택하고 다른 프롬프트를 따릅니다.
+
+DII 사이트를 생성하려면 "Org Admin" 역할이 있어야 합니다.
+
+Console은 Data Infrastructure Insights(DII) 사이트가 온보딩 준비가 완료되면 알려줍니다. *온보딩 시작* 버튼을 선택하여 사이트를 설정하세요.
+
+온보딩 프로세스가 완료되기 전에 언제든지 프로세스를 종료하는 경우 Console에 다시 로그인하여 *온보딩 완료*를 선택하십시오.
+
+온보딩이 완료되면 Console에서 테넌트를 사용할 준비가 되었다는 메시지가 표시됩니다. 시작하려면 Launch Data Infrastructure Insights*를 선택하세요. 일부 데이터(인벤토리 등)는 즉시 사용할 수 있지만, 다른 데이터(성능 모니터링 등)는 의미 있는 정보를 얻기까지 시간이 걸릴 수 있습니다.
+
+
+
+== 로그아웃
+
+Data Infrastructure Insights에서 로그아웃하려면 *사용자 이름*을 클릭하고 *로그아웃*을 선택하십시오.
+
+
+NOTE: Data Infrastructure Insights에서 로그아웃하면 Console에서도 로그아웃됩니다. Console 로그인을 사용하는 다른 NetApp 클라우드 서비스에서도 로그아웃됩니다.
+
+
+
+=== 비활성 시간 초과
+
+기본적으로 NetApp Console은 6시간(360분) 동안 활동이 없으면 사용자를 로그아웃합니다. 활동 여부와 관계없이 7일 후에는 사용자가 로그아웃됩니다.

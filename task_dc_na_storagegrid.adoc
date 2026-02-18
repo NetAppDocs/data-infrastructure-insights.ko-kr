@@ -67,13 +67,13 @@ Data Infrastructure Insights NetApp StorageGRID 수집기에서 다음과 같은
 | 필드 | 설명 
 
 
-| StorageGRID 호스트 IP 주소 | StorageGRID 어플라이언스의 관리 가상 IP 주소 
+| StorageGRID 호스트 IP 주소 | StorageGRID의 관리 IP 주소(Grid Manager) 
 
 
-| 사용자 이름 | StorageGRID 어플라이언스에 로그인하는 데 사용되는 이름 
+| 사용자 이름 | StorageGRID(Grid Manager)에 로그인하는 데 사용되는 이름 
 
 
-| 비밀번호 | StorageGRID 어플라이언스에 로그인하는 데 사용되는 비밀번호 
+| 비밀번호 | StorageGRID(Grid Manager)에 로그인하는 데 사용되는 비밀번호 
 |===
 
 
