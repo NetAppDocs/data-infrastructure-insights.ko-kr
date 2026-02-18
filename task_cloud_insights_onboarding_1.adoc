@@ -37,6 +37,9 @@ NetApp Console 계정이 있으면 link:https://console.netapp.com/["NetApp Cons
 
 화면 상단의 드롭다운에서 조직을 선택합니다.
 
+
+NOTE: DII 사이트는 선택한 콘솔 조직과 연결됩니다. 조직이 여러 개인 경우 DII 테넌트와 연결할 적절한 조직을 선택해야 합니다.
+
 왼쪽 상단의 기본 메뉴에서 *거버넌스 > Data Infrastructure Insights*를 선택합니다.
 
 

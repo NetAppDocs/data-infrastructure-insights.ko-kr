@@ -13878,4 +13878,5 @@
   <block id="7a1fe47a1aa444b45e1475e2c2b156bc" category="cell">StorageGRID의 관리 IP 주소(Grid Manager)</block>
   <block id="0eb50b790bd551aaef2bbefbd077cd1b" category="cell">StorageGRID(Grid Manager)에 로그인하는 데 사용되는 이름</block>
   <block id="9730a2702facd53c375d1f62e4d662a2" category="cell">StorageGRID(Grid Manager)에 로그인하는 데 사용되는 비밀번호</block>
+  <block id="749045de0e520f5ad8cff4d4635dd0d8" category="admonition">DII 사이트는 선택한 콘솔 조직과 연결됩니다. 조직이 여러 개인 경우 DII 테넌트와 연결할 적절한 조직을 선택해야 합니다.</block>
 </blocks>
