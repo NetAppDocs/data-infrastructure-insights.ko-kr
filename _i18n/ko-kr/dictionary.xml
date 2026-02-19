@@ -12480,10 +12480,6 @@
   <block id="2a0a2208c984d848c76e3dc480d25f5a" category="cell">대규모 구성의 경우 수집기를 일시 중지하는 대신 고정 및 고정 해제를 사용하는 것이 좋습니다. 고정 및 고정 해제를 사용하는 동안 일시 정지 및 재개가 필요하지 않습니다. 고객은 에이전트와 수집가를 고정해 두고, 새 버전에 대한 이메일 알림을 받으면 30일 기간 내에 에이전트를 하나씩 선택적으로 업그레이드할 수 있습니다. 이 접근 방식은 fpolicies에 대한 지연 영향을 최소화하고 업그레이드 프로세스에 대한 더 큰 제어력을 제공합니다.</block>
   <block id="4c4482e1695529fa7b313efe35876587" category="cell">다음 중 하나의 라이선스 버전을 실행하는 컴퓨터: * Microsoft Windows 11 * Microsoft Windows Server 2016 * Microsoft Windows Server 2019 * Microsoft Windows Server 2022 * Microsoft Windows Server 2025 이 컴퓨터에서는 다른 애플리케이션 수준 소프트웨어를 실행해서는 안 됩니다. 전용 서버를 권장합니다.</block>
   <block id="96e0bc41f601636412c93ccf60fffb89" category="cell">인수 단위에서 *.cloudinsights.netapp.com 또는 Data Infrastructure Insights 테넌트(예: \https://&lt;tenant_id&gt;.c01.cloudinsights.netapp.com)로의 100Mbps/1Gbps 이더넷 연결, 고정 IP 주소, 포트 80 또는 443(아웃바운드) 연결이 필요합니다.  수집 단위와 각 데이터 수집기 ​​간의 요구 사항에 대해서는 해당 지침을 참조하십시오.<block ref="be56515064596049a4b61d9d1a149cf9" category="inline-link-macro-rx"></block> . 조직에서 인터넷 접속을 위해 프록시 사용이 필요한 경우 조직의 프록시 동작을 이해하고 Data Infrastructure Insights 작동하도록 특정 예외를 찾아야 할 수도 있습니다. 예를 들어, 귀하의 조직에서는 기본적으로 액세스를 차단하고 예외적으로 특정 웹 사이트/도메인에만 액세스를 허용합니까?  그렇다면 예외 목록에 다음 도메인을 추가해야 합니다: *.cloudinsights.netapp.com 자세한 내용은 프록시에 대해 읽어보세요.<block ref="05c875968683001fc59f206218314b72" category="inline-link-macro-rx"></block> 또는<block ref="554efdd06704a764ab0a7e3947e279ff" category="inline-link-macro-rx"></block> .</block>
-  <block id="94499aafaf5e10a6f782117dd504af80" category="inline-link-macro">Data Infrastructure Insights (이전 Cloud Insights)에 대한 알림, window=_blank</block>
-  <block id="15944853c960b4d108dec6e022392050" category="paragraph"><block ref="15944853c960b4d108dec6e022392050" category="inline-link-macro-rx"></block></block>
-  <block id="7d7c3dfbfa0b1113cc98af5bc93293c2" category="inline-link-macro">Workload Security(이전 Cloud Secure)에 대한 알림, window=_blank</block>
-  <block id="c69944d365e084328c890394ddd7fec5" category="paragraph"><block ref="c69944d365e084328c890394ddd7fec5" category="inline-link-macro-rx"></block></block>
   <block id="f17c7e32a4fcdb4c787f412cf3181bea" category="cell">관리자와 동일하며 SSO 인증 및 ID 연합 구성을 관리합니다. 관리 서비스 공급자(MSP) 마스터 테넌트에 추가 소유자를 할당하고 클라이언트를 추가할 수도 있습니다.</block>
   <block id="6794662d08bc33fcbd95c93345331eb3" category="list-text">ONTAP 영구 저장소는 9.14.1 버전부터 지원됩니다.</block>
   <block id="19d46baa06f3b8d834f231a48a441888" category="inline-link-macro">KB 정책 모범 사례 관련 문서</block>
@@ -13947,4 +13943,6 @@
   <block id="254437ac6c40fc16c31d2f215400e44f" category="list-text">Ubuntu Server: 20.04, 22.04, 24.04 LTS</block>
   <block id="ecf8fabbb23da2c68f49fe920a05137b" category="list-text">위 플랫폼에서의 SELinux</block>
   <block id="3542743c69e8fceb06c77e5e17299c89" category="sidebar">AI Assistant</block>
+  <block id="f7836ca926de84b06b0b4bcbe4b8b756" category="inline-link-macro">Data Infrastructure Insights(Workload Security 포함) 관련 공지사항, window=_blank</block>
+  <block id="135e17e82c7d3d3d83bd8b0737be432e" category="paragraph"><block ref="135e17e82c7d3d3d83bd8b0737be432e" category="inline-link-macro-rx"></block></block>
 </blocks>
