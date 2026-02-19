@@ -15,16 +15,6 @@ sidebar:
     url: "/index.html"
   - title: 새로운 소식
     url: "/concept_whats_new.html"
-  - title: Data Infrastructure Insights 등록
-    url: "/task_cloud_insights_onboarding_1.html"
-  - title: 보안
-    entries:
-    - title: 보안 관행
-      url: "/security_overview.html"
-    - title: 우리가 무엇을 저장하고 어디에 저장합니까?
-      url: "/security_information_and_region.html"
-    - title: 보안 관리 도구
-      url: "/security_admin_tool.html"
   - title: 시작하기
     entries:
     - title: 기능 튜토리얼
@@ -51,6 +41,18 @@ sidebar:
       url: "/concept_import_from_dashboard_gallery.html"
     - title: 사용자 계정 및 역할
       url: "/concept_user_roles.html"
+  - title: Data Infrastructure Insights 등록
+    url: "/task_cloud_insights_onboarding_1.html"
+  - title: 보안
+    entries:
+    - title: 보안 관행
+      url: "/security_overview.html"
+    - title: 우리가 무엇을 저장하고 어디에 저장합니까?
+      url: "/security_information_and_region.html"
+    - title: 보안 관리 도구
+      url: "/security_admin_tool.html"
+  - title: AI Assistant
+    url: "/ai_for_dii_overview.html"
   - title: 데이터 수집기 목록
     url: "/data_collector_list.html"
   - title: Data Infrastructure Insights 구독
