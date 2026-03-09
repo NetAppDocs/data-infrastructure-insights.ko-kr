@@ -14,7 +14,7 @@ keywords: onboarding, new user
 
 
 [role="lead"]
-Data Infrastructure Insights 작업을 시작하기 전에 NetApp Console 포털에 가입해야 합니다. 이미 NetApp Console 로그인이 있는 경우 몇 가지 간단한 단계를 거쳐 Data Infrastructure Insights 무료 평가판을 시작할 수 있습니다.
+Data Infrastructure Insights를 사용하려면 먼저 *NetApp Console* 포털에 가입해야 합니다. 이미 NetApp Console 로그인 계정이 있다면, 몇 단계만 거치면 Data Infrastructure Insights의 무료 체험을 시작할 수 있습니다.
 
 
 

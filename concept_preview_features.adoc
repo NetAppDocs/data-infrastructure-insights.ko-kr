@@ -17,3 +17,10 @@ keywords: coming soon, preview,
 Data Infrastructure Insights _미리보기_ 방식으로 새로운 기능과 특징을 강조합니다.  미리보기 기능은 제한된 환경이나 제한된 용량으로 제공됩니다.
 
 이러한 기능 중 하나 이상을 미리 보고 싶으시다면 NetApp 영업팀에 문의하여 자세한 정보를 얻으세요.
+
+
+
+== 현재 미리보기:
+
+* link:ai_for_dii_overview.html["Data Infrastructure Insights AI Assistant"] 미리 보기.
+

@@ -1,0 +1,2352 @@
+---
+sidebar: sidebar 
+permalink: reporting_schema_tables_dwh_capacity.html 
+summary: dwh_capacity 데이터베이스의 스키마 테이블 및 관계 
+keywords: dwh, data warehouse, schema, reporting 
+---
+= dwh_capacity에 대한 데이터베이스 스키마 참조
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+이 참조 문서에서는 테이블 구조, 필드 정의, 데이터 유형 및 관계를 포함하여 dwh_capacity 데이터베이스에 대한 자세한 스키마 정보를 제공합니다.
+
+
+
+== 테이블 및 뷰
+
+
+
+=== 애플리케이션_차원
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| tk | 정수 | 기술 키 
+
+
+| 이름 | 문자열 | 애플리케이션 이름 
+
+
+| 설명 | 문자열 | 애플리케이션 설명 
+
+
+| 우선순위 | 문자열 | 우선순위 수준 
+
+
+| url | 문자열 | 참조 URL 
+
+
+| id | 긴 | 고유 식별자 
+
+
+| 최신 | 문자열 | 최신 플래그 
+
+
+| dateTk | 정수 | 날짜 기술 키 
+|===
+*관계:*
+
+* internal_volume_capacity_fact(일대다): `tk` <- `internal_volume_capacity_fact.applicationTk`
+* chargeback_fact(일대다): `tk` <- `chargeback_fact.applicationTk`
+* vm_capacity_fact (일대다): `tk` <- `vm_capacity_fact.applicationTk`
+* qtree_capacity_fact(일대다): `tk` <- `qtree_capacity_fact.applicationTk`
+
+
+'''
+
+
+=== application_group_bridge
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| appGroupTk | 정수 | 애플리케이션 그룹 기술 키 
+
+
+| appTk | 정수 | 애플리케이션 기술 키 
+
+
+| isRep | 문자열 | 대표 플래그 
+|===
+'''
+
+
+=== application_group_dimension
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| tk | 정수 | 기술 키 
+
+
+| repApp | 문자열 | 대표 애플리케이션 
+
+
+| repAppTk | 정수 | 대표 애플리케이션 기술 키 
+
+
+| 카디널리티 | 정수 | 그룹 카디널리티 
+
+
+| dateTk | 정수 | 날짜 기술 키 
+|===
+*관계:*
+
+* internal_volume_capacity_fact(일대다): `tk` <- `internal_volume_capacity_fact.applicationGroupTk`
+* chargeback_fact(일대다): `tk` <- `chargeback_fact.applicationGroupTk`
+* vm_capacity_fact (일대다): `tk` <- `vm_capacity_fact.applicationGroupTk`
+* qtree_capacity_fact(일대다): `tk` <- `qtree_capacity_fact.applicationGroupTk`
+
+
+'''
+
+
+=== business_entity_dimension
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| tk | 정수 | 기술 키 
+
+
+| 전체 이름 | 문자열 | 전체 엔티티 이름 
+
+
+| 테넌트 | 문자열 | 테넌트 이름 
+
+
+| lob | 문자열 | 사업 분야 
+
+
+| businessUnit | 문자열 | 사업부 
+
+
+| 프로젝트 | 문자열 | 프로젝트 이름 
+
+
+| id | 긴 | 고유 식별자 
+
+
+| 최신 | 문자열 | 최신 플래그 
+
+
+| dateTk | 정수 | 날짜 기술 키 
+|===
+*관계:*
+
+* internal_volume_capacity_fact(일대다): `tk` <- `internal_volume_capacity_fact.businessEntityTk`
+* chargeback_fact(일대다): `tk` <- `chargeback_fact.businessEntityTk`
+* vm_capacity_fact (일대다): `tk` <- `vm_capacity_fact.businessEntityTk`
+* qtree_capacity_fact(일대다): `tk` <- `qtree_capacity_fact.businessEntityTk`
+
+
+'''
+
+
+=== capacity_type
+
+*기본 키:* type
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| 유형 | 문자열 | 용량 유형 
+
+
+| 사용된 | 문자열 | 사용된 플래그 
+
+
+| vmSpecific | 문자열 | VM별 플래그 
+
+
+| replicationSpecific | 문자열 | 복제별 플래그 
+
+
+| 설명 | 문자열 | 설명 
+|===
+*관계:*
+
+* vm_capacity_fact (일대다): `type` <- `vm_capacity_fact.capacityType`
+
+
+'''
+
+
+=== 추기경
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| 숫자 | 정수 | 기수 
+|===
+'''
+
+
+=== 차지백_팩트
+
+*기본 키:* tk, dateTk
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| tk | 정수 | 기술 키 
+
+
+| dateTk | 정수 | 날짜 기술 키 
+
+
+| storageTk | 정수 | 스토리지 기술 키 
+
+
+| storagePoolTk | 정수 | 스토리지 풀 기술 키 
+
+
+| internalVolumeTk | 정수 | 내부 볼륨 기술 키 
+
+
+| qtreeTk | 정수 | Qtree 기술 키 
+
+
+| hostTk | 정수 | 호스트 기술 키 
+
+
+| hostGroupTk | 정수 | 호스트 그룹 기술 키 
+
+
+| applicationTk | 정수 | 애플리케이션 기술 키 
+
+
+| applicationGroupTk | 정수 | 애플리케이션 그룹 기술 키 
+
+
+| tierTk | 정수 | 계층 기술 키 
+
+
+| serviceLevelTk | 정수 | 서비스 수준 기술 키 
+
+
+| businessUnit | 문자열 | 사업부 
+
+
+| businessEntityTk | 정수 | 비즈니스 엔티티 기술 키 
+
+
+| k8sNamespaceTk | 정수 | Kubernetes 네임스페이스 기술 키 
+
+
+| k8sNamespaceGroupTk | 정수 | Kubernetes 네임스페이스 그룹 기술 키 
+
+
+| protectionType | 문자열 | 보호 유형 
+
+
+| storageAccessType | 문자열 | 스토리지 액세스 유형 
+
+
+| resourceName | 문자열 | 리소스 이름 
+
+
+| resourceType | 문자열 | 리소스 유형 
+
+
+| mappedByVM | 문자열 | VM 플래그로 매핑됨 
+
+
+| virtualStorage | 문자열 | 가상 스토리지 플래그 
+
+
+| 프로비저닝된 용량 MB | 긴 | 프로비저닝된 용량(MB) 
+
+
+| 사용된용량MB | 긴 | 사용 용량(MB) 
+|===
+*관계:*
+
+* volume_fact_current (일대일): `tk` -> `volume_fact_current.chargebackFactTk`
+* volume_history_capacity_fact (일대다): `tk` <- `volume_history_capacity_fact.chargebackFactTk`
+* internal_volume_dimension (다대일): `internalVolumeTk` -> `internal_volume_dimension.tk`
+* storage_dimension(다대일): `storageTk` -> `storage_dimension.tk`
+* business_entity_dimension(다대일): `businessEntityTk` -> `business_entity_dimension.tk`
+* host_group_dimension(다대일): `hostGroupTk` -> `host_group_dimension.tk`
+* k8s_namespace_group_dimension (다대일): `k8sNamespaceGroupTk` -> `k8s_namespace_group_dimension.tk`
+* application_group_dimension (다대일): `applicationGroupTk` -> `application_group_dimension.tk`
+* k8s_namespace_dimension (다대일): `k8sNamespaceTk` -> `k8s_namespace_dimension.tk`
+* service_level_dimension(다대일): `serviceLevelTk` -> `service_level_dimension.tk`
+* tier_dimension (다대일): `tierTk` -> `tier_dimension.tk`
+* application_dimension(다대일): `applicationTk` -> `application_dimension.tk`
+* qtree_dimension (다대일): `qtreeTk` -> `qtree_dimension.tk`
+* storage_pool_dimension (다대일): `storagePoolTk` -> `storage_pool_dimension.tk`
+* host_dimension(다대일): `hostTk` -> `host_dimension.tk`
+* date_dimension (다대일): `dateTk` -> `date_dimension.tk`
+
+
+'''
+
+
+=== 데이터스토어_차원
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| tk | 정수 | 기술 키 
+
+
+| naturalKey | 문자열 | 자연 키 
+
+
+| 이름 | 문자열 | 데이터 저장소 이름 
+
+
+| moid | 문자열 | 관리 객체 ID 
+
+
+| virtualCenterIp | 문자열 | vCenter IP 주소 
+
+
+| url | 문자열 | 참조 URL 
+
+
+| id | 긴 | 고유 식별자 
+
+
+| 최신 | 문자열 | 최신 플래그 
+
+
+| dateTk | 정수 | 날짜 기술 키 
+|===
+*관계:*
+
+* vm_capacity_fact (일대다): `tk` <- `vm_capacity_fact.dataStoreTk`
+
+
+'''
+
+
+=== date_dimension
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| tk | 정수 | 기술 키 
+
+
+| fullDate | 날짜 | 전체 날짜 
+
+
+| dayInMonth | 정수 | 월의 날짜 
+
+
+| dayInYear | 정수 | 연중 일수 
+
+
+| dateYear | 정수 | 년도 
+
+
+| yearLabel | 문자열 | 연도 레이블 
+
+
+| monthNum | 정수 | 월 번호 
+
+
+| monthLabel | 문자열 | 월 라벨 
+
+
+| dayInWeekNum | 정수 | 요일 번호 
+
+
+| 분기 | 정수 | 분기 
+
+
+| quarterLabel | 문자열 | 분기 레이블 
+
+
+| dayInQuarter | 정수 | 분기의 일 
+
+
+| repQuarter | 문자열 | 대표 분기 
+
+
+| repMonth | 문자열 | 대표 월 
+
+
+| repWeek | 문자열 | 대표 주간 
+
+
+| repDay | 문자열 | 대표 일자 
+
+
+| repMonthOrLatest | 문자열 | 대표 월 또는 최신 
+
+
+| sspFlag | 문자열 | SSP 플래그 
+
+
+| 최신 | 문자열 | 최신 플래그 
+
+
+| 미래 | 문자열 | 향후 플래그 
+|===
+*관계:*
+
+* internal_volume_capacity_fact(일대다): `tk` <- `internal_volume_capacity_fact.dateTk`
+* chargeback_fact (일대다): `tk` <- `chargeback_fact.dateTk`
+* disk_group_capacity_fact (일대다): `tk` <- `disk_group_capacity_fact.dateTk`
+* vm_capacity_fact (일대다): `tk` <- `vm_capacity_fact.dateTk`
+* disk_group_capacity_future_fact (일대다): `tk` <- `disk_group_capacity_future_fact.dateTk`
+* qtree_capacity_fact (일대다): `tk` <- `qtree_capacity_fact.dateTk`
+* k8s_pvc_capacity_fact (일대다): `tk` <- `k8s_pvc_capacity_fact.dateTk`
+* storage_and_storage_pool_capacity_fact (일대다): `tk` <- `storage_and_storage_pool_capacity_fact.dateTk`
+* volume_history_capacity_fact (일대다): `tk` <- `volume_history_capacity_fact.dateTk`
+* storage_and_storage_pool_capacity_future_fact (일대다): `tk` <- `storage_and_storage_pool_capacity_future_fact.dateTk`
+* storage_node_capacity_fact (일대다): `tk` <- `storage_node_capacity_fact.dateTk`
+
+
+'''
+
+
+=== 디스크 그룹 용량 팩트
+
+*기본 키:* tk, dateTk
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| tk | 정수 | 기술 키 
+
+
+| dateTk | 정수 | 날짜 기술 키 
+
+
+| storageTk | 정수 | 스토리지 기술 키 
+
+
+| storagePoolTk | 정수 | 스토리지 풀 기술 키 
+
+
+| diskGroupTk | 정수 | 디스크 그룹 기술 키 
+
+
+| 용량MB | 긴 | 총 용량(MB) 
+
+
+| 사용된용량MB | 긴 | 사용 용량(MB) 
+
+
+| physicalDiskCapacityMB | 긴 | 물리적 디스크 용량(MB) 
+|===
+*관계:*
+
+* disk_group_dimension (다대일): `diskGroupTk` -> `disk_group_dimension.tk`
+* storage_dimension(다대일): `storageTk` -> `storage_dimension.tk`
+* storage_pool_dimension (다대일): `storagePoolTk` -> `storage_pool_dimension.tk`
+* date_dimension (다대일): `dateTk` -> `date_dimension.tk`
+
+
+'''
+
+
+=== 디스크 그룹 용량 미래 사실
+
+*기본 키:* tk, dateTk
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| tk | 정수 | 기술 키 
+
+
+| dateTk | 정수 | 날짜 기술 키 
+
+
+| storageTk | 정수 | 스토리지 기술 키 
+
+
+| storagePoolTk | 정수 | 스토리지 풀 기술 키 
+
+
+| diskGroupTk | 정수 | 디스크 그룹 기술 키 
+
+
+| 용량MB | 긴 | 예상 용량(MB) 
+
+
+| 사용된용량MB | 긴 | 예상 사용 용량(MB) 
+|===
+*관계:*
+
+* disk_group_dimension (다대일): `diskGroupTk` -> `disk_group_dimension.tk`
+* storage_dimension(다대일): `storageTk` -> `storage_dimension.tk`
+* storage_pool_dimension (다대일): `storagePoolTk` -> `storage_pool_dimension.tk`
+* date_dimension (다대일): `dateTk` -> `date_dimension.tk`
+
+
+'''
+
+
+=== 디스크 그룹 차원
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| tk | 정수 | 기술 키 
+
+
+| 이름 | 문자열 | 디스크 그룹 이름 
+
+
+| 식별자 | 문자열 | 디스크 그룹 식별자 
+
+
+| vendorDiskGroupType | 문자열 | 공급업체 디스크 그룹 유형 
+
+
+| diskType | 문자열 | 디스크 유형 
+
+
+| 상태 | 문자열 | 상태 
+
+
+| 이중화 | 문자열 | 중복성 수준 
+
+
+| isVirtual | 문자열 | 가상 플래그 
+
+
+| vendorTier | 문자열 | 공급업체 계층 
+
+
+| id | 긴 | 고유 식별자 
+
+
+| 최신 | 문자열 | 최신 플래그 
+
+
+| dateTk | 정수 | 날짜 기술 키 
+|===
+*관계:*
+
+* disk_group_capacity_fact (일대다): `tk` <- `disk_group_capacity_fact.diskGroupTk`
+* 디스크 그룹_capacity_future_fact (일대다): `tk` <- `disk_group_capacity_future_fact.diskGroupTk`
+
+
+'''
+
+
+=== 호스트 차원
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| tk | 정수 | 기술 키 
+
+
+| 이름 | 문자열 | 호스트 이름 
+
+
+| 식별자 | 문자열 | 호스트 식별자 
+
+
+| ip | 문자열 | IP 주소 
+
+
+| OS | 문자열 | 운영 체제 
+
+
+| 모델 | 문자열 | 하드웨어 모델 
+
+
+| 제조업체 | 문자열 | 제조업체 
+
+
+| url | 문자열 | 참조 URL 
+
+
+| id | 긴 | 고유 식별자 
+
+
+| 최신 | 문자열 | 최신 플래그 
+
+
+| dateTk | 정수 | 날짜 기술 키 
+
+
+| dataCenter | 문자열 | 데이터 센터 위치 
+
+
+| 별명 | 문자열 | 호스트 별칭 
+
+
+| VM 월별 라이선스 비용 | 문자열 | 월별 VM 라이선스 비용 
+
+
+| 사업체 | 문자열 | 사업체 
+
+
+| 서비스 수준 | 문자열 | 서비스 수준 
+|===
+*관계:*
+
+* chargeback_fact(일대다): `tk` <- `chargeback_fact.hostTk`
+* vm_capacity_fact (일대다): `tk` <- `vm_capacity_fact.hostTk`
+* volume_history_capacity_fact (일대다): `tk` <- `volume_history_capacity_fact.hostTk`
+
+
+'''
+
+
+=== 호스트 그룹 브리지
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| hostGroupTk | 정수 | 호스트 그룹 기술 키 
+
+
+| hostTk | 정수 | 호스트 기술 키 
+
+
+| isRep | 문자열 | 대표 플래그 
+|===
+'''
+
+
+=== 호스트 그룹 차원
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| tk | 정수 | 기술 키 
+
+
+| repHost | 문자열 | 대표 호스트 
+
+
+| repHostTk | 정수 | 대표 호스트 기술 키 
+
+
+| 카디널리티 | 정수 | 그룹 카디널리티 
+
+
+| dateTk | 정수 | 날짜 기술 키 
+|===
+*관계:*
+
+* chargeback_fact(일대다): `tk` <- `chargeback_fact.hostGroupTk`
+* vm_capacity_fact (일대다): `tk` <- `vm_capacity_fact.hostGroupTk`
+* volume_history_capacity_fact (일대다): `tk` <- `volume_history_capacity_fact.hostGroupTk`
+
+
+'''
+
+
+=== 내부_볼륨_용량_팩트
+
+*기본 키:* tk, dateTk
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| tk | 정수 | 기술 키 
+
+
+| dateTk | 정수 | 날짜 기술 키 
+
+
+| storageTk | 정수 | 스토리지 기술 키 
+
+
+| storagePoolTk | 정수 | 스토리지 풀 기술 키 
+
+
+| internalVolumeTk | 정수 | 내부 볼륨 기술 키 
+
+
+| virtualStorageTk | 정수 | 가상 스토리지 기술 키 
+
+
+| tierTk | 정수 | 계층 기술 키 
+
+
+| applicationTk | 정수 | 애플리케이션 기술 키 
+
+
+| applicationGroupTk | 정수 | 애플리케이션 그룹 기술 키 
+
+
+| serviceLevelTk | 정수 | 서비스 수준 기술 키 
+
+
+| businessUnit | 문자열 | 사업부 
+
+
+| businessEntityTk | 정수 | 비즈니스 엔티티 기술 키 
+
+
+| k8sNamespaceTk | 정수 | Kubernetes 네임스페이스 기술 키 
+
+
+| k8sNamespaceGroupTk | 정수 | Kubernetes 네임스페이스 그룹 기술 키 
+
+
+| storageAccessType | 문자열 | 스토리지 액세스 유형 
+
+
+| protectionType | 문자열 | 보호 유형 
+
+
+| 할당된용량MB | 긴 | 할당된 용량(MB) 
+
+
+| 소모된용량MB | 긴 | 사용 용량(MB) 
+
+
+| 사용된용량MB | 긴 | 사용 용량(MB) 
+
+
+| dataUsedCapacityMB | 긴 | 데이터 사용 용량(MB) 
+
+
+| dataUnusedCapacityMB | 긴 | 데이터 미사용 용량(MB) 
+
+
+| snapshotAllocatedCapacityMB | 긴 | 스냅샷 할당 용량(MB) 
+
+
+| 스냅샷 사용 용량(MB) | 긴 | 스냅샷 사용 용량(MB) 
+
+
+| totalCloneSavedCapacityMB | 긴 | 총 클론 절약 용량(MB) 
+
+
+| dedupeRatio | 소수 | 중복 제거 비율 
+
+
+| 중복 제거 절감량(GB) | 소수 | 중복 제거 절감(GB) 
+
+
+| rawToUsableRatio | 소수 | 원시 대 사용 가능 비율 
+
+
+| snapshotCount | 정수 | 스냅샷 개수 
+
+
+| lastSnapshotTime | DateTimeOffset | 마지막 스냅샷 타임스탬프 
+
+
+| compressionRatio | 소수 | 압축비 
+
+
+| 압축 절감량(GB) | 소수 | 압축 절감량(GB) 
+
+
+| compressionSavingsPercent | 소수 | 압축 절감률(%) 
+
+
+| objectStoreUsedSpaceGB | 소수 | 객체 저장소 사용 공간(GB) 
+|===
+*관계:*
+
+* service_level_dimension(다대일): `serviceLevelTk` -> `service_level_dimension.tk`
+* internal_volume_dimension (다대일): `internalVolumeTk` -> `internal_volume_dimension.tk`
+* storage_dimension(다대일): `storageTk` -> `storage_dimension.tk`
+* tier_dimension (다대일): `tierTk` -> `tier_dimension.tk`
+* business_entity_dimension(다대일): `businessEntityTk` -> `business_entity_dimension.tk`
+* application_dimension(다대일): `applicationTk` -> `application_dimension.tk`
+* storage_pool_dimension (다대일): `storagePoolTk` -> `storage_pool_dimension.tk`
+* date_dimension (다대일): `dateTk` -> `date_dimension.tk`
+* k8s_namespace_group_dimension (다대일): `k8sNamespaceGroupTk` -> `k8s_namespace_group_dimension.tk`
+* application_group_dimension (다대일): `applicationGroupTk` -> `application_group_dimension.tk`
+* k8s_namespace_dimension (다대일): `k8sNamespaceTk` -> `k8s_namespace_dimension.tk`
+
+
+'''
+
+
+=== 내부_볼륨_치수
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| tk | 정수 | 기술 키 
+
+
+| 이름 | 문자열 | 볼륨 이름 
+
+
+| 식별자 | 문자열 | 볼륨 식별자 
+
+
+| storagePoolIdentifier | 문자열 | 스토리지 풀 식별자 
+
+
+| storageName | 문자열 | 스토리지 이름 
+
+
+| storageIP | 문자열 | 저장 IP 주소 
+
+
+| 유형 | 문자열 | 볼륨 유형 
+
+
+| virtualStorage | 문자열 | 가상 스토리지 
+
+
+| spaceGuarantee | 문자열 | 공간 보장 
+
+
+| thinProvisioningSupported | 문자열 | 씬 프로비저닝 지원 플래그 
+
+
+| thinProvisioned | 문자열 | 씬 프로비저닝 플래그 
+
+
+| uuid | 문자열 | UUID 
+
+
+| flexGroupIdentifier | 문자열 | FlexGroup 식별자 
+
+
+| url | 문자열 | 참조 URL 
+
+
+| id | 긴 | 고유 식별자 
+
+
+| 최신 | 문자열 | 최신 플래그 
+
+
+| dateTk | 정수 | 날짜 기술 키 
+|===
+*관계:*
+
+* internal_volume_capacity_fact(일대다): `tk` <- `internal_volume_capacity_fact.internalVolumeTk`
+* chargeback_fact(일대다): `tk` <- `chargeback_fact.internalVolumeTk`
+* vm_capacity_fact(일대다): `tk` <- `vm_capacity_fact.internalVolumeTk`
+* qtree_capacity_fact(일대다): `tk` <- `qtree_capacity_fact.internalVolumeTk`
+* volume_history_capacity_fact(일대다): `tk` <- `volume_history_capacity_fact.internalVolumeTk`
+
+
+'''
+
+
+=== k8s_cluster_dimension
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| tk | 정수 | 기술 키 
+
+
+| 식별자 | 문자열 | 클러스터 식별자 
+
+
+| 이름 | 문자열 | 클러스터 이름 
+
+
+| id | 긴 | 고유 식별자 
+
+
+| 최신 | 문자열 | 최신 플래그 
+
+
+| dateTk | 정수 | 날짜 기술 키 
+|===
+*관계:*
+
+* k8s_pvc_capacity_fact (일대다): `tk` <- `k8s_pvc_capacity_fact.clusterTk`
+
+
+'''
+
+
+=== k8s_namespace_dimension
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| tk | 정수 | 기술 키 
+
+
+| 식별자 | 문자열 | 네임스페이스 식별자 
+
+
+| 이름 | 문자열 | 네임스페이스 이름 
+
+
+| clusterName | 문자열 | 클러스터 이름 
+
+
+| id | 긴 | 고유 식별자 
+
+
+| 최신 | 문자열 | 최신 플래그 
+
+
+| dateTk | 정수 | 날짜 기술 키 
+|===
+*관계:*
+
+* internal_volume_capacity_fact(일대다): `tk` <- `internal_volume_capacity_fact.k8sNamespaceTk`
+* chargeback_fact(일대다): `tk` <- `chargeback_fact.k8sNamespaceTk`
+* qtree_capacity_fact(일대다): `tk` <- `qtree_capacity_fact.k8sNamespaceTk`
+* k8s_pvc_capacity_fact (일대다): `tk` <- `k8s_pvc_capacity_fact.namespaceTk`
+
+
+'''
+
+
+=== k8s_namespace_group_bridge
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| k8sNamespaceGroupTk | 정수 | 네임스페이스 그룹 기술 키 
+
+
+| k8sNamespaceTk | 정수 | 네임스페이스 기술 키 
+
+
+| isRep | 문자열 | 대표 플래그 
+|===
+'''
+
+
+=== k8s_namespace_group_dimension
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| tk | 정수 | 기술 키 
+
+
+| repK8sNamespace | 문자열 | 대표 네임스페이스 
+
+
+| repK8sNamespaceTk | 정수 | 대표 네임스페이스 기술 키 
+
+
+| 카디널리티 | 정수 | 그룹 카디널리티 
+
+
+| dateTk | 정수 | 날짜 기술 키 
+|===
+*관계:*
+
+* internal_volume_capacity_fact(일대다): `tk` <- `internal_volume_capacity_fact.k8sNamespaceGroupTk`
+* chargeback_fact(일대다): `tk` <- `chargeback_fact.k8sNamespaceGroupTk`
+* qtree_capacity_fact(일대다): `tk` <- `qtree_capacity_fact.k8sNamespaceGroupTk`
+* volume_history_capacity_fact(일대다): `tk` <- `volume_history_capacity_fact.k8sNamespaceGroupTk`
+
+
+'''
+
+
+=== k8s_node_dimension
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| tk | 정수 | 기술 키 
+
+
+| 식별자 | 문자열 | 노드 식별자 
+
+
+| 이름 | 문자열 | 노드 이름 
+
+
+| clusterName | 문자열 | 클러스터 이름 
+
+
+| internalIp | 문자열 | 내부 IP 주소 
+
+
+| osImage | 문자열 | OS 이미지 
+
+
+| id | 긴 | 고유 식별자 
+
+
+| 최신 | 문자열 | 최신 플래그 
+
+
+| dateTk | 정수 | 날짜 기술 키 
+|===
+*관계:*
+
+* vm_capacity_fact (일대다): `tk` <- `vm_capacity_fact.k8sNodeTk`
+
+
+'''
+
+
+=== k8s_pv_dimension
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| tk | 정수 | 기술 키 
+
+
+| 식별자 | 문자열 | PV 식별자 
+
+
+| 이름 | 문자열 | PV 이름 
+
+
+| clusterName | 문자열 | 클러스터 이름 
+
+
+| 단계 | 문자열 | PV 단계 
+
+
+| pvcName | 문자열 | PVC 이름 
+
+
+| storageClass | 문자열 | 스토리지 클래스 
+
+
+| id | 긴 | 고유 식별자 
+
+
+| 최신 | 문자열 | 최신 플래그 
+
+
+| dateTk | 정수 | 날짜 기술 키 
+|===
+*관계:*
+
+* k8s_pvc_capacity_fact (일대다): `tk` <- `k8s_pvc_capacity_fact.pvTk`
+
+
+'''
+
+
+=== k8s_pvc_capacity_fact
+
+*기본 키:* tk, dateTk
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| tk | 정수 | 기술 키 
+
+
+| dateTk | 정수 | 날짜 기술 키 
+
+
+| pvcTk | 정수 | PVC 기술 키 
+
+
+| clusterTk | 정수 | 클러스터 기술 키 
+
+
+| namespaceTk | 정수 | 네임스페이스 기술 키 
+
+
+| pvTk | 정수 | PV 기술 키 
+
+
+| pvSizeBytes | 긴 | PV 크기(바이트) 
+
+
+| pvcSizeBytes | 긴 | PVC 크기(바이트) 
+|===
+*관계:*
+
+* k8s_pvc_dimension (다대일): `pvcTk` -> `k8s_pvc_dimension.tk`
+* k8s_cluster_dimension (다대일): `clusterTk` -> `k8s_cluster_dimension.tk`
+* k8s_namespace_dimension (다대일): `namespaceTk` -> `k8s_namespace_dimension.tk`
+* date_dimension (다대일): `dateTk` -> `date_dimension.tk`
+* k8s_pv_dimension (다대일): `pvTk` -> `k8s_pv_dimension.tk`
+
+
+'''
+
+
+=== k8s_pvc_dimension
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| tk | 정수 | 기술 키 
+
+
+| 식별자 | 문자열 | PVC 식별자 
+
+
+| 이름 | 문자열 | PVC 이름 
+
+
+| clusterName | 문자열 | 클러스터 이름 
+
+
+| namespaceName | 문자열 | 네임스페이스 이름 
+
+
+| pvName | 문자열 | PV 이름 
+
+
+| 단계 | 문자열 | PVC 단계 
+
+
+| id | 긴 | 고유 식별자 
+
+
+| 최신 | 문자열 | 최신 플래그 
+
+
+| dateTk | 정수 | 날짜 기술 키 
+|===
+*관계:*
+
+* k8s_pvc_capacity_fact (일대다): `tk` <- `k8s_pvc_capacity_fact.pvcTk`
+
+
+'''
+
+
+=== k8s_workload_dimension
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| tk | 정수 | 기술 키 
+
+
+| 식별자 | 문자열 | 워크로드 식별자 
+
+
+| 이름 | 문자열 | 워크로드 이름 
+
+
+| clusterName | 문자열 | 클러스터 이름 
+
+
+| namespaceName | 문자열 | 네임스페이스 이름 
+
+
+| 유형 | 문자열 | 워크로드 유형 
+
+
+| id | 긴 | 고유 식별자 
+
+
+| 최신 | 문자열 | 최신 플래그 
+
+
+| dateTk | 정수 | 날짜 기술 키 
+|===
+'''
+
+
+=== qtree_capacity_fact
+
+*기본 키:* tk, dateTk
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| tk | 정수 | 기술 키 
+
+
+| dateTk | 정수 | 날짜 기술 키 
+
+
+| storageTk | 정수 | 스토리지 기술 키 
+
+
+| storagePoolTk | 정수 | 스토리지 풀 기술 키 
+
+
+| internalVolumeTk | 정수 | 내부 볼륨 기술 키 
+
+
+| qtreeTk | 정수 | Qtree 기술 키 
+
+
+| virtualStorageTk | 정수 | 가상 스토리지 기술 키 
+
+
+| tierTk | 정수 | 계층 기술 키 
+
+
+| serviceLevelTk | 정수 | 서비스 수준 기술 키 
+
+
+| applicationTk | 정수 | 애플리케이션 기술 키 
+
+
+| applicationGroupTk | 정수 | 애플리케이션 그룹 기술 키 
+
+
+| businessUnit | 문자열 | 사업부 
+
+
+| businessEntityTk | 정수 | 비즈니스 엔티티 기술 키 
+
+
+| k8sNamespaceTk | 정수 | Kubernetes 네임스페이스 기술 키 
+
+
+| k8sNamespaceGroupTk | 정수 | Kubernetes 네임스페이스 그룹 기술 키 
+
+
+| storageAccessType | 문자열 | 스토리지 액세스 유형 
+
+
+| protectionType | 문자열 | 보호 유형 
+
+
+| hardLimitCapacityMB | 긴 | 하드 제한 용량(MB) 
+
+
+| softLimitCapacityMB | 긴 | 소프트 제한 용량(MB) 
+
+
+| 사용된용량MB | 긴 | 사용 용량(MB) 
+
+
+| rawToUsableRatio | 소수 | 원시 대 사용 가능 비율 
+
+
+| missingQuotaLimits | 문자열 | 할당량 제한 플래그 누락 
+|===
+*관계:*
+
+* internal_volume_dimension (다대일): `internalVolumeTk` -> `internal_volume_dimension.tk`
+* storage_dimension(다대일): `storageTk` -> `storage_dimension.tk`
+* business_entity_dimension(다대일): `businessEntityTk` -> `business_entity_dimension.tk`
+* k8s_namespace_group_dimension (다대일): `k8sNamespaceGroupTk` -> `k8s_namespace_group_dimension.tk`
+* application_group_dimension (다대일): `applicationGroupTk` -> `application_group_dimension.tk`
+* k8s_namespace_dimension (다대일): `k8sNamespaceTk` -> `k8s_namespace_dimension.tk`
+* service_level_dimension(다대일): `serviceLevelTk` -> `service_level_dimension.tk`
+* tier_dimension (다대일): `tierTk` -> `tier_dimension.tk`
+* application_dimension(다대일): `applicationTk` -> `application_dimension.tk`
+* qtree_dimension (다대일): `qtreeTk` -> `qtree_dimension.tk`
+* storage_pool_dimension (다대일): `storagePoolTk` -> `storage_pool_dimension.tk`
+* date_dimension (다대일): `dateTk` -> `date_dimension.tk`
+
+
+'''
+
+
+=== qtree_차원
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| tk | 정수 | 기술 키 
+
+
+| 이름 | 문자열 | Qtree 이름 
+
+
+| 식별자 | 문자열 | Qtree 식별자 
+
+
+| storageIdentifier | 문자열 | 스토리지 식별자 
+
+
+| 유형 | 문자열 | Qtree 유형 
+
+
+| url | 문자열 | 참조 URL 
+
+
+| id | 긴 | 고유 식별자 
+
+
+| 최신 | 문자열 | 최신 플래그 
+
+
+| dateTk | 정수 | 날짜 기술 키 
+
+
+| 층 | 문자열 | 계층 주석 
+|===
+*관계:*
+
+* chargeback_fact(일대다): `tk`<- `chargeback_fact.qtreeTk`
+* vm_capacity_fact (일대다): `tk` <- `vm_capacity_fact.qtreeTk`
+* qtree_capacity_fact(일대다): `tk` <- `qtree_capacity_fact.qtreeTk`
+* volume_history_capacity_fact (일대다): `tk` <- `volume_history_capacity_fact.qtreeTk`
+
+
+'''
+
+
+=== service_level_dimension
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| tk | 정수 | 기술 키 
+
+
+| 이름 | 문자열 | 서비스 수준 이름 
+
+
+| 시퀀스 | 정수 | 순서 
+
+
+| 비용 | 소수 | 비용 
+
+
+| id | 긴 | 고유 식별자 
+
+
+| 최신 | 문자열 | 최신 플래그 
+
+
+| dateTk | 정수 | 날짜 기술 키 
+|===
+*관계:*
+
+* internal_volume_capacity_fact(일대다): `tk` <- `internal_volume_capacity_fact.serviceLevelTk`
+* chargeback_fact(일대다): `tk` <- `chargeback_fact.serviceLevelTk`
+* vm_capacity_fact(일대다): `tk` <- `vm_capacity_fact.serviceLevelTk`
+* qtree_capacity_fact(일대다): `tk` <- `qtree_capacity_fact.serviceLevelTk`
+* volume_history_capacity_fact(일대다): `tk` <- `volume_history_capacity_fact.serviceLevelTk`
+
+
+'''
+
+
+=== sp_time_to_fill
+
+*기본 키:* saspFactTk
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| saspFactTk | 정수 | 스토리지 풀 팩트 기술 키 
+
+
+| daysToStoragePoolFull | 정수 | 스토리지 풀이 가득 찰 때까지 남은 일수 
+
+
+| dateAtStoragePoolFull | 날짜 | 데이터 스토리지 풀이 가득 찰 날짜 
+|===
+*관계:*
+
+* storage_and_storage_pool_capacity_fact (일대일): `saspFactTk` -> `storage_and_storage_pool_capacity_fact.tk`
+
+
+'''
+
+
+=== 스토리지 및 스토리지 풀 용량 정보
+
+*기본 키:* tk, dateTk
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| tk | 정수 | 기술 키 
+
+
+| dateTk | 정수 | 날짜 기술 키 
+
+
+| storagePoolTk | 정수 | 스토리지 풀 기술 키 
+
+
+| storageTk | 정수 | 스토리지 기술 키 
+
+
+| tierTk | 정수 | 계층 기술 키 
+
+
+| 백엔드 | 문자열 | 백엔드 플래그 
+
+
+| isVirtual | 문자열 | 가상 플래그 
+
+
+| 용량MB | 긴 | 총 용량(MB) 
+
+
+| rawCapacityMB | 긴 | 원시 용량(MB) 
+
+
+| 사용된용량MB | 긴 | 사용 용량(MB) 
+
+
+| 사용된 Raw 용량(MB) | 긴 | 사용된 원시 용량(MB) 
+
+
+| 스냅샷 사용 용량(MB) | 긴 | 스냅샷 사용 용량(MB) 
+
+
+| 스냅샷 사용 원시 용량(MB) | 긴 | 스냅샷 사용 원시 용량(MB) 
+
+
+| softLimitCapacityMB | 긴 | 소프트 제한 용량(MB) 
+
+
+| 미구성 원시 용량(MB) | 긴 | 구성되지 않은 원시 용량(MB) 
+
+
+| 여유 원시 용량(MB) | 긴 | 여유 원시 용량(MB) 
+
+
+| 실패한 원시 용량(MB) | 긴 | 실패한 원시 용량(MB) 
+
+
+| 볼륨용량MB | 긴 | 볼륨 용량(MB) 
+
+
+| 사용되지 않은 볼륨 용량(MB) | 긴 | 미사용 볼륨 용량(MB) 
+
+
+| volumeConsumedCapacityMB | 긴 | 볼륨 사용 용량(MB) 
+
+
+| 매핑된 볼륨 용량(MB) | 긴 | 매핑된 볼륨 용량(MB) 
+
+
+| maskedVolumeCapacityMB | 긴 | 마스킹된 볼륨 용량(MB) 
+
+
+| internalVolumeAllocatedCapacityMB | 긴 | 내부 볼륨 할당 용량(MB) 
+
+
+| internalVolumeUsedCapacityMB | 긴 | 내부 볼륨 사용 용량(MB) 
+
+
+| internalVolumeConsumedCapacityMB | 긴 | 내부 볼륨 사용 용량(MB) 
+
+
+| dedupeRatio | 소수 | 중복 제거 비율 
+
+
+| 중복 제거 절감량(GB) | 소수 | 중복 제거 절감(GB) 
+
+
+| compressionRatio | 소수 | 압축비 
+
+
+| 압축 절감량(GB) | 소수 | 압축 절감량(GB) 
+
+
+| compressionSavingsPercent | 소수 | 압축 절감률(%) 
+
+
+| objectStoreUsedSpaceGB | 소수 | 객체 저장소 사용 공간(GB) 
+
+
+| provisionedIops | 긴 | 이 스토리지에 프로비저닝된 IOPS 
+
+
+| provisionedThroughput | 긴 | 이 스토리지의 프로비저닝된 처리량(MiB/s) 
+
+
+| compactionRatio | 소수 | 컴팩션 비율 
+
+
+| 압축 절감량(GB) | 소수 | 컴팩션 절감(GB) 
+|===
+*관계:*
+
+* sp_time_to_fill (일대일): `tk` <- `sp_time_to_fill.saspFactTk`
+* volume_history_capacity_fact (일대다): `tk` <- `volume_history_capacity_fact.storageAndSpFactTk`
+* storage_dimension(다대일): `storageTk` -> `storage_dimension.tk`
+* tier_dimension (다대일): `tierTk` -> `tier_dimension.tk`
+* storage_pool_dimension (다대일): `storagePoolTk` -> `storage_pool_dimension.tk`
+* date_dimension (다대일): `dateTk` -> `date_dimension.tk`
+
+
+'''
+
+
+=== 스토리지 및 스토리지 풀 용량 미래 사실
+
+*기본 키:* tk, dateTk
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| tk | 정수 | 기술 키 
+
+
+| dateTk | 정수 | 날짜 기술 키 
+
+
+| storagePoolTk | 정수 | 스토리지 풀 기술 키 
+
+
+| storageTk | 정수 | 스토리지 기술 키 
+
+
+| tierTk | 정수 | 계층 기술 키 
+
+
+| 백엔드 | 문자열 | 백엔드 플래그 
+
+
+| isVirtual | 문자열 | 가상 플래그 
+
+
+| 용량MB | 긴 | 예상 용량(MB) 
+
+
+| rawCapacityMB | 긴 | 예상 원시 용량(MB) 
+
+
+| 사용된용량MB | 긴 | 예상 사용 용량(MB) 
+
+
+| 사용된 Raw 용량(MB) | 긴 | 예상 사용 원시 용량(MB) 
+|===
+*관계:*
+
+* storage_dimension(다대일): `storageTk` -> `storage_dimension.tk`
+* tier_dimension (다대일): `tierTk` -> `tier_dimension.tk`
+* storage_pool_dimension (다대일): `storagePoolTk` -> `storage_pool_dimension.tk`
+* date_dimension (다대일): `dateTk` -> `date_dimension.tk`
+
+
+'''
+
+
+=== 스토리지_차원
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| tk | 정수 | 기술 키 
+
+
+| 이름 | 문자열 | 스토리지 이름 
+
+
+| 식별자 | 문자열 | 스토리지 식별자 
+
+
+| ip | 문자열 | IP 주소 
+
+
+| 모델 | 문자열 | 스토리지 모델 
+
+
+| 제조업체 | 문자열 | 제조업체 
+
+
+| serialNumber | 문자열 | 일련번호 
+
+
+| microcodeVersion | 문자열 | 마이크로코드 버전 
+
+
+| 가족 | 문자열 | 스토리지 제품군 
+
+
+| url | 문자열 | 참조 URL 
+
+
+| id | 긴 | 고유 식별자 
+
+
+| 최신 | 문자열 | 최신 플래그 
+
+
+| dateTk | 정수 | 날짜 기술 키 
+|===
+*관계:*
+
+* internal_volume_capacity_fact(일대다): `tk` <- `internal_volume_capacity_fact.storageTk`
+* chargeback_fact(일대다): `tk` <- `chargeback_fact.storageTk`
+* disk_group_capacity_fact(일대다): `tk` <- `disk_group_capacity_fact.storageTk`
+* vm_capacity_fact (일대다): `tk` <- `vm_capacity_fact.storageTk`
+* disk_group_capacity_future_fact(일대다): `tk` <- `disk_group_capacity_future_fact.storageTk`
+* qtree_capacity_fact(일대다): `tk` <- `qtree_capacity_fact.storageTk`
+* storage_and_storage_pool_capacity_fact (일대다): `tk` <- `storage_and_storage_pool_capacity_fact.storageTk`
+* volume_history_capacity_fact(일대다): `tk` <- `volume_history_capacity_fact.storageTk`
+* storage_and_storage_pool_capacity_future_fact (일대다): `tk` <- `storage_and_storage_pool_capacity_future_fact.storageTk`
+* storage_node_capacity_fact (일대다): `tk` <- `storage_node_capacity_fact.storageTk`
+
+
+'''
+
+
+=== 스토리지 노드 용량 팩트
+
+*기본 키:* tk, dateTk
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| tk | 정수 | 기술 키 
+
+
+| dateTk | 정수 | 날짜 기술 키 
+
+
+| storageTk | 정수 | 스토리지 기술 키 
+
+
+| storageNodeTk | 정수 | 스토리지 노드 기술 키 
+
+
+| tierTk | 정수 | 계층 기술 키 
+
+
+| totalNodeCapacityUtilizationMB | 긴 | 총 노드 용량 활용률(MB) 
+
+
+| usableNodeCapacityUtilizationMB | 긴 | 사용 가능한 노드 용량 사용률(MB) 
+
+
+| usedNodeCapacityUtilizationMB | 긴 | 사용된 노드 용량 사용률(MB) 
+
+
+| 사용된 메타데이터 노드 용량 활용도(MB) | 긴 | 사용된 메타데이터 용량 사용률(MB) 
+
+
+| 허용된 메타데이터 노드 용량 활용률(MB) | 긴 | 허용된 메타데이터 용량 사용률(MB) 
+|===
+*관계:*
+
+* storage_node_dimension (다대일): `storageNodeTk` -> `storage_node_dimension.tk`
+* storage_dimension(다대일): `storageTk` -> `storage_dimension.tk`
+* tier_dimension (다대일): `tierTk` -> `tier_dimension.tk`
+* date_dimension (다대일): `dateTk` -> `date_dimension.tk`
+
+
+'''
+
+
+=== 스토리지 노드 크기
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| tk | 정수 | 기술 키 
+
+
+| 이름 | 문자열 | 노드 이름 
+
+
+| 식별자 | 문자열 | 노드 식별자 
+
+
+| 버전 | 문자열 | 노드 버전 
+
+
+| 모델 | 문자열 | 노드 모델 
+
+
+| serialNumber | 문자열 | 일련번호 
+
+
+| siteName | 문자열 | 사이트 이름 
+
+
+| url | 문자열 | 참조 URL 
+
+
+| id | 긴 | 고유 식별자 
+
+
+| 최신 | 문자열 | 최신 플래그 
+
+
+| dateTk | 정수 | 날짜 기술 키 
+
+
+| ActiveIQ | 문자열 | ActiveIQ 주석 
+|===
+*관계:*
+
+* storage_node_capacity_fact (일대다): `tk` <- `storage_node_capacity_fact.storageNodeTk`
+
+
+'''
+
+
+=== 스토리지 풀 차원
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| tk | 정수 | 기술 키 
+
+
+| 식별자 | 문자열 | 풀 식별자 
+
+
+| 이름 | 문자열 | 풀 이름 
+
+
+| storageName | 문자열 | 스토리지 이름 
+
+
+| storageIP | 문자열 | 스토리지 IP 
+
+
+| 유형 | 문자열 | 풀 유형 
+
+
+| 이중화 | 문자열 | 중복성 수준 
+
+
+| thinProvisioningSupported | 문자열 | 씬 프로비저닝 지원 플래그 
+
+
+| isVirtual | 문자열 | 가상 플래그 
+
+
+| usesFlashPools | 문자열 | Flash Pool 플래그를 사용합니다 
+
+
+| url | 문자열 | 참조 URL 
+
+
+| id | 긴 | 고유 식별자 
+
+
+| 최신 | 문자열 | 최신 플래그 
+
+
+| dateTk | 정수 | 날짜 기술 키 
+
+
+| 층 | 문자열 | 계층 주석 
+
+
+| 시/도 | 문자열 | 지역 주석 
+|===
+*관계:*
+
+* internal_volume_capacity_fact(일대다): `tk` <- `internal_volume_capacity_fact.storagePoolTk`
+* chargeback_fact (일대다): `tk` <- `chargeback_fact.storagePoolTk`
+* disk_group_capacity_fact (일대다): `tk` <- `disk_group_capacity_fact.storagePoolTk`
+* disk_group_capacity_future_fact (일대다): `tk` <- `disk_group_capacity_future_fact.storagePoolTk`
+* qtree_capacity_fact(일대다): `tk` <- `qtree_capacity_fact.storagePoolTk`
+* storage_and_storage_pool_capacity_fact (일대다): `tk` <- `storage_and_storage_pool_capacity_fact.storagePoolTk`
+* volume_history_capacity_fact (일대다): `tk` <- `volume_history_capacity_fact.storagePoolTk`
+* storage_and_storage_pool_capacity_future_fact (일대다): `tk` <- `storage_and_storage_pool_capacity_future_fact.storagePoolTk`
+
+
+'''
+
+
+=== 계층_차원
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| tk | 정수 | 기술 키 
+
+
+| 이름 | 문자열 | 티어 이름 
+
+
+| 시퀀스 | 정수 | 순서 
+
+
+| 비용 | 소수 | 비용 
+
+
+| id | 긴 | 고유 식별자 
+
+
+| 최신 | 문자열 | 최신 플래그 
+
+
+| dateTk | 정수 | 날짜 기술 키 
+|===
+*관계:*
+
+* internal_volume_capacity_fact(일대다): `tk` <- `internal_volume_capacity_fact.tierTk`
+* chargeback_fact(일대다): `tk`<- `chargeback_fact.tierTk`
+* vm_capacity_fact (일대다): `tk` <- `vm_capacity_fact.tierTk`
+* qtree_capacity_fact (일대다): `tk` <- `qtree_capacity_fact.tierTk`
+* storage_and_storage_pool_capacity_fact (일대다): `tk` <- `storage_and_storage_pool_capacity_fact.tierTk`
+* volume_history_capacity_fact (일대다): `tk` <- `volume_history_capacity_fact.tierTk`
+* storage_and_storage_pool_capacity_future_fact (일대다): `tk` <- `storage_and_storage_pool_capacity_future_fact.tierTk`
+* storage_node_capacity_fact (일대다): `tk` <- `storage_node_capacity_fact.tierTk`
+
+
+'''
+
+
+=== vm_capacity_fact
+
+*기본 키:* tk, dateTk
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| tk | 정수 | 기술 키 
+
+
+| dateTk | 정수 | 날짜 기술 키 
+
+
+| hostTk | 정수 | 호스트 기술 키 
+
+
+| storageTk | 정수 | 스토리지 기술 키 
+
+
+| virtualStorageTk | 정수 | 가상 스토리지 기술 키 
+
+
+| internalVolumeTk | 정수 | 내부 볼륨 기술 키 
+
+
+| qtreeTk | 정수 | Qtree 기술 키 
+
+
+| hostGroupTk | 정수 | 호스트 그룹 기술 키 
+
+
+| applicationTk | 정수 | 애플리케이션 기술 키 
+
+
+| applicationGroupTk | 정수 | 애플리케이션 그룹 기술 키 
+
+
+| tierTk | 정수 | 계층 기술 키 
+
+
+| serviceLevelTk | 정수 | 서비스 수준 기술 키 
+
+
+| vmTk | 정수 | VM 기술 키 
+
+
+| dataStoreTk | 정수 | 데이터스토어 기술 키 
+
+
+| dataStoreName | 문자열 | 데이터 저장소 이름 
+
+
+| dataStoreId | 긴 | 데이터 저장소 ID 
+
+
+| virtualCenterIp | 문자열 | vCenter IP 
+
+
+| businessUnit | 문자열 | 사업부 
+
+
+| businessEntityTk | 정수 | 비즈니스 엔티티 기술 키 
+
+
+| k8sNodeTk | 정수 | Kubernetes 노드 기술 키 
+
+
+| storageAccessType | 문자열 | 스토리지 액세스 유형 
+
+
+| capacityType | 문자열 | 용량 유형 
+
+
+| actualMB | 긴 | 실제 용량(MB) 
+
+
+| provisionedMB | 긴 | 프로비저닝된 용량(MB) 
+|===
+*관계:*
+
+* internal_volume_dimension (다대일): `internalVolumeTk` -> `internal_volume_dimension.tk`
+* storage_dimension(다대일): `storageTk` -> `storage_dimension.tk`
+* business_entity_dimension(다대일): `businessEntityTk` -> `business_entity_dimension.tk`
+* k8s_node_dimension (다대일): `k8sNodeTk` -> `k8s_node_dimension.tk`
+* host_group_dimension(다대일): `hostGroupTk` -> `host_group_dimension.tk`
+* vm_dimension (다대일): `vmTk` -> `vm_dimension.tk`
+* application_group_dimension (다대일): `applicationGroupTk` -> `application_group_dimension.tk`
+* service_level_dimension(다대일): `serviceLevelTk` -> `service_level_dimension.tk`
+* capacity_type (다대일): `capacityType` -> `capacity_type.type`
+* tier_dimension (다대일): `tierTk` -> `tier_dimension.tk`
+* application_dimension(다대일): `applicationTk` -> `application_dimension.tk`
+* 데이터 저장소 차원(다대일): `dataStoreTk` -> `datastore_dimension.tk`
+* qtree_dimension (다대일): `qtreeTk` -> `qtree_dimension.tk`
+* host_dimension(다대일): `hostTk` -> `host_dimension.tk`
+* date_dimension (다대일): `dateTk` -> `date_dimension.tk`
+
+
+'''
+
+
+=== vm_dimension
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| tk | 정수 | 기술 키 
+
+
+| 이름 | 문자열 | VM 이름 
+
+
+| naturalKey | 문자열 | 자연 키 
+
+
+| OS | 문자열 | 운영 체제 
+
+
+| virtualCenterIp | 문자열 | vCenter IP 
+
+
+| ips | 문자열 | IP 주소 
+
+
+| url | 문자열 | 참조 URL 
+
+
+| id | 긴 | 고유 식별자 
+
+
+| 최신 | 문자열 | 최신 플래그 
+
+
+| dateTk | 정수 | 날짜 기술 키 
+|===
+*관계:*
+
+* vm_capacity_fact (일대다): `tk` <- `vm_capacity_fact.vmTk`
+
+
+'''
+
+
+=== volume_capacity_fact
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| volumeTk | 정수 | 볼륨 기술 키 
+
+
+| chargebackFactTk | 정수 | 차지백 팩트 기술 키 
+
+
+| storageAndSpFactTk | 정수 | 스토리지 및 풀 팩트 기술 키 
+
+
+| hostTk | 정수 | 호스트 기술 키 
+
+
+| storageTk | 정수 | 스토리지 기술 키 
+
+
+| hostGroupTk | 정수 | 호스트 그룹 기술 키 
+
+
+| tierTk | 정수 | 계층 기술 키 
+
+
+| serviceLevelTk | 정수 | 서비스 수준 기술 키 
+
+
+| storagePoolTk | 정수 | 스토리지 풀 기술 키 
+
+
+| internalVolumeTk | 정수 | 내부 볼륨 기술 키 
+
+
+| qtreeTk | 정수 | Qtree 기술 키 
+
+
+| k8sNamespaceTk | 정수 | Kubernetes 네임스페이스 기술 키 
+
+
+| k8sNamespaceGroupTk | 정수 | Kubernetes 네임스페이스 그룹 기술 키 
+
+
+| isVirtual | 문자열 | 가상 플래그 
+
+
+| isBackend | 문자열 | 백엔드 플래그 
+
+
+| protectionType | 문자열 | 보호 유형 
+
+
+| isAccessed | 문자열 | 액세스 플래그 
+
+
+| isOrphaned | 문자열 | 고아 플래그 
+
+
+| isProtection | 문자열 | 보호 플래그 
+
+
+| isUnused | 문자열 | 사용되지 않은 플래그 
+
+
+| 프로비저닝된 용량 MB | 긴 | 프로비저닝된 용량(MB) 
+
+
+| accessedCapacityMB | 긴 | 액세스된 용량(MB) 
+
+
+| orphanedCapacityMB | 긴 | 고아 용량(MB) 
+
+
+| protectionCapacityMB | 긴 | 보호 용량(MB) 
+
+
+| unusedCapacityMB | 긴 | 미사용 용량(MB) 
+
+
+| daysSinceLastAccessed | 정수 | 마지막 액세스 이후 경과 일수 
+|===
+'''
+
+
+=== 볼륨_차원
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| tk | 정수 | 기술 키 
+
+
+| storageIdentifier | 문자열 | 스토리지 식별자 
+
+
+| 이름 | 문자열 | 볼륨 이름 
+
+
+| 레이블 | 문자열 | 볼륨 라벨 
+
+
+| thinProvisioned | 문자열 | 씬 프로비저닝 플래그 
+
+
+| 유형 | 문자열 | 볼륨 유형 
+
+
+| isVirtual | 문자열 | 가상 플래그 
+
+
+| 메타 | 문자열 | 메타데이터 플래그 
+
+
+| 스냅샷 | 문자열 | 스냅샷 플래그 
+
+
+| technologyType | 문자열 | 기술 유형 
+
+
+| uuid | 문자열 | UUID 
+
+
+| isMainframe | 문자열 | 메인프레임 플래그 
+
+
+| url | 문자열 | 참조 URL 
+
+
+| id | 긴 | 고유 식별자 
+
+
+| 최신 | 문자열 | 최신 플래그 
+
+
+| dateTk | 정수 | 날짜 기술 키 
+
+
+| 사업체 | 문자열 | 비즈니스 엔터티 주석 
+
+
+| 층 | 문자열 | 계층 주석 
+|===
+*관계:*
+
+* volume_history_capacity_fact (일대다): `tk` <- `volume_history_capacity_fact.volumeTk`
+
+
+'''
+
+
+=== 현재 볼륨
+
+*기본 키:* volumeId
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| chargebackFactTk | 정수 | 차지백 팩트 기술 키 
+
+
+| volumeId | 긴 | 볼륨 ID 
+
+
+| storageId | 긴 | 스토리지 ID 
+
+
+| volumeName | 문자열 | 볼륨 이름 
+
+
+| volumeType | 문자열 | 볼륨 유형 
+
+
+| thinProvisioned | 문자열 | 씬 프로비저닝 플래그 
+
+
+| isVirtual | 문자열 | 가상 플래그 
+
+
+| 스냅샷 | 문자열 | 스냅샷 플래그 
+
+
+| technologyType | 문자열 | 기술 유형 
+
+
+| physicalUsableMB | 긴 | 실제 사용 가능 용량(MB) 
+
+
+| physicalRawMB | 긴 | 물리적 원시 용량(MB) 
+
+
+| provisionedUsableMB | 긴 | 프로비저닝된 사용 가능 용량(MB) 
+
+
+| provisionedRawMB | 긴 | 프로비저닝된 원시 용량(MB) 
+|===
+*관계:*
+
+* chargeback_fact(다대일): `chargebackFactTk` -> `chargeback_fact.tk`
+
+
+'''
+
+
+=== 볼륨 이력 용량 팩트
+
+*기본 키:* tk, dateTk
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| tk | 정수 | 기술 키 
+
+
+| dateTk | 정수 | 날짜 기술 키 
+
+
+| volumeTk | 정수 | 볼륨 기술 키 
+
+
+| chargebackFactTk | 정수 | 차지백 팩트 기술 키 
+
+
+| storageAndSpFactTk | 정수 | 스토리지 및 풀 팩트 기술 키 
+
+
+| hostTk | 정수 | 호스트 기술 키 
+
+
+| storageTk | 정수 | 스토리지 기술 키 
+
+
+| hostGroupTk | 정수 | 호스트 그룹 기술 키 
+
+
+| tierTk | 정수 | 계층 기술 키 
+
+
+| serviceLevelTk | 정수 | 서비스 수준 기술 키 
+
+
+| storagePoolTk | 정수 | 스토리지 풀 기술 키 
+
+
+| internalVolumeTk | 정수 | 내부 볼륨 기술 키 
+
+
+| qtreeTk | 정수 | Qtree 기술 키 
+
+
+| k8sNamespaceTk | 정수 | Kubernetes 네임스페이스 기술 키 
+
+
+| k8sNamespaceGroupTk | 정수 | Kubernetes 네임스페이스 그룹 기술 키 
+
+
+| isVirtual | 문자열 | 가상 플래그 
+
+
+| isBackend | 문자열 | 백엔드 플래그 
+
+
+| protectionType | 문자열 | 보호 유형 
+
+
+| isAccessed | 문자열 | 액세스 플래그 
+
+
+| isOrphaned | 문자열 | 고아 플래그 
+
+
+| isProtection | 문자열 | 보호 플래그 
+
+
+| isUnused | 문자열 | 사용되지 않은 플래그 
+
+
+| isMasked | 문자열 | 마스크된 플래그 
+
+
+| isMapped | 문자열 | 매핑된 플래그 
+
+
+| 프로비저닝된 용량 MB | 긴 | 프로비저닝된 용량(MB) 
+
+
+| accessedCapacityMB | 긴 | 액세스된 용량(MB) 
+
+
+| orphanedCapacityMB | 긴 | 고아 용량(MB) 
+
+
+| protectionCapacityMB | 긴 | 보호 용량(MB) 
+
+
+| unusedCapacityMB | 긴 | 미사용 용량(MB) 
+
+
+| 소모된용량MB | 긴 | 사용 용량(MB) 
+
+
+| daysSinceLastAccessed | 정수 | 마지막 액세스 이후 경과 일수 
+|===
+*관계:*
+
+* chargeback_fact(다대일): `chargebackFactTk` -> `chargeback_fact.tk`
+* internal_volume_dimension (다대일): `internalVolumeTk` -> `internal_volume_dimension.tk`
+* storage_dimension(다대일): `storageTk` -> `storage_dimension.tk`
+* storage_and_storage_pool_capacity_fact (다대일): `storageAndSpFactTk` -> `storage_and_storage_pool_capacity_fact.tk`
+* host_group_dimension(다대일): `hostGroupTk` -> `host_group_dimension.tk`
+* k8s_namespace_group_dimension (다대일): `k8sNamespaceGroupTk` -> `k8s_namespace_group_dimension.tk`
+* service_level_dimension(다대일): `serviceLevelTk` -> `service_level_dimension.tk`
+* tier_dimension (다대일): `tierTk` -> `tier_dimension.tk`
+* storage_pool_dimension (다대일): `storagePoolTk` -> `storage_pool_dimension.tk`
+* qtree_dimension (다대일): `qtreeTk` -> `qtree_dimension.tk`
+* host_dimension(다대일): `hostTk` -> `host_dimension.tk`
+* date_dimension (다대일): `dateTk` -> `date_dimension.tk`
+* volume_dimension(다대일): `volumeTk` -> `volume_dimension.tk`
+
+
+'''
+
+
+=== volume_last_accessed_time
+
+*기본 키:* volumeName, storageIdentifier
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| volumeId | 긴 | 볼륨 ID 
+
+
+| volumeName | 문자열 | 볼륨 이름 
+
+
+| storageIdentifier | 문자열 | 스토리지 식별자 
+
+
+| lastAccessed | DateTimeOffset | 마지막 액세스 타임스탬프 
+|===
+'''

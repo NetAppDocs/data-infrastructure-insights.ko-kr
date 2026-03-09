@@ -1,0 +1,351 @@
+---
+sidebar: sidebar 
+permalink: schema_tables_dwh_ports.html 
+summary: dwh_ports 데이터베이스의 스키마 테이블 및 관계 
+keywords: dwh, data warehouse, schema, reporting 
+---
+= dwh_ports에 대한 데이터베이스 스키마 참조
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+이 참조 문서에서는 테이블 구조, 필드 정의, 데이터 유형 및 관계를 포함하여 dwh_ports 데이터베이스에 대한 자세한 스키마 정보를 제공합니다.
+
+
+
+== 테이블 및 뷰
+
+
+
+=== 추기경
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| 숫자 | 정수 | 0에서 99 사이의 숫자 
+|===
+'''
+
+
+=== connected_device_dimension
+
+*기본 키:* tk
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| tk | 정수 | 기술 키 
+
+
+| 이름 | 문자열 | 기기 이름 
+
+
+| 제조업체 | 문자열 | 기기 제조업체 
+
+
+| 모델 | 문자열 | 기기 모델 
+
+
+| 유형 | 문자열 | 장치 유형 
+
+
+| 펌웨어 | 문자열 | 기기에서 실행 중인 펌웨어 버전 
+
+
+| id | 긴 | 장치의 ID 
+
+
+| 최신 | 문자열 | 최신 플래그 
+|===
+*관계:*
+
+* ports_fact(일대다)
+
+
+'''
+
+
+=== date_dimension
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| tk | 정수 | 기술 키 
+
+
+| fullDate | DateTimeOffset | 전체 날짜 
+
+
+| dayInMonth | 바이트 | 월의 날짜 
+
+
+| dayInYear | 정수 | 연중 일수 
+
+
+| dateYear | 정수 | 년도 
+
+
+| yearLabel | 문자열 | 연도 레이블 
+
+
+| monthNum | 바이트 | 월 번호 
+
+
+| monthLabel | 문자열 | 월 라벨 
+
+
+| dayInWeekNum | 바이트 | 요일 번호 
+
+
+| 분기 | 바이트 | 분기 
+
+
+| quarterLabel | 문자열 | 분기 레이블 
+
+
+| dayInQuarter | 정수 | 분기의 일 
+
+
+| repQuarter | 바이트 | 대표 분기 
+
+
+| repMonth | 바이트 | 대표 월 
+
+
+| repWeek | 바이트 | 대표 주간 
+
+
+| repDay | 바이트 | 대표 일자 
+
+
+| repMonthOrLatest | 바이트 | 대표 월 또는 최신 
+
+
+| sspFlag | 바이트 | SSP 플래그 
+
+
+| 최신 | 문자열 | 최신 플래그 
+
+
+| 미래 | 문자열 | 향후 플래그 
+|===
+*관계:*
+
+* ports_fact(일대다)
+
+
+'''
+
+
+=== 포트_차원
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| tk | 정수 | 기술 키 
+
+
+| wwn | 문자열 | World Wide Name 
+
+
+| 이름 | 문자열 | 포트 이름 
+
+
+| gbicType | 문자열 | GBIC 유형 
+
+
+| 유형 | 문자열 | 포트 유형 
+
+
+| 속도 | 문자열 | 포트 속도 
+
+
+| isGenerated | 문자열 | 생성된 플래그 
+
+
+| url | 문자열 | 참조 URL 
+
+
+| id | 긴 | 고유 식별자 
+
+
+| 최신 | 문자열 | 최신 플래그 
+
+
+| dateTk | 정수 | 날짜 기술 키 
+|===
+*관계:*
+
+* ports_fact(일대다)
+
+
+'''
+
+
+=== ports_fact
+
+*기본 키:* tk
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| tk | 정수 | 기술 키 
+
+
+| dateTk | 정수 | 날짜 기술 키 
+
+
+| switchTk | 정수 | 스위치 기술 키 
+
+
+| connectedDeviceTk | 정수 | 연결된 디바이스 기술 키 
+
+
+| portTk | 정수 | 포트 기술 키 
+
+
+| 패브릭 | 문자열 | 패브릭 이름 또는 WWN 
+
+
+| 속도 | 문자열 | 포트 속도 
+
+
+| connectivityType | 문자열 | 연결 유형 
+
+
+| 유형 | 문자열 | 포트 유형 
+
+
+| 상태 | 문자열 | 포트 상태 
+|===
+*관계:*
+
+* connected_device_dimension(다대일)
+* port_dimension(다대일)
+* date_dimension(다대일)
+* switch_dimension(다대일)
+
+
+'''
+
+
+=== ports_fact_current
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| tk | 정수 | 기술 키 
+
+
+| dateTk | 정수 | 날짜 기술 키 
+
+
+| switchTk | 정수 | 스위치 기술 키 
+
+
+| connectedDeviceTk | 정수 | 연결된 디바이스 기술 키 
+
+
+| portTk | 정수 | 포트 기술 키 
+
+
+| 패브릭 | 문자열 | 패브릭 이름 또는 WWN 
+
+
+| 속도 | 문자열 | 포트 속도 
+
+
+| connectivityType | 문자열 | 연결 유형 
+
+
+| 유형 | 문자열 | 포트 유형 
+
+
+| 상태 | 문자열 | 포트 상태 
+|===
+'''
+
+
+=== switch_dimension
+
+[cols="1,1,2"]
+|===
+| 필드 | 유형 | 설명 
+
+
+| tk | 정수 | 기술 키 
+
+
+| wwn | 문자열 | World Wide Name 
+
+
+| 이름 | 문자열 | 스위치 이름 
+
+
+| 식별자 | 문자열 | 스위치 식별자 
+
+
+| ip | 문자열 | IP 주소 
+
+
+| 모델 | 문자열 | 스위치 모델 
+
+
+| 제조업체 | 문자열 | 제조업체 
+
+
+| 펌웨어 | 문자열 | 펌웨어 버전 
+
+
+| serialNumber | 문자열 | 일련번호 
+
+
+| npv | 문자열 | NPV 모드 플래그 
+
+
+| isGenerated | 문자열 | 생성된 플래그 
+
+
+| 유형 | 문자열 | 스위치 유형 
+
+
+| url | 문자열 | 참조 URL 
+
+
+| id | 긴 | 고유 식별자 
+
+
+| 최신 | 문자열 | 최신 플래그 
+
+
+| dateTk | 정수 | 날짜 기술 키 
+
+
+| dataCenter | 문자열 | 데이터 센터 위치 
+
+
+| switchLevel | 문자열 | 스위치 레벨 
+|===
+*관계:*
+
+* ports_fact(일대다)
+
+
+'''

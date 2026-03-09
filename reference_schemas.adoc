@@ -7,14 +7,16 @@ keywords: dwh, data warehouse, schema, reporting
 = 보고를 위한 Data Infrastructure Insights 스키마
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-이러한 스키마 테이블과 다이어그램은 Data Infrastructure Insights Reporting에 대한 참조로 제공됩니다.
-
-link:https://docs.netapp.com/us-en/cloudinsights/ci_reporting_database_schema.pdf["*스키마 테이블*"].PDF 형식으로.  링크를 클릭하여 열거나 마우스 오른쪽 버튼을 클릭하고 _다른 이름으로 저장..._을 선택하여 다운로드하세요.
-
-link:reporting_schema_diagrams.html["*스키마 다이어그램*"]
+이 스키마 테이블은 Data Infrastructure Insights Reporting을 위한 참조 자료로 제공됩니다.
 
 
 NOTE: 보고 기능은 Data Infrastructure Insights 에서 사용할 수 있습니다.link:concept_subscribing_to_cloud_insights.html["프리미엄 에디션"] .
+
+link:schema/reporting_schema_capacity.html["스키마 테이블 - 용량"^] link:schema/reporting_schema_capacity_efficiency.html["스키마 테이블 - 용량 효율성"^] link:schema/reporting_schema_fs_util.html["스키마 테이블 - 파일 시스템 활용도"^] link:schema/reporting_schema_inventory.html["스키마 테이블 - 인벤토리"^] link:schema/reporting_schema_performance.html["스키마 테이블 - 성능"^] link:schema/reporting_schema_ports.html["스키마 테이블 - 포트"^]
