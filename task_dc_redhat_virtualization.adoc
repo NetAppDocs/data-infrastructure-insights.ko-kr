@@ -7,6 +7,10 @@ summary: Red Hat Virtualization 데이터 수집기를 구성합니다.
 = Red Hat Virtualization 데이터 수집기
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]

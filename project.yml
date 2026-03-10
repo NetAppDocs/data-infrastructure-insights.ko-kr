@@ -447,7 +447,7 @@ sidebar:
         url: "/task_dc_oracle_zfs.html"
       - title: 순수한
         url: "/task_dc_pure_flasharray.html"
-      - title: 레드햇
+      - title: Red Hat Virtualization
         url: "/task_dc_redhat_virtualization.html"
       - title: 루브릭 CDM
         url: "/task_dc_rubrik_cdm.html"

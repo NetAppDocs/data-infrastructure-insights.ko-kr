@@ -813,7 +813,6 @@
   <block id="755b12aafe5dc12ab98be034e0bc593a" category="cell">"잘못된 로그인 자격 증명"과 "정책이 허용하지 않습니다" 또는 "권한이 없습니다"라는 오류 메시지가 표시됩니다.</block>
   <block id="e3023c7402b94962861565244cb9f3d0" category="cell">Pure http 인터페이스를 통해 Pure 사용자 계정 및 비밀번호 검증</block>
   <block id="ea0b91ea0d8c2da2db5e90fb9a4e9e26" category="doc">Pure Storage FlashBlade 데이터 수집기</block>
-  <block id="0dc4fd6064fea67266d1837f3d33b6e0" category="paragraph">Data Infrastructure Insights Pure Storage FlashBlade 데이터 수집기를 사용하여 REST API 버전 2를 노출하는 FlashBlade 클러스터에서 인벤토리 및 성능 데이터를 수집합니다.</block>
   <block id="26c7e129f928f6ba8485b8308659b929" category="cell">객체 스토리지 버킷</block>
   <block id="c307e1b8edd2b5d784d81d211f67c2e5" category="list-text">스토리지 시스템 IP 주소 또는 정규화된 도메인 이름</block>
   <block id="ae4fab3dbcbe018dadb4c33b8b70b2e8" category="list-text">API 토큰은 이상적으로는 무한한 수명을 갖습니다.  읽기 전용 수준의 사용자면 충분합니다.</block>
@@ -2967,7 +2966,6 @@
   <block id="bb88c75c573c51be16c7d85804e7a9fe" category="sidebar">뉴타닉스</block>
   <block id="30162ed78b6c10f731411f2fc440c24f" category="sidebar">신탁</block>
   <block id="d30973809f2e4238b7eb2bac9241674c" category="sidebar">순수한</block>
-  <block id="1d9fc183665bd1e195391190be506894" category="sidebar">레드햇</block>
   <block id="38d38399d4a7514463d665125ae50a4a" category="sidebar">루브릭 CDM</block>
   <block id="56079badd056a19303cc26e6a4fcc7e0" category="sidebar">VMware</block>
   <block id="8683de0aa24eead7d9ee8d3fdaa00cbc" category="sidebar">데이터 수집기 참조 - 서비스</block>
@@ -6826,8 +6824,6 @@
   <block id="c570274e8fb013719523945c6aff02f1" category="cell"><block ref="c570274e8fb013719523945c6aff02f1" category="inline-link-macro-rx"></block></block>
   <block id="4f24197d0503e262d29c81199ac0627c" category="inline-link-macro">Azure VM 및 VHD</block>
   <block id="e00ad4181c9c1bb044b8dda82a2eb37c" category="cell"><block ref="e00ad4181c9c1bb044b8dda82a2eb37c" category="inline-link-macro-rx"></block></block>
-  <block id="c3dc9f108879520f071bfe791b64d931" category="inline-link-macro">Brocade 네트워크 어드바이저(BNA)</block>
-  <block id="72981d1d7e5b9b8d922639718df6b13d" category="cell"><block ref="72981d1d7e5b9b8d922639718df6b13d" category="inline-link-macro-rx"></block></block>
   <block id="0491f979e459c21ca1a650d5bee1bedf" category="inline-link-macro">Brocade 파이버 채널 스위치</block>
   <block id="6ae88aee808190aba1b5e4acb58392b7" category="cell"><block ref="6ae88aee808190aba1b5e4acb58392b7" category="inline-link-macro-rx"></block></block>
   <block id="764f447ccb3bf87ad75ec71c633b9966" category="inline-link-macro">Brocade FOS REST</block>
@@ -6880,8 +6876,6 @@
   <block id="3a1038b8fbe1e88b4f3c1b247da07798" category="cell"><block ref="3a1038b8fbe1e88b4f3c1b247da07798" category="inline-link-macro-rx"></block></block>
   <block id="39ba7675313c799c9b706c8928b535f6" category="inline-link-macro">플링크</block>
   <block id="f1161d8aad902843d64ca7e6b3db0f14" category="cell"><block ref="f1161d8aad902843d64ca7e6b3db0f14" category="inline-link-macro-rx"></block></block>
-  <block id="0ac136d62167ae2749430a7b083e6d88" category="inline-link-macro">후지쯔 ETERNUS DX</block>
-  <block id="99a28d8d1439c7da877285fec312185a" category="cell"><block ref="99a28d8d1439c7da877285fec312185a" category="inline-link-macro-rx"></block></block>
   <block id="12087a5da9bcdb90a9ac3a7931c38b46" category="inline-link-macro">Google 컴퓨팅 및 스토리지</block>
   <block id="8e0a555918ddd0d3171e923d8ec8927b" category="cell"><block ref="8e0a555918ddd0d3171e923d8ec8927b" category="inline-link-macro-rx"></block></block>
   <block id="1215f8190533dfdf63d2224a6d88266f" category="inline-link-macro">Google Cloud NetApp Volumes</block>
@@ -6942,10 +6936,6 @@
   <block id="4d9746bceefe2b6bd2586d1c3e4d2733" category="cell"><block ref="4d9746bceefe2b6bd2586d1c3e4d2733" category="inline-link-macro-rx"></block></block>
   <block id="b988e43525055930d8d214d3116d4c04" category="inline-link-macro">NetApp Cloud Volumes ONTAP</block>
   <block id="ecf8390ebf4bfbf85b7308b7ca58aaa1" category="cell"><block ref="ecf8390ebf4bfbf85b7308b7ca58aaa1" category="inline-link-macro-rx"></block></block>
-  <block id="acb242e4a47b7f1537825e1c4eacc87a" category="inline-link-macro">ONTAP 9.9+용 NetApp 클라우드 연결</block>
-  <block id="32b322f0c18e116c5d878598d8fedae2" category="cell"><block ref="32b322f0c18e116c5d878598d8fedae2" category="inline-link-macro-rx"></block></block>
-  <block id="995d9995da501d3734932d95524f1a35" category="inline-link-macro">NetApp Data ONTAP 7-Mode</block>
-  <block id="2e59af567907cf6ad1ae87c0cac8e6dd" category="cell"><block ref="2e59af567907cf6ad1ae87c0cac8e6dd" category="inline-link-macro-rx"></block></block>
   <block id="0311befd4f8a4eb64d5f02957a8b1d99" category="inline-link-macro">NetApp E-시리즈</block>
   <block id="263caec9c413672e1829ba1b317a5b42" category="cell"><block ref="263caec9c413672e1829ba1b317a5b42" category="inline-link-macro-rx"></block></block>
   <block id="8fd194517d64c215a9c8b5e2b8d0f67e" category="inline-link-macro">NetApp E-시리즈 REST</block>
@@ -12141,7 +12131,6 @@
   <block id="b9249fd328314d6a7d2f42e8e3c6b5d4" category="summary">VPLEX 데이터 수집기 구성.</block>
   <block id="60681db287042fdbd55c4c2ed95ce0f0" category="doc">EMC VPLEX 데이터 수집기 구성</block>
   <block id="dbbc7759d6fa847682027ce2d68707f9" category="paragraph">이 데이터 수집기는 EMC VPLEX 스토리지 시스템에서 인벤토리 및 성능 데이터를 수집합니다.  구성을 위해 데이터 수집기에는 VPLEX 서버의 IP 주소와 관리 수준 도메인 계정이 필요합니다.</block>
-  <block id="8f3f7ce90dce9ce91bcc07b31bdc1b6b" category="admonition">Data Infrastructure Insights 가 Vplex 클러스터에서 성능을 수집하려면 SCP 기반 파일 복사본을 통해 Data Infrastructure Insights 검색하는 .CSV 파일과 로그를 채우기 위해 성능 보관 서비스가 작동 중이어야 합니다.  NetApp 많은 Vplex 펌웨어 업그레이드/관리 스테이션 업데이트로 인해 이 기능이 작동하지 않는 경우가 있다는 것을 확인했습니다.  이러한 업그레이드를 계획하는 고객은 계획된 업그레이드로 인해 해당 기능이 작동하지 않을지 Dell/EMC에 사전에 문의하고, 그럴 경우 성능 가시성의 차이를 최소화하기 위해 어떻게 기능을 다시 활성화할 수 있는지 문의하는 것이 좋습니다.  Cloud Insight의 Vplex 성능 코드는 각 폴에서 예상 파일이 모두 있는지, 그리고 제대로 업데이트되고 있는지 평가합니다. 파일이 없거나 오래된 경우 Data Infrastructure Insights 성능 수집 실패를 기록합니다.</block>
   <block id="b9e79e40b10e4cd3212004f5560b2da1" category="paragraph">Data Infrastructure Insightst는 VPLEX 데이터 수집기에서 다음과 같은 인벤토리 정보를 수집합니다.  인수한 각 자산 유형에 대해 해당 자산에 사용되는 가장 일반적인 용어가 표시됩니다.  이 데이터 수집기를 보거나 문제를 해결할 때 다음 용어를 염두에 두십시오.</block>
   <block id="7bfa30721c5e726ff17e3f972237a82c" category="cell">엔진</block>
   <block id="4aa531638ba8a3023953a131c634e8d1" category="cell">장치, 시스템 범위</block>
@@ -14658,4 +14647,10 @@
   <block id="e30ec09a4c79b55e1ccfc1955c76c379" category="cell">switchLevel</block>
   <block id="e10c8c70fc9c70d82df6e3c2ea10ceed" category="cell">스위치 레벨</block>
   <block id="549ae8b6dea4926a2af206c5d7300fc5" category="paragraph">Data Infrastructure Insights를 사용하려면 먼저 *NetApp Console* 포털에 가입해야 합니다. 이미 NetApp Console 로그인 계정이 있다면, 몇 단계만 거치면 Data Infrastructure Insights의 무료 체험을 시작할 수 있습니다.</block>
+  <block id="93e49907cf8d9ecec89d856c3d49fb2f" category="inline-link-macro">퓨어 FlashBlade</block>
+  <block id="f92f77015be3ec66c79ba43a2aec5f69" category="cell"><block ref="f92f77015be3ec66c79ba43a2aec5f69" category="inline-link-macro-rx"></block></block>
+  <block id="52e4ed377cdb874dec547eb79615f673" category="admonition">Data Infrastructure Insights의 VPLEX 클러스터 성능 수집을 위해서는 성능 아카이브 서비스가 정상적으로 작동해야 합니다. 이 서비스를 통해 Data Infrastructure Insights는 SCP 기반 파일 복사를 통해 .CSV 파일과 로그를 가져옵니다. NetApp은 많은 VPLEX 펌웨어 업그레이드/관리 스테이션 업데이트로 인해 이 기능이 작동하지 않게 되는 경우가 있음을 확인했습니다. 따라서 업그레이드를 계획 중인 고객은 Dell/EMC에 문의하여 업그레이드로 인해 이 기능이 작동하지 않게 되는지, 그리고 만약 그렇다면 성능 가시성 저하를 최소화하기 위해 어떻게 다시 활성화할 수 있는지 사전에 확인하는 것이 좋습니다. Cloud Insights의 VPLEX 성능 코드는 각 폴링 시 예상되는 모든 파일이 존재하는지, 그리고 제대로 업데이트되고 있는지를 평가합니다. 파일이 누락되었거나 오래된 경우 Data Infrastructure Insights는 성능 수집 실패를 기록합니다.</block>
+  <block id="de9fcff157c3fd05f707a7b227a45275" category="summary">Pure FlashBlade Storage 데이터 수집기 구성</block>
+  <block id="c0c126a33a6cd3661eae0fb5eca89c2d" category="paragraph">Data Infrastructure Insights는 Pure Storage FlashBlade 데이터 수집기를 사용하여 REST API 버전 2를 제공하는 FlashBlade 클러스터에서 인벤토리 및 성능 데이터를 수집합니다.</block>
+  <block id="80e910f35b12e9c61335fa88de36edd0" category="sidebar">Red Hat Virtualization</block>
 </blocks>
