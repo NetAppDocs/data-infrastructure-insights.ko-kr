@@ -14542,4 +14542,9 @@
   <block id="e62768229563f11ca5fd49a1482ae7a8" category="list-text">REST API를 통해 포트 443을 사용하는 Red Hat OpenShift Virtualization 서버의 IP 주소</block>
   <block id="07bc27033bbe069dd4fcfa7e7287df66" category="cell">RHOV와의 HTTPS 통신에 사용되는 포트</block>
   <block id="db2f9342403e0e147464a85b899ec12c" category="sidebar">Red Hat OpenShift 가상화</block>
+  <block id="cc7e5505fa4bc50f5457fa8f8b55f94f" category="section-title">2026년 3월</block>
+  <block id="c62d7b96ff17fd52f5c5b5957d12ce47" category="section-title">Data Infrastructure Insights의 AI 어시스턴트는 누구나 이용할 수 있습니다!</block>
+  <block id="dd0f9294fa313d494966ae16cbe89435" category="paragraph">Data Infrastructure Insights AI Assistant가 미리 보기로 제공되며, 이제 다음과 같은 개선 사항이 포함됩니다.</block>
+  <block id="e609c64ff8e8c15f1ce845903ca2db7e" category="list-text">Azure 지역 가용성: DII 사이트가 Azure에 호스팅된 고객의 경우, 이제 Data Infrastructure Insights Assistant를 사용할 수 있습니다.</block>
+  <block id="056a97d89a4b6d30acf8e9b86d3ed172" category="list-text">최대 7일간의 데이터: 이제 Assistant는 최대 7일간의 고해상도 메트릭에 액세스할 수 있어 더욱 폭넓은 데이터 분석 및 인사이트 도출이 가능합니다.</block>
 </blocks>
