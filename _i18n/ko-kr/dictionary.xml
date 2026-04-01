@@ -821,10 +821,8 @@
   <block id="51408f1c75ab7bcc90f67b3ab1801733" category="cell">API 토큰</block>
   <block id="0507fa02ffd6a1be1f4496a833b194eb" category="summary">Red Hat Virtualization 데이터 수집기를 구성합니다.</block>
   <block id="6609776175436f74c8fb3530cfff6f27" category="doc">Red Hat Virtualization 데이터 수집기</block>
-  <block id="5f46815146ffa354dc2f5c63d9854bcc" category="paragraph">Data Infrastructure Insights Red Hat Virtualization 데이터 수집기를 사용하여 가상화된 Linux 및 Microsoft Windows 워크로드에서 인벤토리 데이터를 수집합니다.</block>
   <block id="8b60c89058c8a36aacae9d3ecd007639" category="cell">스토리지 도메인</block>
   <block id="524c6421ae67a40ab9a2d81082989e67" category="cell">논리 장치</block>
-  <block id="1252e68ee9820a25a4fa53cba5316613" category="list-text">REST API를 통한 포트 443을 통한 RHEV 서버의 IP 주소</block>
   <block id="1755c36c6d233fd7d643efcf91b29322" category="list-text">읽기 전용 사용자 이름 및 비밀번호</block>
   <block id="1f6ab089a965189e0e2e5d53aba2bc6a" category="list-text">RHEV 버전 3.0+</block>
   <block id="6ddc0c44488bfc939598a18e8646face" category="cell">RHEV 서버 IP 주소</block>
@@ -3151,7 +3149,6 @@
   <block id="4789f23283b3a61f858b641a1bef19a3" category="cell">메모리</block>
   <block id="83626eda7582435cdf0eb139d5cc8972" category="cell">8GB 램</block>
   <block id="da65b8cea76748b286bd905feef4a5fa" category="cell">사용 가능한 디스크 공간</block>
-  <block id="e51abfd3fc3e12a9fe8f5f800312a852" category="cell">50GB(100GB 권장) Linux의 경우 디스크 공간은 다음과 같이 할당해야 합니다. /opt/netapp 10GB(대규모 환경의 경우 20GB) /var/log/netapp 40GB(대규모 환경의 경우 80GB) /tmp 설치 중 사용 가능한 최소 1GB</block>
   <block id="6aaa2ffc817cac34a806a149bee36350" category="cell">50GB</block>
   <block id="eec89088ee408b80387155272b113256" category="cell">회로망</block>
   <block id="2f704538f6c9d6459a97314be98124e2" category="inline-link-macro">데이터 수집기</block>
@@ -7352,82 +7349,7 @@
   <block id="5881a1f9bf083ef4c9a0abd664075f34" category="paragraph">"변경 분석"은 다음과 같은 경우에 대한 알림을 추적합니다.</block>
   <block id="367c81232bd8558294db17c024d0946c" category="list-text">_logs.vmware.events_ 및 _logs.netapp.ems_ 로그 유형에 대한 로그 모니터의 경고입니다.</block>
   <block id="872f5111182c06c0a1eab9dfbad521ad" category="list-text">위의 개체 유형에 대한 메트릭 모니터의 알림입니다. 변경 분석에서 이를 추적하려면 _그룹화 기준_ 필드에서 이를 선택해야 합니다.</block>
-  <block id="851540d32e033a0c14b63879881da871" category="summary">통찰력을 통해 Kubernetes 공간이 언제 가득 찰지 예측할 수 있습니다.</block>
-  <block id="4fef891481b95674ba195bcf5ebf7efb" category="doc">통찰력: Kubernetes 네임스페이스 공간 부족</block>
-  <block id="b9e3092d2cb5cd78b84419a18b48afcf" category="paragraph">세입자가 집을 비울 공간이 부족한 상황은 결코 좋은 상황이 아닙니다.  Data Infrastructure Insights 사용하면 Kubernetes 영구 볼륨이 가득 차기 전까지 남은 시간을 예측할 수 있습니다.</block>
-  <block id="8dc9b2ee1508011b53e7f0f04a3b46a8" category="paragraph">_Kubernetes 네임스페이스 공간 부족_ 인사이트는 각 영구 볼륨이 가득 차기까지 남은 일수를 추정하여 공간이 부족해질 위험이 있는 Kubernetes 네임스페이스의 워크로드를 보여줍니다.</block>
-  <block id="f2c0221f294a823d827a375c35966fc9" category="paragraph">이 통찰력을 보려면 *대시보드 &gt; 통찰력*으로 이동하세요.</block>
-  <block id="6f6740f128ff4e7b81b3e550f00f9705" category="inline-image-macro">공간 부족 위험이 있는 K8s 네임스페이스의 워크로드 목록</block>
-  <block id="9cd0fe5cef5af60f762c34beb874081a" category="paragraph"><block ref="9cd0fe5cef5af60f762c34beb874081a" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="b5d4ddc25dbf8207f2bee2e686857aa1" category="paragraph">Insight에 대한 세부 정보 페이지를 열려면 작업 부하를 클릭하세요.  이 페이지에서는 작업 부하 용량 추세를 보여주는 그래프와 다음 내용을 보여주는 표를 볼 수 있습니다.</block>
-  <block id="531d617d072da086d2a88b4381d112d7" category="list-text">작업 부하 이름</block>
-  <block id="5594ad451661776d3680f239ed48baa0" category="list-text">영구 볼륨이 영향을 받음</block>
-  <block id="60883d911c538f3168c126825cfa1804" category="list-text">예상 완료 시간(일)</block>
-  <block id="0e1f0238958c9e1538d02888144645f7" category="list-text">영구 볼륨 용량</block>
-  <block id="95458ffe03f081fb38d0e5630d7836c6" category="list-text">백엔드 스토리지 리소스에 영향을 미쳐, 전체 용량 중 현재 용량이 사용되었습니다.  이 링크를 클릭하면 백엔드 볼륨에 대한 자세한 랜딩 페이지가 열립니다.</block>
-  <block id="9b6de7d57253456e4f416bcef90b76e5" category="inline-image-macro">세부 정보를 보여주는 작업량 표</block>
-  <block id="e589c155ffae6696761533f45ef69b7c" category="paragraph"><block ref="e589c155ffae6696761533f45ef69b7c" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="cc327506f222e6ab4e0ec6a024dcbe7b" category="section-title">공간이 부족하면 어떻게 해야 하나요?</block>
-  <block id="35e8ae7798ae468988eef02594bca5d5" category="paragraph">인사이트 페이지에서 *+권장 사항 표시*를 클릭하여 가능한 솔루션을 확인하세요.  공간이 부족할 때 가장 쉬운 옵션은 항상 용량을 추가하는 것이며, Data Infrastructure Insights 목표 60일 예측에 대한 전체 완료 시간을 늘리기 위해 추가할 수 있는 최적의 용량을 보여줍니다.  다른 권장 사항도 표시됩니다.</block>
-  <block id="501f2f9df98b83cc872cd59f0493d08d" category="inline-image-macro">60일 TTF로 복귀할 수 있는 용량 추가</block>
-  <block id="1349caff32af26b4b92540943cbbecc2" category="paragraph"><block ref="1349caff32af26b4b92540943cbbecc2" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="103ede5225263a5f8e396b6adb9b4898" category="paragraph">여기에서 이 통찰력에 대한 편리한 링크를 복사하여 페이지를 북마크하거나 팀과 쉽게 공유할 수 있습니다.</block>
-  <block id="6d35f83ec0df4672769520e5d6df1cd5" category="summary">통찰력을 통해 리소스 사용과 추세를 살펴볼 수 있습니다.</block>
-  <block id="f1c9e9af80bb533618f5bdefe333747d" category="doc">통찰력</block>
-  <block id="4e97535a9ad440d2d327ab364bb7a0ec" category="paragraph">통찰력을 통해 리소스 사용량과 그것이 다른 리소스에 미치는 영향, 완료까지 걸리는 시간 분석 등을 살펴볼 수 있습니다.</block>
-  <block id="93b6b2ecbe8e38118f0e38a7f128eb90" category="paragraph">다양한 통찰력을 얻을 수 있습니다.  *대시보드 &gt; 인사이트*로 이동하여 자세히 알아보세요. 기본 탭에서 활성 인사이트(현재 발생 중인 인사이트)를 볼 수 있고, _비활성 인사이트_ 탭에서 비활성 인사이트를 볼 수 있습니다.  비활성 인사이트는 이전에는 활성화되었지만 더 이상 발생하지 않는 인사이트입니다.</block>
-  <block id="fe9a216d65384f5afb0047e612bf386e" category="section-title">인사이트 유형</block>
-  <block id="9e9013279f80acdb151d7cad5bc3f7d8" category="section-title">스트레스 하의 공유 자원</block>
-  <block id="3c4504abf11b507f4b8e1fa6354331ea" category="paragraph">큰 영향을 미치는 작업 부하는 공유 리소스에서 다른 작업 부하의 성능을 저하시킬 수 있습니다.  이로 인해 공유 자원에 부담이 가해집니다.  Data Infrastructure Insights 리소스 포화 상태와 테넌트에 미치는 영향을 조사하는 데 도움이 되는 도구를 제공합니다.<block ref="de4400096db30b5f709799778e050e2c" category="inline-link-macro-rx"></block></block>
-  <block id="c1c7efc58c7b64cc21f3ae15934e8271" category="section-title">Kubernetes 네임스페이스 공간 부족</block>
-  <block id="806f6dbcc954f0a88489885f517d1d1d" category="paragraph">Kubernetes 네임스페이스 공간 부족 인사이트는 Kubernetes 네임스페이스에서 공간 부족 위험이 있는 워크로드를 파악하고, 각 공간이 가득 차기까지 남은 일수를 추정하여 보여줍니다.<block ref="604196d3b206e62dba15152db76beddc" category="inline-link-macro-rx"></block></block>
-  <block id="db08e6b1d619064fa3fd2035f5926d18" category="paragraph">ONTAP 냉장 보관 회복_ 인사이트는 ONTAP 시스템의 볼륨에 대한 냉장 용량, 잠재적 비용/전력 절감 및 권장 작업 항목에 대한 데이터를 제공합니다.<block ref="82cab8f639b07ead699dc071830d992e" category="inline-link-macro-rx"></block></block>
   <block id="d59048f21fd887ad520398ce677be586" category="inline-link-macro">자세히 알아보기</block>
-  <block id="102e3d38f56cb877356cf974fdeb3270" category="admonition">이는 _미리보기_ 기능이며, 개선이 진행됨에 따라 시간이 지남에 따라 변경될 수 있습니다. <block ref="ee58f03d7eaea0665aa8a572992ca1b8" category="inline-link-macro-rx"></block> Data Infrastructure Insights Preview 기능에 대해 알아보세요.</block>
-  <block id="9d6898c9d6fff2bd62d85b66643bb3d1" category="doc">통찰력: ONTAP 콜드 스토리지 재확보</block>
-  <block id="0d76fbb36f181c92649274af9d5b537e" category="paragraph">ONTAP 냉장 보관 회복_ 인사이트는 ONTAP 시스템의 볼륨에 대한 냉장 용량, 잠재적 비용/전력 절감 및 권장 작업 항목에 대한 데이터를 제공합니다.</block>
-  <block id="385dd98ce9aff23db04e71230c28efd7" category="paragraph">이러한 통찰력을 보려면 *대시보드 &gt; 통찰력*으로 이동하여 ONTAP 콜드 스토리지 회수_ 통찰력을 살펴보세요.  Data Infrastructure Insights 콜드 스토리지를 감지한 경우에만 이 인사이트에 영향을 받은 스토리지가 나열되고, 그렇지 않은 경우 "모두 안전함" 메시지가 표시됩니다.</block>
-  <block id="d752ee7de9162d5e0fa475e8a383ea29" category="paragraph">30일 이내의 저온 데이터는 표시되지 않습니다.</block>
-  <block id="da69b960f5bb93c02fdd4886868836f6" category="inline-image-macro">콜드 데이터가 있는 3개의 저장소를 보여주는 인사이트 목록</block>
-  <block id="7718245a70dcc6279bf8af86a72c2e35" category="paragraph"><block ref="7718245a70dcc6279bf8af86a72c2e35" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="930fd15ae62cafe82d62d6912f307087" category="paragraph">Insight 설명은 "콜드"로 감지된 데이터의 양과 해당 데이터가 저장된 저장소에 대한 간략한 정보를 제공합니다.  이 표는 콜드 데이터가 포함된 워크로드 수도 제공합니다.</block>
-  <block id="7cc631429c391f70b58e64999f7fbe48" category="inline-link-macro">NetApp의 TCO 계산기</block>
-  <block id="cdb12d4961181c6c0d6f14a1a17cfd87" category="paragraph">목록에서 인사이트를 선택하면 데이터를 클라우드로 옮기거나 통합 디스크를 순환 축소하기 위한 권장 사항을 포함하여 더 자세한 내용을 보여주는 페이지가 열리고, 이러한 권장 사항을 구현하면 잠재적으로 실현할 수 있는 예상 비용과 전력 절감액도 표시됩니다.  이 페이지는 편리한 링크도 제공합니다.<block ref="928b307e42240e05f4c78ed4745d6f3a" category="inline-link-macro-rx"></block> 그래서 숫자를 실험해 볼 수 있어요.</block>
-  <block id="c2022a18b75555c824458ee568cfdfca" category="inline-image-macro">콜드 데이터 전력 정보</block>
-  <block id="6a79fd430dc36a8f17aaf2f28988d6e6" category="paragraph"><block ref="6a79fd430dc36a8f17aaf2f28988d6e6" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="5259ae4afb5996ff48788b2fa720114c" category="section-title">추천사항</block>
-  <block id="a5048bf2003cf033b80e3fa2e33502f8" category="paragraph">Insight 페이지에서 *추천*을 확장하여 다음 옵션을 살펴보세요.</block>
-  <block id="f77e48bcc98143a3f6bd8bcc492be286" category="list-text">사용하지 않는 작업 부하(좀비)를 비용이 낮은 스토리지 계층(HDD)으로 이동합니다.</block>
-  <block id="987152d50a80bdf0820a4f1fd1771f81" category="paragraph">좀비 플래그, 콜드 스토리지, 일수를 활용하여 가장 차갑고 가장 큰 데이터 양을 찾아 작업 부하를 비용이 낮은 스토리지 계층(예: 하드 디스크 스토리지를 사용하는 스토리지 풀)으로 옮깁니다.  30일 이상 상당한 IO 요청을 받지 못한 워크로드는 "좀비"로 간주됩니다.</block>
-  <block id="c8abb3322f2d9026ffca3cbd29c6e9ba" category="list-text">사용하지 않는 작업 부하 삭제</block>
-  <block id="42bb4c2dadbccfef009beef19eb60c44" category="paragraph">사용되지 않는 작업 부하를 확인하고 해당 작업을 보관하거나 스토리지 시스템에서 제거하는 것을 고려하세요.</block>
-  <block id="30dc3fa30dc934a0d0aa98e3789e46c2" category="list-text">NetApp의 Fabric Pool 솔루션을 고려하세요</block>
-  <block id="27130393c9a69c9ac4259ad677b7e09b" category="inline-link-macro">패브릭 풀 솔루션</block>
-  <block id="a7c5cd98f24711202e2a8089e206922c" category="paragraph">NetApp의<block ref="6dfc63a251a9b042b77c667e40f20df9" category="inline-link-macro-rx"></block> 자동으로 콜드 데이터를 저렴한 클라우드 스토리지로 계층화하여 성능 계층의 효율성을 높이고 원격 데이터 보호 기능을 제공합니다.</block>
-  <block id="b0bad3786567c06c6ba5f9c05f89f0fb" category="section-title">시각화하고 탐색하세요</block>
-  <block id="f9a5f3e9d6c824797a0884341490f583" category="paragraph">그래프와 표는 추가적인 추세 정보를 제공하고 개별 작업 부하를 자세히 살펴볼 수 있게 해줍니다.</block>
-  <block id="046d0c83fcc2f8749fd500daded4836a" category="inline-image-macro">콜드 데이터 요약 그래프</block>
-  <block id="907a69f25ca7c9e8619e2c59a67ab607" category="inline-image-macro">콜드 데이터 워크로드 표</block>
-  <block id="e185f5cf502ca7079fb5eb3b60a77e41" category="paragraph"><block ref="e9ec82200521512971fafc4c0e21c2af" category="inline-image-macro-rx" type="image"></block> <block ref="d2dfbff86c21669b3c15073a169ec8ac" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="2d78443087bc495d923e93521efb0c1d" category="doc">통찰력: 스트레스 상황에서 공유 리소스</block>
-  <block id="d408de43e7eda32b1b6e501c05dc38ce" category="paragraph">큰 영향을 미치는 작업 부하는 공유 리소스에서 다른 작업 부하의 성능을 저하시킬 수 있습니다.  이로 인해 공유 자원에 부담이 가해집니다.  Data Infrastructure Insights 리소스 포화 상태와 테넌트에 미치는 영향을 조사하는 데 도움이 되는 도구를 제공합니다.</block>
-  <block id="aea124b45b62324984b67a059ea0da7f" category="paragraph">*까다로운 작업 부하*는 현재 공유 스토리지 풀의 다른 리소스에 영향을 미치는 것으로 식별된 작업 부하입니다.  이러한 작업 부하로 인해 IOPS가 높아지고(예시) 영향을 받는 작업 부하의 IOPS가 낮아집니다.  까다로운 작업 부하를 _고소비 작업 부하_라고 부르기도 합니다.</block>
-  <block id="7bddab02c6c096040f0edf52e1623868" category="paragraph">*영향을 받는 워크로드*는 공유 스토리지 풀에서 사용량이 많은 워크로드의 영향을 받는 워크로드입니다.  이러한 작업 부하에서는 까다로운 작업 부하로 인해 IOPS가 감소하거나 대기 시간이 길어집니다.</block>
-  <block id="f4addcedcbf7b58a235a6de1cfeb96b7" category="paragraph">Data Infrastructure Insights 주요 컴퓨팅 워크로드를 발견하지 못한 경우 볼륨이나 내부 볼륨 자체가 워크로드로 인식됩니다.  이는 까다로운 작업과 영향을 받는 작업 모두에 적용됩니다.</block>
-  <block id="bf306d07c3ed41852c5f9cb551a07b59" category="paragraph">*경합* 또는 *포화*는 IOPS가 공유 스토리지 풀의 다른 리소스나 작업 부하에 영향을 미치는 것으로 판단될 때 발생합니다.</block>
-  <block id="0b34f00d1d4a3885b35a431a55efeb18" category="section-title">까다로운 작업량</block>
-  <block id="ae8f504ff2e83723f08fc4f873fcdca5" category="paragraph">공유 리소스에서 까다롭고 영향을 받는 작업 부하를 조사하려면 *대시보드 &gt; 인사이트*를 클릭하고 *부하를 받는 공유 리소스* 인사이트를 선택하세요.</block>
-  <block id="923231dd5cc497f857ab7bc31259567c" category="inline-image-macro">인사이트 메뉴</block>
-  <block id="4ad858c99ade794af9d0e0a1491e01bc" category="paragraph"><block ref="4ad858c99ade794af9d0e0a1491e01bc" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="decacd0d9c5727c8132dacde092c0382" category="paragraph">Data Infrastructure Insights 포화 상태가 감지된 모든 워크로드 목록을 표시합니다.  Data Infrastructure Insights 최소한 하나의 _요구되는 리소스_ *또는* _영향을 받는 리소스_가 감지된 워크로드를 표시합니다.</block>
-  <block id="d7c664bf82d9e14603a845f0ffe47993" category="paragraph">작업 부하를 클릭하면 해당 작업의 세부 정보 페이지를 볼 수 있습니다.  상단 차트는 경쟁/포화가 발생하는 공유 리소스(예: 스토리지 풀)에서의 활동을 보여줍니다.</block>
-  <block id="2ca1e64d0a4fdfcf135961f6931ac68b" category="inline-image-macro">경합을 보여주는 공유 리소스</block>
-  <block id="6345c18147755da14a72a1bcc448c878" category="paragraph"><block ref="6345c18147755da14a72a1bcc448c878" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="7e4a0aeb0ee372dc4742c55ad85d4088" category="paragraph">그 아래에는 _까다로운_ 작업 부하와 그 까다로운 작업 부하의 _영향을 받는_ 작업 부하를 보여주는 두 개의 차트가 있습니다.</block>
-  <block id="bea93c5448a53dbeae5f078ae207efa5" category="paragraph"><block ref="416a8d7353098379fdb36ba6e8aa6da8" category="inline-image-macro-rx" type="image"></block> <block ref="abda75af4f4de4a9d5c96cfad5c94c77" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="9eb156b99e347ad63f9400c9ff3d5387" category="paragraph">각 표 아래에는 경합에 영향을 미치거나 경합의 영향을 받는 작업 부하 및/또는 리소스 목록이 있습니다.  리소스(예: VM)를 클릭하면 해당 리소스에 대한 세부 정보 페이지가 열립니다.  워크로드를 클릭하면 관련 포드를 보여주는 쿼리 페이지가 열립니다.  링크가 빈 쿼리를 여는 경우, 영향을 받은 Pod가 더 이상 활성 경합의 일부가 아니기 때문일 수 있습니다.  쿼리의 시간 범위를 수정하여 더 넓은 시간 범위나 더 집중된 시간 범위 내에서 포드 목록을 볼 수 있습니다.</block>
-  <block id="53baeaedbb25410f6c630cdbea1ddb6b" category="paragraph">세입자가 포화 상태에 빠질 가능성을 줄이거나 없애기 위해 취할 수 있는 몇 가지 조치가 있습니다.  해당 페이지에서 *+추천 보기* 링크를 확장하면 표시됩니다.  시도해 볼 수 있는 몇 가지 방법은 다음과 같습니다.</block>
-  <block id="ac62625b23d0635d3eaed0e05c830d36" category="paragraph">마지막으로, *통찰력 링크 복사*를 클릭하면 페이지 URL을 클립보드에 복사하여 동료와 더 쉽게 공유할 수 있습니다.</block>
   <block id="5142ab8747c5da1b5115ffa35bacd522" category="summary">Kubernetes 변경 사항을 추적하는 것이 그 어느 때보다 쉬워졌습니다.</block>
   <block id="d75550072217b58f67a7216961c2bb8c" category="doc">쿠버네티스 변경 분석</block>
   <block id="9ec645581caafa9fbb6d571ba008b9cc" category="paragraph">Kubernetes Change Analytics를 사용하면 K8s 환경에서 발생한 최근 변경 사항을 한눈에 볼 수 있습니다.  알림과 배포 상태를 손쉽게 확인할 수 있습니다.  Change Analytics를 사용하면 모든 배포 및 구성 변경 사항을 추적하고 이를 K8s 서비스, 인프라 및 클러스터의 상태와 성능과 연관시킬 수 있습니다.</block>
@@ -11744,14 +11666,12 @@
   <block id="ef7830d32fe70ad0f843821a2a4f10e4" category="cell">XC 서버와의 TCP 통신에 사용되는 포트</block>
   <block id="36188b71a27eabbba08e545a83d62055" category="summary">DELL EMC Data Domain 데이터 수집기를 구성합니다.</block>
   <block id="ffcfe5fed071732290c9355893581d7d" category="doc">DELL EMC Data Domain 데이터 수집기</block>
-  <block id="bdc3274e97745e1635f0d41c124ddb66" category="paragraph">이 데이터 수집기는 DELL EMC Data Domain 중복 제거 스토리지 시스템에서 인벤토리 및 성능 정보를 수집합니다.  이 데이터 수집기를 구성하려면 따라야 할 특정 구성 지침과 사용 권장 사항이 있습니다.</block>
   <block id="70d1bd7bbccf2d53c6864e712d14cf29" category="paragraph">Data Infrastructure Insights Data Domain 데이터 수집기에서 다음과 같은 인벤토리 정보를 수집합니다.  Data Infrastructure Insights 에서 수집한 각 자산 유형에 대해 해당 자산에 가장 일반적으로 사용되는 용어가 표시됩니다.  이 데이터 수집기를 보거나 문제를 해결할 때 다음 용어를 염두에 두십시오.</block>
   <block id="4410ec34d9e6c1a68100ca0ce033fb17" category="cell">정렬</block>
   <block id="b80d18b0b26e4cbb83a956dc537e214f" category="cell">FC 포트</block>
   <block id="6c202452e44c42e323204da2a3a3c24a" category="cell">파일 시스템</block>
   <block id="5c50d3c1da7fd2f47df616d0d012d1d4" category="cell">NFS와 CIFS 공유</block>
   <block id="dc496e57d71615841c66e4c990c6f335" category="cell">파일 공유</block>
-  <block id="6bc725cd9439cdaa75d76ca867d8a678" category="paragraph">참고: 이는 일반적인 용어 매핑일 뿐이며 이 데이터 수집기의 모든 사례를 나타내지 않을 수 있습니다.</block>
   <block id="4e086ec2792b9a6a42607af390d811f3" category="list-text">Data Domain 장치의 IP 주소</block>
   <block id="461c620bef9b3a3b77c6117d659fd3e0" category="list-text">Data Domain 스토리지에 대한 읽기 전용 사용자 이름 및 암호</block>
   <block id="85a4f04076ca6c3570fadcf452957688" category="list-text">SSH 포트 22</block>
@@ -12393,8 +12313,6 @@
   <block id="f5efcf93de96054f67b29d58662ad5c6" category="list-text">발생 간격으로 _15분_ 동안 _계속_을 선택합니다.</block>
   <block id="95e94216ef8b85a76727809c3dfcbcc0" category="inline-link-macro">ONTAP 데이터 관리</block>
   <block id="2520cfbb37bc8bbd2fc91278c73eb838" category="list-text">ONTAP REST 수집기에서는 Fpolicy 메트릭이 지원되지 않습니다(Workload Security 데이터 수집기는 FPolicy 서버를 사용하고, FPolicy 메트릭을 사용하면 Workload Security 데이터 수집 활동을 모니터링할 수 있음). Fpolicy 지표를 지원하려면 다음을 사용하세요. <block ref="5887f651a571af9233df120cb7d32347" category="inline-link-macro-rx"></block> 수집기.</block>
-  <block id="b2422fa602be830d9f1a2469dd70ca20" category="inline-link-macro">NetApp ONTAP AFX</block>
-  <block id="83cd27100a931554f0e05219011edf39" category="cell"><block ref="83cd27100a931554f0e05219011edf39" category="inline-link-macro-rx"></block></block>
   <block id="14ec544dd26342f2315dc51923b34e66" category="summary">ONTAP AFX 컬렉터</block>
   <block id="aaab7580be4232835e9f12e5691f118f" category="doc">NetApp ONTAP AFX 데이터 수집기</block>
   <block id="e395c9addcba424f5bda562994dfecbe" category="cell">볼륨/ FlexVol/ FlexGroup</block>
@@ -12459,7 +12377,6 @@
   <block id="751c3e0cbbd3c7bba533140abe0f0dde" category="inline-xref">고정/고정 해제 지침</block>
   <block id="55f4b0c8991710156e1d9a114af60fe1" category="cell">고정 해제는 최신 버전(사용 가능한 경우)을 즉시 가져오고 에이전트와 수집기를 업그레이드합니다. 이 업그레이드 중에 fpolicies의 연결이 끊어지고 다시 연결됩니다. 이 기능은 자동 업그레이드의 타이밍을 제어하려는 고객을 위해 설계되었습니다. 아래를 참조하세요<block ref="2271de46efd5da417e9db9f2ab23550b" category="inline-xref-macro-rx"></block> .</block>
   <block id="2a0a2208c984d848c76e3dc480d25f5a" category="cell">대규모 구성의 경우 수집기를 일시 중지하는 대신 고정 및 고정 해제를 사용하는 것이 좋습니다. 고정 및 고정 해제를 사용하는 동안 일시 정지 및 재개가 필요하지 않습니다. 고객은 에이전트와 수집가를 고정해 두고, 새 버전에 대한 이메일 알림을 받으면 30일 기간 내에 에이전트를 하나씩 선택적으로 업그레이드할 수 있습니다. 이 접근 방식은 fpolicies에 대한 지연 영향을 최소화하고 업그레이드 프로세스에 대한 더 큰 제어력을 제공합니다.</block>
-  <block id="4c4482e1695529fa7b313efe35876587" category="cell">다음 중 하나의 라이선스 버전을 실행하는 컴퓨터: * Microsoft Windows 11 * Microsoft Windows Server 2016 * Microsoft Windows Server 2019 * Microsoft Windows Server 2022 * Microsoft Windows Server 2025 이 컴퓨터에서는 다른 애플리케이션 수준 소프트웨어를 실행해서는 안 됩니다. 전용 서버를 권장합니다.</block>
   <block id="96e0bc41f601636412c93ccf60fffb89" category="cell">인수 단위에서 *.cloudinsights.netapp.com 또는 Data Infrastructure Insights 테넌트(예: \https://&lt;tenant_id&gt;.c01.cloudinsights.netapp.com)로의 100Mbps/1Gbps 이더넷 연결, 고정 IP 주소, 포트 80 또는 443(아웃바운드) 연결이 필요합니다.  수집 단위와 각 데이터 수집기 ​​간의 요구 사항에 대해서는 해당 지침을 참조하십시오.<block ref="be56515064596049a4b61d9d1a149cf9" category="inline-link-macro-rx"></block> . 조직에서 인터넷 접속을 위해 프록시 사용이 필요한 경우 조직의 프록시 동작을 이해하고 Data Infrastructure Insights 작동하도록 특정 예외를 찾아야 할 수도 있습니다. 예를 들어, 귀하의 조직에서는 기본적으로 액세스를 차단하고 예외적으로 특정 웹 사이트/도메인에만 액세스를 허용합니까?  그렇다면 예외 목록에 다음 도메인을 추가해야 합니다: *.cloudinsights.netapp.com 자세한 내용은 프록시에 대해 읽어보세요.<block ref="05c875968683001fc59f206218314b72" category="inline-link-macro-rx"></block> 또는<block ref="554efdd06704a764ab0a7e3947e279ff" category="inline-link-macro-rx"></block> .</block>
   <block id="f17c7e32a4fcdb4c787f412cf3181bea" category="cell">관리자와 동일하며 SSO 인증 및 ID 연합 구성을 관리합니다. 관리 서비스 공급자(MSP) 마스터 테넌트에 추가 소유자를 할당하고 클라이언트를 추가할 수도 있습니다.</block>
   <block id="6794662d08bc33fcbd95c93345331eb3" category="list-text">ONTAP 영구 저장소는 9.14.1 버전부터 지원됩니다.</block>
@@ -12606,7 +12523,6 @@
   <block id="3771b23dadd43c39046622dbcb4c17e4" category="list-text">"Test Webhook"을 클릭하여 오류가 없는지 확인하십시오.</block>
   <block id="c20e86538672d1ab3ab8e3a5c2961e28" category="list-text">웹훅을 저장합니다.</block>
   <block id="beda12a678062ce581606c88344f4e06" category="sidebar">Teams Webhook 예시</block>
-  <block id="e18f38a263784d686e9a0d45d5416285" category="cell">다음 운영 체제 중 하나의 라이선스 버전이 설치된 컴퓨터: * AlmaLinux 9.5, 10 * Centos(64비트): Stream 9 * Debian(64비트): 11~13 * OpenSUSE Leap 15.2~15.6, 16 * Oracle Enterprise Linux(64비트): 8.10, 9.2, 9.4, 9.6, 10 * Red Hat(64비트): 8.10, 9.2, 9.4, 9.6, 10 * Rocky 9.2~9.6 * SUSE Linux Enterprise Server 15 SP4~15 SP7, 16 * Ubuntu Server: 20.04, 22.04, 24.04 LTS * 위 플랫폼에 SELinux 설치 이 컴퓨터에는 다른 응용 프로그램 수준의 소프트웨어가 실행되어서는 안 됩니다. 전용 서버를 사용하는 것이 좋습니다. SELinux 환경에서 실행 중인 경우, 수집 장치 시스템에서 다음 명령을 실행하는 것이 좋습니다: sudo semanage fcontext -a -t usr_t "/opt/netapp/cloudinsights(/.*)?" sudo restorecon -R /opt/netapp/cloudinsights</block>
   <block id="ddb78a0715fab46562d8ee8102cea78c" category="list-text">포트 443(또는 구성된 경우 8443)</block>
   <block id="6e7162cfd0e31a7db490a51939253ab9" category="list-text">HPE Alletra 9080</block>
   <block id="193eabb9a17fd246abfc9b708de0fb7f" category="list-text">HPE_3PAR 20450</block>
@@ -14427,7 +14343,6 @@
   <block id="1297bab76f52eaf87c4bead6d91c5747" category="paragraph">*기본 키:* volumeName, storageIdentifier</block>
   <block id="a19ba3643626c0da85c3de321b7fb564" category="cell">lastAccessed</block>
   <block id="5215d51f00cbd59bd4f5379564dd2607" category="cell">마지막 액세스 타임스탬프</block>
-  <block id="7786ae506eee52b626dcc8402f829f17" category="paragraph"><block ref="7786ae506eee52b626dcc8402f829f17" category="inline-link-macro-rx"></block></block>
   <block id="649d30b7cac0604fb3207f769101f157" category="list-text">internal_volume_capacity_fact(일대다)</block>
   <block id="22c529c0f957ddcd1f77511e82dfbfc4" category="list-text">chargeback_fact(일대다)</block>
   <block id="5dd9e2d63020dda622b0aab04bb64243" category="list-text">vm_capacity_fact(일대다)</block>
@@ -14520,13 +14435,10 @@
   <block id="e30ec09a4c79b55e1ccfc1955c76c379" category="cell">switchLevel</block>
   <block id="e10c8c70fc9c70d82df6e3c2ea10ceed" category="cell">스위치 레벨</block>
   <block id="549ae8b6dea4926a2af206c5d7300fc5" category="paragraph">Data Infrastructure Insights를 사용하려면 먼저 *NetApp Console* 포털에 가입해야 합니다. 이미 NetApp Console 로그인 계정이 있다면, 몇 단계만 거치면 Data Infrastructure Insights의 무료 체험을 시작할 수 있습니다.</block>
-  <block id="93e49907cf8d9ecec89d856c3d49fb2f" category="inline-link-macro">퓨어 FlashBlade</block>
-  <block id="f92f77015be3ec66c79ba43a2aec5f69" category="cell"><block ref="f92f77015be3ec66c79ba43a2aec5f69" category="inline-link-macro-rx"></block></block>
   <block id="52e4ed377cdb874dec547eb79615f673" category="admonition">Data Infrastructure Insights의 VPLEX 클러스터 성능 수집을 위해서는 성능 아카이브 서비스가 정상적으로 작동해야 합니다. 이 서비스를 통해 Data Infrastructure Insights는 SCP 기반 파일 복사를 통해 .CSV 파일과 로그를 가져옵니다. NetApp은 많은 VPLEX 펌웨어 업그레이드/관리 스테이션 업데이트로 인해 이 기능이 작동하지 않게 되는 경우가 있음을 확인했습니다. 따라서 업그레이드를 계획 중인 고객은 Dell/EMC에 문의하여 업그레이드로 인해 이 기능이 작동하지 않게 되는지, 그리고 만약 그렇다면 성능 가시성 저하를 최소화하기 위해 어떻게 다시 활성화할 수 있는지 사전에 확인하는 것이 좋습니다. Cloud Insights의 VPLEX 성능 코드는 각 폴링 시 예상되는 모든 파일이 존재하는지, 그리고 제대로 업데이트되고 있는지를 평가합니다. 파일이 누락되었거나 오래된 경우 Data Infrastructure Insights는 성능 수집 실패를 기록합니다.</block>
   <block id="de9fcff157c3fd05f707a7b227a45275" category="summary">Pure FlashBlade Storage 데이터 수집기 구성</block>
   <block id="c0c126a33a6cd3661eae0fb5eca89c2d" category="paragraph">Data Infrastructure Insights는 Pure Storage FlashBlade 데이터 수집기를 사용하여 REST API 버전 2를 제공하는 FlashBlade 클러스터에서 인벤토리 및 성능 데이터를 수집합니다.</block>
   <block id="80e910f35b12e9c61335fa88de36edd0" category="sidebar">Red Hat Virtualization</block>
-  <block id="96d302563986f9d75dc51085e4c183d6" category="cell">link:task_dc_redhat_openshift virtualization.html[Red Hat OpenShift Virtualization]</block>
   <block id="8dfbd1afa40d818910ea903f9d52f6ec" category="summary">Red Hat OpenShift Virtualization 데이터 수집기 구성.</block>
   <block id="50993793783c5f33ae8f736a95dca1b9" category="doc">Red Hat OpenShift Virtualization 데이터 수집기</block>
   <block id="6fd44ae5a42d6b33248d329cbbddaa88" category="paragraph">DII Red Hat OpenShift Virtualization 컬렉터는 OpenShift Virtualization 환경에서 실행 중인 OSV 컴퓨팅 워크로드를 검색하려고 시도합니다. 이 컬렉터는 모든 Open Shift Pod를 검색하지는 않습니다. 이 컬렉터는 HTTPS REST API 기반입니다. OSV 클러스터당 하나의 컬렉터를 생성하는 것이 좋습니다.</block>
@@ -14540,11 +14452,43 @@
   <block id="07bc27033bbe069dd4fcfa7e7287df66" category="cell">RHOV와의 HTTPS 통신에 사용되는 포트</block>
   <block id="db2f9342403e0e147464a85b899ec12c" category="sidebar">Red Hat OpenShift 가상화</block>
   <block id="cc7e5505fa4bc50f5457fa8f8b55f94f" category="section-title">2026년 3월</block>
-  <block id="c62d7b96ff17fd52f5c5b5957d12ce47" category="section-title">Data Infrastructure Insights의 AI 어시스턴트는 누구나 이용할 수 있습니다!</block>
-  <block id="dd0f9294fa313d494966ae16cbe89435" category="paragraph">Data Infrastructure Insights AI Assistant가 미리 보기로 제공되며, 이제 다음과 같은 개선 사항이 포함됩니다.</block>
-  <block id="e609c64ff8e8c15f1ce845903ca2db7e" category="list-text">Azure 지역 가용성: DII 사이트가 Azure에 호스팅된 고객의 경우, 이제 Data Infrastructure Insights Assistant를 사용할 수 있습니다.</block>
-  <block id="056a97d89a4b6d30acf8e9b86d3ed172" category="list-text">최대 7일간의 데이터: 이제 Assistant는 최대 7일간의 고해상도 메트릭에 액세스할 수 있어 더욱 폭넓은 데이터 분석 및 인사이트 도출이 가능합니다.</block>
   <block id="e43d8f702818ecf5597859f98ff1e993" category="list-text">ASSETS 유형에는 asset, query 및 search API가 포함됩니다. DII asset 속성 및 metric은 때때로 "odata"라고도 합니다. 이러한 API는 일반적으로 /rest/v1/asset 또는 /rest/v1/query를 통해 액세스할 수 있습니다. 자세한 내용은 <block ref="622b990b99495c7072e19eb08becc13e" category="inline-xref-macro-rx"></block>을 참조하십시오.</block>
   <block id="627c6b105244e1b95d64a8f71c382473" category="list-text">DATA INGESTION 유형은 Telegraf 에이전트와 같은 곳에서 수집 데이터 및 사용자 지정 메트릭을 검색하고 관리하는 데 사용됩니다. 이러한 메트릭은 때때로 "데이터레이크" 또는 "레이크" 메트릭이라고도 합니다. 이러한 API는 일반적으로 /rest/v1/lake를 통해 액세스됩니다. 자세한 내용은 <block ref="622b990b99495c7072e19eb08becc13e" category="inline-xref-macro-rx"></block>을(를) 참조하십시오.</block>
   <block id="d14a20e4ad37ea89f3a29854e5a1934c" category="paragraph">참고로, 사용자가 접근할 수 있는 API 유형은 각 Data Infrastructure Insights 기능 세트(관찰 가능성, 워크로드 보안, 보고)에서 사용자가 보유한 <block ref="ead2141fb682d81a2f0b1deca7bb95c5" category="inline-link-macro-rx"></block>에 따라 달라집니다.</block>
+  <block id="627f42d17d7ea3d6e54846b3aac2b49f" category="paragraph">다음 중 하나의 라이선스 버전을 실행하는 컴퓨터:</block>
+  <block id="62f84edfc095da652c65bd53d752ae9f" category="list-text">AlmaLinux 9.5, 10</block>
+  <block id="e4b10322d174dad1b342b960d4db4a1a" category="paragraph">이 컴퓨터에서는 다른 애플리케이션 수준의 소프트웨어를 실행해서는 안 됩니다. 전용 서버를 사용하는 것이 좋습니다.</block>
+  <block id="ad1be19da774dae802b440155ce7d99e" category="paragraph">SELinux를 사용하는 경우 acquisition unit 시스템에서 다음 명령을 실행하는 것이 좋습니다.</block>
+  <block id="c05e480e3f21ed06330149211021128c" category="list-text">Microsoft Windows 11</block>
+  <block id="74dd40aa9a6635d79204e610e8324c38" category="list-text">Microsoft Windows Server 2016</block>
+  <block id="1ee2c5253c485a81cfff8c8e3e23a23f" category="list-text">Microsoft Windows Server 2019</block>
+  <block id="6ed0120f37738e825d889dcb299d9251" category="list-text">Microsoft Windows Server 2022</block>
+  <block id="6e6b7efb9f9c24d5ca212d65430689fd" category="list-text">Microsoft Windows Server 2025</block>
+  <block id="4f9edfe2d639bdf84659ce06867169be" category="paragraph">50GB(100GB 권장)</block>
+  <block id="cd7b5f0dcf0b21cd4f7309088a390cc0" category="paragraph">Linux의 경우 디스크 공간은 다음과 같은 방식으로 할당해야 합니다.</block>
+  <block id="edad7b7dcf5cc00b2dda3c18951100a2" category="list-text">/opt/netapp 10 GB(대규모 환경의 경우 20 GB)</block>
+  <block id="bb8581977ca7a9a1f259d38b9862e60a" category="list-text">/var/log/netapp 40 GB(대규모 환경의 경우 80 GB)</block>
+  <block id="747ac0c92d8f5c3aa0f9c512ce6cddcf" category="list-text">설치 중 /tmp에 최소 1GB 사용 가능</block>
+  <block id="c5c33f7f872335cb93ed44e9b04d0a42" category="paragraph">파일 시스템은 오버헤드로 인해 약간의 공간을 사용할 수 있습니다. 다음은 설치 전에 _사용 가능해야_ 하는 최소 공간입니다.</block>
+  <block id="57919acc530156af753aec7b4f2f3fd0" category="section-title">AI Assistant가 이제 정식 출시되었습니다</block>
+  <block id="f58fde87057b6940a6342bbe077ef420" category="paragraph">Data Infrastructure Insights AI Assistant는 이제 AWS에서 호스팅되는 DII 사이트의 모든 고객이 정식으로 이용할 수 있습니다.</block>
+  <block id="0e03cca45a1184995a9ec2d51413668b" category="paragraph">Azure 사이트의 AI Assistant는 아직 미리 보기 단계입니다. 정식 출시 발표를 기대해 주세요.</block>
+  <block id="74909051b7c24faefceb41b1c2f67f3f" category="section-title">Data Infrastructure Insights 기능이 제거되었습니다</block>
+  <block id="eeca18d86334ede222257bab8c195d15" category="paragraph">DII의 "Infrastructure Insights" 기능 중 _Shared Resources Under Stress_, _Kubernetes Namespaces Running out of Space_, _Reclaiming ONTAP Cold Storage_는 더 이상 DII에서 사용할 수 없습니다.</block>
+  <block id="f1e2a8b4ad8172c17aa60b03b39227c4" category="inline-link-macro">Pure Storage FlashBlade</block>
+  <block id="6b27f70000f03c5a24fb70b6ed340d8e" category="cell"><block ref="6b27f70000f03c5a24fb70b6ed340d8e" category="inline-link-macro-rx"></block></block>
+  <block id="079cdcfd43abfa5548c437b1a50427fb" category="inline-link-macro">Red Hat OpenShift 가상화</block>
+  <block id="bd6345d055b68904ea42423102195045" category="cell"><block ref="bd6345d055b68904ea42423102195045" category="inline-link-macro-rx"></block></block>
+  <block id="d818fc83532d27c308cb47649bd5ec02" category="admonition">이 수집기는 더 이상 사용되지 않습니다. 2027년 1월부터는 더 이상 이용할 수 없습니다.</block>
+  <block id="faf4a8391186fe75061a56efa03cbe77" category="paragraph">이 데이터 수집기는 DELL EMC Data Domain 데이터 중복 제거 스토리지 시스템에서 인벤토리 정보를 수집합니다. 이 데이터 수집기를 구성하려면 따라야 할 특정 구성 지침 및 사용 권장 사항이 있습니다.</block>
+  <block id="6b4e228e21f03e0f137a5d82c17defab" category="paragraph">Red Hat Virtualization용 DII 데이터 수집기는 오픈 소스 프로젝트 oVirt와 Oracle Linux Virtualization Manager도 지원합니다. 이 데이터 수집기는 REST API를 통해 관리 스테이션의 HTTPS 인터페이스와 통신합니다.</block>
+  <block id="154535c2753f4d1eedc433e63b2e796f" category="list-text">REST API를 통해 포트 443으로 RHV/oVirt/OLVM 서버의 IP 주소/호스트 이름</block>
+  <block id="aee702f6738b473d9ebf07b43255af32" category="list-text">RHV 버전 3.0+/Ovirt 4.0+/OLVM 4.0+</block>
+  <block id="e4d0cf9093fde0665165a53499aff00b" category="cell">RHV/Ovirt/OLVM 서버 IP 주소</block>
+  <block id="cb5cba13a9dcf03bdccf20db87fe2d0c" category="cell">관리 스테이션의 IP 주소</block>
+  <block id="c304b6eec4c1c5c3c0517f83640ef6e3" category="cell">성능 수집 활성화</block>
+  <block id="10558b4f829f071034d968780bb7a36e" category="cell">성능 폴링 간격(초)</block>
+  <block id="6f159883a7f482d97fbfbd3597406382" category="cell">기본값은 900입니다.</block>
+  <block id="b222969a0e0fca1c5ae1f58770c55fd3" category="summary">2020년부터 Data Infrastructure Insights에서 사용할 수 있는 새로운 기능</block>
+  <block id="3535e34a6ea939a9c4a64fcb08c9f72d" category="doc">Data Infrastructure Insights의 새로운 기능 - 2020년 아카이브</block>
 </blocks>

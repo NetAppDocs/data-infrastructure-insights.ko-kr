@@ -7,10 +7,14 @@ summary: DELL EMC Data Domain 데이터 수집기를 구성합니다.
 = DELL EMC Data Domain 데이터 수집기
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-이 데이터 수집기는 DELL EMC Data Domain 중복 제거 스토리지 시스템에서 인벤토리 및 성능 정보를 수집합니다.  이 데이터 수집기를 구성하려면 따라야 할 특정 구성 지침과 사용 권장 사항이 있습니다.
+이 데이터 수집기는 DELL EMC Data Domain 데이터 중복 제거 스토리지 시스템에서 인벤토리 정보를 수집합니다. 이 데이터 수집기를 구성하려면 따라야 할 특정 구성 지침 및 사용 권장 사항이 있습니다.
 
 
 

@@ -7,10 +7,17 @@ summary: Redis 데이터 수집기 구성
 = Redis 데이터 수집기
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
 Data Infrastructure Insights 이 데이터 수집기를 사용하여 Redis에서 지표를 수집합니다.  Redis는 데이터베이스, 캐시, 메시지 브로커로 사용되는 오픈 소스 인메모리 데이터 구조 저장소로, 문자열, 해시, 목록, 집합 등의 데이터 구조를 지원합니다.
+
+
+NOTE: 이 수집기는 더 이상 사용되지 않습니다. 2027년 1월부터는 더 이상 이용할 수 없습니다.
 
 
 

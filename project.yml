@@ -93,16 +93,6 @@ sidebar:
         url: "/concept_log_explorer.html"
       - title: 비활성 장치 식별
         url: "/task_identify_inactive_devices.html"
-    - title: 통찰력
-      entries:
-      - title: 개요
-        url: "/insights_overview.html"
-      - title: 스트레스 하의 공유 자원
-        url: "/insights_shared_resources_under_stress.html"
-      - title: Kubernetes 네임스페이스 공간 부족
-        url: "/insights_k8s_namespaces_running_out_of_space.html"
-      - title: ONTAP 냉장 보관소 회수
-        url: "/insights_reclaim_ontap_cold_storage.html"
     - title: 모니터 및 알림
       entries:
       - title: 모니터 만들기

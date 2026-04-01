@@ -7,10 +7,17 @@ summary: Hadoop 데이터 수집기 구성
 = Hadoop 데이터 수집기
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
 Data Infrastructure Insights 이 데이터 수집기를 사용하여 Hadoop에서 지표를 수집합니다.
+
+
+NOTE: 이 수집기는 더 이상 사용되지 않습니다. 2027년 1월부터는 더 이상 이용할 수 없습니다.
 
 
 

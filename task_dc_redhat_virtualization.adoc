@@ -14,7 +14,7 @@ summary: Red Hat Virtualization 데이터 수집기를 구성합니다.
 
 
 [role="lead"]
-Data Infrastructure Insights Red Hat Virtualization 데이터 수집기를 사용하여 가상화된 Linux 및 Microsoft Windows 워크로드에서 인벤토리 데이터를 수집합니다.
+Red Hat Virtualization용 DII 데이터 수집기는 오픈 소스 프로젝트 oVirt와 Oracle Linux Virtualization Manager도 지원합니다. 이 데이터 수집기는 REST API를 통해 관리 스테이션의 HTTPS 인터페이스와 통신합니다.
 
 
 
@@ -47,9 +47,9 @@ Data Infrastructure Insights 에서 수집한 각 자산 유형에 대해 해당
 
 == 요구 사항
 
-* REST API를 통한 포트 443을 통한 RHEV 서버의 IP 주소
+* REST API를 통해 포트 443으로 RHV/oVirt/OLVM 서버의 IP 주소/호스트 이름
 * 읽기 전용 사용자 이름 및 비밀번호
-* RHEV 버전 3.0+
+* RHV 버전 3.0+/Ovirt 4.0+/OLVM 4.0+
 
 
 
@@ -61,13 +61,13 @@ Data Infrastructure Insights 에서 수집한 각 자산 유형에 대해 해당
 | 필드 | 설명 
 
 
-| RHEV 서버 IP 주소 | 저장 시스템의 IP 주소 
+| RHV/Ovirt/OLVM 서버 IP 주소 | 관리 스테이션의 IP 주소 
 
 
-| 사용자 이름 | 관리자 권한이 있는 사용자 이름 
+| 사용자 이름 | 사용자 이름 
 
 
-| 관리자 권한 계정의 비밀번호 | 비밀번호 
+| 비밀번호 | 비밀번호 
 |===
 
 
@@ -82,6 +82,12 @@ Data Infrastructure Insights 에서 수집한 각 자산 유형에 대해 해당
 
 
 | 재고 폴링 간격(분) | 기본값은 20분입니다. 
+
+
+| VM 성능 | 성능 수집 활성화 
+
+
+| 성능 폴링 간격(초) | 기본값은 900입니다. 
 |===
 
 
