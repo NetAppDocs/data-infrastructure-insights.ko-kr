@@ -1,0 +1,24 @@
+---
+sidebar: sidebar 
+permalink: ws_alert_exclusions.html 
+keywords: workload security, cloud secure, include list, allowed, file types, ransomware, tampering, exclusion, alerts 
+summary: 파일 확장자를 알림 제외 목록에 추가하여 알림을 줄입니다. 
+---
+= 알림 제외
+:allow-uri-read: 
+
+
+[role="lead"]
+알려진 파일 확장자에 대한 파일 변조 공격이 감지되고 알림 화면에 알림이 생성되는 경우, 불필요한 알림을 방지하기 위해 해당 파일 확장자를 _알림 제외_ 목록에 추가할 수 있습니다. Workload Security에서 이러한 파일이 변조로 인한 알림을 우회하도록 허용하므로 이를 _허용된 파일 유형_ 목록으로 생각할 수도 있습니다.
+
+*Workload Security > Policies*로 이동한 다음 _Alert Exclusions_ 탭으로 이동합니다.
+
+image:ws_alert_exclusions_list.png["알림 대상에서 제외할 수 있는 파일 형식"]
+
+허용된 파일 형식 목록에 추가되면 해당 파일 형식에 대해서는 파일 변조 공격 경고가 생성되지 않습니다. 경고 제외 정책은 파일 변조 감지에만 적용됩니다.
+
+예를 들어, _test.txt_라는 파일의 이름이 _test.txt.abc_로 변경되었는데 Workload Security에서 _.abc_ 확장자 때문에 파일 변조 공격으로 감지하는 경우, _.abc_ 확장자를 허용된 파일 형식 목록에 추가할 수 있습니다. 목록에 추가되면 _.abc_ 확장자를 가진 파일에 대해서는 더 이상 파일 변조 공격이 생성되지 않습니다.
+
+허용되는 파일 형식은 정확히 일치하는 형식(예: ".abc")이거나 표현식(예: "*.type", ".type*" 또는 ".*type*")일 수 있습니다. ".a*c", ".p*f"와 같은 형식의 표현식은 지원되지 않습니다.
+
+감사를 위해 'Set By' 및 'Set Date'의 추가 속성이 도입되었습니다. 기존 파일 유형은 이 두 속성 값이 모두 'migrated'로 설정된 새 형식으로 마이그레이션됩니다.

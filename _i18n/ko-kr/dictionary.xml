@@ -12462,7 +12462,6 @@
   <block id="db1a2df035e9cd0bcdfb55db52e3e64b" category="paragraph">알려진 파일 확장자에 대한 파일 변조 공격이 감지되어 경고 화면에 경고가 생성되는 경우, 불필요한 경고를 방지하기 위해 해당 파일 확장자를 _허용된 파일 형식_ 목록에 추가할 수 있습니다.</block>
   <block id="8d791b80cd3ffee28fe92eaeb570182d" category="paragraph">허용된 파일 형식 목록에 추가되면 해당 파일 형식에 대해서는 파일 변조 공격 경고가 생성되지 않습니다. _허용 파일 형식_ 정책은 파일 변조 감지에만 적용된다는 점에 유의하십시오.</block>
   <block id="7af3f2f9c8eaa3a8ff61f839001e8ca0" category="paragraph">예를 들어, _test.txt_라는 파일의 이름이 _test.txt.abc_로 변경되었는데 워크로드 보안에서 _.abc_ 확장자 때문에 파일 변조 공격으로 감지하는 경우, _.abc_ 확장자를 _허용된 파일 형식_ 목록에 추가할 수 있습니다. 해당 목록에 추가된 후에는 _.abc_ 확장자를 가진 파일에 대해 더 이상 파일 변조 공격이 발생하지 않습니다.</block>
-  <block id="374bdbda42629b3859daec6506078b36" category="sidebar">ONTAP 자율 보호 통합</block>
   <block id="5273cec606b6768f8394e2ae1566c7f6" category="sidebar">공격 시뮬레이션</block>
   <block id="5da98f5c78418524ecf144084929f19e" category="doc">워크로드 보안: 파일 변조 시뮬레이션</block>
   <block id="e192cb4cca3f754a1b50fdf853ce74a4" category="summary">SVM 이벤트 속도 검사기를 사용하여 NFS/SMB 이벤트 속도를 측정하고 워크로드 보안 데이터 수집기를 배포하기 전에 최적의 에이전트 크기를 결정하십시오.</block>
@@ -14491,4 +14490,15 @@
   <block id="6f159883a7f482d97fbfbd3597406382" category="cell">기본값은 900입니다.</block>
   <block id="b222969a0e0fca1c5ae1f58770c55fd3" category="summary">2020년부터 Data Infrastructure Insights에서 사용할 수 있는 새로운 기능</block>
   <block id="3535e34a6ea939a9c4a64fcb08c9f72d" category="doc">Data Infrastructure Insights의 새로운 기능 - 2020년 아카이브</block>
+  <block id="ea178ff6db0ce95c8cbc3246d6650cb9" category="summary">파일 확장자를 알림 제외 목록에 추가하여 알림을 줄입니다.</block>
+  <block id="d183e2d7c0392d5cf66d1908be8211c1" category="doc">알림 제외</block>
+  <block id="ee91b4dd26cc357eaf6f92f8e70239f0" category="paragraph">알려진 파일 확장자에 대한 파일 변조 공격이 감지되고 알림 화면에 알림이 생성되는 경우, 불필요한 알림을 방지하기 위해 해당 파일 확장자를 _알림 제외_ 목록에 추가할 수 있습니다. Workload Security에서 이러한 파일이 변조로 인한 알림을 우회하도록 허용하므로 이를 _허용된 파일 유형_ 목록으로 생각할 수도 있습니다.</block>
+  <block id="44e5ffe8f45ef48f6d55fd323a14ebd5" category="paragraph">*Workload Security &gt; Policies*로 이동한 다음 _Alert Exclusions_ 탭으로 이동합니다.</block>
+  <block id="b81cf913eebf1b9b3172d1df8992971e" category="inline-image-macro">알림 대상에서 제외할 수 있는 파일 형식</block>
+  <block id="a7b62f8b775b1075063ceb3d8a408b10" category="paragraph"><block ref="a7b62f8b775b1075063ceb3d8a408b10" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="0ca499fad2902c1886076f6a79993648" category="paragraph">허용된 파일 형식 목록에 추가되면 해당 파일 형식에 대해서는 파일 변조 공격 경고가 생성되지 않습니다. 경고 제외 정책은 파일 변조 감지에만 적용됩니다.</block>
+  <block id="c40c4ea70475c0ba0841ba534492332d" category="paragraph">예를 들어, _test.txt_라는 파일의 이름이 _test.txt.abc_로 변경되었는데 Workload Security에서 _.abc_ 확장자 때문에 파일 변조 공격으로 감지하는 경우, _.abc_ 확장자를 허용된 파일 형식 목록에 추가할 수 있습니다. 목록에 추가되면 _.abc_ 확장자를 가진 파일에 대해서는 더 이상 파일 변조 공격이 생성되지 않습니다.</block>
+  <block id="670039cd8e2f07d8b36e77f11294bedb" category="paragraph">허용되는 파일 형식은 정확히 일치하는 형식(예: ".abc")이거나 표현식(예: "*.type", ".type*" 또는 ".*type*")일 수 있습니다. ".a*c", ".p*f"와 같은 형식의 표현식은 지원되지 않습니다.</block>
+  <block id="3720ff11b9d0e04f7fd96e22ff7a745f" category="paragraph">감사를 위해 'Set By' 및 'Set Date'의 추가 속성이 도입되었습니다. 기존 파일 유형은 이 두 속성 값이 모두 'migrated'로 설정된 새 형식으로 마이그레이션됩니다.</block>
+  <block id="9b5911ec569b49f0ae81ecb2c9067806" category="sidebar">ONTAP 자율형 랜섬웨어 보호 통합</block>
 </blocks>
