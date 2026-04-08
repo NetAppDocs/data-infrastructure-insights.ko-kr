@@ -14492,13 +14492,21 @@
   <block id="3535e34a6ea939a9c4a64fcb08c9f72d" category="doc">Data Infrastructure Insights의 새로운 기능 - 2020년 아카이브</block>
   <block id="ea178ff6db0ce95c8cbc3246d6650cb9" category="summary">파일 확장자를 알림 제외 목록에 추가하여 알림을 줄입니다.</block>
   <block id="d183e2d7c0392d5cf66d1908be8211c1" category="doc">알림 제외</block>
-  <block id="ee91b4dd26cc357eaf6f92f8e70239f0" category="paragraph">알려진 파일 확장자에 대한 파일 변조 공격이 감지되고 알림 화면에 알림이 생성되는 경우, 불필요한 알림을 방지하기 위해 해당 파일 확장자를 _알림 제외_ 목록에 추가할 수 있습니다. Workload Security에서 이러한 파일이 변조로 인한 알림을 우회하도록 허용하므로 이를 _허용된 파일 유형_ 목록으로 생각할 수도 있습니다.</block>
-  <block id="44e5ffe8f45ef48f6d55fd323a14ebd5" category="paragraph">*Workload Security &gt; Policies*로 이동한 다음 _Alert Exclusions_ 탭으로 이동합니다.</block>
-  <block id="b81cf913eebf1b9b3172d1df8992971e" category="inline-image-macro">알림 대상에서 제외할 수 있는 파일 형식</block>
-  <block id="a7b62f8b775b1075063ceb3d8a408b10" category="paragraph"><block ref="a7b62f8b775b1075063ceb3d8a408b10" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="0ca499fad2902c1886076f6a79993648" category="paragraph">허용된 파일 형식 목록에 추가되면 해당 파일 형식에 대해서는 파일 변조 공격 경고가 생성되지 않습니다. 경고 제외 정책은 파일 변조 감지에만 적용됩니다.</block>
-  <block id="c40c4ea70475c0ba0841ba534492332d" category="paragraph">예를 들어, _test.txt_라는 파일의 이름이 _test.txt.abc_로 변경되었는데 Workload Security에서 _.abc_ 확장자 때문에 파일 변조 공격으로 감지하는 경우, _.abc_ 확장자를 허용된 파일 형식 목록에 추가할 수 있습니다. 목록에 추가되면 _.abc_ 확장자를 가진 파일에 대해서는 더 이상 파일 변조 공격이 생성되지 않습니다.</block>
-  <block id="670039cd8e2f07d8b36e77f11294bedb" category="paragraph">허용되는 파일 형식은 정확히 일치하는 형식(예: ".abc")이거나 표현식(예: "*.type", ".type*" 또는 ".*type*")일 수 있습니다. ".a*c", ".p*f"와 같은 형식의 표현식은 지원되지 않습니다.</block>
-  <block id="3720ff11b9d0e04f7fd96e22ff7a745f" category="paragraph">감사를 위해 'Set By' 및 'Set Date'의 추가 속성이 도입되었습니다. 기존 파일 유형은 이 두 속성 값이 모두 'migrated'로 설정된 새 형식으로 마이그레이션됩니다.</block>
   <block id="9b5911ec569b49f0ae81ecb2c9067806" category="sidebar">ONTAP 자율형 랜섬웨어 보호 통합</block>
+  <block id="1fe01bac09fca89fb6f196d8c95401dc" category="paragraph">경고 제외 기능을 사용하면 특정 파일 형식, 사용자 및 디렉터리 경로에 대한 경고 생성을 억제할 수 있습니다. 이 기능을 활용하여 경고 패턴과 일치할 수 있는 알려진 예상 활동을 제외함으로써 오탐을 줄일 수 있습니다.</block>
+  <block id="3b39eff6bd46ab915c26d8ab9ed7bb91" category="paragraph">경고 제외는 테넌트별로 구성되며 다음 항목을 포함합니다.</block>
+  <block id="1ce4fd7b116c43c936cc8ddbaa51ce99" category="inline-link-macro">파일 확장자</block>
+  <block id="f49e387bd8ac75fdab8d848695d1de88" category="list-text">파일 유형: 특정 <block ref="10b52059d1feedcec024042c1bbd1e91" category="inline-link-macro-rx"></block>에 대한 파일 변조 경고 억제</block>
+  <block id="aa4f2113791c12393a66ffe706420102" category="list-text">사용자: 선택한 사용자에 의해 트리거된 알림을 억제합니다.</block>
+  <block id="ecfbace61ab4dd6175d43a276330b05d" category="list-text">경로: 선택한 디렉터리 경로(접합 경로에서 시작하여 최대 4개 디렉터리 레벨)의 활동에 대한 알림을 억제합니다.</block>
+  <block id="099aaf46fa32549a39916446ecf1fe7e" category="inline-link-macro">허용되는 파일 유형</block>
+  <block id="0dd69cce6b9e3a8a53769caf0047d503" category="paragraph">파일 유형 제외('허용된 파일 유형 정책'이라고도 함)가 업데이트되었으며 <block ref="38cbb5c947813aa64b0054e34231a6d7" category="inline-link-macro-rx"></block>에 설명되어 있습니다.</block>
+  <block id="70c2babfc037807dc9d1d94e48e6b818" category="paragraph">사용자 제외 목록은 자동 완성 기능을 지원하며, 관리자는 알림에서 제외할 사용자를 선택할 수 있습니다.</block>
+  <block id="ab217818a7f8d6405dd619210434e25f" category="paragraph">디렉터리 제외는 junction 경로부터 시작하여 최대 4단계의 디렉터리 경로를 지원합니다.</block>
+  <block id="33b828c8fb435b67f3a4a321adbc89c1" category="paragraph">개별 사용자 및 디렉터리 경로를 해당 제외 목록에 추가하거나 제거할 수 있습니다. 각 목록의 모든 항목에는 언제 누가 추가했는지에 대한 정보가 기록되며, 이 정보는 감사 목적으로 사용됩니다.</block>
+  <block id="b2bc711706213f5680535c284278fd8a" category="section-title">제외 및 감사 관리</block>
+  <block id="4cc0f970741fc7eef05a2f6890f15228" category="list-text">관리자는 언제든지 파일 확장자, 개별 사용자 또는 경로를 추가하거나 제거할 수 있습니다.</block>
+  <block id="49a160591030eb82ba36b624f5514398" category="list-text">각 제외 항목에는 해당 항목을 설정한 관리자의 이름과 설정 날짜가 기록됩니다. 이 정보는 감사 목적으로 보관됩니다.</block>
+  <block id="430f66c61c1d6e05ef92945c7107306f" category="paragraph"><block ref="430f66c61c1d6e05ef92945c7107306f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4d06e3dd77aaee13a5d969e19fc7acf6" category="paragraph"><block ref="4d06e3dd77aaee13a5d969e19fc7acf6" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
