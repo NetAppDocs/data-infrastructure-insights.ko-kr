@@ -4872,7 +4872,6 @@
   <block id="8e2e894a8f2d0c798eda10b04a6aae2c" category="inline-link-macro">클라우드 데이터 서비스 지원 등록</block>
   <block id="960807b3a38d77ca1916570b1732dda1" category="inline-xref">지원 활성화</block>
   <block id="801ef9b405d4e49db3e3da2aa073e5f6" category="admonition">등록을 해야 합니다<block ref="5dae4a2b8da6e9eee160d72287b835e3" category="inline-xref-macro-rx"></block> NetApp Cloud 제품에 대한 정보입니다.  등록하려면 NetApp으로 이동하세요.<block ref="c5b01460a42d58b3ab6bc662dda87194" category="inline-link-macro-rx"></block> .</block>
-  <block id="1674a792a0bf779b22729331c5646696" category="paragraph">지원 세션 중에 NetApp 지원 엔지니어가 Data Infrastructure Insights 테넌트에 액세스할 수 있도록 허용하려면 상자를 선택하는 것이 좋습니다.  이렇게 하면 엔지니어가 문제를 해결하고 신속하게 문제를 해결하는 데 도움이 됩니다.  문제가 해결되거나 지원 세션이 종료되면 상자 선택을 해제할 수 있습니다.</block>
   <block id="26bf81182a5b7a20da27b311cdf97f3d" category="paragraph">다음 방법 중 하나를 통해 지원을 요청할 수 있습니다.  다음 지원 옵션을 사용하려면 활성 Data Infrastructure Insights 구독이 있어야 합니다.</block>
   <block id="e145a699aa519b4431527a84030fe1fd" category="inline-link-macro">*핸드폰*</block>
   <block id="d509e88fe0d420e546f838c2bf3149e4" category="list-text"><block ref="d509e88fe0d420e546f838c2bf3149e4" category="inline-link-macro-rx"></block></block>
@@ -14038,4 +14037,57 @@
   <block id="b3e41e2fae7745b697dbed9b6f854aa1" category="inline-image-macro">파일 유형 목록</block>
   <block id="28460fbd00b73b7255d03888d8c1d8e5" category="paragraph"><block ref="28460fbd00b73b7255d03888d8c1d8e5" category="inline-image-macro-rx" type="image"></block></block>
   <block id="3720ff11b9d0e04f7fd96e22ff7a745f" category="paragraph">감사를 위해 'Set By' 및 'Set Date'의 추가 속성이 도입되었습니다. 기존 파일 유형은 이 두 속성 값이 모두 'migrated'로 설정된 새 형식으로 마이그레이션됩니다.</block>
+  <block id="50910271cc7ffda5c5f9d1e0841741da" category="paragraph">지원 세션 중에 NetApp 지원 엔지니어가 Data Infrastructure Insights 사이트에 액세스할 수 있도록 확인란을 선택하는 것이 좋습니다. 이렇게 하면 엔지니어가 문제를 해결하고 신속하게 해결할 수 있습니다. 지원 엔지니어가 사이트에 액세스하는 동안 모든 관리자 수준 기능을 수행할 수 있습니다.</block>
+  <block id="4568a4a8282d9407a4d8fa1b8e3256db" category="paragraph">문제가 해결되었거나 지원 세션이 종료되면 해당 확인란의 선택을 해제할 수 있습니다.</block>
+  <block id="fc7d05f9009e90b92a15aad926bca249" category="section-title">2026년 4월</block>
+  <block id="7a62dee07c327e2cb645ca3b768833e5" category="section-title">Data Infrastructure Insights는 여러분의 환경을 그 어느 때보다 더 잘 이해합니다.</block>
+  <block id="03f3540edfca404eee2edf4a846ae64c" category="paragraph">Data Infrastructure Insights의 AI가 사용자 환경을 이해하는 방식을 개선했습니다. 응답하기 전에 서비스의 현재 사용 현황, 구성 및 성능 패턴에 대한 보다 풍부한 컨텍스트를 활용합니다. 그 결과, 일반적인 시작점이 아닌 사용자 환경을 반영한 초기 안내를 제공하여 유용한 답변을 얻기 위한 추가 질문 횟수를 줄일 수 있습니다.</block>
+  <block id="9bbfda6f09499778d37c749e10e5cd09" category="paragraph">예를 들어, 스토리지 장치로 이동하면 AI Assistant가 다음과 같은 질문에 대한 답변을 한 번의 클릭으로 제공합니다.</block>
+  <block id="5048355a939962882b19e9978c6de9b4" category="list-text">이 스토리지의 용량 활용률 추세는 어떻고, 어떤 StoragePools가 가장 많은 공간을 차지하고 있습니까?</block>
+  <block id="bd0fc56b14454f1ee18d759d4af08ed3" category="list-text">지난 24시간 동안 이 디바이스의 용량 사용률 추세를 보여주시겠습니까?</block>
+  <block id="aa7271070bccbdb553337d1d11a546e3" category="list-text">이 스토리지에서 가장 많은 공간을 차지하는 볼륨은 무엇입니까?</block>
+  <block id="d166bd4cdca169a67a613a26fe8770ce" category="paragraph">'''nt1.png[테이블 위젯 단위 관리]</block>
+  <block id="3d2f1005746d7db51821bc629f7d4407" category="paragraph">잠재적 랜섬웨어 공격에 대한 세부 정보 페이지: -Screen" 보기: 테이블 위젯은 왼쪽에 개체/그룹을 표시하고 오른쪽에 개체 데이터(속성/메트릭)를 표시합니다.</block>
+  <block id="af730d8a2733a784c669eb49b4d22282" category="paragraph">+ <block ref="d39f912f84d3b7c6330ea5e1e4443c8f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e81234c807cc73fff59051e85698456e" category="paragraph">[서식 지정이 포함된 값 위젯] <block ref="ea343c0c42e5fd6968847a90104062ca" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="460cdd4165472896cc30053fb384c428" category="summary">Workload Security의 감사 이벤트</block>
+  <block id="7fb266e1b99b0df47eb66e941859d665" category="doc">Workload Security 이벤트 감사</block>
+  <block id="fd353ad75bcbf126fad9d6e35df7010e" category="paragraph">예상되는 변경 사항(추적용)과 예상치 못한 변경 사항(문제 해결용)을 모두 식별합니다. Workload Security 시스템 이벤트 및 사용자 활동에 대한 감사 추적 기록을 볼 수 있습니다.</block>
+  <block id="b314a4439b8566362801e323965bf155" category="paragraph">감사 페이지를 보려면 메뉴에서 Admin &gt; Audit를 클릭하십시오. 감사 페이지가 표시되며 각 감사 항목에 대한 다음 세부 정보가 제공됩니다.</block>
+  <block id="7067e58a52148d6e3da60108b4cb4632" category="list-text">시간 - 이벤트 또는 활동의 날짜 및 시간</block>
+  <block id="dcf0e3103586dbddc36cc5f26dd6d51b" category="list-text">사용자 - 활동을 시작한 사용자</block>
+  <block id="592d7521568335e69f92257bfd22601a" category="list-text">역할 - Workload Security에서 사용자의 역할(게스트, 사용자, 관리자)</block>
+  <block id="d458ab911d522e4254ae9cdb7ea03d01" category="list-text">IP - 이벤트와 연결된 IP 주소</block>
+  <block id="cee813c8d86d250fd1721645d6a49210" category="list-text">작업 - 활동 유형(예: Login, Create, Update)</block>
+  <block id="b778dd43a738838d7aedce9b33722775" category="list-text">범주 - 활동의 범주입니다.</block>
+  <block id="bb69c620668e5f23beee0ab1f6d31feb" category="list-text">세부 정보 - 활동에 대한 세부 정보</block>
+  <block id="c55f7a21d0556f5e2a47dfadc3db35eb" category="list-text">애플리케이션 유형 - 감사 대상 애플리케이션 유형: Observability 또는 Workload Security. Workload Security 감사만 필터링하는 데 사용합니다.</block>
+  <block id="d3c127671fefcc305b5b0cd625930c99" category="paragraph">감사되는 Workload Security 이벤트에는 다음이 포함되지만 이에 국한되지는 않습니다.</block>
+  <block id="b981e0dae483c1a14d3b270f0e8d681d" category="list-text">Workload Security 정책 변경 사항.</block>
+  <block id="a91253205277455090eab8c5a3e473f7" category="list-text">새로운 Data Source Collector(DSC) 생성.</block>
+  <block id="8de59a86651a9ded38a04188020fc715" category="list-text">DSC 수정.</block>
+  <block id="19ad19904ebcc391059146b35ba84e48" category="list-text">에이전트 생성.</block>
+  <block id="142aa86c9595fdc63ca5a62c72da36c2" category="list-text">사용자 관리 작업.</block>
+  <block id="57cf5599ed02e41c904c5aec9626eb8e" category="list-text">API 토큰 작업.</block>
+  <block id="dc765b359c5775d41944b793d09a3932" category="list-text">열 머리글의 화살표를 클릭하면 항목의 정렬 순서를 오름차순(위쪽 화살표) 또는 내림차순(아래쪽 화살표)으로 변경할 수 있습니다. 기본적으로 표는 시간 내림차순으로 항목을 표시합니다.</block>
+  <block id="41c36fad069bf8a1082e9771d559d08a" category="cell">BOS-PRD12-S12, BOS-PRD23-S12 등을 반환합니다</block>
+  <block id="029951cc57b3f3a2cda102ab83d0abd6" category="cell">위의 None과 마찬가지로, 이 형식을 사용하여 텍스트 전용 필드에서 NULL 값을 검색할 수도 있습니다.</block>
+  <block id="ccfa30aa0938ab67a7679bbea544264c" category="cell">NetApp*라는 정확한 문자열을 포함하는 결과를 반환합니다</block>
+  <block id="19cd526896c693b10dc83f3dfdd95e21" category="paragraph">Workload Security에서 감사하는 이벤트 및 작업은 다음과 같은 광범위한 영역으로 분류할 수 있습니다.</block>
+  <block id="db050c29be972955f848d2d9d2dd72e1" category="list-text">사용자 계정: 로그인, 로그아웃, 역할 변경 등</block>
+  <block id="1d2e077cee83d150598faec15ea17c00" category="list-text">에이전트: 생성, 삭제, 업그레이드, 고정, 고정 해제 등</block>
+  <block id="2bc80cebb4c3b4f2d3dd432b71a86e5a" category="paragraph">예: _Agent Agent-Boston-1이 삭제되었습니다._ _일괄 작업으로 시작된 버전 1.760.0으로 Agent 업그레이드_</block>
+  <block id="6b85b8fcb108efd5eab030cd4d4c1ae2" category="list-text">데이터/사용자 디렉터리 수집기: 추가, 제거, 수정, 업그레이드, 연기/재개, 에이전트 변경, 재시작 등</block>
+  <block id="4174f8c445719b2709668eee5bb25e3f" category="paragraph">예: _Data collector Collector-Boston1 제거됨, 유형 ONTAP SVM_ _Agent: Agent-Boston-1, Cluster IP 10.193.88.36, SVM demoGroupShares2_ _Collector ONTAP SVM 대량 작업으로 버전 1.417.0으로 업그레이드 시작_</block>
+  <block id="2fc86cef217040ea0a462d14ed05d456" category="list-text">자동 응답 정책: 추가, 업데이트, 제거, 활성화, 비활성화 등</block>
+  <block id="05ddd33845ee9d48f9f00fecb4f05c26" category="paragraph">예시: _자동화된 공격 정책 Policy-Boston1이 업데이트되었습니다. 속성 Devices가 업데이트되었습니다, 이전 값: [Device(name=svm_boston1, dataSourceId=39fb3b9c-9dd4-4961-bc27-23eb0b6f9ab7)], 새 값: [Device(name=demoGroupShares2, dataSourceId=5b9f5b74-4533-4852-909d-8886582a4359)]_</block>
+  <block id="fe9b88cc6db0265d6416e971d1310fa9" category="list-text">사용자 차단/차단 해제: 자동 또는 수동 사용자 차단 및 차단 해제.</block>
+  <block id="284fec9bfe780248e6008075cd114b78" category="paragraph">예: _2시간 동안 자동 응답의 일환으로 사용자 Safwan Langley에 대해 차단이 시작되었습니다_</block>
+  <block id="37cfc303a71404ba535148a7f3a71dc8" category="list-text">Apikey: 추가, 제거 등</block>
+  <block id="79ab318c3ccfe5611271096aff6f6cc1" category="paragraph">예: _Workload Security API 액세스 토큰 JPick-SWS가 생성되었습니다_</block>
+  <block id="4235fac9f067231cbf0cf4321c23e71c" category="list-text">알림: 이메일 변경 등</block>
+  <block id="5bdbcf91442b859f44c25dd16160394f" category="paragraph">예: _Recipient ci-alerts-notifications-dl created_</block>
+  <block id="dde532224b6de8f2bcf14526c241e11e" category="paragraph">감사 결과를 .CSV 파일로 내보내어 데이터를 분석하거나 다른 애플리케이션으로 가져올 수 있습니다. 단계 1. 감사 페이지에서 원하는 시간 범위와 필터를 설정합니다. Workload Security는 설정한 필터링 및 시간 범위와 일치하는 감사 항목만 내보냅니다. 2. 표 오른쪽 상단의 내보내기 버튼을 클릭합니다. 표시된 감사 이벤트가 최대 10,000행까지 .CSV 파일로 내보내집니다.</block>
+  <block id="e63e4cacc359b740fa0bc5ab6ea0ba8d" category="paragraph">Workload Security에서 감사 데이터를 보존하는 기간은 구독 유형에 따라 다릅니다.</block>
+  <block id="db33137206c4f6b3edeb7dda117f05dd" category="sidebar">감사 이벤트 보기</block>
 </blocks>

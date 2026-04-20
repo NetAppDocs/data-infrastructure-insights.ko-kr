@@ -105,7 +105,9 @@ NetApp 다양한 방법으로 Data Infrastructure Insights 에 대한 지원을 
 
 NOTE: 등록을 해야 합니다<<activating-support-entitlement,지원 활성화>> NetApp Cloud 제품에 대한 정보입니다.  등록하려면 NetApp으로 이동하세요.link:https://register.netapp.com["클라우드 데이터 서비스 지원 등록"] .
 
-지원 세션 중에 NetApp 지원 엔지니어가 Data Infrastructure Insights 테넌트에 액세스할 수 있도록 허용하려면 상자를 선택하는 것이 좋습니다.  이렇게 하면 엔지니어가 문제를 해결하고 신속하게 문제를 해결하는 데 도움이 됩니다.  문제가 해결되거나 지원 세션이 종료되면 상자 선택을 해제할 수 있습니다.
+지원 세션 중에 NetApp 지원 엔지니어가 Data Infrastructure Insights 사이트에 액세스할 수 있도록 확인란을 선택하는 것이 좋습니다. 이렇게 하면 엔지니어가 문제를 해결하고 신속하게 해결할 수 있습니다. 지원 엔지니어가 사이트에 액세스하는 동안 모든 관리자 수준 기능을 수행할 수 있습니다.
+
+문제가 해결되었거나 지원 세션이 종료되면 해당 확인란의 선택을 해제할 수 있습니다.
 
 다음 방법 중 하나를 통해 지원을 요청할 수 있습니다.  다음 지원 옵션을 사용하려면 활성 Data Infrastructure Insights 구독이 있어야 합니다.
 

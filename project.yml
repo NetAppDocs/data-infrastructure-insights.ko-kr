@@ -273,6 +273,8 @@ sidebar:
       url: "/concept_cs_attack_simulator.html"
     - title: 이메일 알림
       url: "/cs_notifications_email.html"
+    - title: 감사 이벤트 보기
+      url: "/ws_audit_events.html"
     - title: 웹훅 알림
       entries:
       - title: 웹후크 만들기
