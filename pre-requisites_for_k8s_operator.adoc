@@ -8,6 +8,9 @@ summary: Data Infrastructure Insights Kubernetes에서 통합 데이터를 수�
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
