@@ -1109,7 +1109,6 @@
   <block id="250a0e817001d5aadc297d9943b4611a" category="list-text">12ep0</block>
   <block id="7fbc2da9d2e5b20105696da7ea4ce3dd" category="list-text">emc3</block>
   <block id="cb0dda161e32cb6fdfcbd71707929167" category="list-text">hba3</block>
-  <block id="ea72e8c9dc8f8b845a6ad19e15b5867a" category="list-text">정규 표현식을 사용하는 규칙에는 정규 표현식, 형식, 대소문자 구분 선택이 필요합니다.</block>
   <block id="669613ed670b6c6c42c39acf0bfee7b0" category="list-text">*AR 실행*을 클릭하여 모든 규칙을 실행하거나, 버튼의 아래쪽 화살표를 클릭하여 직접 만든 규칙(및 마지막 AR 전체 실행 이후에 만들어진 다른 규칙)을 실행합니다.</block>
   <block id="f5d37dace9a539d56f93b2e2c32704d5" category="paragraph">규칙 실행 결과는 *FC 식별* 탭에 표시됩니다.</block>
   <block id="c2c94fa68f8065fa325aff6c260bebfb" category="section-title">자동 장치 확인 업데이트 시작</block>
@@ -14091,4 +14090,8 @@
   <block id="e63e4cacc359b740fa0bc5ab6ea0ba8d" category="paragraph">Workload Security에서 감사 데이터를 보존하는 기간은 구독 유형에 따라 다릅니다.</block>
   <block id="db33137206c4f6b3edeb7dda117f05dd" category="sidebar">감사 이벤트 보기</block>
   <block id="30e34a68b374f1718d077f39f1e4b558" category="admonition">1.2057.0 이전 operator 버전에서는 Push-Button 업그레이드를 사용할 수 없습니다. 최신 버전으로 업그레이드하려면 아래의 수동 업그레이드 지침을 따르십시오. 업그레이드 후에는 push-button 업그레이드 기능을 사용하여 향후 업그레이드를 수행할 수 있습니다.</block>
+  <block id="d0c7c0947ebc2f58067c90be172b88e0" category="list-text">*Observability &gt; Enrich &gt; Device Resolution*을 클릭하세요.</block>
+  <block id="7ecd430509607d1a2c2f3ffad808df91" category="list-text">정규 표현식을 사용하는 규칙에는 정규 표현식, 형식 및 대소문자 구분 여부 선택이 필요합니다.</block>
+  <block id="9372fa792b7b3d019662b44dd2963355" category="section-title">규칙 일시 중지 및 재개</block>
+  <block id="716da8f41fd22d5cd56ad74991f757ba" category="paragraph">규칙 실행을 중지하려면 규칙의 오른쪽 메뉴에서 "Pause"를 선택하거나, 여러 규칙을 선택한 후 "Bulk Actions" 드롭다운 메뉴에서 "Pause"를 선택하세요. 같은 방법으로 규칙 실행을 다시 시작할 수 있습니다.</block>
 </blocks>
