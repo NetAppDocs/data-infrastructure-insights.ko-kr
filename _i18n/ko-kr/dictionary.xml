@@ -14030,7 +14030,6 @@
   <block id="d01a003326568eee4579a0b14096808a" category="list-text">각 제외 항목에는 해당 항목을 설정한 관리자의 이름과 설정 날짜가 기록됩니다. 이 정보는 감사 목적으로 보관됩니다.</block>
   <block id="502a3077dba0d1ad6f92723157947eb2" category="section-title">사용자 및 경로</block>
   <block id="fbe64a9bdbefe7d8e246dbe4db973fd6" category="list-text">사용자 제외 목록: 알림에서 제외할 사용자를 추가합니다.</block>
-  <block id="7f21f675f8b42bfe63a9f7bf4d897cb0" category="list-text">디렉터리 제외 목록: junction 경로를 시작으로 최대 4단계의 디렉터리 경로를 지원합니다.</block>
   <block id="f12b42eece54a56ffab836a42eb37488" category="section-title">파일 유형</block>
   <block id="137e136f6b4d96d6452fec8d0ed99197" category="paragraph">파일 형식 목록에 추가되면 해당 허용된 파일 형식에 대해서는 파일 변조 공격 경고가 생성되지 않습니다. 단, 파일 형식 정책은 파일 변조 탐지에만 적용됩니다.</block>
   <block id="b3e41e2fae7745b697dbed9b6f854aa1" category="inline-image-macro">파일 유형 목록</block>
@@ -14094,4 +14093,5 @@
   <block id="7ecd430509607d1a2c2f3ffad808df91" category="list-text">정규 표현식을 사용하는 규칙에는 정규 표현식, 형식 및 대소문자 구분 여부 선택이 필요합니다.</block>
   <block id="9372fa792b7b3d019662b44dd2963355" category="section-title">규칙 일시 중지 및 재개</block>
   <block id="716da8f41fd22d5cd56ad74991f757ba" category="paragraph">규칙 실행을 중지하려면 규칙의 오른쪽 메뉴에서 "Pause"를 선택하거나, 여러 규칙을 선택한 후 "Bulk Actions" 드롭다운 메뉴에서 "Pause"를 선택하세요. 같은 방법으로 규칙 실행을 다시 시작할 수 있습니다.</block>
+  <block id="baac891fc4329aa8b558fa7560c83369" category="list-text">디렉터리 제외 목록: 접합 경로를 시작으로 최대 4단계의 디렉터리 경로를 지원합니다. 이 경로 아래의 모든 하위 디렉터리와 파일은 경고 생성에서 제외됩니다. 디렉터리 경로에 와일드카드를 사용할 수 없습니다.</block>
 </blocks>
