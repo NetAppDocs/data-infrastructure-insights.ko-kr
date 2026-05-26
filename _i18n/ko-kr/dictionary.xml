@@ -6671,8 +6671,6 @@
   <block id="df6a21f670066b82b5409a049dec0efe" category="doc">자동 응답 정책</block>
   <block id="e5da02c738b911c42fb0a45a5b76c8d9" category="paragraph">대응 정책은 공격이나 비정상적인 사용자 동작이 발생할 경우 스냅샷을 찍거나 사용자 액세스를 제한하는 등의 작업을 실행합니다.</block>
   <block id="8816114441548a7f4d390de764f25ad9" category="paragraph">특정 기기나 모든 기기에 정책을 설정할 수 있습니다.  응답 정책을 설정하려면 *관리 &gt; 자동 응답 정책*을 선택하고 해당 *+정책* 버튼을 클릭합니다.  공격이나 경고에 대한 정책을 만들 수 있습니다.</block>
-  <block id="29d142bb0759eaeb3b47bf1809087cc7" category="inline-image-macro">웹후크 드롭다운을 표시하는 공격 정책 대화 상자 추가</block>
-  <block id="9c3cfe368d37e834800103686eba11c1" category="paragraph"><block ref="9c3cfe368d37e834800103686eba11c1" category="inline-image-macro-rx" type="image"></block></block>
   <block id="10519a96ebde07deba902eb606bf97ff" category="paragraph">정책을 고유한 이름으로 저장해야 합니다.</block>
   <block id="168e31fead9fc72274b5723b0c86d27f" category="paragraph">자동 응답 작업(예: 스냅샷 찍기)을 비활성화하려면 해당 작업의 선택을 취소하고 정책을 저장하기만 하면 됩니다.</block>
   <block id="3218ac0e5f26253bd8724ab98d8f5e02" category="inline-link-macro">알림 세부 정보 페이지</block>
@@ -14094,4 +14092,6 @@
   <block id="9372fa792b7b3d019662b44dd2963355" category="section-title">규칙 일시 중지 및 재개</block>
   <block id="716da8f41fd22d5cd56ad74991f757ba" category="paragraph">규칙 실행을 중지하려면 규칙의 오른쪽 메뉴에서 "Pause"를 선택하거나, 여러 규칙을 선택한 후 "Bulk Actions" 드롭다운 메뉴에서 "Pause"를 선택하세요. 같은 방법으로 규칙 실행을 다시 시작할 수 있습니다.</block>
   <block id="baac891fc4329aa8b558fa7560c83369" category="list-text">디렉터리 제외 목록: 접합 경로를 시작으로 최대 4단계의 디렉터리 경로를 지원합니다. 이 경로 아래의 모든 하위 디렉터리와 파일은 경고 생성에서 제외됩니다. 디렉터리 경로에 와일드카드를 사용할 수 없습니다.</block>
+  <block id="fc6be75876bcdad138173b62e9ab5c17" category="inline-image-macro">웹훅 드롭다운을 표시하는 공격 정책 추가 대화 상자, 너비=300</block>
+  <block id="7cb01fa627551da61643f2eab2af39fb" category="paragraph"><block ref="7cb01fa627551da61643f2eab2af39fb" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
