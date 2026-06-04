@@ -13291,7 +13291,6 @@
   <block id="d55e67726729808ea6f67b165600c105" category="summary">DII의 AI 도우미를 사용하여 데이터를 요약하고, 인사이트를 탐색하고, 문제를 해결하고, 리소스를 계획할 수 있습니다.</block>
   <block id="accab30482cee85eb4e017db64428cad" category="doc">Data Infrastructure Insights AI Assistant</block>
   <block id="6804300f32b2dfd7358cbef13acc4c27" category="paragraph">*Data Infrastructure Insights AI 어시스턴트*는 인프라 데이터를 더욱 효율적으로 활용할 수 있도록 설계되었습니다. 이 어시스턴트는 정보를 분석하고, 인사이트를 발견하고, 운영상의 문제를 해결하고, 리소스에 대한 정보에 입각한 의사 결정을 내리는 데 도움을 줄 수 있습니다.</block>
-  <block id="b6ed013ce4b16673bae45126733837ff" category="paragraph">AI 어시스턴트는 AWS에 배포된 DII 테넌트에서만 사용할 수 있습니다.</block>
   <block id="01a593a05ec8086d16c6d465263a2f9f" category="inline-image-macro">AI Assistant 샘플 질문</block>
   <block id="18aabc8cd51ce3494b256e8195526a85" category="paragraph"><block ref="18aabc8cd51ce3494b256e8195526a85" category="inline-image-macro-rx" type="image"></block></block>
   <block id="f58b0ee974430595788a16d0bcde2c33" category="section-title">인프라의 새로운 지능형 파트너를 만나보세요</block>
@@ -13325,7 +13324,6 @@
   <block id="81bba36ecc862e80fc8fba5830993041" category="list-text">관심 있는 기간 및</block>
   <block id="747f32611560f7ea60cbda274f04ef16" category="list-text">우려하시는 특정 문제 유형(성능 문제, 용량 문제, 오류 등)</block>
   <block id="45610fa97924ab075b8ebed42722b019" category="section-title">어시스턴트 액세스</block>
-  <block id="629c55deaa1b75250df975fe5485d218" category="paragraph">DII AI Assistant를 호출하려면 화면 하단 모서리에 있는 올빼미 아이콘을 선택하기만 하면 됩니다. "Owner" 역할을 가진 사용자는 테넌트에서 다른 사용자가 AI Assistant를 사용하기 전에 이용 약관에 동의해야 합니다.</block>
   <block id="f67a424fefeb5e523fcbb4c9247bc6d9" category="inline-image-macro">dii_ai_assistant_icon</block>
   <block id="a48b93c62e0c2ec4c09405cadd96b7da" category="paragraph"><block ref="a48b93c62e0c2ec4c09405cadd96b7da" category="inline-image-macro-rx" type="image"></block></block>
   <block id="be90349da04be71a620e68314d810f7f" category="section-title">2026년 2월</block>
@@ -13355,7 +13353,6 @@
   <block id="3542743c69e8fceb06c77e5e17299c89" category="sidebar">AI Assistant</block>
   <block id="f7836ca926de84b06b0b4bcbe4b8b756" category="inline-link-macro">Data Infrastructure Insights(Workload Security 포함) 관련 공지사항, window=_blank</block>
   <block id="135e17e82c7d3d3d83bd8b0737be432e" category="paragraph"><block ref="135e17e82c7d3d3d83bd8b0737be432e" category="inline-link-macro-rx"></block></block>
-  <block id="58e3397ecaf63f320f4993fc5844d736" category="paragraph">DII AI Assistant는 제한적 미리보기 버전으로 제공됩니다. Data Infrastructure Insights 미리보기 기능에 대한 자세한 내용은 <block ref="b77b95325de7e3e625a811db4f47869c" category="inline-link-macro-rx"></block>를 참조하십시오.</block>
   <block id="b6b93d34f92b439117e54d9343c7efda" category="section-title">현재 미리보기:</block>
   <block id="559de301b9b7af9f5b932d860f605701" category="list-text"><block ref="7a32ab5261b86b8c9a5d88b540c79f2d" category="inline-link-macro-rx"></block> 미리 보기.</block>
   <block id="ca39a60f24fda5dbbda8809fbd3fe717" category="inline-link-macro">*Data Infrastructure Insights AI Assistant*</block>
@@ -14094,4 +14091,18 @@
   <block id="baac891fc4329aa8b558fa7560c83369" category="list-text">디렉터리 제외 목록: 접합 경로를 시작으로 최대 4단계의 디렉터리 경로를 지원합니다. 이 경로 아래의 모든 하위 디렉터리와 파일은 경고 생성에서 제외됩니다. 디렉터리 경로에 와일드카드를 사용할 수 없습니다.</block>
   <block id="fc6be75876bcdad138173b62e9ab5c17" category="inline-image-macro">웹훅 드롭다운을 표시하는 공격 정책 추가 대화 상자, 너비=300</block>
   <block id="7cb01fa627551da61643f2eab2af39fb" category="paragraph"><block ref="7cb01fa627551da61643f2eab2af39fb" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="512346de0e4492551e58519f2ff8f02f" category="section-title">자연스럽게 대화하기</block>
+  <block id="606eca1dc0574688efcace9e5442ec65" category="paragraph">이제 AI 어시스턴트가 12개 이상의 언어를 지원하여 팀원들이 원하는 언어로 자연스럽게 소통할 수 있도록 지원합니다. 전체 목록을 확인하세요<block ref="7bcc2d9bce066141171b475332938f67" category="inline-link-macro-rx"></block>.</block>
+  <block id="f66b0e86f32ecd67a023b86cf46bdc84" category="paragraph">DII AI Assistant를 호출하려면 화면 하단의 올빼미 아이콘을 선택하기만 하면 됩니다. "Owner" 또는 "Admin" 역할을 가진 사용자는 테넌트의 모든 사용자가 AI Assistant를 사용하기 전에 이용 약관에 동의해야 합니다.</block>
+  <block id="c21446b3ecfb30ed6c2760d686bd4578" category="section-title">2026년 6월</block>
+  <block id="c42129b932facb2cf7437f8dda2d1024" category="section-title">글로벌 팀을 위한 더욱 스마트한 AI 비서</block>
+  <block id="2cf12b65895eb4c6ea2aa563a3a928c2" category="paragraph">이제 AI 어시스턴트가 12개 이상의 언어를 지원하여 팀원들이 원하는 언어로 자연스럽게 소통할 수 있도록 지원합니다. 전체 목록을 확인하세요<block ref="76aebc4f8810ba81b56db38cff83be8e" category="inline-link-macro-rx"></block>.</block>
+  <block id="f4651ef2bf0573c7c2ed9812ec1e1a9c" category="section-title">인프라 속성 변경을 위한 새로운 모니터</block>
+  <block id="a8d07c89b5ad1be0c9666289c7c31f2e" category="paragraph">이제 속성 모니터링 기능을 통해 자산이 데이터 센터 간에 이동하거나, 스토리지 풀이 암호화되지 않았거나, 속성이 수정되는 경우 자동으로 팀에 알림을 보낼 수 있습니다. 이를 통해 구성 기준선을 유지하고 새로운 배포 또는 변경 과정에서 누락되는 부분이 없도록 보장할 수 있습니다.</block>
+  <block id="1077e7a3935b3725c8350a2c88a1253f" category="inline-image-macro">속성 모니터가 모니터 유형에 추가됩니다</block>
+  <block id="2a7170fd3e143b93657f08d8a1c590f9" category="paragraph"><block ref="2a7170fd3e143b93657f08d8a1c590f9" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3fb1bd69332231cdc75d8db242aaf294" category="section-title">동적이고 컨텍스트가 풍부한 메시지를 사용하여 더욱 스마트한 알림 및 웹훅을 구축하세요</block>
+  <block id="ca168714d12ff6410e26984f67b83474" category="paragraph">모니터 또는 웹훅을 생성할 때 알림 설명이나 웹훅 URL, 헤더 또는 본문에 "%"를 입력하기만 하면 사용 가능한 객체 속성 및 주석 목록에서 동적으로 선택할 수 있습니다. 알림에 적절한 컨텍스트를 제공하여 명확성을 높이고 웹훅 통합을 강화하며 응답 시간을 단축하세요.</block>
+  <block id="42bb2765b945bf3e0e9843ba7c1b0426" category="inline-image-macro">모니터 설명의 속성 목록, width=400</block>
+  <block id="5c686c3f80c47e575d3c5b2f79e6da4b" category="paragraph"><block ref="5c686c3f80c47e575d3c5b2f79e6da4b" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
