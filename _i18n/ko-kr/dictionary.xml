@@ -14105,4 +14105,8 @@
   <block id="ca168714d12ff6410e26984f67b83474" category="paragraph">모니터 또는 웹훅을 생성할 때 알림 설명이나 웹훅 URL, 헤더 또는 본문에 "%"를 입력하기만 하면 사용 가능한 객체 속성 및 주석 목록에서 동적으로 선택할 수 있습니다. 알림에 적절한 컨텍스트를 제공하여 명확성을 높이고 웹훅 통합을 강화하며 응답 시간을 단축하세요.</block>
   <block id="42bb2765b945bf3e0e9843ba7c1b0426" category="inline-image-macro">모니터 설명의 속성 목록, width=400</block>
   <block id="5c686c3f80c47e575d3c5b2f79e6da4b" category="paragraph"><block ref="5c686c3f80c47e575d3c5b2f79e6da4b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e236cc945d03142b030da5f8ca3552ad" category="section-title">더 넓은 작업 공간, 더 적은 혼잡함</block>
+  <block id="0c57b296d9e6f421b799470406b41595" category="paragraph">DII 탐색 메뉴가 새롭게 단장하여 Console의 색상 및 동작 방식과 일치하도록 개선되었습니다. 기존의 고정된 메인 메뉴는 기본적으로 접혀 있어 작업 공간을 더욱 효율적으로 활용할 수 있습니다. 왼쪽 상단의 햄버거 아이콘(☰)을 클릭하면 메인 메뉴에 접근할 수 있습니다.</block>
+  <block id="638f6b8d99e1422bc23e131d2c84c24d" category="section-title">지능형 AI 지원으로 디바이스 가시성 확장</block>
+  <block id="8cc9ca78507aef920c11566fc08c38ca" category="paragraph">AI 기반 장치 식별 기능을 통해 신규 장치 온보딩 속도를 높이세요. Data Infrastructure Insights는 사용자 환경을 분석하여 자동 장치 해결 규칙을 제안함으로써 더 많은 장치를 신속하게 식별하고 관리할 수 있도록 지원합니다. AI가 생성한 규칙을 검토하고 승인하기만 하면 DII가 나머지를 처리하여 인프라 전반에 걸쳐 장치 가시성과 관리를 향상시켜 줍니다.</block>
 </blocks>
