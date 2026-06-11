@@ -13958,8 +13958,6 @@
   <block id="6fd44ae5a42d6b33248d329cbbddaa88" category="paragraph">DII Red Hat OpenShift Virtualization 컬렉터는 OpenShift Virtualization 환경에서 실행 중인 OSV 컴퓨팅 워크로드를 검색하려고 시도합니다. 이 컬렉터는 모든 Open Shift Pod를 검색하지는 않습니다. 이 컬렉터는 HTTPS REST API 기반입니다. OSV 클러스터당 하나의 컬렉터를 생성하는 것이 좋습니다.</block>
   <block id="0e2f53883090c3b63a953261cdb19325" category="paragraph">이 컬렉터의 인증 방식은 서비스 계정에 연결된 인증 토큰입니다. 사용자 계정과 토큰을 모두 생성하려면:</block>
   <block id="f2c430952fd20f76b24810e2e6f8dace" category="paragraph">이 3가지 명령을 실행하고 오류가 있는지 확인하십시오.</block>
-  <block id="8a8ad6f9b43737bda614d744a8286cc4" category="paragraph">명령 실행이 완료되면:</block>
-  <block id="9fb84dc506591e78ff3f6f8ac2f00e6e" category="paragraph">이렇게 하면 사용자에게 바인딩된 토큰이 생성됩니다.</block>
   <block id="0cf40b0b5f29b2928f214370b73c4fac" category="paragraph">마지막으로 OSV 관리자가 다음 명령을 실행하도록 요청할 수도 있습니다.</block>
   <block id="7af44018c8c76e698e986a0c0db08e5f" category="paragraph">이렇게 하면 관리용 호스트 이름/IP 주소가 반환됩니다. 각 DII OSV 컬렉터는 OSV 관리를 위해 해당 IP/호스트 이름을 가리키도록 설정해야 합니다.</block>
   <block id="e62768229563f11ca5fd49a1482ae7a8" category="list-text">REST API를 통해 포트 443을 사용하는 Red Hat OpenShift Virtualization 서버의 IP 주소</block>
@@ -14109,4 +14107,18 @@
   <block id="0c57b296d9e6f421b799470406b41595" category="paragraph">DII 탐색 메뉴가 새롭게 단장하여 Console의 색상 및 동작 방식과 일치하도록 개선되었습니다. 기존의 고정된 메인 메뉴는 기본적으로 접혀 있어 작업 공간을 더욱 효율적으로 활용할 수 있습니다. 왼쪽 상단의 햄버거 아이콘(☰)을 클릭하면 메인 메뉴에 접근할 수 있습니다.</block>
   <block id="638f6b8d99e1422bc23e131d2c84c24d" category="section-title">지능형 AI 지원으로 디바이스 가시성 확장</block>
   <block id="8cc9ca78507aef920c11566fc08c38ca" category="paragraph">AI 기반 장치 식별 기능을 통해 신규 장치 온보딩 속도를 높이세요. Data Infrastructure Insights는 사용자 환경을 분석하여 자동 장치 해결 규칙을 제안함으로써 더 많은 장치를 신속하게 식별하고 관리할 수 있도록 지원합니다. AI가 생성한 규칙을 검토하고 승인하기만 하면 DII가 나머지를 처리하여 인프라 전반에 걸쳐 장치 가시성과 관리를 향상시켜 줍니다.</block>
+  <block id="b60f27931c3ae71e254e2b744656329e" category="inline-link-macro">Qumulo REST</block>
+  <block id="d5f6f6770076a4cff24cf687c1f3ce72" category="cell"><block ref="d5f6f6770076a4cff24cf687c1f3ce72" category="inline-link-macro-rx"></block></block>
+  <block id="e11d6c7f4644f952faf6dce5c4b295ad" category="summary">Qumulo REST 데이터 수집기 구성.</block>
+  <block id="d3b9d1ab118852a73d2b9221ede10370" category="doc">Qumulo REST 데이터 수집기</block>
+  <block id="a7236bb9d36106126af2861383d145e2" category="paragraph">Data Infrastructure Insights는 이 수집기를 사용하여 Qumulo 스토리지에서 인벤토리 및 성능 데이터를 수집합니다.</block>
+  <block id="b23a87bcdf03ab57cf9c989bf91c2e39" category="list-text">Qumulo 클러스터의 IP 주소/정규화된 도메인 이름</block>
+  <block id="6b163e0e6c238a01d0ce91c0c83e4f0c" category="cell">Qumulo IP 주소</block>
+  <block id="0a4db5a5d79afd66b50465ed8b623a2d" category="cell">Qumulo 스토리지의 IP 주소 또는 정규화된 도메인 이름</block>
+  <block id="b011dcc2f56365d26e263f3ed75cdfa7" category="cell">Qumulo 사용자 이름</block>
+  <block id="f37b44ac7ba2560a5f36f58586dc6502" category="cell">Qumulo에 사용되는 암호</block>
+  <block id="77c91f11c388cc00f02f729cfee3aa51" category="cell">재고 조사 간격입니다. 기본값은 30입니다.</block>
+  <block id="10c51e7fed3d0622297f012b6ed375ff" category="cell">성능 폴링 간격입니다. 기본값은 5입니다.</block>
+  <block id="d08016e5c5be3fa70d21f77cdf152be2" category="paragraph">명령 실행이 완료되면 다음을 실행합니다.</block>
+  <block id="6d0f6de7ebc4523de6bfdcd599b62bf1" category="paragraph">이렇게 하면 사용자에게 연결된 토큰이 생성됩니다. 참고: 토큰 유효 기간을 설정하는 것이 좋습니다. 토큰이 만료되면 데이터 수집이 실패하고 "연결 실패" 오류가 발생합니다.</block>
 </blocks>

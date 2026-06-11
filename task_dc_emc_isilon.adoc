@@ -7,6 +7,10 @@ summary: 'Dell EMC PowerScale(이전 Isilon) 데이터 수집기를 구성합니
 = Dell EMC PowerScale 데이터 수집기
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
