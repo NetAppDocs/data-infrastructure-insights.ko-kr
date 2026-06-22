@@ -296,7 +296,7 @@ _operator-config.yaml_의 _AgentConfiguration_을 편집하여 새 docker 리포
 agent:
   ...
   # An optional docker registry where you want docker images to be pulled from as compared to CI's docker registry
-  # Please see documentation link here: link:task_config_telegraf_agent_k8s.html#using-a-custom-or-private-docker-repository
+  # Please see documentation link here: link:task_config_telegraf_agent_k8s.html#using-a-custom-or-private-docker-repository[Using a custom or private docker repository]
   dockerRepo: your.docker.repo/long/path/to/test
   # Optional: A docker image pull secret that maybe needed for your private docker registry
   dockerImagePullSecret: docker-secret-name
@@ -426,7 +426,7 @@ Kubernetes Monitoring Operator를 설정하는 데 문제가 발생하면 다음
 | Operator를 배포하려고 하다가 문제가 발생했고, PSP/PSA를 사용 중입니다. | 1. 다음 명령을 사용하여 에이전트를 편집합니다: kubectl -n <네임스페이스> edit agent 2.  'security-policy-enabled'를 'false'로 표시합니다.  이렇게 하면 Pod 보안 정책과 Pod 보안 입장이 비활성화되고 운영자가 배포할 수 있습니다.  다음 명령을 사용하여 확인하세요. kubectl get psp(Pod 보안 정책이 제거되었음을 표시해야 함) kubectl get all -n <네임스페이스> | grep -i psp(아무것도 발견되지 않았음을 표시해야 함) 
 
 
-| "ImagePullBackoff" 오류가 발생했습니다. | 이러한 오류는 사용자 지정 또는 개인 Docker 저장소가 있고 Kubernetes Monitoring Operator가 이를 올바르게 인식하도록 아직 구성하지 않은 경우 나타날 수 있습니다. <<using-a-custom-or-private-docker-repository,더 읽어보세요>> 사용자 정의/개인 저장소 구성에 대한 정보입니다. 
+| "ImagePullBackoff" 오류가 발생했습니다. | 사용자 지정 또는 비공개 Docker 저장소가 있고 Kubernetes 모니터링 운영자가 해당 저장소를 제대로 인식하도록 아직 구성하지 않은 경우 이러한 오류가 발생할 수 있습니다. <<사용자 정의 또는 개인 Docker 저장소 사용,더 읽어보세요>> 사용자 지정/비공개 저장소 구성에 대한 자세한 내용은 해당 문서를 참조하십시오. 
 
 
 | 모니터링 운영자 배포에 문제가 있는데, 현재 문서에서는 이를 해결하는 데 도움이 되지 않습니다.  a| 

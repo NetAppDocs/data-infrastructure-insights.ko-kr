@@ -99,7 +99,6 @@ Data Infrastructure Insights 환경이 생성된 지역에 따라 정보를 저�
 
 * link:https://www.netapp.com/us/company/trust-center/index.aspx["신뢰 센터"]
 * link:https://www.netapp.com/us/company/trust-center/privacy/data-location-cross-border-transfers.aspx["국경 간 데이터 전송"]
-* link:https://www.netapp.com/us/company/trust-center/privacy/bcr-binding-corporate-rules.aspx["구속력 있는 기업 규칙"]
 * link:https://www.netapp.com/us/company/trust-center/transparency/third-party-data-requests.aspx["제3자 데이터 요청에 응답"]
 * link:https://www.netapp.com/us/company/trust-center/privacy/privacy-principles-security-safeguards.aspx["NetApp 개인정보 보호 원칙"]
 

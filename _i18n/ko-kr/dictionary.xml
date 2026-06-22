@@ -526,7 +526,6 @@
   <block id="63800fa4905e8f1340ac92bcc42decb9" category="cell">이 데이터 수집기를 사용하여 7모드 필터를 발견하면 이런 일이 발생할 수 있습니다.  대신 IP를 cdot 클러스터를 가리키도록 변경하세요.</block>
   <block id="ba47f8d8510049a6a646bcaab9868c9b" category="cell">"ZAPI에서 성능 수집에 실패했습니다" 오류</block>
   <block id="60c7f1e49f405a1836fb656a8fffe2aa" category="cell">이는 일반적으로 perf stat이 실행되지 않기 때문에 발생합니다.  각 노드에서 다음 명령을 시도하세요. &gt; _system node systemshell -node * -command “spmctl -h cmd –stop; spmctl -h cmd –exec”_</block>
-  <block id="a9d11491cdc145dca25e537c123d978b" category="summary">ONTAP 9.9+ 데이터 수집기를 위한 NetApp Cloud Connection 구성</block>
   <block id="34727dd01aaa3e0d53fd68d429bbff53" category="doc">ONTAP 9.9+ 데이터 수집기용 NetApp Cloud Connection</block>
   <block id="0803ffc49bb5d009027ad578d29858b8" category="paragraph">이 데이터 수집기는 ONTAP 9.9+ CVO, AFF, FAS 시스템에서 데이터 수집을 지원하기 위해 클라우드 연결을 생성합니다.</block>
   <block id="fb915b764f3baecfa629ff22686e14ee" category="admonition">이 데이터 수집기는 2023년 4월 4일부터 Data Infrastructure Insights 에 설치할 수 없으며, 2023년 7월에 모든 Data Infrastructure Insights 설치에서 제거됩니다.</block>
@@ -1128,7 +1127,6 @@
   <block id="3e6a6e204935e5560fba5d2fbe05a425" category="list-text">귀하의 필요에 맞는 방법을 선택하세요.</block>
   <block id="d58aecd7040e7d513c5340e479099d22" category="paragraph">Data Infrastructure Insights 메서드가 나타나는 순서대로 호스트 확인 프로세스를 실행합니다. 맨 위에 있는 메서드부터 시작합니다.</block>
   <block id="ef134b9e133b3a5eb7b3017bb03532e8" category="paragraph">적용되는 규칙이 발견되면 규칙 이름이 규칙 열에 표시되고 수동으로 식별됩니다.</block>
-  <block id="ea4f37cdc61f22bab06bd53f38731b48" category="paragraph">관련된:<block ref="9606d230686b3a54ef0c843c6a8d06ee" category="inline-link-macro-rx"></block> <block ref="f7ab518a04b5eb9592800f6375835782" category="inline-link-macro-rx"></block> <block ref="9afa071c2420f8347dcfd0e1bd5f4e5c" category="inline-link-macro-rx"></block></block>
   <block id="8b720a56569a3c7ab2f160ab1eda080e" category="summary">대시보드 위젯에 범례를 표시합니다.</block>
   <block id="d40435902e9d2aff211851b4be9e2a25" category="paragraph">대시보드의 위젯은 범례와 함께 표시될 수도 있고, 범례 없이 표시될 수도 있습니다.</block>
   <block id="82908db5a2e57cb0c3c9c7daae713304" category="paragraph">대시보드를 표시할 때 위젯의 범례를 켜거나 끄려면 위젯의 *옵션* 버튼을 클릭하고 메뉴에서 *범례 표시*를 선택하세요.</block>
@@ -1293,7 +1291,6 @@
   <block id="b20aea1fa1664bcc048770ea0e008918" category="paragraph">파일 다운로드를 클릭하세요.  AU 시스템이 아닌 다른 시스템에서 이 단계를 수행하는 경우 다운로드한 패치 zip 번들을 AU 시스템에 복사하세요.</block>
   <block id="3e7f4643e7c9ebf9318c59a568b2521c" category="paragraph">패치 zip 번들이 다음 디렉토리에 복사되었는지 확인하세요: /var/lib/netapp/cloudinsights/acq/download</block>
   <block id="9cb12f64263025528c33b8d045cd0c4a" category="paragraph">패치를 다운로드하려면 /var/lib/netapp/cloudinsights/acq/download 디렉토리로 이동한 후 해당 디렉토리에 있는 .zip 파일을 확인하세요.</block>
-  <block id="6d225eb97f4a253f028dffb578250de4" category="summary">높은 I/O 밀도를 쿼리할 때는 루트 볼륨을 제외해야 합니다.</block>
   <block id="1ab57582b962bd9a8bcc5c1ad73a3370" category="doc">IO 밀도 보고서가 내부 데이터 볼륨만 설명하도록 보장</block>
   <block id="7fd61f2044d1ea7e162156b49842f9b8" category="paragraph">NetApp 루트 볼륨에는 스토리지 시스템을 관리하기 위한 디렉토리와 구성 파일이 포함되어 있습니다.  높은 I/O 밀도를 쿼리할 때는 이러한 루트 볼륨을 제외해야 합니다.</block>
   <block id="7a1632b55f7e986af31872ad12602af6" category="paragraph">환경을 모니터링할 때 높은 I/O 밀도 수치를 생성하는 내부 데이터 볼륨을 확인하는 것이 더 중요합니다.  데이터 볼륨만 정확하게 식별하려면 I/O 밀도를 모니터링하는 데 사용하는 쿼리에서 NetApp 내부 볼륨을 분리해야 합니다.</block>
@@ -2197,20 +2194,15 @@
   <block id="61af0e7885b3d07748159728a44e4ad9" category="list-text">원하는 이벤트(중요, 경고, 해결됨)에 대해 "Discord" 웹훅을 선택하세요.</block>
   <block id="ed5c4b12d92f20d8019eeff5f0fd66c6" category="inline-image-macro">웹훅 알림</block>
   <block id="5a9350e3ec5e1d6389a7846d4b45fff3" category="paragraph"><block ref="5a9350e3ec5e1d6389a7846d4b45fff3" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="bf6fa6c5bb37c6b734af290224d14b3b" category="summary">Pagerduty의 성능 또는 인벤토리 임계값에 대한 알림을 위한 웹훅을 만듭니다.</block>
   <block id="ebe61c67e9deed871c60838fd5e9f7be" category="doc">PagerDuty에 대한 웹훅 예제</block>
   <block id="71298eef97e0ed788542ad241ccd8519" category="paragraph">웹훅을 사용하면 사용자는 사용자 정의된 웹훅 채널을 사용하여 다양한 애플리케이션에 알림을 보낼 수 있습니다.  이 페이지에서는 PagerDuty에 대한 웹훅을 설정하는 방법에 대한 예를 제공합니다.</block>
   <block id="00a64325d6215e869d901337c5733f9f" category="inline-link-macro">PagerDuty 문서</block>
   <block id="b9c4db244f886c8ad1c6fa5fe3a5597f" category="admonition">이 페이지는 변경될 수 있는 제3자 지침을 참조합니다.  를 참조하세요<block ref="4cf6cb20b95cded724b319964a5ce815" category="inline-link-macro-rx"></block> 최신 정보를 확인하세요.</block>
   <block id="5fe5cd9eb2f533342eccb34df79fde72" category="section-title">PagerDuty 설정:</block>
   <block id="bd4bbe8a9ea1ffdf00ee8bd94fc1e16d" category="list-text">PagerDuty에서 *서비스 &gt; 서비스 디렉토리*로 이동하고 *+새 서비스* 버튼을 클릭합니다.</block>
-  <block id="b476f138570162c042a088beeeccec15" category="list-text">_이름_을 입력하고 _API를 직접 사용_을 선택하세요.  _서비스 추가_를 클릭하세요.</block>
   <block id="87f2841c34802570db42ed259a72659f" category="inline-image-macro">페이저듀티 화면</block>
   <block id="db788963e43859ced84fd2d54c4a1826" category="paragraph"><block ref="db788963e43859ced84fd2d54c4a1826" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="b59bb2be40103d441711440903e77391" category="list-text">_통합_ 탭을 클릭하여 *통합 키*를 확인하세요.  아래의 Data Infrastructure Insights 웹후크를 생성할 때 이 키가 필요합니다.</block>
   <block id="14b1b977a367efc00b3c3c2a27dd9df6" category="list-text">알림을 보려면 *사건* 또는 *서비스*로 이동하세요.</block>
-  <block id="38cd2297d6a0d6ebf34eba2cd7a08ed5" category="inline-image-macro">페이지듀티 화면</block>
-  <block id="583d30680a45f7d79eafed1816002071" category="paragraph"><block ref="583d30680a45f7d79eafed1816002071" category="inline-image-macro-rx" type="image"></block></block>
   <block id="080e61216b58fb3cb63bae2ed7de1c2c" category="list-text">웹훅에 "PagerDuty Trigger"와 같이 의미 있는 이름을 지정합니다.  이 웹훅은 중요 및 경고 수준의 이벤트에 사용됩니다.</block>
   <block id="56d3e1d7cf9cd6ae0eef088d30e682b7" category="list-text">_템플릿 유형_ 드롭다운에서 *PagerDuty*를 선택합니다.</block>
   <block id="6da6fedcac10d8b2fdf051a1ed598349" category="list-text">_routingKey_라는 사용자 지정 매개변수 비밀번호를 만들고 값을 위에서 언급한 PagerDuty _Integration Key_ 값으로 설정합니다.</block>
@@ -2439,7 +2431,6 @@
   <block id="ac14acdc92f36791be661880d12b7270" category="paragraph">HCI 데이터 수집기는 HCI 가상 센터에서만 데이터를 수집합니다.  스토리지 시스템에서 데이터를 수집하려면 NetApp 도 구성해야 합니다.<block ref="6712d9c3428b5f40681aae619dc8b571" category="inline-link-macro-rx"></block> 데이터 수집기.</block>
   <block id="40c6992ea910d43026a8f13fd0d7bfd6" category="section-title">2019년 5월</block>
   <block id="037eddd16d35fc9eac278648da06c173" category="section-title">새로운 서비스 데이터 수집기: Kapacitor</block>
-  <block id="a6c914a36af9cdcc4bc051dbdcd4eefb" category="list-text"><block ref="ca466468045f7ff3875d7132bbbf9398" category="inline-link-macro-rx"></block>서비스에 대한 데이터 수집기로 추가되었습니다.</block>
   <block id="4d62d13d165eebe4e80017471b97b8ed" category="section-title">Telegraf를 통한 서비스와의 통합</block>
   <block id="7aa7603ad6de1f47f78ba9423a0e4fcd" category="inline-link-macro">Telegraf를 대리인으로 삼았습니다.</block>
   <block id="6d022ec9f2c6bb5d17eeb27eda72fe71" category="paragraph">스위치 및 스토리지와 같은 인프라 장치에서 데이터를 수집하는 것 외에도 Cloud Insights 이제 다양한 운영 체제 및 서비스에서 데이터를 수집합니다.<block ref="ba0db348f579f56a750410b7eabc1b9a" category="inline-link-macro-rx"></block> 통합 데이터 수집을 위해.  Telegraf는 지표를 수집하고 보고하는 데 사용할 수 있는 플러그인 기반 에이전트입니다.  입력 플러그인은 시스템/OS에 직접 액세스하거나, 타사 API를 호출하거나, 구성된 스트림을 수신하여 원하는 정보를 에이전트에 수집하는 데 사용됩니다.</block>
@@ -2849,7 +2840,6 @@
   <block id="885f8cdd65feed9099d3ba4bb0386c7b" category="sidebar">객체에 여러 애플리케이션/주석 할당</block>
   <block id="3d59dc93db3f03aea5b8d1cc50d995f6" category="sidebar">테이블 값을 클립보드에 복사</block>
   <block id="72a442c57900f55848aa4acb856a507d" category="sidebar">비활성 장치 식별</block>
-  <block id="b181654a18c519e18fe14012429b9ef1" category="sidebar">모니터 및 알림</block>
   <block id="cdd0e837105d3238f7da72918d54613a" category="sidebar">모니터 만들기</block>
   <block id="ad9a3a2d37a9151fd99385dc40e9ceb2" category="sidebar">알림 수신자 구성</block>
   <block id="a212bf20191ce3ebcdc71cc32cd6c8f9" category="sidebar">웹훅 구성</block>
@@ -5727,8 +5717,6 @@
   <block id="2a81267b1c9c4611addccc58ffea4ce5" category="list-text">Docker 메트릭 수집을 우회하는 옵션</block>
   <block id="62643d895d41437dc1854e6321bbca7d" category="list-text">Telegraf Daemonsets 및 Replicasets에 허용 오차를 추가하고 사용자 정의하는 기능</block>
   <block id="4157bbc9478996de33c632d1be8b4617" category="section-title">통찰력: 냉장 보관을 되찾으세요</block>
-  <block id="82f32ca1972e78989f469529f9e93e21" category="inline-link-macro">ONTAP 콜드 스토리지 인사이트 회수</block>
-  <block id="2703e92da2def9a17ac70dcd90bd8ab5" category="paragraph">그만큼<block ref="a08e2a6a27f9f88fce91a86a2a4aaa0e" category="inline-link-macro-rx"></block> 이제 FlexGroups를 지원하며 모든 고객이 이용할 수 있습니다.</block>
   <block id="ffd94c31fd478610bae8a28f858f4967" category="section-title">운영자 이미지 서명</block>
   <block id="b58a6be98adebdc6de5cd79aa5cf7223" category="paragraph">NetApp Kubernetes Monitoring Operator에 개인 저장소를 사용하는 고객의 경우 이제 Operator 설치 중에 이미지 서명 공개 키를 복사하여 다운로드한 소프트웨어의 진위 여부를 확인할 수 있습니다.  선택 단계 중에 _이미지 서명 공개 키 복사_ 버튼을 선택하여 _운영자 이미지를 개인 저장소에 업로드_하세요.</block>
   <block id="b48c3957268aba1d2cb9774cdfb76b1a" category="inline-image-macro">공개 키 다운로드</block>
@@ -5879,9 +5867,6 @@
   <block id="ec0592cbe0adf98f6b8b6f3682b80783" category="paragraph">새로운 *도움말 &gt; 라이브 채팅* 링크를 선택하면 모든 Cloud Insights 화면에서 NetApp 지원 전문가와 채팅할 수 있습니다.  도움말은 화면 오른쪽 상단의 "?" 아이콘을 통해 확인할 수 있습니다.</block>
   <block id="0308ff2faf3259518f15748d7e652260" category="inline-image-macro">라이브 채팅이 강조 표시된 도움말 메뉴</block>
   <block id="b873771142e1375b8c2448ef06d827c0" category="paragraph"><block ref="b873771142e1375b8c2448ef06d827c0" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="4eecf9894a35e5b8b6c8f2cd8456dc16" category="section-title">더욱 눈에 띄는 통찰력</block>
-  <block id="9e1c9c294ec3f4b96a8a0cc0df13f98e" category="inline-link-macro">통찰력</block>
-  <block id="5959863675c12bd7e50191f64156c0d0" category="paragraph">귀하의 환경에 문제가 발생하는 경우<block ref="fa362768d673aca77d85a6a4c5ca3f07" category="inline-link-macro-rx"></block> _스트레스를 받는 공유 리소스_ 또는 _공간이 부족한 Kubernetes 네임스페이스_와 같이 영향을 받는 리소스에 대한 자산 랜딩 페이지에는 이제 Insight 자체에 대한 링크가 포함되어 더 빠르게 탐색하고 문제를 해결할 수 있습니다.</block>
   <block id="b3a4cb8b1cc794671c98b17aac5ba206" category="section-title">새로운 데이터 수집기</block>
   <block id="b8cf9f003c21d314dc33ec400eddec24" category="list-text">Amazon S3(미리 보기로 제공)</block>
   <block id="337813588cd1360f633725a1a1d06b02" category="list-text">Brocade FOS 9.0.x</block>
@@ -5916,9 +5901,7 @@
   <block id="5fa0ef8fc40e60003288942e2da3e300" category="cell">*특징*</block>
   <block id="bbe116aac998e7707bfddff610136f34" category="cell">Kubernetes 네임스페이스 공간 부족</block>
   <block id="decbe415d8accca7c2c16d48a79ee934" category="inline-link-macro">더 읽어보기</block>
-  <block id="639cd114dad5880c94752e290d36353a" category="cell">_Kubernetes 네임스페이스 공간 부족_ 인사이트는 공간 부족 위험이 있는 Kubernetes 네임스페이스의 워크로드를 파악하고, 각 공간이 가득 차기까지 남은 일수를 추정하여 보여줍니다.<block ref="91569d71925d0cb55a46b7a5e8a36cb5" category="inline-link-macro-rx"></block></block>
   <block id="f1e906bd3edd784d1978ed7c4566e64c" category="cell">스트레스 받는 공유 리소스</block>
-  <block id="9bfa6f1e81e8e1a4af8a2057b85a0257" category="cell">_부하를 받는 공유 리소스_ 인사이트는 AI/ML을 사용하여 환경에서 성능 저하를 일으키는 리소스 경합의 원인을 자동으로 식별하고, 이로 인해 영향을 받는 모든 워크로드를 강조 표시하고, 수정을 위한 권장 조치를 제공하여 성능 문제를 더 빠르게 해결할 수 있도록 합니다.<block ref="b97265367ad52c02d31fa7522e26571d" category="inline-link-macro-rx"></block></block>
   <block id="64f0171311f2657dbd0578fca9fb2fa5" category="cell">Cloud Secure – 공격 시 사용자 액세스 차단</block>
   <block id="6ad1deaea422210384bf8c46adb4027a" category="cell">공격이 감지되면 사용자 액세스를 차단하는 기능을 통해 비즈니스에 중요한 데이터를 더욱 안전하게 보호합니다.  자동 응답 정책을 사용하여 자동으로 액세스를 차단하거나 알림 또는 사용자 세부 정보 페이지에서 수동으로 액세스를 차단할 수 있습니다.<block ref="e8dc9c29c76388404a63bbf729dac2fd" category="inline-link-macro-rx"></block></block>
   <block id="d1e4cf4e509b74019a6ec3d98c6300da" category="section-title">내 데이터 수집 상태는 어떠한가?</block>
@@ -5965,8 +5948,6 @@
   <block id="9a3185d3dd699a74f8c315584250a80c" category="inline-link-macro">에이전트 설치</block>
   <block id="c41fe2272c9ff38bed21d6e67f9945cc" category="paragraph">Telegraf 통합 데이터 수집 에이전트가 성능과 보안이 개선되어 버전 *1.22.3*으로 업데이트되었습니다.  업데이트를 원하는 사용자는 해당 업그레이드 섹션을 참조할 수 있습니다.<block ref="7eca75c9707898b05c3a8b3fe84d7968" category="inline-link-macro-rx"></block> 선적 서류 비치.  이전 버전의 에이전트는 사용자 작업 없이 계속 작동합니다.</block>
   <block id="ecf4e9e3c38358de05561be5ed03f5d0" category="section-title">미리보기 기능</block>
-  <block id="2240ee7d4e56b8ba7ac49b14311cdeed" category="inline-link-macro">NetApp 영업팀</block>
-  <block id="0d0549b05d1645d38baa1a6cedaa7190" category="paragraph">Cloud Insights 정기적으로 여러 가지 흥미로운 새로운 미리 보기 기능을 강조합니다.  이러한 기능 중 하나 이상을 미리 보고 싶으시다면 저희에게 연락하세요.<block ref="02af545fedbe237243dabe2f44648f4d" category="inline-link-macro-rx"></block> 자세한 내용은.</block>
   <block id="2ad48475868a5acf715f48e45c20d2d1" category="cell">Cloud Secure – 공격 시 사용자 액세스 차단</block>
   <block id="4e28671aa760c1ba504510846bdf520c" category="cell">공격이 감지되면 사용자 액세스를 차단하는 기능을 통해 비즈니스에 중요한 데이터를 더욱 안전하게 보호합니다.  자동 응답 정책을 사용하여 자동으로 액세스를 차단하거나 알림 또는 사용자 세부 정보 페이지에서 수동으로 액세스를 차단할 수 있습니다.<block ref="e8dc9c29c76388404a63bbf729dac2fd" category="inline-link-macro-rx"></block></block>
   <block id="b56a5394775a9f077c12cb3e770d913c" category="section-title">2022년 5월</block>
@@ -6008,7 +5989,6 @@
   <block id="d8afe893977b1761d465e261f7f0645c" category="list-text">계단 - 이전 데이터 포인트를 보간된 데이터 포인트로 사용합니다.</block>
   <block id="0d55cb88c50b339df6b23026d70f4851" category="section-title">Kubernetes 인프라를 위한 향상된 모니터링</block>
   <block id="6e8d08f021f143c0380bcfda2a0d8e35" category="paragraph">Cloud Insights 포드, 데몬셋, 복제셋이 생성되거나 제거될 때, 그리고 새로운 배포가 생성될 때 알림을 보내 Kubernetes 환경의 변경 사항을 최신 상태로 유지합니다.  Kubernetes 모니터는 기본적으로 _일시 중지_ 상태로 설정되어 있으므로 필요한 특정 모니터만 활성화해야 합니다.</block>
-  <block id="58114ec5d8ca1494b408777c1a724eef" category="cell">스트레스 받는 공유 리소스에 대한 통찰력은 AI/ML을 사용하여 환경에서 성능 저하를 일으키는 리소스 경합이 있는 위치를 자동으로 식별하고, 영향을 받는 모든 워크로드를 강조 표시하고, 수정을 위한 권장 조치를 제공하여 성능 문제를 더 빠르게 해결할 수 있도록 합니다.<block ref="b97265367ad52c02d31fa7522e26571d" category="inline-link-macro-rx"></block></block>
   <block id="9fc31ce4550c4f68c1ea81f5a37335aa" category="section-title">새로운 데이터 수집기</block>
   <block id="99449a8a20c724ea6cd587ff41d0672f" category="list-text">*Cohesity SmartFiles* - 이 REST API 기반 수집기는 Cohesity 클러스터를 획득하여 "뷰"(CI 내부 볼륨으로서), 다양한 노드를 검색하고 성능 지표를 수집합니다.</block>
   <block id="cd96347d3d125d14ec06afe0adbac82a" category="paragraph">다음 데이터 수집기에서 성능 데이터 수집 및 표시 기능이 개선되었습니다.</block>
@@ -9439,8 +9419,6 @@
   <block id="1d3a47e64cfbeb6f43f26517be02a023" category="list-text"><block ref="1d3a47e64cfbeb6f43f26517be02a023" category="inline-link-macro-rx"></block></block>
   <block id="286ecb4572a276871772bdbf167316f2" category="inline-link-macro">국경 간 데이터 전송</block>
   <block id="e38fea3e33cc0a5f1866f4eb9682e240" category="list-text"><block ref="e38fea3e33cc0a5f1866f4eb9682e240" category="inline-link-macro-rx"></block></block>
-  <block id="20505218646d682cb07a0cf279e9cf29" category="inline-link-macro">구속력 있는 기업 규칙</block>
-  <block id="d352b73ef3c84d8725e56efbf13e84f1" category="list-text"><block ref="d352b73ef3c84d8725e56efbf13e84f1" category="inline-link-macro-rx"></block></block>
   <block id="f27a46645af620bac8278c39a9d657b8" category="inline-link-macro">제3자 데이터 요청에 응답</block>
   <block id="0e07493de1ccce1a68aff3dbd2cd6cac" category="list-text"><block ref="0e07493de1ccce1a68aff3dbd2cd6cac" category="inline-link-macro-rx"></block></block>
   <block id="e87433704018842ba5eb9ad6c1a93e26" category="inline-link-macro">NetApp 개인정보 보호 원칙</block>
@@ -9771,8 +9749,6 @@
   <block id="72213a3f462eab56462e1fd1892f6fc0" category="list-text">호스트에 적합한 플랫폼(Windows, Linux)을 선택하세요</block>
   <block id="0b5b60f6bf77a0318f6283c5d8ce5be7" category="list-text">각 플랫폼에 대한 나머지 단계를 따르세요.</block>
   <block id="09e0466fcc22c337dc6af8a799296033" category="admonition">호스트에 에이전트를 설치한 후에는 해당 호스트에 다시 에이전트를 설치할 필요가 없습니다.</block>
-  <block id="4779eaa1340da59df6b8231755992886" category="inline-link-macro">"노드" 메트릭</block>
-  <block id="9ada5756ebf6ec40086a8c2629d928aa" category="admonition">서버/VM에 에이전트를 설치하면 Data Infrastructure Insights 사용자가 구성한 데이터 수집기에서 데이터를 수집하는 것 외에도 해당 시스템에서도 메트릭을 수집합니다.  이러한 측정항목은 다음과 같이 수집됩니다.<block ref="721decf63f7a81173878238d526f87a6" category="inline-link-macro-rx"></block> .</block>
   <block id="2611d0720b029b968257661771d287e6" category="admonition">프록시를 사용하는 경우 Telegraf 에이전트를 설치하기 전에 해당 플랫폼의 프록시 지침을 읽으세요.</block>
   <block id="b2997605f7b826343b475f71837415f4" category="section-title">로그 위치</block>
   <block id="21872dffda230726cb93a6dddff7dd00" category="paragraph">Telegraf 로그 메시지는 기본적으로 stdout에서 다음 로그 파일로 리디렉션됩니다.</block>
@@ -10022,7 +9998,6 @@
   <block id="f005ad36a865e60c2f589a58c0daafa5" category="cell">1. 다음 명령을 사용하여 에이전트를 편집합니다: kubectl -n &lt;네임스페이스&gt; edit agent 2.  'security-policy-enabled'를 'false'로 표시합니다.  이렇게 하면 Pod 보안 정책과 Pod 보안 입장이 비활성화되고 운영자가 배포할 수 있습니다.  다음 명령을 사용하여 확인하세요. kubectl get psp(Pod 보안 정책이 제거되었음을 표시해야 함) kubectl get all -n &lt;네임스페이스&gt; | grep -i psp(아무것도 발견되지 않았음을 표시해야 함)</block>
   <block id="59e3026f71d01a624108642cdb778ebd" category="cell">"ImagePullBackoff" 오류가 발생했습니다.</block>
   <block id="43340e6cc4e88197d57f8d6d5ea50a46" category="inline-xref">더 읽어보세요</block>
-  <block id="31c512270381a100a1d6ed5460e4382a" category="cell">이러한 오류는 사용자 지정 또는 개인 Docker 저장소가 있고 Kubernetes Monitoring Operator가 이를 올바르게 인식하도록 아직 구성하지 않은 경우 나타날 수 있습니다. <block ref="64c2e35c96e92fc99426098fae703fff" category="inline-xref-macro-rx"></block> 사용자 정의/개인 저장소 구성에 대한 정보입니다.</block>
   <block id="6da3e5f4ef4407262c741e8325a8249d" category="cell">모니터링 운영자 배포에 문제가 있는데, 현재 문서에서는 이를 해결하는 데 도움이 되지 않습니다.</block>
   <block id="368fbe1d48012e8e4f24249e2b27a8dd" category="paragraph">다음 명령의 출력을 캡처하거나 기록해 두고 기술 지원팀에 문의하세요.</block>
   <block id="70d79a6ca6098037988336f11346dce8" category="cell">Operator 네임스페이스의 net-observer(워크로드 맵) 포드는 CrashLoopBackOff에 있습니다.</block>
@@ -10071,7 +10046,6 @@
   <block id="006f752e44410388cadd8f8a37ce069f" category="inline-link-macro">에이전트 구성</block>
   <block id="e7367bd1ec175ef5c58d982c52bc4348" category="inline-link-macro">서버TLS부트스트랩</block>
   <block id="eb693e07b3c7e38a77aa691eee254db7" category="cell">이는 kubelet이 자체 서명된 인증서를 사용하거나 지정된 인증서에 인증서 _Subject Alternative Name_ 목록에 &lt;kubelet_IP&gt;가 포함되지 않은 경우 발생합니다.  이를 해결하려면 사용자가 다음을 수정할 수 있습니다.<block ref="1ff2a3d734af6ebdb77c417baa3479b1" category="inline-link-macro-rx"></block> , _telegraf:insecureK8sSkipVerify_를 _true_로 설정합니다.  이렇게 하면 Telegraf 입력 플러그인이 검증을 건너뛰도록 구성됩니다.  또는 사용자는 kubelet을 구성할 수 있습니다.<block ref="9ed8afe3c99331fa3d23c13414b98aba" category="inline-link-macro-rx"></block> 그러면 'certificates.k8s.io' API에서 인증서 요청이 트리거됩니다.</block>
-  <block id="496e790e66d36d3bfbadd9eca21b9d6b" category="cell">커패시터</block>
   <block id="8c362b737d9d3a6fff5acfc29aaa5225" category="summary">Kubernetes용 데이터 수집기</block>
   <block id="3ce5067a26bb6509b15cfb6487590ed5" category="doc">데이터 수집기: Kubernetes</block>
   <block id="6ffb121d702031b943827f26c164c756" category="paragraph">Data Infrastructure Insights 이 데이터 수집기를 사용하여 Kubernetes Pod, Node 및 Container 메트릭을 수집합니다.</block>
@@ -10205,7 +10179,6 @@
   <block id="7570972df9d369d66d38cf0e825776a0" category="cell">부서 번호</block>
   <block id="5ae0c1c8a5260bc7b6648f6fbd115c35" category="cell">사진</block>
   <block id="a24d56a7bae022bdb7c209634de95598" category="list-text">LDAP 탐색기를 사용하면 LDAP 데이터베이스를 탐색하고, 개체 속성 및 특성을 보고, 권한을 보고, 개체 스키마를 보고, 저장하고 다시 실행할 수 있는 정교한 검색을 실행할 수 있습니다.</block>
-  <block id="34baf307c1feaeab47e51f964eb78134" category="list-text">LDAP 탐색기 설치<block ref="b0643aa9f9b138fe3304044353a15064" category="inline-link-rx"></block> ) 또는 Java LDAP 탐색기<block ref="0e1466743bc4c5a65654aff64a5c8d57" category="inline-link-rx"></block> ) LDAP 서버에 연결할 수 있는 모든 Windows 컴퓨터에서.</block>
   <block id="cc7c5e373102d7c40456a0932056d813" category="list-text">LDAP 디렉토리 서버의 사용자 이름/비밀번호를 사용하여 LDAP 서버에 연결합니다.</block>
   <block id="b4fe7a0e70b4e56323acfd674257077e" category="inline-image-macro">LDAP 연결</block>
   <block id="23df8ccbde1c236e533548a253cc3eee" category="paragraph"><block ref="23df8ccbde1c236e533548a253cc3eee" category="inline-image-macro-rx" type="image"></block></block>
@@ -13367,9 +13340,6 @@
   <block id="ecd1b5f31c28de0c631ee58c6b41b0ce" category="inline-link-macro">스키마 테이블 - 성능</block>
   <block id="641194ba8e9eb6bea72a6c8555dba312" category="inline-link-macro">스키마 테이블 - 포트</block>
   <block id="30447449adfd6d4aba37ceff8ad6d44c" category="paragraph"><block ref="d7f4229ab5b0a23fc5733709f009bb9e" category="inline-link-macro-rx"></block> <block ref="cc065afde5664e2223ba0976d7427c1a" category="inline-link-macro-rx"></block> <block ref="743d4aaaedfa5c8a24d5ae2d7eb2fd6f" category="inline-link-macro-rx"></block> <block ref="c26959329d694ba673ccce22300f912c" category="inline-link-macro-rx"></block> <block ref="bb4b6081cd653f5a71a0887c16d1a9a1" category="inline-link-macro-rx"></block> <block ref="a84fddf1b8ccb11a0434fc30c7af2a6a" category="inline-link-macro-rx"></block></block>
-  <block id="5ea22d2e8fc28ebb23d6c57d502666b3" category="paragraph">이 문서에서는 Reporting Database에 대한 스키마 테이블을 제공합니다.</block>
-  <block id="88bf9a2e65ee5333fd86a914ed4d4dac" category="inline-link-macro">용량 스키마</block>
-  <block id="9f8e620c6fad8108bd9d954d0fa14a52" category="paragraph"><block ref="9f8e620c6fad8108bd9d954d0fa14a52" category="inline-link-macro-rx"></block></block>
   <block id="e0f595cb2362f95f18d132f94d406cc4" category="summary">dwh_capacity 데이터베이스의 스키마 테이블 및 관계</block>
   <block id="896f40a8060d15f9a22064d62506f2e6" category="doc">dwh_capacity에 대한 데이터베이스 스키마 참조</block>
   <block id="3ebfabfdba61057b0445ee6ad62e9bbc" category="paragraph">이 참조 문서에서는 테이블 구조, 필드 정의, 데이터 유형 및 관계를 포함하여 dwh_capacity 데이터베이스에 대한 자세한 스키마 정보를 제공합니다.</block>
@@ -14013,10 +13983,7 @@
   <block id="33b828c8fb435b67f3a4a321adbc89c1" category="paragraph">개별 사용자 및 디렉터리 경로를 해당 제외 목록에 추가하거나 제거할 수 있습니다. 각 목록의 모든 항목에는 언제 누가 추가했는지에 대한 정보가 기록되며, 이 정보는 감사 목적으로 사용됩니다.</block>
   <block id="b2bc711706213f5680535c284278fd8a" category="section-title">제외 및 감사 관리</block>
   <block id="4cc0f970741fc7eef05a2f6890f15228" category="list-text">관리자는 언제든지 파일 확장자, 개별 사용자 또는 경로를 추가하거나 제거할 수 있습니다.</block>
-  <block id="430f66c61c1d6e05ef92945c7107306f" category="paragraph"><block ref="430f66c61c1d6e05ef92945c7107306f" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="4d06e3dd77aaee13a5d969e19fc7acf6" category="paragraph"><block ref="4d06e3dd77aaee13a5d969e19fc7acf6" category="inline-image-macro-rx" type="image"></block></block>
   <block id="147e7f8d7d8064d51ff49f93c07adfeb" category="paragraph">*Workload Security &gt; Policies*로 이동하여 *Alert Exclusions* 탭을 선택합니다.</block>
-  <block id="9bf079c262098280af19e475b460e655" category="list-text">파일 유형: 특정 <block ref="e9fd5a7947ff579f7dabe8508e9cb8cd" category="inline-xref-macro-rx"></block>에 대한 파일 변조 경고 억제</block>
   <block id="492f463a35ea215d77ae021c64cddb64" category="paragraph">예를 들어, _test.txt_라는 파일의 이름이 _test.txt.abc_로 변경되었는데 Workload Security에서 _.abc_ 확장자 때문에 랜섬웨어 공격으로 감지하는 경우, _.abc_ 확장자를 _허용된 파일 형식_ 목록에 추가할 수 있습니다. 목록에 추가되면 _.abc_ 확장자를 가진 파일에 대해서는 더 이상 랜섬웨어 공격이 생성되지 않습니다.</block>
   <block id="318685a1827ca5f4280e59d71f7d1438" category="paragraph">허용되는 파일 형식은 정확히 일치하는 형식(예: ".abc")이거나 표현식(예: ++.*type++, ++.type*++, 또는 ++.*type*++)일 수 있습니다. .a*c, .p*f 형식의 표현식은 지원되지 않습니다.</block>
   <block id="664ba14b3efcf7d6e7a9409a24223a79" category="paragraph">이벤트에 대한 알림만 억제되는 것이며, 이벤트 자체는 계속 기록되어 검토할 수 있다는 점에 유의하십시오.</block>
@@ -14038,9 +14005,6 @@
   <block id="bd0fc56b14454f1ee18d759d4af08ed3" category="list-text">지난 24시간 동안 이 디바이스의 용량 사용률 추세를 보여주시겠습니까?</block>
   <block id="aa7271070bccbdb553337d1d11a546e3" category="list-text">이 스토리지에서 가장 많은 공간을 차지하는 볼륨은 무엇입니까?</block>
   <block id="d166bd4cdca169a67a613a26fe8770ce" category="paragraph">'''nt1.png[테이블 위젯 단위 관리]</block>
-  <block id="3d2f1005746d7db51821bc629f7d4407" category="paragraph">잠재적 랜섬웨어 공격에 대한 세부 정보 페이지: -Screen" 보기: 테이블 위젯은 왼쪽에 개체/그룹을 표시하고 오른쪽에 개체 데이터(속성/메트릭)를 표시합니다.</block>
-  <block id="af730d8a2733a784c669eb49b4d22282" category="paragraph">+ <block ref="d39f912f84d3b7c6330ea5e1e4443c8f" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="e81234c807cc73fff59051e85698456e" category="paragraph">[서식 지정이 포함된 값 위젯] <block ref="ea343c0c42e5fd6968847a90104062ca" category="inline-image-macro-rx" type="image"></block></block>
   <block id="460cdd4165472896cc30053fb384c428" category="summary">Workload Security의 감사 이벤트</block>
   <block id="7fb266e1b99b0df47eb66e941859d665" category="doc">Workload Security 이벤트 감사</block>
   <block id="fd353ad75bcbf126fad9d6e35df7010e" category="paragraph">예상되는 변경 사항(추적용)과 예상치 못한 변경 사항(문제 해결용)을 모두 식별합니다. Workload Security 시스템 이벤트 및 사용자 활동에 대한 감사 추적 기록을 볼 수 있습니다.</block>
@@ -14126,4 +14090,71 @@
   <block id="606930ccd6550cc24fe845f69572c586" category="list-text">읽기 권한 이상이 있는 사용자 계정과 비밀번호.</block>
   <block id="38fbce916138020848ac3b594a6648d0" category="section-title">로그인 메시지를 통해 중요 업데이트 공유</block>
   <block id="7260908f665e8b3c02f0fce13c7ea541" category="paragraph">사용자 지정 가능한 로그인 메시지로 팀원들에게 최신 정보를 제공하고 협업을 강화하세요. 중요한 공지사항, 유지보수 일정, 정책 업데이트 등을 사용자가 로그인할 때 직접 전달할 수 있습니다. 마크다운 기능을 활용하여 메시지 형식을 명확하게 지정하고 모든 DII 사용자에게 중요한 정보를 전달할 수 있습니다. 관리자 권한이 있는 계정은 Admin 메뉴의 Notifications에서 구성을 확인할 수 있습니다.</block>
+  <block id="bf60f9bc5ee0d8e38d0241a3b6dc57b7" category="paragraph">Reclaim ONTAP Cold Storage Insight가 이제 FlexGroups를 지원하며, 모든 고객이 이용할 수 있습니다.</block>
+  <block id="50b8446a2f6570ae66ebb7c9c6f366c9" category="cell">_Kubernetes 네임스페이스 공간 부족_ 인사이트는 Kubernetes 네임스페이스에서 공간 부족 위험이 있는 워크로드를 파악하고, 각 공간이 가득 차기까지 남은 예상 일수를 보여줍니다.</block>
+  <block id="a33d658e60eacb234b7c8ba889d8fde8" category="cell">_공유 리소스 스트레스 상황_ 분석 기능은 AI/ML을 사용하여 환경에서 리소스 경합으로 인해 성능 저하가 발생하는 위치를 자동으로 식별하고, 영향을 받는 워크로드를 강조 표시하며, 문제 해결을 위한 권장 조치를 제공하여 성능 문제를 더 빠르게 해결할 수 있도록 지원합니다.</block>
+  <block id="1a32be6075ec24a9a6ae9d4061fcf46a" category="paragraph">Cloud Insights는 정기적으로 다양한 흥미로운 신규 미리 보기 기능을 소개합니다. 이러한 기능 중 하나 이상을 미리 체험해 보고 싶으시다면 NetApp 영업팀에 문의하여 자세한 정보를 얻으십시오.</block>
+  <block id="f9cc1b0baa3acc4668c046e61bab584b" category="cell">'스트레스 받는 공유 리소스' 분석 기능은 AI/ML을 사용하여 환경에서 리소스 경합으로 인해 성능 저하가 발생하는 위치를 자동으로 식별하고, 영향을 받는 워크로드를 강조 표시하며, 문제 해결을 위한 권장 조치를 제공하여 성능 문제를 더 빠르게 해결할 수 있도록 지원합니다.</block>
+  <block id="ee6b260a508ca58c8733b23090cd87a7" category="summary">모든 사용자에게 오늘의 팝업 메시지를 설정합니다.</block>
+  <block id="cb5c0ec2514b9d06359e770769a8d39c" category="doc">로그인 메시지 구성</block>
+  <block id="42f1345d41ac1e51a16da7649db8b092" category="paragraph">모든 사용자가 로그인할 때 팝업 메시지로 표시할 메시지를 설정할 수 있습니다. 다음 로그인 시에만 표시할지, 아니면 이후 모든 로그인 시에 표시할지 선택할 수 있습니다.</block>
+  <block id="810bac3bcbfe61628b10fe3df2e0ea96" category="paragraph">관리자는 Admin &gt; Notifications의 "Login Banner" 탭에서 메시지를 설정할 수 있습니다.</block>
+  <block id="22f60aff39394bad553a00e2940bdf11" category="paragraph">이 메시지는 기본적인 Markdown 형식을 지원하므로 굵게, 기울임꼴, 표 등의 서식을 적용할 수 있습니다.</block>
+  <block id="6a46079dd2d659655fc832470519e71a" category="paragraph">사용자가 다음 로그인 시에만 메시지를 볼지, 아니면 이후 모든 로그인 시에 메시지를 볼지 선택하세요.</block>
+  <block id="6a5f1dd41e7d3fa22fbd71d29b46cea4" category="inline-image-macro">로그인 배너 설정</block>
+  <block id="bd6c3bd0a46b9e6da4828acea4a9e315" category="paragraph"><block ref="bd6c3bd0a46b9e6da4828acea4a9e315" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1ef61a1b7e25b910ec7beca0741bd208" category="paragraph">사용자는 로그인 메시지를 닫으려면 반드시 확인해야 합니다. 메시지를 닫으면 추가 팝업(새로운 기능 업데이트, 서비스 약관 업데이트 등)이 표시됩니다.</block>
+  <block id="38f64824b0d19083b9c439a8b4af41e4" category="admonition">서버/VM에 에이전트를 설치하면 Data Infrastructure Insights는 사용자가 구성한 데이터 수집기에서 수집하는 데이터 외에도 해당 시스템에서 메트릭을 수집합니다. 이러한 메트릭은 "노드" 메트릭으로 수집됩니다.</block>
+  <block id="7fa36585f976625a51b4f3be0f46f0b5" category="cell">사용자 지정 또는 비공개 Docker 저장소가 있고 Kubernetes 모니터링 운영자가 해당 저장소를 제대로 인식하도록 아직 구성하지 않은 경우 이러한 오류가 발생할 수 있습니다. <block ref="2d47cbc88497421e2fe69677ce7d4cef" category="inline-xref-macro-rx"></block> 사용자 지정/비공개 저장소 구성에 대한 자세한 내용은 해당 문서를 참조하십시오.</block>
+  <block id="f02e4a9177c27a051b895699ea0110ce" category="inline-link-macro">LDAP Explorer</block>
+  <block id="d13806041219cf369ed889a6ff834216" category="inline-link-macro">Java LDAP Explorer</block>
+  <block id="32b7ad0935b353d5c424244711c6c8cd" category="list-text">LDAP 서버에 연결할 수 있는 모든 Windows 컴퓨터에 <block ref="bdc822b7c7d5a07392a373c8455d25e9" category="inline-link-macro-rx"></block> 또는 <block ref="21af31fb3fc4369ed8be68bf76e0e99a" category="inline-link-macro-rx"></block>을(를) 설치하십시오.</block>
+  <block id="9d2365ff6e78da3b972051b1d94c82a9" category="summary">ONTAP 9.9 이상 데이터 수집기를 위한 NetApp 클라우드 연결 구성</block>
+  <block id="ddee1a7420119fd909427746c177cb37" category="section-title">AI 기반 규칙 생성</block>
+  <block id="2eb83c9e235304f6ab08d1e3e100b334" category="paragraph">또는 AI 기반 장치 식별 기능을 활용하여 추측에 의존하지 않고 빠르고 쉽게 규칙을 생성할 수 있습니다. AI 지원 규칙 생성기를 실행하여 환경을 분석하고 Device Resolution 규칙을 제안받으면 더 많은 장치를 신속하게 식별하고 관리할 수 있습니다.</block>
+  <block id="e0c4332e8c13be976552a059f106354f" category="section-title">시작하기</block>
+  <block id="13ecdfe446ce7572d9674cca5dc69399" category="paragraph">AI를 사용하여 해결 규칙을 생성하려면 관리자가 먼저 AI 생성 규칙을 활성화해야 합니다.</block>
+  <block id="38bf7159a22b7d9149664e77a95f4fb9" category="inline-image-macro">AI 규칙 생성 시작하기, width=400</block>
+  <block id="c574b1e2b5b6f8c0fb2a7f3cc9cd74eb" category="paragraph"><block ref="c574b1e2b5b6f8c0fb2a7f3cc9cd74eb" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7fb6be1251cff450bdbe894f3a6947ca" category="paragraph">AI 도우미가 파이버 채널 장치 중 식별되지 않은 장치의 비율을 알려주고 규칙 생성을 허용할지 묻습니다. "Let's Go!"를 선택합니다.</block>
+  <block id="154f6949b5d604485edfd5554cfc73c2" category="inline-image-macro">규칙을 생성하려면 "Let's Go"를 선택하세요, width=400</block>
+  <block id="4e41c64207dd722b6d6c679c6d6b06b0" category="paragraph"><block ref="4e41c64207dd722b6d6c679c6d6b06b0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f639ccbda25c3b7c5e0e54e8f336f6d1" category="paragraph">AI 기반 규칙을 활성화하기 전에 도메인 이름을 확인하라는 메시지가 표시됩니다. 효과적인 식별을 위해서는 모든 도메인을 포함해야 합니다.</block>
+  <block id="272258d081ffa5d88457e9398c962cd8" category="section-title">진행 상황 확인</block>
+  <block id="ad54ef35087de51e4251cfe264d981f0" category="paragraph">DII는 주기적으로 추가 식별 가능 기기가 있을 경우 알림을 생성합니다. 페이지 오른쪽 상단의 종 모양 아이콘에 녹색 점이 표시되면 해당 점을 선택하여 알림을 확인하세요.</block>
+  <block id="619cd5374b326ad19aeb8ca6766b51f5" category="inline-image-macro">알림 벨, 너비=400</block>
+  <block id="e9d685345131d05b8301eb4fb633e5d4" category="paragraph"><block ref="e9d685345131d05b8301eb4fb633e5d4" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="74bc3d1913a701a4d16df961e9a8487a" category="paragraph">종 모양 아이콘을 사용하여 규칙 생성 상태를 확인할 수도 있습니다. 규칙 생성은 환경의 복잡성에 따라 몇 초에서 몇 분까지 소요될 수 있습니다.</block>
+  <block id="a5d99e1d64aa482f996a006aa1704c49" category="paragraph">AI가 생성한 규칙에는 목록에 "AI Generated" 배지가 표시됩니다.</block>
+  <block id="07465efb5bc3b5a8f6f4b8398cf2d346" category="inline-image-macro">AI 생성 규칙 배지, 너비=400</block>
+  <block id="94fba23c3c2a0770f556c5e615c0b1a6" category="paragraph"><block ref="94fba23c3c2a0770f556c5e615c0b1a6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="54a3901a6231fc440a261ea73f581658" category="section-title">재개 및 계속</block>
+  <block id="e67fe5612ea54e90c6cd6297fad6b3aa" category="paragraph">AI가 생성한 규칙은 기본적으로 _일시 중지_ 상태입니다. 기기를 식별하려면 각 규칙을 검토하고 _재개_해야 합니다.</block>
+  <block id="8adc06985cc11866dd25119eb70226ab" category="section-title">관련:</block>
+  <block id="aa83dd9621bf2fe08cfaf29fd6ba92bc" category="paragraph"><block ref="9606d230686b3a54ef0c843c6a8d06ee" category="inline-link-macro-rx"></block> <block ref="f7ab518a04b5eb9592800f6375835782" category="inline-link-macro-rx"></block> <block ref="9afa071c2420f8347dcfd0e1bd5f4e5c" category="inline-link-macro-rx"></block></block>
+  <block id="ce9b3546654fac61e740457e736941c0" category="summary">높은 IO 밀도를 조회할 때는 루트 볼륨을 제외해야 합니다.</block>
+  <block id="17d39c84f8b8300ad07b5407dbf9730a" category="summary">PagerDuty의 성능 또는 인벤토리 임계값에 대한 알림을 위한 웹훅 생성</block>
+  <block id="c72f92d02ad6ff9b7ceac63f3fe89d45" category="list-text">_이름_ 과 의미 있는 _설명_ 을 입력합니다. _다음_ 을 클릭합니다.</block>
+  <block id="61cf54bbd40ef1dd67f4a54e083ac6e4" category="inline-image-macro">PagerDuty 화면, 너비=500</block>
+  <block id="a4e0db6c672f7c2510cfdb81666421f8" category="paragraph"><block ref="a4e0db6c672f7c2510cfdb81666421f8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d3b16af9f9378f7c389da4e8c9f918d1" category="list-text">다음 화면에서 기존 에스컬레이션 정책을 선택하거나 새 정책을 생성합니다. [다음]을 클릭합니다.</block>
+  <block id="d116d62ce89c20be3cb9917a6d759321" category="inline-image-macro">에스컬레이션 정책 할당,width=500</block>
+  <block id="58624e4ccd31d6fe4fe6caa0fdde9f63" category="paragraph"><block ref="58624e4ccd31d6fe4fe6caa0fdde9f63" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9c2fe0bd0fa4ba097b30911aeb54ced4" category="list-text">원하는 AIOps 기능을 선택합니다. _다음_을 클릭합니다.</block>
+  <block id="d60b9d1db74c19e79bf879ac4bcd9cf5" category="inline-image-macro">aiops 서비스 선택 화면,width=500</block>
+  <block id="3038bf1ea5b5370c3c176f8872f9bfdd" category="paragraph"><block ref="3038bf1ea5b5370c3c176f8872f9bfdd" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f6d94044ca6ce1c0b87d3f1883fd14ab" category="list-text">경고를 PagerDuty에 전달하는 데 사용할 통합을 선택하십시오. DII의 경우 Events API V2 통합을 사용하십시오.</block>
+  <block id="43871cbdae63fa7472200d755b502861" category="inline-image-macro">PagerDuty 통합 선택 화면, 너비=500</block>
+  <block id="4e3245eaf9d90f3ecc15300985caa196" category="paragraph"><block ref="4e3245eaf9d90f3ecc15300985caa196" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="185d2921ba09f306e8dd90a2e3c3f22b" category="paragraph">통합 구성 화면에서 *통합 키*를 기록해 두십시오. 아래에서 Data Infrastructure Insights 웹훅을 생성할 때 이 키가 필요합니다.</block>
+  <block id="af4236f034283c7699428b575513a6d2" category="inline-image-macro">Integration Key 복사,width=500</block>
+  <block id="d50fbd4d62a0179f14ebd0c2b93dd357" category="paragraph">+ <block ref="cdd00a2746e22efb0bd3e4f3e89310e3" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="23dbecf4c1701d7ea26399234db8b53d" category="list-text">Kapacitor가 서비스용 데이터 수집기로 추가되었습니다.</block>
+  <block id="cc6f0b5db8e54e2bd636fc0ae818e97a" category="list-text">파일 유형: 특정 <block ref="3f41337fac4ca104c57911a2b4a83477" category="inline-xref-macro-rx"></block>에 대한 파일 변조 경고 억제</block>
+  <block id="36025b18f09d25d0c8b6bef3b9d9fcfc" category="inline-image-macro">알림 제외 사용자</block>
+  <block id="9bc8863049b78d2c731d6e05b7211c2b" category="paragraph"><block ref="9bc8863049b78d2c731d6e05b7211c2b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9ea7b40b3db8212823df746dc5573490" category="inline-image-macro">경고 제외 경로</block>
+  <block id="180f4f510f0a043b315312d10faa507e" category="paragraph"><block ref="180f4f510f0a043b315312d10faa507e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="eda220a2d8b65414dd2552b1cc37aca5" category="sidebar">모니터링, 경고 및 알림</block>
+  <block id="b3dd2c9c1ffecc51c5a189f2d6c9d4c6" category="sidebar">로그인 메시지</block>
 </blocks>

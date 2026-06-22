@@ -93,7 +93,7 @@ sidebar:
         url: "/concept_log_explorer.html"
       - title: 비활성 장치 식별
         url: "/task_identify_inactive_devices.html"
-    - title: 모니터 및 알림
+    - title: 모니터링, 경고 및 알림
       entries:
       - title: 모니터 만들기
         url: "/task_create_monitor.html"
@@ -117,6 +117,8 @@ sidebar:
           url: "/task_webhook_example_slack.html"
         - title: 웹훅 예제 - 팀
           url: "/task_webhook_example_teams.html"
+      - title: 로그인 메시지
+        url: "/login_message_popup.html"
     - title: 주석 작업
       entries:
       - title: 주석 정의
