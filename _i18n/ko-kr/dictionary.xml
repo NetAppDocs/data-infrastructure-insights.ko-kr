@@ -2922,7 +2922,6 @@
   <block id="305d795c0691186d2df68b4fc20ac11c" category="sidebar">VNX 파일(Celerra)</block>
   <block id="0d72e0c9bde5708a77d39a52ce138dbe" category="sidebar">VNX 통합</block>
   <block id="0f299b4c65ffefdf8b00e0b3345bf685" category="sidebar">익스트림IO</block>
-  <block id="053f42c6bae3432cae270ea978f7e638" category="sidebar">후지쯔</block>
   <block id="8b36e9207c24c76e6719268e49201d94" category="sidebar">Google</block>
   <block id="44cf206eca8a23c81576d1e81a632654" category="sidebar">HP 엔터프라이즈</block>
   <block id="dc20128ad51d4736f32ce4774255be05" category="sidebar">HP Alletra 9000 및 Primera</block>
@@ -11600,26 +11599,6 @@
   <block id="992a67d3dca96bca02f3f0f78e2a1cfd" category="cell">XtremIO 관리 서버의 비밀번호</block>
   <block id="a93bcb5a82072c389a3b8a73489512f7" category="cell">TCP 포트</block>
   <block id="0787e82546099bff5ac87c0c5d9ce7a3" category="cell">XTremIO 관리 서버에 연결하는 데 사용되는 TCP 포트입니다.  기본값은 443입니다.</block>
-  <block id="9fa4e650cd8691fa4e931e43145e4dfd" category="summary">Fujitsu Eternus 데이터 수집기 구성.</block>
-  <block id="76bbf6e63b5bbafbef5f94b1231bc156" category="doc">Fujitsu Eternus 데이터 수집기</block>
-  <block id="27baee321a480862e914c0713eed63ca" category="paragraph">Fujitsu Eternus 데이터 수집기는 스토리지 시스템에 대한 관리자 수준 액세스를 사용하여 인벤토리 데이터를 수집합니다.</block>
-  <block id="356a176551e40cab7b2346474eb8414b" category="paragraph">Data Infrastructure Insights Fujitsu Eternus 스토리지에서 다음과 같은 인벤토리 정보를 수집합니다.  Data Infrastructure Insights 에서 수집한 각 자산 유형에 대해 해당 자산에 가장 일반적으로 사용되는 용어가 표시됩니다.  이 데이터 수집기를 보거나 문제를 해결할 때 다음 용어를 염두에 두십시오.</block>
-  <block id="9f66700a9e61cc8f9d73ebf3758934dc" category="cell">씬 풀, 유연한 티어 풀, 공격대 그룹</block>
-  <block id="9a2dd0553643575c114f67eb5af46be9" category="cell">표준 볼륨, 스냅 데이터 볼륨(SDV), 스냅 데이터 풀 볼륨(SDPV), 씬 프로비저닝 볼륨(TPV), 플렉시블 티어 볼륨(FTV), 와이드 스트라이핑 볼륨(WSV)</block>
-  <block id="7d023b2b798bae1346a6818191492724" category="cell">채널 어댑터</block>
-  <block id="895e3cd28422f162dfb0a18d997e89c7" category="paragraph">참고: 이는 일반적인 용어 매핑일 뿐이며 이 데이터 수집기의 모든 사례를 나타내지 않을 수 있습니다.</block>
-  <block id="9d597b15876cd2c5bb9b786f0f4e5ef4" category="list-text">쉼표로 구분할 수 없는 Eternus 저장소의 IP 주소</block>
-  <block id="46614f5e8cdddc2a44a95b7ec777cc30" category="list-text">SSH 관리 수준 사용자 이름 및 비밀번호</block>
-  <block id="ab557c35881f71a55e4fafded4111238" category="list-text">포트 22</block>
-  <block id="3cfd8b82a08186322b61ebdaff18da99" category="list-text">페이지 스크롤이 비활성화되어 있는지 확인하세요(clienv-show-more-scroll disable)</block>
-  <block id="3073eb22ff046851d2773f6b9b9cccd5" category="cell">Eternus Storage의 IP 주소</block>
-  <block id="4fa315e5b29dfdb8f82f1868c0a1de5f" category="cell">Eternus 저장소의 IP 주소</block>
-  <block id="e071ed8c236cffb19cf488375af0496c" category="cell">Eternus 저장소의 사용자 이름</block>
-  <block id="1dc2d051123dfeb19bf13ffe4f1c7781" category="cell">Eternus 저장소 비밀번호</block>
-  <block id="883febd6f18d92fba02f341c896a50d2" category="cell">"데이터 검색 중 오류 발생"과 "CLI 프롬프트 찾기 오류" 또는 "셸 결과 끝에서 프롬프트 찾기 오류" 오류 메시지</block>
-  <block id="1e1dcdf0229ed6e4040c2ded250c7477" category="cell">원인: 저장 시스템에서 페이지 스크롤이 활성화되어 있습니다.  가능한 해결 방법: * 다음 명령을 실행하여 페이지 스크롤을 비활성화해 보세요: set clienv-show-more -scroll disable</block>
-  <block id="bdaf6ab402ed62b6993826e531f83a19" category="cell">"저장소에 대한 SSH 연결을 인스턴스화하지 못했습니다" 또는 "VirtualCenter에 대한 연결을 인스턴스화하지 못했습니다"라는 오류 메시지가 있는 "연결 오류"</block>
-  <block id="f5e86717b7f98bd7a5fa01557cb08665" category="cell">가능한 원인: * 자격 증명이 올바르지 않습니다.  * 잘못된 IP 주소입니다.  * 네트워크 문제.  * 저장 장치가 다운되었거나 응답하지 않을 수 있습니다.  가능한 해결책: * 입력한 자격 증명과 IP 주소를 확인하세요.  * SSH 클라이언트를 사용하여 저장소와 통신을 시도하세요.</block>
   <block id="2af1bc57f00c07afe945f9aa64a9712f" category="summary">Google Compute 데이터 수집기 구성</block>
   <block id="ed3cd63dd0baae2764478daf8451ac08" category="doc">NetApp Google Compute 데이터 수집기</block>
   <block id="962baa7c5b677a19767f3eb25401b9a3" category="paragraph">이 데이터 수집기는 Google Compute 클라우드 플랫폼 구성에서 인벤토리 및 성능 수집을 지원합니다.  이 수집기는 하나의 Google 조직 내의 모든 프로젝트에서 모든 컴퓨팅 리소스를 검색하려고 합니다.  Data Infrastructure Insights 사용하여 여러 Google 조직을 검색하려는 경우 조직당 하나 Data Infrastructure Insights 수집기를 배포해야 합니다.</block>
@@ -14162,4 +14141,16 @@
   <block id="25a317566de430ddfd2c6f4b3fdea612" category="list-text">ci-k8s-change-observer</block>
   <block id="9da5aa79f5375ccea3c84723b5759557" category="cell">Telegraf에서 다음과 유사한 오류 메시지가 표시되지만 Telegraf는 정상적으로 시작되고 실행됩니다. E! [inputs.kubernetes] 플러그인 오류:<block ref="6d1752bb8ee46f6164f07ea885d5c072" category="inline-link-rx"></block> HTTP 상태 403 Forbidden 반환</block>
   <block id="51635ff11969666db6bdeaf0c68d58b0" category="cell">Kubernetes 버전이 1.33 미만인 경우 이러한 메시지가 나타날 수 있습니다. telegraf에서 사용하는 "nodes/pods" RBAC 리소스가 해당 버전에는 존재하지 않습니다. 이전 버전에서 필요한 RBAC 리소스에 대한 자세한 내용은 operator-additional-permissions.yaml 파일의 "For Kubernetes versions &lt; 1.33" 섹션을 참조하십시오.</block>
+  <block id="55c55b1241c0ea96ea6cef65b10a23e4" category="inline-link-macro">Proxmox Virtual Environment</block>
+  <block id="9ddb2ce85d3b0c6085884776fe61a596" category="cell"><block ref="9ddb2ce85d3b0c6085884776fe61a596" category="inline-link-macro-rx"></block></block>
+  <block id="66036899193ada3425c77162bf9d742c" category="summary">Proxmox 가상 환경 데이터 수집기 구성.</block>
+  <block id="dc8f767a3f6e8f9b98077b7e9a688c5d" category="paragraph">DII Promox 가상 환경 수집기는 인벤토리 데이터를 수집합니다. 이 수집기는 HTTPS REST API 기반입니다.</block>
+  <block id="b720c5170acbb344b34398a9ed4fec4b" category="cell">호스트 이름 또는 IP 주소</block>
+  <block id="32d285f157ad1acefe9dbe844cee7acf" category="cell">호스트 이름 스토리지 시스템의 IP 주소</block>
+  <block id="606bae1c220a7cd73cdc71a447b328fd" category="cell">API 토큰 ID</block>
+  <block id="1a07b6dc4baf1e102f15f62b2aa13efc" category="cell">API 토큰이 접근에 필요합니다.</block>
+  <block id="9ae9995c158c8b32609b8fd098fa5ff5" category="cell">API 토큰 시크릿</block>
+  <block id="923e5171366e1120624f5ea15d195544" category="cell">위 토큰의 시크릿</block>
+  <block id="07d3835e20364558e54bb222fac4e80c" category="cell">HTTPS 통신에 사용되는 포트(기본값 8006)</block>
+  <block id="c0dcddaaad9648f13d2e54741430ea94" category="sidebar">Proxmox VE</block>
 </blocks>
