@@ -14,6 +14,7 @@ Data Infrastructure Insights Brocade Enterprise Fabric Connectivity Manager(EFCM
 
 
 
+[[requirements]]
 == 요구 사항
 
 * EFCM 서버에 대한 네트워크 주소 또는 정규화된 도메인 이름
@@ -25,9 +26,10 @@ Data Infrastructure Insights Brocade Enterprise Fabric Connectivity Manager(EFCM
 
 
 
+[[configuration]]
 == 구성
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 필드 | 설명 
 
@@ -42,9 +44,10 @@ Data Infrastructure Insights Brocade Enterprise Fabric Connectivity Manager(EFCM
 |===
 
 
+[[advanced-configuration]]
 == 고급 구성
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 필드 | 설명 
 

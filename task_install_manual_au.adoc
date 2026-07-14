@@ -18,6 +18,7 @@ Linux와 Windows의 프로세스는 비슷합니다.
 
 
 
+[[performing-a-new-au-install-on-linux]]
 == Linux에서 새 AU 설치 수행:
 
 . Data Infrastructure Insights 에서 API 토큰을 생성합니다.
@@ -103,6 +104,7 @@ image:Manual_AU_one_time_token.png["일회용 API 토큰 생성"] image:Manual_A
 
 
 
+[[manually-installing-data-collectors]]
 == 데이터 수집기 수동 설치
 
 /collector/patch/datasourceswar/latest API를 사용하여 최신 datasources.war을 다운로드하세요.
@@ -146,6 +148,7 @@ drwxrwx--- 2 test-user2 test-group-1  4096 Feb 16 10:10 datasources-war-<version
 
 
 
+[[downloading-a-patch]]
 == 패치 다운로드
 
 /collector/patch/file/{version} API를 사용하여 패치를 다운로드하세요.
@@ -189,6 +192,7 @@ drwxrwx--- 2 test-user2 test-group-1  4096 Feb 16 10:10 <patch_file_name>.zip
 
 
 
+[[external-key-retrieval]]
 == 외부 키 검색
 
 UNIX 셸 스크립트를 제공하면 수집 장치에서 이를 실행하여 키 관리 시스템에서 *개인 키*와 *공개 키*를 검색할 수 있습니다.

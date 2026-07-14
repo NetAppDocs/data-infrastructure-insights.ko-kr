@@ -20,6 +20,7 @@ Vmax/PowerMax 인스턴스용 Unisphere 하나가 Symmetrix Vmax 3 이상 스토
 
 
 
+[[requirements]]
 == 요구 사항
 
 * Unisphere 서버의 IP 주소/정규화된 도메인 이름
@@ -29,9 +30,10 @@ Vmax/PowerMax 인스턴스용 Unisphere 하나가 Symmetrix Vmax 3 이상 스토
 
 
 
+[[configuration]]
 == 구성
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 필드 | 설명 
 
@@ -49,9 +51,10 @@ Vmax/PowerMax 인스턴스용 Unisphere 하나가 Symmetrix Vmax 3 이상 스토
 |===
 
 
+[[advanced-configuration]]
 == 고급 구성
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 필드 | 설명 
 
@@ -72,15 +75,17 @@ Vmax/PowerMax 인스턴스용 Unisphere 하나가 Symmetrix Vmax 3 이상 스토
 |===
 
 
+[[troubleshooting]]
 == 문제 해결
 
 이 데이터 수집기에 문제가 발생하면 시도해 볼 수 있는 몇 가지 사항은 다음과 같습니다.
 
 
 
+[[inventory]]
 === 목록
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 문제: | 다음을 시도해 보세요: 
 

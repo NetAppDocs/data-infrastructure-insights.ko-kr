@@ -19,6 +19,7 @@ image:Notifications_email_list.png["이메일 알림"]
 
 
 
+[[subscription-notification-recipients]]
 == 구독 알림 수신자
 
 구독 관련 이벤트 알림 수신자를 구성하려면 "구독 알림 수신자" 섹션으로 이동하세요.  다음 수신자 중 하나 또는 전체에게 구독 관련 이벤트에 대한 이메일 알림을 보내도록 선택할 수 있습니다.
@@ -58,6 +59,7 @@ image:Notifications_email_list.png["이메일 알림"]
 ====
 
 
+[[global-recipient-list-for-alerts]]
 == 알림에 대한 글로벌 수신자 목록
 
 알림에 대한 모든 작업에 대해 알림 이메일 알림이 알림 수신자 목록으로 전송됩니다.  글로벌 수신자 목록에 알림을 보내도록 선택할 수 있습니다.
@@ -71,6 +73,7 @@ NOTE: ONTAP 데이터 수집기 ​​알림은 클러스터/데이터 수집기
 
 
 
+[[editing-notifications-for-ontap]]
 == ONTAP 에 대한 알림 편집
 
 스토리지 랜딩 페이지의 오른쪽 상단 드롭다운에서 _알림 편집_을 선택하여 ONTAP 클러스터에 대한 알림을 수정할 수 있습니다.

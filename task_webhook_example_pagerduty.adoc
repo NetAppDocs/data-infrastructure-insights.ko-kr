@@ -21,6 +21,7 @@ NOTE: 이 페이지는 변경될 수 있는 제3자 지침을 참조합니다.  
 
 
 
+[[pagerduty-setup]]
 == PagerDuty 설정:
 
 . PagerDuty에서 *서비스 > 서비스 디렉토리*로 이동하고 *+새 서비스* 버튼을 클릭합니다.
@@ -48,6 +49,7 @@ image:webhook-pagerduty-4.png["PagerDuty 통합 선택 화면, 너비=500"]
 
 
 
+[[create-data-infrastructure-insights-webhook]]
 == Data Infrastructure Insights 웹훅 만들기:
 
 . Data Infrastructure Insights 에서 *관리자 > 알림*으로 이동하여 *웹후크* 탭을 선택합니다.  새로운 웹훅을 만들려면 *+웹훅*을 클릭하세요.
@@ -63,6 +65,7 @@ image:Webhooks_Custom_Secret_Routing_Key.png["라우팅 키 설정"]
 
 
 
+[[pagerduty-to-data-infrastructure-insights-field-mapping]]
 == PagerDuty to Data Infrastructure Insights 필드 매핑
 
 다음 표와 이미지는 PagerDuty와 Data Infrastructure Insights 간의 필드 매핑을 보여줍니다.
@@ -90,6 +93,7 @@ image:Webhooks-PagerDuty_Fields.png["CI의 PagerDuty 필드"]
 
 
 
+[[notifications-via-webhook]]
 == Webhook을 통한 알림
 
 웹후크를 통해 이벤트를 알리려면 Data Infrastructure Insights 에서 *알림 > 모니터*로 이동하고 *+모니터*를 클릭하여 새 모니터를 만듭니다.link:task_create_monitor.html["감시 장치"] .

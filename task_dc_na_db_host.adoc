@@ -14,15 +14,17 @@ summary: 일반 DB 호스트 리졸버 수집기
 
 
 
+[[terminology]]
 == 술어
 
 Data Infrastructure Insights 이 수집기에서 인벤토리를 수집합니다.
 
 
 
+[[configuration]]
 == 구성
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 필드 | 설명 
 
@@ -43,9 +45,10 @@ Data Infrastructure Insights 이 수집기에서 인벤토리를 수집합니다
 |===
 
 
+[[advanced-configuration]]
 == 고급 구성
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 필드 | 설명 
 

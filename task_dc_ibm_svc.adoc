@@ -16,11 +16,12 @@ IBM SAN Volume Controller(SVC) 데이터 수집기는 SSH를 사용하여 인벤
 
 
 
+[[terminology]]
 == 술어
 
 Data Infrastructure Insights IBM SVC 데이터 수집기에서 다음과 같은 인벤토리 정보를 수집합니다.  Data Infrastructure Insights 에서 수집한 각 자산 유형에 대해 해당 자산에 가장 일반적으로 사용되는 용어가 표시됩니다.  이 데이터 수집기를 보거나 문제를 해결할 때 다음 용어를 염두에 두십시오.
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 공급업체/모델 용어 | Data Infrastructure Insights 용어 
 
@@ -46,6 +47,7 @@ Data Infrastructure Insights IBM SVC 데이터 수집기에서 다음과 같은 
 
 
 
+[[inventory-requirements]]
 === 재고 요구 사항
 
 * 각 SVC 클러스터의 IP 주소
@@ -55,6 +57,7 @@ Data Infrastructure Insights IBM SVC 데이터 수집기에서 다음과 같은 
 
 
 
+[[performance-requirements]]
 === 성능 요구 사항
 
 * SVC 클러스터에 필수이며 SVC Discovery Foundation 패키지에 필요한 SVC 콘솔입니다.
@@ -67,9 +70,10 @@ Data Infrastructure Insights IBM SVC 데이터 수집기에서 다음과 같은 
 
 
 
+[[configuration]]
 == 구성
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 필드 | 설명 
 
@@ -84,9 +88,10 @@ Data Infrastructure Insights IBM SVC 데이터 수집기에서 다음과 같은 
 |===
 
 
+[[advanced-configuration]]
 == 고급 구성
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 필드 | 설명 
 
@@ -101,11 +106,12 @@ Data Infrastructure Insights IBM SVC 데이터 수집기에서 다음과 같은 
 |===
 
 
+[[troubleshooting]]
 == 문제 해결
 
 이 데이터 수집기에 문제가 발생하면 시도해 볼 수 있는 몇 가지 사항은 다음과 같습니다.
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 문제: | 다음을 시도해 보세요: 
 
@@ -114,7 +120,7 @@ Data Infrastructure Insights IBM SVC 데이터 수집기에서 다음과 같은 
 |===
 이 데이터 수집기에 문제가 발생하면 시도해 볼 수 있는 몇 가지 사항은 다음과 같습니다.
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 문제: | 다음을 시도해 보세요: 
 

@@ -14,6 +14,7 @@ summary: NetApp 7모드 데이터 수집기 ​​구성.
 
 
 
+[[terminology]]
 == 술어
 
 Data Infrastructure Insights NetApp 7모드 데이터 수집기에서 다음과 같은 인벤토리 정보를 수집합니다.  인수한 각 자산 유형에 대해 해당 자산에 사용되는 가장 일반적인 용어가 표시됩니다.  이 데이터 수집기를 보거나 문제를 해결할 때 다음 용어를 염두에 두십시오.
@@ -21,7 +22,7 @@ Data Infrastructure Insights NetApp 7모드 데이터 수집기에서 다음과 
 
 NOTE: 이 데이터 수집기는link:task_getting_started_with_cloud_insights.html#useful-definitions["더 이상 사용되지 않음"] .
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 공급업체/모델 용어 | Data Infrastructure Insights 용어 
 
@@ -50,6 +51,7 @@ NOTE: 이 데이터 수집기는link:task_getting_started_with_cloud_insights.ht
 
 
 
+[[requirements]]
 == 요구 사항
 
 이 데이터 수집기를 구성하고 사용하려면 다음이 필요합니다.
@@ -71,9 +73,10 @@ NOTE: 이 데이터 수집기는link:task_getting_started_with_cloud_insights.ht
 
 
 
+[[configuration]]
 == 구성
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 필드 | 설명 
 
@@ -97,9 +100,10 @@ NOTE: 이 데이터 수집기는link:task_getting_started_with_cloud_insights.ht
 |===
 
 
+[[advanced-configuration]]
 == 고급 구성
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 필드 | 설명 
 
@@ -117,6 +121,7 @@ NOTE: 이 데이터 수집기는link:task_getting_started_with_cloud_insights.ht
 |===
 
 
+[[storage-systems-connection]]
 == 저장 시스템 연결
 
 이 데이터 수집기에 기본 관리자 사용자를 사용하는 대신, NetApp 스토리지 시스템에서 직접 관리자 권한이 있는 사용자를 구성하여 이 데이터 수집기가 NetApp 스토리지 시스템에서 데이터를 수집할 수 있도록 할 수 있습니다.
@@ -156,15 +161,17 @@ cli-date 또는 cli-snap 권한이 제공되지 않으면 인수는 완료되지
 
 
 
+[[troubleshooting]]
 == 문제 해결
 
 이 데이터 수집기에 문제가 발생하면 시도해 볼 수 있는 몇 가지 사항은 다음과 같습니다.
 
 
 
+[[inventory]]
 === 목록
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 문제: | 다음을 시도해 보세요: 
 

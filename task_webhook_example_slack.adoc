@@ -17,6 +17,7 @@ NOTE: 이 페이지는 변경될 수 있는 제3자 지침을 참조합니다.  
 
 
 
+[[slack-example]]
 == Slack 예:
 
 * 로 가다 https://api.slack.com/apps[] 새로운 앱을 만드세요.  의미 있는 이름을 지정하고 Slack 작업 공간을 선택하세요.
@@ -29,6 +30,7 @@ image:Webhooks_Slack_Create_Webhook.png["Slack 웹훅 만들기"]
 
 
 
+[[create-data-infrastructure-insights-webhook]]
 == Data Infrastructure Insights 웹훅 만들기:
 
 . Data Infrastructure Insights 에서 *관리자 > 알림*으로 이동하여 *웹후크* 탭을 선택합니다.  새로운 웹훅을 만들려면 *+웹훅*을 클릭하세요.
@@ -41,6 +43,7 @@ image:Webhooks-Slack_example.png["Slack 웹훅 템플릿"]
 
 
 
+[[notifications-via-webhook]]
 == Webhook을 통한 알림
 
 웹후크를 통해 이벤트를 알리려면 Data Infrastructure Insights 에서 *알림 > 모니터*로 이동하고 *+모니터*를 클릭하여 새 모니터를 만듭니다.link:task_create_monitor.html["감시 장치"] .

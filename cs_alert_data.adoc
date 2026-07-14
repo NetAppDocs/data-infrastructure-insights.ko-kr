@@ -20,6 +20,7 @@ image:CloudSecureAlertsListPage.png["알림 목록"]
 
 
 
+[[alert]]
 == 알리다
 
 경고 목록에는 선택한 시간 범위 내에 발생한 잠재적 공격 및/또는 경고의 총 수를 보여주는 그래프가 표시되고, 그 뒤에 해당 시간 범위 내에 발생한 공격 및/또는 경고 목록이 표시됩니다.  그래프에서 시작 시간과 종료 시간 슬라이더를 조정하여 시간 범위를 변경할 수 있습니다.
@@ -61,6 +62,7 @@ image:CloudSecureChangeAlertStatus.png["알림 상태 변경"]
 
 
 
+[[filter-options]]
 == 필터 옵션
 
 다음 기준으로 알림을 필터링할 수 있습니다.
@@ -73,12 +75,14 @@ image:CloudSecureChangeAlertStatus.png["알림 상태 변경"]
 
 
 
+[[the-alert-details-page]]
 == 알림 세부 정보 페이지
 
 알림 목록 페이지에서 알림 링크를 클릭하면 해당 알림에 대한 상세 페이지를 열 수 있습니다. 경고 세부 정보는 공격 또는 경고 유형에 따라 다를 수 있습니다. 예를 들어, 파일 변조 공격 상세 정보 페이지에는 다음과 같은 정보가 표시될 수 있습니다.
 
 
 
+[[summary-section]]
 === 요약 섹션:
 
 * 공격 유형(파일 변조, 파괴 행위) 및 경고 ID(워크로드 보안에서 할당)
@@ -89,6 +93,7 @@ image:CloudSecureChangeAlertStatus.png["알림 상태 변경"]
 
 
 
+[[attack-results-section]]
 === 공격 결과 섹션:
 
 * 영향을 받은 볼륨 및 파일 수
@@ -98,6 +103,7 @@ image:CloudSecureChangeAlertStatus.png["알림 상태 변경"]
 
 
 
+[[related-users-section]]
 === 관련 사용자 섹션:
 
 이 섹션에서는 사용자의 주요 활동 그래프를 포함하여 잠재적인 공격에 연루된 사용자에 대한 세부 정보를 보여줍니다.
@@ -108,6 +114,7 @@ image:CloudSecureChangeAlertStatus.png["알림 상태 변경"]
 
 
 
+[[take-a-snapshot-action]]
 == _스냅샷 찍기_ 작업
 
 Workload Security는 악성 활동이 감지되면 자동으로 스냅샷을 찍어 데이터를 보호하고 데이터가 안전하게 백업되도록 보장합니다.
@@ -120,18 +127,21 @@ Workload Security는 악성 활동이 감지되면 자동으로 스냅샷을 찍
 
 
 
+[[alert-notifications]]
 == 알림 알림
 
 알림에 대한 모든 작업에 대해 알림 이메일 알림이 알림 수신자 목록으로 전송됩니다.  알림 수신자를 구성하려면 *관리자 > 알림*을 클릭하고 각 수신자의 이메일 주소를 입력하세요.
 
 
 
+[[retention-policy]]
 == 보존 정책
 
 알림과 경고는 13개월 동안 보관됩니다.  13개월이 지난 알림과 경고는 삭제됩니다.  워크로드 보안 환경이 삭제되면 해당 환경과 관련된 모든 데이터도 삭제됩니다.
 
 
 
+[[troubleshooting]]
 == 문제 해결
 
 |===

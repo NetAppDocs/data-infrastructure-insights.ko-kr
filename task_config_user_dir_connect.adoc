@@ -111,6 +111,7 @@ Active Directory에서 기본 특성 이름이 수정된 경우 다음 디렉터
 |===
 
 
+[[testing-your-user-directory-collector-configuration]]
 == 사용자 디렉토리 수집기 구성 테스트
 
 다음 절차를 사용하여 LDAP 사용자 권한 및 속성 정의를 검증할 수 있습니다.
@@ -131,6 +132,7 @@ image:cs_ADExample.png["AD 연결"]
 
 
 
+[[troubleshooting-user-directory-collector-configuration-errors]]
 == 사용자 디렉터리 수집기 구성 오류 문제 해결
 
 다음 표에서는 수집기 구성 중 발생할 수 있는 알려진 문제와 해결 방법을 설명합니다.

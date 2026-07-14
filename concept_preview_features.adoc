@@ -20,6 +20,7 @@ Data Infrastructure Insights _미리보기_ 방식으로 새로운 기능과 특
 
 
 
+[[current-previews]]
 == 현재 미리보기:
 
 * link:ai_for_dii_overview.html["Data Infrastructure Insights AI Assistant"] 미리 보기.

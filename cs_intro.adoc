@@ -14,6 +14,7 @@ Data Infrastructure Insights 스토리지 워크로드 보안(이전의 Cloud Se
 
 
 
+[[visibility]]
 == 시계
 
 온프레미스 또는 클라우드에 저장된 중요한 기업 데이터에 대한 사용자 액세스를 중앙에서 파악하고 제어하세요.
@@ -22,6 +23,7 @@ Data Infrastructure Insights 스토리지 워크로드 보안(이전의 Cloud Se
 
 
 
+[[protection]]
 == 보호
 
 고급 머신 러닝과 이상 감지를 통해 악의적이거나 손상된 사용자가 조직 데이터를 오용하는 것을 방지합니다.
@@ -30,6 +32,7 @@ Data Infrastructure Insights 스토리지 워크로드 보안(이전의 Cloud Se
 
 
 
+[[compliance]]
 == 규정 준수
 
 온프레미스 또는 클라우드에 저장된 중요한 회사 데이터에 대한 사용자 데이터 액세스를 감사하여 회사 규정 준수를 보장하세요.

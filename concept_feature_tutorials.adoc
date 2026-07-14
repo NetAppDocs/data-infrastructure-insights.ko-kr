@@ -18,6 +18,7 @@ keywords: onboarding, getting started, video, tutorial, resolution, dashboard, q
 
 
 
+[[checklist-and-video-tutorials]]
 == 체크리스트 및 비디오 튜토리얼
 
 Data Infrastructure Insights 테넌트에 표시되는 *시작 체크리스트*에는 여러 가지 유용한 작업과 개념 목록이 포함되어 있습니다.  체크리스트에서 항목을 선택하면 해당 개념에 맞는 Data Infrastructure Insights 페이지로 이동합니다.  예를 들어, _대시보드 만들기_ 항목을 클릭하면 Data Infrastructure Insights *대시보드* 페이지가 열립니다.
@@ -35,12 +36,14 @@ NOTE: 튜토리얼은 원하는 순서대로 볼 수 있으며, 종료할 때까
 
 
 
+[[dismissing-the-checklist]]
 === 체크리스트 폐기
 
 시작 체크리스트는 체크리스트 하단의 _다시 표시 안 함_ 링크를 클릭할 때까지 표시됩니다.  체크리스트를 닫은 후에도 각 Data Infrastructure Insights 페이지에서 튜토리얼을 계속 볼 수 있으며, 메시지 헤더 표시줄에서 각 튜토리얼을 닫을 때까지는 사용할 수 없습니다.
 
 
 
+[[video-tutorials]]
 == 비디오 튜토리얼
 
 자세한 내용을 알아보려면 다음 영상을 시청하세요.

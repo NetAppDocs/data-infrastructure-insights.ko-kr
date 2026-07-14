@@ -21,6 +21,7 @@ NOTE: 이 페이지는 변경될 수 있는 제3자 지침을 참조합니다.  
 
 
 
+[[teams-setup]]
 == 팀 설정:
 
 . Teams에서 케밥을 선택하고 수신 웹훅을 검색합니다.
@@ -33,6 +34,7 @@ image:Webhooks_Teams_Create_Webhook.png["Teams에서 수신 웹훅"]
 
 
 
+[[create-workload-security-teams-webhook]]
 == 워크로드 보안 팀 웹훅 만들기:
 
 . 관리 > 알림으로 이동하여 _“워크로드 보안 웹훅_ 탭을 선택합니다.  _+ Webhook_을 선택하여 새 웹훅을 만듭니다.
@@ -46,6 +48,7 @@ image:ws_webhook_teams_example.png["워크로드 보안 팀 웹훅 예시"]
 
 
 
+[[steps-for-creating-teams-notification-with-adaptive-card-template]]
 === 적응형 카드 템플릿을 사용하여 Teams 알림을 만드는 단계
 
 . 메시지 본문을 다음 템플릿으로 바꾸십시오.
@@ -140,6 +143,7 @@ image:ws_webhook_teams_example.png["워크로드 보안 팀 웹훅 예시"]
 
 
 
+[[notifications-via-webhook]]
 == Webhook을 통한 알림
 
 웹훅을 통해 이벤트를 알리려면 _워크로드 보안 > 정책_으로 이동하세요.  _+공격 정책_ 또는 _+경고 정책_을 선택하세요.

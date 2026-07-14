@@ -17,11 +17,12 @@ NOTE: Hitachi Content Platform은 Raw TB와 Managed Unit의 요금이 다르게 
 
 
 
+[[terminology]]
 == 술어
 
 Data Infrastructure Insights Hitachi HCP 데이터 수집기에서 다음과 같은 인벤토리 정보를 수집합니다.  Data Infrastructure Insights 에서 수집한 각 자산 유형에 대해 해당 자산에 가장 일반적으로 사용되는 용어가 표시됩니다.  이 데이터 수집기를 보거나 문제를 해결할 때 다음 용어를 염두에 두십시오.
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 공급업체/모델 용어 | Data Infrastructure Insights 용어 
 
@@ -41,6 +42,7 @@ Data Infrastructure Insights Hitachi HCP 데이터 수집기에서 다음과 같
 
 
 
+[[inventory-requirements]]
 == 재고 요구 사항
 
 재고 데이터를 수집하려면 다음이 필요합니다.
@@ -51,9 +53,10 @@ Data Infrastructure Insights Hitachi HCP 데이터 수집기에서 다음과 같
 
 
 
+[[configuration]]
 == 구성
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 필드 | 설명 
 
@@ -74,6 +77,7 @@ Data Infrastructure Insights Hitachi HCP 데이터 수집기에서 다음과 같
 |===
 
 
+[[advanced-configuration]]
 == 고급 구성
 
 |===

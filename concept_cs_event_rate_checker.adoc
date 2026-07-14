@@ -18,6 +18,7 @@ keywords: event, checker, rate, sizing, cloud secure
 
 
 
+[[requirements]]
 == 요구 사항:
 
 * 클러스터 IP
@@ -80,6 +81,7 @@ B + C는 A보다 작아야 합니다. 그렇지 않으면 에이전트 머신이
 
 
 
+[[example]]
 == 예
 
 각각 초당 100, 200, 300개의 이벤트를 생성하는 3개의 SVMS가 있다고 가정해 보겠습니다.
@@ -141,6 +143,7 @@ Overall svm audit_svm is generating 300 events/sec
  [root@ci-cs-data agent]#
 
 
+[[troubleshooting]]
 == 문제 해결
 
 |===

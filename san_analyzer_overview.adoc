@@ -20,6 +20,7 @@ image:san_analyzer_example_with_panel.png["스토리지 시스템의 SAN Analyze
 
 
 
+[[explore-connections-among-your-assets]]
 == 자산 간 연결 탐색
 
 SAN 분석기를 보려면 *관찰성 > 분석 > SAN 분석기*를 선택하세요.  애플리케이션, 호스트, 패브릭 및/또는 스토리지에 대한 필터를 설정합니다.  객체에 대한 지도가 표시되고, 연결된 객체가 표시됩니다.  연결에 대한 트래픽 측정 항목을 보려면 개체 위에 마우스를 올려 놓으세요.
@@ -45,6 +46,7 @@ image:san_analyzer_iscsi_traffic.png["iSCSI 트래픽이 강조됨"]
 
 
 
+[[troubleshooting-tips]]
 == 문제 해결 팁
 
 문제가 발생하면 시도해 볼 수 있는 몇 가지 사항:

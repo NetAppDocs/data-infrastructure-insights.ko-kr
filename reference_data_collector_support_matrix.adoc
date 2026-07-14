@@ -18,6 +18,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 
 
 
+[[hp-enterprise-3par-alletra-9000-primera-storeserv-storage]]
 == HP Enterprise 3PAR / Alletra 9000 / Primera StoreServ 스토리지
 
 이 데이터 수집기가 지원하는 모델 및 버전:
@@ -828,6 +829,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[amazon-aws-ec2]]
 == 아마존 AWS EC2
 
 이 데이터 수집기가 지원하는 모델 및 버전: API 버전:
@@ -1102,6 +1104,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[amazon-aws-s3]]
 == 아마존 AWS S3
 
 이 데이터 수집기가 지원하는 모델 및 버전:
@@ -1265,6 +1268,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[microsoft-azure-netapp-files]]
 == Microsoft Azure NetApp Files
 
 이 데이터 수집기가 지원하는 모델 및 버전:
@@ -1587,6 +1591,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[brocade-fibre-channel-switches]]
 == Brocade 파이버 채널 스위치
 
 이 데이터 수집기가 지원하는 모델 및 버전:
@@ -2162,6 +2167,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[brocade-network-advisor-http]]
 == Brocade 네트워크 어드바이저 HTTP
 
 이 데이터 수집기가 지원하는 모델 및 버전:
@@ -2418,6 +2424,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[brocade-fos-rest]]
 == Brocade FOS REST
 
 이 데이터 수집기가 지원하는 모델 및 버전:
@@ -2898,6 +2905,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[cisco-mds-nexus-fabric-switches]]
 == Cisco MDS 및 Nexus 패브릭 스위치
 
 이 데이터 수집기가 지원하는 모델 및 버전:
@@ -3412,6 +3420,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[cohesity]]
 == 응집력
 
 이 데이터 수집기가 지원하는 모델 및 버전:
@@ -3683,6 +3692,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[emc-celerra-ssh]]
 == EMC 셀레라(SSH)
 
 이 데이터 수집기가 지원하는 모델 및 버전:
@@ -3963,6 +3973,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[emc-clariion-navicli]]
 == EMC CLARiiON(NaviCLI)
 
 이 데이터 수집기가 지원하는 모델 및 버전:
@@ -4576,6 +4587,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[emc-data-domain-ssh]]
 == EMC 데이터 도메인(SSH)
 
 이 데이터 수집기가 지원하는 모델 및 버전:
@@ -4929,6 +4941,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[emc-ecs]]
 == EMC ECS
 
 이 데이터 수집기가 지원하는 모델 및 버전:
@@ -5260,6 +5273,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[dell-emc-isilon-powerscale-rest]]
 == Dell EMC Isilon 및 PowerScale Rest
 
 이 데이터 수집기가 지원하는 모델 및 버전:
@@ -5982,6 +5996,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[dell-emc-isilon-powerscale-cli]]
 == Dell EMC Isilon/PowerScale(CLI)
 
 이 데이터 수집기가 지원하는 모델 및 버전:
@@ -6549,6 +6564,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[emc-powerstore-rest]]
 == EMC PowerStore REST
 
 이 데이터 수집기가 지원하는 모델 및 버전:
@@ -7184,6 +7200,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[emc-recoverpoint-http]]
 == EMC RecoverPoint(HTTP)
 
 이 데이터 수집기가 지원하는 모델 및 버전:
@@ -7311,6 +7328,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[emc-scaleio-powerflex-rest]]
 == EMC ScaleIO 및 PowerFlex REST
 
 이 데이터 수집기가 지원하는 모델 및 버전:
@@ -7525,6 +7543,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[emc-symmetrix-cli]]
 == EMC Symmetrix CLI
 
 이 데이터 수집기가 지원하는 모델 및 버전:
@@ -8388,6 +8407,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[dell-unisphere-rest]]
 == Dell Unisphere REST
 
 이 데이터 수집기가 지원하는 모델 및 버전:
@@ -9111,6 +9131,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[emc-vnx-ssh]]
 == EMC VNX(SSH)
 
 이 데이터 수집기가 지원하는 모델 및 버전:
@@ -9796,6 +9817,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[emc-vnxe-unity-unisphere-cli]]
 == EMC VNXe 및 Unity Unisphere(CLI)
 
 이 데이터 수집기가 지원하는 모델 및 버전:
@@ -10390,6 +10412,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[emc-vplex]]
 == EMC VPLEX
 
 |===
@@ -10469,6 +10492,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[emc-xtremio-http]]
 == EMC XtremIO(HTTP)
 
 이 데이터 수집기가 지원하는 모델 및 버전:
@@ -11026,6 +11050,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[netapp-e-series]]
 == NetApp E-시리즈
 
 이 데이터 수집기가 지원하는 모델 및 버전:
@@ -11672,6 +11697,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[pure-storage-flashblade-rest]]
 == 퓨어스토리지 플래시블레이드 REST
 
 이 데이터 수집기가 지원하는 모델 및 버전:
@@ -12045,6 +12071,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[google-cloud-compute]]
 == 구글 클라우드 컴퓨팅
 
 이 데이터 수집기가 지원하는 모델 및 버전: API 버전:
@@ -12277,6 +12304,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[hds-hcp-https]]
 == HDS HCP(HTTPS)
 
 이 데이터 수집기가 지원하는 모델 및 버전:
@@ -12461,6 +12489,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[hicommand-device-manager]]
 == HiCommand 장치 관리자
 
 이 데이터 수집기가 지원하는 모델 및 버전:
@@ -13135,6 +13164,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[hitachi-ops-center]]
 == 히타치 옵스 센터
 
 이 데이터 수집기가 지원하는 모델 및 버전:
@@ -13822,6 +13852,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[hds-hnas-cli]]
 == HDS HNAS(CLI)
 
 이 데이터 수집기가 지원하는 모델 및 버전:
@@ -14108,6 +14139,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[hpe-nimble-alletra-6000-storage]]
 == HPE Nimble/Alletra 6000 스토리지
 
 이 데이터 수집기가 지원하는 모델 및 버전:
@@ -14598,6 +14630,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[huawei-oceanstor-resthttps]]
 == Huawei OceanStor(REST/HTTPS)
 
 이 데이터 수집기가 지원하는 모델 및 버전:
@@ -15322,6 +15355,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[ibm-cleversafe]]
 == IBM 클레버세이프
 
 |===
@@ -15512,6 +15546,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[ibm-ds-8k-dscli]]
 == IBM DS 8K(DSCLI)
 
 이 데이터 수집기가 지원하는 모델 및 버전:
@@ -16011,6 +16046,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[ibm-powervm-ssh]]
 == IBM PowerVM(SSH)
 
 |===
@@ -16192,6 +16228,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[ibm-svc-cli]]
 == IBM 서비스(CLI)
 
 이 데이터 수집기가 지원하는 모델 및 버전:
@@ -16939,6 +16976,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[ibm-xiv-a9000-xivcli]]
 == IBM XIV 및 A9000(XIVCLI)
 
 이 데이터 수집기가 지원하는 모델 및 버전:
@@ -17171,6 +17209,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[infinidat-infinibox-http]]
 == Infinidat Infinibox(HTTP)
 
 이 데이터 수집기가 지원하는 모델 및 버전:
@@ -17520,6 +17559,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[microsoft-azure-compute]]
 == Microsoft Azure 컴퓨팅
 
 이 데이터 수집기가 지원하는 모델 및 버전: API 버전:
@@ -17776,6 +17816,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[microsoft-hyper-v]]
 == 마이크로소프트 하이퍼-V
 
 |===
@@ -18257,6 +18298,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[netapp-7-mode]]
 == NetApp 7 모드
 
 이 데이터 수집기가 지원하는 모델 및 버전:
@@ -19239,6 +19281,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[netapp-e-series-rest]]
 == NetApp E-시리즈 REST
 
 이 데이터 수집기가 지원하는 모델 및 버전:
@@ -19609,6 +19652,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[amazon-fsx-for-netapp-ontap]]
 == Amazon FSx for NetApp ONTAP
 
 이 데이터 수집기가 지원하는 모델 및 버전:
@@ -20534,6 +20578,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[netapp-clustered-data-ontap-8-1-1]]
 == NetApp 클러스터형 Data ONTAP 8.1.1+
 
 이 데이터 수집기가 지원하는 모델 및 버전:
@@ -22289,6 +22334,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[asa]]
 == ASA
 
 이 데이터 수집기가 지원하는 모델 및 버전:
@@ -22917,6 +22963,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[netapp-ontap-rest]]
 == NetApp ONTAP REST
 
 이 데이터 수집기가 지원하는 모델 및 버전:
@@ -23775,6 +23822,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[netapp-solidfire-8-1]]
 == NetApp SolidFire 8.1+
 
 이 데이터 수집기가 지원하는 모델 및 버전:
@@ -24520,6 +24568,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[netapp-storagegrid-https]]
 == NetApp StorageGRID (HTTPS)
 
 이 데이터 수집기가 지원하는 모델 및 버전:
@@ -24903,6 +24952,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[nutanix-storage-rest]]
 == Nutanix 스토리지(REST)
 
 이 데이터 수집기가 지원하는 모델 및 버전:
@@ -25414,6 +25464,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[oracle-zfs-https]]
 == 오라클 ZFS(HTTPS)
 
 이 데이터 수집기가 지원하는 모델 및 버전:
@@ -25964,6 +26015,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[pure-storage-flasharray-http]]
 == Pure Storage FlashArray(HTTP)
 
 이 데이터 수집기가 지원하는 모델 및 버전:
@@ -26573,6 +26625,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[red-hat-rhv-rest]]
 == 레드햇 RHV(REST)
 
 |===
@@ -26817,6 +26870,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[rubrik-storage]]
 == 루브릭 스토리지
 
 이 데이터 수집기가 지원하는 모델 및 버전: 펌웨어 버전:
@@ -27159,6 +27213,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[vast-datastore]]
 == VAST 데이터스토어
 
 이 데이터 수집기가 지원하는 모델 및 버전:
@@ -27571,6 +27626,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[netapp-hci-virtual-center]]
 == NetApp HCI 가상 센터
 
 이 데이터 수집기가 지원하는 모델 및 버전: API 버전:
@@ -28119,6 +28175,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[vmware-cloud-on-aws]]
 == AWS의 VMware 클라우드
 
 이 데이터 수집기가 지원하는 모델 및 버전: API 버전:
@@ -28461,6 +28518,7 @@ keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, H
 |===
 
 
+[[vmware-vsphere-web-services]]
 == VMware vSphere(웹 서비스)
 
 이 데이터 수집기가 지원하는 모델 및 버전: API 버전:

@@ -58,6 +58,7 @@ keywords: AU, acquisition unit, trioubleshooting
 |===
 
 
+[[considerations-about-proxies-and-firewalls]]
 == 프록시 및 방화벽에 대한 고려 사항
 
 조직에서 인터넷 접속을 위해 프록시 사용이 필요한 경우 조직의 프록시 동작을 이해하고 Data Infrastructure Insights 작동하도록 특정 예외를 찾아야 할 수도 있습니다.  다음 사항을 명심하세요.
@@ -80,6 +81,7 @@ keywords: AU, acquisition unit, trioubleshooting
 
 
 
+[[viewing-proxy-endpoints]]
 === 프록시 엔드포인트 보기
 
 온보딩 중에 데이터 수집기를 선택할 때 *프록시 설정* 링크를 클릭하거나 *도움말 > 지원* 페이지에서 _프록시 설정_ 아래의 링크를 클릭하여 프록시 엔드포인트를 볼 수 있습니다.  다음과 같은 표가 표시됩니다.  사용자 환경에 Workload Security가 있는 경우 구성된 엔드포인트 URL도 이 목록에 표시됩니다.
@@ -88,6 +90,7 @@ image:ProxyEndpoints_NewTable.png["프록시 엔드포인트 테이블"]
 
 
 
+[[resources]]
 == 리소스
 
 추가 문제 해결 팁은 다음에서 찾을 수 있습니다.link:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs["NetApp 지식베이스"] (지원 로그인이 필요합니다).

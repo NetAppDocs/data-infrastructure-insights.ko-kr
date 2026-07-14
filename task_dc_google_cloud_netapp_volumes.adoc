@@ -18,6 +18,7 @@ keywords: data collector, queries, create, google, cloud, volumes,
 
 
 
+[[service-account-requirements]]
 == 서비스 계정 요구 사항
 
 * 다음 지침에 따라 서비스 계정을 만들어야 합니다.link:https://cloud.google.com/iam/docs/creating-managing-service-accounts["서비스 계정 생성/관리"] .  이 서비스 계정은 _clientId_라는 고유 ID로 식별되며, 이는 사용자 이름으로 사용됩니다.
@@ -27,6 +28,7 @@ keywords: data collector, queries, create, google, cloud, volumes,
 
 
 
+[[configuration]]
 == 구성
 
 [cols="50,50"]
@@ -53,6 +55,7 @@ keywords: data collector, queries, create, google, cloud, volumes,
 |===
 
 
+[[advanced-configuration]]
 == 고급 구성
 
 [cols="50,50"]
@@ -73,6 +76,7 @@ keywords: data collector, queries, create, google, cloud, volumes,
 |===
 
 
+[[troubleshooting]]
 == 문제 해결
 
 이 데이터 수집기에 대한 추가 정보는 다음에서 찾을 수 있습니다.link:concept_requesting_support.html["지원하다"] 페이지 또는link:reference_data_collector_support_matrix.html["데이터 수집기 지원 매트릭스"] .

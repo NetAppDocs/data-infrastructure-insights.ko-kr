@@ -30,6 +30,7 @@ Workload Security는 ONTAP 에서 ARP 이벤트를 수신하고 다음 작업을
 
 
 
+[[prerequisites]]
 == 필수 조건
 
 . 최소 ONTAP 버전: 9.11.1
@@ -40,6 +41,7 @@ Workload Security는 ONTAP 에서 ARP 이벤트를 수신하고 다음 작업을
 
 
 
+[[user-permissions-required]]
 == 사용자 권한이 필요합니다
 
 클러스터 관리 자격 증명을 사용하는 경우 새로운 권한이 필요하지 않습니다.
@@ -56,6 +58,7 @@ security login role create -role csrole -cmddirname "security anti-ransomware vo
 
 
 
+[[sample-alert]]
 == 샘플 알림
 
 ARP 이벤트로 인해 생성된 경고 샘플은 아래와 같습니다.
@@ -66,12 +69,14 @@ image:CS_Ransomware_Example_1.png["랜섬웨어 경고 상단 섹션"] image:CS_
 
 
 
+[[limitations]]
 == 제한 사항
 
 Workload Security에서 SVM을 모니터링하지 않지만 ONTAP 에서 ARP 이벤트를 생성한 경우 Workload Security에서 해당 이벤트를 계속 수신하여 표시합니다.  하지만 알림과 관련된 법의학적 정보와 사용자 매핑은 캡처되거나 표시되지 않습니다.
 
 
 
+[[troubleshooting]]
 == 문제 해결
 
 알려진 문제와 해결 방법은 다음 표에 설명되어 있습니다.

@@ -47,6 +47,7 @@ keywords: agent, Linux, requirements, docker, browsers, permissions, Network, Cl
 |===
 
 
+[[additional-recommendations]]
 == 추가 권장 사항
 
 * ONTAP 시스템과 에이전트 머신 모두의 시간을 *네트워크 시간 프로토콜(NTP)* 또는 *단순 네트워크 시간 프로토콜(SNTP)*을 사용하여 동기화하는 것이 좋습니다.
@@ -54,6 +55,7 @@ keywords: agent, Linux, requirements, docker, browsers, permissions, Network, Cl
 
 
 
+[[cloud-network-access-rules]]
 == 클라우드 네트워크 액세스 규칙
 
 *미국 기반* 워크로드 보안 환경의 경우:
@@ -94,6 +96,7 @@ keywords: agent, Linux, requirements, docker, browsers, permissions, Network, Cl
 |===
 
 
+[[in-network-rules]]
 == 네트워크 내 규칙
 
 [cols="5*"]
@@ -117,6 +120,7 @@ keywords: agent, Linux, requirements, docker, browsers, permissions, Network, Cl
 |===
 
 
+[[system-sizing]]
 == 시스템 크기 조정
 
 를 참조하십시오link:concept_cs_event_rate_checker.html["이벤트 요금 확인기"] 사이즈에 대한 정보는 설명서를 참조하세요.

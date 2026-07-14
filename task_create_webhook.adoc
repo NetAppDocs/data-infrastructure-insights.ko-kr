@@ -47,6 +47,7 @@ summary: 성능 또는 재고 임계값에 대한 경고를 위한 모니터 생
 |===
 
 
+[[creating-a-webhook]]
 == 웹훅 생성
 
 Data Infrastructure Insights 웹훅을 생성하려면 *관리자 > 알림*으로 이동하여 *웹훅* 탭을 선택하세요.
@@ -65,6 +66,7 @@ image:Webhook_Default_Parameters.png["Data Infrastructure Insights 기본 웹훅
 
 
 
+[[parameters-what-are-they-and-how-do-i-use-them]]
 === 매개변수: 매개변수란 무엇이고 어떻게 사용하나요?
 
 알림 매개변수는 알림마다 채워지는 동적 값입니다.  예를 들어, _%%TriggeredOn%%_ 매개변수는 경고가 발생한 개체로 대체됩니다.
@@ -75,18 +77,21 @@ image:Webhook_Default_Parameters.png["Data Infrastructure Insights 기본 웹훅
 
 
 
+[[custom-parameters-and-secrets]]
 === 사용자 정의 매개변수 및 비밀
 
 이 섹션에서는 원하는 사용자 정의 매개변수 및/또는 비밀번호를 추가할 수 있습니다.  보안상의 이유로 비밀이 정의된 경우 웹훅 생성자만 이 웹훅 채널을 수정할 수 있습니다.  다른 사람에게는 읽기 전용입니다.  URL/헤더에 _%%<secret_name>%%_ 형태로 비밀을 사용할 수 있습니다.
 
 
 
+[[webhooks-list-page]]
 === 웹훅 목록 페이지
 
 웹후크 목록 페이지에는 이름, 생성자, 생성일, 상태, 보안 및 마지막 보고 필드가 표시됩니다.
 
 
 
+[[choosing-webhook-notification-in-a-monitor]]
 == 모니터에서 Webhook 알림 선택
 
 웹후크 알림을 선택하려면link:task_create_monitor.html["감시 장치"] *알림 > 모니터 관리*로 이동하여 원하는 모니터를 선택하거나 새 모니터를 추가합니다.  _팀 알림 설정_ 섹션에서 전달 방법으로 _웹훅_을 선택합니다.  경보 수준(중요, 경고, 해결됨)을 선택한 다음 원하는 웹후크를 선택합니다.
@@ -95,6 +100,7 @@ image:Webhook_Monitor_Notify.png["웹훅 모니터 알림"]
 
 
 
+[[webhook-examples]]
 == 웹훅 예시:
 
 웹후크link:task_webhook_example_slack.html["느슨하게"] 웹후크link:task_webhook_example_pagerduty.html["페이저듀티"] 웹후크link:task_webhook_example_teams.html["팀"] 웹후크link:task_webhook_example_discord.html["불화"]

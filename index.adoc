@@ -14,6 +14,7 @@ NetApp Data Infrastructure Insights (이전 명칭 Cloud Insights)는 전체 인
 
 
 
+[[what-can-data-infrastructure-insights-do-for-me]]
 == Data Infrastructure Insights 나에게 어떤 도움을 줄 수 있나요?
 
 Data Infrastructure Insights 하이브리드 멀티클라우드 모니터링을 제공하여 인프라와 워크로드에 대한 전체 스택 관찰 기능을 제공합니다.
@@ -31,6 +32,7 @@ Data Infrastructure Insights 하이브리드 멀티클라우드 모니터링을 
 '''
 
 
+[[getting-started]]
 == 시작하기
 
 * 어떻게 해야 하나요link:task_cloud_insights_onboarding_1.html["*시작하기*"] Data Infrastructure Insights 활용하세요?

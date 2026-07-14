@@ -2,23 +2,28 @@
 sidebar: sidebar 
 permalink: task_dc_nutanix.html 
 keywords: data collector, Nutanix, NX Series 
-summary: Nutanix 데이터 수집기 구성. 
+summary: Nutanix NX 데이터 수집기 구성. 
 ---
 = Nutanix NX 데이터 수집기
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Data Infrastructure Insights Nutanix 데이터 수집기를 사용하여 Nutanix NX 스토리지 시스템의 인벤토리 및 성능 데이터를 검색합니다.
+Data Infrastructure Insights는 Nutanix NX 데이터 수집기를 사용하여 Nutanix NX 스토리지 시스템의 인벤토리 및 성능 데이터를 검색합니다.
 
 
 
+[[terminology]]
 == 술어
 
 Data Infrastructure Insights Nutanix 데이터 수집기에서 다음과 같은 인벤토리 정보를 수집합니다.  Data Infrastructure Insights 에서 수집한 각 자산 유형에 대해 해당 자산에 가장 일반적으로 사용되는 용어가 표시됩니다.  이 데이터 수집기를 보거나 문제를 해결할 때 다음 용어를 염두에 두십시오.
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 공급업체/모델 용어 | Data Infrastructure Insights 용어 
 
@@ -38,6 +43,7 @@ Data Infrastructure Insights Nutanix 데이터 수집기에서 다음과 같은 
 
 
 
+[[requirements]]
 == 요구 사항
 
 * 클러스터의 외부 데이터 서비스 IP 주소
@@ -47,9 +53,10 @@ Data Infrastructure Insights Nutanix 데이터 수집기에서 다음과 같은 
 
 
 
+[[configuration]]
 == 구성
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 필드 | 설명 
 
@@ -64,9 +71,10 @@ Data Infrastructure Insights Nutanix 데이터 수집기에서 다음과 같은 
 |===
 
 
+[[advanced-configuration]]
 == 고급 구성
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 필드 | 설명 
 
@@ -81,6 +89,7 @@ Data Infrastructure Insights Nutanix 데이터 수집기에서 다음과 같은 
 |===
 
 
+[[troubleshooting]]
 == 문제 해결
 
 이 데이터 수집기에 대한 추가 정보는 다음에서 찾을 수 있습니다.link:concept_requesting_support.html["지원하다"] 페이지 또는link:reference_data_collector_support_matrix.html["데이터 수집기 지원 매트릭스"] .

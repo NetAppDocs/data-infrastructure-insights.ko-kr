@@ -20,6 +20,7 @@ IMPORTANT: 보고 권한이나 보안을 변경하기 전에 "내 콘텐츠" 보
 
 
 
+[[customizing-a-reports-output-format-and-delivery]]
 == 보고서 출력 형식 및 전달 사용자 지정
 
 보고서의 형식과 전달 방법을 사용자 지정할 수 있습니다.
@@ -41,6 +42,7 @@ image:Reporting_Output_and_Delivery.png["보고서 출력 및 전달"]
 
 
 
+[[copying-a-report-to-the-clipboard]]
 == 보고서를 클립보드에 복사
 
 이 프로세스를 사용하여 보고서를 클립보드에 복사합니다.
@@ -59,6 +61,7 @@ image:Reporting_Copy_To_Clipboard.png["보고서를 클립보드에 복사"]
 
 
 
+[[opening-reports-from-the-clipboard]]
 == 클립보드에서 보고서 열기
 
 이전에 클립보드에 복사한 보고서 사양을 열 수 있습니다.
@@ -80,12 +83,14 @@ image:Reporting_Open_From_Clipboard.png["클립보드에서 보고서 열기"]
 
 
 
+[[editing-an-existing-report]]
 == 기존 보고서 편집
 
 기본 위치에서 파일을 편집하면 다음 보고서 카탈로그를 새로 고칠 때 해당 보고서가 덮어쓰여질 위험이 있습니다.  편집된 보고서는 새 이름으로 저장하거나 기본 위치가 아닌 다른 위치에 저장하는 것이 좋습니다.
 
 
 
+[[troubleshooting]]
 == 문제 해결
 
 여기에서는 보고 관련 문제 해결을 위한 제안을 찾을 수 있습니다.

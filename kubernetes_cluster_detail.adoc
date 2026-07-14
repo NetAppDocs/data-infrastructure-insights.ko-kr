@@ -16,12 +16,14 @@ image:Kubernetes_Detail_Page_new.png["클러스터 세부 정보 페이지"]
 
 
 
+[[namespace-node-and-pod-counts]]
 == 네임스페이스, 노드 및 Pod 수
 
 페이지 상단의 카운트는 클러스터에 있는 네임스페이스, 노드, 포드의 총 수와 현재 경고 중이거나 보류 중인 POP의 수를 보여줍니다.
 
 
 
+[[shared-resources-and-saturation]]
 == 공유 리소스 및 포화
 
 세부 정보 페이지의 오른쪽 상단에는 클러스터 포화도가 현재 백분율로 표시되고, 시간 경과에 따른 최근 추세를 보여주는 그래프도 표시됩니다.  클러스터 포화도는 각 시점에서 CPU, 메모리 또는 스토리지의 가장 높은 포화도를 말합니다.
@@ -32,6 +34,7 @@ image:Kubernetes_Detail_Page_new.png["클러스터 세부 정보 페이지"]
 
 
 
+[[namespaces]]
 == 네임스페이스
 
 네임스페이스 탭에는 Kubernetes 환경의 모든 네임스페이스 목록이 표시되며, CPU 및 메모리 사용량과 각 네임스페이스의 워크로드 수가 표시됩니다.  각 네임스페이스를 살펴보려면 이름 링크를 클릭하세요.
@@ -40,6 +43,7 @@ image:Kubernetes_Namespace_tab_new.png["K8s 환경의 현재 네임스페이스 
 
 
 
+[[workloads]]
 == 작업 부하
 
 마찬가지로, 작업 부하 탭에는 각 네임스페이스의 작업 부하 목록이 표시되며, CPU 및 메모리 사용량도 다시 표시됩니다.  네임스페이스 링크를 클릭하면 각 항목으로 이동합니다.
@@ -48,6 +52,7 @@ image:Kubernetes_Workloads_tab_new.png["K8s 환경의 현재 네임스페이스 
 
 
 
+[[the-cluster-wheel]]
 == 클러스터 "휠"
 
 image:Kubernetes_Wheel_Section.png["클러스터 휠"]
@@ -74,6 +79,7 @@ image:Kubernetes_Capacity_Info.png["노드 용량 및 할당"]
 
 
 
+[[a-note-about-the-gauges]]
 == 게이지에 대한 참고 사항
 
 메모리와 CPU 게이지는 _할당 가능한 용량_과 _총 용량_에 대한 _사용됨_을 나타내므로 세 가지 색상으로 표시됩니다.

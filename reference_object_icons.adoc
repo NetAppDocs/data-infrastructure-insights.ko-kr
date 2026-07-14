@@ -18,18 +18,21 @@ Data Infrastructure Insights 에서 사용되는 개체 아이콘입니다.
 
 
 
+[[infrastructure-icons]]
 == 인프라 아이콘:
 
 image:Icon_Glossary.png["인프라 아이콘 참조"]
 
 
 
+[[kubernetes-icons]]
 == 쿠버네티스 아이콘:
 
 image:K8sIconsWithLabels.png["Kubernetes 아이콘 참조, 너비=180"]
 
 
 
+[[kubernetes-network-performance-monitoring-and-map-icons]]
 == Kubernetes 네트워크 성능 모니터링 및 맵 아이콘:
 
 image:ServiceMap_Icons.png["Kubernetes 네트워크 성능 모니터링 및 맵, 너비=640"]

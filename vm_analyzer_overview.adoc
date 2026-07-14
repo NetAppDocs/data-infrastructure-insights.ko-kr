@@ -22,6 +22,7 @@ image:vm_analyzer_example_with_panel_a.png["스토리지 시스템의 VM Analyze
 
 
 
+[[explore-connections-among-your-assets]]
 == 자산 간 연결 탐색
 
 VM 분석기를 보려면 *관찰성 > 분석 > VM 분석기*를 선택하세요.  애플리케이션, 가상 머신, 볼륨, 내부 볼륨에 대한 필터를 설정하거나, 사용자 고유의 필터를 추가하세요.  객체에 대한 지도가 표시되고, 연결된 객체가 표시됩니다.  연결에 대한 트래픽 측정 항목을 보려면 개체 위에 마우스를 올려 놓으세요.
@@ -35,6 +36,7 @@ NOTE: 대부분의 VM Analyzer 필터(추가할 수 있는 필터 포함)는 상
 
 
 
+[[see-it-in-action]]
 == 실제로 확인해 보세요
 
 link:https://media.netapp.com/video-detail/0e62b784-8456-5ef7-8879-f0352135a0f1/simplified-troubleshooting-with-vm-analyzer["VM Analyzer를 사용한 간소화된 문제 해결(비디오), window=read-later"]

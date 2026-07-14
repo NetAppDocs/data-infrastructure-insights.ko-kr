@@ -14,11 +14,12 @@ Hitachi Vantara NAS 데이터 수집기는 HDS NAS 클러스터 검색을 지원
 
 
 
+[[terminology]]
 == 술어
 
 Data Infrastructure Insights HNAS 데이터 수집기에서 다음과 같은 인벤토리 정보를 수집합니다.  Data Infrastructure Insights 에서 수집한 각 자산 유형에 대해 해당 자산에 가장 일반적으로 사용되는 용어가 표시됩니다.  이 데이터 수집기를 보거나 문제를 해결할 때 다음 용어를 염두에 두십시오.
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 공급업체/모델 용어 | Data Infrastructure Insights 용어 
 
@@ -44,6 +45,7 @@ Data Infrastructure Insights HNAS 데이터 수집기에서 다음과 같은 인
 
 
 
+[[requirements]]
 == 요구 사항
 
 * 장치 IP 주소
@@ -54,9 +56,10 @@ Data Infrastructure Insights HNAS 데이터 수집기에서 다음과 같은 인
 
 
 
+[[configuration]]
 == 구성
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 필드 | 설명 
 
@@ -71,9 +74,10 @@ Data Infrastructure Insights HNAS 데이터 수집기에서 다음과 같은 인
 |===
 
 
+[[advanced-configuration]]
 == 고급 구성
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 필드 | 설명 
 
@@ -82,15 +86,17 @@ Data Infrastructure Insights HNAS 데이터 수집기에서 다음과 같은 인
 |===
 
 
+[[troubleshooting]]
 == 문제 해결
 
 이 데이터 수집기에 문제가 발생하면 시도해 볼 수 있는 몇 가지 사항은 다음과 같습니다.
 
 
 
+[[inventory]]
 === 목록
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 문제: | 다음을 시도해 보세요: 
 

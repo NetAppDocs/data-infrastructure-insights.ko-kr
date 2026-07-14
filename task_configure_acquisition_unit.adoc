@@ -21,6 +21,7 @@ Data Infrastructure Insights 보안에 대해 알아보세요link:security_overv
 
 
 
+[[adding-a-linux-acquisition-unit]]
 == Linux 인수 부서 추가
 
 .시작하기 전에
@@ -61,6 +62,7 @@ image:NewLinuxAUInstall.png["Linux AU 지침"]
 
 
 
+[[setting-proxy-environment-variables]]
 === 프록시 환경 변수 설정
 
 프록시를 사용하는 환경의 경우, 수집 단위를 추가하기 전에 프록시 환경 변수를 설정해야 합니다.  프록시를 구성하는 방법에 대한 지침은 _획득 단위 추가_ 대화 상자에서 제공됩니다.
@@ -76,6 +78,7 @@ image:NewLinuxAUInstall.png["Linux AU 지침"]
 
 
 
+[[proxy-configuration]]
 === 프록시 구성
 
 인수 부서는 2방향/상호 인증을 사용하여 Data Infrastructure Insights 서버에 연결합니다.  인증을 받으려면 클라이언트 인증서를 Data Infrastructure Insights 서버로 전달해야 합니다.  이를 달성하려면 데이터를 해독하지 않고 https 요청을 Data Infrastructure Insights 서버로 전달하도록 프록시를 설정해야 합니다.
@@ -100,6 +103,7 @@ image:ProxyEndpoints_NewTable.png["프록시 엔드포인트 테이블"]
 
 
 
+[[adding-a-windows-acquisition-unit]]
 == Windows 인수 단위 추가
 
 .Windows Acquisition Unit 설치 단계
@@ -133,6 +137,7 @@ image:NewWindowsAUInstall.png["Windows AU 설치"]
 
 
 
+[[proxy-configuration]]
 === 프록시 구성
 
 인수 부서는 2방향/상호 인증을 사용하여 Data Infrastructure Insights 서버에 연결합니다.  인증을 받으려면 클라이언트 인증서를 Data Infrastructure Insights 서버로 전달해야 합니다.  이를 달성하려면 데이터를 해독하지 않고 https 요청을 Data Infrastructure Insights 서버로 전달하도록 프록시를 설정해야 합니다.
@@ -157,6 +162,7 @@ image:ProxyEndpoints_NewTable.png["프록시 엔드포인트 테이블"]
 
 
 
+[[uninstalling-an-acquisition-unit]]
 == 수집 장치 제거
 
 Acquisition Unit 소프트웨어를 제거하려면 다음을 수행하세요.
@@ -201,6 +207,7 @@ image:AU_for_Device_Resolution.png["장치 해상도에 AU 사용"]
 
 
 
+[[reinstalling-an-acquisition-unit]]
 == 수집 장치 재설치
 
 동일한 서버/VM에 Acquisition Unit을 다시 설치하려면 다음 단계를 따르세요.
@@ -223,6 +230,7 @@ image:AU_for_Device_Resolution.png["장치 해상도에 AU 사용"]
 
 
 
+[[viewing-au-details]]
 == AU 세부 정보 보기
 
 AU(획득 단위) 세부 정보 페이지는 AU에 대한 유용한 세부 정보와 문제 해결에 도움이 되는 정보를 제공합니다.  AU 세부 정보 페이지에는 다음 섹션이 포함되어 있습니다.

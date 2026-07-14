@@ -31,6 +31,7 @@ summary: 주석을 사용하여 데이터를 추적합니다.
 
 
 
+[[default-annotation-types]]
 == 기본 주석 유형
 
 Data Infrastructure Insights 몇 가지 기본 주석 유형을 제공합니다.  이러한 주석은 데이터를 필터링하거나 그룹화하는 데 사용할 수 있습니다.
@@ -86,6 +87,7 @@ NOTE: 별칭, 데이터 센터, 핫, 서비스 수준, 일몰, 스위치 수준,
 
 
 
+[[creating-custom-annotations]]
 == 사용자 정의 주석 만들기
 
 주석을 사용하면 비즈니스 요구 사항에 맞는 맞춤형 비즈니스별 데이터를 자산에 추가할 수 있습니다.  Data Infrastructure Insights 기본 주석 세트를 제공하지만 다른 방법으로 데이터를 보고 싶을 수도 있습니다.  사용자 정의 주석의 데이터는 저장소 제조업체, 볼륨 수, 성능 통계 등 이미 수집된 장치 데이터를 보완합니다.  주석을 사용하여 추가한 데이터는 Data Infrastructure Insights 에서 검색되지 않습니다.

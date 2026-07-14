@@ -14,6 +14,7 @@ Data Infrastructure Insights Azure NetApp Files 데이터 수집기를 사용하
 
 
 
+[[requirements]]
 == 요구 사항
 
 이 데이터 수집기를 구성하려면 다음 정보가 필요합니다.
@@ -32,11 +33,12 @@ https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-ser
 
 
 
+[[configuration]]
 == 구성
 
 아래 표에 따라 데이터 수집기 필드에 데이터를 입력합니다.
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 필드 | 설명 
 
@@ -54,9 +56,10 @@ https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-ser
 |===
 
 
+[[advanced-configuration]]
 == 고급 구성
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 필드 | 설명 
 
@@ -65,6 +68,7 @@ https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-ser
 |===
 
 
+[[troubleshooting]]
 == 문제 해결
 
 * ANF 데이터 수집기에서 사용하는 자격 증명은 ANF 볼륨이 포함된 모든 Azure 구독에 액세스할 수 있어야 합니다.

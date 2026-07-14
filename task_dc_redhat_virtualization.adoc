@@ -18,11 +18,12 @@ Red Hat Virtualization용 DII 데이터 수집기는 오픈 소스 프로젝트 
 
 
 
+[[terminology]]
 == 술어
 
 Data Infrastructure Insights 에서 수집한 각 자산 유형에 대해 해당 자산에 가장 일반적으로 사용되는 용어가 표시됩니다.  이 데이터 수집기를 보거나 문제를 해결할 때 다음 용어를 염두에 두십시오.
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 공급업체/모델 용어 | Data Infrastructure Insights 용어 
 
@@ -45,6 +46,7 @@ Data Infrastructure Insights 에서 수집한 각 자산 유형에 대해 해당
 
 
 
+[[requirements]]
 == 요구 사항
 
 * REST API를 통해 포트 443으로 RHV/oVirt/OLVM 서버의 IP 주소/호스트 이름
@@ -54,9 +56,10 @@ Data Infrastructure Insights 에서 수집한 각 자산 유형에 대해 해당
 
 
 
+[[configuration]]
 == 구성
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 필드 | 설명 
 
@@ -71,9 +74,10 @@ Data Infrastructure Insights 에서 수집한 각 자산 유형에 대해 해당
 |===
 
 
+[[advanced-configuration]]
 == 고급 구성
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 필드 | 설명 
 
@@ -91,6 +95,7 @@ Data Infrastructure Insights 에서 수집한 각 자산 유형에 대해 해당
 |===
 
 
+[[troubleshooting]]
 == 문제 해결
 
 이 데이터 수집기에 대한 추가 정보는 다음에서 찾을 수 있습니다.link:concept_requesting_support.html["지원하다"] 페이지 또는link:reference_data_collector_support_matrix.html["데이터 수집기 지원 매트릭스"] .

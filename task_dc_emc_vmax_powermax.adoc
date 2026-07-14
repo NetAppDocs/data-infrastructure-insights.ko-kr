@@ -14,6 +14,7 @@ Data Infrastructure Insights 사용자 환경의 기존 Solutions Enabler 서버
 
 
 
+[[requirements]]
 == 요구 사항
 
 이 데이터 수집기를 구성하기 전에 Data Infrastructure Insights 기존 Solutions Enabler 서버의 포트 2707에 TCP로 연결되어 있는지 확인해야 합니다.  Data Infrastructure Insights 해당 서버의 "symcfg list" 출력에서 ​​볼 수 있듯이, 이 서버에 "로컬"인 모든 Symmetrix 어레이를 검색합니다.
@@ -47,11 +48,12 @@ cisys storapid <all>
 
 
 
+[[terminology]]
 == 술어
 
 Data Infrastructure Insights EMC VMAX/PowerMax 데이터 소스에서 다음과 같은 인벤토리 정보를 수집합니다.  인수한 각 자산 유형에 대해 해당 자산에 사용되는 가장 일반적인 용어가 표시됩니다.  이 데이터 수집기를 보거나 문제를 해결할 때 다음 용어를 염두에 두십시오.
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 공급업체/모델 용어 | Data Infrastructure Insights 용어 
 
@@ -77,11 +79,12 @@ Data Infrastructure Insights EMC VMAX/PowerMax 데이터 소스에서 다음과 
 
 
 
+[[configuration]]
 == 구성
 
 *참고:* SMI-S 사용자 인증이 활성화되어 있지 않으면 Data Infrastructure Insights 데이터 수집기의 기본값은 무시됩니다.
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 필드 | 설명 
 
@@ -96,9 +99,10 @@ Data Infrastructure Insights EMC VMAX/PowerMax 데이터 소스에서 다음과 
 |===
 
 
+[[advanced-configuration]]
 == 고급 구성
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 필드 | 설명 
 
@@ -137,11 +141,12 @@ Data Infrastructure Insights EMC VMAX/PowerMax 데이터 소스에서 다음과 
 |===
 
 
+[[troubleshooting]]
 == 문제 해결
 
 이 데이터 수집기에 문제가 발생하면 시도해 볼 수 있는 몇 가지 사항은 다음과 같습니다.
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | 문제: | 다음을 시도해 보세요: 
 
