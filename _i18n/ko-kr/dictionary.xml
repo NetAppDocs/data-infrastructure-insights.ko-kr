@@ -14072,8 +14072,6 @@
   <block id="810bac3bcbfe61628b10fe3df2e0ea96" category="paragraph">관리자는 Admin &gt; Notifications의 "Login Banner" 탭에서 메시지를 설정할 수 있습니다.</block>
   <block id="22f60aff39394bad553a00e2940bdf11" category="paragraph">이 메시지는 기본적인 Markdown 형식을 지원하므로 굵게, 기울임꼴, 표 등의 서식을 적용할 수 있습니다.</block>
   <block id="6a46079dd2d659655fc832470519e71a" category="paragraph">사용자가 다음 로그인 시에만 메시지를 볼지, 아니면 이후 모든 로그인 시에 메시지를 볼지 선택하세요.</block>
-  <block id="6a5f1dd41e7d3fa22fbd71d29b46cea4" category="inline-image-macro">로그인 배너 설정</block>
-  <block id="bd6c3bd0a46b9e6da4828acea4a9e315" category="paragraph"><block ref="bd6c3bd0a46b9e6da4828acea4a9e315" category="inline-image-macro-rx" type="image"></block></block>
   <block id="1ef61a1b7e25b910ec7beca0741bd208" category="paragraph">사용자는 로그인 메시지를 닫으려면 반드시 확인해야 합니다. 메시지를 닫으면 추가 팝업(새로운 기능 업데이트, 서비스 약관 업데이트 등)이 표시됩니다.</block>
   <block id="38f64824b0d19083b9c439a8b4af41e4" category="admonition">서버/VM에 에이전트를 설치하면 Data Infrastructure Insights는 사용자가 구성한 데이터 수집기에서 수집하는 데이터 외에도 해당 시스템에서 메트릭을 수집합니다. 이러한 메트릭은 "노드" 메트릭으로 수집됩니다.</block>
   <block id="7fa36585f976625a51b4f3be0f46f0b5" category="cell">사용자 지정 또는 비공개 Docker 저장소가 있고 Kubernetes 모니터링 운영자가 해당 저장소를 제대로 인식하도록 아직 구성하지 않은 경우 이러한 오류가 발생할 수 있습니다. <block ref="2d47cbc88497421e2fe69677ce7d4cef" category="inline-xref-macro-rx"></block> 사용자 지정/비공개 저장소 구성에 대한 자세한 내용은 해당 문서를 참조하십시오.</block>
@@ -14176,4 +14174,29 @@
   <block id="4f23d2244ea630f361d554b54b77bf03" category="list-text">REST API를 통해 포트 6443을 사용하는 Red Hat OpenShift Virtualization 서버의 IP 주소</block>
   <block id="427f91a8692cb3d3ee52ca20ff3b659c" category="cell">RHOV와의 HTTPS 통신에 사용되는 포트입니다. 기본값은 6443입니다.</block>
   <block id="635a6e63b01914992d3584137f9e6ba6" category="sidebar">Nutanix AHV</block>
+  <block id="a257f7f4b2f6e07845ce567df142ad00" category="section-title">2026년 7월</block>
+  <block id="8014692a31dc15996a299cb6c0683d99" category="section-title">새로운 AI Assistant 시작 페이지</block>
+  <block id="217f492cb52cc14d717c54a81afbacfe" category="paragraph">DII AI 어시스턴트에 이제 전용 시작 페이지가 추가되어 지능형 인프라 분석을 최우선으로 고려합니다. 새로운 대화를 즉시 시작하거나, 한 번의 클릭으로 마지막 세션을 재개하거나, 제안된 질문을 통해 빠르게 시작할 수 있습니다.</block>
+  <block id="dac1263103d1a0aa0f29eb002af291af" category="inline-image-macro">AI Dashboard 기본, 너비=800</block>
+  <block id="6c78ab210f62dbc85fe22910374ff62b" category="paragraph"><block ref="6c78ab210f62dbc85fe22910374ff62b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7bd22707614b54a5cb3a8b8f12117bb9" category="paragraph">탐색 메뉴의 *AI 어시스턴트*에서 시작 페이지에 액세스하거나, 왼쪽 상단의 "별" 아이콘을 사용하여 어디서든 AI 어시스턴트를 열 수 있습니다.</block>
+  <block id="8946b454436a3b11aac461eaa734adfe" category="inline-image-macro">AI Assistant 탐색 메뉴, width=600</block>
+  <block id="2c8265bfd753072f003bc24b1df77111" category="inline-image-macro">어디서든 AI 어시스턴트 이용 가능, width=300</block>
+  <block id="9f6f73922ecce265167332ab3cf87f92" category="paragraph"><block ref="f633ce7b4fef8820f87a799ad31a7cb5" category="inline-image-macro-rx" type="image"></block> <block ref="fefcd3a065be75939d8d47b234d9d0c0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="94187d26105df3824bea268e9ae25535" category="inline-image-macro">로그인 배너 설정, 너비=400</block>
+  <block id="d1e27aaece77e53fc070c0b0ce490e10" category="paragraph"><block ref="d1e27aaece77e53fc070c0b0ce490e10" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="58b6e1ec0b6ec5b4a454251805124640" category="section-title">유지보수 윈도우</block>
+  <block id="3f3ec1c35b7249f193c068e0a8c036d3" category="paragraph">유지보수 윈도우를 사용하면 선택한 오브젝트 및 메트릭에 대해 경고 알림이 표시되지 않는 특정 유지보수 기간을 예약할 수 있습니다. 예를 들어 특정 스토리지 시스템이 계획된 업그레이드 기간에 있을 때 해당 스토리지 시스템에서 발생하는 경고 알림을 표시하지 않도록 설정할 수 있습니다.</block>
+  <block id="df24d8acd06534f618230d46637d6d1b" category="paragraph">해당 기간 동안 알림과 통지 모두를 차단할지, 아니면 통지만 차단하고 알림 감지는 계속할지 선택할 수 있습니다.</block>
+  <block id="1aed277c750cbbf8c2859dca8664dada" category="inline-image-macro">유지보수 윈도우 예시, 너비=400</block>
+  <block id="8f42f88b31e1b4f22f40e0ae5ecd38fb" category="paragraph"><block ref="8f42f88b31e1b4f22f40e0ae5ecd38fb" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="82bc146aadfdab0e3c7443c79b7f4c8b" category="section-title">유지보수 윈도우 생성</block>
+  <block id="4def5c59958a122e22c3d06a018c9ef0" category="paragraph">유지보수 윈도우를 생성하려면:</block>
+  <block id="2b2323dddeb141b098fbcd705e90e359" category="list-text">*Observability &gt; Alerts &gt; Maintenance Windows*로 이동하여 *+ Maintenance Window*를 클릭합니다.</block>
+  <block id="610844a278d3d0601b4bc4c27665563e" category="list-text">유지보수 윈도우의 *이름*을 입력합니다. 최상의 결과를 얻으려면 의미 있고 구체적인 이름을 지정하세요.</block>
+  <block id="c74ae4bc562a9f2edcf63aa39e8fac31" category="list-text">*스토리지 장치* 또는 *오브젝트 속성*을 선택하십시오.</block>
+  <block id="5760cc9b0c4d4910c5b80c7479b3f2a3" category="list-text">모니터 또는 모니터들을 필터링하세요. 와일드카드 사용이 가능합니다.</block>
+  <block id="ea10176408e9b54a867b0e298e4b4bc2" category="list-text">유지보수 기간의 *시작 시간*과 *종료 시간*을 선택하십시오.</block>
+  <block id="de3fd64c52ab8fa6a72c862f6f638fb0" category="list-text">*경고 및 알림*을 억제할지, 아니면 *알림만* 억제할지 선택합니다(윈도우 동안에도 경고는 계속 감지됨).</block>
+  <block id="35d71e914a221fd7fa5e2e2d8c813a2a" category="list-text">*저장*을 클릭하여 유지보수 윈도우를 생성합니다.</block>
 </blocks>

@@ -22,6 +22,6 @@ keywords: notifications, pop-up, banner, motd, message, login
 
 사용자가 다음 로그인 시에만 메시지를 볼지, 아니면 이후 모든 로그인 시에 메시지를 볼지 선택하세요.
 
-image:login_banner_settings.png["로그인 배너 설정"]
+image:login_banner_settings.png["로그인 배너 설정, 너비=400"]
 
 사용자는 로그인 메시지를 닫으려면 반드시 확인해야 합니다. 메시지를 닫으면 추가 팝업(새로운 기능 업데이트, 서비스 약관 업데이트 등)이 표시됩니다.

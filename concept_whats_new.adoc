@@ -19,6 +19,25 @@ NetApp 제품과 서비스를 지속적으로 개선하고 향상시키고 있�
 
 
 
+[[july-2026]]
+== 2026년 7월
+
+
+
+[[new-ai-assistant-starting-page]]
+=== 새로운 AI Assistant 시작 페이지
+
+DII AI 어시스턴트에 이제 전용 시작 페이지가 추가되어 지능형 인프라 분석을 최우선으로 고려합니다. 새로운 대화를 즉시 시작하거나, 한 번의 클릭으로 마지막 세션을 재개하거나, 제안된 질문을 통해 빠르게 시작할 수 있습니다.
+
+image:AI_dashboard_page_default.png["AI Dashboard 기본, 너비=800"]
+
+탐색 메뉴의 *AI 어시스턴트*에서 시작 페이지에 액세스하거나, 왼쪽 상단의 "별" 아이콘을 사용하여 어디서든 AI 어시스턴트를 열 수 있습니다.
+
+image:AI_dashboard_page_menu.png["AI Assistant 탐색 메뉴, width=600"] image:AI_assistant_access_button.png["어디서든 AI 어시스턴트 이용 가능, width=300"]
+
+'''
+
+
 [[june-2026]]
 == 2026년 6월
 
