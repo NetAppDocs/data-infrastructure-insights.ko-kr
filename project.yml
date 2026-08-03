@@ -440,7 +440,7 @@ sidebar:
       - title: 신탁
         url: "/task_dc_oracle_zfs.html"
       - title: Proxmox VE
-        url: "/task_dc_promox_ve.html"
+        url: "/task_dc_proxmox_ve.html"
       - title: 순수한
         url: "/task_dc_pure_flasharray.html"
       - title: Qumulo REST

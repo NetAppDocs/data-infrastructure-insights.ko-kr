@@ -14131,17 +14131,12 @@
   <block id="25a317566de430ddfd2c6f4b3fdea612" category="list-text">ci-k8s-change-observer</block>
   <block id="9da5aa79f5375ccea3c84723b5759557" category="cell">Telegraf에서 다음과 유사한 오류 메시지가 표시되지만 Telegraf는 정상적으로 시작되고 실행됩니다. E! [inputs.kubernetes] 플러그인 오류:<block ref="6d1752bb8ee46f6164f07ea885d5c072" category="inline-link-rx"></block> HTTP 상태 403 Forbidden 반환</block>
   <block id="51635ff11969666db6bdeaf0c68d58b0" category="cell">Kubernetes 버전이 1.33 미만인 경우 이러한 메시지가 나타날 수 있습니다. telegraf에서 사용하는 "nodes/pods" RBAC 리소스가 해당 버전에는 존재하지 않습니다. 이전 버전에서 필요한 RBAC 리소스에 대한 자세한 내용은 operator-additional-permissions.yaml 파일의 "For Kubernetes versions &lt; 1.33" 섹션을 참조하십시오.</block>
-  <block id="55c55b1241c0ea96ea6cef65b10a23e4" category="inline-link-macro">Proxmox Virtual Environment</block>
-  <block id="9ddb2ce85d3b0c6085884776fe61a596" category="cell"><block ref="9ddb2ce85d3b0c6085884776fe61a596" category="inline-link-macro-rx"></block></block>
-  <block id="66036899193ada3425c77162bf9d742c" category="summary">Proxmox 가상 환경 데이터 수집기 구성.</block>
-  <block id="dc8f767a3f6e8f9b98077b7e9a688c5d" category="paragraph">DII Promox 가상 환경 수집기는 인벤토리 데이터를 수집합니다. 이 수집기는 HTTPS REST API 기반입니다.</block>
   <block id="b720c5170acbb344b34398a9ed4fec4b" category="cell">호스트 이름 또는 IP 주소</block>
   <block id="32d285f157ad1acefe9dbe844cee7acf" category="cell">호스트 이름 스토리지 시스템의 IP 주소</block>
   <block id="606bae1c220a7cd73cdc71a447b328fd" category="cell">API 토큰 ID</block>
   <block id="9ae9995c158c8b32609b8fd098fa5ff5" category="cell">API 토큰 시크릿</block>
   <block id="923e5171366e1120624f5ea15d195544" category="cell">위 토큰의 시크릿</block>
   <block id="07d3835e20364558e54bb222fac4e80c" category="cell">HTTPS 통신에 사용되는 포트(기본값 8006)</block>
-  <block id="c0dcddaaad9648f13d2e54741430ea94" category="sidebar">Proxmox VE</block>
   <block id="f45a9049372d3cb48c0a5f07d2274d8a" category="inline-link-macro">Nutanix AHV Series</block>
   <block id="ad9c1c290afb17645c1abe42082fd356" category="cell"><block ref="ad9c1c290afb17645c1abe42082fd356" category="inline-link-macro-rx"></block></block>
   <block id="dfc304efa37c8d1373249ddd368bc0be" category="summary">Nutanix NX 데이터 수집기 구성.</block>
@@ -14157,17 +14152,12 @@
   <block id="93aad9faf21d772e6638b83df990a5f5" category="cell">ADSF 볼륨 그룹</block>
   <block id="5ccc8ca7259b2e94529827201b7eb255" category="cell">VM 디스크</block>
   <block id="59713d7f655f9c892a64a8cfb1bce50f" category="list-text">Prism Central IP 주소 또는 정규화된 도메인 이름</block>
-  <block id="b4cdc83adeeea6f91bf95fe532871bdd" category="list-text">Prism Central 로컬 또는 LDAP 사용자 이름과 비밀번호 (인벤토리 및 성능 분석에는 읽기 전용 계정이면 충분하며, 관리자 권한은 필요하지 않습니다)</block>
   <block id="305bb684f75dc043415486c2063d46c4" category="list-text">포트 요구 사항: HTTPS 9440</block>
   <block id="539110e77db7f1ce573940c3147dbe68" category="list-text">Prism Central 버전 pc.2023.x 이상(v3 API), pc.7.x 이상 권장(v4 API)</block>
-  <block id="74c15fa6625bc3241b81c66466e0ce42" category="list-text">성능 지표를 사용하려면 Prism Central API v4.0.b1 이상(pc.7.3 이상) 버전이 필요합니다. 이전 버전에서는 인벤토리 데이터는 수집되지만 성능 데이터는 보고되지 않습니다.</block>
-  <block id="fb7d6f6db43d1bb1043df17e264de78a" category="cell">Prism Central IP 주소</block>
   <block id="b46321a9cb6ebc3023c7b6ae1f3d8b4f" category="cell">Prism Central 인스턴스의 IP 주소 또는 FQDN</block>
   <block id="893b253db3bdc1ebfb515f1f1cc09f50" category="cell">Prism Central 사용자 이름</block>
   <block id="0fc00a87efdbecf33bb1448c3eaa5a73" category="cell">Prism Central 암호</block>
-  <block id="ac2fad2f282b0e32c75912e363cfb735" category="cell">Prism Central에 연결하는 데 사용되는 TCP 포트입니다. 기본값은 9440입니다.</block>
   <block id="834593f1f41ad9180f7c06531584872b" category="cell">HTTP 타임아웃(초)</block>
-  <block id="b8c5ed136238b59bf386d65bf0787acf" category="cell">HTTP 요청 시간 초과. 기본값은 60초입니다.</block>
   <block id="625b6c43e9f8c94b5aa84173a04fa961" category="cell">HTTP 재시도 횟수</block>
   <block id="c8f99bb6092a052b29e43263274e103f" category="cell">일시적인 오류 발생 시 HTTP 재시도 횟수입니다. 기본값은 3입니다.</block>
   <block id="4a2e4ff5e220e83407c567779aaf9ba1" category="cell">접근하려면 API 토큰이 필요합니다.</block>
@@ -14206,4 +14196,18 @@
   <block id="ed499d4afa165aaf800d50911ee0d6b7" category="paragraph">마이그레이션된 SVM에 대한 ONTAP SVM 데이터 수집기가 RUNNING 상태인지 확인하십시오. 필요한 경우, 마이그레이션 후 Workload Security에서 올바른 클러스터 및 용량 메트릭을 수집할 수 있도록 수집기를 다시 시작하십시오.</block>
   <block id="01ee0a41b7ba80a315acf774bca95831" category="paragraph">클러스터 용량과 SVM 용량이 모두 총계에 표시되는 경우, 용량이 중복 계산되었을 가능성이 높습니다. 이러한 현상은 SVM 컬렉터를 추가, 업그레이드, 재시작하거나 클러스터 간에 SVM을 마이그레이션한 직후에 자주 발생합니다.</block>
   <block id="d1d2aacb054348275b14473a1f1f31f2" category="paragraph">사용량이 여전히 구독 한도를 초과하는 경우, 알림 발생 전후의 구독 사용량과 보고된 원시 스토리지 용량이 포함된 Observability 및 SVM 수집기 목록을 첨부하여 NetApp 지원 케이스를 여십시오.</block>
+  <block id="e0a90db369f87ae02adeb16a86201742" category="inline-link-macro">Proxmox Virtual Environment</block>
+  <block id="4a90aaa80c9f510a7ceb078daedd5635" category="cell"><block ref="4a90aaa80c9f510a7ceb078daedd5635" category="inline-link-macro-rx"></block></block>
+  <block id="bf88a9906139e4cb81937529ce5737f7" category="list-text">Prism Central 로컬 또는 LDAP 사용자 이름 및 비밀번호(읽기 전용 계정으로 충분)</block>
+  <block id="616363ce8a56d3faec8ac114ed04d83b" category="list-text">성능 지표를 사용하려면 Prism Central API v4.0.b1 이상(pc.7.3 이상)이 필요합니다. 이전 버전에서는 인벤토리는 수집되지만 성능 데이터는 보고되지 않습니다.</block>
+  <block id="0c215c7eb97b422d3fbcb651a59480b7" category="cell">Prism Central IP/호스트 이름</block>
+  <block id="6cb3b4061cdb7e049999801ce8d1d445" category="cell">Prism Central에 연결하는 데 사용되는 TCP 포트입니다. 기본값은 9440입니다.</block>
+  <block id="19b47095e2b176e478290ba0ddfcbdbc" category="cell">인벤토리 폴링 간격입니다. 기본값은 60분입니다.</block>
+  <block id="d9ac9c87b6001203eb8b39a253943bd2" category="cell">성능 점검 간격입니다. 기본값은 300초입니다.</block>
+  <block id="8626d73b80be039d958752c296fa4e7c" category="cell">HTTP 요청 시간 초과. 기본값은 60입니다.</block>
+  <block id="33c9cb93144548bfcc912b99d1b2555c" category="summary">Proxmox Virtual Environment 데이터 수집기 구성.</block>
+  <block id="b37138a3b3b3fcd2958e4e6cc5c5c61b" category="doc">Proxmox Virtual Environment 데이터 수집기</block>
+  <block id="91a0d06a30de7119cf7ba6773ce38416" category="paragraph">DII Proxmox 가상 환경 수집기는 PVE 기반 가상 머신(LXC 컨테이너 제외) 및 호스트/하이퍼바이저에 대한 인벤토리 및 성능 데이터를 수집합니다. 이 수집기는 HTTPS REST API 기반이며, TCP 8006 포트에서 수신 대기하는 pveproxy 서비스/데몬이 제공하는 Proxmox REST API와 통신해야 합니다.</block>
+  <block id="7bd4738e9b2442fc6fa7415e88a3298d" category="paragraph">이 데이터 수집기는 사용자 + 토큰 인증을 사용합니다. 각 Proxmox 클러스터에 서비스 계정을 생성하고 해당 사용자에게 적절한 권한을 할당한 다음, 동일한 권한을 가진 API 토큰을 생성해야 합니다. 특정 Proxmox 사용자의 토큰이 사용자와 동일한 권한을 갖는 것은 아니라는 점에 유의하십시오. DII는 일반적으로 전역 감사/모니터링 수준 권한이 필요합니다. Proxmox UI를 통해 서비스 계정을 생성하는 경우, PathPermision은 "/"로 시작하고, 전파(Propagate)는 "예"로 설정하며, 최소한 Datastore Audit, Mapping Audit, Pool Audit, SDN Audit, Sys Audit, VM Audit, VM Monitor 권한을 활성화해야 합니다. 사용자 계정이 생성되면 해당 계정에 대한 액세스 토큰을 생성할 수 있습니다. 토큰 만료 기한을 0으로 설정하여 토큰이 만료되지 않도록 하는 것이 좋습니다.</block>
+  <block id="57e13573114577b3af8a0a24aa24d576" category="sidebar">Proxmox VE</block>
 </blocks>

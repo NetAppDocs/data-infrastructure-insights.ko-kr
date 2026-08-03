@@ -206,7 +206,7 @@ Data Infrastructure Insights 에서 지원하는 데이터 수집기의 알파�
 | link:task_dc_oracle_zfs.html["Oracle ZFS 스토리지 어플라이언스"] | 하부 구조 
 
 
-| link:task_dc_promox_ve.html["Proxmox Virtual Environment"] | 하부 구조 
+| link:task_dc_proxmox_ve.html["Proxmox Virtual Environment"] | 하부 구조 
 
 
 | link:task_dc_pure_flasharray.html["퓨어스토리지 플래시어레이"] | 하부 구조 
