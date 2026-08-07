@@ -413,6 +413,7 @@ image:ws_LDAP_collector_list.png["UI의 LDAP 수집기 목록"]
 . 최신 에이전트 설치 프로그램을 다운로드하세요.
 +
 .. 최신 설치 프로그램을 다운로드하는 단계는 "새 에이전트 설치"의 단계와 비슷합니다.  Swagger에서 "cloudsecure_installers.agent"> "/v1/cloudsecure/agents/installers/{platform}/latest" API를 선택하고 플랫폼을 "linux"로 입력한 후 설치 프로그램 zip 파일을 다운로드합니다.  혹은 curl 명령어를 사용할 수도 있습니다.  설치 프로그램 파일의 압축을 풉니다.
+.. 참고: 에이전트 설치 프로그램은 실행 중인 에이전트가 있는 폴더와는 다른 폴더에 다운로드해야 합니다.
 
 
 . “cloudsecure-agent-upgrade.sh” 파일에 대한 실행 권한을 설정합니다.
@@ -437,9 +438,16 @@ total 153344
 -rw------- 1 root root    16574 Apr 26  2024 cloudsecure-agent-install.sh
 -rwx------ 1 root root     8586 Apr 26  2024 cloudsecure-agent-upgrade.sh
 -rw------- 1 root root 77834660 Apr 26 17:35 cloudsecure-linux-agent-installer-1.618.0.zip
-
 ----
 . “cloudsecure-agent-upgrade.sh” 스크립트를 실행합니다.  스크립트가 성공적으로 실행되면 출력에 "Cloudsecure 에이전트가 성공적으로 업그레이드되었습니다."라는 메시지가 인쇄됩니다.
+. 다음 명령을 실행하세요.
++
+ sudo chown -R cssys:cssys {agent-install-path}/cloudsecure
++
+예를 들어 에이전트가 "/test_user/apps"에서 실행 중인 경우 명령은 다음과 같습니다.
+
++
+ sudo chown -R cssys:cssys /test_user/apps/cloudsecure
 . 다음 명령 'systemctl daemon-reload'를 실행하세요.
 +
 [listing]

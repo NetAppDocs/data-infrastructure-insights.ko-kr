@@ -14210,4 +14210,19 @@
   <block id="57e13573114577b3af8a0a24aa24d576" category="sidebar">Proxmox VE</block>
   <block id="48c0a89dc87860e6c3b42a70bbd13c53" category="paragraph"><block ref="48c0a89dc87860e6c3b42a70bbd13c53" category="inline-link-macro-rx"></block></block>
   <block id="c84f7a37a2691cf36f1774d52de72e5c" category="cell">사용자가 디렉토리를 검색할 수 있도록 허용합니다. 예: _username@companyname.com_ 또는 _username@domainname.com_</block>
+  <block id="6327e373cb9d0fbf371b2256065e27ee" category="paragraph">*문제*: 데이터 수집기 서비스는 실행 중이지만, 하나 이상의 데이터 수집기가 '실행 중'이 아닌 '성능 저하' 상태로 표시됩니다.</block>
+  <block id="055eb384fa852b687767bb268c418c28" category="paragraph">*다음 방법을 시도해 보세요*: SWS는 노드에서 하나 이상의 FPolicy 연결이 끊어지면 "성능 저하"를 보고합니다. 이는 서비스 중단이 아니라(컬렉터는 계속 실행 중) 연결이 복구될 때까지 해당 노드의 감사 이벤트가 손실될 수 있음을 의미합니다.</block>
+  <block id="5871b970a58be1158700074b636e1c5f" category="paragraph">ONTAP SVM용 운영 데이터 LIF를 보유한 각 노드에서 FPolicy 제어 채널 연결을 설정합니다.  로컬 데이터 LIF가 없는 노드는 연결할 수 없습니다.  참조:</block>
+  <block id="39475af1c92345ffc68386ed4b1a0a0f" category="inline-link-macro">노드와 외부 ONTAP FPolicy 서버 간 통신 프로세스</block>
+  <block id="7d7a6ac9f8b0b4a140566200f8cc41c3" category="list-text"><block ref="7d7a6ac9f8b0b4a140566200f8cc41c3" category="inline-link-macro-rx"></block></block>
+  <block id="a8586bcde30f3a7086e92d68b265c18d" category="inline-link-macro">ONTAP FPolicy가 외부 FPolicy 서버와 연동되는 방식</block>
+  <block id="985934cbe9028d56b65bfa3b21aad963" category="list-text"><block ref="985934cbe9028d56b65bfa3b21aad963" category="inline-link-macro-rx"></block></block>
+  <block id="f682e452dc85bb2174061cf42fd8868a" category="inline-link-macro">ONTAP FPolicy 구성을 위한 요구 사항, 고려 사항 및 모범 사례</block>
+  <block id="351ae455f2a730183e8897803e2cc1ad" category="list-text"><block ref="351ae455f2a730183e8897803e2cc1ad" category="inline-link-macro-rx"></block></block>
+  <block id="4381f5d310695f16c64a241811aa950c" category="paragraph">UI에서 연결이 끊어진 노드를 확인한 다음, 해당 노드에 SVM용 데이터 LIF가 있는지 확인합니다.</block>
+  <block id="145d6a54d6a8818e67b1777aef9dfd9c" category="inline-link-macro">KB: Fpolicy 서버가 "로컬 lif가 없음"으로 인해 연결되지 않음</block>
+  <block id="c76035114caecd573a508cd95e8d8d6d" category="list-text">나열된 노드에 데이터 LIF가 없습니다. Degraded 상태를 무시하십시오. 로컬 데이터 LIF가 없는 경우 ONTAP은 "FPolicy 서버에 연결할 로컬 LIF가 없습니다"라는 이유로 FPolicy 연결이 끊어졌다고 표시할 수 있습니다. 이는 정상적인 현상입니다. 을 참조하십시오. <block ref="17a696575179b878a537e91ff06ec3c2" category="inline-link-macro-rx"></block> 향후 SWS 릴리스에서는 이러한 경우 수집기를 Degraded로 표시하지 않을 예정입니다.</block>
+  <block id="4f6c09f8f53defdd48fed140cd4550f9" category="list-text">나열된 노드에 데이터 LIF가 있습니다. FPolicy 연결이 끊어진 이유(LIF 다운/데이터-fpolicy-client 누락, 네트워크/방화벽 문제 또는 일시적인 재시작/장애 조치)를 조사하십시오.</block>
+  <block id="10fcc85a32e000abd9a522eb086aa8b9" category="list-text">참고: 에이전트 설치 프로그램은 실행 중인 에이전트가 있는 폴더와는 다른 폴더에 다운로드해야 합니다.</block>
+  <block id="323d0a1ff366ae52ecb4199bd4c94bcc" category="paragraph">예를 들어 에이전트가 "/test_user/apps"에서 실행 중인 경우 명령은 다음과 같습니다.</block>
 </blocks>

@@ -262,4 +262,24 @@ Observability ONTAP 컬렉터와 Workload Security SVM 컬렉터가 보고하는
 {비어 있는}
 
 '''
+*문제*: 데이터 수집기 서비스는 실행 중이지만, 하나 이상의 데이터 수집기가 '실행 중'이 아닌 '성능 저하' 상태로 표시됩니다.
+
+*다음 방법을 시도해 보세요*: SWS는 노드에서 하나 이상의 FPolicy 연결이 끊어지면 "성능 저하"를 보고합니다. 이는 서비스 중단이 아니라(컬렉터는 계속 실행 중) 연결이 복구될 때까지 해당 노드의 감사 이벤트가 손실될 수 있음을 의미합니다.
+
+ONTAP SVM용 운영 데이터 LIF를 보유한 각 노드에서 FPolicy 제어 채널 연결을 설정합니다.  로컬 데이터 LIF가 없는 노드는 연결할 수 없습니다.  참조:
+
+* link:https://docs.netapp.com/us-en/ontap/nas-audit/node-fpolicy-server-communication-process-concept.html["노드와 외부 ONTAP FPolicy 서버 간 통신 프로세스"^]
+* link:https://docs.netapp.com/us-en/ontap/nas-audit/fpolicy-external-fpolicy-servers-concept.html["ONTAP FPolicy가 외부 FPolicy 서버와 연동되는 방식"^]
+* link:https://docs.netapp.com/us-en/ontap/nas-audit/requirements-best-practices-fpolicy-concept.html["ONTAP FPolicy 구성을 위한 요구 사항, 고려 사항 및 모범 사례"^]
+
+
+UI에서 연결이 끊어진 노드를 확인한 다음, 해당 노드에 SVM용 데이터 LIF가 있는지 확인합니다.
+
+* 나열된 노드에 데이터 LIF가 없습니다. Degraded 상태를 무시하십시오. 로컬 데이터 LIF가 없는 경우 ONTAP은 "FPolicy 서버에 연결할 로컬 LIF가 없습니다"라는 이유로 FPolicy 연결이 끊어졌다고 표시할 수 있습니다. 이는 정상적인 현상입니다. 을 참조하십시오. link:https://kb.netapp.com/on-prem/ontap/da/NAS/NAS-KBs/Fpolicy_server_not_connected_due_to_no_local_lif_present_on_one_or_more_nodes["KB: Fpolicy 서버가 "로컬 lif가 없음"으로 인해 연결되지 않음"^] 향후 SWS 릴리스에서는 이러한 경우 수집기를 Degraded로 표시하지 않을 예정입니다.
+* 나열된 노드에 데이터 LIF가 있습니다. FPolicy 연결이 끊어진 이유(LIF 다운/데이터-fpolicy-client 누락, 네트워크/방화벽 문제 또는 일시적인 재시작/장애 조치)를 조사하십시오.
+
+
+{비어 있는}
+
+'''
 여전히 문제가 발생하는 경우, *도움말 > 지원* 페이지에 언급된 지원 링크로 문의하세요.
