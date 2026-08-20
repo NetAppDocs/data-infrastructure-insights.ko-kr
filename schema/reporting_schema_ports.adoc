@@ -1,0 +1,462 @@
+---
+sidebar: sidebar 
+permalink: reporting_schema_ports.html 
+summary: Ports 데이터 웨어하우스의 스키마 테이블 
+keywords: dwh, data warehouse, schema, reporting, ports 
+---
+= 포트 스키마
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+출처: *dwh_ports* OData 엔드포인트 — Data Infrastructure Insights
+
+테이블 발견 개수: *7* | 연관 관계: *4*
+
+
+
+[[key-relationships-between-tables]]
+== 테이블 간의 주요 관계
+
+
+
+[[portsfact]]
+=== ports_fact
+
+[cols="1,1,1"]
+|===
+| 참조된 (상위) 테이블 | FK 컬럼 | 부모 PK 
+
+
+| link:#entity-connected_device_dimension["connected_device_dimension"] | connectedDeviceTk | tk 
+
+
+| link:#entity-date_dimension["date_dimension"] | dateTk | tk 
+
+
+| link:#entity-port_dimension["포트_차원"] | portTk | tk 
+
+
+| link:#entity-switch_dimension["switch_dimension"] | switchTk | tk 
+|===
+
+
+[[tables-fields]]
+== 테이블 및 필드
+
+PK기본 키FK외래 키NOT NULL필수 필드
+
+
+
+[[cardinals]]
+=== 추기경
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합: cardinals
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| 숫자 | Int32 | 예 | 0에서 99 사이의 숫자. 
+|===
+
+
+[[connecteddevicedimension]]
+=== connected_device_dimension
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:connected_device_dimension
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk *[PK]* | Int32 | 예 | 기기의 TK. 
+
+
+| 이름 | 문자열 | 예 | 기기 이름. 
+
+
+| 제조업체 | 문자열 | 예 | 해당 기기의 제조업체. 
+
+
+| 모델 | 문자열 | 예 | 기기 모델명. 
+
+
+| 유형 | 문자열 | 예 | 기기의 종류. 
+
+
+| 펌웨어 | 문자열 | 예 | 기기에서 실행 중인 펌웨어 버전입니다. 
+
+
+| id | Int64 | 예 | 장치의 ID 
+
+
+| 최신 | 문자열 | 예 | 이 행이 해당 장치에 대한 최신 행인지 여부를 나타냅니다. 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| ports_fact | link:#entity-ports_fact["ports_fact"] | 많은 
+|===
+
+
+[[datedimension]]
+=== date_dimension
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 세트:date_dimension
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk | Int32 | 예 | 날짜 오브젝트의 TK. 
+
+
+| fullDate | DateTimeOffset | 예 | 날짜 오브젝트의 날짜입니다. 
+
+
+| dayInMonth | 바이트 | 예 | 날짜 오브젝트의 월 중 일(day)입니다. 월의 첫째 날은 값이 1입니다. 
+
+
+| dayInYear | Int32 | 예 | 날짜 오브젝트의 연중 일(Day)입니다. 연중 첫째 날의 값은 1입니다. 
+
+
+| dateYear | Int32 | 예 | 날짜 오브젝트의 연도입니다. 
+
+
+| yearLabel | 문자열 | 예 | 연도를 문자열 형식으로 지정 
+
+
+| monthNum | 바이트 | 예 | 날짜 오브젝트의 월입니다. 1월의 값은 1입니다. 
+
+
+| monthLabel | 문자열 | 예 | 문자열로 형식화된 월 
+
+
+| dayInWeekNum | 바이트 | 예 | 날짜 오브젝트의 요일입니다. 일요일의 값은 1입니다. 
+
+
+| 분기 | 바이트 | 예 | 날짜 오브젝트의 분기입니다. 첫 번째 분기는 1의 값을 가집니다. 
+
+
+| quarterLabel | 문자열 | 예 | 문자열로 형식화된 분기 
+
+
+| dayInQuarter | Int32 | 예 | 날짜 오브젝트의 분기 내 일수입니다. 분기의 첫째 날은 1의 값을 가집니다. 
+
+
+| repQuarter | 바이트 | 예 | 해당 날짜가 해당 분기에 이용 가능한 첫 번째 날짜인지 여부를 나타냅니다. 
+
+
+| repMonth | 바이트 | 예 | 해당 날짜가 해당 월에 이용 가능한 첫 번째 날짜인지 여부를 나타냅니다. 
+
+
+| repWeek | 바이트 | 예 | 해당 날짜가 해당 주에 이용 가능한 첫 번째 날짜인지 여부를 나타냅니다. 
+
+
+| repDay | 바이트 | 예 | 해당 날짜가 해당 날짜에 이용 가능한 첫 번째 날짜인지 여부를 나타냅니다. 
+
+
+| repMonthOrLatest | 바이트 | 예 | 이 날짜가 해당 월의 담당자 날짜인지 아니면 최신 날짜인지를 나타냅니다. 이 플래그는 월별 담당자를 사용하는 Datamart에서 사용됩니다. 현재 월의 경우 최신 날짜라는 점만 다릅니다. 
+
+
+| sspFlag | 바이트 | 예 | 이 날짜가 스토리지 및 스토리지 풀 데이터마트에서 사용되는지 여부를 나타냅니다. 이는 월별 대표값과 구성에 정의된 마지막 일수에 대해 true입니다. 
+
+
+| 최신 | 문자열 | 예 | 해당 날짜가 표에서 이용 가능한 마지막 날짜인지 여부를 나타냅니다. 
+
+
+| 미래 | 문자열 | 예 | 이 날짜가 미래 날짜(예측)인지 아니면 일반적인 날짜인지를 나타냅니다. 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| ports_fact | link:#entity-ports_fact["ports_fact"] | 많은 
+|===
+
+
+[[portdimension]]
+=== 포트_차원
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 세트:port_dimension
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk | Int32 | 예 | 이 포트 행의 TK. 
+
+
+| wwn | 문자열 | 예 | 포트의 WWN. 
+
+
+| 이름 | 문자열 | 예 | 포트 이름. 
+
+
+| gbicType | 문자열 | 예 | 포트에 사용되는 GBIC(기가비트 인터페이스 변환기) 유형입니다. 
+
+
+| 유형 | 문자열 | 예 | 포트 유형은 일반적으로 다른 장치와의 통신에 사용되는 프로토콜을 식별하는 데 사용되며, 장치 자체에서 가져옵니다(예: F-port, E-port 등). 
+
+
+| 속도 | 문자열 | 예 | 포트 속도(Gbps). 
+
+
+| isGenerated | 문자열 | 예 | (실제 wwn을 모르는 경우) 이것이 생성된 wwn인지 여부를 나타냅니다. 
+
+
+| url | 문자열 | 예 | Insight 서버에서 해당 포트의 URL입니다. 
+
+
+| id | Int64 | 예 | dwh_inventory.switch_port에 있는 포트의 GUID입니다. 
+
+
+| 최신 | 문자열 | 예 | 이 행이 해당 포트에 대한 최신 행인지 여부를 나타냅니다. 
+
+
+| dateTk | Int32 | 예 | 포트 행이 생성된 날짜의 TK입니다. 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| ports_fact | link:#entity-ports_fact["ports_fact"] | 많은 
+|===
+
+
+[[portsfact]]
+=== ports_fact
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:ports_fact
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk *[PK]* | Int32 | 예 | 그 사실을 알지 못한다. 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["date_dimension"].tk | Int32 | 예 | 날짜의 TK. 
+
+
+| switchTk *[FK]* →link:#entity-switch_dimension["switch_dimension"].tk | Int32 | 예 | 포트가 포함된 스위치의 TK. 
+
+
+| connectedDeviceTk *[FK]* →link:#entity-connected_device_dimension["connected_device_dimension"].tk | Int32 | 예 | 포트에 연결된 장치의 TK입니다. 
+
+
+| portTk *[FK]* →link:#entity-port_dimension["포트_차원"].tk | Int32 | 예 | 포트의 TK. 
+
+
+| 패브릭 | 문자열 | 예 | 포트가 작동하도록 구성된 패브릭(또는 VSAN)의 이름 또는 WWN입니다. 
+
+
+| 속도 | 문자열 | 예 | 포트 속도(Gbps). 
+
+
+| connectivityType | 문자열 | 예 | 연결된 장치의 종류입니다. 
+
+
+| 유형 | 문자열 | 예 | 포트 유형은 일반적으로 다른 장치와의 통신에 사용되는 프로토콜을 식별하는 데 사용되며, 장치 자체에서 가져옵니다(예: F-port, E-port 등). 
+
+
+| 상태 | 문자열 | 예 | 포트 상태입니다. 가능한 값은 OK, NOT_LICENSED, ERROR, INACTIVE 및 UNKNOWN입니다. 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| connected_device_dimension | link:#entity-connected_device_dimension["connected_device_dimension"] | JOIN 1개: connectedDeviceTk=link:#entity-connected_device_dimension["connected_device_dimension"].tk 
+
+
+| 포트_차원 | link:#entity-port_dimension["포트_차원"] | JOIN 1개: portTk=link:#entity-port_dimension["포트_차원"].tk 
+
+
+| date_dimension | link:#entity-date_dimension["date_dimension"] | JOIN 1: dateTk=link:#entity-date_dimension["date_dimension"].tk 
+
+
+| switch_dimension | link:#entity-switch_dimension["switch_dimension"] | JOIN 1개: switchTk=link:#entity-switch_dimension["switch_dimension"].tk 
+|===
+
+
+[[portsfactcurrent]]
+=== ports_fact_current
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:ports_fact_current
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk | Int32 | 예 | 그 사실을 알지 못한다. 
+
+
+| dateTk | Int32 | 예 | 날짜의 TK. 
+
+
+| switchTk | Int32 | 예 | 포트가 포함된 스위치의 TK. 
+
+
+| connectedDeviceTk | Int32 | 예 | 포트에 연결된 장치의 TK입니다. 
+
+
+| portTk | Int32 | 예 | 포트의 TK. 
+
+
+| 패브릭 | 문자열 | 예 | 포트가 작동하도록 구성된 패브릭(또는 VSAN)의 이름 또는 WWN입니다. 
+
+
+| 속도 | 문자열 | 예 | 포트 속도(Gbps). 
+
+
+| connectivityType | 문자열 | 예 | 연결된 장치의 종류입니다. 
+
+
+| 유형 | 문자열 | 예 | 포트 유형은 일반적으로 다른 장치와의 통신에 사용되는 프로토콜을 식별하는 데 사용되며, 장치 자체에서 가져옵니다(예: F-port, E-port 등). 
+
+
+| 상태 | 문자열 | 예 | 포트 상태입니다. 가능한 값은 OK, NOT_LICENSED, ERROR, INACTIVE 및 UNKNOWN입니다. 
+|===
+
+
+[[switchdimension]]
+=== switch_dimension
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:switch_dimension
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk | Int32 | 예 | 이 스위치 행의 TK입니다. 
+
+
+| wwn | 문자열 | 예 | 스위치의 WWN. 
+
+
+| 이름 | 문자열 | 예 | 스위치의 이름입니다. 
+
+
+| 식별자 | 문자열 | 예 | 기기 식별자. 
+
+
+| ip | 문자열 | 예 | 스위치의 IP 주소. 
+
+
+| 모델 | 문자열 | 예 | 스위치 모델. 
+
+
+| 제조업체 | 문자열 | 예 | 스위치 제조업체. 
+
+
+| 펌웨어 | 문자열 | 예 | 스위치에서 실행 중인 펌웨어 버전입니다. 
+
+
+| serialNumber | 문자열 | 예 | 스위치의 일련번호. 
+
+
+| npv | 문자열 | 예 | 이것이 NPV 스위치인지 여부를 나타냅니다. 
+
+
+| isGenerated | 문자열 | 예 | 이 스위치가 물리적 장치에 해당하지 않는지 여부를 나타냅니다. 이는 일대다 포트 연결을 모델링하는 데 사용됩니다. 
+
+
+| 유형 | 문자열 | 예 | 스위치 유형. 
+
+
+| url | 문자열 | 예 | Insight Server에서 이 스위치에 대한 URL입니다. 
+
+
+| id | Int64 | 예 | dwh_inventory.switch에 있는 스위치의 GUID입니다. 
+
+
+| 최신 | 문자열 | 예 | 이 행이 해당 스위치에 대한 최신 행인지 여부를 나타냅니다. 
+
+
+| dateTk | Int32 | 예 | 이 스위치 행이 생성된 날짜의 TK입니다. 
+
+
+| dataCenter | 문자열 | 예 | dataCenter dwh_dimensions.switch_dimension에 할당된 주석 값 
+
+
+| switchLevel | 문자열 | 예 | switchLevel dwh_dimensions.switch_dimension에 할당된 주석 값 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| ports_fact | link:#entity-ports_fact["ports_fact"] | 많은 
+|===

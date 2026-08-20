@@ -19,4 +19,4 @@ keywords: dwh, data warehouse, schema, reporting
 
 NOTE: 보고 기능은 Data Infrastructure Insights 에서 사용할 수 있습니다.link:concept_subscribing_to_cloud_insights.html["프리미엄 에디션"] .
 
-link:schema/reporting_schema_capacity.html["스키마 테이블 - 용량"^] link:schema/reporting_schema_capacity_efficiency.html["스키마 테이블 - 용량 효율성"^] link:schema/reporting_schema_fs_util.html["스키마 테이블 - 파일 시스템 활용도"^] link:schema/reporting_schema_inventory.html["스키마 테이블 - 인벤토리"^] link:schema/reporting_schema_performance.html["스키마 테이블 - 성능"^] link:schema/reporting_schema_ports.html["스키마 테이블 - 포트"^]
+link:reporting_schema_capacity.html["스키마 테이블 - 용량"] link:reporting_schema_capacity_efficiency.html["스키마 테이블 - 용량 효율성"] link:reporting_schema_fs_util.html["스키마 테이블 - 파일 시스템 활용도"] link:reporting_schema_inventory.html["스키마 테이블 - 인벤토리"] link:reporting_schema_performance.html["스키마 테이블 - 성능"] link:reporting_schema_ports.html["스키마 테이블 - 포트"]

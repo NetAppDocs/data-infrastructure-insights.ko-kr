@@ -1,0 +1,571 @@
+---
+sidebar: sidebar 
+permalink: reporting_schema_fs_util.html 
+summary: 파일 시스템 활용률 데이터 웨어하우스의 스키마 테이블 
+keywords: dwh, data warehouse, schema, reporting, file system, fs util 
+---
+= 파일 시스템 활용 스키마
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+출처: *dwh_fs_util* OData 엔드포인트 — Data Infrastructure Insights
+
+테이블 수: *8* | 연관 관계: *7*
+
+
+
+[[key-relationships-between-tables]]
+== 테이블 간의 주요 관계
+
+
+
+[[fsutilfact]]
+=== fs_util_fact
+
+[cols="1,1,1"]
+|===
+| 참조된 (상위) 테이블 | FK 컬럼 | 부모 PK 
+
+
+| link:#entity-compute_resource_dimension["compute_resource_dimension"] | computeResourceTk | tk 
+
+
+| link:#entity-date_dimension["date_dimension"] | dateTk | tk 
+
+
+| link:#entity-file_system_dimension["파일 시스템 크기"] | fsTk | tk 
+
+
+| link:#entity-host_dimension["호스트 차원"] | hostTk | tk 
+
+
+| link:#entity-storage_dimension["스토리지_차원"] | storageTk | tk 
+
+
+| link:#entity-tier_dimension["계층_차원"] | tierTk | tk 
+
+
+| link:#entity-vm_dimension["vm_dimension"] | vmTk | tk 
+|===
+
+
+[[tables-fields]]
+== 테이블 및 필드
+
+PK기본 키FK외래 키NOT NULL필수 필드
+
+
+
+[[computeresourcedimension]]
+=== compute_resource_dimension
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합(들):compute_resource_dimension
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk | Int32 | 예 | 이 컴퓨팅 리소스 행의 TK입니다. 
+
+
+| 식별자 | 문자열 | 예 | 컴퓨팅 리소스의 자연 식별자입니다. 
+
+
+| 이름 | 문자열 | 예 | 컴퓨팅 리소스의 이름입니다. 
+
+
+| 유형 | 문자열 | 예 | 리소스 유형. 
+
+
+| 도메인 | 문자열 | 예 | 컴퓨팅 리소스의 영역. 
+
+
+| ip | 문자열 | 예 | 컴퓨팅 리소스의 IP 주소를 쉼표로 구분한 목록입니다. 
+
+
+| OS | 문자열 | 예 | 컴퓨팅 리소스에서 실행 중인 운영 체제입니다. 
+
+
+| id | Int64 | 예 | dwh_inventory.compute_resource에 있는 컴퓨팅 리소스의 GUID 
+
+
+| 최신 | 문자열 | 예 | 이 행이 해당 컴퓨팅 리소스에 대한 최신 행인지 여부를 나타냅니다. 
+
+
+| dateTk | Int32 | 예 | 이 컴퓨팅 리소스 행이 생성된 날짜의 TK입니다. 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| fs_util_fact | link:#entity-fs_util_fact["fs_util_fact"] | 많은 
+|===
+
+
+[[datedimension]]
+=== date_dimension
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 세트:date_dimension
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk | Int32 | 예 | 날짜 오브젝트의 TK. 
+
+
+| fullDate | DateTimeOffset | 예 | 날짜 오브젝트의 날짜입니다. 
+
+
+| dayInMonth | 바이트 | 예 | 날짜 오브젝트의 월 중 일(day)입니다. 월의 첫째 날은 값이 1입니다. 
+
+
+| dayInYear | Int32 | 예 | 날짜 오브젝트의 연중 일(Day)입니다. 연중 첫째 날의 값은 1입니다. 
+
+
+| dateYear | Int32 | 예 | 날짜 오브젝트의 연도입니다. 
+
+
+| yearLabel | 문자열 | 예 | 연도를 문자열 형식으로 지정 
+
+
+| monthNum | 바이트 | 예 | 날짜 오브젝트의 월입니다. 1월의 값은 1입니다. 
+
+
+| monthLabel | 문자열 | 예 | 문자열로 형식화된 월 
+
+
+| dayInWeekNum | 바이트 | 예 | 날짜 오브젝트의 요일입니다. 일요일의 값은 1입니다. 
+
+
+| 분기 | 바이트 | 예 | 날짜 오브젝트의 분기입니다. 첫 번째 분기는 1의 값을 가집니다. 
+
+
+| quarterLabel | 문자열 | 예 | 문자열로 형식화된 분기 
+
+
+| dayInQuarter | Int32 | 예 | 날짜 오브젝트의 분기 내 일수입니다. 분기의 첫째 날은 1의 값을 가집니다. 
+
+
+| repQuarter | 바이트 | 예 | 해당 날짜가 해당 분기에 이용 가능한 첫 번째 날짜인지 여부를 나타냅니다. 
+
+
+| repMonth | 바이트 | 예 | 해당 날짜가 해당 월에 이용 가능한 첫 번째 날짜인지 여부를 나타냅니다. 
+
+
+| repWeek | 바이트 | 예 | 해당 날짜가 해당 주에 이용 가능한 첫 번째 날짜인지 여부를 나타냅니다. 
+
+
+| repDay | 바이트 | 예 | 해당 날짜가 해당 날짜에 이용 가능한 첫 번째 날짜인지 여부를 나타냅니다. 
+
+
+| repMonthOrLatest | 바이트 | 예 | 이 날짜가 해당 월의 담당자 날짜인지 아니면 최신 날짜인지를 나타냅니다. 이 플래그는 월별 담당자를 사용하는 Datamart에서 사용됩니다. 현재 월의 경우 최신 날짜라는 점만 다릅니다. 
+
+
+| sspFlag | 바이트 | 예 | 이 날짜가 스토리지 및 스토리지 풀 데이터마트에서 사용되는지 여부를 나타냅니다. 이는 월별 대표값과 구성에 정의된 마지막 일수에 대해 true입니다. 
+
+
+| 최신 | 문자열 | 예 | 해당 날짜가 표에서 이용 가능한 마지막 날짜인지 여부를 나타냅니다. 
+
+
+| 미래 | 문자열 | 예 | 이 날짜가 미래 날짜(예측)인지 아니면 일반적인 날짜인지를 나타냅니다. 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| fs_util_fact | link:#entity-fs_util_fact["fs_util_fact"] | 많은 
+|===
+
+
+[[filesystemdimension]]
+=== 파일 시스템 크기
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합: file_system_dimension
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk | Int32 | 예 | 차원의 TK. 
+
+
+| computeResourceIdentifier | 문자열 | 예 | 컴퓨팅 리소스의 식별자입니다. 자연 키의 일부입니다. 
+
+
+| 이름 | 문자열 | 예 | 마운트 지점 또는 드라이브 문자. 자연 키의 일부. 
+
+
+| 위치 | 문자열 | 예 | 데이터가 저장되는 위치와 접근 방식을 나타냅니다. 예: 로컬, SAN, NAS. 위치를 알 수 없는 경우 null로 설정됩니다. 
+
+
+| hardwareId | 문자열 | 예 | 호스트별 식별자입니다. 알 수 없는 경우 null로 설정됩니다. 
+
+
+| 유형 | 문자열 | 예 | 파일 시스템 유형입니다. 예: NTFS, FAT, UFS, UDF, ZFS, ISO 9660, VXFS 등. 알 수 없는 경우 null로 설정됩니다. 
+
+
+| id | Int64 | 예 | dwh_inventory.file_system에 있는 파일 시스템의 GUID입니다. 
+
+
+| 최신 | 문자열 | 예 | 이 행이 해당 파일 시스템의 최신 행인지 여부를 나타냅니다. 
+
+
+| dateTk | Int32 | 예 | 이 파일 시스템 행이 생성된 날짜의 TK입니다. 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| fs_util_fact | link:#entity-fs_util_fact["fs_util_fact"] | 많은 
+|===
+
+
+[[fsutilfact]]
+=== fs_util_fact
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:fs_util_fact
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk *[PK]* | Int32 | 예 | 그 사실을 알지 못한다. 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["date_dimension"].tk | Int32 | 예 | 날짜의 TK. 
+
+
+| hostTk *[FK]* →link:#entity-host_dimension["호스트 차원"].tk | Int32 | 예 | 호스트의 TK. 
+
+
+| vmTk *[FK]* →link:#entity-vm_dimension["vm_dimension"].tk | Int32 | 예 | VM의 TK. 
+
+
+| computeResourceTk *[FK]* →link:#entity-compute_resource_dimension["compute_resource_dimension"].tk | Int32 | 예 | computeResource의 TK. 
+
+
+| fsTk *[FK]* →link:#entity-file_system_dimension["파일 시스템 크기"].tk | Int32 | 예 | 파일 시스템의 TK. 
+
+
+| storageTk *[FK]* →link:#entity-storage_dimension["스토리지_차원"].tk | Int32 | 예 | 저장소의 TK. 
+
+
+| tierTk *[FK]* →link:#entity-tier_dimension["계층_차원"].tk | Int32 | 예 | 티어의 TK. 
+
+
+| sizeMB | Int64 | 예 | 파일 시스템의 크기(MB). 
+
+
+| usedMB | Int64 | 예 | 파일 시스템 용량 중 사용 중이거나 사용 불가능한 용량의 양입니다. 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| 파일 시스템 크기 | link:#entity-file_system_dimension["파일 시스템 크기"] | JOIN 1개: fsTk=link:#entity-file_system_dimension["파일 시스템 크기"].tk 
+
+
+| 스토리지_차원 | link:#entity-storage_dimension["스토리지_차원"] | JOIN 1개: storageTk=link:#entity-storage_dimension["스토리지_차원"].tk 
+
+
+| 계층_차원 | link:#entity-tier_dimension["계층_차원"] | JOIN 1개: tierTk=link:#entity-tier_dimension["계층_차원"].tk 
+
+
+| compute_resource_dimension | link:#entity-compute_resource_dimension["compute_resource_dimension"] | JOIN 하나: computeResourceTk=link:#entity-compute_resource_dimension["compute_resource_dimension"].tk 
+
+
+| 호스트 차원 | link:#entity-host_dimension["호스트 차원"] | JOIN 1: hostTk=link:#entity-host_dimension["호스트 차원"].tk 
+
+
+| vm_dimension | link:#entity-vm_dimension["vm_dimension"] | JOIN 1: vmTk=link:#entity-vm_dimension["vm_dimension"].tk 
+
+
+| date_dimension | link:#entity-date_dimension["date_dimension"] | JOIN 1: dateTk=link:#entity-date_dimension["date_dimension"].tk 
+|===
+
+
+[[hostdimension]]
+=== 호스트 차원
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:host_dimension
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk | Int32 | 예 | 이 호스트 행의 TK입니다. 
+
+
+| 이름 | 문자열 | 예 | 호스트 이름. 
+
+
+| 식별자 | 문자열 | 예 | 기기 식별자. 
+
+
+| ip | 문자열 | 예 | 호스트의 IP 주소를 쉼표로 구분한 목록입니다. 
+
+
+| OS | 문자열 | 예 | 호스트에서 실행 중인 운영 체제입니다. 
+
+
+| 모델 | 문자열 | 예 | 모델 번호. 
+
+
+| 제조업체 | 문자열 | 예 | 호스트 제조업체. 
+
+
+| url | 문자열 | 예 | Insight Server에서 이 호스트의 URL입니다. 
+
+
+| id | Int64 | 예 | dwh_inventory.host에 있는 호스트의 GUID입니다. 
+
+
+| 최신 | 문자열 | 예 | 이 행이 해당 호스트에 대한 최신 행인지 여부를 나타냅니다. 
+
+
+| dateTk | Int32 | 예 | 이 호스트 행이 생성된 날짜의 TK입니다. 
+
+
+| dataCenter | 문자열 | 예 | dataCenter dwh_dimensions.host_dimension에 할당된 주석 값 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| fs_util_fact | link:#entity-fs_util_fact["fs_util_fact"] | 많은 
+|===
+
+
+[[storagedimension]]
+=== 스토리지_차원
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합: storage_dimension
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk | Int32 | 예 | 이 스토리지 어레이 행의 TK입니다. 
+
+
+| 이름 | 문자열 | 예 | 스토리지 어레이의 이름입니다. 
+
+
+| 식별자 | 문자열 | 예 | 기기 식별자. 
+
+
+| ip | 문자열 | 예 | 스토리지 어레이의 IP 주소입니다. 
+
+
+| 모델 | 문자열 | 예 | 스토리지 어레이의 모델입니다. 
+
+
+| 제조업체 | 문자열 | 예 | 스토리지 어레이 제조업체. 
+
+
+| serialNumber | 문자열 | 예 | 스토리지 어레이의 일련 번호입니다. 
+
+
+| microcodeVersion | 문자열 | 예 | 스토리지 어레이에서 실행 중인 펌웨어 버전입니다. 
+
+
+| 가족 | 문자열 | 예 | 스토리지 어레이의 제품군 이름(예: Clariion, Symmetrix 등). 
+
+
+| url | 문자열 | 예 | Insight Server에서 이 스토리지에 대한 URL입니다. 
+
+
+| id | Int64 | 예 | dwh_inventory.storage에 있는 스토리지 어레이의 GUID입니다. 
+
+
+| 최신 | 문자열 | 예 | 이 행이 해당 저장소의 최신 행인지 여부를 나타냅니다. 
+
+
+| dateTk | Int32 | 예 | 이 스토리지 배열 행이 생성된 날짜의 TK입니다. 
+
+
+| dataCenter | 문자열 | 예 | dataCenter dwh_dimensions.storage_dimension에 할당된 주석 값 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| fs_util_fact | link:#entity-fs_util_fact["fs_util_fact"] | 많은 
+|===
+
+
+[[tierdimension]]
+=== 계층_차원
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:tier_dimension
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk | Int32 | 예 | 이 티어 행의 TK입니다. 
+
+
+| 이름 | 문자열 | 예 | 해당 계층을 식별하는 이름입니다. 
+
+
+| 시퀀스 | Int32 | 예 | dwh_inventory.annotation_value에 정의된 티어의 순번입니다. 
+
+
+| 비용 | 더블 | 예 | 이 등급과 관련된 비용입니다. 
+
+
+| id | Int64 | 예 | dwh_inventory.annotation_value에 있는 티어의 GUID입니다. 
+
+
+| 최신 | 문자열 | 예 | 이 행이 해당 계층의 최신 행인지 여부를 나타냅니다. 
+
+
+| dateTk | Int32 | 예 | 이 계층 행이 생성된 날짜의 TK입니다. 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| fs_util_fact | link:#entity-fs_util_fact["fs_util_fact"] | 많은 
+|===
+
+
+[[vmdimension]]
+=== vm_dimension
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:vm_dimension
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk | Int32 | 예 | 이 가상 머신 행의 TK입니다. 
+
+
+| 이름 | 문자열 | 예 | 가상 머신의 이름입니다. 
+
+
+| naturalKey | 문자열 | 예 | 가상 머신의 자연 식별자입니다. 
+
+
+| OS | 문자열 | 예 | 게스트 운영 체제. 
+
+
+| virtualCenterIp | 문자열 | 예 | 가상 머신의 가상 센터 IP 주소입니다. 
+
+
+| ips | 문자열 | 예 | 가상 머신의 IP 주소를 쉼표로 구분한 목록입니다. 
+
+
+| url | 문자열 | 예 | Insight Server에서 이 가상 머신의 URL입니다. 
+
+
+| id | Int64 | 예 | dwh_inventory.hv_virtual_machine에 있는 가상 머신의 GUID 
+
+
+| 최신 | 문자열 | 예 | 이 행이 해당 가상 머신의 최신 행인지 여부를 나타냅니다. 
+
+
+| dateTk | Int32 | 예 | 이 가상 머신 행이 생성된 날짜의 TK입니다. 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| fs_util_fact | link:#entity-fs_util_fact["fs_util_fact"] | 많은 
+|===

@@ -1,0 +1,262 @@
+---
+sidebar: sidebar 
+permalink: reporting_schema_capacity_efficiency.html 
+summary: 용량 효율성 데이터 웨어하우스의 스키마 테이블 
+keywords: dwh, data warehouse, schema, reporting, capacity efficiency 
+---
+= 용량 효율성 스키마
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+출처: *dwh_capacity_efficiency* OData 엔드포인트 — Data Infrastructure Insights
+
+테이블 발견: *3* | 연관 관계: *2*
+
+
+
+[[key-relationships-between-tables]]
+== 테이블 간의 주요 관계
+
+
+
+[[efficiencyfact]]
+=== efficiency_fact
+
+[cols="1,1,1"]
+|===
+| 참조된 (상위) 테이블 | FK 컬럼 | 부모 PK 
+
+
+| link:#entity-date_dimension["date_dimension"] | dateTk | tk 
+
+
+| link:#entity-storage_dimension["스토리지_차원"] | storageTk | tk 
+|===
+
+
+[[tables-fields]]
+== 테이블 및 필드
+
+PK기본 키FK외래 키NOT NULL필수 필드
+
+
+
+[[datedimension]]
+=== date_dimension
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 세트:date_dimension
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk | Int32 | 예 | 날짜 오브젝트의 TK. 
+
+
+| fullDate | DateTimeOffset | 예 | 날짜 오브젝트의 날짜입니다. 
+
+
+| dayInMonth | 바이트 | 예 | 날짜 오브젝트의 월 중 일(day)입니다. 월의 첫째 날은 값이 1입니다. 
+
+
+| dayInYear | Int32 | 예 | 날짜 오브젝트의 연중 일(Day)입니다. 연중 첫째 날의 값은 1입니다. 
+
+
+| dateYear | Int32 | 예 | 날짜 오브젝트의 연도입니다. 
+
+
+| yearLabel | 문자열 | 예 | 연도를 문자열 형식으로 지정 
+
+
+| monthNum | 바이트 | 예 | 날짜 오브젝트의 월입니다. 1월의 값은 1입니다. 
+
+
+| monthLabel | 문자열 | 예 | 문자열로 형식화된 월 
+
+
+| dayInWeekNum | 바이트 | 예 | 날짜 오브젝트의 요일입니다. 일요일의 값은 1입니다. 
+
+
+| 분기 | 바이트 | 예 | 날짜 오브젝트의 분기입니다. 첫 번째 분기는 1의 값을 가집니다. 
+
+
+| quarterLabel | 문자열 | 예 | 문자열로 형식화된 분기 
+
+
+| dayInQuarter | Int32 | 예 | 날짜 오브젝트의 분기 내 일수입니다. 분기의 첫째 날은 1의 값을 가집니다. 
+
+
+| repQuarter | 바이트 | 예 | 해당 날짜가 해당 분기에 이용 가능한 첫 번째 날짜인지 여부를 나타냅니다. 
+
+
+| repMonth | 바이트 | 예 | 해당 날짜가 해당 월에 이용 가능한 첫 번째 날짜인지 여부를 나타냅니다. 
+
+
+| repWeek | 바이트 | 예 | 해당 날짜가 해당 주에 이용 가능한 첫 번째 날짜인지 여부를 나타냅니다. 
+
+
+| repDay | 바이트 | 예 | 해당 날짜가 해당 날짜에 이용 가능한 첫 번째 날짜인지 여부를 나타냅니다. 
+
+
+| repMonthOrLatest | 바이트 | 예 | 이 날짜가 해당 월의 담당자 날짜인지 아니면 최신 날짜인지를 나타냅니다. 이 플래그는 월별 담당자를 사용하는 Datamart에서 사용됩니다. 현재 월의 경우 최신 날짜라는 점만 다릅니다. 
+
+
+| sspFlag | 바이트 | 예 | 이 날짜가 스토리지 및 스토리지 풀 데이터마트에서 사용되는지 여부를 나타냅니다. 이는 월별 대표값과 구성에 정의된 마지막 일수에 대해 true입니다. 
+
+
+| 최신 | 문자열 | 예 | 해당 날짜가 표에서 이용 가능한 마지막 날짜인지 여부를 나타냅니다. 
+
+
+| 미래 | 문자열 | 예 | 이 날짜가 미래 날짜(예측)인지 아니면 일반적인 날짜인지를 나타냅니다. 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| efficiency_fact | link:#entity-efficiency_fact["efficiency_fact"] | 많은 
+|===
+
+
+[[efficiencyfact]]
+=== efficiency_fact
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:efficiency_fact
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk *[PK]* | Int32 | 예 | 그 사실을 알지 못한다. 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["date_dimension"].tk | Int32 | 예 | 날짜의 TK. 
+
+
+| storageTk *[FK]* →link:#entity-storage_dimension["스토리지_차원"].tk | Int32 | 예 | 용량이 저장된 스토리지의 TK입니다. 
+
+
+| rawCapacityMB | Int64 | 예 | 스토리지 원시 용량(MB). 기술이 지정된 경우 0(NULL이 아님). 
+
+
+| backendCapacityMB | Int64 | 예 | 가상 어레이의 백엔드 LUN 총 용량(MB). 기술이 지정된 경우 0(NULL이 아님). 
+
+
+| storageTechnology | 문자열 | 예 | Dedupe, Thin Provisioning, Snapshot 및 RAID 등 스토리지 효율성 및 보호 기술. 스토리지의 원시 용량 및 백엔드 용량을 나타낼 때는 NULL입니다(스토리지당 한 행). 
+
+
+| gainMB | Int64 | 예 | 해당 기술을 사용함으로써 얻는 용량 증가. 기술이 지정되지 않은 경우 0(NULL). 
+
+
+| lossMB | Int64 | 예 | 해당 기술을 사용하여 손실된 용량입니다. 기술이 지정되지 않은 경우(NULL)에는 0입니다. 
+
+
+| potentialGainMB | Int64 | 예 | 해당 기술을 최대한 활용함으로써 얻을 수 있는 잠재적 용량. 기술이 지정되지 않은 경우 0(NULL). 
+
+
+| potentialLossMB | Int64 | 예 | 해당 기술을 최대한 활용할 경우 발생할 수 있는 잠재적 손실 용량. 기술이 지정되지 않은 경우 0(NULL). 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| 스토리지_차원 | link:#entity-storage_dimension["스토리지_차원"] | JOIN 1개: storageTk=link:#entity-storage_dimension["스토리지_차원"].tk 
+
+
+| date_dimension | link:#entity-date_dimension["date_dimension"] | JOIN 1: dateTk=link:#entity-date_dimension["date_dimension"].tk 
+|===
+
+
+[[storagedimension]]
+=== 스토리지_차원
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합: storage_dimension
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk | Int32 | 예 | 이 스토리지 어레이 행의 TK입니다. 
+
+
+| 이름 | 문자열 | 예 | 스토리지 어레이의 이름입니다. 
+
+
+| 식별자 | 문자열 | 예 | 기기 식별자. 
+
+
+| ip | 문자열 | 예 | 스토리지 어레이의 IP 주소입니다. 
+
+
+| 모델 | 문자열 | 예 | 스토리지 어레이의 모델입니다. 
+
+
+| 제조업체 | 문자열 | 예 | 스토리지 어레이 제조업체. 
+
+
+| serialNumber | 문자열 | 예 | 스토리지 어레이의 일련 번호입니다. 
+
+
+| microcodeVersion | 문자열 | 예 | 스토리지 어레이에서 실행 중인 펌웨어 버전입니다. 
+
+
+| 가족 | 문자열 | 예 | 스토리지 어레이의 제품군 이름(예: Clariion, Symmetrix 등). 
+
+
+| url | 문자열 | 예 | Insight Server에서 이 스토리지에 대한 URL입니다. 
+
+
+| id | Int64 | 예 | dwh_inventory.storage에 있는 스토리지 어레이의 GUID입니다. 
+
+
+| 최신 | 문자열 | 예 | 이 행이 해당 저장소의 최신 행인지 여부를 나타냅니다. 
+
+
+| dateTk | Int32 | 예 | 이 스토리지 배열 행이 생성된 날짜의 TK입니다. 
+
+
+| dataCenter | 문자열 | 예 | dataCenter dwh_dimensions.storage_dimension에 할당된 주석 값 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| efficiency_fact | link:#entity-efficiency_fact["efficiency_fact"] | 많은 
+|===

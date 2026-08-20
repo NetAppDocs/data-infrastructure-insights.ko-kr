@@ -1,0 +1,7352 @@
+---
+sidebar: sidebar 
+permalink: reporting_schema_performance.html 
+summary: 성능 데이터 웨어하우스의 스키마 테이블 
+keywords: dwh, data warehouse, schema, reporting, performance 
+---
+= Performance Schema
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+출처: *dwh_performance* OData 엔드포인트 — Data Infrastructure Insights
+
+테이블 수: *74* | 연관 관계: *167*
+
+
+
+[[key-relationships-between-tables]]
+== 테이블 간의 주요 관계
+
+
+
+[[applicationvolumehourlyperformancefact]]
+=== application_volume_hourly_performance_fact
+
+[cols="1,1,1"]
+|===
+| 참조된 (상위) 테이블 | FK 컬럼 | 부모 PK 
+
+
+| link:#entity-application_dimension["애플리케이션_차원"] | applicationTk | tk 
+
+
+| link:#entity-application_group_dimension["application_group_dimension"] | applicationGroupTk | tk 
+
+
+| link:#entity-business_entity_dimension["business_entity_dimension"] | businessEntityTk | tk 
+
+
+| link:#entity-date_dimension["date_dimension"] | dateTk | tk 
+
+
+| link:#entity-service_level_dimension["service_level_dimension"] | serviceLevelTk | tk 
+
+
+| link:#entity-tier_dimension["계층_차원"] | tierTk | tk 
+
+
+| link:#entity-time_dimension["time_dimension"] | timeTk | tk 
+|===
+
+
+[[diskdailyperformancefact]]
+=== disk_daily_performance_fact
+
+[cols="1,1,1"]
+|===
+| 참조된 (상위) 테이블 | FK 컬럼 | 부모 PK 
+
+
+| link:#entity-date_dimension["date_dimension"] | dateTk | tk 
+
+
+| link:#entity-disk_dimension["disk_dimension"] | diskTk | tk 
+
+
+| link:#entity-storage_dimension["스토리지_차원"] | storageTk | tk 
+
+
+| link:#entity-storage_pool_dimension["스토리지 풀 차원"] | storagePoolTk | tk 
+|===
+
+
+[[diskhourlyperformancefact]]
+=== disk_hourly_performance_fact
+
+[cols="1,1,1"]
+|===
+| 참조된 (상위) 테이블 | FK 컬럼 | 부모 PK 
+
+
+| link:#entity-date_dimension["date_dimension"] | dateTk | tk 
+
+
+| link:#entity-disk_dimension["disk_dimension"] | diskTk | tk 
+
+
+| link:#entity-storage_dimension["스토리지_차원"] | storageTk | tk 
+
+
+| link:#entity-storage_pool_dimension["스토리지 풀 차원"] | storagePoolTk | tk 
+
+
+| link:#entity-time_dimension["time_dimension"] | timeTk | tk 
+|===
+
+
+[[hostvmdailyperformancefact]]
+=== host_vm_daily_performance_fact
+
+[cols="1,1,1"]
+|===
+| 참조된 (상위) 테이블 | FK 컬럼 | 부모 PK 
+
+
+| link:#entity-date_dimension["date_dimension"] | dateTk | tk 
+
+
+| link:#entity-host_dimension["호스트 차원"] | hostTk | tk 
+|===
+
+
+[[hostvmhourlyperformancefact]]
+=== host_vm_hourly_performance_fact
+
+[cols="1,1,1"]
+|===
+| 참조된 (상위) 테이블 | FK 컬럼 | 부모 PK 
+
+
+| link:#entity-date_dimension["date_dimension"] | dateTk | tk 
+
+
+| link:#entity-host_dimension["호스트 차원"] | hostTk | tk 
+
+
+| link:#entity-time_dimension["time_dimension"] | timeTk | tk 
+|===
+
+
+[[hostvolumehourlyperformancefact]]
+=== host_volume_hourly_performance_fact
+
+[cols="1,1,1"]
+|===
+| 참조된 (상위) 테이블 | FK 컬럼 | 부모 PK 
+
+
+| link:#entity-business_entity_dimension["business_entity_dimension"] | businessEntityTk | tk 
+
+
+| link:#entity-date_dimension["date_dimension"] | dateTk | tk 
+
+
+| link:#entity-host_dimension["호스트 차원"] | hostTk | tk 
+
+
+| link:#entity-host_group_dimension["호스트 그룹 차원"] | hostGroupTk | tk 
+
+
+| link:#entity-service_level_dimension["service_level_dimension"] | serviceLevelTk | tk 
+
+
+| link:#entity-tier_dimension["계층_차원"] | tierTk | tk 
+
+
+| link:#entity-time_dimension["time_dimension"] | timeTk | tk 
+|===
+
+
+[[internalvolumedailyperformancefact]]
+=== internal_volume_daily_performance_fact
+
+[cols="1,1,1"]
+|===
+| 참조된 (상위) 테이블 | FK 컬럼 | 부모 PK 
+
+
+| link:#entity-application_dimension["애플리케이션_차원"] | applicationTk | tk 
+
+
+| link:#entity-application_group_dimension["application_group_dimension"] | applicationGroupTk | tk 
+
+
+| link:#entity-business_entity_dimension["business_entity_dimension"] | businessEntityTk | tk 
+
+
+| link:#entity-date_dimension["date_dimension"] | dateTk | tk 
+
+
+| link:#entity-internal_volume_dimension["내부_볼륨_치수"] | internalVolumeTk | tk 
+
+
+| link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"] | k8sNamespaceTk | tk 
+
+
+| link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"] | k8sNamespaceGroupTk | tk 
+
+
+| link:#entity-service_level_dimension["service_level_dimension"] | serviceLevelTk | tk 
+
+
+| link:#entity-storage_dimension["스토리지_차원"] | storageTk | tk 
+
+
+| link:#entity-storage_node_dimension["스토리지 노드 크기"] | storageNodeTk | tk 
+
+
+| link:#entity-storage_pool_dimension["스토리지 풀 차원"] | storagePoolTk | tk 
+
+
+| link:#entity-tier_dimension["계층_차원"] | tierTk | tk 
+|===
+
+
+[[internalvolumehourlyperformancefact]]
+=== internal_volume_hourly_performance_fact
+
+[cols="1,1,1"]
+|===
+| 참조된 (상위) 테이블 | FK 컬럼 | 부모 PK 
+
+
+| link:#entity-application_dimension["애플리케이션_차원"] | applicationTk | tk 
+
+
+| link:#entity-application_group_dimension["application_group_dimension"] | applicationGroupTk | tk 
+
+
+| link:#entity-business_entity_dimension["business_entity_dimension"] | businessEntityTk | tk 
+
+
+| link:#entity-date_dimension["date_dimension"] | dateTk | tk 
+
+
+| link:#entity-internal_volume_dimension["내부_볼륨_치수"] | internalVolumeTk | tk 
+
+
+| link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"] | k8sNamespaceTk | tk 
+
+
+| link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"] | k8sNamespaceGroupTk | tk 
+
+
+| link:#entity-service_level_dimension["service_level_dimension"] | serviceLevelTk | tk 
+
+
+| link:#entity-storage_dimension["스토리지_차원"] | storageTk | tk 
+
+
+| link:#entity-storage_node_dimension["스토리지 노드 크기"] | storageNodeTk | tk 
+
+
+| link:#entity-storage_pool_dimension["스토리지 풀 차원"] | storagePoolTk | tk 
+
+
+| link:#entity-tier_dimension["계층_차원"] | tierTk | tk 
+
+
+| link:#entity-time_dimension["time_dimension"] | timeTk | tk 
+|===
+
+
+[[qtreedailyperformancefact]]
+=== qtree_daily_performance_fact
+
+[cols="1,1,1"]
+|===
+| 참조된 (상위) 테이블 | FK 컬럼 | 부모 PK 
+
+
+| link:#entity-application_dimension["애플리케이션_차원"] | applicationTk | tk 
+
+
+| link:#entity-application_group_dimension["application_group_dimension"] | applicationGroupTk | tk 
+
+
+| link:#entity-business_entity_dimension["business_entity_dimension"] | businessEntityTk | tk 
+
+
+| link:#entity-date_dimension["date_dimension"] | dateTk | tk 
+
+
+| link:#entity-internal_volume_dimension["내부_볼륨_치수"] | internalVolumeTk | tk 
+
+
+| link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"] | k8sNamespaceTk | tk 
+
+
+| link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"] | k8sNamespaceGroupTk | tk 
+
+
+| link:#entity-qtree_dimension["qtree_차원"] | qtreeTk | tk 
+
+
+| link:#entity-service_level_dimension["service_level_dimension"] | serviceLevelTk | tk 
+
+
+| link:#entity-storage_dimension["스토리지_차원"] | storageTk | tk 
+
+
+| link:#entity-storage_pool_dimension["스토리지 풀 차원"] | storagePoolTk | tk 
+
+
+| link:#entity-tier_dimension["계층_차원"] | tierTk | tk 
+|===
+
+
+[[qtreehourlyperformancefact]]
+=== qtree_hourly_performance_fact
+
+[cols="1,1,1"]
+|===
+| 참조된 (상위) 테이블 | FK 컬럼 | 부모 PK 
+
+
+| link:#entity-application_dimension["애플리케이션_차원"] | applicationTk | tk 
+
+
+| link:#entity-application_group_dimension["application_group_dimension"] | applicationGroupTk | tk 
+
+
+| link:#entity-business_entity_dimension["business_entity_dimension"] | businessEntityTk | tk 
+
+
+| link:#entity-date_dimension["date_dimension"] | dateTk | tk 
+
+
+| link:#entity-internal_volume_dimension["내부_볼륨_치수"] | internalVolumeTk | tk 
+
+
+| link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"] | k8sNamespaceTk | tk 
+
+
+| link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"] | k8sNamespaceGroupTk | tk 
+
+
+| link:#entity-qtree_dimension["qtree_차원"] | qtreeTk | tk 
+
+
+| link:#entity-service_level_dimension["service_level_dimension"] | serviceLevelTk | tk 
+
+
+| link:#entity-storage_dimension["스토리지_차원"] | storageTk | tk 
+
+
+| link:#entity-storage_pool_dimension["스토리지 풀 차원"] | storagePoolTk | tk 
+
+
+| link:#entity-tier_dimension["계층_차원"] | tierTk | tk 
+
+
+| link:#entity-time_dimension["time_dimension"] | timeTk | tk 
+|===
+
+
+[[storagenodedailyperformancefact]]
+=== storage_node_daily_performance_fact
+
+[cols="1,1,1"]
+|===
+| 참조된 (상위) 테이블 | FK 컬럼 | 부모 PK 
+
+
+| link:#entity-date_dimension["date_dimension"] | dateTk | tk 
+
+
+| link:#entity-storage_dimension["스토리지_차원"] | storageTk | tk 
+
+
+| link:#entity-storage_node_dimension["스토리지 노드 크기"] | storageNodeTk | tk 
+
+
+| link:#entity-tier_dimension["계층_차원"] | tierTk | tk 
+|===
+
+
+[[storagenodehourlyperformancefact]]
+=== storage_node_hourly_performance_fact
+
+[cols="1,1,1"]
+|===
+| 참조된 (상위) 테이블 | FK 컬럼 | 부모 PK 
+
+
+| link:#entity-date_dimension["date_dimension"] | dateTk | tk 
+
+
+| link:#entity-storage_dimension["스토리지_차원"] | storageTk | tk 
+
+
+| link:#entity-storage_node_dimension["스토리지 노드 크기"] | storageNodeTk | tk 
+
+
+| link:#entity-tier_dimension["계층_차원"] | tierTk | tk 
+
+
+| link:#entity-time_dimension["time_dimension"] | timeTk | tk 
+|===
+
+
+[[switchperformanceforhosthourlyfact]]
+=== switch_performance_for_host_hourly_fact
+
+[cols="1,1,1"]
+|===
+| 참조된 (상위) 테이블 | FK 컬럼 | 부모 PK 
+
+
+| link:#entity-application_dimension["애플리케이션_차원"] | applicationTk | tk 
+
+
+| link:#entity-application_group_dimension["application_group_dimension"] | applicationGroupTk | tk 
+
+
+| link:#entity-business_entity_dimension["business_entity_dimension"] | businessEntityTk | tk 
+
+
+| link:#entity-date_dimension["date_dimension"] | dateTk | tk 
+
+
+| link:#entity-host_dimension["호스트 차원"] | hostTk | tk 
+
+
+| link:#entity-time_dimension["time_dimension"] | timeTk | tk 
+|===
+
+
+[[switchperformanceforporthourlyfact]]
+=== switch_performance_for_port_hourly_fact
+
+[cols="1,1,1"]
+|===
+| 참조된 (상위) 테이블 | FK 컬럼 | 부모 PK 
+
+
+| link:#entity-connected_device_dimension["connected_device_dimension"] | connectedDeviceTk | tk 
+
+
+| link:#entity-date_dimension["date_dimension"] | dateTk | tk 
+
+
+| link:#entity-fabric_dimension["fabric_dimension"] | fabricTk | tk 
+
+
+| link:#entity-port_dimension["포트_차원"] | portTk | tk 
+
+
+| link:#entity-switch_dimension["switch_dimension"] | switchTk | tk 
+
+
+| link:#entity-time_dimension["time_dimension"] | timeTk | tk 
+|===
+
+
+[[switchperformanceforstoragehourlyfact]]
+=== switch_performance_for_storage_hourly_fact
+
+[cols="1,1,1"]
+|===
+| 참조된 (상위) 테이블 | FK 컬럼 | 부모 PK 
+
+
+| link:#entity-date_dimension["date_dimension"] | dateTk | tk 
+
+
+| link:#entity-storage_dimension["스토리지_차원"] | storageTk | tk 
+
+
+| link:#entity-time_dimension["time_dimension"] | timeTk | tk 
+|===
+
+
+[[switchperformancefortapehourlyfact]]
+=== switch_performance_for_tape_hourly_fact
+
+[cols="1,1,1"]
+|===
+| 참조된 (상위) 테이블 | FK 컬럼 | 부모 PK 
+
+
+| link:#entity-date_dimension["date_dimension"] | dateTk | tk 
+
+
+| link:#entity-tape_dimension["테이프 크기"] | tapeTk | tk 
+
+
+| link:#entity-time_dimension["time_dimension"] | timeTk | tk 
+|===
+
+
+[[timedimension]]
+=== time_dimension
+
+[cols="1,1,1"]
+|===
+| 참조된 (상위) 테이블 | FK 컬럼 | 부모 PK 
+
+
+| link:#entity-date_dimension["date_dimension"] | dateTk | tk 
+|===
+
+
+[[vmdailyperformancefact]]
+=== vm_daily_performance_fact
+
+[cols="1,1,1"]
+|===
+| 참조된 (상위) 테이블 | FK 컬럼 | 부모 PK 
+
+
+| link:#entity-application_dimension["애플리케이션_차원"] | applicationTk | tk 
+
+
+| link:#entity-application_group_dimension["application_group_dimension"] | applicationGroupTk | tk 
+
+
+| link:#entity-business_entity_dimension["business_entity_dimension"] | businessEntityTk | tk 
+
+
+| link:#entity-date_dimension["date_dimension"] | dateTk | tk 
+
+
+| link:#entity-host_dimension["호스트 차원"] | hostTk | tk 
+
+
+| link:#entity-k8s_node_dimension["k8s_node_dimension"] | k8sNodeTk | tk 
+
+
+| link:#entity-vm_dimension["vm_dimension"] | vmTk | tk 
+|===
+
+
+[[vmhourlyperformancefact]]
+=== vm_hourly_performance_fact
+
+[cols="1,1,1"]
+|===
+| 참조된 (상위) 테이블 | FK 컬럼 | 부모 PK 
+
+
+| link:#entity-application_dimension["애플리케이션_차원"] | applicationTk | tk 
+
+
+| link:#entity-application_group_dimension["application_group_dimension"] | applicationGroupTk | tk 
+
+
+| link:#entity-business_entity_dimension["business_entity_dimension"] | businessEntityTk | tk 
+
+
+| link:#entity-date_dimension["date_dimension"] | dateTk | tk 
+
+
+| link:#entity-host_dimension["호스트 차원"] | hostTk | tk 
+
+
+| link:#entity-k8s_node_dimension["k8s_node_dimension"] | k8sNodeTk | tk 
+
+
+| link:#entity-time_dimension["time_dimension"] | timeTk | tk 
+
+
+| link:#entity-vm_dimension["vm_dimension"] | vmTk | tk 
+|===
+
+
+[[vmdkdailyperformancefact]]
+=== vmdk_daily_performance_fact
+
+[cols="1,1,1"]
+|===
+| 참조된 (상위) 테이블 | FK 컬럼 | 부모 PK 
+
+
+| link:#entity-datastore_dimension["데이터스토어_차원"] | dataStoreTk | tk 
+
+
+| link:#entity-date_dimension["date_dimension"] | dateTk | tk 
+
+
+| link:#entity-host_dimension["호스트 차원"] | hostTk | tk 
+
+
+| link:#entity-service_level_dimension["service_level_dimension"] | serviceLevelTk | tk 
+
+
+| link:#entity-storage_dimension["스토리지_차원"] | storageTk | tk 
+
+
+| link:#entity-tier_dimension["계층_차원"] | tierTk | tk 
+
+
+| link:#entity-vm_dimension["vm_dimension"] | vmTk | tk 
+
+
+| link:#entity-vmdk_dimension["vmdk_dimension"] | vmdkTk | tk 
+|===
+
+
+[[vmdkhourlyperformancefact]]
+=== vmdk_hourly_performance_fact
+
+[cols="1,1,1"]
+|===
+| 참조된 (상위) 테이블 | FK 컬럼 | 부모 PK 
+
+
+| link:#entity-datastore_dimension["데이터스토어_차원"] | dataStoreTk | tk 
+
+
+| link:#entity-date_dimension["date_dimension"] | dateTk | tk 
+
+
+| link:#entity-host_dimension["호스트 차원"] | hostTk | tk 
+
+
+| link:#entity-service_level_dimension["service_level_dimension"] | serviceLevelTk | tk 
+
+
+| link:#entity-storage_dimension["스토리지_차원"] | storageTk | tk 
+
+
+| link:#entity-tier_dimension["계층_차원"] | tierTk | tk 
+
+
+| link:#entity-time_dimension["time_dimension"] | timeTk | tk 
+
+
+| link:#entity-vm_dimension["vm_dimension"] | vmTk | tk 
+
+
+| link:#entity-vmdk_dimension["vmdk_dimension"] | vmdkTk | tk 
+|===
+
+
+[[volumedailyperformancefact]]
+=== volume_daily_performance_fact
+
+[cols="1,1,1"]
+|===
+| 참조된 (상위) 테이블 | FK 컬럼 | 부모 PK 
+
+
+| link:#entity-application_dimension["애플리케이션_차원"] | applicationTk | tk 
+
+
+| link:#entity-application_group_dimension["application_group_dimension"] | applicationGroupTk | tk 
+
+
+| link:#entity-business_entity_dimension["business_entity_dimension"] | businessEntityTk | tk 
+
+
+| link:#entity-date_dimension["date_dimension"] | dateTk | tk 
+
+
+| link:#entity-host_dimension["호스트 차원"] | hostTk | tk 
+
+
+| link:#entity-host_group_dimension["호스트 그룹 차원"] | hostGroupTk | tk 
+
+
+| link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"] | k8sNamespaceTk | tk 
+
+
+| link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"] | k8sNamespaceGroupTk | tk 
+
+
+| link:#entity-service_level_dimension["service_level_dimension"] | serviceLevelTk | tk 
+
+
+| link:#entity-storage_dimension["스토리지_차원"] | storageTk | tk 
+
+
+| link:#entity-storage_node_dimension["스토리지 노드 크기"] | storageNodeTk | tk 
+
+
+| link:#entity-storage_pool_dimension["스토리지 풀 차원"] | storagePoolTk | tk 
+
+
+| link:#entity-tier_dimension["계층_차원"] | tierTk | tk 
+
+
+| link:#entity-volume_dimension["볼륨_차원"] | volumeTk | tk 
+|===
+
+
+[[volumehourlyperformancefact]]
+=== volume_hourly_performance_fact
+
+[cols="1,1,1"]
+|===
+| 참조된 (상위) 테이블 | FK 컬럼 | 부모 PK 
+
+
+| link:#entity-application_dimension["애플리케이션_차원"] | applicationTk | tk 
+
+
+| link:#entity-application_group_dimension["application_group_dimension"] | applicationGroupTk | tk 
+
+
+| link:#entity-business_entity_dimension["business_entity_dimension"] | businessEntityTk | tk 
+
+
+| link:#entity-date_dimension["date_dimension"] | dateTk | tk 
+
+
+| link:#entity-host_dimension["호스트 차원"] | hostTk | tk 
+
+
+| link:#entity-host_group_dimension["호스트 그룹 차원"] | hostGroupTk | tk 
+
+
+| link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"] | k8sNamespaceTk | tk 
+
+
+| link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"] | k8sNamespaceGroupTk | tk 
+
+
+| link:#entity-service_level_dimension["service_level_dimension"] | serviceLevelTk | tk 
+
+
+| link:#entity-storage_dimension["스토리지_차원"] | storageTk | tk 
+
+
+| link:#entity-storage_node_dimension["스토리지 노드 크기"] | storageNodeTk | tk 
+
+
+| link:#entity-storage_pool_dimension["스토리지 풀 차원"] | storagePoolTk | tk 
+
+
+| link:#entity-tier_dimension["계층_차원"] | tierTk | tk 
+
+
+| link:#entity-time_dimension["time_dimension"] | timeTk | tk 
+
+
+| link:#entity-volume_dimension["볼륨_차원"] | volumeTk | tk 
+|===
+
+
+[[tables-fields]]
+== 테이블 및 필드
+
+PK기본 키FK외래 키NOT NULL필수 필드
+
+
+
+[[applicationdimension]]
+=== 애플리케이션_차원
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:application_dimension
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk | Int32 | 예 | 이 애플리케이션 행의 TK입니다. 
+
+
+| 이름 | 문자열 | 예 | 애플리케이션 이름. 
+
+
+| 설명 | 문자열 | 예 | 애플리케이션에 대한 설명입니다. 
+
+
+| 우선순위 | 문자열 | 예 | 애플리케이션의 우선순위. 
+
+
+| url | 문자열 | 예 | Insight Server에서 이 애플리케이션의 URL입니다. 
+
+
+| id | Int64 | 예 | dwh_inventory.application에 있는 애플리케이션의 GUID입니다. 
+
+
+| 최신 | 문자열 | 예 | 이 행이 해당 애플리케이션의 최신 행인지 여부를 나타냅니다. 
+
+
+| dateTk | Int32 | 예 | 이 애플리케이션 행이 생성된 날짜의 TK입니다. 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| qtree_hourly_performance_fact | link:#entity-qtree_hourly_performance_fact["qtree_hourly_performance_fact"] | 많은 
+
+
+| volume_hourly_performance_fact | link:#entity-volume_hourly_performance_fact["volume_hourly_performance_fact"] | 많은 
+
+
+| application_volume_hourly_performance_fact | link:#entity-application_volume_hourly_performance_fact["application_volume_hourly_performance_fact"] | 많은 
+
+
+| qtree_daily_performance_fact | link:#entity-qtree_daily_performance_fact["qtree_daily_performance_fact"] | 많은 
+
+
+| vm_hourly_performance_fact | link:#entity-vm_hourly_performance_fact["vm_hourly_performance_fact"] | 많은 
+
+
+| internal_volume_daily_performance_fact | link:#entity-internal_volume_daily_performance_fact["internal_volume_daily_performance_fact"] | 많은 
+
+
+| internal_volume_hourly_performance_fact | link:#entity-internal_volume_hourly_performance_fact["internal_volume_hourly_performance_fact"] | 많은 
+
+
+| vm_daily_performance_fact | link:#entity-vm_daily_performance_fact["vm_daily_performance_fact"] | 많은 
+
+
+| switch_performance_for_host_hourly_fact | link:#entity-switch_performance_for_host_hourly_fact["switch_performance_for_host_hourly_fact"] | 많은 
+
+
+| volume_daily_performance_fact | link:#entity-volume_daily_performance_fact["volume_daily_performance_fact"] | 많은 
+|===
+
+
+[[applicationgroupbridge]]
+=== application_group_bridge
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:application_group_bridge
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| appGroupTk | Int32 | 예 | 응용 프로그램 그룹의 TK. 
+
+
+| appTk | Int32 | 예 | 애플리케이션의 TK. 
+
+
+| isRep | 문자열 | 예 | 이 애플리케이션이 해당 애플리케이션 그룹을 대표하는지 여부를 나타냅니다. 
+|===
+
+
+[[applicationgroupdimension]]
+=== application_group_dimension
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:application_group_dimension
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk | Int32 | 예 | 응용 프로그램 그룹의 TK. 
+
+
+| repApp | 문자열 | 예 | 애플리케이션 그룹을 대표하는 애플리케이션의 이름입니다. 
+
+
+| repAppTk | Int32 | 예 | 애플리케이션 그룹을 대표하는 애플리케이션의 TK입니다. 
+
+
+| 카디널리티 | Int32 | 예 | 애플리케이션 그룹의 애플리케이션 수. 
+
+
+| dateTk | Int32 | 예 | 애플리케이션 그룹 행이 생성된 날짜의 TK입니다. 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| qtree_hourly_performance_fact | link:#entity-qtree_hourly_performance_fact["qtree_hourly_performance_fact"] | 많은 
+
+
+| volume_hourly_performance_fact | link:#entity-volume_hourly_performance_fact["volume_hourly_performance_fact"] | 많은 
+
+
+| application_volume_hourly_performance_fact | link:#entity-application_volume_hourly_performance_fact["application_volume_hourly_performance_fact"] | 많은 
+
+
+| qtree_daily_performance_fact | link:#entity-qtree_daily_performance_fact["qtree_daily_performance_fact"] | 많은 
+
+
+| vm_hourly_performance_fact | link:#entity-vm_hourly_performance_fact["vm_hourly_performance_fact"] | 많은 
+
+
+| internal_volume_daily_performance_fact | link:#entity-internal_volume_daily_performance_fact["internal_volume_daily_performance_fact"] | 많은 
+
+
+| internal_volume_hourly_performance_fact | link:#entity-internal_volume_hourly_performance_fact["internal_volume_hourly_performance_fact"] | 많은 
+
+
+| vm_daily_performance_fact | link:#entity-vm_daily_performance_fact["vm_daily_performance_fact"] | 많은 
+
+
+| switch_performance_for_host_hourly_fact | link:#entity-switch_performance_for_host_hourly_fact["switch_performance_for_host_hourly_fact"] | 많은 
+
+
+| volume_daily_performance_fact | link:#entity-volume_daily_performance_fact["volume_daily_performance_fact"] | 많은 
+|===
+
+
+[[applicationvolumehourlyperformancefact]]
+=== application_volume_hourly_performance_fact
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:application_volume_hourly_performance_fact
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk *[PK]* | Int64 | 예 | 그 사실을 알지 못한다. 
+
+
+| timeTk *[FK]* →link:#entity-time_dimension["time_dimension"].tk | Int32 | 예 | 시간 차원의 TK. 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["date_dimension"].tk | Int32 | 예 | 날짜 차원의 TK. 
+
+
+| applicationTk *[FK]* →link:#entity-application_dimension["애플리케이션_차원"].tk | Int32 | 예 | 신청 담당자의 TK. 
+
+
+| applicationGroupTk *[FK]* →link:#entity-application_group_dimension["application_group_dimension"].tk | Int32 | 예 | 응용 프로그램 그룹의 TK. 
+
+
+| tierTk *[FK]* →link:#entity-tier_dimension["계층_차원"].tk | Int32 | 예 | 티어의 TK. 
+
+
+| serviceLevelTk *[FK]* →link:#entity-service_level_dimension["service_level_dimension"].tk | Int32 | 예 | 서비스 수준의 TK. 
+
+
+| businessEntityTk *[FK]* →link:#entity-business_entity_dimension["business_entity_dimension"].tk | Int32 | 예 | 사업체의 TK. 
+
+
+| readResponseTime | 더블 | 예 | 읽기 응답 시간. 
+
+
+| writeResponseTime | 더블 | 예 | 쓰기 응답 시간 
+
+
+| totalResponseTime | 더블 | 예 | 총 응답 시간. 
+
+
+| totalResponseTimeMax | 더블 | 예 | 응답 시간의 최대값입니다. 
+
+
+| readThroughput | 더블 | 예 | 읽기 처리량 평균. 
+
+
+| writeThroughput | 더블 | 예 | 쓰기 처리량 평균. 
+
+
+| sumOfAveragesVolumeThroughput | 더블 | 예 | 애플리케이션과 관련된 모든 볼륨 시간별 샘플의 totalThroughput 합계입니다. 애플리케이션의 평균 사용량을 나타냅니다. 
+
+
+| maxOfMaxVolumeThroughput | 더블 | 예 | 애플리케이션과 관련된 모든 시간별 볼륨 샘플에 대한 최대 totalThroughputMax 값입니다. 이는 애플리케이션의 최대 사용량에 대한 최상의 시나리오를 나타냅니다. 
+
+
+| sumOfMaxVolumeThroughput | 더블 | 예 | 애플리케이션과 관련된 모든 시간별 볼륨 샘플에 대한 totalThroughputMax의 합계입니다. 모든 최대 사용량이 동시에 발생하는 최악의 시나리오를 나타냅니다. 
+
+
+| readIops | 더블 | 예 | 초당 평균 읽기 I/O 횟수. 
+
+
+| writeIops | 더블 | 예 | 초당 평균 쓰기 작업량. 
+
+
+| sumOfAveragesVolumeIops | 더블 | 예 | 애플리케이션과 관련된 모든 볼륨 시간별 샘플의 totalIops 합계입니다. 애플리케이션의 평균 사용량을 나타냅니다. 
+
+
+| maxOfMaxVolumeIops | 더블 | 예 | 해당 애플리케이션과 관련된 모든 시간별 볼륨 샘플에 대한 최대 totalIopsMax 값입니다. 이는 애플리케이션의 최대 사용량에 대한 최상의 시나리오를 나타냅니다. 
+
+
+| sumOfMaxVolumeIops | 더블 | 예 | 애플리케이션과 관련된 모든 시간별 볼륨 샘플에 대한 totalIopsMax의 합계입니다. 모든 최대 사용량이 동시에 발생하는 최악의 시나리오를 나타냅니다. 
+
+
+| readCacheHitRatio | 더블 | 예 | 읽기 캐시 적중률. 
+
+
+| writeCacheHitRatio | 더블 | 예 | 쓰기 캐시 적중률. 
+
+
+| totalCacheHitRatio | 더블 | 예 | 전체 캐시 적중률. 
+
+
+| totalCacheHitRatioMax | 더블 | 예 | 최대 총 캐시 적중률. 
+
+
+| writePending | Int64 | 예 | 보류 중인 쓰기 작업 수. 
+
+
+| readIoDensity | 더블 | 예 | 읽기 IO 밀도. 
+
+
+| writeIoDensity | 더블 | 예 | 쓰기 IO 밀도. 
+
+
+| totalIoDensity | 더블 | 예 | 총 IO 밀도. 
+
+
+| totalIoDensityMax | 더블 | 예 | 최대 총 IO 밀도. 
+
+
+| compressionSavingsPercent | 더블 | 예 | 압축 절감률(%). 
+
+
+| compressionSavingsSpace | 더블 | 예 | 압축으로 공간을 절약할 수 있습니다. 
+
+
+| totalTimeToFull | 더블 | 예 | 완전 충전 시간. 
+
+
+| confidenceIntervalTimeToFull | 더블 | 예 | 완전 회복까지 걸리는 시간에 대한 신뢰 구간. 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| service_level_dimension | link:#entity-service_level_dimension["service_level_dimension"] | JOIN 1개: serviceLevelTk=link:#entity-service_level_dimension["service_level_dimension"].tk 
+
+
+| 계층_차원 | link:#entity-tier_dimension["계층_차원"] | JOIN 1개: tierTk=link:#entity-tier_dimension["계층_차원"].tk 
+
+
+| business_entity_dimension | link:#entity-business_entity_dimension["business_entity_dimension"] | JOIN 1: businessEntityTk=link:#entity-business_entity_dimension["business_entity_dimension"].tk 
+
+
+| 애플리케이션_차원 | link:#entity-application_dimension["애플리케이션_차원"] | JOIN 1개: applicationTk=link:#entity-application_dimension["애플리케이션_차원"].tk 
+
+
+| time_dimension | link:#entity-time_dimension["time_dimension"] | JOIN 1: timeTk=link:#entity-time_dimension["time_dimension"].tk 
+
+
+| date_dimension | link:#entity-date_dimension["date_dimension"] | JOIN 1: dateTk=link:#entity-date_dimension["date_dimension"].tk 
+
+
+| application_group_dimension | link:#entity-application_group_dimension["application_group_dimension"] | JOIN 1개: applicationGroupTk=link:#entity-application_group_dimension["application_group_dimension"].tk 
+|===
+
+
+[[businessentitydimension]]
+=== business_entity_dimension
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:business_entity_dimension
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk | Int32 | 예 | 이 사업체 행의 TK입니다. 
+
+
+| 전체 이름 | 문자열 | 예 | 사업체의 이름입니다. 
+
+
+| 테넌트 | 문자열 | 예 | 테넌트의 이름입니다. 
+
+
+| lob | 문자열 | 예 | 사업 분야명. 
+
+
+| businessUnit | 문자열 | 예 | 사업부 명칭. 
+
+
+| 프로젝트 | 문자열 | 예 | 프로젝트 이름. 
+
+
+| id | Int64 | 예 | dwh_inventory.annotation_value에 있는 사업체의 GUID입니다. 
+
+
+| 최신 | 문자열 | 예 | 이 행이 해당 사업체의 최신 행인지 여부를 나타냅니다. 
+
+
+| dateTk | Int32 | 예 | 이 사업체 행이 생성된 날짜의 TK입니다. 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| qtree_hourly_performance_fact | link:#entity-qtree_hourly_performance_fact["qtree_hourly_performance_fact"] | 많은 
+
+
+| volume_hourly_performance_fact | link:#entity-volume_hourly_performance_fact["volume_hourly_performance_fact"] | 많은 
+
+
+| application_volume_hourly_performance_fact | link:#entity-application_volume_hourly_performance_fact["application_volume_hourly_performance_fact"] | 많은 
+
+
+| qtree_daily_performance_fact | link:#entity-qtree_daily_performance_fact["qtree_daily_performance_fact"] | 많은 
+
+
+| vm_hourly_performance_fact | link:#entity-vm_hourly_performance_fact["vm_hourly_performance_fact"] | 많은 
+
+
+| host_volume_hourly_performance_fact | link:#entity-host_volume_hourly_performance_fact["host_volume_hourly_performance_fact"] | 많은 
+
+
+| internal_volume_daily_performance_fact | link:#entity-internal_volume_daily_performance_fact["internal_volume_daily_performance_fact"] | 많은 
+
+
+| internal_volume_hourly_performance_fact | link:#entity-internal_volume_hourly_performance_fact["internal_volume_hourly_performance_fact"] | 많은 
+
+
+| vm_daily_performance_fact | link:#entity-vm_daily_performance_fact["vm_daily_performance_fact"] | 많은 
+
+
+| switch_performance_for_host_hourly_fact | link:#entity-switch_performance_for_host_hourly_fact["switch_performance_for_host_hourly_fact"] | 많은 
+
+
+| volume_daily_performance_fact | link:#entity-volume_daily_performance_fact["volume_daily_performance_fact"] | 많은 
+|===
+
+
+[[capacityvolumefactcurrent]]
+=== capacity_volume_fact_current
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합: capacity_volume_fact_current
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| chargebackFactTk | Int32 | 예 | 볼륨 용량이 계산되는 차지백 팩트 행의 TK입니다. 
+
+
+| volumeId | Int64 | 예 | 재고 목록에 표시된 볼륨의 GUID 
+
+
+| storageId | Int64 | 예 | 인벤토리에 표시된 대로 이 볼륨이 저장된 스토리지의 GUID입니다. 
+
+
+| volumeName | 문자열 | 예 | 볼륨 이름 
+
+
+| volumeType | 문자열 | 예 | 벤더별 볼륨 유형(예: SFS, BCV). 
+
+
+| thinProvisioned | 문자열 | 예 | 이 볼륨이 씬 프로비저닝되었는지 여부를 나타냅니다. 
+
+
+| isVirtual | 문자열 | 예 | 이 볼륨이 가상 볼륨인지 여부를 나타냅니다. 
+
+
+| 스냅샷 | 문자열 | 예 | 이 볼륨이 스냅샷 볼륨인지 여부를 나타냅니다. 
+
+
+| technologyType | 문자열 | 예 | 기술 유형(FC/ISCSI/UNKNOWN)을 지정합니다. 
+
+
+| physicalUsableMB | Int64 | 예 | 스토리지에서 사용되어 팩트 행에 계산되는 볼륨 사용 가능 용량의 양(MB)입니다. 
+
+
+| physicalRawMB | Int64 | 예 | 스토리지에서 사용되어 팩트 행에 계산되는 볼륨 원시 용량(MB)입니다. 
+
+
+| provisionedUsableMB | Int64 | 예 | 팩트 행에 집계된 호스트/사용자에게 프로비저닝된 볼륨 사용 가능 용량(MB)입니다. 
+
+
+| provisionedRawMB | Int64 | 예 | 팩트 행에 집계된 호스트/사용자에게 프로비저닝된 볼륨 원시 용량(MB)입니다. 
+|===
+
+
+[[clusterswitchdimension]]
+=== cluster_switch_dimension
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합: cluster_switch_dimension
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk | Int32 | 예 | 이 클러스터 스위치 행의 TK입니다. 
+
+
+| 식별자 | 문자열 | 예 | 클러스터 스위치의 고유 식별자입니다. 
+
+
+| 이름 | 문자열 | 예 | 클러스터 스위치의 이름입니다. 
+
+
+| 주소 | 문자열 | 예 | 클러스터 스위치의 주소 
+
+
+| serialNumber | 문자열 | 예 | 클러스터 스위치의 일련 번호 
+
+
+| 네트워크 | 문자열 | 예 | 클러스터 스위치의 네트워크 
+
+
+| 버전 | 문자열 | 예 | 클러스터 스위치 버전 
+
+
+| 모델 | 문자열 | 예 | 클러스터 스위치 모델 
+
+
+| 모니터링됨 | 문자열 | 예 | 이 클러스터 스위치는 모니터링 대상입니까? 
+
+
+| monitoringEnabled | 문자열 | 예 | 클러스터 스위치에 대한 모니터링이 활성화되어 있습니까? 
+
+
+| monitoringReason | 문자열 | 예 | 클러스터 스위치 모니터링 이유 
+
+
+| id | Int64 | 예 | dwh_inventory.cluster_switch에 있는 노드의 GUID 
+
+
+| 최신 | 문자열 | 예 | 이 행이 해당 클러스터 스위치에 대한 최신 행인지 여부를 나타냅니다. 
+
+
+| dateTk | Int32 | 예 | 이 클러스터 스위치 행이 생성된 날짜의 TK입니다. 
+|===
+
+
+[[clusterswitchportdailymetricsfact]]
+=== cluster_switch_port_daily_metrics_fact
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합: cluster_switch_port_daily_metrics_fact
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk *[PK]* | Int64 | 예 | 그 사실을 알지 못한다. 
+
+
+| dateTk | Int32 | 예 | 날짜 차원의 TK. 
+
+
+| clusterSwitchPortTk | Int32 | 예 | 노드의 TK. 
+
+
+| clusterSwitchTk | Int32 | 예 | 클러스터의 TK. 
+
+
+| storageTk | Int32 | 예 | 연결된 스토리지 노드의 TK입니다. 
+
+
+| storageNodeTk | Int32 | 예 | 연결된 스토리지의 TK. 
+
+
+| receiveBytes | 더블 | 예 | 바이트를 수신합니다. 
+
+
+| transmitBytes | 더블 | 예 | 바이트를 전송합니다. 
+
+
+| totalBytes | 더블 | 예 | 총 바이트 수. 
+
+
+| receiveDiscards | 더블 | 예 | 수신 삭제. 
+
+
+| transmitDiscards | 더블 | 예 | 전송 폐기. 
+
+
+| totalDiscards | 더블 | 예 | 총 폐기량. 
+
+
+| receiveErrors | 더블 | 예 | 수신 오류. 
+
+
+| transmitErrors | 더블 | 예 | 전송 오류. 
+
+
+| totalErrors | 더블 | 예 | 총 오류 수. 
+
+
+| receivePackets | 더블 | 예 | 패킷을 수신합니다. 
+
+
+| transmitPackets | 더블 | 예 | 패킷을 전송합니다. 
+
+
+| totalPackets | 더블 | 예 | 총 패킷 수. 
+
+
+| 타임스탬프 *[PK]* | Int64 | 예 | 사실 시작 타임스탬프, 파티셔닝용 
+|===
+
+
+[[clusterswitchportdimension]]
+=== cluster_switch_port_dimension
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 세트: cluster_switch_port_dimension
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk | Int32 | 예 | 이 클러스터 스위치 포트 행의 TK입니다. 
+
+
+| 식별자 | 문자열 | 예 | 클러스터 스위치 포트의 고유 식별자입니다. 
+
+
+| 이름 | 문자열 | 예 | 클러스터 스위치 포트의 이름입니다. 
+
+
+| duplexType | 문자열 | 예 | 클러스터 스위치 포트의 이중화 유형 
+
+
+| storageNodePortName | 문자열 | 예 | 클러스터 스위치 포트의 노드 포트 이름 
+
+
+| storageNodePortMtu | 문자열 | 예 | 클러스터 스위치 포트의 노드 포트 최대 전송 단위(MTU) 
+
+
+| portIndex | 문자열 | 예 | 클러스터 스위치 포트의 인덱스 
+
+
+| isl | 문자열 | 예 | 클러스터 스위치 포트의 Inter Switch Link 
+
+
+| macAddress | 문자열 | 예 | 클러스터 스위치 포트의 Mac 주소 
+
+
+| mtu | 문자열 | 예 | 클러스터 스위치 포트의 최대 전송 단위(MTU) 
+
+
+| 숫자 | 문자열 | 예 | 클러스터 스위치 포트 번호 
+
+
+| 유형 | 문자열 | 예 | 클러스터 스위치 포트 유형 
+
+
+| 속도 | 문자열 | 예 | 클러스터 스위치 포트의 속도 
+
+
+| id | Int64 | 예 | dwh_inventory.cluster_switch_port에 있는 노드의 GUID 
+
+
+| 최신 | 문자열 | 예 | 이 행이 해당 클러스터 스위치 포트의 최신 행인지 여부를 나타냅니다. 
+
+
+| dateTk | Int32 | 예 | 이 클러스터 스위치 포트 행이 생성된 날짜의 TK입니다. 
+|===
+
+
+[[clusterswitchporthourlymetricsfact]]
+=== cluster_switch_port_hourly_metrics_fact
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합: cluster_switch_port_hourly_metrics_fact
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk *[PK]* | Int64 | 예 | 그 사실을 알지 못한다. 
+
+
+| timeTk | Int32 | 예 | 시간 차원의 TK. 
+
+
+| dateTk | Int32 | 예 | 날짜 차원의 TK. 
+
+
+| clusterSwitchPortTk | Int32 | 예 | 노드의 TK. 
+
+
+| clusterSwitchTk | Int32 | 예 | 클러스터의 TK. 
+
+
+| storageTk | Int32 | 예 | 연결된 스토리지 노드의 TK입니다. 
+
+
+| storageNodeTk | Int32 | 예 | 연결된 스토리지의 TK. 
+
+
+| receiveBytes | 더블 | 예 | 바이트를 수신합니다. 
+
+
+| transmitBytes | 더블 | 예 | 바이트를 전송합니다. 
+
+
+| totalBytes | 더블 | 예 | 총 바이트 수. 
+
+
+| receiveDiscards | 더블 | 예 | 수신 삭제. 
+
+
+| transmitDiscards | 더블 | 예 | 전송 폐기. 
+
+
+| totalDiscards | 더블 | 예 | 총 폐기량. 
+
+
+| receiveErrors | 더블 | 예 | 수신 오류. 
+
+
+| transmitErrors | 더블 | 예 | 전송 오류. 
+
+
+| totalErrors | 더블 | 예 | 총 오류 수. 
+
+
+| receivePackets | 더블 | 예 | 패킷을 수신합니다. 
+
+
+| transmitPackets | 더블 | 예 | 패킷을 전송합니다. 
+
+
+| totalPackets | 더블 | 예 | 총 패킷 수. 
+
+
+| 타임스탬프 *[PK]* | Int64 | 예 | 사실 시작 타임스탬프, 파티셔닝용 
+|===
+
+
+[[connecteddevicedimension]]
+=== connected_device_dimension
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:connected_device_dimension
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk | Int32 | 예 | 이 원단 줄의 TK입니다. 
+
+
+| 식별자 | 문자열 | 예 | 기기 식별자. 
+
+
+| 이름 | 문자열 | 예 | 기기 이름. 
+
+
+| 제조업체 | 문자열 | 예 | 해당 기기의 제조업체. 
+
+
+| 모델 | 문자열 | 예 | 기기의 제조사 모델명. 
+
+
+| 유형 | 문자열 | 예 | 기기의 종류. 
+
+
+| 펌웨어 | 문자열 | 예 | 기기에서 실행 중인 펌웨어 버전입니다. 
+
+
+| id | Int64 | 예 | 장치의 ID 
+
+
+| 최신 | 문자열 | 예 | 이 행이 해당 장치에 대한 최신 행인지 여부를 나타냅니다. 
+
+
+| dateTk | Int32 | 예 | 이 연결된 장치 행이 생성된 날짜의 TK입니다. 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| switch_performance_for_port_hourly_fact | link:#entity-switch_performance_for_port_hourly_fact["switch_performance_for_port_hourly_fact"] | 많은 
+|===
+
+
+[[datastoredimension]]
+=== 데이터스토어_차원
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:datastore_dimension
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk | Int32 | 예 | 이 데이터 저장소 행의 TK입니다. 
+
+
+| naturalKey | 문자열 | 예 | 데이터 저장소의 Oid입니다. 
+
+
+| 이름 | 문자열 | 예 | 데이터 저장소의 이름입니다. 
+
+
+| moid | 문자열 | 예 | 데이터 저장소의 관리 오브젝트 ID입니다. 
+
+
+| virtualCenterIp | 문자열 | 예 | 데이터 저장소의 가상 센터 IP 주소입니다. 
+
+
+| url | 문자열 | 예 | Insight Server에서 이 데이터 저장소의 URL입니다. 
+
+
+| id | Int64 | 예 | dwh_inventory.hv_data_store에 있는 데이터 저장소의 GUID 
+
+
+| 최신 | 문자열 | 예 | 이 행이 해당 데이터 저장소의 최신 행인지 여부를 나타냅니다. 
+
+
+| dateTk | Int32 | 예 | 이 데이터 저장소 행이 생성된 날짜의 TK입니다. 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| vmdk_hourly_performance_fact | link:#entity-vmdk_hourly_performance_fact["vmdk_hourly_performance_fact"] | 많은 
+
+
+| vmdk_daily_performance_fact | link:#entity-vmdk_daily_performance_fact["vmdk_daily_performance_fact"] | 많은 
+|===
+
+
+[[datedimension]]
+=== date_dimension
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 세트:date_dimension
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk | Int32 | 예 | 날짜 오브젝트의 TK. 
+
+
+| fullDate | DateTimeOffset | 예 | 날짜 오브젝트의 날짜입니다. 
+
+
+| dayInMonth | 바이트 | 예 | 날짜 오브젝트의 월 중 일(day)입니다. 월의 첫째 날은 값이 1입니다. 
+
+
+| dayInYear | Int32 | 예 | 날짜 오브젝트의 연중 일(Day)입니다. 연중 첫째 날의 값은 1입니다. 
+
+
+| dateYear | Int32 | 예 | 날짜 오브젝트의 연도입니다. 
+
+
+| yearLabel | 문자열 | 예 | 연도를 문자열 형식으로 지정 
+
+
+| monthNum | 바이트 | 예 | 날짜 오브젝트의 월입니다. 1월의 값은 1입니다. 
+
+
+| monthLabel | 문자열 | 예 | 문자열로 형식화된 월 
+
+
+| dayInWeekNum | 바이트 | 예 | 날짜 오브젝트의 요일입니다. 일요일의 값은 1입니다. 
+
+
+| 분기 | 바이트 | 예 | 날짜 오브젝트의 분기입니다. 첫 번째 분기는 1의 값을 가집니다. 
+
+
+| quarterLabel | 문자열 | 예 | 문자열로 형식화된 분기 
+
+
+| dayInQuarter | Int32 | 예 | 날짜 오브젝트의 분기 내 일수입니다. 분기의 첫째 날은 1의 값을 가집니다. 
+
+
+| repQuarter | 바이트 | 예 | 해당 날짜가 해당 분기에 이용 가능한 첫 번째 날짜인지 여부를 나타냅니다. 
+
+
+| repMonth | 바이트 | 예 | 해당 날짜가 해당 월에 이용 가능한 첫 번째 날짜인지 여부를 나타냅니다. 
+
+
+| repWeek | 바이트 | 예 | 해당 날짜가 해당 주에 이용 가능한 첫 번째 날짜인지 여부를 나타냅니다. 
+
+
+| repDay | 바이트 | 예 | 해당 날짜가 해당 날짜에 이용 가능한 첫 번째 날짜인지 여부를 나타냅니다. 
+
+
+| repMonthOrLatest | 바이트 | 예 | 이 날짜가 해당 월의 담당자 날짜인지 아니면 최신 날짜인지를 나타냅니다. 이 플래그는 월별 담당자를 사용하는 Datamart에서 사용됩니다. 현재 월의 경우 최신 날짜라는 점만 다릅니다. 
+
+
+| sspFlag | 바이트 | 예 | 이 날짜가 스토리지 및 스토리지 풀 데이터마트에서 사용되는지 여부를 나타냅니다. 이는 월별 대표값과 구성에 정의된 마지막 일수에 대해 true입니다. 
+
+
+| 최신 | 문자열 | 예 | 해당 날짜가 표에서 이용 가능한 마지막 날짜인지 여부를 나타냅니다. 
+
+
+| 미래 | 문자열 | 예 | 이 날짜가 미래 날짜(예측)인지 아니면 일반적인 날짜인지를 나타냅니다. 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| host_vm_daily_performance_fact | link:#entity-host_vm_daily_performance_fact["host_vm_daily_performance_fact"] | 많은 
+
+
+| time_dimension | link:#entity-time_dimension["time_dimension"] | 많은 
+
+
+| vm_hourly_performance_fact | link:#entity-vm_hourly_performance_fact["vm_hourly_performance_fact"] | 많은 
+
+
+| switch_performance_for_port_hourly_fact | link:#entity-switch_performance_for_port_hourly_fact["switch_performance_for_port_hourly_fact"] | 많은 
+
+
+| host_volume_hourly_performance_fact | link:#entity-host_volume_hourly_performance_fact["host_volume_hourly_performance_fact"] | 많은 
+
+
+| internal_volume_daily_performance_fact | link:#entity-internal_volume_daily_performance_fact["internal_volume_daily_performance_fact"] | 많은 
+
+
+| vm_daily_performance_fact | link:#entity-vm_daily_performance_fact["vm_daily_performance_fact"] | 많은 
+
+
+| switch_performance_for_tape_hourly_fact | link:#entity-switch_performance_for_tape_hourly_fact["switch_performance_for_tape_hourly_fact"] | 많은 
+
+
+| switch_performance_for_host_hourly_fact | link:#entity-switch_performance_for_host_hourly_fact["switch_performance_for_host_hourly_fact"] | 많은 
+
+
+| switch_performance_for_storage_hourly_fact | link:#entity-switch_performance_for_storage_hourly_fact["switch_performance_for_storage_hourly_fact"] | 많은 
+
+
+| storage_node_hourly_performance_fact | link:#entity-storage_node_hourly_performance_fact["storage_node_hourly_performance_fact"] | 많은 
+
+
+| qtree_hourly_performance_fact | link:#entity-qtree_hourly_performance_fact["qtree_hourly_performance_fact"] | 많은 
+
+
+| vmdk_hourly_performance_fact | link:#entity-vmdk_hourly_performance_fact["vmdk_hourly_performance_fact"] | 많은 
+
+
+| volume_hourly_performance_fact | link:#entity-volume_hourly_performance_fact["volume_hourly_performance_fact"] | 많은 
+
+
+| application_volume_hourly_performance_fact | link:#entity-application_volume_hourly_performance_fact["application_volume_hourly_performance_fact"] | 많은 
+
+
+| qtree_daily_performance_fact | link:#entity-qtree_daily_performance_fact["qtree_daily_performance_fact"] | 많은 
+
+
+| storage_node_daily_performance_fact | link:#entity-storage_node_daily_performance_fact["storage_node_daily_performance_fact"] | 많은 
+
+
+| disk_hourly_performance_fact | link:#entity-disk_hourly_performance_fact["disk_hourly_performance_fact"] | 많은 
+
+
+| disk_daily_performance_fact | link:#entity-disk_daily_performance_fact["disk_daily_performance_fact"] | 많은 
+
+
+| internal_volume_hourly_performance_fact | link:#entity-internal_volume_hourly_performance_fact["internal_volume_hourly_performance_fact"] | 많은 
+
+
+| volume_daily_performance_fact | link:#entity-volume_daily_performance_fact["volume_daily_performance_fact"] | 많은 
+
+
+| vmdk_daily_performance_fact | link:#entity-vmdk_daily_performance_fact["vmdk_daily_performance_fact"] | 많은 
+
+
+| host_vm_hourly_performance_fact | link:#entity-host_vm_hourly_performance_fact["host_vm_hourly_performance_fact"] | 많은 
+|===
+
+
+[[diskdailyperformancefact]]
+=== disk_daily_performance_fact
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합: disk_daily_performance_fact
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk *[PK]* | Int32 | 예 | 그 사실을 알지 못한다. 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["date_dimension"].tk | Int32 | 예 | 날짜 차원의 TK. 
+
+
+| diskTk *[FK]* →link:#entity-disk_dimension["disk_dimension"].tk | Int32 | 예 | 성능 수치를 확인하기 위한 디스크의 TK 정보(있는 경우). 
+
+
+| storageTk *[FK]* →link:#entity-storage_dimension["스토리지_차원"].tk | Int32 | 예 | 성능 수치를 위한 저장소의 TK입니다. 
+
+
+| storagePoolTk *[FK]* →link:#entity-storage_pool_dimension["스토리지 풀 차원"].tk | Int32 | 예 | 스토리지 풀 성능 수치를 위한 스토리지 풀의 TK 값입니다. 
+
+
+| readThroughput | 더블 | 예 | 읽기 처리량 평균. 
+
+
+| writeThroughput | 더블 | 예 | 쓰기 처리량 평균. 
+
+
+| totalThroughput | 더블 | 예 | 총 처리량 평균(읽기+쓰기). 
+
+
+| totalThroughputMax | 더블 | 예 | 최대 총 처리량. 
+
+
+| readIops | 더블 | 예 | 초당 I/O 읽기 횟수. 
+
+
+| writeIops | 더블 | 예 | 초당 입출력 쓰기 횟수. 
+
+
+| totalIops | 더블 | 예 | 초당 총 입출력 평균(읽기+쓰기). 
+
+
+| totalIopsMax | 더블 | 예 | 초당 최대 입출력 횟수. 
+
+
+| readUtilization | 더블 | 예 | 읽기 활용률(%). 
+
+
+| writeUtilization | 더블 | 예 | 쓰기 사용률(%). 
+
+
+| totalUtilization | 더블 | 예 | 총 활용률(%). 
+
+
+| totalUtilizationMax | 더블 | 예 | 최대 활용률(%). 
+
+
+| 액세스됨 | Int32 | 예 | 디스크에 접근했습니까? 
+
+
+| 타임스탬프 *[PK]* | Int64 | 예 | 사실 시작 타임스탬프, 파티셔닝용 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| 스토리지_차원 | link:#entity-storage_dimension["스토리지_차원"] | JOIN 1개: storageTk=link:#entity-storage_dimension["스토리지_차원"].tk 
+
+
+| 스토리지 풀 차원 | link:#entity-storage_pool_dimension["스토리지 풀 차원"] | JOIN 1개: storagePoolTk=link:#entity-storage_pool_dimension["스토리지 풀 차원"].tk 
+
+
+| date_dimension | link:#entity-date_dimension["date_dimension"] | JOIN 1: dateTk=link:#entity-date_dimension["date_dimension"].tk 
+
+
+| disk_dimension | link:#entity-disk_dimension["disk_dimension"] | JOIN 1개: diskTk=link:#entity-disk_dimension["disk_dimension"].tk 
+|===
+
+
+[[diskdimension]]
+=== disk_dimension
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합: disk_dimension
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk | Int32 | 예 | 이 디스크 행의 TK입니다. 
+
+
+| 식별자 | 문자열 | 예 | 디스크 식별자. 
+
+
+| storageIdentifier | 문자열 | 예 | 디스크 스토리지의 식별자입니다. 
+
+
+| 이름 | 문자열 | 예 | 디스크 이름. 
+
+
+| 속도 | Int32 | 예 | 디스크 속도. 
+
+
+| 위치 | 문자열 | 예 | 디스크 위치. 
+
+
+| 역할 | 문자열 | 예 | 스토리지 그룹 내 디스크의 역할(예: PARITY, DATA, SPARE). 
+
+
+| 공급업체 | 문자열 | 예 | 디스크 공급업체(예: NetApp, SEAGATE). 
+
+
+| 모델 | 문자열 | 예 | 디스크 모델. 
+
+
+| 유형 | 문자열 | 예 | 디스크 종류(예: SATA, FC). 
+
+
+| diskGroup | 문자열 | 예 | 디스크가 속한 디스크 그룹의 식별자입니다(예: rg0, 7). 
+
+
+| 상태 | 문자열 | 예 | 디스크 상태(예: NORMAL, FAILED). 
+
+
+| serialNumber | 문자열 | 예 | 디스크 일련 번호 
+
+
+| url | 문자열 | 예 | Insight Server에서 이 디스크의 URL입니다. 
+
+
+| id | Int64 | 예 | dwh_inventory.disk에 있는 디스크의 GUID 
+
+
+| 최신 | 문자열 | 예 | 이 행이 해당 디스크의 최신 행인지 여부를 나타냅니다. 
+
+
+| dateTk | Int32 | 예 | 이 내부 볼륨 행이 생성된 날짜의 TK입니다. 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| disk_hourly_performance_fact | link:#entity-disk_hourly_performance_fact["disk_hourly_performance_fact"] | 많은 
+
+
+| disk_daily_performance_fact | link:#entity-disk_daily_performance_fact["disk_daily_performance_fact"] | 많은 
+|===
+
+
+[[diskhourlyperformancefact]]
+=== disk_hourly_performance_fact
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합: disk_hourly_performance_fact
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk *[PK]* | Int64 | 예 | 그 사실을 알지 못한다. 
+
+
+| timeTk *[FK]* →link:#entity-time_dimension["time_dimension"].tk | Int32 | 예 | 시간 차원의 TK. 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["date_dimension"].tk | Int32 | 예 | 날짜 차원의 TK. 
+
+
+| diskTk *[FK]* →link:#entity-disk_dimension["disk_dimension"].tk | Int32 | 예 | 성능 수치를 확인하기 위한 디스크의 TK 정보(있는 경우). 
+
+
+| storageTk *[FK]* →link:#entity-storage_dimension["스토리지_차원"].tk | Int32 | 예 | 성능 수치를 위한 저장소의 TK입니다. 
+
+
+| storagePoolTk *[FK]* →link:#entity-storage_pool_dimension["스토리지 풀 차원"].tk | Int32 | 예 | 스토리지 풀 성능 수치를 위한 스토리지 풀의 TK 값입니다. 
+
+
+| readThroughput | 더블 | 예 | 읽기 처리량 평균. 
+
+
+| writeThroughput | 더블 | 예 | 쓰기 처리량 평균. 
+
+
+| totalThroughput | 더블 | 예 | 총 처리량 평균(읽기+쓰기). 
+
+
+| totalThroughputMax | 더블 | 예 | 최대 총 처리량. 
+
+
+| readIops | 더블 | 예 | 초당 I/O 읽기 횟수. 
+
+
+| writeIops | 더블 | 예 | 초당 입출력 쓰기 횟수. 
+
+
+| totalIops | 더블 | 예 | 초당 총 입출력 평균(읽기+쓰기). 
+
+
+| totalIopsMax | 더블 | 예 | 초당 최대 입출력 횟수. 
+
+
+| readUtilization | 더블 | 예 | 읽기 활용률(%). 
+
+
+| writeUtilization | 더블 | 예 | 쓰기 사용률(%). 
+
+
+| totalUtilization | 더블 | 예 | 총 활용률(%). 
+
+
+| totalUtilizationMax | 더블 | 예 | 최대 활용률(%). 
+
+
+| 액세스됨 | Int32 | 예 | 디스크에 접근했습니까? 
+
+
+| 타임스탬프 *[PK]* | Int64 | 예 | 사실 시작 타임스탬프, 파티셔닝용 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| 스토리지_차원 | link:#entity-storage_dimension["스토리지_차원"] | JOIN 1개: storageTk=link:#entity-storage_dimension["스토리지_차원"].tk 
+
+
+| time_dimension | link:#entity-time_dimension["time_dimension"] | JOIN 1: timeTk=link:#entity-time_dimension["time_dimension"].tk 
+
+
+| 스토리지 풀 차원 | link:#entity-storage_pool_dimension["스토리지 풀 차원"] | JOIN 1개: storagePoolTk=link:#entity-storage_pool_dimension["스토리지 풀 차원"].tk 
+
+
+| date_dimension | link:#entity-date_dimension["date_dimension"] | JOIN 1: dateTk=link:#entity-date_dimension["date_dimension"].tk 
+
+
+| disk_dimension | link:#entity-disk_dimension["disk_dimension"] | JOIN 1개: diskTk=link:#entity-disk_dimension["disk_dimension"].tk 
+|===
+
+
+[[fabricdimension]]
+=== fabric_dimension
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 세트: fabric_dimension
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk | Int32 | 예 | 이 원단 줄의 TK입니다. 
+
+
+| 식별자 | 문자열 | 예 | 패브릭의 식별자. 
+
+
+| wwn | 문자열 | 예 | 패브릭의 WWN. 
+
+
+| 이름 | 문자열 | 예 | 패브릭의 이름. 
+
+
+| vsanEnabled | 문자열 | 예 | 이 패브릭이 VSAN인지 여부를 나타냅니다. 
+
+
+| vsanId | 문자열 | 예 | 이 패브릭이 VSAN인 경우 VSAN 식별자입니다. 
+
+
+| zoningEnabled | 문자열 | 예 | 참인 경우, 구역 및 구역 구성원 테이블의 데이터를 기반으로 구역 설정이 적용됩니다. 그렇지 않으면 패브릭에서 구역 설정이 적용되지 않습니다. 
+
+
+| url | 문자열 | 예 | Insight Server에서 이 패브릭에 대한 URL입니다. 
+
+
+| id | Int64 | 예 | dwh_inventory.fabric에 있는 패브릭의 GUID 
+
+
+| 최신 | 문자열 | 예 | 이 행이 해당 패브릭에 대한 최신 행인지 여부를 나타냅니다. 
+
+
+| dateTk | Int32 | 예 | 이 패브릭 행이 생성된 날짜의 TK입니다. 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| switch_performance_for_port_hourly_fact | link:#entity-switch_performance_for_port_hourly_fact["switch_performance_for_port_hourly_fact"] | 많은 
+|===
+
+
+[[hostdimension]]
+=== 호스트 차원
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:host_dimension
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk | Int32 | 예 | 이 호스트 행의 TK입니다. 
+
+
+| 이름 | 문자열 | 예 | 호스트 이름. 
+
+
+| 식별자 | 문자열 | 예 | 기기 식별자. 
+
+
+| ip | 문자열 | 예 | 호스트의 IP 주소를 쉼표로 구분한 목록입니다. 
+
+
+| OS | 문자열 | 예 | 호스트에서 실행 중인 운영 체제입니다. 
+
+
+| 모델 | 문자열 | 예 | 모델 번호. 
+
+
+| 제조업체 | 문자열 | 예 | 호스트 제조업체. 
+
+
+| url | 문자열 | 예 | Insight Server에서 이 호스트의 URL입니다. 
+
+
+| id | Int64 | 예 | dwh_inventory.host에 있는 호스트의 GUID입니다. 
+
+
+| 최신 | 문자열 | 예 | 이 행이 해당 호스트에 대한 최신 행인지 여부를 나타냅니다. 
+
+
+| dateTk | Int32 | 예 | 이 호스트 행이 생성된 날짜의 TK입니다. 
+
+
+| dataCenter | 문자열 | 예 | dataCenter dwh_dimensions.host_dimension에 할당된 주석 값 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| host_vm_daily_performance_fact | link:#entity-host_vm_daily_performance_fact["host_vm_daily_performance_fact"] | 많은 
+
+
+| vmdk_hourly_performance_fact | link:#entity-vmdk_hourly_performance_fact["vmdk_hourly_performance_fact"] | 많은 
+
+
+| volume_hourly_performance_fact | link:#entity-volume_hourly_performance_fact["volume_hourly_performance_fact"] | 많은 
+
+
+| vm_hourly_performance_fact | link:#entity-vm_hourly_performance_fact["vm_hourly_performance_fact"] | 많은 
+
+
+| host_volume_hourly_performance_fact | link:#entity-host_volume_hourly_performance_fact["host_volume_hourly_performance_fact"] | 많은 
+
+
+| vm_daily_performance_fact | link:#entity-vm_daily_performance_fact["vm_daily_performance_fact"] | 많은 
+
+
+| switch_performance_for_host_hourly_fact | link:#entity-switch_performance_for_host_hourly_fact["switch_performance_for_host_hourly_fact"] | 많은 
+
+
+| volume_daily_performance_fact | link:#entity-volume_daily_performance_fact["volume_daily_performance_fact"] | 많은 
+
+
+| vmdk_daily_performance_fact | link:#entity-vmdk_daily_performance_fact["vmdk_daily_performance_fact"] | 많은 
+
+
+| host_vm_hourly_performance_fact | link:#entity-host_vm_hourly_performance_fact["host_vm_hourly_performance_fact"] | 많은 
+|===
+
+
+[[hostgroupbridge]]
+=== 호스트 그룹 브리지
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:host_group_bridge
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| hostGroupTk | Int32 | 예 | 호스트 그룹의 TK. 
+
+
+| hostTk | Int32 | 예 | 호스트의 TK. 
+
+
+| isRep | 문자열 | 예 | 이 호스트가 호스트 그룹을 대표하는지 여부를 나타냅니다. 
+|===
+
+
+[[hostgroupdimension]]
+=== 호스트 그룹 차원
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:host_group_dimension
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk | Int32 | 예 | 호스트 그룹의 TK. 
+
+
+| repHost | 문자열 | 예 | 호스트 그룹을 나타내는 호스트의 이름입니다. 
+
+
+| repHostTk | Int32 | 예 | 호스트 그룹을 대표하는 호스트의 TK. 
+
+
+| 카디널리티 | Int32 | 예 | 호스트 그룹에 속한 호스트 수입니다. 
+
+
+| dateTk | Int32 | 예 | 이 호스트 그룹 행이 생성된 날짜의 TK입니다. 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| volume_hourly_performance_fact | link:#entity-volume_hourly_performance_fact["volume_hourly_performance_fact"] | 많은 
+
+
+| host_volume_hourly_performance_fact | link:#entity-host_volume_hourly_performance_fact["host_volume_hourly_performance_fact"] | 많은 
+
+
+| volume_daily_performance_fact | link:#entity-volume_daily_performance_fact["volume_daily_performance_fact"] | 많은 
+|===
+
+
+[[hostvmdailyperformancefact]]
+=== host_vm_daily_performance_fact
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:host_vm_daily_performance_fact
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk *[PK]* | Int32 | 예 | 그 사실을 알지 못한다. 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["date_dimension"].tk | Int32 | 예 | 날짜 차원의 TK. 
+
+
+| hostTk *[FK]* →link:#entity-host_dimension["호스트 차원"].tk | Int32 | 예 | 호스트의 TK. 
+
+
+| readIops | 더블 | 예 | 초당 I/O 읽기 횟수. 
+
+
+| writeIops | 더블 | 예 | 초당 입출력 쓰기 횟수. 
+
+
+| totalIops | 더블 | 예 | 초당 총 입출력 평균(읽기+쓰기). 
+
+
+| totalIopsMax | 더블 | 예 | 초당 최대 입출력 횟수. 
+
+
+| readThroughput | 더블 | 예 | 읽기 처리량 평균. 
+
+
+| writeThroughput | 더블 | 예 | 쓰기 처리량 평균. 
+
+
+| totalThroughput | 더블 | 예 | 총 처리량 평균(읽기+쓰기). 
+
+
+| totalThroughputMax | 더블 | 예 | 최대 총 처리량. 
+
+
+| readResponseTime | 더블 | 예 | 읽기 응답 시간. 
+
+
+| writeResponseTime | 더블 | 예 | 쓰기 응답 시간. 
+
+
+| totalResponseTime | 더블 | 예 | 총 응답 시간. 
+
+
+| totalResponseTimeMax | 더블 | 예 | 총 최대 응답 시간. 
+
+
+| ipReceiveThroughput | 더블 | 예 | IP 수신 처리량. 
+
+
+| ipTransmitThroughput | 더블 | 예 | IP 전송 처리량. 
+
+
+| ipTotalThroughput | 더블 | 예 | IP 총 처리량. 
+
+
+| ipTotalThroughputMax | 더블 | 예 | 최대 IP 총 처리량. 
+
+
+| cpuUtilization | 더블 | 예 | CPU 사용률(%) 
+
+
+| maxOfAvgCpuUtilization | 더블 | 예 | 최대 CPU 사용률(%) 
+
+
+| memoryUtilization | 더블 | 예 | 메모리 사용률(%) 
+
+
+| maxOfAvgMemoryUtilization | 더블 | 예 | 최대 메모리 사용률(%) 
+
+
+| swapInRate | 더블 | 예 | 스왑 인 속도 
+
+
+| maxOfAvgSwapInRate | 더블 | 예 | 최대 스왑인 비율 
+
+
+| swapOutRate | 더블 | 예 | 스왑 아웃 속도 
+
+
+| maxOfAvgSwapOutRate | 더블 | 예 | 최대 스왑 아웃 속도 
+
+
+| swapTotalRate | 더블 | 예 | 총 스왑 속도 
+
+
+| swapTotalRateMax | 더블 | 예 | 최대 총 스왑 속도 
+
+
+| 타임스탬프 *[PK]* | Int64 | 예 | 사실 시작 타임스탬프, 파티셔닝용 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| 호스트 차원 | link:#entity-host_dimension["호스트 차원"] | JOIN 1: hostTk=link:#entity-host_dimension["호스트 차원"].tk 
+
+
+| date_dimension | link:#entity-date_dimension["date_dimension"] | JOIN 1: dateTk=link:#entity-date_dimension["date_dimension"].tk 
+|===
+
+
+[[hostvmhourlyperformancefact]]
+=== host_vm_hourly_performance_fact
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:host_vm_hourly_performance_fact
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk *[PK]* | Int64 | 예 | 그 사실을 알지 못한다. 
+
+
+| timeTk *[FK]* →link:#entity-time_dimension["time_dimension"].tk | Int32 | 예 | 시간 차원의 TK. 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["date_dimension"].tk | Int32 | 예 | 날짜 차원의 TK. 
+
+
+| hostTk *[FK]* →link:#entity-host_dimension["호스트 차원"].tk | Int32 | 예 | 호스트의 TK. 
+
+
+| readIops | 더블 | 예 | 초당 I/O 읽기 횟수. 
+
+
+| writeIops | 더블 | 예 | 초당 입출력 쓰기 횟수. 
+
+
+| totalIops | 더블 | 예 | 초당 총 입출력 평균(읽기+쓰기). 
+
+
+| totalIopsMax | 더블 | 예 | 초당 최대 입출력 횟수. 
+
+
+| readThroughput | 더블 | 예 | 읽기 처리량 평균. 
+
+
+| writeThroughput | 더블 | 예 | 쓰기 처리량 평균. 
+
+
+| totalThroughput | 더블 | 예 | 총 처리량 평균(읽기+쓰기). 
+
+
+| totalThroughputMax | 더블 | 예 | 최대 총 처리량. 
+
+
+| readResponseTime | 더블 | 예 | 읽기 응답 시간. 
+
+
+| writeResponseTime | 더블 | 예 | 쓰기 응답 시간. 
+
+
+| totalResponseTime | 더블 | 예 | 총 응답 시간. 
+
+
+| totalResponseTimeMax | 더블 | 예 | 총 최대 응답 시간. 
+
+
+| ipReceiveThroughput | 더블 | 예 | IP 수신 처리량. 
+
+
+| ipTransmitThroughput | 더블 | 예 | IP 전송 처리량. 
+
+
+| ipTotalThroughput | 더블 | 예 | IP 총 처리량. 
+
+
+| ipTotalThroughputMax | 더블 | 예 | 최대 IP 총 처리량. 
+
+
+| cpuUtilization | 더블 | 예 | CPU 사용률(%) 
+
+
+| memoryUtilization | 더블 | 예 | 메모리 사용률(%) 
+
+
+| swapInRate | 더블 | 예 | 스왑 인 속도 
+
+
+| swapOutRate | 더블 | 예 | 스왑 아웃 속도 
+
+
+| swapTotalRate | 더블 | 예 | 총 스왑 속도 
+
+
+| swapTotalRateMax | 더블 | 예 | 최대 총 스왑 속도 
+
+
+| 타임스탬프 *[PK]* | Int64 | 예 | 사실 시작 타임스탬프, 파티셔닝용 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| time_dimension | link:#entity-time_dimension["time_dimension"] | JOIN 1: timeTk=link:#entity-time_dimension["time_dimension"].tk 
+
+
+| 호스트 차원 | link:#entity-host_dimension["호스트 차원"] | JOIN 1: hostTk=link:#entity-host_dimension["호스트 차원"].tk 
+
+
+| date_dimension | link:#entity-date_dimension["date_dimension"] | JOIN 1: dateTk=link:#entity-date_dimension["date_dimension"].tk 
+|===
+
+
+[[hostvolumehourlyperformancefact]]
+=== host_volume_hourly_performance_fact
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:host_volume_hourly_performance_fact
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk *[PK]* | Int64 | 예 | 그 사실을 알지 못한다. 
+
+
+| timeTk *[FK]* →link:#entity-time_dimension["time_dimension"].tk | Int32 | 예 | 시간 차원의 TK. 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["date_dimension"].tk | Int32 | 예 | 날짜 차원의 TK. 
+
+
+| hostTk *[FK]* →link:#entity-host_dimension["호스트 차원"].tk | Int32 | 예 | 주최측 대표의 TK. 
+
+
+| hostGroupTk *[FK]* →link:#entity-host_group_dimension["호스트 그룹 차원"].tk | Int32 | 예 | 호스트 그룹의 TK. 
+
+
+| tierTk *[FK]* →link:#entity-tier_dimension["계층_차원"].tk | Int32 | 예 | 티어의 TK. 
+
+
+| serviceLevelTk *[FK]* →link:#entity-service_level_dimension["service_level_dimension"].tk | Int32 | 예 | 서비스 수준의 TK. 
+
+
+| businessEntityTk *[FK]* →link:#entity-business_entity_dimension["business_entity_dimension"].tk | Int32 | 예 | 사업체의 TK. 
+
+
+| readResponseTime | 더블 | 예 | 읽기 응답 시간. 
+
+
+| writeResponseTime | 더블 | 예 | 쓰기 응답 시간 
+
+
+| totalResponseTime | 더블 | 예 | 총 응답 시간. 
+
+
+| totalResponseTimeMax | 더블 | 예 | 응답 시간의 최대값입니다. 
+
+
+| readThroughput | 더블 | 예 | 읽기 처리량 평균. 
+
+
+| writeThroughput | 더블 | 예 | 쓰기 처리량 평균. 
+
+
+| sumOfAveragesVolumeThroughput | 더블 | 예 | 호스트와 관련된 모든 시간별 볼륨 샘플의 totalThroughput 합계입니다. 호스트의 평균 사용량을 나타냅니다. 
+
+
+| maxOfMaxVolumeThroughput | 더블 | 예 | 호스트와 관련된 모든 시간별 볼륨 샘플에 대한 최대 totalThroughputMax 값입니다. 호스트의 최대 사용량에 대한 최상의 시나리오를 나타냅니다. 
+
+
+| sumOfMaxVolumeThroughput | 더블 | 예 | 호스트와 관련된 모든 볼륨 시간별 샘플에 대한 totalThroughputMax의 합계입니다. 모든 최대값이 동시에 발생하는 경우의 최대 사용량에 대한 최악의 시나리오를 나타냅니다. 
+
+
+| readIops | 더블 | 예 | 초당 평균 읽기 I/O 횟수. 
+
+
+| writeIops | 더블 | 예 | 초당 평균 쓰기 작업량. 
+
+
+| sumOfAveragesVolumeIops | 더블 | 예 | 호스트와 관련된 모든 볼륨 시간별 샘플의 totalIops 합계입니다. 호스트의 평균 사용량을 나타냅니다. 
+
+
+| maxOfMaxVolumeIops | 더블 | 예 | 호스트와 관련된 모든 볼륨 시간별 샘플에 대한 최대 totalIopsMax 값입니다. 호스트의 최대 사용량에 대한 최상의 시나리오를 나타냅니다. 
+
+
+| sumOfMaxVolumeIops | 더블 | 예 | 호스트와 관련된 모든 볼륨의 시간별 샘플에 대한 totalIopsMax의 합계입니다. 모든 최대 사용량이 동시에 발생하는 최악의 시나리오를 나타냅니다. 
+
+
+| readCacheHitRatio | 더블 | 예 | 읽기 캐시 적중률. 
+
+
+| writeCacheHitRatio | 더블 | 예 | 쓰기 캐시 적중률. 
+
+
+| totalCacheHitRatio | 더블 | 예 | 전체 캐시 적중률. 
+
+
+| totalCacheHitRatioMax | 더블 | 예 | 최대 총 캐시 적중률. 
+
+
+| writePending | Int64 | 예 | 보류 중인 쓰기 작업 수. 
+
+
+| readIoDensity | 더블 | 예 | 읽기 IO 밀도. 
+
+
+| writeIoDensity | 더블 | 예 | 쓰기 IO 밀도. 
+
+
+| totalIoDensity | 더블 | 예 | 총 IO 밀도. 
+
+
+| totalIoDensityMax | 더블 | 예 | 최대 총 IO 밀도. 
+
+
+| compressionSavingsPercent | 더블 | 예 | 압축 절감률(%). 
+
+
+| compressionSavingsSpace | 더블 | 예 | 압축으로 공간을 절약할 수 있습니다. 
+
+
+| totalTimeToFull | 더블 | 예 | 완전 충전 시간. 
+
+
+| confidenceIntervalTimeToFull | 더블 | 예 | 완전 회복까지 걸리는 시간에 대한 신뢰 구간. 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| service_level_dimension | link:#entity-service_level_dimension["service_level_dimension"] | JOIN 1개: serviceLevelTk=link:#entity-service_level_dimension["service_level_dimension"].tk 
+
+
+| 계층_차원 | link:#entity-tier_dimension["계층_차원"] | JOIN 1개: tierTk=link:#entity-tier_dimension["계층_차원"].tk 
+
+
+| business_entity_dimension | link:#entity-business_entity_dimension["business_entity_dimension"] | JOIN 1: businessEntityTk=link:#entity-business_entity_dimension["business_entity_dimension"].tk 
+
+
+| time_dimension | link:#entity-time_dimension["time_dimension"] | JOIN 1: timeTk=link:#entity-time_dimension["time_dimension"].tk 
+
+
+| 호스트 그룹 차원 | link:#entity-host_group_dimension["호스트 그룹 차원"] | JOIN 1개: hostGroupTk=link:#entity-host_group_dimension["호스트 그룹 차원"].tk 
+
+
+| 호스트 차원 | link:#entity-host_dimension["호스트 차원"] | JOIN 1: hostTk=link:#entity-host_dimension["호스트 차원"].tk 
+
+
+| date_dimension | link:#entity-date_dimension["date_dimension"] | JOIN 1: dateTk=link:#entity-date_dimension["date_dimension"].tk 
+|===
+
+
+[[internalvolumedailyperformancefact]]
+=== internal_volume_daily_performance_fact
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합: internal_volume_daily_performance_fact
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk *[PK]* | Int32 | 예 | 그 사실을 알지 못한다. 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["date_dimension"].tk | Int32 | 예 | 날짜 차원의 TK. 
+
+
+| internalVolumeTk *[FK]* →link:#entity-internal_volume_dimension["내부_볼륨_치수"].tk | Int32 | 예 | 성능 수치에 대한 내부 볼륨의 TK 값(찾을 수 있는 경우). 
+
+
+| storageTk *[FK]* →link:#entity-storage_dimension["스토리지_차원"].tk | Int32 | 예 | 성능 수치를 위한 저장소의 TK입니다. 
+
+
+| virtualStorageTk | Int32 | 예 | 용량이 백엔드 어레이에 있는 경우 프런트엔드 어레이의 TK 값입니다. 그렇지 않으면 값은 N/A입니다. 
+
+
+| storageNodeTk *[FK]* →link:#entity-storage_node_dimension["스토리지 노드 크기"].tk | Int32 | 예 | 스토리지 노드의 TK. 
+
+
+| storagePoolTk *[FK]* →link:#entity-storage_pool_dimension["스토리지 풀 차원"].tk | Int32 | 예 | 스토리지 풀 성능 수치를 위한 스토리지 풀의 TK(찾을 수 있는 경우). 
+
+
+| applicationTk *[FK]* →link:#entity-application_dimension["애플리케이션_차원"].tk | Int32 | 예 | 신청 담당자의 TK. 
+
+
+| applicationGroupTk *[FK]* →link:#entity-application_group_dimension["application_group_dimension"].tk | Int32 | 예 | 응용 프로그램 그룹의 TK. 
+
+
+| tierTk *[FK]* →link:#entity-tier_dimension["계층_차원"].tk | Int32 | 예 | 티어의 TK. 
+
+
+| serviceLevelTk *[FK]* →link:#entity-service_level_dimension["service_level_dimension"].tk | Int32 | 예 | 서비스 수준의 TK. 
+
+
+| businessEntityTk *[FK]* →link:#entity-business_entity_dimension["business_entity_dimension"].tk | Int32 | 예 | 사업체의 TK. 
+
+
+| k8sNamespaceTk *[FK]* →link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"].tk | Int32 | 예 | k8s 네임스페이스의 TK입니다. 
+
+
+| k8sNamespaceGroupTk *[FK]* →link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"].tk | Int32 | 예 | k8s 네임스페이스 그룹의 TK입니다. 
+
+
+| readResponseTime | 더블 | 예 | 읽기 응답 시간 평균. 
+
+
+| writeResponseTime | 더블 | 예 | 쓰기 응답 시간 평균. 
+
+
+| totalResponseTime | 더블 | 예 | 총 응답 시간 평균. 
+
+
+| totalResponseTimeMax | 더블 | 예 | 응답 시간의 최대값입니다. 
+
+
+| readThroughput | 더블 | 예 | 읽기 처리량 평균. 
+
+
+| writeThroughput | 더블 | 예 | 쓰기 처리량 평균. 
+
+
+| totalThroughput | 더블 | 예 | 총 처리량 평균(읽기+쓰기). 
+
+
+| totalThroughputMax | 더블 | 예 | 최대 총 처리량. 
+
+
+| readIops | 더블 | 예 | 초당 평균 읽기 I/O 횟수. 
+
+
+| writeIops | 더블 | 예 | 초당 평균 쓰기 작업량. 
+
+
+| totalIops | 더블 | 예 | 초당 총 입출력 평균(읽기+쓰기). 
+
+
+| totalIopsMax | 더블 | 예 | 초당 최대 입출력 횟수. 
+
+
+| writePending | Int64 | 예 | 하루 동안 대기 중인 쓰기 작업의 최대 개수입니다. 
+
+
+| readIoDensity | 더블 | 예 | 읽기 IO 밀도. 
+
+
+| writeIoDensity | 더블 | 예 | 쓰기 IO 밀도. 
+
+
+| totalIoDensity | 더블 | 예 | 총 IO 밀도. 
+
+
+| totalIoDensityMax | 더블 | 예 | 최대 총 IO 밀도. 
+
+
+| objectCount | 더블 | 예 | 오브젝트 수. 
+
+
+| filesystemCapacityPhysicalUsed | 더블 | 예 | 파일 시스템 물리적 사용 용량(GB). 
+
+
+| filesystemCapacityPhysicalAvailable | 더블 | 예 | 파일 시스템 물리적 사용 가능 용량(GB). 
+
+
+| filesystemCapacityLogicalUsed | 더블 | 예 | 파일 시스템 논리적 사용 용량(GB). 
+
+
+| totalTimeToFull | 더블 | 예 | 완전 충전 시간. 
+
+
+| confidenceIntervalTimeToFull | 더블 | 예 | 완전 회복까지 걸리는 시간에 대한 신뢰 구간. 
+
+
+| 액세스됨 | Int32 | 예 | 내부 볼륨에 접근했습니까? 
+
+
+| 프런트엔드 | 문자열 | 예 | 내부 볼륨 프런트엔드인가요? 
+
+
+| 백엔드 | 문자열 | 예 | 내부 볼륨 백엔드입니까? 
+
+
+| 타임스탬프 *[PK]* | Int64 | 예 | 사실 시작 타임스탬프, 파티셔닝용 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| service_level_dimension | link:#entity-service_level_dimension["service_level_dimension"] | JOIN 1개: serviceLevelTk=link:#entity-service_level_dimension["service_level_dimension"].tk 
+
+
+| 내부_볼륨_치수 | link:#entity-internal_volume_dimension["내부_볼륨_치수"] | JOIN 1개: internalVolumeTk=link:#entity-internal_volume_dimension["내부_볼륨_치수"].tk 
+
+
+| 스토리지 노드 크기 | link:#entity-storage_node_dimension["스토리지 노드 크기"] | JOIN 1개: storageNodeTk=link:#entity-storage_node_dimension["스토리지 노드 크기"].tk 
+
+
+| 스토리지_차원 | link:#entity-storage_dimension["스토리지_차원"] | JOIN 1개: storageTk=link:#entity-storage_dimension["스토리지_차원"].tk 
+
+
+| 계층_차원 | link:#entity-tier_dimension["계층_차원"] | JOIN 1개: tierTk=link:#entity-tier_dimension["계층_차원"].tk 
+
+
+| business_entity_dimension | link:#entity-business_entity_dimension["business_entity_dimension"] | JOIN 1: businessEntityTk=link:#entity-business_entity_dimension["business_entity_dimension"].tk 
+
+
+| 애플리케이션_차원 | link:#entity-application_dimension["애플리케이션_차원"] | JOIN 1개: applicationTk=link:#entity-application_dimension["애플리케이션_차원"].tk 
+
+
+| 스토리지 풀 차원 | link:#entity-storage_pool_dimension["스토리지 풀 차원"] | JOIN 1개: storagePoolTk=link:#entity-storage_pool_dimension["스토리지 풀 차원"].tk 
+
+
+| date_dimension | link:#entity-date_dimension["date_dimension"] | JOIN 1: dateTk=link:#entity-date_dimension["date_dimension"].tk 
+
+
+| k8s_namespace_group_dimension | link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"] | 하나의 JOIN:k8sNamespaceGroupTk=link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"].tk 
+
+
+| application_group_dimension | link:#entity-application_group_dimension["application_group_dimension"] | JOIN 1개: applicationGroupTk=link:#entity-application_group_dimension["application_group_dimension"].tk 
+
+
+| k8s_namespace_dimension | link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"] | one JOIN:k8sNamespaceTk=link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"].tk 
+|===
+
+
+[[internalvolumedimension]]
+=== 내부_볼륨_치수
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 세트: internal_volume_dimension
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk | Int32 | 예 | 이 내부 볼륨 행의 TK입니다. 
+
+
+| 이름 | 문자열 | 예 | 내부 볼륨의 이름입니다. 
+
+
+| 식별자 | 문자열 | 예 | 내부 볼륨의 식별자입니다. 
+
+
+| storagePoolIdentifier | 문자열 | 예 | 이 내부 볼륨이 위치한 스토리지 풀의 식별자입니다. 
+
+
+| storageName | 문자열 | 예 | 이 내부 볼륨이 위치한 스토리지의 이름입니다. 
+
+
+| storageIP | 문자열 | 예 | 이 내부 볼륨이 위치한 스토리지의 IP 주소입니다. 
+
+
+| 유형 | 문자열 | 예 | 내부 볼륨 유형. 
+
+
+| virtualStorage | 문자열 | 예 | VirtualStorage(예: vFiler)를 지정합니다. 
+
+
+| spaceGuarantee | 문자열 | 예 | 내부 볼륨 공간 보장. 
+
+
+| thinProvisioningSupported | 문자열 | 예 | 내부 볼륨에 대해 씬 프로비저닝이 지원됩니까? 
+
+
+| thinProvisioned | 문자열 | 예 | 내부 볼륨이 씬 프로비저닝되었습니까? 
+
+
+| uuid | 문자열 | 예 | 내부 볼륨의 UUID입니다. 
+
+
+| flexGroupIdentifier | 문자열 | 예 | FlexGroup 이 내부 볼륨이 속한 FlexGroup 식별자입니다. 
+
+
+| url | 문자열 | 예 | Insight Server에서 이 내부 볼륨에 대한 URL입니다. 
+
+
+| id | Int64 | 예 | dwh_inventory.internal_volume에 있는 내부 볼륨의 GUID 
+
+
+| 최신 | 문자열 | 예 | 이 행이 해당 내부 볼륨에 대한 최신 행인지 여부를 나타냅니다. 
+
+
+| dateTk | Int32 | 예 | 이 내부 볼륨 행이 생성된 날짜의 TK입니다. 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| qtree_hourly_performance_fact | link:#entity-qtree_hourly_performance_fact["qtree_hourly_performance_fact"] | 많은 
+
+
+| qtree_daily_performance_fact | link:#entity-qtree_daily_performance_fact["qtree_daily_performance_fact"] | 많은 
+
+
+| internal_volume_daily_performance_fact | link:#entity-internal_volume_daily_performance_fact["internal_volume_daily_performance_fact"] | 많은 
+
+
+| internal_volume_hourly_performance_fact | link:#entity-internal_volume_hourly_performance_fact["internal_volume_hourly_performance_fact"] | 많은 
+|===
+
+
+[[internalvolumehourlyperformancefact]]
+=== internal_volume_hourly_performance_fact
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:internal_volume_hourly_performance_fact
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk *[PK]* | Int64 | 예 | 그 사실을 알지 못한다. 
+
+
+| timeTk *[FK]* →link:#entity-time_dimension["time_dimension"].tk | Int32 | 예 | 시간 차원의 TK. 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["date_dimension"].tk | Int32 | 예 | 날짜 차원의 TK. 
+
+
+| internalVolumeTk *[FK]* →link:#entity-internal_volume_dimension["내부_볼륨_치수"].tk | Int32 | 예 | 성능 수치에 대한 내부 볼륨의 TK 값(찾을 수 있는 경우). 
+
+
+| storageTk *[FK]* →link:#entity-storage_dimension["스토리지_차원"].tk | Int32 | 예 | 성능 수치를 위한 저장소의 TK입니다. 
+
+
+| virtualStorageTk | Int32 | 예 | 용량이 백엔드 어레이에 있는 경우 프런트엔드 어레이의 TK 값입니다. 그렇지 않으면 값은 N/A입니다. 
+
+
+| storageNodeTk *[FK]* →link:#entity-storage_node_dimension["스토리지 노드 크기"].tk | Int32 | 예 | 스토리지 노드의 TK. 
+
+
+| storagePoolTk *[FK]* →link:#entity-storage_pool_dimension["스토리지 풀 차원"].tk | Int32 | 예 | 스토리지 풀 성능 수치를 위한 스토리지 풀의 TK(찾을 수 있는 경우). 
+
+
+| applicationTk *[FK]* →link:#entity-application_dimension["애플리케이션_차원"].tk | Int32 | 예 | 신청 담당자의 TK. 
+
+
+| applicationGroupTk *[FK]* →link:#entity-application_group_dimension["application_group_dimension"].tk | Int32 | 예 | 응용 프로그램 그룹의 TK. 
+
+
+| tierTk *[FK]* →link:#entity-tier_dimension["계층_차원"].tk | Int32 | 예 | 티어의 TK. 
+
+
+| serviceLevelTk *[FK]* →link:#entity-service_level_dimension["service_level_dimension"].tk | Int32 | 예 | 서비스 수준의 TK. 
+
+
+| businessEntityTk *[FK]* →link:#entity-business_entity_dimension["business_entity_dimension"].tk | Int32 | 예 | 사업체의 TK. 
+
+
+| k8sNamespaceTk *[FK]* →link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"].tk | Int32 | 예 | k8s 네임스페이스의 TK입니다. 
+
+
+| k8sNamespaceGroupTk *[FK]* →link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"].tk | Int32 | 예 | k8s 네임스페이스 그룹의 TK입니다. 
+
+
+| readResponseTime | 더블 | 예 | 읽기 응답 시간. 
+
+
+| writeResponseTime | 더블 | 예 | 쓰기 응답 시간 
+
+
+| totalResponseTime | 더블 | 예 | 총 응답 시간. 
+
+
+| totalResponseTimeMax | 더블 | 예 | 응답 시간의 최대값입니다. 
+
+
+| readThroughput | 더블 | 예 | 읽기 처리량 평균. 
+
+
+| writeThroughput | 더블 | 예 | 쓰기 처리량 평균. 
+
+
+| totalThroughput | 더블 | 예 | 총 처리량 평균(읽기+쓰기). 
+
+
+| totalThroughputMax | 더블 | 예 | 최대 총 처리량. 
+
+
+| readIops | 더블 | 예 | 초당 I/O 읽기 횟수. 
+
+
+| writeIops | 더블 | 예 | 초당 입출력 쓰기 횟수. 
+
+
+| totalIops | 더블 | 예 | 초당 총 입출력 평균(읽기+쓰기). 
+
+
+| totalIopsMax | 더블 | 예 | 초당 최대 입출력 횟수. 
+
+
+| writePending | Int64 | 예 | 보류 중인 쓰기 작업 수. 
+
+
+| readIoDensity | 더블 | 예 | 읽기 IO 밀도. 
+
+
+| writeIoDensity | 더블 | 예 | 쓰기 IO 밀도. 
+
+
+| totalIoDensity | 더블 | 예 | 총 IO 밀도. 
+
+
+| totalIoDensityMax | 더블 | 예 | 최대 총 IO 밀도. 
+
+
+| objectCount | 더블 | 예 | 오브젝트 수. 
+
+
+| filesystemCapacityPhysicalUsed | 더블 | 예 | 파일 시스템 물리적 사용 용량(GB). 
+
+
+| filesystemCapacityPhysicalAvailable | 더블 | 예 | 파일 시스템 물리적 사용 가능 용량(GB). 
+
+
+| filesystemCapacityLogicalUsed | 더블 | 예 | 파일 시스템 논리적 사용 용량(GB). 
+
+
+| totalTimeToFull | 더블 | 예 | 완전 충전 시간. 
+
+
+| confidenceIntervalTimeToFull | 더블 | 예 | 완전 회복까지 걸리는 시간에 대한 신뢰 구간. 
+
+
+| 액세스됨 | Int32 | 예 | 내부 볼륨에 접근했습니까? 
+
+
+| 프런트엔드 | 문자열 | 예 | 내부 볼륨 프런트엔드인가요? 
+
+
+| 백엔드 | 문자열 | 예 | 내부 볼륨 백엔드입니까? 
+
+
+| 타임스탬프 *[PK]* | Int64 | 예 | 사실 시작 타임스탬프, 파티셔닝용 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| 내부_볼륨_치수 | link:#entity-internal_volume_dimension["내부_볼륨_치수"] | JOIN 1개: internalVolumeTk=link:#entity-internal_volume_dimension["내부_볼륨_치수"].tk 
+
+
+| 스토리지 노드 크기 | link:#entity-storage_node_dimension["스토리지 노드 크기"] | JOIN 1개: storageNodeTk=link:#entity-storage_node_dimension["스토리지 노드 크기"].tk 
+
+
+| 스토리지_차원 | link:#entity-storage_dimension["스토리지_차원"] | JOIN 1개: storageTk=link:#entity-storage_dimension["스토리지_차원"].tk 
+
+
+| business_entity_dimension | link:#entity-business_entity_dimension["business_entity_dimension"] | JOIN 1: businessEntityTk=link:#entity-business_entity_dimension["business_entity_dimension"].tk 
+
+
+| k8s_namespace_group_dimension | link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"] | 하나의 JOIN:k8sNamespaceGroupTk=link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"].tk 
+
+
+| application_group_dimension | link:#entity-application_group_dimension["application_group_dimension"] | JOIN 1개: applicationGroupTk=link:#entity-application_group_dimension["application_group_dimension"].tk 
+
+
+| k8s_namespace_dimension | link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"] | one JOIN:k8sNamespaceTk=link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"].tk 
+
+
+| service_level_dimension | link:#entity-service_level_dimension["service_level_dimension"] | JOIN 1개: serviceLevelTk=link:#entity-service_level_dimension["service_level_dimension"].tk 
+
+
+| 계층_차원 | link:#entity-tier_dimension["계층_차원"] | JOIN 1개: tierTk=link:#entity-tier_dimension["계층_차원"].tk 
+
+
+| 애플리케이션_차원 | link:#entity-application_dimension["애플리케이션_차원"] | JOIN 1개: applicationTk=link:#entity-application_dimension["애플리케이션_차원"].tk 
+
+
+| time_dimension | link:#entity-time_dimension["time_dimension"] | JOIN 1: timeTk=link:#entity-time_dimension["time_dimension"].tk 
+
+
+| 스토리지 풀 차원 | link:#entity-storage_pool_dimension["스토리지 풀 차원"] | JOIN 1개: storagePoolTk=link:#entity-storage_pool_dimension["스토리지 풀 차원"].tk 
+
+
+| date_dimension | link:#entity-date_dimension["date_dimension"] | JOIN 1: dateTk=link:#entity-date_dimension["date_dimension"].tk 
+|===
+
+
+[[k8sclusterdailymetricsfact]]
+=== k8s_cluster_daily_metrics_fact
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:k8s_cluster_daily_metrics_fact
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk *[PK]* | Int64 | 예 | 그 사실을 알지 못한다. 
+
+
+| dateTk | Int32 | 예 | 날짜 차원의 TK. 
+
+
+| clusterTk | Int32 | 예 | k8s 클러스터의 TK. 
+
+
+| allocatableCpuSaturation | 더블 | 예 | 할당 가능한 CPU 포화 비율(%) 
+
+
+| capacityCpuSaturation | 더블 | 예 | CPU 포화 용량(%). 
+
+
+| allocatableMemorySaturation | 더블 | 예 | 할당 가능한 메모리 포화도(%) 
+
+
+| capacityMemorySaturation | 더블 | 예 | 용량 메모리 포화율(%). 
+
+
+| allocatableCpuCores | 더블 | 예 | 할당 가능한 CPU 코어. 
+
+
+| capacityCpuCores | 더블 | 예 | CPU 코어 용량. 
+
+
+| usageCpuCores | 더블 | 예 | CPU 코어 사용량. 
+
+
+| requestsCpuCores | 더블 | 예 | CPU 코어를 요청합니다. 
+
+
+| limitsCpuCores | 더블 | 예 | CPU 코어 수를 제한합니다. 
+
+
+| allocatableMemoryBytes | 더블 | 예 | 할당 가능한 메모리(바이트). 
+
+
+| capacityMemoryBytes | 더블 | 예 | 용량(바이트). 
+
+
+| limitsMemoryBytes | 더블 | 예 | 메모리 용량을 바이트 단위로 제한합니다. 
+
+
+| requestsMemoryBytes | 더블 | 예 | 메모리 요청량은 바이트 단위입니다. 
+
+
+| usageMemoryBytes | 더블 | 예 | 사용량(바이트). 
+
+
+| 타임스탬프 *[PK]* | Int64 | 예 | 사실 시작 타임스탬프, 파티셔닝용 
+|===
+
+
+[[k8sclusterdimension]]
+=== k8s_cluster_dimension
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:k8s_cluster_dimension
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk | Int32 | 예 | 이 클러스터 행의 TK입니다. 
+
+
+| 식별자 | 문자열 | 예 | 클러스터의 고유 식별자입니다. 
+
+
+| 이름 | 문자열 | 예 | 클러스터 이름입니다. 
+
+
+| id | Int64 | 예 | dwh_inventory.k8s_cluster에 있는 클러스터의 GUID 
+
+
+| 최신 | 문자열 | 예 | 이 행이 해당 클러스터의 최신 행인지 여부를 나타냅니다. 
+
+
+| dateTk | Int32 | 예 | 이 클러스터 행이 생성된 날짜의 TK입니다. 
+|===
+
+
+[[k8sclusterhourlymetricsfact]]
+=== k8s_cluster_hourly_metrics_fact
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:k8s_cluster_hourly_metrics_fact
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk *[PK]* | Int64 | 예 | 그 사실을 알지 못한다. 
+
+
+| timeTk | Int32 | 예 | 시간 차원의 TK. 
+
+
+| dateTk | Int32 | 예 | 날짜 차원의 TK. 
+
+
+| clusterTk | Int32 | 예 | k8s 클러스터의 TK. 
+
+
+| allocatableCpuSaturation | 더블 | 예 | 할당 가능한 CPU 포화 비율(%) 
+
+
+| capacityCpuSaturation | 더블 | 예 | CPU 포화 용량(%). 
+
+
+| allocatableMemorySaturation | 더블 | 예 | 할당 가능한 메모리 포화도(%) 
+
+
+| capacityMemorySaturation | 더블 | 예 | 용량 메모리 포화율(%). 
+
+
+| allocatableCpuCores | 더블 | 예 | 할당 가능한 CPU 코어. 
+
+
+| capacityCpuCores | 더블 | 예 | CPU 코어 용량. 
+
+
+| usageCpuCores | 더블 | 예 | CPU 코어 사용량. 
+
+
+| requestsCpuCores | 더블 | 예 | CPU 코어를 요청합니다. 
+
+
+| limitsCpuCores | 더블 | 예 | CPU 코어 수를 제한합니다. 
+
+
+| allocatableMemoryBytes | 더블 | 예 | 할당 가능한 메모리(바이트). 
+
+
+| capacityMemoryBytes | 더블 | 예 | 용량(바이트). 
+
+
+| limitsMemoryBytes | 더블 | 예 | 메모리 용량을 바이트 단위로 제한합니다. 
+
+
+| requestsMemoryBytes | 더블 | 예 | 메모리 요청량은 바이트 단위입니다. 
+
+
+| usageMemoryBytes | 더블 | 예 | 사용량(바이트). 
+
+
+| 타임스탬프 *[PK]* | Int64 | 예 | 사실 시작 타임스탬프, 파티셔닝용 
+|===
+
+
+[[k8snamespacedailymetricsfact]]
+=== k8s_namespace_daily_metrics_fact
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:k8s_namespace_daily_metrics_fact
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk *[PK]* | Int64 | 예 | 그 사실을 알지 못한다. 
+
+
+| dateTk | Int32 | 예 | 날짜 차원의 TK. 
+
+
+| namespaceTk | Int32 | 예 | k8s 네임스페이스의 TK입니다. 
+
+
+| clusterTk | Int32 | 예 | k8s 클러스터의 TK. 
+
+
+| cpuHardLimit | 더블 | 예 | K8S 네임스페이스 CPU 엄격한 제한. 
+
+
+| cpuUsedLimit | 더블 | 예 | K8S 네임스페이스 CPU 사용량 제한. 
+
+
+| cpuHardRequest | 더블 | 예 | K8S 네임스페이스 CPU 하드 요청. 
+
+
+| cpuUsedRequest | 더블 | 예 | K8S 네임스페이스 CPU 사용 요청. 
+
+
+| memoryHardLimit | 더블 | 예 | K8S 네임스페이스 메모리 엄격한 제한. 
+
+
+| memoryUsedLimit | 더블 | 예 | K8S 네임스페이스 메모리 사용량 제한. 
+
+
+| memoryHardRequest | 더블 | 예 | K8S 네임스페이스 메모리 하드 요청. 
+
+
+| memoryUsedRequest | 더블 | 예 | K8S 네임스페이스 메모리 사용량 요청. 
+
+
+| 타임스탬프 *[PK]* | Int64 | 예 | 사실 시작 타임스탬프, 파티셔닝용 
+|===
+
+
+[[k8snamespacedimension]]
+=== k8s_namespace_dimension
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:k8s_namespace_dimension
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk | Int32 | 예 | 이 네임스페이스 행의 TK입니다. 
+
+
+| 식별자 | 문자열 | 예 | 네임스페이스의 고유 식별자입니다. 
+
+
+| 이름 | 문자열 | 예 | 네임스페이스의 이름입니다. 
+
+
+| clusterName | 문자열 | 예 | 네임스페이스의 클러스터 이름입니다. 
+
+
+| id | Int64 | 예 | dwh_inventory.k8s_namespace의 네임스페이스 GUID 
+
+
+| 최신 | 문자열 | 예 | 이 행이 해당 네임스페이스에 대한 최신 행인지 여부를 나타냅니다. 
+
+
+| dateTk | Int32 | 예 | 이 네임스페이스 행이 생성된 날짜의 TK입니다. 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| qtree_hourly_performance_fact | link:#entity-qtree_hourly_performance_fact["qtree_hourly_performance_fact"] | 많은 
+
+
+| volume_hourly_performance_fact | link:#entity-volume_hourly_performance_fact["volume_hourly_performance_fact"] | 많은 
+
+
+| qtree_daily_performance_fact | link:#entity-qtree_daily_performance_fact["qtree_daily_performance_fact"] | 많은 
+
+
+| internal_volume_daily_performance_fact | link:#entity-internal_volume_daily_performance_fact["internal_volume_daily_performance_fact"] | 많은 
+
+
+| internal_volume_hourly_performance_fact | link:#entity-internal_volume_hourly_performance_fact["internal_volume_hourly_performance_fact"] | 많은 
+
+
+| volume_daily_performance_fact | link:#entity-volume_daily_performance_fact["volume_daily_performance_fact"] | 많은 
+|===
+
+
+[[k8snamespacegroupbridge]]
+=== k8s_namespace_group_bridge
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:k8s_namespace_group_bridge
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| k8sNamespaceGroupTk | Int32 | 예 | k8s 네임스페이스 그룹의 TK입니다. 
+
+
+| k8sNamespaceTk | Int32 | 예 | k8s 네임스페이스의 TK입니다. 
+
+
+| isRep | 문자열 | 예 | 이 k8s 네임스페이스가 해당 k8s 네임스페이스 그룹을 나타내는지 여부를 나타냅니다. 
+|===
+
+
+[[k8snamespacegroupdimension]]
+=== k8s_namespace_group_dimension
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:k8s_namespace_group_dimension
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk | Int32 | 예 | k8s 네임스페이스 그룹의 TK입니다. 
+
+
+| repK8sNamespace | 문자열 | 예 | k8s 네임스페이스 그룹을 나타내는 애플리케이션의 이름입니다. 
+
+
+| repK8sNamespaceTk | Int32 | 예 | 그룹을 나타내는 k8s 네임스페이스의 TK입니다. 
+
+
+| 카디널리티 | Int32 | 예 | 애플리케이션 그룹에 있는 k8s 네임스페이스의 개수입니다. 
+
+
+| dateTk | Int32 | 예 | k8s 네임스페이스 그룹 행이 생성된 날짜의 TK입니다. 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| qtree_hourly_performance_fact | link:#entity-qtree_hourly_performance_fact["qtree_hourly_performance_fact"] | 많은 
+
+
+| volume_hourly_performance_fact | link:#entity-volume_hourly_performance_fact["volume_hourly_performance_fact"] | 많은 
+
+
+| qtree_daily_performance_fact | link:#entity-qtree_daily_performance_fact["qtree_daily_performance_fact"] | 많은 
+
+
+| internal_volume_daily_performance_fact | link:#entity-internal_volume_daily_performance_fact["internal_volume_daily_performance_fact"] | 많은 
+
+
+| internal_volume_hourly_performance_fact | link:#entity-internal_volume_hourly_performance_fact["internal_volume_hourly_performance_fact"] | 많은 
+
+
+| volume_daily_performance_fact | link:#entity-volume_daily_performance_fact["volume_daily_performance_fact"] | 많은 
+|===
+
+
+[[k8snamespacehourlymetricsfact]]
+=== k8s_namespace_hourly_metrics_fact
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:k8s_namespace_hourly_metrics_fact
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk *[PK]* | Int64 | 예 | 그 사실을 알지 못한다. 
+
+
+| timeTk | Int32 | 예 | 시간 차원의 TK. 
+
+
+| dateTk | Int32 | 예 | 날짜 차원의 TK. 
+
+
+| namespaceTk | Int32 | 예 | k8s 네임스페이스의 TK입니다. 
+
+
+| clusterTk | Int32 | 예 | k8s 클러스터의 TK. 
+
+
+| cpuHardLimit | 더블 | 예 | K8S 네임스페이스 CPU 엄격한 제한. 
+
+
+| cpuUsedLimit | 더블 | 예 | K8S 네임스페이스 CPU 사용량 제한. 
+
+
+| cpuHardRequest | 더블 | 예 | K8S 네임스페이스 CPU 하드 요청. 
+
+
+| cpuUsedRequest | 더블 | 예 | K8S 네임스페이스 CPU 사용 요청. 
+
+
+| memoryHardLimit | 더블 | 예 | K8S 네임스페이스 메모리 엄격한 제한. 
+
+
+| memoryUsedLimit | 더블 | 예 | K8S 네임스페이스 메모리 사용량 제한. 
+
+
+| memoryHardRequest | 더블 | 예 | K8S 네임스페이스 메모리 하드 요청. 
+
+
+| memoryUsedRequest | 더블 | 예 | K8S 네임스페이스 메모리 사용량 요청. 
+
+
+| 타임스탬프 *[PK]* | Int64 | 예 | 사실 시작 타임스탬프, 파티셔닝용 
+|===
+
+
+[[k8snodedailymetricsfact]]
+=== k8s_node_daily_metrics_fact
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:k8s_node_daily_metrics_fact
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk *[PK]* | Int64 | 예 | 그 사실을 알지 못한다. 
+
+
+| dateTk | Int32 | 예 | 날짜 차원의 TK. 
+
+
+| nodeTk | Int32 | 예 | k8s 노드의 TK. 
+
+
+| clusterTk | Int32 | 예 | k8s 클러스터의 TK. 
+
+
+| vmTk | Int32 | 예 | VM의 TK. 
+
+
+| allocatableCpuSaturation | 더블 | 예 | 할당 가능한 CPU 포화 비율(%) 
+
+
+| capacityCpuSaturation | 더블 | 예 | CPU 포화 용량(%). 
+
+
+| allocatableMemorySaturation | 더블 | 예 | 할당 가능한 메모리 포화도(%) 
+
+
+| capacityMemorySaturation | 더블 | 예 | 용량 메모리 포화율(%). 
+
+
+| allocatableMemoryBytes | 더블 | 예 | 할당 가능한 메모리(바이트). 
+
+
+| capacityMemoryBytes | 더블 | 예 | 용량(바이트). 
+
+
+| memoryUsageBytes | 더블 | 예 | 메모리 사용량(바이트). 
+
+
+| cpuUsageNanocores | 더블 | 예 | 나노코어 단위의 CPU 사용률. 
+
+
+| allocatableCpu | 더블 | 예 | Kube 노드 상태 할당 가능 CPU. 
+
+
+| capacityCpu | 더블 | 예 | Kube 노드 상태 용량 CPU. 
+
+
+| 타임스탬프 *[PK]* | Int64 | 예 | 사실 시작 타임스탬프, 파티셔닝용 
+|===
+
+
+[[k8snodedimension]]
+=== k8s_node_dimension
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:k8s_node_dimension
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk | Int32 | 예 | 이 노드 행의 TK입니다. 
+
+
+| 식별자 | 문자열 | 예 | 노드의 고유 식별자입니다. 
+
+
+| 이름 | 문자열 | 예 | 노드의 이름입니다. 
+
+
+| clusterName | 문자열 | 예 | 노드의 클러스터 이름입니다. 
+
+
+| internalIp | 문자열 | 예 | K8S 노드의 내부 IP 
+
+
+| osImage | 문자열 | 예 | K8S 노드의 OS 이미지 
+
+
+| id | Int64 | 예 | dwh_inventory.k8s_node에 있는 노드의 GUID 
+
+
+| 최신 | 문자열 | 예 | 이 행이 해당 노드에 대한 최신 행인지 여부를 나타냅니다. 
+
+
+| dateTk | Int32 | 예 | 이 노드 행이 생성된 날짜의 TK입니다. 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| vm_hourly_performance_fact | link:#entity-vm_hourly_performance_fact["vm_hourly_performance_fact"] | 많은 
+
+
+| vm_daily_performance_fact | link:#entity-vm_daily_performance_fact["vm_daily_performance_fact"] | 많은 
+|===
+
+
+[[k8snodehourlymetricsfact]]
+=== k8s_node_hourly_metrics_fact
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:k8s_node_hourly_metrics_fact
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk *[PK]* | Int64 | 예 | 그 사실을 알지 못한다. 
+
+
+| timeTk | Int32 | 예 | 시간 차원의 TK. 
+
+
+| dateTk | Int32 | 예 | 날짜 차원의 TK. 
+
+
+| nodeTk | Int32 | 예 | k8s 노드의 TK. 
+
+
+| clusterTk | Int32 | 예 | k8s 클러스터의 TK. 
+
+
+| vmTk | Int32 | 예 | VM의 TK. 
+
+
+| allocatableCpuSaturation | 더블 | 예 | 할당 가능한 CPU 포화 비율(%) 
+
+
+| capacityCpuSaturation | 더블 | 예 | CPU 포화 용량(%). 
+
+
+| allocatableMemorySaturation | 더블 | 예 | 할당 가능한 메모리 포화도(%) 
+
+
+| capacityMemorySaturation | 더블 | 예 | 용량 메모리 포화율(%). 
+
+
+| allocatableMemoryBytes | 더블 | 예 | 할당 가능한 메모리(바이트). 
+
+
+| capacityMemoryBytes | 더블 | 예 | 용량(바이트). 
+
+
+| memoryUsageBytes | 더블 | 예 | 메모리 사용량(바이트). 
+
+
+| cpuUsageNanocores | 더블 | 예 | 나노코어 단위의 CPU 사용률. 
+
+
+| allocatableCpu | 더블 | 예 | Kube 노드 상태 할당 가능 CPU. 
+
+
+| capacityCpu | 더블 | 예 | Kube 노드 상태 용량 CPU. 
+
+
+| 타임스탬프 *[PK]* | Int64 | 예 | 사실 시작 타임스탬프, 파티셔닝용 
+|===
+
+
+[[k8spvdimension]]
+=== k8s_pv_dimension
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:k8s_pv_dimension
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk | Int32 | 예 | 이 PV 행의 TK. 
+
+
+| 식별자 | 문자열 | 예 | PV의 고유 식별자입니다. 
+
+
+| 이름 | 문자열 | 예 | PV의 이름. 
+
+
+| clusterName | 문자열 | 예 | PV의 클러스터 이름입니다. 
+
+
+| 단계 | 문자열 | 예 | K8S 영구 볼륨의 단계(Bound 등) 
+
+
+| pvcName | 문자열 | 예 | K8S 영구 볼륨이 바인딩된 PVC의 이름 
+
+
+| storageClass | 문자열 | 예 | K8S 영구 볼륨에 사용되는 스토리지 클래스의 이름입니다. 
+
+
+| id | Int64 | 예 | dwh_inventory.k8s_pv에 있는 PVC의 GUID 
+
+
+| 최신 | 문자열 | 예 | 이 행이 해당 PV에 대한 최신 행인지 여부를 나타냅니다. 
+
+
+| dateTk | Int32 | 예 | 이 PV 행이 생성된 날짜의 TK입니다. 
+|===
+
+
+[[k8spvcdailymetricsfact]]
+=== k8s_pvc_daily_metrics_fact
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:k8s_pvc_daily_metrics_fact
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk *[PK]* | Int64 | 예 | 그 사실을 알지 못한다. 
+
+
+| dateTk | Int32 | 예 | 날짜 차원의 TK. 
+
+
+| pvcTk | Int32 | 예 | k8s PVC의 TK. 
+
+
+| clusterTk | Int32 | 예 | k8s 클러스터의 TK. 
+
+
+| namespaceTk | Int32 | 예 | k8s 네임스페이스의 TK입니다. 
+
+
+| pvTk | Int32 | 예 | k8s pv의 TK. 
+
+
+| readIops | 더블 | 예 | K8S pvc 읽기 Iops. 
+
+
+| writeIops | 더블 | 예 | K8S pvc 쓰기 IOPS. 
+
+
+| totalIops | 더블 | 예 | K8S pvc 총 Iops. 
+
+
+| readThroughput | 더블 | 예 | K8S pvc 읽기 처리량. 
+
+
+| writeThroughput | 더블 | 예 | K8S pvc 쓰기 처리량. 
+
+
+| totalThroughput | 더블 | 예 | K8S pvc 총 처리량. 
+
+
+| readLatency | 더블 | 예 | K8S pvc 읽기 지연 시간. 
+
+
+| writeLatency | 더블 | 예 | K8S pvc 쓰기 지연 시간. 
+
+
+| totalLatency | 더블 | 예 | K8S pvc 총 지연 시간. 
+
+
+| 타임스탬프 *[PK]* | Int64 | 예 | 사실 시작 타임스탬프, 파티셔닝용 
+|===
+
+
+[[k8spvcdimension]]
+=== k8s_pvc_dimension
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 세트:k8s_pvc_dimension
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk | Int32 | 예 | 이 PVC 줄의 TK. 
+
+
+| 식별자 | 문자열 | 예 | PVC의 고유 식별자. 
+
+
+| 이름 | 문자열 | 예 | PVC의 명칭. 
+
+
+| clusterName | 문자열 | 예 | PVC의 클러스터 이름입니다. 
+
+
+| namespaceName | 문자열 | 예 | PVC의 네임스페이스 이름입니다. 
+
+
+| pvName | 문자열 | 예 | 이 PVC에 연결된 PV의 이름입니다. 
+
+
+| 단계 | 문자열 | 예 | K8S 영구 볼륨 클레임의 단계(Bound 등) 
+
+
+| id | Int64 | 예 | dwh_inventory.k8s_pvc에 있는 PVC의 GUID 
+
+
+| 최신 | 문자열 | 예 | 이 행이 해당 PVC에 대한 최신 행인지 여부를 나타냅니다. 
+
+
+| dateTk | Int32 | 예 | 이 PVC 행이 생성된 날짜의 TK입니다. 
+|===
+
+
+[[k8spvchourlymetricsfact]]
+=== k8s_pvc_hourly_metrics_fact
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:k8s_pvc_hourly_metrics_fact
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk *[PK]* | Int64 | 예 | 그 사실을 알지 못한다. 
+
+
+| timeTk | Int32 | 예 | 시간 차원의 TK. 
+
+
+| dateTk | Int32 | 예 | 날짜 차원의 TK. 
+
+
+| pvcTk | Int32 | 예 | k8s PVC의 TK. 
+
+
+| clusterTk | Int32 | 예 | k8s 클러스터의 TK. 
+
+
+| namespaceTk | Int32 | 예 | k8s 네임스페이스의 TK입니다. 
+
+
+| pvTk | Int32 | 예 | k8s pv의 TK. 
+
+
+| readIops | 더블 | 예 | K8S pvc 읽기 Iops. 
+
+
+| writeIops | 더블 | 예 | K8S pvc 쓰기 IOPS. 
+
+
+| totalIops | 더블 | 예 | K8S pvc 총 Iops. 
+
+
+| readThroughput | 더블 | 예 | K8S pvc 읽기 처리량. 
+
+
+| writeThroughput | 더블 | 예 | K8S pvc 쓰기 처리량. 
+
+
+| totalThroughput | 더블 | 예 | K8S pvc 총 처리량. 
+
+
+| readLatency | 더블 | 예 | K8S pvc 읽기 지연 시간. 
+
+
+| writeLatency | 더블 | 예 | K8S pvc 쓰기 지연 시간. 
+
+
+| totalLatency | 더블 | 예 | K8S pvc 총 지연 시간. 
+
+
+| 타임스탬프 *[PK]* | Int64 | 예 | 사실 시작 타임스탬프, 파티셔닝용 
+|===
+
+
+[[k8sworkloaddailymetricsfact]]
+=== k8s_workload_daily_metrics_fact
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:k8s_workload_daily_metrics_fact
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk *[PK]* | Int64 | 예 | 그 사실을 알지 못한다. 
+
+
+| dateTk | Int32 | 예 | 날짜 차원의 TK. 
+
+
+| workloadTk | Int32 | 예 | k8s 워크로드의 TK. 
+
+
+| clusterTk | Int32 | 예 | k8s 클러스터의 TK. 
+
+
+| namespaceTk | Int32 | 예 | k8s 네임스페이스의 TK입니다. 
+
+
+| usageCpuCores | 더블 | 예 | K8S 워크로드 CPU 사용량(코어). 
+
+
+| requestCpuCores | 더블 | 예 | K8S 워크로드 요청 CPU(코어). 
+
+
+| limitCpuCores | 더블 | 예 | K8S 워크로드 제한 CPU(코어). 
+
+
+| usageMemoryBytes | 더블 | 예 | K8S 워크로드 메모리 사용량(바이트). 
+
+
+| requestMemoryBytes | 더블 | 예 | K8S 워크로드 요청 메모리(바이트). 
+
+
+| limitMemoryBytes | 더블 | 예 | K8S 워크로드 메모리 제한(바이트). 
+
+
+| runningPodCount | Int32 | 예 | K8S 워크로드에서 실행 중인 복제본 수입니다. 
+
+
+| desiredPodCount | Int32 | 예 | K8S 워크로드에서 원하는 복제본 수입니다. 
+
+
+| 타임스탬프 *[PK]* | Int64 | 예 | 사실 시작 타임스탬프, 파티셔닝용 
+|===
+
+
+[[k8sworkloaddimension]]
+=== k8s_workload_dimension
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:k8s_workload_dimension
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk | Int32 | 예 | 이 작업 부하 행의 TK입니다. 
+
+
+| 식별자 | 문자열 | 예 | 워크로드의 고유 식별자입니다. 
+
+
+| 이름 | 문자열 | 예 | 워크로드의 이름입니다. 
+
+
+| clusterName | 문자열 | 예 | 워크로드의 클러스터 이름입니다. 
+
+
+| namespaceName | 문자열 | 예 | 워크로드의 네임스페이스 이름입니다. 
+
+
+| 유형 | 문자열 | 예 | 워크로드 유형(Pod, StatefulSet 등) 
+
+
+| id | Int64 | 예 | dwh_inventory.k8s_workload에 있는 워크로드의 GUID 
+
+
+| 최신 | 문자열 | 예 | 이 행이 해당 워크로드에 대한 최신 행인지 여부를 나타냅니다. 
+
+
+| dateTk | Int32 | 예 | 이 작업량 행이 생성된 날짜의 TK입니다. 
+|===
+
+
+[[k8sworkloadhourlymetricsfact]]
+=== k8s_workload_hourly_metrics_fact
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:k8s_workload_hourly_metrics_fact
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk *[PK]* | Int64 | 예 | 그 사실을 알지 못한다. 
+
+
+| timeTk | Int32 | 예 | 시간 차원의 TK. 
+
+
+| dateTk | Int32 | 예 | 날짜 차원의 TK. 
+
+
+| workloadTk | Int32 | 예 | k8s 워크로드의 TK. 
+
+
+| clusterTk | Int32 | 예 | k8s 클러스터의 TK. 
+
+
+| namespaceTk | Int32 | 예 | k8s 네임스페이스의 TK입니다. 
+
+
+| usageCpuCores | 더블 | 예 | K8S 워크로드 CPU 사용량(코어). 
+
+
+| requestCpuCores | 더블 | 예 | K8S 워크로드 요청 CPU(코어). 
+
+
+| limitCpuCores | 더블 | 예 | K8S 워크로드 제한 CPU(코어). 
+
+
+| usageMemoryBytes | 더블 | 예 | K8S 워크로드 메모리 사용량(바이트). 
+
+
+| requestMemoryBytes | 더블 | 예 | K8S 워크로드 요청 메모리(바이트). 
+
+
+| limitMemoryBytes | 더블 | 예 | K8S 워크로드 메모리 제한(바이트). 
+
+
+| runningPodCount | Int32 | 예 | K8S 워크로드에서 실행 중인 복제본 수입니다. 
+
+
+| desiredPodCount | Int32 | 예 | K8S 워크로드에서 원하는 복제본 수입니다. 
+
+
+| 타임스탬프 *[PK]* | Int64 | 예 | 사실 시작 타임스탬프, 파티셔닝용 
+|===
+
+
+[[portdimension]]
+=== 포트_차원
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 세트:port_dimension
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk | Int32 | 예 | 이 포트 행의 TK. 
+
+
+| wwn | 문자열 | 예 | 포트의 WWN. 
+
+
+| 이름 | 문자열 | 예 | 포트 이름. 
+
+
+| gbicType | 문자열 | 예 | 포트에 사용되는 GBIC(기가비트 인터페이스 변환기) 유형입니다. 
+
+
+| 유형 | 문자열 | 예 | 포트 유형은 일반적으로 다른 장치와의 통신에 사용되는 프로토콜을 식별하는 데 사용되며, 장치 자체에서 가져옵니다(예: F-port, E-port 등). 
+
+
+| 속도 | 문자열 | 예 | 포트 속도(Gbps). 
+
+
+| isGenerated | 문자열 | 예 | (실제 wwn을 모르는 경우) 이것이 생성된 wwn인지 여부를 나타냅니다. 
+
+
+| url | 문자열 | 예 | Insight 서버에서 해당 포트의 URL입니다. 
+
+
+| id | Int64 | 예 | dwh_inventory.switch_port에 있는 포트의 GUID입니다. 
+
+
+| 최신 | 문자열 | 예 | 이 행이 해당 포트에 대한 최신 행인지 여부를 나타냅니다. 
+
+
+| dateTk | Int32 | 예 | 포트 행이 생성된 날짜의 TK입니다. 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| switch_performance_for_port_hourly_fact | link:#entity-switch_performance_for_port_hourly_fact["switch_performance_for_port_hourly_fact"] | 많은 
+|===
+
+
+[[qtreedailyperformancefact]]
+=== qtree_daily_performance_fact
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합: qtree_daily_performance_fact
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk *[PK]* | Int32 | 예 | 그 사실을 알지 못한다. 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["date_dimension"].tk | Int32 | 예 | 날짜 차원의 TK. 
+
+
+| qtreeTk *[FK]* →link:#entity-qtree_dimension["qtree_차원"].tk | Int32 | 예 | 성능 카운터용 qtree의 TK. 
+
+
+| storageTk *[FK]* →link:#entity-storage_dimension["스토리지_차원"].tk | Int32 | 예 | 성능 카운터용 qtree 저장소의 TK입니다. 
+
+
+| storagePoolTk *[FK]* →link:#entity-storage_pool_dimension["스토리지 풀 차원"].tk | Int32 | 예 | 스토리지 풀 성능 카운터용 qtree 스토리지 풀의 TK입니다. 
+
+
+| internalVolumeTk *[FK]* →link:#entity-internal_volume_dimension["내부_볼륨_치수"].tk | Int32 | 예 | 성능 카운터용 qtree 내부 볼륨의 TK입니다. 
+
+
+| virtualStorageTk | Int32 | 예 | 이 qtree가 가상 내부 볼륨에 있는 경우 프런트엔드 배열의 TK 값입니다. 그렇지 않으면 값은 N/A입니다. 
+
+
+| tierTk *[FK]* →link:#entity-tier_dimension["계층_차원"].tk | Int32 | 예 | 티어의 TK. 
+
+
+| serviceLevelTk *[FK]* →link:#entity-service_level_dimension["service_level_dimension"].tk | Int32 | 예 | 서비스 수준의 TK. 
+
+
+| applicationTk *[FK]* →link:#entity-application_dimension["애플리케이션_차원"].tk | Int32 | 예 | 애플리케이션의 TK. 
+
+
+| applicationGroupTk *[FK]* →link:#entity-application_group_dimension["application_group_dimension"].tk | Int32 | 예 | 응용 프로그램 그룹의 TK. 
+
+
+| businessEntityTk *[FK]* →link:#entity-business_entity_dimension["business_entity_dimension"].tk | Int32 | 예 | 사업체의 TK. 
+
+
+| k8sNamespaceTk *[FK]* →link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"].tk | Int32 | 예 | k8s 네임스페이스의 TK입니다. 
+
+
+| k8sNamespaceGroupTk *[FK]* →link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"].tk | Int32 | 예 | k8s 네임스페이스 그룹의 TK입니다. 
+
+
+| totalIops | 더블 | 예 | 초당 총 입출력 평균(읽기+쓰기). 
+
+
+| totalIopsMax | 더블 | 예 | 초당 최대 입출력 횟수. 
+
+
+| 타임스탬프 *[PK]* | Int64 | 예 | 사실 시작 타임스탬프, 파티셔닝용 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| service_level_dimension | link:#entity-service_level_dimension["service_level_dimension"] | JOIN 1개: serviceLevelTk=link:#entity-service_level_dimension["service_level_dimension"].tk 
+
+
+| 내부_볼륨_치수 | link:#entity-internal_volume_dimension["내부_볼륨_치수"] | JOIN 1개: internalVolumeTk=link:#entity-internal_volume_dimension["내부_볼륨_치수"].tk 
+
+
+| 스토리지_차원 | link:#entity-storage_dimension["스토리지_차원"] | JOIN 1개: storageTk=link:#entity-storage_dimension["스토리지_차원"].tk 
+
+
+| 계층_차원 | link:#entity-tier_dimension["계층_차원"] | JOIN 1개: tierTk=link:#entity-tier_dimension["계층_차원"].tk 
+
+
+| business_entity_dimension | link:#entity-business_entity_dimension["business_entity_dimension"] | JOIN 1: businessEntityTk=link:#entity-business_entity_dimension["business_entity_dimension"].tk 
+
+
+| 애플리케이션_차원 | link:#entity-application_dimension["애플리케이션_차원"] | JOIN 1개: applicationTk=link:#entity-application_dimension["애플리케이션_차원"].tk 
+
+
+| qtree_차원 | link:#entity-qtree_dimension["qtree_차원"] | 하나의 JOIN:qtreeTk=link:#entity-qtree_dimension["qtree_차원"].tk 
+
+
+| 스토리지 풀 차원 | link:#entity-storage_pool_dimension["스토리지 풀 차원"] | JOIN 1개: storagePoolTk=link:#entity-storage_pool_dimension["스토리지 풀 차원"].tk 
+
+
+| date_dimension | link:#entity-date_dimension["date_dimension"] | JOIN 1: dateTk=link:#entity-date_dimension["date_dimension"].tk 
+
+
+| k8s_namespace_group_dimension | link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"] | 하나의 JOIN:k8sNamespaceGroupTk=link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"].tk 
+
+
+| application_group_dimension | link:#entity-application_group_dimension["application_group_dimension"] | JOIN 1개: applicationGroupTk=link:#entity-application_group_dimension["application_group_dimension"].tk 
+
+
+| k8s_namespace_dimension | link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"] | one JOIN:k8sNamespaceTk=link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"].tk 
+|===
+
+
+[[qtreedimension]]
+=== qtree_차원
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:qtree_dimension
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk | Int32 | 예 | 이 qtree 행의 TK입니다. 
+
+
+| 이름 | 문자열 | 예 | qtree의 이름입니다. 
+
+
+| 식별자 | 문자열 | 예 | qtree의 식별자입니다. 
+
+
+| storageIdentifier | 문자열 | 예 | 이 qtree가 저장된 스토리지의 식별자입니다. 
+
+
+| 유형 | 문자열 | 예 | 큐트리 유형. 
+
+
+| url | 문자열 | 예 | Insight Server에서 이 qtree에 대한 URL입니다. 
+
+
+| id | Int64 | 예 | dwh_inventory.qtree에 있는 qtree의 GUID 
+
+
+| 최신 | 문자열 | 예 | 이 행이 해당 qtree에 대한 최신 행인지 여부를 나타냅니다. 
+
+
+| dateTk | Int32 | 예 | 이 qtree 행이 생성된 날짜의 TK입니다. 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| qtree_hourly_performance_fact | link:#entity-qtree_hourly_performance_fact["qtree_hourly_performance_fact"] | 많은 
+
+
+| qtree_daily_performance_fact | link:#entity-qtree_daily_performance_fact["qtree_daily_performance_fact"] | 많은 
+|===
+
+
+[[qtreehourlyperformancefact]]
+=== qtree_hourly_performance_fact
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합: qtree_hourly_performance_fact
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk *[PK]* | Int64 | 예 | 그 사실을 알지 못한다. 
+
+
+| timeTk *[FK]* →link:#entity-time_dimension["time_dimension"].tk | Int32 | 예 | 시간 차원의 TK. 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["date_dimension"].tk | Int32 | 예 | 날짜 차원의 TK. 
+
+
+| qtreeTk *[FK]* →link:#entity-qtree_dimension["qtree_차원"].tk | Int32 | 예 | 성능 카운터용 qtree의 TK. 
+
+
+| storageTk *[FK]* →link:#entity-storage_dimension["스토리지_차원"].tk | Int32 | 예 | 성능 카운터용 qtree 저장소의 TK입니다. 
+
+
+| storagePoolTk *[FK]* →link:#entity-storage_pool_dimension["스토리지 풀 차원"].tk | Int32 | 예 | 스토리지 풀 성능 카운터용 qtree 스토리지 풀의 TK입니다. 
+
+
+| internalVolumeTk *[FK]* →link:#entity-internal_volume_dimension["내부_볼륨_치수"].tk | Int32 | 예 | 성능 카운터용 qtree 내부 볼륨의 TK입니다. 
+
+
+| virtualStorageTk | Int32 | 예 | 이 qtree가 가상 내부 볼륨에 있는 경우 프런트엔드 배열의 TK 값입니다. 그렇지 않으면 값은 N/A입니다. 
+
+
+| tierTk *[FK]* →link:#entity-tier_dimension["계층_차원"].tk | Int32 | 예 | 티어의 TK. 
+
+
+| serviceLevelTk *[FK]* →link:#entity-service_level_dimension["service_level_dimension"].tk | Int32 | 예 | 서비스 수준의 TK. 
+
+
+| applicationTk *[FK]* →link:#entity-application_dimension["애플리케이션_차원"].tk | Int32 | 예 | 애플리케이션의 TK. 
+
+
+| applicationGroupTk *[FK]* →link:#entity-application_group_dimension["application_group_dimension"].tk | Int32 | 예 | 응용 프로그램 그룹의 TK. 
+
+
+| businessEntityTk *[FK]* →link:#entity-business_entity_dimension["business_entity_dimension"].tk | Int32 | 예 | 사업체의 TK. 
+
+
+| k8sNamespaceTk *[FK]* →link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"].tk | Int32 | 예 | k8s 네임스페이스의 TK입니다. 
+
+
+| k8sNamespaceGroupTk *[FK]* →link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"].tk | Int32 | 예 | k8s 네임스페이스 그룹의 TK입니다. 
+
+
+| totalIops | 더블 | 예 | 초당 총 입출력 평균(읽기+쓰기). 
+
+
+| totalIopsMax | 더블 | 예 | 초당 최대 입출력 횟수. 
+
+
+| 타임스탬프 *[PK]* | Int64 | 예 | 사실 시작 타임스탬프, 파티셔닝용 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| 내부_볼륨_치수 | link:#entity-internal_volume_dimension["내부_볼륨_치수"] | JOIN 1개: internalVolumeTk=link:#entity-internal_volume_dimension["내부_볼륨_치수"].tk 
+
+
+| 스토리지_차원 | link:#entity-storage_dimension["스토리지_차원"] | JOIN 1개: storageTk=link:#entity-storage_dimension["스토리지_차원"].tk 
+
+
+| business_entity_dimension | link:#entity-business_entity_dimension["business_entity_dimension"] | JOIN 1: businessEntityTk=link:#entity-business_entity_dimension["business_entity_dimension"].tk 
+
+
+| k8s_namespace_group_dimension | link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"] | 하나의 JOIN:k8sNamespaceGroupTk=link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"].tk 
+
+
+| application_group_dimension | link:#entity-application_group_dimension["application_group_dimension"] | JOIN 1개: applicationGroupTk=link:#entity-application_group_dimension["application_group_dimension"].tk 
+
+
+| k8s_namespace_dimension | link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"] | one JOIN:k8sNamespaceTk=link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"].tk 
+
+
+| service_level_dimension | link:#entity-service_level_dimension["service_level_dimension"] | JOIN 1개: serviceLevelTk=link:#entity-service_level_dimension["service_level_dimension"].tk 
+
+
+| 계층_차원 | link:#entity-tier_dimension["계층_차원"] | JOIN 1개: tierTk=link:#entity-tier_dimension["계층_차원"].tk 
+
+
+| 애플리케이션_차원 | link:#entity-application_dimension["애플리케이션_차원"] | JOIN 1개: applicationTk=link:#entity-application_dimension["애플리케이션_차원"].tk 
+
+
+| time_dimension | link:#entity-time_dimension["time_dimension"] | JOIN 1: timeTk=link:#entity-time_dimension["time_dimension"].tk 
+
+
+| qtree_차원 | link:#entity-qtree_dimension["qtree_차원"] | 하나의 JOIN:qtreeTk=link:#entity-qtree_dimension["qtree_차원"].tk 
+
+
+| 스토리지 풀 차원 | link:#entity-storage_pool_dimension["스토리지 풀 차원"] | JOIN 1개: storagePoolTk=link:#entity-storage_pool_dimension["스토리지 풀 차원"].tk 
+
+
+| date_dimension | link:#entity-date_dimension["date_dimension"] | JOIN 1: dateTk=link:#entity-date_dimension["date_dimension"].tk 
+|===
+
+
+[[serviceleveldimension]]
+=== service_level_dimension
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합: service_level_dimension
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk | Int32 | 예 | 이 서비스 레벨 행의 TK입니다. 
+
+
+| 이름 | 문자열 | 예 | 서비스 수준을 식별하는 이름입니다. 
+
+
+| 시퀀스 | Int32 | 예 | dwh_inventory.annotation_value에 정의된 서비스 레벨의 순번입니다. 
+
+
+| 비용 | 더블 | 예 | 해당 서비스 수준과 관련된 비용입니다. 
+
+
+| id | Int64 | 예 | dwh_inventory.annotation_value에 있는 서비스 레벨의 GUID입니다. 
+
+
+| 최신 | 문자열 | 예 | 이 행이 해당 서비스 레벨에 대한 최신 행인지 여부를 나타냅니다. 
+
+
+| dateTk | Int32 | 예 | 이 서비스 레벨 행이 생성된 날짜의 TK입니다. 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| qtree_hourly_performance_fact | link:#entity-qtree_hourly_performance_fact["qtree_hourly_performance_fact"] | 많은 
+
+
+| vmdk_hourly_performance_fact | link:#entity-vmdk_hourly_performance_fact["vmdk_hourly_performance_fact"] | 많은 
+
+
+| volume_hourly_performance_fact | link:#entity-volume_hourly_performance_fact["volume_hourly_performance_fact"] | 많은 
+
+
+| application_volume_hourly_performance_fact | link:#entity-application_volume_hourly_performance_fact["application_volume_hourly_performance_fact"] | 많은 
+
+
+| qtree_daily_performance_fact | link:#entity-qtree_daily_performance_fact["qtree_daily_performance_fact"] | 많은 
+
+
+| host_volume_hourly_performance_fact | link:#entity-host_volume_hourly_performance_fact["host_volume_hourly_performance_fact"] | 많은 
+
+
+| internal_volume_daily_performance_fact | link:#entity-internal_volume_daily_performance_fact["internal_volume_daily_performance_fact"] | 많은 
+
+
+| internal_volume_hourly_performance_fact | link:#entity-internal_volume_hourly_performance_fact["internal_volume_hourly_performance_fact"] | 많은 
+
+
+| volume_daily_performance_fact | link:#entity-volume_daily_performance_fact["volume_daily_performance_fact"] | 많은 
+
+
+| vmdk_daily_performance_fact | link:#entity-vmdk_daily_performance_fact["vmdk_daily_performance_fact"] | 많은 
+|===
+
+
+[[storagedimension]]
+=== 스토리지_차원
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합: storage_dimension
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk | Int32 | 예 | 이 스토리지 어레이 행의 TK입니다. 
+
+
+| 이름 | 문자열 | 예 | 스토리지 어레이의 이름입니다. 
+
+
+| 식별자 | 문자열 | 예 | 기기 식별자. 
+
+
+| ip | 문자열 | 예 | 스토리지 어레이의 IP 주소입니다. 
+
+
+| 모델 | 문자열 | 예 | 스토리지 어레이의 모델입니다. 
+
+
+| 제조업체 | 문자열 | 예 | 스토리지 어레이 제조업체. 
+
+
+| serialNumber | 문자열 | 예 | 스토리지 어레이의 일련 번호입니다. 
+
+
+| microcodeVersion | 문자열 | 예 | 스토리지 어레이에서 실행 중인 펌웨어 버전입니다. 
+
+
+| 가족 | 문자열 | 예 | 스토리지 어레이의 제품군 이름(예: Clariion, Symmetrix 등). 
+
+
+| url | 문자열 | 예 | Insight Server에서 이 스토리지에 대한 URL입니다. 
+
+
+| id | Int64 | 예 | dwh_inventory.storage에 있는 스토리지 어레이의 GUID입니다. 
+
+
+| 최신 | 문자열 | 예 | 이 행이 해당 저장소의 최신 행인지 여부를 나타냅니다. 
+
+
+| dateTk | Int32 | 예 | 이 스토리지 배열 행이 생성된 날짜의 TK입니다. 
+
+
+| dataCenter | 문자열 | 예 | dataCenter dwh_dimensions.storage_dimension에 할당된 주석 값 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| internal_volume_daily_performance_fact | link:#entity-internal_volume_daily_performance_fact["internal_volume_daily_performance_fact"] | 많은 
+
+
+| switch_performance_for_storage_hourly_fact | link:#entity-switch_performance_for_storage_hourly_fact["switch_performance_for_storage_hourly_fact"] | 많은 
+
+
+| storage_node_hourly_performance_fact | link:#entity-storage_node_hourly_performance_fact["storage_node_hourly_performance_fact"] | 많은 
+
+
+| qtree_hourly_performance_fact | link:#entity-qtree_hourly_performance_fact["qtree_hourly_performance_fact"] | 많은 
+
+
+| vmdk_hourly_performance_fact | link:#entity-vmdk_hourly_performance_fact["vmdk_hourly_performance_fact"] | 많은 
+
+
+| volume_hourly_performance_fact | link:#entity-volume_hourly_performance_fact["volume_hourly_performance_fact"] | 많은 
+
+
+| qtree_daily_performance_fact | link:#entity-qtree_daily_performance_fact["qtree_daily_performance_fact"] | 많은 
+
+
+| storage_node_daily_performance_fact | link:#entity-storage_node_daily_performance_fact["storage_node_daily_performance_fact"] | 많은 
+
+
+| disk_hourly_performance_fact | link:#entity-disk_hourly_performance_fact["disk_hourly_performance_fact"] | 많은 
+
+
+| disk_daily_performance_fact | link:#entity-disk_daily_performance_fact["disk_daily_performance_fact"] | 많은 
+
+
+| internal_volume_hourly_performance_fact | link:#entity-internal_volume_hourly_performance_fact["internal_volume_hourly_performance_fact"] | 많은 
+
+
+| volume_daily_performance_fact | link:#entity-volume_daily_performance_fact["volume_daily_performance_fact"] | 많은 
+
+
+| vmdk_daily_performance_fact | link:#entity-vmdk_daily_performance_fact["vmdk_daily_performance_fact"] | 많은 
+|===
+
+
+[[storagenodedailyperformancefact]]
+=== storage_node_daily_performance_fact
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합: storage_node_daily_performance_fact
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk *[PK]* | Int32 | 예 | 그 사실을 알지 못한다. 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["date_dimension"].tk | Int32 | 예 | 날짜 차원의 TK. 
+
+
+| storageTk *[FK]* →link:#entity-storage_dimension["스토리지_차원"].tk | Int32 | 예 | 저장소의 TK. 
+
+
+| storageNodeTk *[FK]* →link:#entity-storage_node_dimension["스토리지 노드 크기"].tk | Int32 | 예 | 스토리지 노드의 TK. 
+
+
+| tierTk *[FK]* →link:#entity-tier_dimension["계층_차원"].tk | Int32 | 예 | 티어의 TK. 
+
+
+| readResponseTime | 더블 | 예 | 읽기 응답 시간. 
+
+
+| writeResponseTime | 더블 | 예 | 쓰기 응답 시간. 
+
+
+| totalResponseTime | 더블 | 예 | 총 응답 시간. 
+
+
+| totalResponseTimeMax | 더블 | 예 | 총 최대 응답 시간. 
+
+
+| readThroughput | 더블 | 예 | 읽기 처리량 평균. 
+
+
+| writeThroughput | 더블 | 예 | 쓰기 처리량 평균. 
+
+
+| totalThroughput | 더블 | 예 | 총 처리량 평균(읽기+쓰기). 
+
+
+| totalThroughputMax | 더블 | 예 | 최대 총 처리량. 
+
+
+| readIops | 더블 | 예 | 초당 I/O 읽기 횟수. 
+
+
+| writeIops | 더블 | 예 | 초당 입출력 쓰기 횟수. 
+
+
+| totalIops | 더블 | 예 | 초당 총 입출력 평균(읽기+쓰기). 
+
+
+| totalIopsMax | 더블 | 예 | 초당 최대 입출력 횟수. 
+
+
+| diskReadsReplaced | 더블 | 예 | 디스크 읽기가 교체되었습니다. 
+
+
+| cacheHitRatio | 더블 | 예 | 캐시 적중률. 
+
+
+| 활용률 | 더블 | 예 | 활용률(%) 
+
+
+| utilizationMax | 더블 | 예 | 최대 활용률(%) 
+
+
+| readFileSystemIops | 더블 | 예 | 파일 시스템 읽기 IOPS 
+
+
+| writeFileSystemIops | 더블 | 예 | 파일 시스템 쓰기 IOPS 
+
+
+| readFileSystemThroughput | 더블 | 예 | 파일 시스템 읽기 처리량 
+
+
+| writeFileSystemThroughput | 더블 | 예 | 파일 시스템 쓰기 처리량 
+
+
+| portUtilization | 더블 | 예 | [Deprecated] 포트 사용률(%) 
+
+
+| portErrors | Int64 | 예 | [Deprecated] 포트 오류. 
+
+
+| portTraffic | 더블 | 예 | [Deprecated] 포트 트래픽. 
+
+
+| 액세스됨 | Int32 | 예 | 스토리지 노드에 접근했습니까? 
+
+
+| 타임스탬프 *[PK]* | Int64 | 예 | 사실 시작 타임스탬프, 파티셔닝용 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| 스토리지 노드 크기 | link:#entity-storage_node_dimension["스토리지 노드 크기"] | JOIN 1개: storageNodeTk=link:#entity-storage_node_dimension["스토리지 노드 크기"].tk 
+
+
+| 스토리지_차원 | link:#entity-storage_dimension["스토리지_차원"] | JOIN 1개: storageTk=link:#entity-storage_dimension["스토리지_차원"].tk 
+
+
+| 계층_차원 | link:#entity-tier_dimension["계층_차원"] | JOIN 1개: tierTk=link:#entity-tier_dimension["계층_차원"].tk 
+
+
+| date_dimension | link:#entity-date_dimension["date_dimension"] | JOIN 1: dateTk=link:#entity-date_dimension["date_dimension"].tk 
+|===
+
+
+[[storagenodedimension]]
+=== 스토리지 노드 크기
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합: storage_node_dimension
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk | Int32 | 예 | 이 스토리지 노드 행의 TK입니다. 
+
+
+| 이름 | 문자열 | 예 | 스토리지 노드의 이름입니다. 
+
+
+| 식별자 | 문자열 | 예 | 스토리지 노드의 식별자입니다. 
+
+
+| 버전 | 문자열 | 예 | 스토리지 노드의 버전입니다. 
+
+
+| 모델 | 문자열 | 예 | 스토리지 노드의 모델입니다. 
+
+
+| serialNumber | 문자열 | 예 | SerialNumber 스토리지 노드의 일련 번호입니다. 
+
+
+| siteName | 문자열 | 예 | 스토리지 노드의 사이트 이름입니다. 
+
+
+| url | 문자열 | 예 | Insight Server에서 이 스토리지 노드의 URL입니다. 
+
+
+| id | Int64 | 예 | dwh_inventory.storage_node에 있는 스토리지 노드의 GUID 
+
+
+| 최신 | 문자열 | 예 | 이 행이 해당 스토리지 노드의 최신 행인지 여부를 나타냅니다. 
+
+
+| dateTk | Int32 | 예 | 이 스토리지 노드 행이 생성된 날짜의 TK입니다. 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| volume_hourly_performance_fact | link:#entity-volume_hourly_performance_fact["volume_hourly_performance_fact"] | 많은 
+
+
+| storage_node_daily_performance_fact | link:#entity-storage_node_daily_performance_fact["storage_node_daily_performance_fact"] | 많은 
+
+
+| internal_volume_daily_performance_fact | link:#entity-internal_volume_daily_performance_fact["internal_volume_daily_performance_fact"] | 많은 
+
+
+| internal_volume_hourly_performance_fact | link:#entity-internal_volume_hourly_performance_fact["internal_volume_hourly_performance_fact"] | 많은 
+
+
+| volume_daily_performance_fact | link:#entity-volume_daily_performance_fact["volume_daily_performance_fact"] | 많은 
+
+
+| storage_node_hourly_performance_fact | link:#entity-storage_node_hourly_performance_fact["storage_node_hourly_performance_fact"] | 많은 
+|===
+
+
+[[storagenodehourlyperformancefact]]
+=== storage_node_hourly_performance_fact
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합: storage_node_hourly_performance_fact
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk *[PK]* | Int32 | 예 | 그 사실을 알지 못한다. 
+
+
+| timeTk *[FK]* →link:#entity-time_dimension["time_dimension"].tk | Int32 | 예 | 시간 차원의 TK. 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["date_dimension"].tk | Int32 | 예 | 날짜 차원의 TK. 
+
+
+| storageTk *[FK]* →link:#entity-storage_dimension["스토리지_차원"].tk | Int32 | 예 | 저장소의 TK. 
+
+
+| storageNodeTk *[FK]* →link:#entity-storage_node_dimension["스토리지 노드 크기"].tk | Int32 | 예 | 스토리지 노드의 TK. 
+
+
+| tierTk *[FK]* →link:#entity-tier_dimension["계층_차원"].tk | Int32 | 예 | 티어의 TK. 
+
+
+| readResponseTime | 더블 | 예 | 읽기 응답 시간. 
+
+
+| writeResponseTime | 더블 | 예 | 쓰기 응답 시간. 
+
+
+| totalResponseTime | 더블 | 예 | 총 응답 시간. 
+
+
+| totalResponseTimeMax | 더블 | 예 | 총 최대 응답 시간. 
+
+
+| readThroughput | 더블 | 예 | 읽기 처리량 평균. 
+
+
+| writeThroughput | 더블 | 예 | 쓰기 처리량 평균. 
+
+
+| totalThroughput | 더블 | 예 | 총 처리량 평균(읽기+쓰기). 
+
+
+| totalThroughputMax | 더블 | 예 | 최대 총 처리량. 
+
+
+| readIops | 더블 | 예 | 초당 I/O 읽기 횟수. 
+
+
+| writeIops | 더블 | 예 | 초당 입출력 쓰기 횟수. 
+
+
+| totalIops | 더블 | 예 | 초당 총 입출력 평균(읽기+쓰기). 
+
+
+| totalIopsMax | 더블 | 예 | 초당 최대 입출력 횟수. 
+
+
+| diskReadsReplaced | 더블 | 예 | 디스크 읽기가 교체되었습니다. 
+
+
+| cacheHitRatio | 더블 | 예 | 캐시 적중률. 
+
+
+| 활용률 | 더블 | 예 | 활용률(%) 
+
+
+| utilizationMax | 더블 | 예 | 최대 활용률(%) 
+
+
+| readFileSystemIops | 더블 | 예 | 파일 시스템 읽기 IOPS 
+
+
+| writeFileSystemIops | 더블 | 예 | 파일 시스템 쓰기 IOPS 
+
+
+| readFileSystemThroughput | 더블 | 예 | 파일 시스템 읽기 처리량 
+
+
+| writeFileSystemThroughput | 더블 | 예 | 파일 시스템 쓰기 처리량 
+
+
+| portUtilization | 더블 | 예 | [Deprecated] 포트 사용률(%) 
+
+
+| portErrors | Int64 | 예 | [Deprecated] 포트 오류. 
+
+
+| portTraffic | 더블 | 예 | [Deprecated] 포트 트래픽. 
+
+
+| 액세스됨 | Int32 | 예 | 스토리지 노드에 접근했습니까? 
+
+
+| 타임스탬프 *[PK]* | Int64 | 예 | 사실 시작 타임스탬프, 파티셔닝용 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| 스토리지 노드 크기 | link:#entity-storage_node_dimension["스토리지 노드 크기"] | JOIN 1개: storageNodeTk=link:#entity-storage_node_dimension["스토리지 노드 크기"].tk 
+
+
+| 스토리지_차원 | link:#entity-storage_dimension["스토리지_차원"] | JOIN 1개: storageTk=link:#entity-storage_dimension["스토리지_차원"].tk 
+
+
+| 계층_차원 | link:#entity-tier_dimension["계층_차원"] | JOIN 1개: tierTk=link:#entity-tier_dimension["계층_차원"].tk 
+
+
+| time_dimension | link:#entity-time_dimension["time_dimension"] | JOIN 1: timeTk=link:#entity-time_dimension["time_dimension"].tk 
+
+
+| date_dimension | link:#entity-date_dimension["date_dimension"] | JOIN 1: dateTk=link:#entity-date_dimension["date_dimension"].tk 
+|===
+
+
+[[storagepooldimension]]
+=== 스토리지 풀 차원
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합: storage_pool_dimension
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk | Int32 | 예 | 이 스토리지 풀 행의 TK입니다. 
+
+
+| 식별자 | 문자열 | 예 | 기기 식별자. 
+
+
+| 이름 | 문자열 | 예 | 스토리지 풀의 이름입니다. 
+
+
+| storageName | 문자열 | 예 | 이 스토리지 풀이 위치한 스토리지의 이름입니다. 
+
+
+| storageIP | 문자열 | 예 | 이 스토리지 풀이 위치한 스토리지의 IP 주소입니다. 
+
+
+| 유형 | 문자열 | 예 | 스토리지 풀 유형(예: RAID, AGGREGATE 등). 
+
+
+| 이중화 | 문자열 | 예 | 스토리지 풀 이중화. 
+
+
+| thinProvisioningSupported | 문자열 | 예 | 씬 프로비저닝이 스토리지 풀에서 지원되는지 여부를 나타냅니다. 
+
+
+| isVirtual | 문자열 | 예 | Virtual은 어레이 가상화의 프런트엔드 스토리지 풀임을 나타냅니다. 
+
+
+| usesFlashPools | 문자열 | 예 | 이 스토리지 풀이 플래시 풀을 사용하는지 여부를 나타냅니다. 
+
+
+| url | 문자열 | 예 | Insight Server에서 이 스토리지 풀의 URL입니다. 
+
+
+| id | Int64 | 예 | dwh_inventory.storage_pool에 있는 스토리지 풀의 GUID 
+
+
+| 최신 | 문자열 | 예 | 이 행이 해당 스토리지 풀의 최신 행인지 여부를 나타냅니다. 
+
+
+| dateTk | Int32 | 예 | 이 스토리지 풀 행이 생성된 날짜의 TK입니다. 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| qtree_hourly_performance_fact | link:#entity-qtree_hourly_performance_fact["qtree_hourly_performance_fact"] | 많은 
+
+
+| volume_hourly_performance_fact | link:#entity-volume_hourly_performance_fact["volume_hourly_performance_fact"] | 많은 
+
+
+| qtree_daily_performance_fact | link:#entity-qtree_daily_performance_fact["qtree_daily_performance_fact"] | 많은 
+
+
+| disk_hourly_performance_fact | link:#entity-disk_hourly_performance_fact["disk_hourly_performance_fact"] | 많은 
+
+
+| disk_daily_performance_fact | link:#entity-disk_daily_performance_fact["disk_daily_performance_fact"] | 많은 
+
+
+| internal_volume_daily_performance_fact | link:#entity-internal_volume_daily_performance_fact["internal_volume_daily_performance_fact"] | 많은 
+
+
+| internal_volume_hourly_performance_fact | link:#entity-internal_volume_hourly_performance_fact["internal_volume_hourly_performance_fact"] | 많은 
+
+
+| volume_daily_performance_fact | link:#entity-volume_daily_performance_fact["volume_daily_performance_fact"] | 많은 
+|===
+
+
+[[switchdimension]]
+=== switch_dimension
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:switch_dimension
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk | Int32 | 예 | 이 스위치 행의 TK입니다. 
+
+
+| wwn | 문자열 | 예 | 스위치의 WWN. 
+
+
+| 이름 | 문자열 | 예 | 스위치의 이름입니다. 
+
+
+| 식별자 | 문자열 | 예 | 기기 식별자. 
+
+
+| ip | 문자열 | 예 | 스위치의 IP 주소. 
+
+
+| 모델 | 문자열 | 예 | 스위치 모델. 
+
+
+| 제조업체 | 문자열 | 예 | 스위치 제조업체. 
+
+
+| 펌웨어 | 문자열 | 예 | 스위치에서 실행 중인 펌웨어 버전입니다. 
+
+
+| serialNumber | 문자열 | 예 | 스위치의 일련번호. 
+
+
+| npv | 문자열 | 예 | 이것이 NPV 스위치인지 여부를 나타냅니다. 
+
+
+| isGenerated | 문자열 | 예 | 이 스위치가 물리적 장치에 해당하지 않는지 여부를 나타냅니다. 이는 일대다 포트 연결을 모델링하는 데 사용됩니다. 
+
+
+| 유형 | 문자열 | 예 | 스위치 유형. 
+
+
+| url | 문자열 | 예 | Insight Server에서 이 스위치에 대한 URL입니다. 
+
+
+| id | Int64 | 예 | dwh_inventory.switch에 있는 스위치의 GUID입니다. 
+
+
+| 최신 | 문자열 | 예 | 이 행이 해당 스위치에 대한 최신 행인지 여부를 나타냅니다. 
+
+
+| dateTk | Int32 | 예 | 이 스위치 행이 생성된 날짜의 TK입니다. 
+
+
+| dataCenter | 문자열 | 예 | dataCenter dwh_dimensions.switch_dimension에 할당된 주석 값 
+
+
+| switchLevel | 문자열 | 예 | switchLevel dwh_dimensions.switch_dimension에 할당된 주석 값 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| switch_performance_for_port_hourly_fact | link:#entity-switch_performance_for_port_hourly_fact["switch_performance_for_port_hourly_fact"] | 많은 
+|===
+
+
+[[switchperformanceforhosthourlyfact]]
+=== switch_performance_for_host_hourly_fact
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합: switch_performance_for_host_hourly_fact
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk *[PK]* | Int64 | 예 | 그 사실을 알지 못한다. 
+
+
+| timeTk *[FK]* →link:#entity-time_dimension["time_dimension"].tk | Int32 | 예 | 시간 차원의 TK. 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["date_dimension"].tk | Int32 | 예 | 날짜 차원의 TK. 
+
+
+| hostTk *[FK]* →link:#entity-host_dimension["호스트 차원"].tk | Int32 | 예 | 호스트의 TK. 
+
+
+| applicationTk *[FK]* →link:#entity-application_dimension["애플리케이션_차원"].tk | Int32 | 예 | 호스트에 대한 대표 애플리케이션 차원의 TK. 
+
+
+| applicationGroupTk *[FK]* →link:#entity-application_group_dimension["application_group_dimension"].tk | Int32 | 예 | 응용 프로그램 그룹 차원의 TK. 
+
+
+| businessEntityTk *[FK]* →link:#entity-business_entity_dimension["business_entity_dimension"].tk | Int32 | 예 | 사업체 차원의 TK. 
+
+
+| rxTraffic | 더블 | 예 | 수신 트래픽(MB) 
+
+
+| txTraffic | 더블 | 예 | 전송 트래픽(MB) 
+
+
+| totalTraffic | 더블 | 예 | 총 트래픽(MB) 
+
+
+| errorRateFlag | 문자열 | 예 | 오류율 플래그 
+
+
+| crcErrorRateFlag | 문자열 | 예 | CRC 오류율 플래그 
+
+
+| syncLossCount | Int64 | 예 | 동기화 손실 횟수 
+
+
+| signalLossCount | Int64 | 예 | 신호 손실 횟수 
+
+
+| class3DiscardCount | Int64 | 예 | 클래스 3 폐기 횟수 
+
+
+| frameTooShortCount | Int64 | 예 | 프레임 너무 짧음 수 
+
+
+| frameTooLongCount | Int64 | 예 | 프레임 초과 길이 카운트 
+
+
+| bbCreditErrorCount | Int64 | 예 | BB 크레딧 오류 횟수 
+
+
+| rx | 더블 | 예 | 수신 사용률(%) 
+
+
+| tx | 더블 | 예 | 전송 사용률(%) 
+
+
+| rxMax | 더블 | 예 | 최대 수신 사용률(%) 
+
+
+| txMax | 더블 | 예 | 최대 전송 사용률(%) 
+
+
+| trafficUtilizationTotal | 더블 | 예 | 총 트래픽 사용률(%) 
+
+
+| trafficUtilizationTotalMax | 더블 | 예 | 최대 총 트래픽 사용률(%) 
+
+
+| rxLinkResets | Int64 | 예 | 수신 링크 재설정 
+
+
+| txLinkResets | Int64 | 예 | 전송 링크 재설정 
+
+
+| balanceIndex | Int32 | 예 | 호스트 포트 밸런스 인덱스 
+
+
+| weightedBalanceIndex | Int32 | 예 | 호스트 포트 가중 균형 지수 
+
+
+| portSpeed | Int32 | 예 | 사실 포트 속도는 
+
+
+| portCount | Int32 | 예 | 사실 포트 개수 
+
+
+| portErrorsLinkFailure | Int64 | 예 | 링크 실패 횟수 
+
+
+| bbCreditZeroRx | Int64 | 예 | BBCredit 0 수신 
+
+
+| bbCreditZeroTx | Int64 | 예 | BBCredit 0 전송 
+
+
+| bbCreditZeroMsTx | 더블 | 예 | [사용 중단됨] BBCredit 0 Ms 전송 
+
+
+| bbCreditZeroTotal | Int64 | 예 | 총 BBCredit 0 
+
+
+| trafficRateTx | 더블 | 예 | 전송 트래픽 속도 
+
+
+| trafficRateRx | 더블 | 예 | 수신 트래픽 속도 
+
+
+| trafficRateTotal | 더블 | 예 | 총 트래픽 속도 
+
+
+| trafficFrameRateTx | 더블 | 예 | 전송 트래픽 프레임 속도 
+
+
+| trafficFrameRateRx | 더블 | 예 | 수신 트래픽 프레임 속도 
+
+
+| trafficFrameRateTotal | 더블 | 예 | 총 트래픽 프레임 속도 
+
+
+| trafficFrameSizeAvgTx | Int64 | 예 | 전송 트래픽 프레임 평균 크기 
+
+
+| trafficFrameSizeAvgRx | Int64 | 예 | 수신 트래픽 프레임 평균 크기 
+
+
+| portErrorsTimeoutDiscardTx | Int64 | 예 | 전송 시간 초과 폐기 횟수 
+
+
+| portErrorsCrc | Int64 | 예 | CRC 오류 횟수 
+
+
+| portErrorsEncIn | Int64 | 예 | 프레임 내 인코딩 오류 
+
+
+| portErrorsEncOut | Int64 | 예 | 프레임 외부의 인코딩 오류 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| business_entity_dimension | link:#entity-business_entity_dimension["business_entity_dimension"] | JOIN 1: businessEntityTk=link:#entity-business_entity_dimension["business_entity_dimension"].tk 
+
+
+| 애플리케이션_차원 | link:#entity-application_dimension["애플리케이션_차원"] | JOIN 1개: applicationTk=link:#entity-application_dimension["애플리케이션_차원"].tk 
+
+
+| time_dimension | link:#entity-time_dimension["time_dimension"] | JOIN 1: timeTk=link:#entity-time_dimension["time_dimension"].tk 
+
+
+| 호스트 차원 | link:#entity-host_dimension["호스트 차원"] | JOIN 1: hostTk=link:#entity-host_dimension["호스트 차원"].tk 
+
+
+| date_dimension | link:#entity-date_dimension["date_dimension"] | JOIN 1: dateTk=link:#entity-date_dimension["date_dimension"].tk 
+
+
+| application_group_dimension | link:#entity-application_group_dimension["application_group_dimension"] | JOIN 1개: applicationGroupTk=link:#entity-application_group_dimension["application_group_dimension"].tk 
+|===
+
+
+[[switchperformanceforporthourlyfact]]
+=== switch_performance_for_port_hourly_fact
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:switch_performance_for_port_hourly_fact
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk *[PK]* | Int64 | 예 | 그 사실을 알지 못한다. 
+
+
+| timeTk *[FK]* →link:#entity-time_dimension["time_dimension"].tk | Int32 | 예 | 시간 차원의 TK. 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["date_dimension"].tk | Int32 | 예 | 날짜 차원의 TK. 
+
+
+| portTk *[FK]* →link:#entity-port_dimension["포트_차원"].tk | Int32 | 예 | 포트의 TK. 
+
+
+| switchTk *[FK]* →link:#entity-switch_dimension["switch_dimension"].tk | Int32 | 예 | 스위치의 TK. 
+
+
+| fabricTk *[FK]* →link:#entity-fabric_dimension["fabric_dimension"].tk | Int32 | 예 | 원단의 TK. 
+
+
+| connectedDeviceTk *[FK]* →link:#entity-connected_device_dimension["connected_device_dimension"].tk | Int32 | 예 | 연결된 장치의 TK. 
+
+
+| connectivityType | 문자열 | 예 | 연결된 장치의 종류입니다. 
+
+
+| isl | 문자열 | 예 | 이 포트는 ISL 포트입니까? 
+
+
+| rxTraffic | 더블 | 예 | 수신 트래픽(MB) 
+
+
+| txTraffic | 더블 | 예 | 전송 트래픽(MB) 
+
+
+| totalTraffic | 더블 | 예 | 총 트래픽(MB) 
+
+
+| errorRateFlag | 문자열 | 예 | 오류율 플래그 
+
+
+| crcErrorRateFlag | 문자열 | 예 | CRC 오류율 플래그 
+
+
+| syncLossCount | Int64 | 예 | 동기화 손실 횟수 
+
+
+| signalLossCount | Int64 | 예 | 신호 손실 횟수 
+
+
+| class3DiscardCount | Int64 | 예 | 클래스 3 폐기 횟수 
+
+
+| frameTooShortCount | Int64 | 예 | 프레임 너무 짧음 수 
+
+
+| frameTooLongCount | Int64 | 예 | 프레임 초과 길이 카운트 
+
+
+| bbCreditErrorCount | Int64 | 예 | BB 크레딧 오류 횟수 
+
+
+| rx | 더블 | 예 | 수신 사용률(%) 
+
+
+| tx | 더블 | 예 | 전송 사용률(%) 
+
+
+| rxMax | 더블 | 예 | 최대 수신 사용률(%) 
+
+
+| txMax | 더블 | 예 | 최대 전송 사용률(%) 
+
+
+| trafficUtilizationTotal | 더블 | 예 | 총 트래픽 사용률(%) 
+
+
+| trafficUtilizationTotalMax | 더블 | 예 | 최대 총 트래픽 사용률(%) 
+
+
+| rxLinkResets | Int64 | 예 | 수신 링크 재설정 
+
+
+| txLinkResets | Int64 | 예 | 전송 링크 재설정 
+
+
+| portErrorsLinkFailure | Int64 | 예 | 링크 실패 횟수 
+
+
+| bbCreditZeroRx | Int64 | 예 | BBCredit 0 수신 
+
+
+| bbCreditZeroTx | Int64 | 예 | BBCredit 0 전송 
+
+
+| bbCreditZeroMsTx | 더블 | 예 | [사용 중단됨] BBCredit 0 Ms 전송 
+
+
+| bbCreditZeroTotal | Int64 | 예 | 총 BBCredit 0 
+
+
+| trafficRateTx | 더블 | 예 | 전송 트래픽 속도 
+
+
+| trafficRateRx | 더블 | 예 | 수신 트래픽 속도 
+
+
+| trafficRateTotal | 더블 | 예 | 총 트래픽 속도 
+
+
+| trafficFrameRateTx | 더블 | 예 | 전송 트래픽 프레임 속도 
+
+
+| trafficFrameRateRx | 더블 | 예 | 수신 트래픽 프레임 속도 
+
+
+| trafficFrameRateTotal | 더블 | 예 | 총 트래픽 프레임 속도 
+
+
+| trafficFrameSizeAvgTx | Int64 | 예 | 전송 트래픽 프레임 평균 크기 
+
+
+| trafficFrameSizeAvgRx | Int64 | 예 | 수신 트래픽 프레임 평균 크기 
+
+
+| portErrorsTimeoutDiscardTx | Int64 | 예 | 전송 시간 초과 폐기 횟수 
+
+
+| portErrorsCrc | Int64 | 예 | CRC 오류 횟수 
+
+
+| portErrorsEncIn | Int64 | 예 | 프레임 내 인코딩 오류 
+
+
+| portErrorsEncOut | Int64 | 예 | 프레임 외부의 인코딩 오류 
+
+
+| 타임스탬프 *[PK]* | Int64 | 예 | 사실 시작 타임스탬프, 파티셔닝용 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| connected_device_dimension | link:#entity-connected_device_dimension["connected_device_dimension"] | JOIN 1개: connectedDeviceTk=link:#entity-connected_device_dimension["connected_device_dimension"].tk 
+
+
+| fabric_dimension | link:#entity-fabric_dimension["fabric_dimension"] | JOIN 1: fabricTk=link:#entity-fabric_dimension["fabric_dimension"].tk 
+
+
+| 포트_차원 | link:#entity-port_dimension["포트_차원"] | JOIN 1개: portTk=link:#entity-port_dimension["포트_차원"].tk 
+
+
+| time_dimension | link:#entity-time_dimension["time_dimension"] | JOIN 1: timeTk=link:#entity-time_dimension["time_dimension"].tk 
+
+
+| date_dimension | link:#entity-date_dimension["date_dimension"] | JOIN 1: dateTk=link:#entity-date_dimension["date_dimension"].tk 
+
+
+| switch_dimension | link:#entity-switch_dimension["switch_dimension"] | JOIN 1개: switchTk=link:#entity-switch_dimension["switch_dimension"].tk 
+|===
+
+
+[[switchperformanceforstoragehourlyfact]]
+=== switch_performance_for_storage_hourly_fact
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:switch_performance_for_storage_hourly_fact
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk *[PK]* | Int64 | 예 | 그 사실을 알지 못한다. 
+
+
+| timeTk *[FK]* →link:#entity-time_dimension["time_dimension"].tk | Int32 | 예 | 시간 차원의 TK. 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["date_dimension"].tk | Int32 | 예 | 날짜 차원의 TK. 
+
+
+| storageTk *[FK]* →link:#entity-storage_dimension["스토리지_차원"].tk | Int32 | 예 | 저장소의 TK. 
+
+
+| rxTraffic | 더블 | 예 | 수신 트래픽(MB) 
+
+
+| txTraffic | 더블 | 예 | 전송 트래픽(MB) 
+
+
+| totalTraffic | 더블 | 예 | 총 트래픽(MB) 
+
+
+| errorRateFlag | 문자열 | 예 | 오류율 플래그 
+
+
+| crcErrorRateFlag | 문자열 | 예 | CRC 오류율 플래그 
+
+
+| syncLossCount | Int64 | 예 | 동기화 손실 횟수 
+
+
+| signalLossCount | Int64 | 예 | 신호 손실 횟수 
+
+
+| class3DiscardCount | Int64 | 예 | 클래스 3 폐기 횟수 
+
+
+| frameTooShortCount | Int64 | 예 | 프레임 너무 짧음 수 
+
+
+| frameTooLongCount | Int64 | 예 | 프레임 초과 길이 카운트 
+
+
+| bbCreditErrorCount | Int64 | 예 | BB 크레딧 오류 횟수 
+
+
+| rx | 더블 | 예 | 수신 사용률(%) 
+
+
+| tx | 더블 | 예 | 전송 사용률(%) 
+
+
+| rxMax | 더블 | 예 | 최대 수신 사용률(%) 
+
+
+| txMax | 더블 | 예 | 최대 전송 사용률(%) 
+
+
+| trafficUtilizationTotal | 더블 | 예 | 총 트래픽 사용률(%) 
+
+
+| trafficUtilizationTotalMax | 더블 | 예 | 최대 총 트래픽 사용률(%) 
+
+
+| rxLinkResets | Int64 | 예 | 수신 링크 재설정 
+
+
+| txLinkResets | Int64 | 예 | 전송 링크 재설정 
+
+
+| balanceIndex | Int32 | 예 | 호스트 포트 밸런스 인덱스 
+
+
+| weightedBalanceIndex | Int32 | 예 | 호스트 포트 가중 균형 지수 
+
+
+| portSpeed | Int32 | 예 | 사실 포트 속도는 
+
+
+| portCount | Int32 | 예 | 사실 포트 개수 
+
+
+| portErrorsLinkFailure | Int64 | 예 | 링크 실패 횟수 
+
+
+| bbCreditZeroRx | Int64 | 예 | BBCredit 0 수신 
+
+
+| bbCreditZeroTx | Int64 | 예 | BBCredit 0 전송 
+
+
+| bbCreditZeroMsTx | 더블 | 예 | [사용 중단됨] BBCredit 0 Ms 전송 
+
+
+| bbCreditZeroTotal | Int64 | 예 | 총 BBCredit 0 
+
+
+| trafficRateTx | 더블 | 예 | 전송 트래픽 속도 
+
+
+| trafficRateRx | 더블 | 예 | 수신 트래픽 속도 
+
+
+| trafficRateTotal | 더블 | 예 | 총 트래픽 속도 
+
+
+| trafficFrameRateTx | 더블 | 예 | 전송 트래픽 프레임 속도 
+
+
+| trafficFrameRateRx | 더블 | 예 | 수신 트래픽 프레임 속도 
+
+
+| trafficFrameRateTotal | 더블 | 예 | 총 트래픽 프레임 속도 
+
+
+| trafficFrameSizeAvgTx | Int64 | 예 | 전송 트래픽 프레임 평균 크기 
+
+
+| trafficFrameSizeAvgRx | Int64 | 예 | 수신 트래픽 프레임 평균 크기 
+
+
+| portErrorsTimeoutDiscardTx | Int64 | 예 | 전송 시간 초과 폐기 횟수 
+
+
+| portErrorsCrc | Int64 | 예 | CRC 오류 횟수 
+
+
+| portErrorsEncIn | Int64 | 예 | 프레임 내 인코딩 오류 
+
+
+| portErrorsEncOut | Int64 | 예 | 프레임 외부의 인코딩 오류 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| 스토리지_차원 | link:#entity-storage_dimension["스토리지_차원"] | JOIN 1개: storageTk=link:#entity-storage_dimension["스토리지_차원"].tk 
+
+
+| time_dimension | link:#entity-time_dimension["time_dimension"] | JOIN 1: timeTk=link:#entity-time_dimension["time_dimension"].tk 
+
+
+| date_dimension | link:#entity-date_dimension["date_dimension"] | JOIN 1: dateTk=link:#entity-date_dimension["date_dimension"].tk 
+|===
+
+
+[[switchperformancefortapehourlyfact]]
+=== switch_performance_for_tape_hourly_fact
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합: switch_performance_for_tape_hourly_fact
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk *[PK]* | Int64 | 예 | 그 사실을 알지 못한다. 
+
+
+| timeTk *[FK]* →link:#entity-time_dimension["time_dimension"].tk | Int32 | 예 | 시간 차원의 TK. 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["date_dimension"].tk | Int32 | 예 | 날짜 차원의 TK. 
+
+
+| tapeTk *[FK]* →link:#entity-tape_dimension["테이프 크기"].tk | Int32 | 예 | 테이프의 TK. 
+
+
+| rxTraffic | 더블 | 예 | 수신 트래픽(MB) 
+
+
+| txTraffic | 더블 | 예 | 전송 트래픽(MB) 
+
+
+| totalTraffic | 더블 | 예 | 총 트래픽(MB) 
+
+
+| errorRateFlag | 문자열 | 예 | 오류율 플래그 
+
+
+| crcErrorRateFlag | 문자열 | 예 | CRC 오류율 플래그 
+
+
+| syncLossCount | Int64 | 예 | 동기화 손실 횟수 
+
+
+| signalLossCount | Int64 | 예 | 신호 손실 횟수 
+
+
+| class3DiscardCount | Int64 | 예 | 클래스 3 폐기 횟수 
+
+
+| frameTooShortCount | Int64 | 예 | 프레임 너무 짧음 수 
+
+
+| frameTooLongCount | Int64 | 예 | 프레임 초과 길이 카운트 
+
+
+| bbCreditErrorCount | Int64 | 예 | BB 크레딧 오류 횟수 
+
+
+| rx | 더블 | 예 | 수신 사용률(%) 
+
+
+| tx | 더블 | 예 | 전송 사용률(%) 
+
+
+| rxMax | 더블 | 예 | 최대 수신 사용률(%) 
+
+
+| txMax | 더블 | 예 | 최대 전송 사용률(%) 
+
+
+| trafficUtilizationTotal | 더블 | 예 | 총 트래픽 사용률(%) 
+
+
+| trafficUtilizationTotalMax | 더블 | 예 | 최대 총 트래픽 사용률(%) 
+
+
+| rxLinkResets | Int64 | 예 | 수신 링크 재설정 
+
+
+| txLinkResets | Int64 | 예 | 전송 링크 재설정 
+
+
+| balanceIndex | Int32 | 예 | 호스트 포트 밸런스 인덱스 
+
+
+| weightedBalanceIndex | Int32 | 예 | 호스트 포트 가중 균형 지수 
+
+
+| portSpeed | Int32 | 예 | 사실 포트 속도는 
+
+
+| portCount | Int32 | 예 | 사실 포트 개수 
+
+
+| portErrorsLinkFailure | Int64 | 예 | 링크 실패 횟수 
+
+
+| bbCreditZeroRx | Int64 | 예 | BBCredit 0 수신 
+
+
+| bbCreditZeroTx | Int64 | 예 | BBCredit 0 전송 
+
+
+| bbCreditZeroMsTx | 더블 | 예 | [사용 중단됨] BBCredit 0 Ms 전송 
+
+
+| bbCreditZeroTotal | Int64 | 예 | 총 BBCredit 0 
+
+
+| trafficRateTx | 더블 | 예 | 전송 트래픽 속도 
+
+
+| trafficRateRx | 더블 | 예 | 수신 트래픽 속도 
+
+
+| trafficRateTotal | 더블 | 예 | 총 트래픽 속도 
+
+
+| trafficFrameRateTx | 더블 | 예 | 전송 트래픽 프레임 속도 
+
+
+| trafficFrameRateRx | 더블 | 예 | 수신 트래픽 프레임 속도 
+
+
+| trafficFrameRateTotal | 더블 | 예 | 총 트래픽 프레임 속도 
+
+
+| trafficFrameSizeAvgTx | Int64 | 예 | 전송 트래픽 프레임 평균 크기 
+
+
+| trafficFrameSizeAvgRx | Int64 | 예 | 수신 트래픽 프레임 평균 크기 
+
+
+| portErrorsTimeoutDiscardTx | Int64 | 예 | 전송 시간 초과 폐기 횟수 
+
+
+| portErrorsCrc | Int64 | 예 | CRC 오류 횟수 
+
+
+| portErrorsEncIn | Int64 | 예 | 프레임 내 인코딩 오류 
+
+
+| portErrorsEncOut | Int64 | 예 | 프레임 외부의 인코딩 오류 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| time_dimension | link:#entity-time_dimension["time_dimension"] | JOIN 1: timeTk=link:#entity-time_dimension["time_dimension"].tk 
+
+
+| date_dimension | link:#entity-date_dimension["date_dimension"] | JOIN 1: dateTk=link:#entity-date_dimension["date_dimension"].tk 
+
+
+| 테이프 크기 | link:#entity-tape_dimension["테이프 크기"] | 하나의 JOIN:tapeTk=link:#entity-tape_dimension["테이프 크기"].tk 
+|===
+
+
+[[tapedimension]]
+=== 테이프 크기
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합: tape_dimension
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk | Int32 | 예 | 이 테이프 줄의 TK입니다. 
+
+
+| 이름 | 문자열 | 예 | 테이프의 이름입니다. 
+
+
+| 식별자 | 문자열 | 예 | 기기 식별자. 
+
+
+| ip | 문자열 | 예 | 테이프의 IP 주소. 
+
+
+| 제조업체 | 문자열 | 예 | 테이프 제조업체입니다. 
+
+
+| serialNumber | 문자열 | 예 | 테이프의 일련 번호입니다. 
+
+
+| id | Int64 | 예 | dwh_inventory.tape에 있는 테이프의 GUID입니다. 
+
+
+| 최신 | 문자열 | 예 | 이 행이 해당 테이프의 최신 행인지 여부를 나타냅니다. 
+
+
+| dateTk | Int32 | 예 | 이 테이프 행이 생성된 날짜의 TK입니다. 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| switch_performance_for_tape_hourly_fact | link:#entity-switch_performance_for_tape_hourly_fact["switch_performance_for_tape_hourly_fact"] | 많은 
+|===
+
+
+[[tierdimension]]
+=== 계층_차원
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:tier_dimension
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk | Int32 | 예 | 이 티어 행의 TK입니다. 
+
+
+| 이름 | 문자열 | 예 | 해당 계층을 식별하는 이름입니다. 
+
+
+| 시퀀스 | Int32 | 예 | dwh_inventory.annotation_value에 정의된 티어의 순번입니다. 
+
+
+| 비용 | 더블 | 예 | 이 등급과 관련된 비용입니다. 
+
+
+| id | Int64 | 예 | dwh_inventory.annotation_value에 있는 티어의 GUID입니다. 
+
+
+| 최신 | 문자열 | 예 | 이 행이 해당 계층의 최신 행인지 여부를 나타냅니다. 
+
+
+| dateTk | Int32 | 예 | 이 계층 행이 생성된 날짜의 TK입니다. 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| qtree_hourly_performance_fact | link:#entity-qtree_hourly_performance_fact["qtree_hourly_performance_fact"] | 많은 
+
+
+| vmdk_hourly_performance_fact | link:#entity-vmdk_hourly_performance_fact["vmdk_hourly_performance_fact"] | 많은 
+
+
+| volume_hourly_performance_fact | link:#entity-volume_hourly_performance_fact["volume_hourly_performance_fact"] | 많은 
+
+
+| application_volume_hourly_performance_fact | link:#entity-application_volume_hourly_performance_fact["application_volume_hourly_performance_fact"] | 많은 
+
+
+| qtree_daily_performance_fact | link:#entity-qtree_daily_performance_fact["qtree_daily_performance_fact"] | 많은 
+
+
+| storage_node_daily_performance_fact | link:#entity-storage_node_daily_performance_fact["storage_node_daily_performance_fact"] | 많은 
+
+
+| host_volume_hourly_performance_fact | link:#entity-host_volume_hourly_performance_fact["host_volume_hourly_performance_fact"] | 많은 
+
+
+| internal_volume_daily_performance_fact | link:#entity-internal_volume_daily_performance_fact["internal_volume_daily_performance_fact"] | 많은 
+
+
+| internal_volume_hourly_performance_fact | link:#entity-internal_volume_hourly_performance_fact["internal_volume_hourly_performance_fact"] | 많은 
+
+
+| volume_daily_performance_fact | link:#entity-volume_daily_performance_fact["volume_daily_performance_fact"] | 많은 
+
+
+| vmdk_daily_performance_fact | link:#entity-vmdk_daily_performance_fact["vmdk_daily_performance_fact"] | 많은 
+
+
+| storage_node_hourly_performance_fact | link:#entity-storage_node_hourly_performance_fact["storage_node_hourly_performance_fact"] | 많은 
+|===
+
+
+[[timedimension]]
+=== time_dimension
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 세트: time_dimension
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk *[PK]* | Int32 | 예 | 시간 차원의 TK. 
+
+
+| hourDateTime | DateTimeOffset | 예 | 이 차원에 대한 전체 날짜 + 시간 표현(분과 초는 0으로 표시됨) 
+
+
+| 시간 | 바이트 | 예 | 하루 중 시간, 24시간 형식 
+
+
+| 분 | 바이트 | 예 | 분/시간 
+
+
+| 두 번째 | 바이트 | 예 | 분의 초 
+
+
+| 마이크로초 | Int32 | 예 | 마이크로초(초) 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["date_dimension"].tk | Int32 | 예 | 관련 날짜 차원 일 대표(있는 경우)에 대한 TK 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| date_dimension | link:#entity-date_dimension["date_dimension"] | JOIN 1: dateTk=link:#entity-date_dimension["date_dimension"].tk 
+
+
+| vm_hourly_performance_fact | link:#entity-vm_hourly_performance_fact["vm_hourly_performance_fact"] | 많은 
+
+
+| switch_performance_for_port_hourly_fact | link:#entity-switch_performance_for_port_hourly_fact["switch_performance_for_port_hourly_fact"] | 많은 
+
+
+| host_volume_hourly_performance_fact | link:#entity-host_volume_hourly_performance_fact["host_volume_hourly_performance_fact"] | 많은 
+
+
+| switch_performance_for_tape_hourly_fact | link:#entity-switch_performance_for_tape_hourly_fact["switch_performance_for_tape_hourly_fact"] | 많은 
+
+
+| switch_performance_for_host_hourly_fact | link:#entity-switch_performance_for_host_hourly_fact["switch_performance_for_host_hourly_fact"] | 많은 
+
+
+| switch_performance_for_storage_hourly_fact | link:#entity-switch_performance_for_storage_hourly_fact["switch_performance_for_storage_hourly_fact"] | 많은 
+
+
+| storage_node_hourly_performance_fact | link:#entity-storage_node_hourly_performance_fact["storage_node_hourly_performance_fact"] | 많은 
+
+
+| qtree_hourly_performance_fact | link:#entity-qtree_hourly_performance_fact["qtree_hourly_performance_fact"] | 많은 
+
+
+| vmdk_hourly_performance_fact | link:#entity-vmdk_hourly_performance_fact["vmdk_hourly_performance_fact"] | 많은 
+
+
+| volume_hourly_performance_fact | link:#entity-volume_hourly_performance_fact["volume_hourly_performance_fact"] | 많은 
+
+
+| application_volume_hourly_performance_fact | link:#entity-application_volume_hourly_performance_fact["application_volume_hourly_performance_fact"] | 많은 
+
+
+| disk_hourly_performance_fact | link:#entity-disk_hourly_performance_fact["disk_hourly_performance_fact"] | 많은 
+
+
+| internal_volume_hourly_performance_fact | link:#entity-internal_volume_hourly_performance_fact["internal_volume_hourly_performance_fact"] | 많은 
+
+
+| host_vm_hourly_performance_fact | link:#entity-host_vm_hourly_performance_fact["host_vm_hourly_performance_fact"] | 많은 
+|===
+
+
+[[vmdailyperformancefact]]
+=== vm_daily_performance_fact
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:vm_daily_performance_fact
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk *[PK]* | Int32 | 예 | 그 사실을 알지 못한다. 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["date_dimension"].tk | Int32 | 예 | 날짜 차원의 TK. 
+
+
+| hostTk *[FK]* →link:#entity-host_dimension["호스트 차원"].tk | Int32 | 예 | 호스트의 TK. 
+
+
+| vmTk *[FK]* →link:#entity-vm_dimension["vm_dimension"].tk | Int32 | 예 | VM의 TK. 
+
+
+| businessEntityTk *[FK]* →link:#entity-business_entity_dimension["business_entity_dimension"].tk | Int32 | 예 | 사업체의 TK. 
+
+
+| applicationTk *[FK]* →link:#entity-application_dimension["애플리케이션_차원"].tk | Int32 | 예 | 신청 담당자의 TK. 
+
+
+| applicationGroupTk *[FK]* →link:#entity-application_group_dimension["application_group_dimension"].tk | Int32 | 예 | 응용 프로그램 그룹의 TK. 
+
+
+| k8sNodeTk *[FK]* →link:#entity-k8s_node_dimension["k8s_node_dimension"].tk | Int32 | 예 | k8s 노드의 TK. 
+
+
+| readIops | 더블 | 예 | 초당 I/O 읽기 횟수. 
+
+
+| writeIops | 더블 | 예 | 초당 입출력 쓰기 횟수. 
+
+
+| totalIops | 더블 | 예 | 초당 총 입출력 평균(읽기+쓰기). 
+
+
+| totalIopsMax | 더블 | 예 | 초당 최대 입출력 횟수. 
+
+
+| readThroughput | 더블 | 예 | 읽기 처리량 평균. 
+
+
+| writeThroughput | 더블 | 예 | 쓰기 처리량 평균. 
+
+
+| totalThroughput | 더블 | 예 | 총 처리량 평균(읽기+쓰기). 
+
+
+| totalThroughputMax | 더블 | 예 | 최대 총 처리량. 
+
+
+| readResponseTime | 더블 | 예 | 읽기 응답 시간. 
+
+
+| writeResponseTime | 더블 | 예 | 쓰기 응답 시간. 
+
+
+| totalResponseTime | 더블 | 예 | 총 응답 시간. 
+
+
+| totalResponseTimeMax | 더블 | 예 | 총 최대 응답 시간. 
+
+
+| ipReceiveThroughput | 더블 | 예 | IP 수신 처리량. 
+
+
+| ipTransmitThroughput | 더블 | 예 | IP 전송 처리량. 
+
+
+| ipTotalThroughput | 더블 | 예 | IP 총 처리량. 
+
+
+| ipTotalThroughputMax | 더블 | 예 | 최대 IP 총 처리량. 
+
+
+| cpuUtilization | 더블 | 예 | CPU 사용률(%) 
+
+
+| maxOfAvgCpuUtilization | 더블 | 예 | [지원 중단] 최대 CPU 사용률(%) 
+
+
+| maxOfMaxCpuUtilization | 더블 | 예 | 최대 CPU 사용률(%) 
+
+
+| memoryUtilization | 더블 | 예 | 메모리 사용률(%) 
+
+
+| maxOfAvgMemoryUtilization | 더블 | 예 | [지원 중단됨] 최대 메모리 사용률(%) 
+
+
+| maxOfMaxMemoryUtilization | 더블 | 예 | 최대 메모리 사용률(%) 
+
+
+| swapInRate | 더블 | 예 | 스왑 인 속도 
+
+
+| maxOfAvgSwapInRate | 더블 | 예 | 최대 스왑인 비율 
+
+
+| swapOutRate | 더블 | 예 | 스왑 아웃 속도 
+
+
+| maxOfAvgSwapOutRate | 더블 | 예 | 최대 스왑 아웃 속도 
+
+
+| swapTotalRate | 더블 | 예 | 총 스왑 속도 
+
+
+| swapTotalRateMax | 더블 | 예 | 최대 총 스왑 속도 
+
+
+| 프로세서 | Int32 | 예 | 가상 머신의 프로세서 수. 
+
+
+| 메모리 | Int64 | 예 | 가상 머신의 메모리 용량(MB). 
+
+
+| cpuCoSchedulingDelayTimePercent | 더블 | 예 | CPU Co-Stop 시간(%) 
+
+
+| cpuDemandToEntitlementPercent | 더블 | 예 | CPU 권한 대비 수요 비율(%) 
+
+
+| cpuIdleTimePercent | 더블 | 예 | CPU 유휴 시간(%) 
+
+
+| waitingToBeScheduledTimePercent | 더블 | 예 | CPU Ready Time(%) 
+
+
+| cpuTotalWaitTimePercent | 더블 | 예 | CPU 대기 시간(%) 
+
+
+| 타임스탬프 *[PK]* | Int64 | 예 | 사실 시작 타임스탬프, 파티셔닝용 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| business_entity_dimension | link:#entity-business_entity_dimension["business_entity_dimension"] | JOIN 1: businessEntityTk=link:#entity-business_entity_dimension["business_entity_dimension"].tk 
+
+
+| k8s_node_dimension | link:#entity-k8s_node_dimension["k8s_node_dimension"] | 하나의 JOIN:k8sNodeTk=link:#entity-k8s_node_dimension["k8s_node_dimension"].tk 
+
+
+| 애플리케이션_차원 | link:#entity-application_dimension["애플리케이션_차원"] | JOIN 1개: applicationTk=link:#entity-application_dimension["애플리케이션_차원"].tk 
+
+
+| 호스트 차원 | link:#entity-host_dimension["호스트 차원"] | JOIN 1: hostTk=link:#entity-host_dimension["호스트 차원"].tk 
+
+
+| vm_dimension | link:#entity-vm_dimension["vm_dimension"] | JOIN 1: vmTk=link:#entity-vm_dimension["vm_dimension"].tk 
+
+
+| date_dimension | link:#entity-date_dimension["date_dimension"] | JOIN 1: dateTk=link:#entity-date_dimension["date_dimension"].tk 
+
+
+| application_group_dimension | link:#entity-application_group_dimension["application_group_dimension"] | JOIN 1개: applicationGroupTk=link:#entity-application_group_dimension["application_group_dimension"].tk 
+|===
+
+
+[[vmdimension]]
+=== vm_dimension
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:vm_dimension
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk | Int32 | 예 | 이 가상 머신 행의 TK입니다. 
+
+
+| 이름 | 문자열 | 예 | 가상 머신의 이름입니다. 
+
+
+| naturalKey | 문자열 | 예 | 가상 머신의 자연 식별자입니다. 
+
+
+| OS | 문자열 | 예 | 게스트 운영 체제. 
+
+
+| virtualCenterIp | 문자열 | 예 | 가상 머신의 가상 센터 IP 주소입니다. 
+
+
+| ips | 문자열 | 예 | 가상 머신의 IP 주소를 쉼표로 구분한 목록입니다. 
+
+
+| url | 문자열 | 예 | Insight Server에서 이 가상 머신의 URL입니다. 
+
+
+| id | Int64 | 예 | dwh_inventory.hv_virtual_machine에 있는 가상 머신의 GUID 
+
+
+| 최신 | 문자열 | 예 | 이 행이 해당 가상 머신의 최신 행인지 여부를 나타냅니다. 
+
+
+| dateTk | Int32 | 예 | 이 가상 머신 행이 생성된 날짜의 TK입니다. 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| vmdk_hourly_performance_fact | link:#entity-vmdk_hourly_performance_fact["vmdk_hourly_performance_fact"] | 많은 
+
+
+| vm_hourly_performance_fact | link:#entity-vm_hourly_performance_fact["vm_hourly_performance_fact"] | 많은 
+
+
+| vm_daily_performance_fact | link:#entity-vm_daily_performance_fact["vm_daily_performance_fact"] | 많은 
+
+
+| vmdk_daily_performance_fact | link:#entity-vmdk_daily_performance_fact["vmdk_daily_performance_fact"] | 많은 
+|===
+
+
+[[vmhourlyperformancefact]]
+=== vm_hourly_performance_fact
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:vm_hourly_performance_fact
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk *[PK]* | Int64 | 예 | 그 사실을 알지 못한다. 
+
+
+| timeTk *[FK]* →link:#entity-time_dimension["time_dimension"].tk | Int32 | 예 | 시간 차원의 TK. 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["date_dimension"].tk | Int32 | 예 | 날짜 차원의 TK. 
+
+
+| hostTk *[FK]* →link:#entity-host_dimension["호스트 차원"].tk | Int32 | 예 | 호스트의 TK. 
+
+
+| vmTk *[FK]* →link:#entity-vm_dimension["vm_dimension"].tk | Int32 | 예 | VM의 TK. 
+
+
+| businessEntityTk *[FK]* →link:#entity-business_entity_dimension["business_entity_dimension"].tk | Int32 | 예 | 사업체의 TK. 
+
+
+| applicationTk *[FK]* →link:#entity-application_dimension["애플리케이션_차원"].tk | Int32 | 예 | 신청 담당자의 TK. 
+
+
+| applicationGroupTk *[FK]* →link:#entity-application_group_dimension["application_group_dimension"].tk | Int32 | 예 | 응용 프로그램 그룹의 TK. 
+
+
+| k8sNodeTk *[FK]* →link:#entity-k8s_node_dimension["k8s_node_dimension"].tk | Int32 | 예 | k8s 노드의 TK. 
+
+
+| readIops | 더블 | 예 | 초당 I/O 읽기 횟수. 
+
+
+| writeIops | 더블 | 예 | 초당 입출력 쓰기 횟수. 
+
+
+| totalIops | 더블 | 예 | 초당 총 입출력 평균(읽기+쓰기). 
+
+
+| totalIopsMax | 더블 | 예 | 초당 최대 입출력 횟수. 
+
+
+| readThroughput | 더블 | 예 | 읽기 처리량 평균. 
+
+
+| writeThroughput | 더블 | 예 | 쓰기 처리량 평균. 
+
+
+| totalThroughput | 더블 | 예 | 총 처리량 평균(읽기+쓰기). 
+
+
+| totalThroughputMax | 더블 | 예 | 최대 총 처리량. 
+
+
+| readResponseTime | 더블 | 예 | 읽기 응답 시간. 
+
+
+| writeResponseTime | 더블 | 예 | 쓰기 응답 시간. 
+
+
+| totalResponseTime | 더블 | 예 | 총 응답 시간. 
+
+
+| totalResponseTimeMax | 더블 | 예 | 총 최대 응답 시간. 
+
+
+| ipReceiveThroughput | 더블 | 예 | IP 수신 처리량. 
+
+
+| ipTransmitThroughput | 더블 | 예 | IP 전송 처리량. 
+
+
+| ipTotalThroughput | 더블 | 예 | IP 총 처리량. 
+
+
+| ipTotalThroughputMax | 더블 | 예 | 최대 IP 총 처리량. 
+
+
+| cpuUtilization | 더블 | 예 | CPU 사용률(%) 
+
+
+| memoryUtilization | 더블 | 예 | 메모리 사용률(%) 
+
+
+| cpuUtilizationMax | 더블 | 예 | 최대 CPU 사용률(%) 
+
+
+| memoryUtilizationMax | 더블 | 예 | 최대 메모리 사용률(%) 
+
+
+| swapInRate | 더블 | 예 | 스왑 인 속도 
+
+
+| swapOutRate | 더블 | 예 | 스왑 아웃 속도 
+
+
+| swapTotalRate | 더블 | 예 | 총 스왑 속도 
+
+
+| swapTotalRateMax | 더블 | 예 | 최대 총 스왑 속도 
+
+
+| 프로세서 | Int32 | 예 | 가상 머신의 프로세서 수. 
+
+
+| 메모리 | Int64 | 예 | 가상 머신의 메모리 용량(MB). 
+
+
+| cpuCoSchedulingDelayTimePercent | 더블 | 예 | CPU Co-Stop 시간(%) 
+
+
+| cpuDemandToEntitlementPercent | 더블 | 예 | CPU 권한 대비 수요 비율(%) 
+
+
+| cpuIdleTimePercent | 더블 | 예 | CPU 유휴 시간(%) 
+
+
+| waitingToBeScheduledTimePercent | 더블 | 예 | CPU Ready Time(%) 
+
+
+| cpuTotalWaitTimePercent | 더블 | 예 | CPU 대기 시간(%) 
+
+
+| 타임스탬프 *[PK]* | Int64 | 예 | 사실 시작 타임스탬프, 파티셔닝용 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| business_entity_dimension | link:#entity-business_entity_dimension["business_entity_dimension"] | JOIN 1: businessEntityTk=link:#entity-business_entity_dimension["business_entity_dimension"].tk 
+
+
+| k8s_node_dimension | link:#entity-k8s_node_dimension["k8s_node_dimension"] | 하나의 JOIN:k8sNodeTk=link:#entity-k8s_node_dimension["k8s_node_dimension"].tk 
+
+
+| 애플리케이션_차원 | link:#entity-application_dimension["애플리케이션_차원"] | JOIN 1개: applicationTk=link:#entity-application_dimension["애플리케이션_차원"].tk 
+
+
+| time_dimension | link:#entity-time_dimension["time_dimension"] | JOIN 1: timeTk=link:#entity-time_dimension["time_dimension"].tk 
+
+
+| 호스트 차원 | link:#entity-host_dimension["호스트 차원"] | JOIN 1: hostTk=link:#entity-host_dimension["호스트 차원"].tk 
+
+
+| vm_dimension | link:#entity-vm_dimension["vm_dimension"] | JOIN 1: vmTk=link:#entity-vm_dimension["vm_dimension"].tk 
+
+
+| date_dimension | link:#entity-date_dimension["date_dimension"] | JOIN 1: dateTk=link:#entity-date_dimension["date_dimension"].tk 
+
+
+| application_group_dimension | link:#entity-application_group_dimension["application_group_dimension"] | JOIN 1개: applicationGroupTk=link:#entity-application_group_dimension["application_group_dimension"].tk 
+|===
+
+
+[[vmdkdailyperformancefact]]
+=== vmdk_daily_performance_fact
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:vmdk_daily_performance_fact
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk *[PK]* | Int32 | 예 | 그 사실을 알지 못한다. 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["date_dimension"].tk | Int32 | 예 | 날짜 차원의 TK. 
+
+
+| vmdkTk *[FK]* →link:#entity-vmdk_dimension["vmdk_dimension"].tk | Int32 | 예 | 가상 디스크의 TK. 
+
+
+| dataStoreTk *[FK]* →link:#entity-datastore_dimension["데이터스토어_차원"].tk | Int32 | 예 | 데이터 저장소의 TK. 
+
+
+| vmTk *[FK]* →link:#entity-vm_dimension["vm_dimension"].tk | Int32 | 예 | VM의 TK. 
+
+
+| hostTk *[FK]* →link:#entity-host_dimension["호스트 차원"].tk | Int32 | 예 | 호스트의 TK. 
+
+
+| tierTk *[FK]* →link:#entity-tier_dimension["계층_차원"].tk | Int32 | 예 | 티어의 TK. 
+
+
+| serviceLevelTk *[FK]* →link:#entity-service_level_dimension["service_level_dimension"].tk | Int32 | 예 | 서비스 수준의 TK. 
+
+
+| storageTk *[FK]* →link:#entity-storage_dimension["스토리지_차원"].tk | Int32 | 예 | 저장소의 TK. 
+
+
+| readIops | 더블 | 예 | 초당 I/O 읽기 횟수. 
+
+
+| writeIops | 더블 | 예 | 초당 입출력 쓰기 횟수. 
+
+
+| totalIops | 더블 | 예 | 초당 총 입출력 평균(읽기+쓰기). 
+
+
+| totalIopsMax | 더블 | 예 | 초당 최대 입출력 횟수. 
+
+
+| readThroughput | 더블 | 예 | 읽기 처리량 평균. 
+
+
+| writeThroughput | 더블 | 예 | 쓰기 처리량 평균. 
+
+
+| totalThroughput | 더블 | 예 | 총 처리량 평균(읽기+쓰기). 
+
+
+| totalThroughputMax | 더블 | 예 | 최대 총 처리량. 
+
+
+| readResponseTime | 더블 | 예 | 읽기 응답 시간. 
+
+
+| writeResponseTime | 더블 | 예 | 쓰기 응답 시간. 
+
+
+| totalResponseTime | 더블 | 예 | 총 응답 시간. 
+
+
+| totalResponseTimeMax | 더블 | 예 | 총 최대 응답 시간. 
+
+
+| 타임스탬프 *[PK]* | Int64 | 예 | 사실 시작 타임스탬프, 파티셔닝용 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| service_level_dimension | link:#entity-service_level_dimension["service_level_dimension"] | JOIN 1개: serviceLevelTk=link:#entity-service_level_dimension["service_level_dimension"].tk 
+
+
+| 스토리지_차원 | link:#entity-storage_dimension["스토리지_차원"] | JOIN 1개: storageTk=link:#entity-storage_dimension["스토리지_차원"].tk 
+
+
+| 계층_차원 | link:#entity-tier_dimension["계층_차원"] | JOIN 1개: tierTk=link:#entity-tier_dimension["계층_차원"].tk 
+
+
+| 데이터스토어_차원 | link:#entity-datastore_dimension["데이터스토어_차원"] | JOIN 1개: dataStoreTk=link:#entity-datastore_dimension["데이터스토어_차원"].tk 
+
+
+| 호스트 차원 | link:#entity-host_dimension["호스트 차원"] | JOIN 1: hostTk=link:#entity-host_dimension["호스트 차원"].tk 
+
+
+| vm_dimension | link:#entity-vm_dimension["vm_dimension"] | JOIN 1: vmTk=link:#entity-vm_dimension["vm_dimension"].tk 
+
+
+| vmdk_dimension | link:#entity-vmdk_dimension["vmdk_dimension"] | JOIN 1: vmdkTk=link:#entity-vmdk_dimension["vmdk_dimension"].tk 
+
+
+| date_dimension | link:#entity-date_dimension["date_dimension"] | JOIN 1: dateTk=link:#entity-date_dimension["date_dimension"].tk 
+|===
+
+
+[[vmdkdimension]]
+=== vmdk_dimension
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:vmdk_dimension
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk | Int32 | 예 | 이 가상 디스크 행의 TK입니다. 
+
+
+| naturalKey | 문자열 | 예 | 가상 디스크의 OID입니다. 
+
+
+| 이름 | 문자열 | 예 | 가상 디스크의 이름입니다. 
+
+
+| 유형 | 문자열 | 예 | 가상 디스크의 유형입니다. 
+
+
+| url | 문자열 | 예 | Insight Server에서 이 가상 디스크의 URL입니다. 
+
+
+| id | Int64 | 예 | dwh_inventory.hv_virtual_disk에 있는 가상 디스크의 GUID 
+
+
+| 최신 | 문자열 | 예 | 이 행이 해당 가상 디스크에 대한 최신 행인지 여부를 나타냅니다. 
+
+
+| dateTk | Int32 | 예 | 이 가상 디스크 행이 생성된 날짜의 TK입니다. 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| vmdk_hourly_performance_fact | link:#entity-vmdk_hourly_performance_fact["vmdk_hourly_performance_fact"] | 많은 
+
+
+| vmdk_daily_performance_fact | link:#entity-vmdk_daily_performance_fact["vmdk_daily_performance_fact"] | 많은 
+|===
+
+
+[[vmdkhourlyperformancefact]]
+=== vmdk_hourly_performance_fact
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:vmdk_hourly_performance_fact
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk *[PK]* | Int64 | 예 | 그 사실을 알지 못한다. 
+
+
+| timeTk *[FK]* →link:#entity-time_dimension["time_dimension"].tk | Int32 | 예 | 시간 차원의 TK. 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["date_dimension"].tk | Int32 | 예 | 날짜 차원의 TK. 
+
+
+| vmdkTk *[FK]* →link:#entity-vmdk_dimension["vmdk_dimension"].tk | Int32 | 예 | 가상 디스크의 TK. 
+
+
+| dataStoreTk *[FK]* →link:#entity-datastore_dimension["데이터스토어_차원"].tk | Int32 | 예 | 데이터 저장소의 TK. 
+
+
+| vmTk *[FK]* →link:#entity-vm_dimension["vm_dimension"].tk | Int32 | 예 | VM의 TK. 
+
+
+| hostTk *[FK]* →link:#entity-host_dimension["호스트 차원"].tk | Int32 | 예 | 호스트의 TK. 
+
+
+| tierTk *[FK]* →link:#entity-tier_dimension["계층_차원"].tk | Int32 | 예 | 티어의 TK. 
+
+
+| serviceLevelTk *[FK]* →link:#entity-service_level_dimension["service_level_dimension"].tk | Int32 | 예 | 서비스 수준의 TK. 
+
+
+| storageTk *[FK]* →link:#entity-storage_dimension["스토리지_차원"].tk | Int32 | 예 | 저장소의 TK. 
+
+
+| readIops | 더블 | 예 | 초당 I/O 읽기 횟수. 
+
+
+| writeIops | 더블 | 예 | 초당 입출력 쓰기 횟수. 
+
+
+| totalIops | 더블 | 예 | 초당 총 입출력 평균(읽기+쓰기). 
+
+
+| totalIopsMax | 더블 | 예 | 초당 최대 입출력 횟수. 
+
+
+| readThroughput | 더블 | 예 | 읽기 처리량 평균. 
+
+
+| writeThroughput | 더블 | 예 | 쓰기 처리량 평균. 
+
+
+| totalThroughput | 더블 | 예 | 총 처리량 평균(읽기+쓰기). 
+
+
+| totalThroughputMax | 더블 | 예 | 최대 총 처리량. 
+
+
+| readResponseTime | 더블 | 예 | 읽기 응답 시간. 
+
+
+| writeResponseTime | 더블 | 예 | 쓰기 응답 시간. 
+
+
+| totalResponseTime | 더블 | 예 | 총 응답 시간. 
+
+
+| totalResponseTimeMax | 더블 | 예 | 총 최대 응답 시간. 
+
+
+| 타임스탬프 *[PK]* | Int64 | 예 | 사실 시작 타임스탬프, 파티셔닝용 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| service_level_dimension | link:#entity-service_level_dimension["service_level_dimension"] | JOIN 1개: serviceLevelTk=link:#entity-service_level_dimension["service_level_dimension"].tk 
+
+
+| 스토리지_차원 | link:#entity-storage_dimension["스토리지_차원"] | JOIN 1개: storageTk=link:#entity-storage_dimension["스토리지_차원"].tk 
+
+
+| 계층_차원 | link:#entity-tier_dimension["계층_차원"] | JOIN 1개: tierTk=link:#entity-tier_dimension["계층_차원"].tk 
+
+
+| time_dimension | link:#entity-time_dimension["time_dimension"] | JOIN 1: timeTk=link:#entity-time_dimension["time_dimension"].tk 
+
+
+| 데이터스토어_차원 | link:#entity-datastore_dimension["데이터스토어_차원"] | JOIN 1개: dataStoreTk=link:#entity-datastore_dimension["데이터스토어_차원"].tk 
+
+
+| 호스트 차원 | link:#entity-host_dimension["호스트 차원"] | JOIN 1: hostTk=link:#entity-host_dimension["호스트 차원"].tk 
+
+
+| vm_dimension | link:#entity-vm_dimension["vm_dimension"] | JOIN 1: vmTk=link:#entity-vm_dimension["vm_dimension"].tk 
+
+
+| vmdk_dimension | link:#entity-vmdk_dimension["vmdk_dimension"] | JOIN 1: vmdkTk=link:#entity-vmdk_dimension["vmdk_dimension"].tk 
+
+
+| date_dimension | link:#entity-date_dimension["date_dimension"] | JOIN 1: dateTk=link:#entity-date_dimension["date_dimension"].tk 
+|===
+
+
+[[vmwarehostdailymetricsfact]]
+=== vmware_host_daily_metrics_fact
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:vmware_host_daily_metrics_fact
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk *[PK]* | Int64 | 예 | 그 사실을 알지 못한다. 
+
+
+| dateTk | Int32 | 예 | 날짜 차원의 TK. 
+
+
+| vmwareHostTk | Int32 | 예 | VMware 호스트 차원의 TK. 
+
+
+| powerAvg | 더블 | 예 | 전력 평균 
+
+
+| powerCapAvg | 더블 | 예 | 전력 캡 평균 
+
+
+| energyAvg | 더블 | 예 | 에너지 합산 
+
+
+| 타임스탬프 *[PK]* | Int64 | 예 | 사실 시작 타임스탬프, 파티셔닝용 
+|===
+
+
+[[vmwarehostdimension]]
+=== vmware_host_dimension
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 세트:vmware_host_dimension
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk | Int32 | 예 | 이 VMware 호스트 행의 TK입니다. 
+
+
+| 식별자 | 문자열 | 예 | VMware 호스트의 고유 식별자입니다. 
+
+
+| 이름 | 문자열 | 예 | VMware 호스트 이름 
+
+
+| numCpuCores | Int64 | 예 | VMware 호스트의 CPU 코어 수 
+
+
+| numCpuPackages | Int64 | 예 | VMware 호스트용 CPU 패키지 수 
+
+
+| numCpuThreads | Int64 | 예 | VMware 호스트의 CPU 스레드 수 
+
+
+| numNodes | Int64 | 예 | VMware 호스트의 노드 수 
+
+
+| hyperThreadActive | 문자열 | 예 | VMware 호스트에서 하이퍼스레딩이 활성화되어 있는지 여부를 나타냅니다. 
+
+
+| hyperThreadAvailable | 문자열 | 예 | VMware 호스트에서 하이퍼스레딩을 사용할 수 있는지 여부를 나타냅니다. 
+
+
+| hyperThreadConfig | 문자열 | 예 | VMware 호스트에서 하이퍼스레딩이 활성화되도록 구성되었는지 여부를 나타냅니다. 
+
+
+| id | Int64 | 예 | dwh_inventory.vmware_host에 있는 호스트의 GUID 
+
+
+| 최신 | 문자열 | 예 | 이 행이 해당 VMware 호스트에 대한 최신 행인지 여부를 나타냅니다. 
+
+
+| dateTk | Int32 | 예 | 이 VMware 호스트 행이 생성된 날짜의 TK입니다. 
+|===
+
+
+[[vmwarehosthourlymetricsfact]]
+=== vmware_host_hourly_metrics_fact
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합:vmware_host_hourly_metrics_fact
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk *[PK]* | Int64 | 예 | 그 사실을 알지 못한다. 
+
+
+| timeTk | Int32 | 예 | 시간 차원의 TK. 
+
+
+| dateTk | Int32 | 예 | 날짜 차원의 TK. 
+
+
+| vmwareHostTk | Int32 | 예 | VMware 호스트 차원의 TK. 
+
+
+| powerAvg | 더블 | 예 | 전력 평균 
+
+
+| powerCapAvg | 더블 | 예 | 전력 캡 평균 
+
+
+| energyAvg | 더블 | 예 | 에너지 합산 
+
+
+| 타임스탬프 *[PK]* | Int64 | 예 | 사실 시작 타임스탬프, 파티셔닝용 
+|===
+
+
+[[volumedailyperformancefact]]
+=== volume_daily_performance_fact
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합: volume_daily_performance_fact
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk *[PK]* | Int32 | 예 | 그 사실을 알지 못한다. 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["date_dimension"].tk | Int32 | 예 | 날짜 차원의 TK. 
+
+
+| volumeTk *[FK]* →link:#entity-volume_dimension["볼륨_차원"].tk | Int32 | 예 | 성능 수치에 대한 볼륨의 TK. 
+
+
+| storageTk *[FK]* →link:#entity-storage_dimension["스토리지_차원"].tk | Int32 | 예 | 성능 수치를 위한 저장소의 TK입니다. 
+
+
+| virtualStorageTk | Int32 | 예 | 용량이 백엔드 어레이에 있는 경우 프런트엔드 어레이의 TK 값입니다. 그렇지 않으면 값은 N/A입니다. 
+
+
+| storageNodeTk *[FK]* →link:#entity-storage_node_dimension["스토리지 노드 크기"].tk | Int32 | 예 | 스토리지 노드의 TK. 
+
+
+| storagePoolTk *[FK]* →link:#entity-storage_pool_dimension["스토리지 풀 차원"].tk | Int32 | 예 | 스토리지 풀 성능 수치를 위한 스토리지 풀의 TK 값입니다. 
+
+
+| applicationTk *[FK]* →link:#entity-application_dimension["애플리케이션_차원"].tk | Int32 | 예 | 신청 담당자의 TK. 
+
+
+| applicationGroupTk *[FK]* →link:#entity-application_group_dimension["application_group_dimension"].tk | Int32 | 예 | 응용 프로그램 그룹의 TK. 
+
+
+| hostTk *[FK]* →link:#entity-host_dimension["호스트 차원"].tk | Int32 | 예 | 주최측 대표의 TK. 
+
+
+| hostGroupTk *[FK]* →link:#entity-host_group_dimension["호스트 그룹 차원"].tk | Int32 | 예 | 호스트 그룹의 TK. 
+
+
+| tierTk *[FK]* →link:#entity-tier_dimension["계층_차원"].tk | Int32 | 예 | 티어의 TK. 
+
+
+| serviceLevelTk *[FK]* →link:#entity-service_level_dimension["service_level_dimension"].tk | Int32 | 예 | 서비스 수준의 TK. 
+
+
+| businessEntityTk *[FK]* →link:#entity-business_entity_dimension["business_entity_dimension"].tk | Int32 | 예 | 사업체의 TK. 
+
+
+| k8sNamespaceTk *[FK]* →link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"].tk | Int32 | 예 | k8s 네임스페이스의 TK입니다. 
+
+
+| k8sNamespaceGroupTk *[FK]* →link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"].tk | Int32 | 예 | k8s 네임스페이스 그룹의 TK입니다. 
+
+
+| readResponseTime | 더블 | 예 | 읽기 응답 시간 평균. 
+
+
+| writeResponseTime | 더블 | 예 | 쓰기 응답 시간 평균. 
+
+
+| totalResponseTime | 더블 | 예 | 평균 응답 시간의 최대값입니다. 
+
+
+| totalResponseTimeMax | 더블 | 예 | 응답 시간의 최대값입니다. 
+
+
+| readThroughput | 더블 | 예 | 읽기 처리량 평균. 
+
+
+| writeThroughput | 더블 | 예 | 쓰기 처리량 평균. 
+
+
+| totalThroughput | 더블 | 예 | 총 처리량 평균(읽기+쓰기). 
+
+
+| totalThroughputMax | 더블 | 예 | 최대 총 처리량. 
+
+
+| readIops | 더블 | 예 | 초당 평균 읽기 I/O 횟수. 
+
+
+| writeIops | 더블 | 예 | 초당 평균 쓰기 작업량. 
+
+
+| totalIops | 더블 | 예 | 초당 총 입출력 평균(읽기+쓰기). 
+
+
+| totalIopsMax | 더블 | 예 | 초당 최대 입출력 횟수. 
+
+
+| readCacheHitRatio | 더블 | 예 | 읽기 캐시 적중률. 
+
+
+| writeCacheHitRatio | 더블 | 예 | 쓰기 캐시 적중률. 
+
+
+| totalCacheHitRatio | 더블 | 예 | 전체 캐시 적중률. 
+
+
+| totalCacheHitRatioMax | 더블 | 예 | 최대 총 캐시 적중률. 
+
+
+| writePending | Int64 | 예 | 하루 동안 대기 중인 쓰기 작업의 최대 개수입니다. 
+
+
+| readIoDensity | 더블 | 예 | 읽기 IO 밀도. 
+
+
+| writeIoDensity | 더블 | 예 | 쓰기 IO 밀도. 
+
+
+| totalIoDensity | 더블 | 예 | 총 IO 밀도. 
+
+
+| totalIoDensityMax | 더블 | 예 | 최대 총 IO 밀도. 
+
+
+| compressionSavingsPercent | 더블 | 예 | 압축 절감률(%). 
+
+
+| compressionSavingsSpace | 더블 | 예 | 압축으로 공간을 절약할 수 있습니다. 
+
+
+| totalTimeToFull | 더블 | 예 | 완전 충전 시간. 
+
+
+| confidenceIntervalTimeToFull | 더블 | 예 | 완전 회복까지 걸리는 시간에 대한 신뢰 구간. 
+
+
+| 액세스됨 | Int32 | 예 | 볼륨에 접근했습니까? 
+
+
+| 프런트엔드 | 문자열 | 예 | 볼륨은 프런트엔드인가요? 
+
+
+| 백엔드 | 문자열 | 예 | 볼륨 백엔드인가요? 
+
+
+| 타임스탬프 *[PK]* | Int64 | 예 | 사실 시작 타임스탬프, 파티셔닝용 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| 스토리지 노드 크기 | link:#entity-storage_node_dimension["스토리지 노드 크기"] | JOIN 1개: storageNodeTk=link:#entity-storage_node_dimension["스토리지 노드 크기"].tk 
+
+
+| 스토리지_차원 | link:#entity-storage_dimension["스토리지_차원"] | JOIN 1개: storageTk=link:#entity-storage_dimension["스토리지_차원"].tk 
+
+
+| business_entity_dimension | link:#entity-business_entity_dimension["business_entity_dimension"] | JOIN 1: businessEntityTk=link:#entity-business_entity_dimension["business_entity_dimension"].tk 
+
+
+| 호스트 그룹 차원 | link:#entity-host_group_dimension["호스트 그룹 차원"] | JOIN 1개: hostGroupTk=link:#entity-host_group_dimension["호스트 그룹 차원"].tk 
+
+
+| k8s_namespace_group_dimension | link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"] | 하나의 JOIN:k8sNamespaceGroupTk=link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"].tk 
+
+
+| application_group_dimension | link:#entity-application_group_dimension["application_group_dimension"] | JOIN 1개: applicationGroupTk=link:#entity-application_group_dimension["application_group_dimension"].tk 
+
+
+| k8s_namespace_dimension | link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"] | one JOIN:k8sNamespaceTk=link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"].tk 
+
+
+| service_level_dimension | link:#entity-service_level_dimension["service_level_dimension"] | JOIN 1개: serviceLevelTk=link:#entity-service_level_dimension["service_level_dimension"].tk 
+
+
+| 계층_차원 | link:#entity-tier_dimension["계층_차원"] | JOIN 1개: tierTk=link:#entity-tier_dimension["계층_차원"].tk 
+
+
+| 애플리케이션_차원 | link:#entity-application_dimension["애플리케이션_차원"] | JOIN 1개: applicationTk=link:#entity-application_dimension["애플리케이션_차원"].tk 
+
+
+| 스토리지 풀 차원 | link:#entity-storage_pool_dimension["스토리지 풀 차원"] | JOIN 1개: storagePoolTk=link:#entity-storage_pool_dimension["스토리지 풀 차원"].tk 
+
+
+| 호스트 차원 | link:#entity-host_dimension["호스트 차원"] | JOIN 1: hostTk=link:#entity-host_dimension["호스트 차원"].tk 
+
+
+| date_dimension | link:#entity-date_dimension["date_dimension"] | JOIN 1: dateTk=link:#entity-date_dimension["date_dimension"].tk 
+
+
+| 볼륨_차원 | link:#entity-volume_dimension["볼륨_차원"] | JOIN 1개: volumeTk=link:#entity-volume_dimension["볼륨_차원"].tk 
+|===
+
+
+[[volumedimension]]
+=== 볼륨_차원
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합: volume_dimension
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk | Int32 | 예 | 이 볼륨 행의 TK입니다. 
+
+
+| storageIdentifier | 문자열 | 예 | 볼륨 저장소의 식별자입니다. 
+
+
+| 이름 | 문자열 | 예 | 볼륨의 이름입니다. 
+
+
+| 레이블 | 문자열 | 예 | 볼륨의 레이블. 
+
+
+| thinProvisioned | 문자열 | 예 | 볼륨이 씬 프로비저닝되었습니까? 
+
+
+| 유형 | 문자열 | 예 | 볼륨의 종류. 
+
+
+| isVirtual | 문자열 | 예 | 볼륨은 가상 볼륨입니까? 
+
+
+| 메타 | 문자열 | 예 | 볼륨은 메타 볼륨입니까? 
+
+
+| 스냅샷 | 문자열 | 예 | 이 볼륨이 스냅샷 볼륨인지 여부를 나타냅니다. 
+
+
+| technologyType | 문자열 | 예 | 기술 유형(FC/ISCSI/UNKNOWN)을 지정합니다. 
+
+
+| uuid | 문자열 | 예 | 볼륨의 UUID입니다. 
+
+
+| isMainframe | 문자열 | 예 | 메인프레임 볼륨입니까? 
+
+
+| url | 문자열 | 예 | Insight Server에서 이 볼륨의 URL입니다. 
+
+
+| id | Int64 | 예 | dwh_inventory.volume에 있는 볼륨의 GUID 
+
+
+| 최신 | 문자열 | 예 | 이 행이 해당 볼륨의 최신 행인지 여부를 나타냅니다. 
+
+
+| dateTk | Int32 | 예 | 이 볼륨 행이 생성된 날짜의 TK입니다. 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| volume_hourly_performance_fact | link:#entity-volume_hourly_performance_fact["volume_hourly_performance_fact"] | 많은 
+
+
+| volume_daily_performance_fact | link:#entity-volume_daily_performance_fact["volume_daily_performance_fact"] | 많은 
+|===
+
+
+[[volumehourlyperformancefact]]
+=== volume_hourly_performance_fact
+
+
+
+[[top]]
+=== ↑ 맨 위로
+
+엔티티 집합: volume_hourly_performance_fact
+
+[cols="1,1,1,1"]
+|===
+| 필드 | 유형 | Null 허용 | 논평 
+
+
+| tk *[PK]* | Int64 | 예 | 그 사실을 알지 못한다. 
+
+
+| timeTk *[FK]* →link:#entity-time_dimension["time_dimension"].tk | Int32 | 예 | 시간 차원의 TK. 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["date_dimension"].tk | Int32 | 예 | 날짜 차원의 TK. 
+
+
+| volumeTk *[FK]* →link:#entity-volume_dimension["볼륨_차원"].tk | Int32 | 예 | 성능 수치에 대한 볼륨의 TK. 
+
+
+| storageTk *[FK]* →link:#entity-storage_dimension["스토리지_차원"].tk | Int32 | 예 | 성능 수치를 위한 저장소의 TK입니다. 
+
+
+| virtualStorageTk | Int32 | 예 | 용량이 백엔드 어레이에 있는 경우 프런트엔드 어레이의 TK 값입니다. 그렇지 않으면 값은 N/A입니다. 
+
+
+| storageNodeTk *[FK]* →link:#entity-storage_node_dimension["스토리지 노드 크기"].tk | Int32 | 예 | 스토리지 노드의 TK. 
+
+
+| storagePoolTk *[FK]* →link:#entity-storage_pool_dimension["스토리지 풀 차원"].tk | Int32 | 예 | 스토리지 풀 성능 수치를 위한 스토리지 풀의 TK 값입니다. 
+
+
+| applicationTk *[FK]* →link:#entity-application_dimension["애플리케이션_차원"].tk | Int32 | 예 | 신청 담당자의 TK. 
+
+
+| applicationGroupTk *[FK]* →link:#entity-application_group_dimension["application_group_dimension"].tk | Int32 | 예 | 응용 프로그램 그룹의 TK. 
+
+
+| hostTk *[FK]* →link:#entity-host_dimension["호스트 차원"].tk | Int32 | 예 | 주최측 대표의 TK. 
+
+
+| hostGroupTk *[FK]* →link:#entity-host_group_dimension["호스트 그룹 차원"].tk | Int32 | 예 | 호스트 그룹의 TK. 
+
+
+| tierTk *[FK]* →link:#entity-tier_dimension["계층_차원"].tk | Int32 | 예 | 티어의 TK. 
+
+
+| serviceLevelTk *[FK]* →link:#entity-service_level_dimension["service_level_dimension"].tk | Int32 | 예 | 서비스 수준의 TK. 
+
+
+| businessEntityTk *[FK]* →link:#entity-business_entity_dimension["business_entity_dimension"].tk | Int32 | 예 | 사업체의 TK. 
+
+
+| k8sNamespaceTk *[FK]* →link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"].tk | Int32 | 예 | k8s 네임스페이스의 TK입니다. 
+
+
+| k8sNamespaceGroupTk *[FK]* →link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"].tk | Int32 | 예 | k8s 네임스페이스 그룹의 TK입니다. 
+
+
+| readResponseTime | 더블 | 예 | 읽기 응답 시간. 
+
+
+| writeResponseTime | 더블 | 예 | 쓰기 응답 시간 
+
+
+| totalResponseTime | 더블 | 예 | 총 응답 시간. 
+
+
+| totalResponseTimeMax | 더블 | 예 | 응답 시간의 최대값입니다. 
+
+
+| readThroughput | 더블 | 예 | 읽기 처리량 평균. 
+
+
+| writeThroughput | 더블 | 예 | 쓰기 처리량 평균. 
+
+
+| totalThroughput | 더블 | 예 | 총 처리량 평균(읽기+쓰기). 
+
+
+| totalThroughputMax | 더블 | 예 | 최대 총 처리량. 
+
+
+| readIops | 더블 | 예 | 초당 평균 읽기 I/O 횟수. 
+
+
+| writeIops | 더블 | 예 | 초당 평균 쓰기 작업량. 
+
+
+| totalIops | 더블 | 예 | 초당 총 입출력 평균(읽기+쓰기). 
+
+
+| totalIopsMax | 더블 | 예 | 초당 최대 입출력 횟수. 
+
+
+| readCacheHitRatio | 더블 | 예 | 읽기 캐시 적중률. 
+
+
+| writeCacheHitRatio | 더블 | 예 | 쓰기 캐시 적중률. 
+
+
+| totalCacheHitRatio | 더블 | 예 | 전체 캐시 적중률. 
+
+
+| totalCacheHitRatioMax | 더블 | 예 | 최대 총 캐시 적중률. 
+
+
+| writePending | Int64 | 예 | 보류 중인 쓰기 작업 수. 
+
+
+| readIoDensity | 더블 | 예 | 읽기 IO 밀도. 
+
+
+| writeIoDensity | 더블 | 예 | 쓰기 IO 밀도. 
+
+
+| totalIoDensity | 더블 | 예 | 총 IO 밀도. 
+
+
+| totalIoDensityMax | 더블 | 예 | 최대 총 IO 밀도. 
+
+
+| compressionSavingsPercent | 더블 | 예 | 압축 절감률(%). 
+
+
+| compressionSavingsSpace | 더블 | 예 | 압축으로 공간을 절약할 수 있습니다. 
+
+
+| totalTimeToFull | 더블 | 예 | 완전 충전 시간. 
+
+
+| confidenceIntervalTimeToFull | 더블 | 예 | 완전 회복까지 걸리는 시간에 대한 신뢰 구간. 
+
+
+| 액세스됨 | Int32 | 예 | 볼륨에 접근했습니까? 
+
+
+| 프런트엔드 | 문자열 | 예 | 볼륨은 프런트엔드인가요? 
+
+
+| 백엔드 | 문자열 | 예 | 볼륨 백엔드인가요? 
+
+
+| 타임스탬프 *[PK]* | Int64 | 예 | 사실 시작 타임스탬프, 파티셔닝용 
+|===
+
+
+==== 탐색 속성(조인)
+
+[cols="1,1,1"]
+|===
+| Nav 속성 | 관련 개체 | 카디널리티 / 조인 
+
+
+| 스토리지 노드 크기 | link:#entity-storage_node_dimension["스토리지 노드 크기"] | JOIN 1개: storageNodeTk=link:#entity-storage_node_dimension["스토리지 노드 크기"].tk 
+
+
+| 스토리지_차원 | link:#entity-storage_dimension["스토리지_차원"] | JOIN 1개: storageTk=link:#entity-storage_dimension["스토리지_차원"].tk 
+
+
+| business_entity_dimension | link:#entity-business_entity_dimension["business_entity_dimension"] | JOIN 1: businessEntityTk=link:#entity-business_entity_dimension["business_entity_dimension"].tk 
+
+
+| 호스트 그룹 차원 | link:#entity-host_group_dimension["호스트 그룹 차원"] | JOIN 1개: hostGroupTk=link:#entity-host_group_dimension["호스트 그룹 차원"].tk 
+
+
+| k8s_namespace_group_dimension | link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"] | 하나의 JOIN:k8sNamespaceGroupTk=link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"].tk 
+
+
+| application_group_dimension | link:#entity-application_group_dimension["application_group_dimension"] | JOIN 1개: applicationGroupTk=link:#entity-application_group_dimension["application_group_dimension"].tk 
+
+
+| k8s_namespace_dimension | link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"] | one JOIN:k8sNamespaceTk=link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"].tk 
+
+
+| service_level_dimension | link:#entity-service_level_dimension["service_level_dimension"] | JOIN 1개: serviceLevelTk=link:#entity-service_level_dimension["service_level_dimension"].tk 
+
+
+| 계층_차원 | link:#entity-tier_dimension["계층_차원"] | JOIN 1개: tierTk=link:#entity-tier_dimension["계층_차원"].tk 
+
+
+| 애플리케이션_차원 | link:#entity-application_dimension["애플리케이션_차원"] | JOIN 1개: applicationTk=link:#entity-application_dimension["애플리케이션_차원"].tk 
+
+
+| time_dimension | link:#entity-time_dimension["time_dimension"] | JOIN 1: timeTk=link:#entity-time_dimension["time_dimension"].tk 
+
+
+| 스토리지 풀 차원 | link:#entity-storage_pool_dimension["스토리지 풀 차원"] | JOIN 1개: storagePoolTk=link:#entity-storage_pool_dimension["스토리지 풀 차원"].tk 
+
+
+| 호스트 차원 | link:#entity-host_dimension["호스트 차원"] | JOIN 1: hostTk=link:#entity-host_dimension["호스트 차원"].tk 
+
+
+| date_dimension | link:#entity-date_dimension["date_dimension"] | JOIN 1: dateTk=link:#entity-date_dimension["date_dimension"].tk 
+
+
+| 볼륨_차원 | link:#entity-volume_dimension["볼륨_차원"] | JOIN 1개: volumeTk=link:#entity-volume_dimension["볼륨_차원"].tk 
+|===
