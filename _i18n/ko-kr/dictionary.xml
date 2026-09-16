@@ -15170,4 +15170,7 @@
   <block id="d05c002809e2eff8dbbef3f837ebccae" category="paragraph"><block ref="d05c002809e2eff8dbbef3f837ebccae" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0b67caee179a4206a762e287d0cc0b59" category="inline-image-macro">랜딩 페이지 편집 모드, 너비=200</block>
   <block id="2676c87e0e32e08b02693582de233efc" category="paragraph"><block ref="2676c87e0e32e08b02693582de233efc" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d23e4282924871b1db7a3f3eb6eda8b8" category="paragraph">AU가 DII에 연결하려고 할 때 차단되는 것을 발견하면 이러한 엔드포인트를 프록시에 추가해 보십시오:</block>
+  <block id="5d8be06cd693cc8e589d6313aebab4bf" category="inline-link-macro">콘솔 설정 관리자</block>
+  <block id="43770a02cdae19a089a9b34e2c93ce43" category="paragraph">필요할 수 있는 특정 NetApp Console 프록시 엔드포인트는 <block ref="bbcee94e258ef7cfd197d85f372a9f11" category="inline-link-macro-rx"></block> 설명서에 나와 있습니다.</block>
 </blocks>
