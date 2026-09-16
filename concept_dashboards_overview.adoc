@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_dashboards_overview.html 
-summary: Data Infrastructure Insights 의 대시보드 개요. 
+summary: 유연한 위젯으로 맞춤형 대시보드를 생성하여 인프라 데이터를 시각화하고, 성능 추세를 모니터링하고, 특정 모니터링 요구 사항에 맞춘 운영 현황을 구축하십시오. 
 keywords: dashboard, widget, custom, view, data 
 ---
 = 대시보드 개요
@@ -14,7 +14,7 @@ keywords: dashboard, widget, custom, view, data
 
 
 [role="lead"]
-Data Infrastructure Insights 사용하면 다양한 위젯을 사용하여 사용자 정의 대시보드를 만들 수 있으므로 인프라 데이터의 운영 뷰를 만들 수 있는 유연성이 제공되며, 각 위젯은 데이터를 표시하고 차트로 표현하는 데 있어 광범위한 유연성을 제공합니다.
+운영에 필요한 핵심 정보를 제공하는 맞춤형 대시보드를 구축하세요. 표, 차트, 게이지, 그래프 등 다양한 위젯 유형 중에서 선택하여 인프라 데이터를 원하는 방식으로 시각화하고, 더 나은 의사 결정과 효과적인 모니터링을 실현할 수 있습니다.
 
 
 IMPORTANT: 이 섹션의 예시는 설명 목적으로만 제공되며 모든 가능한 시나리오를 다루는 것은 아닙니다.  여기에 제시된 개념과 단계를 사용하면 특정 요구 사항에 맞는 데이터를 강조 표시하는 대시보드를 직접 만들 수 있습니다.

@@ -49,6 +49,8 @@ image:Monitor_log_or_metric.png["시스템 또는 로그 모니터를 선택하�
 +
 ** _Metric_ 모니터는 인프라 또는 성능 관련 트리거에 대한 경고를 모니터링합니다.
 ** _Log_는 로그 관련 활동에 대한 경고를 모니터링합니다.
+** _Anomaly Detection_ 은(는) 데이터 패턴의 변화에 대해 경고를 모니터링합니다.
+** _속성_ 모니터는 오브젝트를 새 데이터 센터로 이동하는 경우 등 오브젝트의 속성 변경에 대해 알림을 제공합니다.
 
 
 +
@@ -171,6 +173,17 @@ image:AnomalyDetectionMonitorMetricChoosing.png["이상 감지를 위한 메트�
 
 
 image:AnomalyDetectionMonitorDefineConditions.png["이상 탐지를 트리거하기 위한 조건 정의"]
+
+
+
+[[attribute-monitor]]
+=== 속성 모니터
+
+속성 모니터는 자산이 데이터 센터 간에 이동하거나, 스토리지 풀이 암호화되지 않았거나, 속성이 수정되는 경우 자동으로 팀에 알림을 보냅니다. 이를 통해 구성 기준선을 유지하고 새로운 배포 또는 변경 중에 누락되는 부분이 없도록 보장할 수 있습니다.
+
+image:attribute_monitor_in_list.png["속성 모니터가 모니터 유형에 추가됩니다"]
+
+오브젝트 유형을 선택하고 변경 사항을 모니터링할 속성을 선택하기만 하면 됩니다.
 
 
 

@@ -1,16 +1,20 @@
 ---
 sidebar: sidebar 
 permalink: task_modify_delete_query.html 
-summary: 쿼리 수정 또는 삭제 
+summary: 조건과 열을 변경하여 기존 쿼리를 수정할 수 있으며, 업데이트, 이름 변경 또는 새 버전 생성 등 유연한 저장 옵션을 제공하고, 더 이상 필요하지 않을 때는 쿼리를 삭제할 수도 있습니다. 
 keywords: query, queries, modify, edit, delete, remove 
 ---
 = 쿼리 수정 또는 삭제
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-쿼리하는 자산에 대한 검색 기준을 변경하려는 경우 쿼리와 연관된 기준을 변경할 수 있습니다.
+검색 조건을 수정하고, 열을 추가 또는 제거하고, 다양한 저장 옵션을 선택하여 쿼리를 효율적으로 관리하십시오. 기존 쿼리를 업데이트하거나, 새 버전을 만들거나, 더 이상 필요하지 않은 쿼리를 삭제하여 쿼리 라이브러리를 체계적이고 최신 상태로 유지하십시오.
 
 
 

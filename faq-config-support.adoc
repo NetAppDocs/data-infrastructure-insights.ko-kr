@@ -2,11 +2,15 @@
 sidebar: sidebar 
 permalink: faq-config-support.html 
 keywords: FAQ, Frequently asked questions, questions, configuration, 
-summary:  
+summary: Data Infrastructure Insights 구성, 장치 지원, 환경 영향, 권한 및 데이터 수집 기능에 대한 자주 묻는 질문입니다. 
 ---
 = 구성 및 지원 장치
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]

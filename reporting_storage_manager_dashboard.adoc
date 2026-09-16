@@ -1,16 +1,20 @@
 ---
 sidebar: sidebar 
 permalink: reporting_storage_manager_dashboard.html 
-summary: 스토리지 관리자 대시보드를 사용하면 스토리지 서비스를 매일 관리할 수 있습니다. 
+summary: 용량 활용률, 성능 추세 및 리소스 예측에 대한 종합 보고서를 통해 중앙 집중식 스토리지 관리 인사이트를 확보하고 데이터 센터를 사전에 관리합니다. 
 keywords: reporting, cognos, data warehouse, dwh, smd, storage manager dashboard 
 ---
 = 스토리지 관리자 대시보드
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-스토리지 관리자 대시보드는 시간 경과에 따른 리소스 사용량을 허용 범위와 이전 활동 일수에 대해 비교하고 대조할 수 있는 중앙화된 시각화 기능을 제공합니다.  스토리지 서비스에 대한 주요 성능 지표만 표시하여 데이터 센터를 유지 관리하는 방법에 대한 결정을 내릴 수 있습니다.
+Storage Manager 대시보드는 포괄적인 보고 및 시각화 기능을 통해 스토리지 환경에 대한 중앙 집중식 인사이트를 제공합니다. 용량 활용률을 모니터링하고, 시간 경과에 따른 성능 추세를 추적하며, 현재 지표를 허용 범위와 비교하여 데이터 센터 유지 관리 및 리소스 계획에 대한 정보에 입각한 의사 결정을 내릴 수 있습니다.
 
 
 NOTE: 보고 기능은 Data Infrastructure Insights 에서 사용할 수 있습니다.link:concept_subscribing_to_cloud_insights.html["프리미엄 에디션"] .

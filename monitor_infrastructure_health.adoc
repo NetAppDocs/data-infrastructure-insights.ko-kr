@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: monitor_infrastructure_health.html 
 keywords: infra, infrastructure, health, monitor 
-summary: 성능, 용량, 구성 및 구성 요소 알림을 기반으로 한 통합 점수 매기기로 인프라 상태를 모니터링하여 사전에 문제를 해결하세요. 
+summary: 스토리지 환경 성능, 용량, 구성 및 구성 요소 경고를 통합하여 실행 가능한 상태 점수로 제공하는 포괄적인 모니터링을 통해 스토리지 환경의 상태를 통합적으로 파악할 수 있습니다. 
 ---
 = 인프라 상태 모니터링
 :hardbreaks:
@@ -14,15 +14,12 @@ summary: 성능, 용량, 구성 및 구성 요소 알림을 기반으로 한 통
 
 
 [role="lead"]
-Data Infrastructure Insights 스토리지 환경의 성능, 용량, 구성 및 구성 요소 상태를 추적하는 포괄적인 인프라 상태 모니터링을 제공합니다. 상태 점수는 이러한 범주에 대한 모니터 알림을 기반으로 계산되므로 시스템 상태를 통합적으로 확인하고 사전에 문제를 해결할 수 있습니다.
+Data Infrastructure Insights는 성능, 용량, 구성 및 구성 요소 상태를 추적하여 스토리지 환경의 상태를 모니터링합니다. 이 시스템은 이러한 범주 전반에 걸친 모니터 알림을 기반으로 통합 상태 점수를 계산하여 시스템 상태에 대한 명확한 가시성을 제공하고 문제를 사전에 해결할 수 있도록 지원합니다.
 
 
 
 [[the-infrastructure-health-dashboard]]
 == 인프라 상태 대시보드
-
-
-NOTE: 인프라 상태 모니터링은link:concept_preview_features.html["시사"] 특징이며 변경될 수 있습니다.
 
 *관찰성 > 분석*으로 이동하여 *인프라 상태*를 선택합니다. 대시보드는 아래 설명된 대로 모니터 알림 범주와 점수를 기반으로 시스템 상태에 대한 개요를 제공합니다. 조사 범위를 좁히려면 상단에 필터를 설정하세요.
 

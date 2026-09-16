@@ -14,7 +14,7 @@ keywords: support, knowledgebase, documentation, community, videos, help, contac
 
 
 [role="lead"]
-*도움말 > 지원*을 선택하면 Data Infrastructure Insights 에서 사용 가능한 지원 옵션에 액세스할 수 있습니다.
+Data Infrastructure Insights는 셀프 서비스 리소스, 커뮤니티 포럼, 문서 및 기술 지원을 포함한 포괄적인 지원 옵션을 제공합니다. *도움말 > 지원*을 선택하여 이러한 지원 리소스에 액세스하고, 웹 티켓 및 전화 지원을 통해 모든 기술 지원을 받으려면 지원 권한을 활성화하는 것을 고려하십시오.
 
 image:SupportPageExample.png["지원 페이지, 너비=600"]
 
@@ -115,11 +115,7 @@ NOTE: 등록을 해야 합니다<<activating-support-entitlement,지원 활성�
 
 문제가 해결되었거나 지원 세션이 종료되면 해당 확인란의 선택을 해제할 수 있습니다.
 
-다음 방법 중 하나를 통해 지원을 요청할 수 있습니다.  다음 지원 옵션을 사용하려면 활성 Data Infrastructure Insights 구독이 있어야 합니다.
-
-* link:https://www.netapp.com/us/contact-us/support.aspx["*핸드폰*"]
-* link:https://mysupport.netapp.com/portal?_nfpb=true&_st=initialPage=true&_pageLabel=submitcase["*지원 티켓*"]
-
+link:https://www.netapp.com/support-and-training/["NetApp 지원 사이트"]로 이동하여 지원을 요청할 수 있습니다. 활성 Data Infrastructure Insights 구독이 있어야 합니다.
 
 *영업팀에 문의* 링크를 클릭하여 영업 지원을 요청할 수도 있습니다.
 
