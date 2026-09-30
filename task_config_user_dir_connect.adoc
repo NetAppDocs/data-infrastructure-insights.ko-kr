@@ -16,16 +16,16 @@ summary: 워크로드 보안 Active Directory 사용자 디렉터리 수집기 �
 [role="lead"]
 ONTAP SVM 데이터 수집기를 구성하기 전에 사용자 디렉터리 수집기를 구성하십시오.
 
-Workload Security는 디렉터리 데이터를 사용하여 파일 액세스 활동에서 ID를 확인합니다. User Directory 수집기는 Test Connection 기능을 제공하지 않습니다.
+Workload Security는 디렉터리 데이터를 사용하여 파일 액세스 활동에서 ID를 확인합니다. User Directory 수집기는 연결 테스트 기능을 제공하지 않습니다.
 
 image:config_ad_user_directory_image1.png["Active Directory 및 LDAP 디렉터리 서버 옵션이 있는 사용자 디렉터리 추가 대화 상자.,title=\"사용자 디렉터리 유형 선택\",width=652,height=211"]
 
 [cols="50%,50%"]
 |===
-| *선택* | *다음과 같은 경우에 사용하십시오* 
+| *선택* | *다음과 같은 경우에 사용하세요* 
 
 
-| Active Directory | 사용자는 Active Directory에 저장되고 모니터링되는 활동은 SMB이거나, Unix 사용자는 uidNumber 값으로 Active Directory에 저장되어 NFS 활동을 수행합니다. 
+| Active Directory | 사용자는 Active Directory에 저장되고 모니터링되는 활동은 SMB이거나, Unix 사용자는 uidNumber 값으로 Active Directory에 저장되고 NFS 활동을 수행합니다. 
 
 
 | LDAP 디렉터리 서버 | Unix 사용자는 주로 LDAP 디렉터리에 저장되며 모니터링되는 활동은 NFS입니다. 
@@ -46,13 +46,13 @@ image:config_ad_user_directory_image1.png["Active Directory 및 LDAP 디렉터�
 * 디렉터리 서버에 연결할 수 있는 Workload Security Agent를 배포하고 연결합니다.
 * Active Directory 서버의 IP 주소 또는 FQDN, 포리스트 이름, 바인드 DN 및 바인드 암호를 수집합니다.
 * 에이전트가 디렉터리 서비스에 접근할 수 있도록 허용하십시오. 일반적으로 LDAP 또는 StartTLS에는 389번 포트가, LDAPS에는 636번 포트가 사용됩니다. 서버에 구성된 포트를 사용하십시오.
-* 필요한 디렉터리 범위를 검색하고 수집기에 매핑된 모든 속성을 읽을 수 있는 Bind DN 계정을 사용하십시오.
+* 필요한 디렉터리 범위를 검색하고 수집기에 매핑된 모든 속성을 읽을 수 있는 바인드 DN 계정을 사용하십시오.
 
 
 
 
 [[add-the-active-directory-collector]]
-== Active Directory 수집기 추가
+== Active Directory 수집기를 추가합니다
 
 *1.* Workload Security ++>++ Collectors ++>++ User Directory Collectors로 이동하여 {plus} User Directory Collector를 선택합니다.
 
@@ -62,7 +62,7 @@ image:config_ad_user_directory_image1.png["Active Directory 및 LDAP 디렉터�
 
 *4.* 컴퓨터 또는 서비스 계정을 해결해야 하는 경우 고급 구성을 검토하십시오.
 
-*5.* AD Explorer 또는 ldapsearch를 사용하여 구성을 확인한 다음 Save Collector를 선택합니다.
+*5.* AD Explorer 또는 ldapsearch를 사용하여 구성을 확인한 다음 수집기 저장을 선택합니다.
 
 image:config_ad_user_directory_image2.png["연결 필드, 필수 및 선택적 속성 매핑, 고급 구성 검색 쿼리를 보여주는 Active Directory 수집기 양식.,title=\"Active Directory 수집기 추가\",width=504,height=754"]
 
@@ -90,7 +90,7 @@ Active Directory 수집기 필드 및 기본 속성 매핑.
 | 포리스트 이름++*++ | 필수 | hq.example.com 등 DNS 도메인, DC=hq,DC=example,DC=com 등 DN, 또는 해당 범위만 검색해야 하는 경우 더 좁은 OU/CN DN. 신뢰할 수 있는 AD 도메인이 지원됩니다. 
 
 
-| 바인드 DN++*++ | 필수 | ws-reader@example.com 등 범위 검색이 허용된 계정입니다. 매핑된 속성에 필요한 디렉터리 읽기 권한만 부여하십시오. 
+| 바인드 DN++*++ | 필수 | ws-reader@example.com 등 범위를 검색하도록 허용된 계정입니다. 매핑된 속성에 필요한 디렉터리 읽기 권한만 부여하십시오. 
 
 
 | 바인딩 비밀번호++*++ | 필수 | Bind DN 계정의 비밀번호입니다. 
@@ -113,13 +113,13 @@ Active Directory 수집기 필드 및 기본 속성 매핑.
 | *Workload Security 필드* | *기본 AD 속성* | *필요한 경우* 
 
 
-| 표시 이름++*++ | 이름 | 항상 
+| 표시 이름++*++ | 이름 | 언제나 
 
 
 | SID++*++ | 객체 ID | 항상; SMB 보안 식별자를 해석합니다 
 
 
-| 사용자 이름++*++ | sAMAccountName | 항상 
+| 사용자 이름++*++ | sAMAccountName | 언제나 
 
 
 | 유닉스아이디 | UID 번호 | AD에 저장된 Unix 사용자에 대한 NFS 활동을 확인해야 할 때 필요합니다. 
@@ -129,7 +129,7 @@ Active Directory 수집기 필드 및 기본 속성 매핑.
 [[optional-attribute-mappings]]
 === 선택적 속성 매핑
 
-가져올 프로필 데이터에 대해서만 '선택적 속성 포함'을 선택하십시오. 각 매핑은 실제 AD 스키마와 일치해야 합니다. 매핑이 비어 있거나 올바르지 않더라도 ID 확인은 가능하지만 프로필 값은 채워지지 않습니다.
+가져올 프로필 데이터에 대해서만 Include Optional Attributes를 선택하십시오. 각 매핑은 실제 AD 스키마와 일치해야 합니다. 매핑이 비어 있거나 올바르지 않더라도 ID 확인은 가능하지만 프로필 값은 채워지지 않습니다.
 
 [cols="50%,50%"]
 |===
@@ -186,7 +186,7 @@ Active Directory 수집기 필드 및 기본 속성 매핑.
 
 
 [[validate-the-configuration]]
-== 구성 검증
+== 구성을 검증합니다
 
 [cols="100%"]
 |===
@@ -195,9 +195,9 @@ Active Directory 수집기 필드 및 기본 속성 매핑.
 
 
 [[use-ad-explorer]]
-=== AD Explorer를 사용하세요
+=== AD Explorer를 사용하십시오
 
-지정된 바인드 DN 계정으로 Active Directory 서버에 연결합니다. 해당 계정이 구성된 포리스트 이름 또는 OU를 탐색하고 이름, objectSid, sAMAccountName, uidNumber(사용하는 경우) 및 기타 선택적 속성을 읽을 수 있는지 확인합니다.
+지정된 바인드 DN 계정으로 Active Directory 서버에 연결합니다. 해당 계정이 구성된 포리스트 이름 또는 OU를 탐색하고 이름, objectSid, sAMAccountName, uidNumber(사용되는 경우) 및 기타 선택적 속성을 읽을 수 있는지 확인합니다.
 
 https://learn.microsoft.com/en-us/sysinternals/downloads/adexplorer["[.underline"]#Microsoft Sysinternals AD Explorer 다운로드#]
 
@@ -212,9 +212,9 @@ https://learn.microsoft.com/en-us/sysinternals/downloads/adexplorer["[.underline
 |===
 | ldapsearch -o ldif-wrap=no -LLL -x -H ldap://ad.example.com:389 -D "ws-reader@example.com" -W -b "DC=hq,DC=example,DC=com" '({vbar}(objectClass=posixAccount)(&(objectCategory=person)(objectClass=user)))' name objectSid sAMAccountName uidNumber 
 |===
-* 수집기가 사용할 정확한 계정과 비밀번호로 바인딩이 성공합니다.
+* 수집기가 사용할 정확한 계정과 비밀번호로 바인딩에 성공합니다.
 * 검색은 예상되는 사람, 컴퓨터 또는 서비스 계정을 반환합니다.
-* 모든 필수 매핑 속성은 존재하며 반환된 오브젝트에 값이 있습니다.
+* 모든 필수 매핑 속성이 존재하며 반환된 오브젝트에 값을 가집니다.
 * 에이전트는 디렉터리 서버에 대한 동일한 DNS 확인 및 네트워크 경로를 가집니다.
 
 
@@ -240,7 +240,7 @@ https://learn.microsoft.com/en-us/sysinternals/downloads/adexplorer["[.underline
 | *메시지 또는 증상* | *확인해야 할 사항* 
 
 
-| LDAP 서버에 잘못된 자격 증명이 제공되었습니다. | 바인드 DN과 암호를 확인하십시오. 또한 계정이 구성된 포리스트 이름을 검색할 수 있는지 확인하십시오. 
+| LDAP 서버에 제공된 자격 증명이 잘못되었습니다. | 바인드 DN과 암호를 확인하십시오. 또한 계정이 구성된 포리스트 이름을 검색할 수 있는지 확인하십시오. 
 
 
 | 포리스트 이름으로 제공된 DN=…에 해당하는 오브젝트를 가져오는 데 실패했습니다. | 포리스트 이름을 수정하십시오. 정확한 도메인, DN, OU 또는 기타 지원되는 범위를 사용하십시오. 
@@ -255,7 +255,7 @@ https://learn.microsoft.com/en-us/sysinternals/downloads/adexplorer["[.underline
 | 수집기가 재시도 중이거나 AGENT008을 보고합니다. | 서버 주소와 포리스트 이름을 확인한 다음, 에이전트가 디렉터리 서비스에 연결할 수 있는지 확인하십시오. 
 
 
-| 사용자 또는 선택적 속성이 표시되지 않습니다. | 검색 쿼리에 오브젝트가 포함되어 있는지, 그리고 매핑된 속성 이름이 디렉터리 스키마와 일치하는지(해당하는 경우 대소문자 포함) 확인하십시오. 저장하여 다시 시작하고 재동기화하십시오. 
+| 사용자 또는 선택적 속성이 표시되지 않습니다. | 검색 쿼리에 오브젝트가 포함되어 있고 매핑된 속성 이름이 디렉터리 스키마와 일치하는지(해당하는 경우 대소문자 포함) 확인하십시오. 저장하여 다시 시작하고 재동기화하십시오. 
 
 
 | AcceptSecurityContext 오류, 데이터 52e. | 자격 증명과 포리스트 이름을 확인하십시오. Active Directory에서 데이터 52e는 유효하지 않은 자격 증명을 나타냅니다. 

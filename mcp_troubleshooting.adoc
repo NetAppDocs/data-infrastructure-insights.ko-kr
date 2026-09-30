@@ -30,7 +30,7 @@ NOTE: DII MCP는 link:concept_preview_features.html["시사"] 기능이므로 �
 . 연결된 ID는 DII 테넌트에 액세스할 수 있습니다.
 
 
-클라이언트 구성을 변경한 후 MCP 서버를 재시작하거나 다시 로드하십시오.
+클라이언트 구성을 변경한 후 MCP 서버를 다시 시작하거나 다시 로드하십시오.
 
 
 
@@ -48,7 +48,7 @@ NOTE: DII MCP는 link:concept_preview_features.html["시사"] 기능이므로 �
 
 오브젝트 속성과 측정 기준은 유형에 따라 다릅니다.
 
-. +ObjectService_getObjectTypes+를 호출하십시오.
+. +ObjectService_getObjectTypes+를 호출하세요.
 . 정확한 오브젝트 유형을 확인하십시오.
 . +ObjectService_getMetadataForObjectType+를 호출합니다.
 . 메타데이터에서 필드 이름을 정확하게 복사하십시오.
@@ -60,11 +60,11 @@ NOTE: DII MCP는 link:concept_preview_features.html["시사"] 기능이므로 �
 
 
 [[a-log-query-rejects-an-attribute]]
-== 로그 쿼리가 속성을 거부합니다
+== 로그 쿼리에서 속성이 거부되었습니다
 
-. +LogService_getLogTypes+를 호출하십시오.
+. +LogService_getLogTypes+를 호출하세요.
 . 정확한 로그 유형을 확인하십시오.
-. +LogService_getLogTypeMetadata+를 호출하세요.
+. +LogService_getLogTypeMetadata+를 호출하십시오.
 . 해당 로그 유형에 대해 반환된 속성만 사용하십시오.
 
 
@@ -83,13 +83,13 @@ NOTE: DII MCP는 link:concept_preview_features.html["시사"] 기능이므로 �
 == 시간 범위가 잘못되었습니다
 
 *  `fromTime`이(가)  `toTime`보다 이전이거나 같은지 확인하십시오.
-* ISO-8601 타임스탬프를 오프셋 또는  `Z`과 함께 사용하십시오.
+* 오프셋 또는  `Z`와(과) 함께 ISO-8601 타임스탬프를 사용하십시오.
 * 요청하신 기간을 30일 이내로 유지해 주십시오.
 * 장기간에 걸친 조사는 연속적이고 겹치지 않는 기간으로 나누고 결과를 요약합니다.
 * 툴이 요구하는 경우 유효한 IANA 시간대를 제공하십시오.
 
 
-런타임 적용이 클라이언트에 캐시된 툴 설명보다 더 엄격한 경우 권위를 갖습니다.
+런타임 적용이 클라이언트에 캐시된 툴 설명보다 더 엄격한 경우 권한을 갖습니다.
 
 
 
@@ -99,8 +99,8 @@ NOTE: DII MCP는 link:concept_preview_features.html["시사"] 기능이므로 �
 * 유효한 필터를 추가하세요.
 * 시간 범위를 줄이십시오.
 * 가장 관련성이 높은 지표를 기준으로 정렬하세요.
-* 결과 제한값을 낮추십시오.
-* 개별 레코드가 필요하지 않은 경우 그룹화 또는 히스토그램을 사용하십시오.
+* 결과 제한값을 낮추세요.
+* 개별 기록이 필요하지 않은 경우 그룹화 또는 히스토그램을 사용하십시오.
 * 더 자세한 정보가 필요할 때만  `offset` 또는 로그 커서를 사용하여 계속 진행하십시오.
 
 
@@ -109,7 +109,7 @@ NOTE: DII MCP는 link:concept_preview_features.html["시사"] 기능이므로 �
 [[a-successful-call-returns-no-rows]]
 == 호출이 성공하면 반환되는 행이 없습니다.
 
-결과가 비어있는 것은 종종 유효한 답변일 수 있습니다. 이는 다음과 같은 의미일 수 있습니다:
+빈 결과는 종종 유효한 답변입니다. 이는 다음을 의미할 수 있습니다:
 
 * 필터 조건에 맞는 리소스가 없습니다.
 * 선택한 시간 범위 내에 이벤트가 발생하지 않았습니다.
