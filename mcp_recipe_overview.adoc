@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: mcp_recipe_overview.html 
-summary: 레시피는 여러 읽기 전용 DII 툴을 반복 가능한 인프라 워크플로로 결합합니다. 이를 시작점으로 활용하고 가상의 리소스 이름을 테넌트의 값으로 교체하십시오. 
+summary: 레시피는 여러 읽기 전용 DII 툴을 반복 가능한 인프라 워크플로로 결합합니다. 이를 시작점으로 사용하고 가상의 리소스 이름을 테넌트의 값으로 교체하십시오. 
 keywords: MCP, DII, Data Infrastructure Insights, AI assistant 
 ---
 = DII MCP 운영 레시피
@@ -14,7 +14,7 @@ keywords: MCP, DII, Data Infrastructure Insights, AI assistant
 
 
 [role="lead"]
-레시피는 여러 읽기 전용 DII 툴을 반복 가능한 인프라 워크플로로 결합합니다. 이를 시작점으로 활용하고 가상의 리소스 이름을 테넌트의 값으로 교체하십시오.
+레시피는 여러 읽기 전용 DII 툴을 반복 가능한 인프라 워크플로로 결합합니다. 이를 시작점으로 사용하고 가상의 리소스 이름을 테넌트의 값으로 교체하십시오.
 
 
 NOTE: DII MCP는 link:concept_preview_features.html["시사"] 기능이므로 변경될 수 있습니다.
@@ -31,16 +31,16 @@ NOTE: DII MCP는 link:concept_preview_features.html["시사"] 기능이므로 �
 | 수집 범위와 최신성을 검증합니다 | link:mcp_recipe_environment_inventory.html["인벤토리 환경 및 컬렉션 상태"] | 수집 단위, 데이터 소스 
 
 
-| 활성 인프라 문제를 우선시하십시오 | link:mcp_recipe_storage_health.html["스토리지 상태 평가"] | 경고, 모니터링, 로그, 오브젝트 
+| 활성 인프라 문제를 우선시하십시오 | link:mcp_recipe_storage_health.html["스토리지 상태 평가"] | 경고, 모니터, 로그, 오브젝트 
 
 
-| 용량 한계에 다다른 풀 찾기 | link:mcp_recipe_capacity_risk.html["용량 위험 파악"] | 오브젝트 메타데이터, 그룹화, 시계열 
+| 용량 압박에 근접한 풀 찾기 | link:mcp_recipe_capacity_risk.html["용량 위험 파악"] | 오브젝트 메타데이터, 그룹화, 시계열 
 
 
-| Kubernetes 컬렉션 구성 요소 버전 확인 | link:mcp_recipe_kubernetes_collector_currency.html["Kubernetes 컬렉터의 현재 상태를 확인하세요"] | 쿠버네티스 컬렉터 
+| Kubernetes 컬렉션 구성 요소 버전을 확인하십시오 | link:mcp_recipe_kubernetes_collector_currency.html["Kubernetes 컬렉터 최신 상태 확인"] | Kubernetes 컬렉터 
 
 
-| 느린 볼륨 또는 워크로드를 조사하십시오. | link:mcp_recipe_performance_rca.html["성능 문제 해결"] | 오브젝트 메트릭, 알림, 로그 
+| 느린 볼륨 또는 워크로드 조사 | link:mcp_recipe_performance_rca.html["성능 문제 해결"] | 오브젝트 메트릭, 알림, 로그 
 
 
 | 라우팅 및 억제 기능을 안전하게 검토하세요 | link:mcp_recipe_notification_posture.html["알림 상태 검토"] | 규칙, 목표, 유지 관리 기간 
@@ -51,7 +51,7 @@ NOTE: DII MCP는 link:concept_preview_features.html["시사"] 기능이므로 �
 == 표준 조사 패턴
 
 . 자원의 범위와 기간을 명확히 하십시오.
-. 이용 가능한 유형을 확인하세요.
+. 이용 가능한 유형을 확인하십시오.
 . 동적 필드를 사용하기 전에 메타데이터를 검색하십시오.
 . 제한된 시간 창을 쿼리합니다.
 . 독립적인 신호들을 상관 분석합니다.
@@ -65,7 +65,7 @@ NOTE: DII MCP는 link:concept_preview_features.html["시사"] 기능이므로 �
 == 안전
 
 * 이 레시피들은 읽기 전용 툴을 사용합니다.
-* 시간 범위는 30일 이하로 유지하세요.
+* 시간 범위는 30일 이하로 유지하십시오.
 * 자격 증명, 사설 주소, UUID, 원시 웹훅 엔드포인트 및 불필요한 로그 페이로드를 제외합니다.
 * MCP 워크플로 외부에서 영향력이 큰 운영 조치를 확인합니다.
 

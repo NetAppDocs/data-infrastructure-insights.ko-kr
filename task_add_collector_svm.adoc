@@ -18,7 +18,7 @@ ONTAP SVM 데이터 수집기를 사용하면 Workload Security에서 NetApp ONT
 
 [quote]
 ____
-*권장 사항:* 가장 빠르고 안정적인 설정을 위해 클러스터 자격 증명을 사용하여 클러스터 관리 IP {plus} SVM 이름으로 연결하고, 저장하기 전에 연결 테스트를 실행하십시오. 이 단일 절차만으로도 대부분의 컬렉터 설정 문제를 예방할 수 있습니다.
+*권장 사항:* 가장 빠르고 안정적인 설정을 위해 클러스터 관리 IP {plus} SVM 이름, 클러스터 자격 증명을 사용하여 연결하고 저장하기 전에 연결 테스트를 실행하십시오. 이 간단한 절차만으로도 대부분의 컬렉터 설정 문제를 예방할 수 있습니다.
 
 ____
 
@@ -53,13 +53,13 @@ ____
 | ONTAP Select | 지원됩니다. 
 
 
-| SVM 유형 / 하위 유형 | 데이터 SVM만 지원합니다(무한 볼륨은 지원하지 않음). 지원되는 하위 유형: default, sync_source, sync_destination. DP-destination SVM은 설계상 감사 대상에서 제외됩니다. 
+| SVM 유형 / 하위 유형 | 데이터 SVM만 지원합니다(무한 볼륨은 지원하지 않음). 지원되는 하위 유형: default, sync++_++source, sync++_++destination. DP-destination SVM은 설계상 감사 대상에서 제외됩니다. 
 
 
 | data-fpolicy-client 서비스 정책 | ONTAP 9.8 이상 버전부터 필수 설정 사항입니다(서비스 정책 참조). 이전 버전에서는 설정할 필요가 없습니다. 
 
 
-| 기능 버전 하한선 | 접근 거부: 9.13.0{plus} • 자율 랜섬웨어 보호(ARP) 이벤트: 9.11.1{plus} • 영구 저장소: 9.14.1{plus} • Protobuf 이벤트 형식: 9.15{plus} 
+| 기능 버전 하한선 | 액세스 거부: 9.13.0{plus} • 자율 랜섬웨어 보호(ARP) 이벤트: 9.11.1{plus} • 영구 저장소: 9.14.1{plus} • Protobuf 이벤트 형식: 9.15{plus} 
 |===
 [quote]
 ____
@@ -75,7 +75,7 @@ ____
 * 테스트 연결을 실행하거나 데이터 수집기를 추가하려면 에이전트를 설치하고 연결해야 합니다. Workload Security 에이전트 배포 및 에이전트 요구 사항을 참조하십시오.
 * 모니터링 대상 SVM에 액세스하는 사용자가 있는 모든 도메인에 대해 사용자 디렉터리 수집기를 구성하십시오. 사용자 디렉터리 수집기에서는 연결 테스트를 사용할 수 없습니다. 사용자 디렉터리 수집기가 없으면 활동 포렌식에서 사용자 이름 대신 SID가 표시됩니다.
 * 에이전트에 필요한 FPolicy 콜백 포트를 예약하십시오. 연결 테스트는 예약된 전체 범위가 아닌 할당된 활성 포트만 테스트합니다. 또한 모든 SVM 데이터 LIF가 에이전트로 라우팅될 수 있는지 확인하십시오. 에이전트 IP 결과는 로컬 주소를 선택하지만 라우팅 테스트는 수행하지 않습니다.
-* SVM의 경우 하나의 Workload Security 환경에 하나의 컬렉터만 구성하십시오. 연결 테스트는 다른 환경에서 중복된 컬렉터를 감지하지 못합니다.
+* SVM에는 하나의 Workload Security 환경에 하나의 컬렉터만 구성하십시오. 연결 테스트는 다른 환경에 중복된 컬렉터를 감지하지 못합니다.
 
 
 
@@ -94,12 +94,12 @@ ____
 | ONTAP SVM 데이터 LIF → 에이전트 | TCP 35000–55000 | FPolicy 파일/사용자 액세스 이벤트(ONTAP이 에이전트로 콜백). 
 
 
-| ONTAP 클러스터 관리 IP → 에이전트 | TCP 35000–55000 | 해당 기능이 사용될 때의 EMS 이벤트(예: ARP) 
+| ONTAP 클러스터 관리 IP → 에이전트 | TCP 35000–55000 | 해당 기능이 사용될 때 발생하는 EMS 이벤트(예: ARP). 
 
 
 | 에이전트 → ONTAP 클러스터 관리 | SSH 22 | CIFS/SMB 사용자 차단(클러스터 자격 증명). 
 |===
-35000~55000 포트 범위를 모두 열 필요는 없습니다. 각 SVM은 최대 4개의 포트(활성화된 프로토콜당 2개 — NFS 및 CIFS/SMB)를 사용하므로, 에이전트가 완전히 로드된 경우(컬렉터 50개) 약 200개의 포트를 예약해 두십시오. 에이전트 호스트 자체의 방화벽을 포함하여 에이전트 방향으로 포트 범위를 열어 두십시오.
+35000~55000 포트 범위를 모두 열 필요는 없습니다. 각 SVM은 최대 4개의 포트(활성화된 프로토콜당 2개 - NFS 및 CIFS/SMB)를 사용하므로, 에이전트가 완전히 로드된 경우(컬렉터 50개) 약 200개의 포트를 예약해 두십시오. 에이전트 호스트 자체의 방화벽을 포함하여 에이전트 방향으로 포트 범위를 열어 두십시오.
 
 [quote]
 ____
@@ -112,7 +112,7 @@ ____
 [[choose-a-connection-method]]
 == 연결 방법을 선택하십시오
 
-두 가지 방법 중 하나를 사용하여 SVM을 추가합니다. 클러스터 IP {plus} SVM 이름을 강력히 권장합니다.
+두 가지 방법 중 하나를 사용하여 SVM을 추가하십시오. 클러스터 IP {plus} SVM 이름을 강력히 권장합니다.
 
 [cols="25%,25%,25%,25%"]
 |===
@@ -141,18 +141,18 @@ _클러스터 관리 IP {plus} SVM 이름을 사용하는 것이 좋습니다. S
 
 [listing]
 ----
-security login password -username vsadmin -vserver <svmname>
+security login password -username vsadmin -vserver ++<++svmname++>++
 
-security login unlock -username vsadmin -vserver <svmname>
+security login unlock -username vsadmin -vserver ++<++svmname++>++
 ----
-*전용 SVM 관리 LIF를 사용하십시오. 전용 관리 LIF를 사용할 수 없는 경우 데이터 LIF 방화벽 정책을 mgmt:로 설정하십시오.*
+*전용 SVM 관리 LIF를 사용하십시오. 사용할 수 없는 경우 데이터 LIF 방화벽 정책을 mgmt:로 설정하십시오.*
 
 [listing]
 ----
-network interface modify -lif <SVM_data_LIF_name> -firewall-policy mgmt
+network interface modify -lif ++<++SVM++_++data++_++LIF++_++name++>++ -firewall-policy mgmt
 ----
-.SVM 로그인 출력 예시.
-image:ontap-svm-login-output.png["예시 SVM 로그인 출력,title=\"예시 SVM 로그인 출력\",width=646,height=164"]
+.SVM 로그인 출력 예시입니다.
+image:ontap-svm-login-output.png["예제 SVM 로그인 출력,title=\"예제 SVM 로그인 출력\",width=646,height=164"]
 
 [quote]
 ____
@@ -165,22 +165,22 @@ ____
 [[permissions-rbac]]
 == 권한(RBAC)
 
-테스트 연결은 수집기 양식에 입력된 ONTAP 계정으로 실행됩니다. 실행하기 전에 클러스터 관리자 자격 증명을 사용하거나 아래에 필요한 권한을 가진 csuser/csrole을 생성하십시오. 이러한 권한이 없으면 테스트 연결을 통해 FPolicy 및 선택한 기능을 검증하거나 구성할 수 없습니다.
+테스트 연결은 수집기 양식에 입력된 ONTAP 계정으로 실행됩니다. 실행하기 전에 클러스터 관리자 자격 증명을 사용하거나 아래의 필수 권한을 가진 csuser/csrole을 생성하십시오. 이러한 권한이 없으면 테스트 연결은 FPolicy 및 선택한 기능을 검증하거나 구성할 수 없습니다.
 
 *기능별 최소 권한*
 
 [cols="34%,33%,33%"]
 |===
-| *기능* | *필요한 권한* | *ONTAP 하한* 
+| *기능* | *필요한 권한* | *ONTAP 플로어* 
 
 
-| FPolicy (모든 배포에 필수) | vserver fpolicy: all | 지원되는 모든 항목 
+| FPolicy (모든 배포에 필수) | vserver fpolicy: all | 지원되는 모든 
 
 
-| 관리자 바로가기 | role DEFAULT: readonly (cluster) — 읽기 검사를 충족합니다. fpolicy는 여전히 all을 필요로 합니다. | — 
+| 관리자 바로가기 | 역할 DEFAULT: readonly (클러스터) — 읽기 검사를 충족합니다. fpolicy는 여전히 all이 필요합니다. | — 
 
 
-| 스냅샷 | 볼륨 스냅샷: 전체(가능한 경우 cloudsecure_* 범위로) | 모든 
+| 스냅샷 | 볼륨 스냅샷: 전체 (가능한 경우 cloudsecure++_*++ 범위로) | 모든 
 
 
 | EMS 기반 모니터링 | 이벤트 카탈로그, 이벤트 필터, 이벤트 알림, 이벤트 알림 수신처, 보안 인증서: 모두 | 모든 
@@ -198,7 +198,7 @@ ____
 | Protobuf 이벤트 형식 | vserver fpolicy: all | 9.15{plus} 
 
 
-| 사용자 액세스 차단(SMB 및 NFS) | SSH (application ssh {plus} 포트 22) {plus} set: all, 및 vserver export-policy rule, vserver cifs session, vserver services access-check authentication translate, vserver name-mapping: all. 클러스터 자격 증명만 해당합니다. | 모든 
+| 사용자 액세스 차단(SMB 및 NFS) | SSH (애플리케이션 ssh {plus} 포트 22) {plus} set: all 및 vserver export-policy rule, vserver cifs session, vserver services access-check authentication translate, vserver name-mapping: all. 클러스터 자격 증명만 해당합니다. | 모든 
 |===
 [quote]
 ____
@@ -215,10 +215,10 @@ ____
 
 [listing]
 ----
-security login delete -user-or-group-name csuser -application *
-security login role delete -role csrole -cmddirname *
-security login rest-role delete -role csrestrole -api *
-security login rest-role delete -role arwrole -api *
+security login delete -user-or-group-name csuser -application ++*++
+security login role delete -role csrole -cmddirname ++*++
+security login rest-role delete -role csrestrole -api ++*++
+security login rest-role delete -role arwrole -api ++*++
 ----
 역할과 사용자를 생성합니다(클러스터 관리자로 실행):
 
@@ -226,7 +226,7 @@ security login rest-role delete -role arwrole -api *
 ----
 security login role create -role csrole -cmddirname DEFAULT -access readonly
 security login role create -role csrole -cmddirname "vserver fpolicy" -access all
-security login role create -role csrole -cmddirname "volume snapshot" -access all -query "-snapshot cloudsecure_*"
+security login role create -role csrole -cmddirname "volume snapshot" -access all -query "-snapshot cloudsecure++_*++"
 security login role create -role csrole -cmddirname "event catalog" -access all
 security login role create -role csrole -cmddirname "event filter" -access all
 security login role create -role csrole -cmddirname "event notification destination" -access all
@@ -246,43 +246,43 @@ security login create -user-or-group-name csuser -application http -authmethod p
 
 [listing]
 ----
-security login delete -user-or-group-name csuser -application * -vserver <vservername>
-security login role delete -role csrole -cmddirname * -vserver <vservername>
-security login rest-role delete -role csrestrole -api * -vserver <vservername>
+security login delete -user-or-group-name csuser -application ++*++ -vserver ++<++vservername++>++
+security login role delete -role csrole -cmddirname ++*++ -vserver ++<++vservername++>++
+security login rest-role delete -role csrestrole -api ++*++ -vserver ++<++vservername++>++
 ----
-역할 및 사용자 생성(실행 전 <vservername> 교체):
+역할 및 사용자를 생성합니다(실행하기 전에 ++<++vservername++>++ 교체):
 
 [listing]
 ----
-security login role create -vserver <vservername> -role csrole -cmddirname DEFAULT -access none
-security login role create -vserver <vservername> -role csrole -cmddirname "network interface" -access readonly
-security login role create -vserver <vservername> -role csrole -cmddirname version -access readonly
-security login role create -vserver <vservername> -role csrole -cmddirname volume -access readonly
-security login role create -vserver <vservername> -role csrole -cmddirname vserver -access readonly
-security login role create -vserver <vservername> -role csrole -cmddirname "vserver fpolicy" -access all
-security login role create -vserver <vservername> -role csrole -cmddirname "volume snapshot" -access all
-security login create -user-or-group-name csuser -application ontapi -authmethod password -role csrole -vserver <vservername>
-security login create -user-or-group-name csuser -application http -authmethod password -role csrole -vserver <vservername>
+security login role create -vserver ++<++vservername++>++ -role csrole -cmddirname DEFAULT -access none
+security login role create -vserver ++<++vservername++>++ -role csrole -cmddirname "network interface" -access readonly
+security login role create -vserver ++<++vservername++>++ -role csrole -cmddirname version -access readonly
+security login role create -vserver ++<++vservername++>++ -role csrole -cmddirname volume -access readonly
+security login role create -vserver ++<++vservername++>++ -role csrole -cmddirname vserver -access readonly
+security login role create -vserver ++<++vservername++>++ -role csrole -cmddirname "vserver fpolicy" -access all
+security login role create -vserver ++<++vservername++>++ -role csrole -cmddirname "volume snapshot" -access all
+security login create -user-or-group-name csuser -application ontapi -authmethod password -role csrole -vserver ++<++vservername++>++
+security login create -user-or-group-name csuser -application http -authmethod password -role csrole -vserver ++<++vservername++>++
 ----
 
 
 [[feature-specific-permissions]]
 === 기능별 권한
 
-*영구 저장소(클러스터 모드 표시, SVM 모드의 경우 -vserver <vservername> 추가):*
+*영구 저장소(클러스터 모드 표시, SVM 모드의 경우 -vserver ++<++vservername++>++ 추가):*
 
 [listing]
 ----
 security login role create -role csrole -cmddirname "vserver fpolicy" -access all
 security login role create -role csrole -cmddirname "job show" -access readonly
 ----
-*Protobuf (클러스터 모드 표시, SVM 모드의 경우 -vserver <vservername> 추가):*
+*Protobuf (클러스터 모드 표시; SVM 모드의 경우 -vserver ++<++vservername++>++ 추가):*
 
 [listing]
 ----
 security login role create -role csrole -cmddirname "vserver fpolicy" -access all
 ----
-액세스 거부 및 ARP의 경우 클러스터 관리자 자격 증명에는 추가 권한이 필요하지 않습니다. 사용자 지정 사용자의 경우 위의 기능 표에 권한을 추가하십시오. ONTAP 액세스 거부 및 ONTAP 자율 랜섬웨어 보호 통합 가이드를 참조하십시오.
+Access Denied 및 ARP의 경우 클러스터 관리자 자격 증명에는 추가 권한이 필요하지 않습니다. 사용자 지정 사용자의 경우 위의 기능 표에 권한을 추가하십시오. ONTAP Access Denied 및 ONTAP Autonomous Ransomware Protection 통합 가이드를 참조하십시오.
 
 
 
@@ -290,8 +290,8 @@ security login role create -role csrole -cmddirname "vserver fpolicy" -access al
 == 데이터 수집기를 구성하고 테스트합니다
 
 . 관리자 또는 계정 소유자로 Data Infrastructure Insights에 로그인합니다.
-. Workload Security > 수집기 > &#43;데이터 수집기를 선택합니다.
-. NetApp SVM 타일 위로 마우스를 가져간 다음 &#43;Monitor를 클릭합니다.
+. Workload Security ++>++ 수집기 ++>++ &#43;데이터 수집기를 선택합니다.
+. NetApp SVM 타일 위로 마우스를 가져간 다음 &#43;모니터링을 클릭합니다.
 . 아래 필드에 정보를 입력하세요. 아직 수집기를 저장하지 마세요.
 
 
@@ -309,7 +309,7 @@ security login role create -role csrole -cmddirname "vserver fpolicy" -access al
 | 관리 IP를 통해 연결 | 클러스터 IP(권장) 또는 SVM 관리 IP를 선택하십시오. 
 
 
-| 클러스터/SVM 관리 IP 주소 | 선택에 따른 클러스터 또는 SVM의 관리 IP 
+| 클러스터/SVM 관리 IP 주소 | 선택에 따른 클러스터 또는 SVM의 관리 IP. 
 
 
 | SVM 이름 | SVM 이름(클러스터 IP를 통해 연결할 때 필수). ONTAP과 정확히 일치해야 합니다(대소문자 구분). 
@@ -333,11 +333,11 @@ security login role create -role csrole -cmddirname "vserver fpolicy" -access al
 | 폴더 액세스 모니터링 | 일반 폴더 액세스 이벤트를 활성화합니다. 폴더 생성/이름 변경/삭제는 이 옵션 없이도 캡처됩니다. 활성화하면 이벤트 볼륨이 증가합니다. 
 
 
-| ONTAP 전송 버퍼 크기 설정 | FPolicy 전송 버퍼를 조정합니다. 성능 문제가 있는 9.8p7 이전 ONTAP에서 ONTAP 성능을 향상시키려면 조정하십시오. 해당 옵션이 표시되지 않으면 NetApp 지원팀에 문의하십시오. 
+| ONTAP 전송 버퍼 크기 설정 | FPolicy 전송 버퍼를 조정합니다. 성능 문제가 있는 9.8p7 이전의 ONTAP에서 ONTAP 성능을 향상시키려면 조정하십시오. 해당 옵션이 표시되지 않으면 NetApp 지원팀에 문의하십시오. 
 |===
 [quote]
 ____
-*Important:* 기본 제외 파일 확장자: 설계상 Workload Security는 FPolicy 범위를 구성하여 ini 및 DS_Store 확장자를 제외합니다. 이러한 파일에 대한 이벤트는 ONTAP에서 필터링되어 Workload Security에 도달하지 않으므로 Activity Forensics에 나타나지 않습니다. 이는 고객이 구성할 수 있는 경고 제외와는 별개입니다. 이는 예상되는 동작이며, 이러한 확장자에 대한 감사는 UI에서 구성할 수 없습니다.
+*Important:* 기본 제외 파일 확장자: 설계상 Workload Security는 FPolicy 범위를 구성하여 ini 및 DS++_++Store 확장자를 제외합니다. 이러한 파일에 대한 이벤트는 ONTAP에서 필터링되어 Workload Security에 도달하지 않으므로 Activity Forensics에 나타나지 않습니다. 이는 고객이 구성할 수 있는 경고 제외와는 별개입니다. 이는 예상되는 동작이며, 이러한 확장자에 대한 감사는 UI에서 구성할 수 없습니다.
 
 ____
 
@@ -346,20 +346,20 @@ ____
 [[run-test-connection-before-saving]]
 === 저장하기 전에 연결 테스트를 실행하십시오
 
-Test Connection 기능(2025년 3월 도입)은 수집기를 생성하기 전에 연결, 자격 증명, 데이터 LIF, FPolicy 콜백 및 기능별 RBAC를 검증하므로 네트워크 및 권한 문제를 자체적으로 해결할 수 있습니다. 수집기 추가/편집 페이지에서 세부 정보를 입력하고 Test Connection을 클릭하십시오.
+2025년 3월에 도입된 연결 테스트 기능은 수집기를 생성하기 전에 연결 상태, 자격 증명, 데이터 LIF, FPolicy 콜백 및 기능별 RBAC를 검증하여 네트워크 및 권한 문제를 자체적으로 해결할 수 있도록 합니다. 수집기 추가/편집 페이지에서 세부 정보를 입력하고 연결 테스트를 클릭하십시오.
 
 image:ws-test-connection-button.png["연결 테스트 버튼,title=\"연결 테스트 버튼\",width=433,height=54"]
 
 .수집기 세부 정보를 입력한 후 연결 테스트를 사용하십시오.
 image:ws-test-connection-success.png["성공적인 테스트 연결 결과,title=\"성공적인 테스트 연결 결과\",width=937,height=298"]
 
-연결 테스트 성공 결과의 예시입니다.
+성공적인 연결 테스트 결과의 예시입니다.
 
 *전체적인 적용 범위를 확보하려면 클러스터 자격 증명을 사용하여 클러스터 관리 IP {plus} SVM 이름을 통해 실행하십시오.*
 
 [cols="34%,33%,33%"]
 |===
-| *확인* | *이것이 확인하는 것* | *만약 실패한다면* 
+| *확인* | *확인 내용* | *만약 실패한다면* 
 
 
 | Https | 에이전트는 TCP 443을 통해 ONTAP 관리에 접근할 수 있습니다. | IP/모드 및 443 방화벽을 확인하십시오. 
@@ -368,20 +368,20 @@ image:ws-test-connection-success.png["성공적인 테스트 연결 결과,title
 | Ontap 버전 | 자격 증명 작동; 버전 및 기능 적합성. | 자격 증명/RBAC 및 ONTAP 버전을 확인하십시오. 
 
 
-| 데이터 LIF | data-fpolicy-client(9.8{plus})가 있고 상태가 up인 사용 가능한 데이터 LIF가 있습니다. | 서비스 정책에 data-fpolicy-client를 추가하십시오(서비스 정책 참조). 
+| 데이터 Lifs | data-fpolicy-client(9.8{plus})가 있고 상태가 up인 사용 가능한 데이터 LIF가 존재합니다. | 서비스 정책에 data-fpolicy-client를 추가하십시오(서비스 정책 참조). 
 
 
-| 에이전트 IP | 에이전트는 SVM 데이터 LIF와 동일한 IPv4 또는 IPv6 계열의 활성 로컬 주소를 가지고 있습니다. 라우팅을 증명하지는 않습니다. | 에이전트에 적합한 로컬 주소가 있는지 확인하십시오. Fpolicy 서버에 나중에 오류가 발생하면 각 SVM 데이터 LIF에서 에이전트로의 라우팅을 확인하십시오. 
+| 에이전트 IP | 에이전트는 SVM 데이터 LIF와 동일한 IPv4 또는 IPv6 계열의 활성 로컬 주소를 가지고 있습니다. 이는 라우팅을 증명하지 않습니다. | 에이전트에 적합한 로컬 주소가 있는지 확인하십시오. Fpolicy 서버에 나중에 오류가 발생하면 각 SVM 데이터 LIF에서 에이전트로의 라우팅을 확인하십시오. 
 
 
-| Fpolicy 서버 | ONTAP은 에이전트로 콜백하여 활성 포트에서 FPolicy 핸드셰이크를 완료할 수 있습니다. | 에이전트 방향으로 35000–55000을 열고, 1-SVM-1-컬렉터인지 확인하십시오. 
+| Fpolicy 서버 | ONTAP은 에이전트로 콜백하여 활성 포트에서 FPolicy 핸드셰이크를 완료할 수 있습니다. | 에이전트 방향으로 35000~55000을 열고, SVM 하나와 컬렉터 하나가 제대로 구성되었는지 확인하십시오. 
 
 
 | 기능 | 기능별 RBAC 및 ONTAP 버전 적격성(클러스터 모드에서만 해당). | 누락된 권한을 부여하십시오(권한 참조). 
 |===
 [quote]
 ____
-Important*: 제한 사항: 연결 테스트는 35000–55000 포트 중 일부만 테스트합니다(예약된 전체 범위를 열어 두십시오). 에이전트 IP 결과는 데이터 LIF와 동일한 IPv4 또는 IPv6 계열의 활성 로컬 주소를 선택하며, 각 데이터 LIF에서 에이전트로의 라우팅은 테스트하지 않습니다. 또한 연결 테스트는 실제 파일 이벤트 흐름을 생성하거나 검증하지 않습니다. SVM 모드에서는 SVM 계정에 필요한 권한이 없으므로 기능/RBAC 검사가 실행되지 않으며, 사용자 디렉터리 수집기에서는 연결 테스트를 사용할 수 없습니다.
+Important*: 제한 사항: 연결 테스트는 35000~55000번 포트 중 일부만 테스트합니다(예약된 전체 포트 범위를 열어 두십시오). 에이전트 IP 결과는 데이터 LIF와 동일한 IPv4 또는 IPv6 계열의 활성 로컬 주소를 선택하며, 각 데이터 LIF에서 에이전트로의 라우팅은 테스트하지 않습니다. 또한 연결 테스트는 실제 파일 이벤트 흐름을 생성하거나 검증하지 않습니다. SVM 모드에서는 SVM 계정에 필요한 권한이 없으므로 기능/RBAC 검사가 실행되지 않으며, 사용자 디렉터리 수집기에서는 연결 테스트를 사용할 수 없습니다.
 
 ____
 
@@ -398,20 +398,20 @@ ____
 [[if-the-data-lifs-check-fails]]
 == Data Lifs 검사가 실패하면
 
-연결 테스트 전에 데이터 LIF를 수동으로 검증하지 마십시오. 데이터 LIF 결과가 실패하면 다음 명령을 사용하여 서비스 정책을 수정하십시오. ONTAP 9.8 이상에서는 하나 이상의 운영 SVM 데이터 LIF에 data-nfs 및/또는 data-cifs와 함께 data-fpolicy-client가 포함되어야 합니다:
+Test Connection 전에 데이터 LIF를 수동으로 검증하지 마십시오. Data Lifs 결과가 실패하면 다음 명령을 사용하여 서비스 정책을 수정하십시오. ONTAP 9.8 이상에서는 하나 이상의 운영 SVM 데이터 LIF에 data-nfs 및/또는 data-cifs와 함께 data-fpolicy-client가 포함되어야 합니다:
 
 [listing]
 ----
-net int service-policy create -policy only_data_fpolicy -vserver <svm> \
+net int service-policy create -policy only++_++data++_++fpolicy -vserver ++<++svm++>++ ++\++ \
 -allowed-addresses 0.0.0.0/0 -services data-cifs,data-nfs,data,-core,data-fpolicy-client
 ----
 LIF를 확인하십시오:
 
 [listing]
 ----
-network interface show -vserver <svm> -fields service-policy,status-admin,status-oper
+network interface show -vserver ++<++svm++>++ -fields service-policy,status-admin,status-oper
 ----
-ONTAP 9.8 이전 버전에서는 data-fpolicy-client를 설정할 필요가 없습니다. NFS 및/또는 CIFS를 처리하는 데이터 역할(up)을 가진 LIF면 충분합니다.
+ONTAP 9.8 이전 버전에서는 data-fpolicy-client를 설정할 필요가 없습니다. NFS 및/또는 CIFS를 포함하는 데이터 역할(up)을 가진 LIF면 충분합니다.
 
 
 
@@ -427,8 +427,8 @@ MAV가 활성화된 경우 Workload Security에서 스냅샷 및 사용자 차�
 
 [listing]
 ----
-multi-admin-verify rule modify -operation "volume snapshot create" -query "-snapshot !*cloudsecure_*"
-multi-admin-verify rule modify -operation "volume snapshot delete" -query "-snapshot !*cloudsecure_*"
+multi-admin-verify rule modify -operation "volume snapshot create" -query "-snapshot !++*++cloudsecure++_*++"
+multi-admin-verify rule modify -operation "volume snapshot delete" -query "-snapshot !++*++cloudsecure++_*++"
 multi-admin-verify rule delete -operation set # allow user blocking
 ----
 
@@ -436,8 +436,8 @@ multi-admin-verify rule delete -operation set # allow user blocking
 [[user-access-blocking-smb-nfs]]
 === *사용자 액세스 차단(SMB & NFS)*
 
-* 클러스터 수준 자격 증명이 필요합니다(SMB는 사용자를 차단하고, NFS는 호스트 IP를 차단합니다). cluster-admin 권한이 있는 경우 추가 권한은 필요하지 않으며, 클러스터 관리에 대한 SSH(포트 22)만 확보하면 됩니다.
-* 사용자 지정 사용자(csuser)를 사용하여 아래의 클러스터 수준 권한을 부여하고, 해당 사용자가 SSH를 사용할 수 있는지 확인한 다음 ONTAP 및 User Directory 수집기를 다시 시작하십시오.
+* 클러스터 수준 자격 증명이 필요합니다(SMB는 사용자를 차단하고, NFS는 호스트 IP를 차단합니다). cluster-admin을 사용하는 경우 추가 권한은 필요하지 않으며, 클러스터 관리에 대한 SSH(포트 22)만 확인하면 됩니다.
+* 사용자 지정 사용자(csuser)에게 아래의 클러스터 수준 권한을 부여하고, 해당 사용자가 SSH를 사용할 수 있는지 확인한 다음, ONTAP 및 사용자 디렉터리 수집기를 다시 시작하십시오.
 
 
 [listing]
@@ -453,10 +453,10 @@ security login role create -role csrole -cmddirname "vserver name-mapping" -acce
 [[persistent-store]]
 === 영구 저장소
 
-ONTAP 9.14.1부터 지원됩니다. 추가/편집 페이지의 확인란을 사용하여 활성화하고 볼륨 이름을 제공하십시오(필수). 버전에 따라 동작이 다릅니다:
+ONTAP 9.14.1부터 지원됩니다. 추가/편집 페이지의 확인란을 선택하여 활성화하고 볼륨 이름을 입력하십시오(필수). 버전에 따라 동작이 다릅니다:
 
 * *ONTAP 9.14.1:* 볼륨을 직접 생성하고(16 GB 권장) 이름을 입력하십시오.
-* *ONTAP 9.15.1:* 컬렉터는 사용자가 지정한 이름으로 16GB 볼륨을 자동으로 생성합니다.
+* *ONTAP 9.15.1:* 컬렉터는 사용자가 지정한 이름으로 16 GB 볼륨을 자동으로 생성합니다.
 
 
 vserver fpolicy: all 및 job show: readonly가 필요합니다(기능별 권한 참조).
@@ -466,7 +466,7 @@ vserver fpolicy: all 및 job show: readonly가 필요합니다(기능별 권한 
 [[protobuf-mode]]
 === Protobuf 모드
 
-고급 구성에서 활성화되면 Workload Security는 FPolicy 엔진을 protobuf 모드로 구성합니다. ONTAP 9.15부터 지원됩니다. vserver fpolicy: all이 필요합니다. 자세한 내용은 ONTAP 설명서를 참조하십시오.
+고급 구성에서 활성화하면 Workload Security는 FPolicy 엔진을 protobuf 모드로 구성합니다. ONTAP 9.15부터 지원됩니다. vserver fpolicy: all이 필요합니다. 자세한 내용은 ONTAP 설명서를 참조하십시오.
 
 
 
@@ -490,7 +490,7 @@ ____
 [[pause-and-resume-a-collector]]
 == 수집기 일시 중지 및 재개
 
-일시 중지 및 재개는 에이전트가 아닌 데이터 수집기에 적용됩니다. UI(수집기 > 해당 수집기 > 옵션 메뉴) 또는 API에서 실행할 수 있습니다.
+일시 중지 및 재개는 에이전트가 아닌 데이터 수집기에 적용됩니다. UI(수집기 ++>++ 수집기 ++>++ 옵션 메뉴) 또는 API에서 실행할 수 있습니다.
 
 실행 중인 컬렉터를 일시 중지하면 ONTAP에서 FPolicy 구성이 제거됩니다. 일시 중지된 동안에는 이벤트가 흐르지 않으며 양방향으로 데이터가 전송되지 않습니다.
 
@@ -506,14 +506,14 @@ ____
 
 *일시정지 기능은 언제 사용해야 할까요?*
 
-* 계획된 ONTAP 업그레이드 또는 SVM 장애 등 장시간의 ONTAP 측 유지 관리 시에는 일시 중지를 사용하여 스토리지를 사용할 수 없는 동안 FPolicy 구성이 깔끔하게 제거되도록 하십시오.
+* 계획된 ONTAP 업그레이드 또는 SVM 장애 등 장시간 ONTAP 측 유지 관리 시에는 일시 중지를 사용하여, 스토리지를 사용할 수 없는 동안 FPolicy 구성이 깔끔하게 제거되도록 하십시오.
 * 유지보수가 완료되는 즉시 작업을 재개하십시오. 수집기가 일시 중지된 동안 발생하는 활동은 수집되지 않습니다.
-* 에이전트 또는 컬렉터의 업그레이드 시점을 제어하기 위해 Pause를 사용하지 마십시오. 대신 에이전트를 고정하거나 고정 해제하십시오(Deploy Workload Security Agents 참조).
+* 에이전트 또는 컬렉터의 업그레이드 시점을 제어하기 위해 일시 중지를 사용하지 마십시오. 대신 에이전트를 고정하거나 고정 해제하십시오(Deploy Workload Security Agents 참조).
 
 
 [quote]
 ____
-*참고:* 제한(차단)된 사용자가 있는 동안에는 수집기를 일시 중지할 수 없습니다. 먼저 사용자 접근 권한을 복원하십시오.
+*참고:* 수집기는 사용자 접근이 제한(차단)된 동안에는 일시 중지할 수 없습니다. 먼저 사용자 접근 권한을 복원하십시오.
 
 ____
 
@@ -526,7 +526,7 @@ ____
 
 * 소스 에이전트가 연결되어 있어야 하며, 컬렉터가 실행 중이어야 합니다.
 * 데이터 및 사용자 디렉터리 수집기 모두에서 지원되지만, 수동으로 관리되는 테넌트에서는 지원되지 않습니다.
-* 수집기를 편집하고 대상 에이전트를 선택한 다음 수집기 저장을 클릭합니다. 편집 페이지에서 변경한 구성 내용은 마이그레이션이 성공적으로 완료된 후에도 유지됩니다.
+* 수집기를 편집하고 대상 에이전트를 선택한 다음 Save Collector를 클릭합니다. 편집 페이지에서 변경한 구성 내용은 마이그레이션이 성공적으로 완료된 후에도 유지됩니다.
 
 
 image:ws-agent-selector.png["수집기 마이그레이션을 위한 에이전트 선택기,title=\"수집기 마이그레이션을 위한 에이전트 선택기\",width=957,height=304"]
@@ -541,12 +541,12 @@ image:ws-agent-selector.png["수집기 마이그레이션을 위한 에이전트
 * 컬렉터를 저장하기 전에 연결 테스트를 실행하고 실패한 모든 검사를 해결하십시오. 대부분의 컬렉터 오류는 연결 테스트에서 감지되는 필수 조건 미충족으로 인해 발생합니다.
 * 클러스터 관리 IP를 통해 SVM 이름과 클러스터 자격 증명을 사용하여 연결하십시오. SVM 모드에서는 기능 및 RBAC 검사를 실행할 수 없습니다.
 * SVM당 하나의 컬렉터를 구성하고, 하나의 Workload Security 환경에만 설정하십시오. 두 번째 컬렉터는 첫 번째 컬렉터의 FPolicy 대상을 대체합니다.
-* 모니터링 대상 SVM에 액세스하는 사용자가 있는 모든 도메인에 대해 첫 번째 ONTAP SVM 컬렉터를 구성하기 전 또는 함께 사용자 디렉터리 컬렉터를 구성하여 활동에 SID 대신 사용자 이름이 표시되도록 하십시오.
+* 모니터링 대상 SVM에 액세스하는 사용자가 있는 모든 도메인에 대해 첫 번째 ONTAP SVM 수집기를 설치하기 전 또는 설치와 동시에 사용자 디렉터리 수집기를 구성하여 활동에 SID 대신 사용자 이름이 표시되도록 하십시오.
 * 따옴표 없이 전체 공유 및 볼륨 이름을 입력하십시오. 목록이 긴 경우 공유 대신 볼륨으로 필터링하십시오.
-* 이벤트 볼륨이 증가하므로 일반적인 폴더 액세스 이벤트가 필요한 경우에만 폴더 액세스 모니터링을 활성화하십시오.
+* 이벤트 볼륨이 증가하므로 일반적인 폴더 액세스 이벤트가 필요한 경우에만 Monitor Folder Access를 활성화하십시오.
 * 호스팅 에이전트의 용량을 최대 50개의 수집기, 초당 20,000개 이벤트 제한 내로 유지하고, Event Rate Checker를 사용하여 최대 이벤트 속도에 맞춰 크기를 조정하십시오.
 * MetroCluster의 경우, 소스 SVM용 컬렉터 하나와 대상 SVM용 컬렉터 하나를 구성하고, 두 컬렉터는 클러스터 IP로 연결해야 합니다.
-* 일시 중지는 장기간의 ONTAP 측 유지 관리에만 사용하십시오. 업그레이드 시점을 제어하려면 에이전트를 고정하거나 고정 해제하십시오(Workload Security 에이전트 배포 참조).
+* 일시 중지 기능은 ONTAP 측 유지 관리가 장기간 필요한 경우에만 사용하십시오. 업그레이드 시점을 제어하려면 에이전트를 고정하거나 고정 해제하십시오(Deploy Workload Security Agents 참조).
 * FPolicy 성능을 최적화하려면 에이전트를 스토리지 네트워크에 가깝게 배치하고 네트워크 지연 시간을 최소화하십시오.
 
 
@@ -557,7 +557,7 @@ image:ws-agent-selector.png["수집기 마이그레이션을 위한 에이전트
 
 연결 테스트는 설정 시간 연결, 자격 증명, 데이터 LIF, 할당된 포트의 콜백 연결, SMB 선택 시 CIFS 서버 확인 및 클러스터 모드에서의 기능 액세스를 포함합니다. 테스트가 성공적으로 완료된 후에는 이러한 검사를 수동으로 반복하지 마십시오.
 
-수집기가 나중에 오류 또는 성능 저하 상태가 되면 상태 > 자세히 보기를 열고 ONTAP SVM 데이터 수집기 문제 해결 지침을 따르십시오. 중복 수집기, 이벤트 속도 과부하, 일시 중지된 수집기, 영구 저장소 배치, MetroCluster 전환, 누락된 활동, ID 확인 등 런타임 조건은 사전 저장 테스트 연결 워크플로에 포함되지 않습니다.
+수집기가 나중에 오류 또는 성능 저하 상태가 되면 상태 ++>++ 자세한 내용을 열고 ONTAP SVM 데이터 수집기 문제 해결을 따르십시오. 중복 수집기, 이벤트 속도 과부하, 일시 중지된 수집기, 영구 저장소 배치, MetroCluster 전환, 누락된 활동 및 ID 확인 등 런타임 조건은 사전 저장 테스트 연결 워크플로에 포함되지 않습니다.
 
 
 
@@ -565,6 +565,6 @@ image:ws-agent-selector.png["수집기 마이그레이션을 위한 에이전트
 == 당신이 완료한 후
 
 * 설치된 데이터 수집기 페이지에서 옵션 메뉴를 사용하여 수집기를 편집하거나 다시 시작하십시오.
-* 수집기가 Running 상태가 되고 실제 클라이언트 I/O 후에 Workload Security > Activity Forensics에 이벤트가 나타나는지 확인하십시오.
-* 사용자 이름이 확인되는지(SID가 아님) 확인하십시오. 그렇지 않은 경우 User Directory Collector를 확인하십시오.
+* 수집기가 Running 상태가 되고 실제 클라이언트 I/O 이후 Workload Security ++>++ Activity Forensics에 이벤트가 나타나는지 확인합니다.
+* 사용자 이름이 해석되는지(SID가 아님) 확인하십시오. 그렇지 않은 경우 User Directory Collector를 확인하십시오.
 

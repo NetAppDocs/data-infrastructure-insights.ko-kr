@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: mcp_tools_overview.html 
-summary: 'DII MCP 서버는 현재 9개 도메인에 걸쳐 26개의 읽기 전용 제품 툴을 제공합니다. 연결된 클라이언트가 인증해야 할 때 별도의 `mcp_auth` 도우미가 나타날 수 있습니다.' 
+summary: 'DII MCP Server는 현재 9개 도메인에 걸쳐 26개의 읽기 전용 제품 툴을 제공합니다. 연결된 클라이언트가 인증이 필요할 경우 별도의 `mcp_auth` 도우미가 나타날 수 있습니다.' 
 keywords: MCP, DII, Data Infrastructure Insights, AI assistant 
 ---
 = DII MCP 툴 참조
@@ -14,7 +14,7 @@ keywords: MCP, DII, Data Infrastructure Insights, AI assistant
 
 
 [role="lead"]
-DII MCP 서버는 현재 9개 도메인에 걸쳐 26개의 읽기 전용 제품 툴을 제공합니다. 연결된 클라이언트가 인증해야 할 때 별도의 +mcp_auth+ 헬퍼가 나타날 수 있습니다.
+DII MCP 서버는 현재 9개 도메인에 걸쳐 26개의 읽기 전용 제품 툴을 제공합니다. 연결된 클라이언트가 인증해야 할 때 별도의 +mcp_auth+ 도우미가 나타날 수 있습니다.
 
 
 NOTE: DII MCP는 link:concept_preview_features.html["시사"] 기능이므로 변경될 수 있습니다.
@@ -26,19 +26,19 @@ NOTE: DII MCP는 link:concept_preview_features.html["시사"] 기능이므로 �
 [[query-conventions]]
 == 쿼리 규칙
 
-* 동적 필드를 쿼리하기 전에 유형과 메타데이터를 확인하십시오.
-* 메타데이터에서 반환된 대소문자를 구분하는 정확한 속성 및 메트릭 이름을 사용하십시오.
+* 동적 필드를 쿼리하기 전에 유형 및 메타데이터를 확인하십시오.
+* 메타데이터가 반환하는 정확하고 대소문자를 구분하는 속성 및 메트릭 이름을 사용하십시오.
 * 필요한 경우 ISO-8601 타임스탬프와 IANA 시간대 이름을 사용하십시오.
 * 조회 기간은 30일 이하로 유지하세요.
 * 오브젝트 및 알림 페이지네이션에  `limit` 및  `offset`를 사용하십시오.
-* 반환된 커서를 사용하여 로그 이벤트 페이지를 매기십시오.
+* 로그 이벤트 페이지 매김에 반환된 커서를 사용하십시오.
 * 전체 웹훅 엔드포인트 주소를 표시하지 마십시오.
 
 
 
 
 [[acquisition-units]]
-== 수집 유닛
+== 수집 장치
 
 
 
@@ -99,7 +99,7 @@ NOTE: DII MCP는 link:concept_preview_features.html["시사"] 기능이므로 �
 * `timezone`
 
 
-선택적 입력값에는  `filter`,  `sortField`,  `sortAscending`,  `limit` 및  `offset`가 포함됩니다.  `limit`는 1-500이고,  `offset`은 0-1000입니다. 시간 범위는 30일 미만으로 유지하십시오.
+선택적 입력에는  `filter`,  `sortField`,  `sortAscending`,  `limit` 및  `offset`가 포함됩니다.  `limit`는 1-500이고,  `offset`는 0-1000입니다. 시간 범위는 30일 미만으로 유지하십시오.
 
 예:
 
@@ -142,13 +142,13 @@ UUID를 사용하여 하나의 알림을 검색합니다.
 
 +CollectorService_getDataSources+
 
-구성된 수집기의 이름, 상태, 공급업체, 모델, 수집 장치, 버전 및 마지막 성공 수집을 나열합니다. 선택적으로 AU UUID로 필터링할 수 있습니다.
+구성된 수집기의 이름, 상태, 공급업체, 모델, 수집 장치, 버전 및 마지막 성공 수집 시간을 나열합니다. 선택적으로 AU UUID로 필터링할 수 있습니다.
 
 예:
 
 []
 ====
-상태 및 공급업체별로 구성된 데이터 소스를 그룹화합니다. 실패한 데이터 소스와 오래된 성공적인 데이터 수집 내역을 강조 표시합니다.
+상태 및 공급업체별로 구성된 데이터 소스를 그룹화합니다. 실패 및 오래된 성공적인 수집을 강조 표시합니다.
 
 ====
 
@@ -171,7 +171,7 @@ UUID를 사용하여 하나의 알림을 검색합니다.
 
 +CollectorService_getDataSourceTypes+
 
-DII 수집기 카탈로그에서 지원하는 제품 유형을 나열합니다. 이것은 테넌트에 구성된 수집기 목록이 아닙니다.
+DII 수집기 카탈로그에서 지원하는 제품 유형을 나열합니다. 이는 테넌트에 구성된 수집기 목록이 아닙니다.
 
 
 
@@ -215,7 +215,7 @@ DII 수집기 카탈로그에서 지원하는 제품 유형을 나열합니다. 
 * `timezone`
 
 
-선택적 입력에는  `attributes`,  `filter`,  `limit` 및  `cursor`가 포함됩니다.  `limit`은(는) 1-200입니다. 이벤트 기간은 30일을 초과할 수 없습니다. 이전 응답의 커서를 전달하여 다음 페이지를 가져옵니다.
+선택적 입력에는  `attributes`, `filter`, `limit` 및  `cursor`가 포함됩니다.  `limit`은(는) 1-200입니다. 이벤트 기간은 30일을 초과할 수 없습니다. 이전 응답의 커서를 전달하여 다음 페이지를 가져옵니다.
 
 
 
@@ -248,7 +248,7 @@ DII 수집기 카탈로그에서 지원하는 제품 유형을 나열합니다. 
 
 +MaintenanceWindowService_getMaintenanceWindows+
 
-활성 상태이며 만료되지 않은 경고 억제 윈도우를 나열합니다. 만료된 윈도우를 포함하려면  `includeExpired`을(를)  `true`(으)로 설정하십시오.
+만료되지 않은 활성 경고 억제 윈도우를 나열합니다. 만료된 윈도우를 포함하려면  `includeExpired`을(를)  `true`(으)로 설정하십시오.
 
 성공적인 빈 응답은 일치하는 유지보수 윈도우가 없음을 의미합니다.
 
@@ -275,7 +275,7 @@ DII 수집기 카탈로그에서 지원하는 제품 유형을 나열합니다. 
 
 +MonitorsService_queryMonitors+
 
-DII 모니터 목록을 표시합니다. 시스템 모니터만 반환하거나, 시스템 모니터를 제외하거나, 모든 모니터를 반환하려면  `isSystem`을(를) 사용합니다.
+DII 모니터 목록을 표시합니다. 시스템 모니터만 반환하거나, 시스템 모니터를 제외하거나, 모든 모니터를 반환하려면  `isSystem`을(를) 사용하십시오.
 
 
 
@@ -343,7 +343,7 @@ Slack, Microsoft Teams, Discord, PagerDuty 및 사용자 지정 HTTP 통합에 �
 
 +ObjectService_getObjectTypes+
 
-현재 테넌트에서 사용 가능한 오브젝트 유형을 나열합니다.
+현재 테넌트에서 사용할 수 있는 오브젝트 유형을 나열합니다.
 
 
 
@@ -363,7 +363,7 @@ Slack, Microsoft Teams, Discord, PagerDuty 및 사용자 지정 HTTP 통합에 �
 
 +ObjectService_query+
 
-오브젝트, 선택된 속성 및 선택적 메트릭을 검색합니다. 메트릭을 참조하는 필터는 시간 창 집계 전의 원시 값에 적용됩니다.
+오브젝트, 선택한 속성 및 선택적 메트릭을 검색합니다. 메트릭을 참조하는 필터는 시간 창 집계 전의 원시 값에 적용됩니다.
 
 필수 입력값:
 
@@ -371,9 +371,9 @@ Slack, Microsoft Teams, Discord, PagerDuty 및 사용자 지정 HTTP 통합에 �
 * `attributeNames`
 
 
-선택적 입력에는  `metricNames`,  `filter`,  `sortFieldName`,  `isSortAscending`,  `fromTime`,  `toTime`,  `aggregateFunctions`,  `limit` 및  `offset`가 포함됩니다.
+선택적 입력에는  `metricNames`, `filter`, `sortFieldName`, `isSortAscending`, `fromTime`, `toTime`, `aggregateFunctions`, `limit` 및  `offset`가 포함됩니다.
 
-지원되는 쿼리 집계:  `MAX`, `MIN`, `AVG`, `SUM`, `LAST`.  `limit`은(는) 1-500입니다. 시간 범위를 생략하면 툴은 기본적으로 최근 3시간 윈도우를 사용합니다.
+지원되는 쿼리 집계: `MAX`, `MIN`, `AVG`, `SUM`, `LAST`. `limit`은(는) 1-500입니다. 시간 범위를 생략하면 툴은 기본적으로 최근 3시간 윈도우를 사용합니다.
 
 
 
@@ -402,7 +402,7 @@ Slack, Microsoft Teams, Discord, PagerDuty 및 사용자 지정 HTTP 통합에 �
 
 +ObjectService_queryPerformanceMetricsForObjects+
 
-하나의 측정항목과 일치하는 오브젝트에 대한 버킷화된 시계열 데이터를 반환합니다.
+하나의 측정항목 및 일치하는 오브젝트에 대한 버킷화된 시계열 데이터를 반환합니다.
 
 필수 입력값:
 
@@ -420,7 +420,7 @@ Slack, Microsoft Teams, Discord, PagerDuty 및 사용자 지정 HTTP 통합에 �
 
 
 [[kubernetes-collectors]]
-== 쿠버네티스 컬렉터
+== Kubernetes 컬렉터
 
 
 
@@ -429,7 +429,7 @@ Slack, Microsoft Teams, Discord, PagerDuty 및 사용자 지정 HTTP 통합에 �
 
 +OperatorsManagement_getKubernetesCollectors+
 
-클러스터 이름, 전체 최신 상태, 오퍼레이터 버전, 네트워크 성능 및 맵 구성 요소 버전, 변경 분석 구성 요소 버전 및 마지막으로 보고된 타임스탬프를 반환합니다.
+클러스터 이름, 전체 최신 상태, 오퍼레이터 버전, 네트워크 성능 및 맵 구성 요소 버전, 변경 분석 구성 요소 버전 및 마지막 보고 타임스탬프를 반환합니다.
 
 예:
 
@@ -452,7 +452,7 @@ Slack, Microsoft Teams, Discord, PagerDuty 및 사용자 지정 HTTP 통합에 �
 * 중첩된 `and`, `or` 및 `not`
 
 
-연결된 서버는 메타데이터를 기준으로 필드를 검증합니다. 쿼리가 거부되면 관련 메타데이터를 새로 고치고 필터를 재구성하십시오.
+연결된 서버는 메타데이터에 대해 필드를 검증합니다. 쿼리가 거부되면 관련 메타데이터를 새로 고치고 필터를 재구성하십시오.
 
 
 
