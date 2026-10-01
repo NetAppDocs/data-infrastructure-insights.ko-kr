@@ -22,7 +22,7 @@ image:config_ad_user_directory_image1.png["Active Directory 및 LDAP 디렉터�
 
 [cols="50%,50%"]
 |===
-| *선택* | *다음과 같은 경우에 사용하세요* 
+| *선택* | *다음과 같은 경우에 사용하십시오* 
 
 
 | Active Directory | 사용자는 Active Directory에 저장되고 모니터링되는 활동은 SMB이거나, Unix 사용자는 uidNumber 값으로 Active Directory에 저장되어 NFS 활동을 수행합니다. 
@@ -42,11 +42,11 @@ image:config_ad_user_directory_image1.png["Active Directory 및 LDAP 디렉터�
 [[before-you-begin]]
 == 시작하기 전에
 
-* Data Infrastructure Insights 관리자 또는 계정 소유자로 로그인하십시오.
+* Data Infrastructure Insights 관리자 또는 계정 소유자로 로그인하세요.
 * 디렉터리 서버에 연결할 수 있는 Workload Security Agent를 배포하고 연결합니다.
 * Active Directory 서버의 IP 주소 또는 FQDN, 포리스트 이름, 바인드 DN 및 바인드 암호를 수집합니다.
 * 에이전트가 디렉터리 서비스에 접근할 수 있도록 허용하십시오. 일반적으로 LDAP 또는 StartTLS에는 389번 포트가, LDAPS에는 636번 포트가 사용됩니다. 서버에 구성된 포트를 사용하십시오.
-* 필요한 디렉터리 범위를 검색하고 수집기에 매핑된 모든 속성을 읽을 수 있는 바인드 DN 계정을 사용하십시오.
+* 필요한 디렉터리 범위를 검색하고 수집기에 매핑된 모든 속성을 읽을 수 있는 Bind DN 계정을 사용하십시오.
 
 
 
@@ -54,7 +54,7 @@ image:config_ad_user_directory_image1.png["Active Directory 및 LDAP 디렉터�
 [[add-the-active-directory-collector]]
 == Active Directory 수집기 추가
 
-*1.* Workload Security ++>++ 수집기 ++>++ 사용자 디렉터리 수집기로 이동하여 {plus} 사용자 디렉터리 수집기를 선택합니다.
+*1.* Workload Security ++>++ Collectors ++>++ User Directory Collectors로 이동하여 {plus} User Directory Collector를 선택합니다.
 
 *2.* Active Directory를 선택하고 계속을 선택합니다.
 
@@ -129,7 +129,7 @@ Active Directory 수집기 필드 및 기본 속성 매핑.
 [[optional-attribute-mappings]]
 === 선택적 속성 매핑
 
-가져올 프로필 데이터에 대해서만 선택적 속성 포함을 선택하십시오. 각 매핑은 실제 AD 스키마와 일치해야 합니다. 매핑이 비어 있거나 올바르지 않더라도 ID 확인은 가능하지만 프로필 값은 채워지지 않습니다.
+가져올 프로필 데이터에 대해서만 '선택적 속성 포함'을 선택하십시오. 각 매핑은 실제 AD 스키마와 일치해야 합니다. 매핑이 비어 있거나 올바르지 않더라도 ID 확인은 가능하지만 프로필 값은 채워지지 않습니다.
 
 [cols="50%,50%"]
 |===
@@ -157,7 +157,7 @@ Active Directory 수집기 필드 및 기본 속성 매핑.
 | 사진 | 썸네일사진 
 
 
-| 매니저 DN | 관리자 
+| 관리자 DN | 관리자 
 
 
 | 여러 떼 | memberof 
@@ -173,7 +173,7 @@ Active Directory 수집기 필드 및 기본 속성 매핑.
 |===
 | ({vbar}(objectClass=posixAccount)(&(objectCategory=person)(objectClass=user))) 
 |===
-이 필터와 일치하지 않는 컴퓨터 계정, 관리 서비스 계정 또는 사용자 지정 서비스 계정 오브젝트는 해결되지 않은 상태로 유지됩니다. AD Explorer에서 해당 오브젝트의 objectClass를 검사한 다음 필요한 오브젝트 유형에 대해서만 쿼리를 확장하십시오. 예를 들면 다음과 같습니다.
+이 필터와 일치하지 않는 컴퓨터 계정, 관리 서비스 계정 또는 사용자 지정 서비스 계정 오브젝트는 해결되지 않은 상태로 남아 있습니다. AD Explorer에서 오브젝트의 objectClass를 검사한 다음 필요한 오브젝트 유형에 대해서만 쿼리를 확장하십시오. 예를 들면 다음과 같습니다.
 
 [cols="100%"]
 |===
@@ -204,9 +204,9 @@ https://learn.microsoft.com/en-us/sysinternals/downloads/adexplorer["[.underline
 
 
 [[use-ldapsearch]]
-=== ldapsearch를 사용하십시오
+=== ldapsearch를 사용하세요
 
-지정된 Bind DN을 사용하여 범위 검색을 실행합니다. 예제를 디렉터리 값으로 바꾸고 수집기의 검색 쿼리를 LDAP 필터로 추가합니다.
+지정된 바인드 DN을 사용하여 범위 검색을 실행합니다. 예시 값을 사용자 디렉터리 값으로 바꾸고, 수집기의 검색 쿼리를 LDAP 필터로 추가합니다.
 
 [cols="100%"]
 |===
@@ -214,7 +214,7 @@ https://learn.microsoft.com/en-us/sysinternals/downloads/adexplorer["[.underline
 |===
 * 수집기가 사용할 정확한 계정과 비밀번호로 바인딩이 성공합니다.
 * 검색은 예상되는 사람, 컴퓨터 또는 서비스 계정을 반환합니다.
-* 모든 필수 매핑 속성은 존재하며 반환된 오브젝트에 값을 가집니다.
+* 모든 필수 매핑 속성은 존재하며 반환된 오브젝트에 값이 있습니다.
 * 에이전트는 디렉터리 서버에 대한 동일한 DNS 확인 및 네트워크 경로를 가집니다.
 
 

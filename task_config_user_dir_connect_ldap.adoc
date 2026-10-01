@@ -22,7 +22,7 @@ image:config_ldap_directory_image1.png["Active Directory 및 LDAP 디렉터리 �
 
 [cols="50%,50%"]
 |===
-| *선택* | *다음과 같은 경우에 사용하세요* 
+| *선택* | *다음과 같은 경우에 사용하십시오* 
 
 
 | Active Directory | 사용자는 Active Directory에 저장되고 모니터링되는 활동은 SMB이거나, Unix 사용자는 uidNumber 값으로 Active Directory에 저장되어 NFS 활동을 수행합니다. 
@@ -42,11 +42,11 @@ image:config_ldap_directory_image1.png["Active Directory 및 LDAP 디렉터리 �
 [[before-you-begin]]
 == 시작하기 전에
 
-* Data Infrastructure Insights 관리자 또는 계정 소유자로 로그인하십시오.
+* Data Infrastructure Insights 관리자 또는 계정 소유자로 로그인하세요.
 * 디렉터리 서버에 연결할 수 있는 Workload Security Agent를 배포하고 연결합니다.
 * LDAP 디렉터리 서버의 IP 주소 또는 FQDN, 검색 기준 주소, 바인딩 DN 및 바인딩 암호를 수집하십시오.
 * 에이전트가 디렉터리 서비스에 접근할 수 있도록 허용하십시오. 일반적으로 LDAP 또는 StartTLS에는 389번 포트가, LDAPS에는 636번 포트가 사용됩니다. 서버에 구성된 포트를 사용하십시오.
-* 필요한 디렉터리 범위를 검색하고 수집기에 매핑된 모든 속성을 읽을 수 있는 바인드 DN 계정을 사용하십시오.
+* 필요한 디렉터리 범위를 검색하고 수집기에 매핑된 모든 속성을 읽을 수 있는 Bind DN 계정을 사용하십시오.
 
 
 
@@ -54,7 +54,7 @@ image:config_ldap_directory_image1.png["Active Directory 및 LDAP 디렉터리 �
 [[add-the-ldap-directory-server-collector]]
 == LDAP 디렉터리 서버 수집기를 추가합니다
 
-*1.* Workload Security ++>++ 수집기 ++>++ 사용자 디렉터리 수집기로 이동하여 {plus} 사용자 디렉터리 수집기를 선택합니다.
+*1.* Workload Security ++>++ Collectors ++>++ User Directory Collectors로 이동하여 {plus} User Directory Collector를 선택합니다.
 
 *2.* LDAP 디렉터리 서버를 선택하고 계속을 선택합니다.
 
@@ -62,7 +62,7 @@ image:config_ldap_directory_image1.png["Active Directory 및 LDAP 디렉터리 �
 
 *4.* 서비스 계정에서 기본 검색에 포함되지 않은 오브젝트 클래스를 사용하는 경우 고급 구성을 검토하십시오.
 
-*5.* ldapsearch 또는 LDAP 브라우저를 사용하여 구성을 확인한 다음 Save Collector를 선택합니다.
+*5.* ldapsearch 또는 LDAP 브라우저를 사용하여 구성을 확인한 다음 수집기 저장을 선택합니다.
 
 image:config_ldap_directory_image2.png["연결 필드, 필수 및 선택적 속성 매핑, 고급 구성 검색 쿼리를 보여주는 LDAP 디렉터리 서버 수집기 양식.,title=\"LDAP 디렉터리 서버 수집기 추가\",width=504,height=729"]
 
@@ -90,7 +90,7 @@ LDAP 디렉터리 서버 수집기 필드 및 기본 속성 매핑.
 | 검색 기반++*++ | 필수 | cn=accounts,dc=example,dc=com 등 가져올 사용자가 포함된 기본 DN. 검색을 해당 하위 트리로 제한해야 하는 경우에만 더 좁은 OU/CN DN을 사용하십시오. 
 
 
-| 바인드 DN++*++ | 필수 | uid=ws-reader,cn=users,cn=accounts,dc=example,dc=com 등 기본을 검색할 수 있도록 허용된 계정의 전체 DN입니다. 
+| 바인드 DN++*++ | 필수 | uid=ws-reader,cn=users,cn=accounts,dc=example,dc=com 등 기본을 검색하도록 허용된 계정의 전체 DN. 
 
 
 | 바인딩 비밀번호++*++ | 필수 | Bind DN 계정의 비밀번호입니다. 
@@ -154,7 +154,7 @@ LDAP 디렉터리 서버 수집기 필드 및 기본 속성 매핑.
 | 사진 | 사진 
 
 
-| 매니저 DN | 관리자 
+| 관리자 DN | 관리자 
 
 
 | 여러 떼 | memberof 
@@ -178,7 +178,7 @@ LDAP 디렉터리 서버 수집기 필드 및 기본 속성 매핑.
 |===
 [cols="100%"]
 |===
-| *사용자의 LDAP 스키마가 기준입니다* 오브젝트 클래스와 속성 이름은 디렉터리 구현에 따라 다릅니다. 저장하기 전에 오브젝트의 실제 스키마를 확인하고 필수 매핑에 값이 있는지 확인하십시오. 쿼리 범위를 필요 이상으로 넓히지 마십시오. 
+| *사용자의 LDAP 스키마가 기준입니다.* 오브젝트 클래스와 속성 이름은 디렉터리 구현 방식에 따라 다릅니다. 저장하기 전에 오브젝트의 실제 스키마를 확인하고 필수 매핑에 값이 있는지 확인하십시오. 쿼리 범위를 필요 이상으로 넓히지 마십시오. 
 |===
 
 
@@ -192,9 +192,9 @@ LDAP 디렉터리 서버 수집기 필드 및 기본 속성 매핑.
 
 
 [[use-ldapsearch]]
-=== ldapsearch를 사용하십시오
+=== ldapsearch를 사용하세요
 
-지정된 Bind DN을 사용하여 범위 검색을 실행합니다. 예제를 디렉터리 값으로 바꾸고 수집기의 검색 쿼리를 LDAP 필터로 추가합니다.
+지정된 바인드 DN을 사용하여 범위 검색을 실행합니다. 예시 값을 사용자 디렉터리 값으로 바꾸고, 수집기의 검색 쿼리를 LDAP 필터로 추가합니다.
 
 [cols="100%"]
 |===
@@ -202,7 +202,7 @@ LDAP 디렉터리 서버 수집기 필드 및 기본 속성 매핑.
 |===
 * 수집기가 사용할 정확한 계정과 비밀번호로 바인딩이 성공합니다.
 * 검색은 예상되는 사람, 컴퓨터 또는 서비스 계정을 반환합니다.
-* 모든 필수 매핑 속성은 존재하며 반환된 오브젝트에 값을 가집니다.
+* 모든 필수 매핑 속성은 존재하며 반환된 오브젝트에 값이 있습니다.
 * 에이전트는 디렉터리 서버에 대한 동일한 DNS 확인 및 네트워크 경로를 가집니다.
 
 

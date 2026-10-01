@@ -34,7 +34,7 @@ NOTE: DII MCP는 link:concept_preview_features.html["시사"] 기능이므로 �
 | 활성 인프라 문제를 우선시하십시오 | link:mcp_recipe_storage_health.html["스토리지 상태 평가"] | 경고, 모니터, 로그, 오브젝트 
 
 
-| 용량 압박에 근접한 풀 찾기 | link:mcp_recipe_capacity_risk.html["용량 위험 파악"] | 오브젝트 메타데이터, 그룹화, 시계열 
+| 용량 압박에 근접한 풀 찾기 | link:mcp_recipe_capacity_risk.html["용량 위험을 파악합니다"] | 오브젝트 메타데이터, 그룹화, 시계열 
 
 
 | Kubernetes 컬렉션 구성 요소 버전을 확인하십시오 | link:mcp_recipe_kubernetes_collector_currency.html["Kubernetes 컬렉터 최신 상태 확인"] | Kubernetes 컬렉터 
@@ -43,7 +43,7 @@ NOTE: DII MCP는 link:concept_preview_features.html["시사"] 기능이므로 �
 | 느린 볼륨 또는 워크로드 조사 | link:mcp_recipe_performance_rca.html["성능 문제 해결"] | 오브젝트 메트릭, 알림, 로그 
 
 
-| 라우팅 및 억제 기능을 안전하게 검토하세요 | link:mcp_recipe_notification_posture.html["알림 상태 검토"] | 규칙, 목표, 유지 관리 기간 
+| 라우팅 및 억제 기능을 안전하게 검토하십시오 | link:mcp_recipe_notification_posture.html["알림 상태 검토"] | 규칙, 목표, 유지 관리 기간 
 |===
 
 
@@ -66,7 +66,7 @@ NOTE: DII MCP는 link:concept_preview_features.html["시사"] 기능이므로 �
 
 * 이 레시피들은 읽기 전용 툴을 사용합니다.
 * 시간 범위는 30일 이하로 유지하십시오.
-* 자격 증명, 사설 주소, UUID, 원시 웹훅 엔드포인트 및 불필요한 로그 페이로드를 제외합니다.
+* 자격 증명, 개인 주소, UUID, 원시 웹훅 엔드포인트 및 불필요한 로그 페이로드를 제외합니다.
 * MCP 워크플로 외부에서 영향력이 큰 운영 조치를 확인합니다.
 
 
