@@ -1,0 +1,136 @@
+---
+sidebar: sidebar 
+permalink: mcp_recipe_environment_inventory.html 
+summary: 이 레시피를 사용하여 DII의 데이터 수집 장치와 구성된 데이터 소스가 성공적으로 연결되어 보고 및 수집되는지 확인하십시오. 
+keywords: MCP, DII, Data Infrastructure Insights, AI assistant 
+---
+= 인벤토리 환경 및 컬렉션 상태
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+이 레시피를 사용하여 DII의 데이터 수집 장치와 구성된 데이터 소스가 성공적으로 연결되어 보고 및 수집되는지 확인하십시오.
+
+
+NOTE: DII MCP는 link:concept_preview_features.html["시사"] 기능이므로 변경될 수 있습니다.
+
+
+
+[[prerequisites]]
+== 필수 조건
+
+* 데이터 수집 장치 및 수집기 툴에 대한 액세스.
+* 조사 범위를 좁히기 위한 선택적 획득 장치 또는 수집기 이름입니다.
+
+
+
+
+[[tools-used]]
+== 사용된 툴
+
+* +AcquisitionUnitsService_getAcquisitionUnits+
+* +AcquisitionUnitsService_getAcquisitionUnitByUuid+
+* +CollectorService_getDataSources+
+* +CollectorService_getDataSourceById+
+* +CollectorService_getDataSourceTypes+
+
+
+
+
+[[starter-prompt]]
+== 시작 프롬프트
+
+[]
+====
+DII 수집 환경을 검토하십시오. 수집 장치를 연결 상태 및 보고 최신성별로 요약한 다음, 구성된 데이터 소스를 수집 상태 및 공급업체별로 요약하십시오. 보고한 적이 없는 수집 장치, 할당된 수집기가 없는 장치, 실패한 수집기 및 오래된 성공적인 수집을 강조 표시하십시오. IP 주소, UUID 또는 자격 증명은 표시하지 마십시오.
+
+====
+
+
+[[agent-workflow]]
+== 에이전트 워크플로
+
+. 모든 수집 유닛을 나열하십시오.
+. 연결 상태와  `lastReported`을(를) 모두 사용하여 각 AU를 분류합니다.
+. AU별로 할당된 데이터 소스 수를 계산합니다.
+. 구성된 모든 데이터 소스를 나열합니다.
+. 수집기를 상태, 제조사, 모델 및 AU별로 그룹화하십시오.
+. 식별:
++
+** 연결이 끊어졌거나 하트비트가 실패한 AU
+** 보고한 적 없는 연결된 AU
+** 데이터 소스가 없는 AU
+** 실패한 수집기
+** 수집에 성공하지 못한 수집기
+** 마지막 수집이 예상외로 오래된 성공적인 수집기
+
+
+. 예외적인 경우에만 전체 AU 또는 수집기 세부 정보를 가져오십시오.
+. 우선순위가 지정된 요약 정보를 반환하고 사용된 신선도 임계값을 명확하게 명시하십시오.
+
+
+
+
+[[interpretation]]
+== 해석
+
+다음 구분을 사용하십시오:
+
+* *연결 및 보고 중:* AU가 연결되어 있으며 최근  `lastReported`값이 있습니다.
+* *연결되었지만 보고되지 않음:* 연결은 되어 있지만 원격 측정 보고가 성공적으로 설정되지 않았습니다.
+* *하트비트 실패:* AU 호스트, 네트워크 경로 및 서비스를 조사하십시오.
+* *수집기 실패:* 수집기의 최근 폴링 활동, 패키지 상태, 구성 및 마지막 성공 수집을 확인하십시오.
+* *할당된 컬렉터 없음:* 이는 의도적인 것일 수 있습니다. 오류로 간주하기 전에 확인하십시오.
+
+
+지원되는 데이터 소스 유형 카탈로그는 DII가 수집할 수 있는 제품을 설명합니다. 이는 해당 제품이 테넌트에 구성되어 있다는 것을 증명하지는 않습니다.
+
+
+
+[[suggested-output]]
+== 제안된 출력
+
+. 요약 보고서
+. Acquisition-unit 상태 개수
+. 수집기 상태 개수
+. 운영상 영향도에 따라 순위가 매겨진 예외 사항
+. 권장 점검 사항
+. 데이터 제한 사항
+
+
+
+
+[[limits-and-privacy]]
+== 제한 및 개인정보 보호
+
+* AU UUID, IP 주소, 프라이빗 호스트 이름 또는 수집기 자격 증명을 반환하지 마십시오.
+* 상태 값만으로는 데이터의 최신성을 판단할 수 없습니다.
+* 명시된 예외에 대해서만 자세한 구성을 가져옵니다.
+
+
+
+
+[[follow-up-prompts]]
+== 후속 질문
+
+[]
+====
+이름이  `example-array`인 실패한 수집기를 검사합니다. 자격 증명이나 개인 주소를 표시하지 않고 최근 폴링 활동 및 수집 패키지 실패를 요약합니다.
+
+====
+[]
+====
+지난 30분 동안 보고하지 않은 수집 장치는 무엇이며, 어떤 수집기가 해당 장치에 의존하고 있습니까?
+
+====
+[]
+====
+구성된 수집기 공급업체를 DII에서 지원하는 데이터 소스 유형 카탈로그와 비교하십시오.
+
+====
+link:mcp_recipe_overview.html["레시피 목록으로 돌아가기"]

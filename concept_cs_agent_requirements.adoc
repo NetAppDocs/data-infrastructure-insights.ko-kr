@@ -14,17 +14,38 @@ keywords: agent, Linux, requirements, docker, browsers, permissions, Network, Cl
 
 
 [role="lead"]
-최적의 모니터링 및 위협 탐지 성능을 보장하려면 최소 운영 체제, CPU, 메모리 및 디스크 공간 요구 사항을 충족하는 전용 서버에 Workload Security 에이전트를 배포하십시오. 이 가이드에서는 link:task_cs_add_agent.html["Workload Security 에이전트 설치"] 전에 필요한 하드웨어 및 네트워크 요구 사항을 명시하며, 지원되는 Linux 배포판, 네트워크 연결 규칙 및 시스템 크기 조정 지침을 포함합니다.
+최적의 모니터링 및 위협 탐지 성능을 보장하려면 최소 운영 체제, CPU, 메모리 및 디스크 공간 요구 사항을 충족하는 전용 서버에 Workload Security Agents를 배포하십시오. 이 가이드에서는 지원되는 Linux 배포판, 네트워크 연결 규칙, 시스템 크기 조정 지침 등 link:task_cs_add_agent.html["Workload Security 에이전트 설치"] 전에 필요한 하드웨어 및 네트워크 요구 사항을 명시합니다.
 
-[cols="36,60"]
+
+
+[[system-requirements]]
+== 시스템 요구 사항
+
+[cols="50%,50%"]
 |===
-| 요소 | 리눅스 요구 사항 
+| *구성 요소* | *Linux 요구 사항* 
 
 
-| 운영 체제 | 다음 중 하나의 라이선스 버전을 실행하는 컴퓨터: * AlmaLinux 9.4(64비트) ~ 9.5(64비트), 10(64비트), SELinux 포함 * CentOS Stream 9(64비트) * Debian 11(64비트), 12(64비트), SELinux 포함 * OpenSUSE Leap 15.3(64비트) ~ 15.6(64비트) * Oracle Linux 8.10(64비트), 9.1(64비트) ~ 9.6(64비트), SELinux 포함 * Red Hat Enterprise Linux 8.10(64비트), 9.1(64비트) ~ 9.6(64비트), 10(64비트), SELinux 포함 * Rocky 9.4(64비트) ~ 9.6(64비트), SELinux 포함 * SUSE Linux Enterprise Server 15 SP4(64비트) ~ 15 SP6(64비트), SELinux 포함 * Ubuntu 20.04 LTS(64비트), 22.04 LTS(64비트), 24.04 LTS(64비트) 이 컴퓨터에서는 다른 애플리케이션 수준 소프트웨어를 실행하면 안 됩니다. 전용 서버를 권장합니다. 
+| 운영 체제  a| 
+SELinux가 활성화된 시스템 등 제품에 나열된 모든 64비트 Linux 배포판.
+
+현재 지원되는 배포판 및 버전 목록을 보려면 Workload Security에서 Collectors ++>++ Agents ++>++ {plus}Agent로 이동하여 Linux Versions Supported (i)를 클릭하십시오. 이 목록은 제품에서 생성되며 항상 최신 상태입니다.
+
+설치 프로그램은 호스트의 유효성도 검사합니다. 지원되지 않는 배포판의 경우 "이 Linux 배포판은 지원되지 않습니다.  설치를 종료합니다."라는 메시지와 함께 설치가 중단됩니다.
+
+이 컴퓨터에서는 다른 응용 프로그램 수준의 소프트웨어를 실행해서는 안 됩니다. 전용 서버를 사용하는 것이 좋습니다.
 
 
-| 명령 | 설치하려면 '압축 해제'가 필요합니다.  또한, 설치, 스크립트 실행, 제거에는 'sudo su –' 명령이 필요합니다. 
+
+| 명령어 / 패키지  a| 
+에이전트 호스트에는 다음 사항이 필요합니다:
+
+* unzip — 에이전트 설치
+* zip — 진단 번들 (cloudsecure-agent-symptom-collector.sh)
+* sshpass — 이벤트 발생률 검사기 (svm++_++event++_++rate++_++checker.sh)
+* sudo su – — 설치, 스크립트 실행 및 제거
+
+
 
 
 | CPU | 4개의 CPU 코어 
@@ -33,94 +54,136 @@ keywords: agent, Linux, requirements, docker, browsers, permissions, Network, Cl
 | 메모리 | 16GB 램 
 
 
-| 사용 가능한 디스크 공간 | 디스크 공간은 다음과 같은 방식으로 할당해야 합니다. /opt/netapp 36GB(파일 시스템 생성 후 최소 35GB의 여유 공간) 참고: 파일 시스템을 생성할 수 있도록 약간의 추가 디스크 공간을 할당하는 것이 좋습니다.  파일 시스템에 최소 35GB의 여유 공간이 있는지 확인하세요.  /opt가 NAS 저장소에서 마운트된 폴더인 경우 로컬 사용자가 이 폴더에 액세스할 수 있는지 확인하세요.  로컬 사용자에게 이 폴더에 대한 권한이 없으면 에이전트 또는 데이터 수집기가 설치되지 않을 수 있습니다. 다음을 참조하세요.link:task_cs_add_agent.html#troubleshooting-agent-errors["문제 해결"] 자세한 내용은 섹션을 참조하세요. 
+| 사용 가능한 디스크 공간  a| 
+디스크 공간을 다음과 같이 할당하십시오:
+
+/opt/netapp — 36 GB (파일 시스템 생성 후 최소 35 GB 여유 공간)
+
+참고: 파일 시스템 생성을 위해 약간의 추가 디스크 공간을 할당하십시오. 파일 시스템에 최소 35GB의 여유 공간이 있는지 확인하십시오. /opt가 NAS 스토리지에서 마운트된 경우 로컬 사용자가 해당 폴더에 액세스할 수 있는지 확인하십시오. 그렇지 않으면 Agent 또는 Data Collector 설치에 실패할 수 있습니다.
 
 
-| 회로망 | 100Mbps~1Gbps 이더넷 연결, 고정 IP 주소, 모든 장치에 대한 IP 연결, Workload Security 인스턴스에 필요한 포트(80 또는 443). 
+
+| 시간 동기화 | ONTAP 시스템과 에이전트 호스트의 시간을 NTP 또는 SNTP를 사용하여 동기화하십시오. ONTAP과 에이전트 간의 시간 차이가 발생하면 이벤트 상관 관계, 상태 점검 및 문제 해결에 문제가 발생할 수 있습니다. 
+
+
+| 회로망 | 100Mbps ~ 1Gbps 이더넷 연결, 고정 IP 주소, 모든 모니터링 대상 장치에 대한 IP 연결, 그리고 Workload Security 인스턴스에 필요한 포트(80 또는 443). 
 |===
-참고: Workload Security 에이전트는 Data Infrastructure Insights 수집 장치 및/또는 에이전트와 동일한 시스템에 설치할 수 있습니다.  하지만 이러한 장치를 별도의 컴퓨터에 설치하는 것이 가장 좋습니다.  동일한 컴퓨터에 설치된 경우 아래와 같이 디스크 공간을 할당하세요.
+Workload Security Agent는 Data Infrastructure Insights 수집 장치 및/또는 에이전트와 동일한 컴퓨터에 설치할 수 있지만, 서로 다른 컴퓨터에 설치하는 것이 권장됩니다. 동일한 컴퓨터에 설치하는 경우 아래와 같이 디스크 공간을 할당하십시오.
 
+[cols="50%,50%"]
 |===
+| *사용 가능한 디스크 공간* | *할당* 
 
 
-| 사용 가능한 디스크 공간 | Linux의 경우 디스크 공간은 다음과 같은 방식으로 할당해야 합니다. /opt/netapp 25-30GB /var/log/netapp 25GB 
+| 50~55 GB (통합 설치) | Linux의 경우 다음과 같이 할당하십시오: /opt/netapp 25~30GB; /var/log/netapp 25GB 
 |===
-
-
-[[additional-recommendations]]
-== 추가 권장 사항
-
-* ONTAP 시스템과 에이전트 머신 모두의 시간을 *네트워크 시간 프로토콜(NTP)* 또는 *단순 네트워크 시간 프로토콜(SNTP)*을 사용하여 동기화하는 것이 좋습니다.
-
-
 
 
 [[cloud-network-access-rules]]
 == 클라우드 네트워크 액세스 규칙
 
-*미국 기반* 워크로드 보안 환경의 경우:
+*미국 기반 Workload Security 환경의 경우:*
 
-[cols="5*"]
+[cols="20%,20%,20%,20%,20%"]
 |===
-| 규약 | 포트 | 원천 | 목적지 | 설명 
+| *프로토콜* | *포트* | *소스* | *목적지* | *설명* 
 
 
-| TCP | 443 | 워크로드 보안 에이전트 | <사이트 이름>.cs01.cloudinsights.netapp.com <사이트 이름>.c01.cloudinsights.netapp.com <사이트 이름>.c02.cloudinsights.netapp.com | Data Infrastructure Insights 에 대한 액세스 
+| TCP | 443 | 워크로드 보안 에이전트  a| 
+++<++site++_++name++>++.cs01.cloudinsights.netapp.com
+
+++<++site++_++name++>++.c01.cloudinsights.netapp.com
+
+++<++site++_++name++>++.c02.cloudinsights.netapp.com
+| Data Infrastructure Insights 에 대한 액세스 
 
 
 | TCP | 443 | 워크로드 보안 에이전트 | agentlogin.cs01.cloudinsights.netapp.com | 인증 서비스 접근 
 |===
-*유럽 기반* 워크로드 보안 환경의 경우:
+*유럽 기반 Workload Security 환경의 경우:*
 
-[cols="5*"]
+[cols="20%,20%,20%,20%,20%"]
 |===
-| 규약 | 포트 | 원천 | 목적지 | 설명 
+| *프로토콜* | *포트* | *소스* | *목적지* | *설명* 
 
 
-| TCP | 443 | 워크로드 보안 에이전트 | <사이트 이름>.cs01-eu-1.cloudinsights.netapp.com <사이트 이름>.c01-eu-1.cloudinsights.netapp.com <사이트 이름>.c02-eu-1.cloudinsights.netapp.com | Data Infrastructure Insights 에 대한 액세스 
+| TCP | 443 | 워크로드 보안 에이전트  a| 
+++<++site++_++name++>++.cs01-eu-1.cloudinsights.netapp.com
+
+++<++site++_++name++>++.c01-eu-1.cloudinsights.netapp.com
+
+++<++site++_++name++>++.c02-eu-1.cloudinsights.netapp.com
+| Data Infrastructure Insights 에 대한 액세스 
 
 
 | TCP | 443 | 워크로드 보안 에이전트 | agentlogin.cs01-eu-1.cloudinsights.netapp.com | 인증 서비스 접근 
 |===
-*APAC 기반* 워크로드 보안 환경의 경우:
+*APAC 기반 Workload Security 환경의 경우:*
 
-[cols="5*"]
+[cols="20%,20%,20%,20%,20%"]
 |===
-| 규약 | 포트 | 원천 | 목적지 | 설명 
+| *프로토콜* | *포트* | *소스* | *목적지* | *설명* 
 
 
-| TCP | 443 | 워크로드 보안 에이전트 | <사이트 이름>.cs01-ap-1.cloudinsights.netapp.com <사이트 이름>.c01-ap-1.cloudinsights.netapp.com <사이트 이름>.c02-ap-1.cloudinsights.netapp.com | Data Infrastructure Insights 에 대한 액세스 
+| TCP | 443 | 워크로드 보안 에이전트  a| 
+++<++site++_++name++>++.cs01-ap-1.cloudinsights.netapp.com
+
+++<++site++_++name++>++.c01-ap-1.cloudinsights.netapp.com
+
+++<++site++_++name++>++.c02-ap-1.cloudinsights.netapp.com
+| Data Infrastructure Insights 에 대한 액세스 
 
 
 | TCP | 443 | 워크로드 보안 에이전트 | agentlogin.cs01-ap-1.cloudinsights.netapp.com | 인증 서비스 접근 
 |===
+_에이전트가 SSL 검사 뒤에 있는 경우(예: Zscaler), ++*++.cloudinsights.netapp.com 및 지역 에이전트 로그인 호스트에 대한 SSL 검사를 비활성화하십시오. 중간 인증서가 SaaS 엔드포인트를 재서명하는 경우 Workload Security가 제대로 작동하지 않습니다._
+
 
 
 [[in-network-rules]]
 == 네트워크 내 규칙
 
-[cols="5*"]
+[cols="20%,20%,20%,20%,20%"]
 |===
-| 규약 | 포트 | 원천 | 목적지 | 설명 
+| *프로토콜* | *포트* | *소스* | *목적지* | *설명* 
 
 
-| TCP | 389(LDAP) 636(LDAP/start-tls) | 워크로드 보안 에이전트 | LDAP 서버 URL | LDAP에 연결 
+| TCP  a| 
+389(LDAP)
+
+636(LDAPS/start-tls)
+| 워크로드 보안 에이전트 | LDAP 서버 URL | LDAP에 연결합니다. SSL(LDAPS/start-tls)이 지원되며, 서버에서 제공하는 인증서가 허용됩니다. 
 
 
-| TCP | 443 | 워크로드 보안 에이전트 | 클러스터 또는 SVM 관리 IP 주소(SVM 수집기 구성에 따라 다름) | ONTAP 과의 API 통신 
+| TCP | 443 | 워크로드 보안 에이전트 | 클러스터 또는 SVM 관리 IP 주소(SVM 컬렉터 구성에 따라 다름) | ONTAP과의 API 통신. 
 
 
-| TCP | 35000 - 55000 | SVM 데이터 LIF IP 주소 | 워크로드 보안 에이전트 | Fpolicy 이벤트에 대한 ONTAP 에서 Workload Security Agent로의 통신입니다.  ONTAP Workload Security Agent로 이벤트를 전송하려면 Workload Security Agent에 대한 이러한 포트가 열려 있어야 하며, 여기에는 Workload Security Agent 자체의 방화벽(있는 경우)도 포함됩니다.  모든 포트를 예약할 필요는 없지만, 예약하는 포트는 이 범위 내에 있어야 합니다.  처음에는 약 100개의 포트를 예약하고, 필요하다면 늘리는 것이 좋습니다. 
+| TCP | 35000–55000 | SVM 데이터 LIF IP 주소 | 워크로드 보안 에이전트 | FPolicy 이벤트를 위한 ONTAP에서 에이전트로의 통신. ONTAP이 파일/사용자 액세스 이벤트를 전송할 수 있도록 에이전트 방향으로 이 포트를 엽니다(에이전트 자체의 방화벽 포함). 
 
 
-| TCP | 35000-55000 | 클러스터 관리 IP | 워크로드 보안 에이전트 | *EMS 이벤트*에 대한 ONTAP 클러스터 관리 IP에서 워크로드 보안 에이전트로의 통신입니다.  ONTAP 이 Workload Security Agent에 *EMS 이벤트*를 보낼 수 있도록 Workload Security Agent에 대한 이러한 포트가 열려 있어야 하며, 여기에는 Workload Security Agent 자체의 방화벽(있는 경우)도 포함됩니다.  모든 포트를 예약할 필요는 없지만, 예약하는 포트는 이 범위 내에 있어야 합니다.  처음에는 약 100개의 포트를 예약하고, 필요하다면 늘리는 것이 좋습니다. 
+| TCP | 35000–55000 | 클러스터 관리 IP | 워크로드 보안 에이전트 | EMS 이벤트(예: 랜섬웨어 방지/ARP)를 위한 ONTAP 클러스터 관리 IP에서 에이전트로의 통신. 에이전트 방향으로 이 포트를 여십시오(에이전트 자체의 방화벽 포함). 
 
 
 | SSH | 22 | 워크로드 보안 에이전트 | 클러스터 관리 | CIFS/SMB 사용자 차단에 필요합니다. 
 |===
+*FPolicy/EMS 포트 범위에 대하여*
+
+35000–55000/tcp 범위 전체를 열 필요는 없습니다. 에이전트의 컬렉터 수에 맞춰 예약을 조정하십시오. 각 SVM은 최대 4개의 포트(활성화된 프로토콜당 2개 - NFS 및 CIFS/SMB)를 사용합니다. 완전히 로드된 에이전트(컬렉터 50개)의 경우 이 범위 내에서 약 200개의 포트를 예약하고 필요한 경우 늘리십시오. 위의 두 행은 서로 다른 트래픽에 동일한 범위를 사용합니다. SVM 데이터 LIF → 에이전트는 FPolicy 파일/사용자 활동 이벤트를 전송하고, 클러스터 관리 IP → 에이전트는 ARP 등 EMS 이벤트를 전송합니다. 해당 기능을 사용하는 경우 두 경로를 모두 여십시오.
+
+컬렉터를 추가하기 전에 연결 테스트를 실행하면 해당 범위 내에서 활성화된 포트의 일부만 확인합니다. 에이전트 방화벽과 ONTAP과 에이전트 간의 모든 네트워크 경로에서 예약된 전체 범위를 열어 두십시오.
+
 
 
 [[system-sizing]]
 == 시스템 크기 조정
 
-를 참조하십시오link:concept_cs_event_rate_checker.html["이벤트 요금 확인기"] 사이즈에 대한 정보는 설명서를 참조하세요.
+에이전트는 최대 50개의 데이터 수집기(모든 유형 포함)를 지원하며, 초당 처리 이벤트 수는 약 20,000개로 제한됩니다.
+
+전용 에이전트 호스트에 대한 일반적인 지침은 다음과 같습니다.
+
+* *4 CPU / 16 GB RAM —* 약 10개의 수집기
+* *4 CPU / 32 GB RAM —* 약 20개의 수집기
+* 수집기 50개 또는 20,000 이벤트/초 한계에 가까워지면 *에이전트를 추가하여 규모를 확장하십시오*.
+
+
+컬렉터를 추가하기 전에 Event Rate Checker(svm++_++event++_++rate++_++checker.sh)를 사용하여 최대 이벤트 발생률을 측정하십시오. 전체 사이징 방법은 Event Rate Checker 설명서를 참조하십시오.

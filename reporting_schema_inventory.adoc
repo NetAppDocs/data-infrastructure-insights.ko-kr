@@ -13,6 +13,9 @@ keywords: dwh, data warehouse, schema, reporting, inventory
 :imagesdir: ./media/
 
 
+[role="lead"]
+인벤토리 스키마는 스토리지 시스템, 호스트, 애플리케이션 및 주석을 포함한 포괄적인 자산 및 오브젝트 데이터를 포함합니다. 이는 데이터 웨어하우스에서 가장 큰 스키마이며 자산 관리 및 인프라 가시성의 기반이 됩니다.
+
 출처: *dwh_inventory* OData 엔드포인트 — Data Infrastructure Insights
 
 테이블 수: *106* | 연관 관계: *171*

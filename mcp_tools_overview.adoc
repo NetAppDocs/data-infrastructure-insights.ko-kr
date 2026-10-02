@@ -1,0 +1,466 @@
+---
+sidebar: sidebar 
+permalink: mcp_tools_overview.html 
+summary: 'DII MCP Server는 현재 9개 도메인에 걸쳐 26개의 읽기 전용 제품 툴을 제공합니다. 연결된 클라이언트가 인증이 필요할 경우 별도의 `mcp_auth` 도우미가 나타날 수 있습니다.' 
+keywords: MCP, DII, Data Infrastructure Insights, AI assistant 
+---
+= DII MCP 툴 참조
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+DII MCP 서버는 현재 9개 도메인에 걸쳐 26개의 읽기 전용 제품 툴을 제공합니다. 연결된 클라이언트가 인증해야 하는 경우 별도의 +mcp_auth+ 도우미가 나타날 수 있습니다.
+
+
+NOTE: DII MCP는 link:concept_preview_features.html["시사"] 기능이므로 변경될 수 있습니다.
+
+툴 가용성과 결과는 인증된 테넌트, 활성화된 DII 기능, 구성된 수집기 및 사용자 권한에 따라 달라집니다.
+
+
+
+[[query-conventions]]
+== 쿼리 규칙
+
+* 동적 필드를 쿼리하기 전에 유형 및 메타데이터를 확인하십시오.
+* 메타데이터가 반환하는 정확하고 대소문자를 구분하는 속성 및 메트릭 이름을 사용하십시오.
+* 필요한 경우 ISO-8601 타임스탬프와 IANA 시간대 이름을 사용하십시오.
+* 조회 기간은 30일 이하로 유지하세요.
+* 오브젝트 및 알림 페이지네이션에  `limit` 및  `offset`를 사용하십시오.
+* 로그 이벤트 페이지 매김에 반환된 커서를 사용하십시오.
+* 전체 웹훅 엔드포인트 주소를 표시하지 마십시오.
+
+
+
+
+[[acquisition-units]]
+== 수집 유닛
+
+
+
+[[list-acquisition-units]]
+=== 획득 단위 목록
+
++AcquisitionUnitsService_getAcquisitionUnits+
+
+연결 상태, 보고된 데이터의 최신성, 운영 체제, 버전, IP 주소 및 할당된 데이터 소스 개수와 함께 모든 데이터 수집 장치를 반환합니다.
+
+예:
+
+[]
+====
+수집 장치 목록을 표시합니다. IP 주소나 UUID를 표시하지 않고 연결된 장치, 연결 실패 장치 및 보고되지 않은 장치를 요약하여 보여줍니다.
+
+====
+
+
+[[get-an-acquisition-unit]]
+=== Acquisition Unit 가져오기
+
++AcquisitionUnitsService_getAcquisitionUnitByUuid+
+
+하나의 획득 장치에 대한 전체 세부 정보를 검색합니다. 사용자가 이름을 제공하면 먼저 획득 장치 목록을 표시하여 UUID를 확인합니다.
+
+필수 입력 항목: `uuid`
+
+
+
+[[alerts]]
+== 알림
+
+
+
+[[get-alert-metadata]]
+=== 알림 메타데이터 가져오기
+
++AlertsService_getMetadata+
+
+유효한 알림 필드 이름과 데이터 유형을 반환합니다. 알림을 조회하기 전에 이 함수를 호출하십시오.
+
+
+
+[[query-alerts]]
+=== 쿼리 알림
+
++AlertsService_queryForAlerts+
+
+선택한 속성, 필터, 정렬, 시간 범위 및 오프셋 페이지네이션을 사용하여 활성 또는 비활성 알림을 조회합니다.
+
+필수 입력값:
+
+* `active`
+* `attributeNames`
+* `fromTime`
+* `toTime`
+* `timezone`
+
+
+선택적 입력에는  `filter`,  `sortField`,  `sortAscending`,  `limit` 및  `offset`가 포함됩니다.  `limit`는 1-500이고,  `offset`는 0-1000입니다. 시간 범위는 30일 미만으로 유지하십시오.
+
+예:
+
+[]
+====
+지난 7일간 발생한 중요 활성 스토리지 경고를 검색합니다. 경고 ID, 모니터 이름, 심각도, 상태 및 관련 스토리지 이름을 반환합니다.
+
+====
+
+
+[[get-an-alert-by-name]]
+=== 이름으로 알림 가져오기
+
++AlertsService_getAlertByName+
+
+ `AL-123456` 형식의 알림 ID를 사용하여 하나의 알림을 검색합니다.
+
+필수 입력 항목: `name`
+
+
+
+[[get-an-alert-by-uuid]]
+=== UUID로 알림 가져오기
+
++AlertsService_getAlertByUUID+
+
+UUID를 사용하여 하나의 알림을 검색합니다.
+
+필수 입력 항목: `uuid`
+
+
+
+[[data-collectors]]
+== 데이터 수집기
+
+
+
+[[list-data-sources]]
+=== 데이터 소스 나열
+
++CollectorService_getDataSources+
+
+구성된 수집기의 이름, 상태, 공급업체, 모델, 수집 장치, 버전 및 마지막 성공 수집 시간을 나열합니다. 선택적으로 AU UUID로 필터링할 수 있습니다.
+
+예:
+
+[]
+====
+상태 및 공급업체별로 구성된 데이터 소스를 그룹화합니다. 실패 및 오래된 성공적인 수집을 강조 표시합니다.
+
+====
+
+
+[[get-a-data-source]]
+=== 데이터 소스 가져오기
+
++CollectorService_getDataSourceById+
+
+구성, 수집 패키지 상태, 폴링 활동, 검색된 장치, 패치 정보 및 획득 장치 컨텍스트를 포함하는 하나의 수집기를 검색합니다.
+
+필수 입력 항목: `id`
+
+폴링 간격, 구성된 메트릭, 수집 설정 또는 오류 조사에 이 툴을 사용하십시오.
+
+
+
+[[list-supported-data-source-types]]
+=== 지원되는 데이터 소스 유형 목록
+
++CollectorService_getDataSourceTypes+
+
+DII 수집기 카탈로그에서 지원하는 제품 유형을 나열합니다. 이는 테넌트에 구성된 수집기 목록이 아닙니다.
+
+
+
+[[logs]]
+== 로그
+
+
+
+[[list-log-types]]
+=== 로그 유형 목록
+
++LogService_getLogTypes+
+
+현재 테넌트에서 사용 가능한 로그 유형을 나열합니다.
+
+
+
+[[get-log-type-metadata]]
+=== 로그 유형 메타데이터 가져오기
+
++LogService_getLogTypeMetadata+
+
+로그 유형에 대한 유효한 속성을 반환합니다. 이벤트를 검색하거나 그룹화하기 전에 호출하십시오.
+
+필수 입력 항목: `type`
+
+
+
+[[query-log-events]]
+=== 쿼리 로그 이벤트
+
++LogService_queryLogEvents+
+
+로그 이벤트를 타임스탬프 내림차순으로 반환합니다.
+
+필수 입력값:
+
+* `type`
+* `fromTime`
+* `toTime`
+* `timezone`
+
+
+선택적 입력에는  `attributes`, `filter`, `limit` 및  `cursor`가 포함됩니다.  `limit`은(는) 1-200입니다. 이벤트 기간은 30일을 초과할 수 없습니다. 이전 응답의 커서를 전달하여 다음 페이지를 가져옵니다.
+
+
+
+[[count-log-events-over-time]]
+=== 시간에 따른 로그 이벤트 수 계산
+
++LogService_queryLogEventsCountHistogram+
+
+이벤트 발생 횟수를 고정 크기의 시간 단위로 반환합니다. 선택적으로 각 시간 단위를 유효한 그룹화 속성으로 그룹화할 수 있으며, 그룹화된 결과는 상위 세그먼트와 +__other__+ 세그먼트를 반환합니다.
+
+필수 입력값:
+
+* `type`
+* `fromTime`
+* `toTime`
+* `timezone`
+
+
+선택적 입력: `filter`, `groupBy`
+
+
+
+[[maintenance-windows]]
+== 유지보수 윈도우
+
+
+
+[[list-maintenance-windows]]
+=== 유지보수 윈도우 목록
+
++MaintenanceWindowService_getMaintenanceWindows+
+
+만료되지 않은 활성 경고 억제 윈도우를 나열합니다. 만료된 윈도우를 포함하려면  `includeExpired`을(를)  `true`(으)로 설정합니다.
+
+성공적인 빈 응답은 일치하는 유지보수 윈도우가 없음을 의미합니다.
+
+
+
+[[get-a-maintenance-window]]
+=== 유지보수 윈도우 가져오기
+
++MaintenanceWindowService_getMaintenanceWindowById+
+
+하나의 유지보수 윈도우를 가져옵니다.
+
+필수 입력 항목: `id`
+
+
+
+[[monitors]]
+== 모니터
+
+
+
+[[list-monitors]]
+=== 모니터 목록
+
++MonitorsService_queryMonitors+
+
+DII 모니터 목록을 표시합니다. 시스템 모니터만 반환하거나, 시스템 모니터를 제외하거나, 모든 모니터를 반환하려면  `isSystem`을(를) 사용하십시오.
+
+
+
+[[get-a-monitor]]
+=== 모니터를 가져오십시오
+
++MonitorsService_getMonitorById+
+
+설명 및 가능한 경우 수정 지침을 포함하여 모니터 하나를 검색합니다.
+
+필수 입력 항목: `id`
+
+
+
+[[notifications]]
+== 알림
+
+
+
+[[list-notification-rules]]
+=== 알림 규칙 목록
+
++NotificationService_getNotificationRules+
+
+일치하는 알림을 알림 대상으로 전달하는 규칙 목록입니다. 성공적인 빈 응답은 일치하는 규칙이 없음을 의미합니다.
+
+
+
+[[get-a-notification-rule]]
+=== 알림 규칙 가져오기
+
++NotificationService_getNotificationRuleById+
+
+라우팅 규칙 하나를 검색합니다.
+
+필수 입력 항목: `id`
+
+
+
+[[list-webhook-targets]]
+=== 웹훅 대상 목록
+
++NotificationService_getWebhooks+
+
+Slack, Microsoft Teams, Discord, PagerDuty 및 사용자 지정 HTTP 통합에 대한 웹훅 대상 메타데이터를 나열합니다. 선택적으로 쉼표로 구분된 엔진 유형별로 필터링할 수 있습니다.
+
+보안 요구 사항: 엔드포인트 주소 전체에는 자격 증명이 포함될 수 있습니다. 애플리케이션 및 에이전트는 표시되거나 전달되는 결과에서 주소 필드를 제외하거나 수정해야 합니다.
+
+안전한 예시:
+
+[]
+====
+엔진 유형별 웹훅 대상 수를 세고 대상 이름과 상태만 나열합니다. 엔드포인트 주소는 반환하지 않습니다.
+
+====
+
+
+[[objects-and-metrics]]
+== 오브젝트 및 측정항목
+
+
+
+[[list-object-types]]
+=== 오브젝트 유형 목록
+
++ObjectService_getObjectTypes+
+
+테넌트에서 현재 사용 가능한 오브젝트 유형을 나열합니다.
+
+
+
+[[get-object-metadata]]
+=== 오브젝트 메타데이터 가져오기
+
++ObjectService_getMetadataForObjectType+
+
+하나의 오브젝트 유형에 대한 유효한 속성, 메트릭, 유형 및 그룹화 기능을 반환합니다.
+
+필수 입력 항목: `objectType`
+
+
+
+[[query-objects]]
+=== 쿼리 오브젝트
+
++ObjectService_query+
+
+오브젝트, 선택한 속성 및 선택적 메트릭을 검색합니다. 메트릭을 참조하는 필터는 시간 창 집계 전의 원시 값에 적용됩니다.
+
+필수 입력값:
+
+* `objectType`
+* `attributeNames`
+
+
+선택적 입력에는  `metricNames`,  `filter`,  `sortFieldName`,  `isSortAscending`,  `fromTime`,  `toTime`,  `aggregateFunctions`,  `limit` 및  `offset`가 포함됩니다.
+
+지원되는 쿼리 집계: `MAX`, `MIN`, `AVG`, `SUM`, `LAST`. `limit`은(는) 1-500입니다. 시간 범위를 생략하면 툴은 기본적으로 최근 3시간 범위를 사용합니다.
+
+
+
+[[group-objects]]
+=== 그룹 오브젝트
+
++ObjectService_groupObjects+
+
+하나의 유효한 그룹화 속성을 기준으로 오브젝트를 그룹화하고 선택한 메트릭을 집계합니다. 필터는 집계 전에 원시 값에 적용됩니다.
+
+필수 입력값:
+
+* `objectType`
+* `groupByAttribute`
+* `metricNames`
+
+
+선택적 입력에는  `aggregateFunctions`,  `filter`, 정렬, 시간 제한,  `limit` 및  `offset`가 포함됩니다.
+
+지원되는 그룹 집계: `MAX`, `MIN`, `AVG`, `SUM`, `FIRST`, `CHANGE`, +CHANGE_RATIO+.
+
+
+
+[[query-performance-time-series]]
+=== 쿼리 성능 시계열
+
++ObjectService_queryPerformanceMetricsForObjects+
+
+하나의 측정항목 및 일치하는 오브젝트에 대한 버킷화된 시계열 데이터를 반환합니다.
+
+필수 입력값:
+
+* `objectType`
+* `metricName`
+* `fromTime`
+* `toTime`
+* `timezone`
+
+
+선택적 입력에는  `filter`,  `aggregationFunction`,  `limit` 및  `isSortAscending`가 포함됩니다.  `limit`는 반환되는 시리즈의 수를 제어하며 1-50이어야 합니다.
+
+지원되는 버킷 집계: `MAX`, `MIN`, `AVG`, `SUM`, `FIRST`, `CHANGE`, +CHANGE_RATIO+.
+
+
+
+[[kubernetes-collectors]]
+== Kubernetes 컬렉터
+
+
+
+[[list-kubernetes-collectors]]
+=== Kubernetes 컬렉터 목록
+
++OperatorsManagement_getKubernetesCollectors+
+
+클러스터 이름, 전체 최신 상태, 오퍼레이터 버전, 네트워크 성능 및 맵 구성 요소 버전, 변경 분석 구성 요소 버전 및 마지막 보고 타임스탬프를 반환합니다.
+
+예:
+
+[]
+====
+오래된 Kubernetes 컬렉터를 식별하고 어떤 구성 요소에 주의가 필요한지 요약합니다.
+
+====
+
+
+[[filter-operators]]
+== 필터 연산자
+
+경고, 로그 및 오브젝트 쿼리는 중첩 조건을 지원합니다:
+
+* `EQ`, `NE`
+* `GT`, `LT`, `GE`, `LE`
+* `WILDCARD` 사용 `++*++` 및 `?`
+* `EXISTS`
+* 중첩된 `and`, `or`, 및 `not`
+
+
+연결된 서버는 메타데이터에 대해 필드를 검증합니다. 쿼리가 거부되면 관련 메타데이터를 새로 고치고 필터를 재구성하십시오.
+
+
+
+[[related-documentation]]
+== 관련 문서
+
+* link:mcp_overview.html["DII MCP 개요"]
+* link:mcp_concepts.html["개념 및 데이터 모델"]
+* link:mcp_recipe_overview.html["운영 레시피"]
+* link:mcp_troubleshooting.html["문제 해결"]
+

@@ -13,6 +13,9 @@ keywords: dwh, data warehouse, schema, reporting, performance
 :imagesdir: ./media/
 
 
+[role="lead"]
+성능 스키마는 스토리지, 호스트, 볼륨 및 애플리케이션 전반에 걸쳐 I/O, 지연 시간, 처리량 및 기타 성능 지표에 대한 시계열 메트릭을 제공합니다. 이 스키마를 사용하여 성능 추세를 분석하고, 병목 현상을 파악하고, 워크로드 배치를 최적화할 수 있습니다.
+
 출처: *dwh_performance* OData 엔드포인트 — Data Infrastructure Insights
 
 테이블 수: *74* | 연관 관계: *167*

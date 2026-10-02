@@ -13,6 +13,9 @@ keywords: dwh, data warehouse, schema, reporting, capacity
 :imagesdir: ./media/
 
 
+[role="lead"]
+용량 스키마에는 인프라 전반의 스토리지 용량, 활용률 및 프로비저닝과 관련된 테이블과 메트릭이 포함되어 있습니다. 이 스키마를 사용하여 용량 추세를 분석하고, 향후 요구 사항을 예측하고, 리소스 할당을 최적화할 수 있습니다.
+
 출처: *dwh_capacity* OData 엔드포인트 — Data Infrastructure Insights
 
 테이블 수: *44* | 연관 관계: *92*

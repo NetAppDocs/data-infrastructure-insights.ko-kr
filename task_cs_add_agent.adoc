@@ -14,175 +14,256 @@ summary: 워크로드 보안 에이전트를 배포하여 사용자 활동을 �
 
 
 [role="lead"]
-워크로드 보안 에이전트는 스토리지 인프라 전반에서 사용자 활동을 모니터링하고 잠재적인 보안 위협을 탐지하는 데 필수적입니다. 이 가이드는 단계별 설치 지침, 에이전트 관리 모범 사례(일시 중지/재개 및 고정/고정 해제 기능 포함), 배포 후 구성 요구 사항을 제공합니다. 시작하기 전에 에이전트 서버가 다음 요구 사항을 충족하는지 확인하십시오. link:concept_cs_agent_requirements.html["시스템 요구 사항"].
+Workload Security Agent는 스토리지 인프라 전반에서 사용자 활동을 모니터링하고 잠재적인 보안 위협을 탐지합니다. 이 가이드에서는 에이전트 설치, 필요한 네트워크 포트 개방, 일시 중지/재개 및 고정/고정 해제 동작 관리, 배포 후 에이전트 검증에 대해 설명합니다. 시작하기 전에 에이전트 호스트가 Workload Security Agent 요구 사항을 충족하는지 확인하십시오.
 
 
 
 [[before-you-begin]]
 == 시작하기 전에
 
-* 설치, 스크립트 실행, 설치 제거에는 sudo 권한이 필요합니다.
-* 에이전트를 설치하는 동안 로컬 사용자 _cssys_와 로컬 그룹 _cssys_가 머신에 생성됩니다.  권한 설정에서 로컬 사용자 생성을 허용하지 않고 대신 Active Directory가 필요한 경우, 사용자 이름이 _cssys_인 사용자를 Active Directory 서버에 만들어야 합니다.
-* Data Infrastructure Insights 보안에 대해 읽어보세요.link:security_overview.html["여기"] .
+* Agent 호스트가 Workload Security Agent 요구 사항(CPU 코어 4개, 16GB RAM, 최소 35GB의 여유 공간이 있는 /opt/netapp, 지원되는 Linux 배포판, unzip / zip / sshpass, 고정 IP, NTP)에 명시된 시스템, 패키지 및 네트워크 요구 사항을 충족하는지 확인하십시오.
+* 설치, 스크립트 실행 및 제거에는 sudo 권한이 필요합니다.
+* 설치 과정에서 로컬 사용자 cssys와 로컬 그룹 cssys가 컴퓨터에 생성됩니다. 정책상 로컬 사용자 생성이 허용되지 않고 Active Directory를 사용해야 하는 경우, 설치 전에 Active Directory에서 cssys라는 사용자 이름으로 사용자를 생성하십시오.
+* 에이전트는 최대 50개의 데이터 수집기(Active Directory, LDAP, ONTAP SVM 수집기 등 모든 유형 포함)를 지원하며, 초당 이벤트 수는 약 20,000개로 제한됩니다. 하나의 에이전트에 여러 수집기를 배포하기 전에 Event Rate Checker를 사용하여 용량을 계획하십시오.
+* 에이전트가 프록시를 사용하여 SaaS에 접속하는 경우, 프록시 호스트, 포트 및 자격 증명을 준비하십시오. 설치 중 4단계에서 프록시를 설정합니다.
 
 
 
 
-[[best-practices]]
-== 모범 사례
-
-Workload Security 에이전트를 구성하기 전에 다음 사항을 염두에 두십시오.
-
-[cols="1,3"]
-|===
-
-
-| 일시 정지 및 재개 | 일시 중지: ONTAP 에서 fpolicies를 제거합니다. 일반적으로 고객이 에이전트 VM 재부팅이나 스토리지 교체 등 상당한 시간이 소요될 수 있는 확장된 유지 관리 활동을 수행할 때 사용됩니다. 재개: ONTAP 에 fpolicies를 다시 추가합니다. 
-
-
-| 고정 및 고정 해제 | 고정 해제는 최신 버전(사용 가능한 경우)을 즉시 가져오고 에이전트와 수집기를 업그레이드합니다. 이 업그레이드 중에 fpolicies의 연결이 끊어지고 다시 연결됩니다. 이 기능은 자동 업그레이드의 타이밍을 제어하려는 고객을 위해 설계되었습니다. 아래를 참조하세요<<pinning-an-agent-at-the-current-version,고정/고정 해제 지침>> . 
-
-
-| 권장 접근 방식 | 대규모 구성의 경우 수집기를 일시 중지하는 대신 고정 및 고정 해제를 사용하는 것이 좋습니다. 고정 및 고정 해제를 사용하는 동안 일시 정지 및 재개가 필요하지 않습니다. 고객은 에이전트와 수집가를 고정해 두고, 새 버전에 대한 이메일 알림을 받으면 30일 기간 내에 에이전트를 하나씩 선택적으로 업그레이드할 수 있습니다. 이 접근 방식은 fpolicies에 대한 지연 영향을 최소화하고 업그레이드 프로세스에 대한 더 큰 제어력을 제공합니다. 
-|===
-
-
-[[steps-to-install-agent]]
+[[steps-to-install-an-agent]]
 == 에이전트 설치 단계
 
 . 워크로드 보안 환경에 관리자 또는 계정 소유자로 로그인합니다.
-. *수집가 > 에이전트 > +에이전트*를 선택하세요.
-+
-시스템에 에이전트 추가 페이지가 표시됩니다.
-
-+
-image::Add-agent-1.png[워크로드 보안 에이전트 추가]
-
-. 에이전트 서버가 최소 시스템 요구 사항을 충족하는지 확인하세요.
-. 에이전트 서버가 지원되는 Linux 버전을 실행하고 있는지 확인하려면 _지원되는 버전(i)_을 클릭합니다.
-. 네트워크에서 프록시 서버를 사용하는 경우 프록시 섹션의 지침에 따라 프록시 서버 세부 정보를 설정하세요.
-+
-image:CloudSecureAgentWithProxy_Instructions.png["프록시를 사용한 에이전트 설치 참고"]
-
-. 클립보드에 복사 아이콘을 클릭하여 설치 명령을 복사합니다.
-. 터미널 창에서 설치 명령을 실행합니다.
-. 설치가 성공적으로 완료되면 시스템에 다음 메시지가 표시됩니다.
-+
-image::new-agent-detect.png[에이전트 설치 성공 메시지]
+. 수집기 ++>++ 에이전트 ++>++ &#43;Agent를 선택합니다. 시스템에 에이전트 추가 페이지가 표시됩니다.
 
 
+.프록시 서버 설정 및 설치 프로그램 코드 조각이 확장된 에이전트 추가 페이지.
+image:ws_deploy_agents_image6.png["에이전트 서버 요구 사항, 프록시 서버 설정 단계 및 설치 프로그램 스니펫을 보여주는 에이전트 추가 페이지,title=\"에이전트 서버 요구 사항, 프록시 서버 설정 단계 및 설치 프로그램 스니펫을 보여주는 에이전트 추가 페이지\",width=609,height=532"]
 
-.완료 후
-. 구성해야 합니다link:task_config_user_dir_connect.html["사용자 디렉토리 수집기"] .
-. 하나 이상의 데이터 수집기를 구성해야 합니다.
+. 에이전트 서버 요구 사항 패널에서 지원되는 Linux 버전(i) 및 최소 서버 요구 사항(i)을 클릭하여 호스트 OS가 지원되고 크기가 적절한지 확인합니다.
 
+
+.최소 서버 요구 사항: CPU 코어 4개, 16GB RAM, 35GB 여유 디스크 공간.
+image:ws_deploy_agents_image8.png["CPU 코어 4개, 16GB RAM, 35GB 여유 디스크 공간을 보여주는 최소 서버 요구 사항 툴팁,title=\"CPU 코어 4개, 16GB RAM, 35GB 여유 디스크 공간을 보여주는 최소 서버 요구 사항 툴팁\",width=336,height=172"]
+
+. 네트워크에서 프록시 서버를 사용하는 경우 선택 사항: 프록시 서버 설정 ++>++ 지침 표시를 확장하고 프록시 서버 설정 복사를 클릭합니다. 에이전트 호스트의 터미널에서 복사한 명령을 실행하고 USER, PASSWORD, PROXY++_++SERVER 및 PORT를 사용자의 값으로 바꿉니다:
+
+
+[quote]
+____
+export https++_++proxy='USER:PASSWORD@PROXY++_++SERVER:PORT'
+
+_이 명령은 설치 프로그램 스니펫을 실행하는 데 사용하는 동일한 터미널에서 실행해야 설치 프로그램이 프록시 설정을 상속받습니다._
+
+____
+
+. 설치 프로그램 스니펫 복사를 클릭하십시오. 스니펫에는 2시간 동안 유효하며 하나의 에이전트에만 사용할 수 있는 고유 키가 포함되어 있으므로 즉시 실행하고 두 번째 에이전트에 재사용하지 마십시오. 스니펫을 미리 보려면 설치 프로그램 스니펫 표시를 클릭하십시오.
+. 에이전트 호스트에서 터미널을 열고 설치 명령을 붙여넣어 실행합니다. 설치 중 chmod가 다른 사용자가 소유한 파일에서 실패하지 않도록 자신이 소유한 빈 작업 디렉토리(예: mkdir cloudsecure && cd cloudsecure)를 사용하는 것이 좋습니다.
+. 설치가 성공적으로 완료되면 설치 프로그램에서 성공 메시지를 출력하고 에이전트 서비스가 시작됩니다. 브라우저로 돌아가서 Complete Setup을 클릭하여 에이전트 추가를 완료하십시오. 설치가 성공적으로 완료되면 "새 에이전트가 감지되었습니다"라는 메시지가 표시됩니다.
+
+
+
+
+[[after-you-finish]]
+=== 당신이 완료한 후
+
+* Workload Security ++>++ Collectors ++>++ Agents에서 에이전트가 연결된 것으로 표시되는지 확인하십시오.
+* 에이전트 호스트에서 FPolicy/EMS 콜백 포트를 엽니다(아래의 네트워크 구성 참조).
+* 모니터링 대상 SVM에 접근하는 사용자가 있는 각 도메인에 대해 사용자 디렉터리 수집기(Active Directory 또는 LDAP)를 구성하십시오(이상적으로는 첫 번째 ONTAP SVM 수집기 이전 또는 함께 구성). 그렇지 않으면 Activity Forensics에서 사용자 이름 대신 SID가 표시될 수 있습니다. 사용자 디렉터리 수집기에서는 Test Connection을 사용할 수 없습니다.
+* 하나 이상의 ONTAP SVM 데이터 수집기를 구성하십시오. 클러스터 자격 증명이 있는 클러스터 관리 IP &#43; SVM 이름을 사용하는 것이 좋으며, 네트워크 및 RBAC 검사가 통과하도록 저장하기 전에 연결 테스트를 실행하십시오.
+* 에이전트 용량 내로 유지하십시오. 에이전트당 최대 50개의 수집기를 사용하고, Event Rate Checker를 사용하여 최대 이벤트 발생률에 맞게 크기를 조정하십시오.
+
+
+
+
+[[change-the-proxy-after-installation]]
+=== 설치 후 프록시 변경
+
+에이전트가 설치된 후 프록시가 변경되면 에이전트 구성을 업데이트하고 서비스를 다시 시작하십시오.
+
+. 구성 디렉토리로 이동합니다: cd /opt/netapp/cloudsecure/conf
+. agent.properties를 편집하여 AGENT++_++PROXY++_++HOST, AGENT++_++PROXY++_++PORT를 설정하고, 필요한 경우 AGENT++_++PROXY++_++USER 및 AGENT++_++PROXY++_++PASSWORD를 설정하십시오.
+. 에이전트 다시 시작: sudo systemctl restart cloudsecure-agent.service
+
+
+에이전트가 SSL 검사 뒤에 있는 경우(예: Zscaler), ++*++.cloudinsights.netapp.com 및 지역 에이전트 로그인 호스트에 대한 SSL 검사를 비활성화하십시오. 중간 인증서가 SaaS 엔드포인트를 재서명하는 경우 Workload Security가 제대로 작동하지 않습니다.
 
 
 
 [[network-configuration]]
 == 네트워크 구성
 
-Workload Security에서 사용할 포트를 열려면 로컬 시스템에서 다음 명령을 실행하세요.  포트 범위와 관련하여 보안 문제가 있는 경우 _35000:35100_과 같이 더 작은 포트 범위를 사용할 수 있습니다.  각 SVM은 두 개의 포트를 사용합니다.
+ONTAP이 에이전트로 FPolicy(및 EMS) 이벤트를 전송하는 데 사용하는 TCP 포트를 엽니다. 35000–55000 범위 전체를 열 필요는 없습니다. 이 에이전트의 컬렉터 수에 맞게 포트 예약 크기를 조정합니다. 각 SVM은 최대 4개의 포트(활성화된 프로토콜당 2개 — NFS 및 CIFS/SMB)를 사용합니다. 최대 부하 상태의 에이전트(컬렉터 50개)의 경우 35000–55000 범위에서 약 200개의 포트를 예약합니다. 필요한 경우 예약 크기를 늘립니다.
 
-.단계
-. `sudo firewall-cmd --permanent --zone=public --add-port=35000-55000/tcp`
-. `sudo firewall-cmd --reload`
+로컬 방화벽을 포함하여 Agent 호스트 방향으로 범위를 여십시오. 또한 SVM 데이터 LIF가 FPolicy 이벤트에 대해 Agent에 도달할 수 있는지, 그리고 (ARP 등 EMS 기반 기능을 사용하는 경우) 클러스터 관리 IP가 동일한 예약 포트를 통해 Agent에 도달할 수 있는지 확인하십시오. 전체 네트워크 내 및 클라우드 송신 테이블에 대해서는 Workload Security Agent Requirements를 참조하십시오.
 
+*예시 — firewalld (영구):*
 
-플랫폼에 따라 다음 단계를 따르세요.
+[quote]
+____
+sudo firewall-cmd --permanent --zone=public --add-port=35000-55000/tcp
 
-*CentOS 7.x / RHEL 7.x*:
+sudo firewall-cmd --reload
 
-. `sudo iptables-save | grep 35000`
+____
 
+*규칙을 확인하십시오:*
 
-샘플 출력:
+firewalld를 사용하는 시스템(예: RHEL / CentOS 8{plus})에서:
 
- -A IN_public_allow -p tcp -m tcp --dport 35000:55000 -m conntrack -ctstate NEW,UNTRACKED -j ACCEPT
-*CentOS 8.x / RHEL 8.x*:
+[quote]
+____
+sudo firewall-cmd --zone=public --list-ports ++|++ grep 35000
 
-. `sudo firewall-cmd --zone=public --list-ports | grep 35000`(CentOS 8용)
+____
 
+_샘플 출력: 35000-55000/tcp_
 
-샘플 출력:
+iptables를 사용하는 시스템(예: 구형 RHEL / CentOS 7.x)에서:
 
- 35000-55000/tcp
+[quote]
+____
+sudo iptables-save ++|++ grep 35000
 
+____
 
-[[pinning-an-agent-at-the-current-version]]
-== 현재 버전에서 에이전트 "고정"
+_샘플 출력:_
 
-기본적으로 Data Infrastructure Insights Workload Security는 에이전트를 자동으로 업데이트합니다.  일부 고객은 자동 업데이트를 일시 중지하고 싶어할 수 있습니다. 이 경우 다음 중 하나가 발생할 때까지 에이전트가 현재 버전을 유지합니다.
+[quote]
+____
+-A IN++_++public++_++allow -p tcp -m tcp --dport 35000:55000 -m conntrack -ctstate NEW,UNTRACKED -j ACCEPT
 
-* 고객이 자동 에이전트 업데이트를 재개합니다.
-* 30일이 지났습니다.  30일은 에이전트가 일시 중지된 날이 아닌, 가장 최근의 에이전트 업데이트 날짜부터 시작됩니다.
+____
 
-
-각각의 경우에서 에이전트는 다음 워크로드 보안 업데이트 시 업데이트됩니다.
-
-자동 에이전트 업데이트를 일시 중지하거나 다시 시작하려면 _cloudsecure_config.agents_ API를 사용하세요.
-
-image:ws_pin_agent_apis.png["에이전트를 고정 및 고정 해제하는 cloudsecure 에이전트 API"]
-
-일시 중지 또는 재개 작업이 적용되려면 최대 5분이 걸릴 수 있습니다.
-
-*워크로드 보안 > 수집기* 페이지의 *에이전트* 탭에서 현재 에이전트 버전을 볼 수 있습니다.
-
-image:ws_agent_version.png["에이전트 표에 표시된 WS 에이전트 버전"]
+_ONTAP SVM 컬렉터 페이지의 연결 테스트는 이 범위 내의 포트 중 일부만 확인합니다. 에이전트에서는 예약된 모든 포트를 열어 두십시오._
 
 
 
-[[troubleshooting-agent-errors]]
-== 에이전트 오류 문제 해결
+[[post-install-verification]]
+== 설치 후 검증
 
-알려진 문제와 해결 방법은 다음 표에 설명되어 있습니다.
+설치가 성공적으로 완료되면 Agent 호스트와 UI에서 다음을 확인하십시오:
 
-[cols="2*"]
+* *UI 상태:* 수집기 ++>++ 에이전트는 에이전트를 연결됨(NOT++_++CONNECTED가 아님)으로 표시합니다.
+* *서비스:* sudo systemctl status cloudsecure-agent.service 명령을 실행하면 활성(실행 중) 상태로 표시됩니다.
+* *사용자:* id cssys 및 groups cssys가 성공합니다(로컬 cssys 사용자/그룹이 존재하거나 AD cssys 계정을 사용할 수 있습니다).
+* *디스크 경로:* /opt/netapp은 cssys가 접근할 수 있는 로컬 디스크에 있습니다(로컬 사용자가 사용할 수 없는 NFS 마운트가 아닙니다).
+* *포트:* 예약된 35000~55000 서브셋은 에이전트로의 인바운드가 열려 있습니다(위의 firewall-cmd 또는 iptables 확인).
+* *SaaS 경로:* 해당 지역의 ++*++.cloudinsights.netapp.com 및 agentlogin 엔드포인트로 향하는 아웃바운드 TCP 443 포트가 성공합니다(SSL 검사 재작성 없음).
+
+
+애플리케이션 로그가 존재하기 전에 에이전트가 시작되지 않으면 journalctl -u cloudsecure-agent.service를 확인하십시오 — 초기 부트스트랩 오류는 agent.log가 아닌 서비스 저널에 기록됩니다.
+
+
+
+[[control-agent-upgrades-pin-and-unpin]]
+== Control Agent 업그레이드: 고정 및 고정 해제
+
+기본적으로 Workload Security는 에이전트를 자동으로 업데이트합니다. 에이전트를 고정하면 이러한 자동 업데이트가 일시 중지되므로 에이전트와 해당 에이전트가 호스팅하는 컬렉터는 현재 버전을 유지합니다.
+
+'''
+*참고:* _고정 및 고정 해제는 에이전트에 적용되며 API를 통해서만 사용할 수 있습니다. 일시 중지 및 재개는 컬렉터 제어 기능으로 에이전트에는 적용되지 않으며 UI 또는 API에서 실행할 수 있습니다. ONTAP SVM 데이터 컬렉터 구성을 참조하십시오._ ___
+
+[cols="34%,33%,33%"]
 |===
-| 문제: | 해결: 
+| 컨트롤 | 실행 방법 | 그것이 하는 일 
 
 
-| 에이전트 설치 시 /opt/netapp/cloudsecure/agent/logs/agent.log 폴더가 생성되지 않고 install.log 파일에 관련 정보가 제공되지 않습니다. | 이 오류는 에이전트 부트스트래핑 중에 발생합니다.  이 오류는 로거가 초기화되기 전에 발생하므로 로그 파일에 기록되지 않습니다.  오류는 표준 출력으로 리디렉션되고 서비스 로그에서 다음을 사용하여 볼 수 있습니다. `journalctl -u cloudsecure-agent.service` 명령.  이 명령은 문제를 추가로 해결하는 데 사용할 수 있습니다. 
+| 핀  a| 
+cloudsecure++_++config.agents API 전용입니다.
+
+UI에서 사용할 수 없습니다.
+| 자동 업데이트를 일시 중지합니다. 에이전트와 에이전트가 호스팅하는 수집기는 현재 버전을 유지합니다. 
 
 
-| 에이전트 설치가 '이 Linux 배포판은 지원되지 않습니다.'라는 메시지와 함께 실패합니다.  설치를 종료합니다. | 이 오류는 지원되지 않는 시스템에 에이전트를 설치하려고 할 때 나타납니다. 보다 link:concept_cs_agent_requirements.html["에이전트 요구 사항"] . 
+| 고정 해제  a| 
+cloudsecure++_++config.agents API 전용입니다.
 
-
-| 에이전트 설치가 "-bash: unzip: 명령을 찾을 수 없습니다" 오류로 인해 실패했습니다. | unzip을 설치한 후 설치 명령을 다시 실행하세요.  컴퓨터에 Yum이 설치되어 있다면 "yum install unzip"을 실행하여 압축 해제 소프트웨어를 설치해 보세요.  그런 다음 에이전트 설치 UI에서 명령을 다시 복사하여 CLI에 붙여넣어 설치를 다시 실행합니다. 
-
-
-| 에이전트가 설치되어 실행 중입니다.  하지만 요원이 갑자기 멈췄습니다. | 에이전트 머신에 SSH를 실행합니다.  에이전트 서비스 상태를 확인하세요. `sudo systemctl status cloudsecure-agent.service` . 1.  로그에 "Workload Security 데몬 서비스를 시작하지 못했습니다"라는 메시지가 표시되는지 확인하세요. 2.  에이전트 머신에 cssys 사용자가 있는지 확인하세요.  루트 권한으로 다음 명령을 하나씩 실행하고 cssys 사용자와 그룹이 있는지 확인하세요.
-`sudo id cssys`
-`sudo groups cssys` 3.  해당 사항이 없다면 중앙 모니터링 정책으로 인해 cssys 사용자가 삭제되었을 수 있습니다. 4.  다음 명령을 실행하여 cssys 사용자와 그룹을 수동으로 생성합니다.
-`sudo useradd cssys`
-`sudo groupadd cssys` 5.  다음 명령을 실행하여 에이전트 서비스를 다시 시작합니다.
-`sudo systemctl restart cloudsecure-agent.service` 6.  그래도 실행되지 않으면 다른 문제 해결 옵션을 확인해 보세요. 
-
-
-| 에이전트에 50개 이상의 데이터 수집기를 추가할 수 없습니다. | 에이전트에 추가할 수 있는 데이터 수집기는 최대 50개입니다.  여기에는 Active Directory, SVM 및 기타 수집기 등 모든 수집기 유형이 결합될 수 있습니다. 
-
-
-| UI에서 에이전트가 NOT_CONNECTED 상태임을 표시합니다. | 에이전트를 다시 시작하는 단계입니다. 1.  에이전트 머신에 SSH를 실행합니다. 2.  다음 명령을 실행하여 에이전트 서비스를 다시 시작합니다.
-`sudo systemctl restart cloudsecure-agent.service` 3.  에이전트 서비스 상태를 확인하세요. `sudo systemctl status cloudsecure-agent.service` . 4.  에이전트는 CONNECTED 상태로 전환되어야 합니다. 
-
-
-| 에이전트 VM이 Zscaler 프록시 뒤에 있어 에이전트 설치에 실패했습니다.  Zscaler 프록시의 SSL 검사로 인해 워크로드 보안 인증서는 Zscaler CA에서 서명한 것처럼 표시되므로 에이전트는 통신을 신뢰하지 않습니다. | Zscaler 프록시에서 *.cloudinsights.netapp.com URL에 대한 SSL 검사를 비활성화합니다.  Zscaler가 SSL 검사를 수행하고 인증서를 교체하는 경우 Workload Security는 작동하지 않습니다. 
-
-
-| 에이전트를 설치하는 동안 압축을 풀면 설치가 중단됩니다. | "chmod 755 -Rf" 명령이 실패합니다.  작업 디렉토리에 다른 사용자의 파일이 있고 해당 파일의 권한을 변경할 수 없는 루트가 아닌 sudo 사용자가 에이전트 설치 명령을 실행하면 명령이 실패합니다.  chmod 명령이 실패하여 나머지 설치 과정이 실행되지 않습니다. 1.  "cloudsecure"라는 이름의 새 디렉토리를 만듭니다. 2.  해당 디렉토리로 가세요. 3.  전체 “token=…… … ./cloudsecure-agent-install.sh” 설치 명령을 복사하여 붙여넣고 Enter를 누릅니다. 4.  설치가 진행될 것입니다. 
-
-
-| 에이전트가 여전히 SaaS에 연결할 수 없는 경우 NetApp 지원팀에 사례를 제출하세요.  사례를 열려면 Data Infrastructure Insights 일련번호를 제공하고, 기록된 대로 사례에 로그를 첨부하세요. | 케이스에 로그를 부착하려면: 1.  루트 권한으로 다음 스크립트를 실행하고 출력 파일(cloudsecure-agent-symptoms.zip)을 공유합니다. a. /opt/netapp/cloudsecure/agent/bin/cloudsecure-agent-symptom-collector.sh 2.  루트 권한으로 다음 명령을 하나씩 실행하고 출력을 공유하세요. a. id cssys b. groups cssys c. cat /etc/os-release 
-
-
-| cloudsecure-agent-symptom-collector.sh 스크립트가 다음 오류로 인해 실패합니다.  [root@machine tmp]# /opt/netapp/cloudsecure/agent/bin/cloudsecure-agent-symptom-collector.sh 서비스 로그 수집 애플리케이션 로그 수집 에이전트 구성 수집 서비스 상태 스냅샷 생성 에이전트 디렉터리 구조 스냅샷 생성 ………………….  ………………….  /opt/netapp/cloudsecure/agent/bin/cloudsecure-agent-symptom-collector.sh: 52번째 줄: zip: 명령을 찾을 수 없습니다. 오류: /tmp/cloudsecure-agent-symptoms.zip을 만들지 못했습니다. | Zip 도구가 설치되지 않았습니다.  "yum install zip" 명령을 실행하여 zip 도구를 설치합니다.  그런 다음 cloudsecure-agent-symptom-collector.sh를 다시 실행합니다. 
-
-
-| useradd로 에이전트 설치가 실패합니다. /home/cssys 디렉토리를 생성할 수 없습니다. | 이 오류는 권한이 부족하여 사용자의 로그인 디렉토리를 /home 아래에 만들 수 없는 경우 발생할 수 있습니다.  해결 방법은 cssys 사용자를 만들고 다음 명령을 사용하여 로그인 디렉토리를 수동으로 추가하는 것입니다. _sudo useradd user_name -m -d HOME_DIR_ -m : 사용자의 홈 디렉토리가 없으면 만듭니다.  -d : 사용자 로그인 디렉토리의 값으로 HOME_DIR을 사용하여 새 사용자가 생성됩니다.  예를 들어, _sudo useradd cssys -m -d /cssys_는 사용자 _cssys_를 추가하고 루트 아래에 로그인 디렉토리를 만듭니다. 
-
-
-| 설치 후 에이전트가 실행되지 않습니다.  _Systemctl status cloudsecure-agent.service_는 다음을 보여줍니다. [root@demo ~]# systemctl status cloudsecure-agent.service agent.service – Workload Security Agent Daemon Service 로드됨: 로드됨(/usr/lib/systemd/system/cloudsecure-agent.service; 활성화됨; 공급업체 사전 설정: 비활성화됨) 활성: 활성화 중(자동 재시작)(결과: 종료 코드) 2021-08-03 21:12:26 PDT 화요일부터; 2초 전 프로세스: 25889 ExecStart=/bin/bash /opt/netapp/cloudsecure/agent/bin/cloudsecure-agent(코드=종료, 상태=126) 기본 PID: 25889(코드=종료, 상태=126), 8월 3일 21:12:26 데모 systemd[1]: cloudsecure-agent.service: 기본 프로세스가 종료되었습니다. 코드=종료, 상태=126/n/a 8월 3일 21:12:26 데모 systemd[1]: cloudsecure-agent.service 유닛이 실패 상태에 들어갔습니다.  08월 03일 21:12:26 데모 systemd[1]: cloudsecure-agent.service가 실패했습니다. | _cssys_ 사용자에게 설치 권한이 없어서 실패할 수 있습니다.  /opt/netapp이 NFS 마운트이고 _cssys_ 사용자가 이 폴더에 액세스할 수 없는 경우 설치가 실패합니다.  _cssys_는 Workload Security 설치 프로그램에서 생성된 로컬 사용자로, 마운트된 공유에 액세스할 권한이 없을 수 있습니다.  _cssys_ 사용자를 사용하여 /opt/netapp/cloudsecure/agent/bin/cloudsecure-agent에 액세스를 시도하여 이를 확인할 수 있습니다.  "권한 거부됨"이 반환되면 설치 권한이 없습니다.  마운트된 폴더 대신, 머신의 로컬 디렉토리에 설치하세요. 
-
-
-| 에이전트는 처음에 프록시 서버를 통해 연결되었으며, 프록시는 에이전트 설치 중에 설정되었습니다.  이제 프록시 서버가 변경되었습니다.  에이전트의 프록시 구성은 어떻게 변경할 수 있나요? | agent.properties를 편집하여 프록시 세부 정보를 추가할 수 있습니다.  다음 단계를 따르세요. 1.  속성 파일이 있는 폴더로 변경합니다: cd /opt/netapp/cloudsecure/conf 2.  좋아하는 텍스트 편집기를 사용하여 _agent.properties_ 파일을 열어 편집합니다. 3.  다음 줄을 추가하거나 수정하세요: AGENT_PROXY_HOST=scspa1950329001.vm.netapp.com AGENT_PROXY_PORT=80 AGENT_PROXY_USER=pxuser AGENT_PROXY_PASSWORD=pass1234 4.  파일을 저장합니다. 5.  에이전트를 다시 시작합니다: sudo systemctl restart cloudsecure-agent.service 
+UI에서 사용할 수 없습니다.
+| 자동 업데이트를 재개합니다. 에이전트는 사용 가능한 최신 버전을 검색하고 자체 및 수집기를 업그레이드합니다. 
 |===
+고정된 에이전트는 다음 중 하나가 발생하면 자동 업데이트로 돌아갑니다.
+
+* 에이전트의 고정을 해제합니다.
+* 30일이 지났습니다. 30일 기간은 에이전트를 고정한 날짜가 아니라 가장 최근 에이전트 업데이트가 이루어진 날짜부터 시작됩니다.
+
+
+어느 경우든 조건이 충족된 후 다음 Workload Security 새로 고침 시 에이전트가 업데이트됩니다. 고정 또는 고정 해제 요청이 적용되는 데 최대 5분이 소요될 수 있습니다.
+
+에이전트를 고정하거나 고정 해제하려면 cloudsecure++_++config.agents API를 사용하십시오. Workload Security ++>++ Collectors ++>++ Agents에서 현재 에이전트 버전을 확인할 수 있습니다.
+
+image:ws_deploy_agents_image3.png["에이전트 고정 및 고정 해제 API,title=\"에이전트 고정 및 고정 해제 API\",width=609,height=225"]
+
+.cloudsecure++_++config.agents 카테고리에서 API를 고정 및 고정 해제합니다.
+image:ws_deploy_agents_image4.png["에이전트 버전,title=\"에이전트 버전\",width=609,height=97"]
+
+에이전트 탭에 표시되는 에이전트 버전입니다.
+
+
+
+[[pin-and-unpin-one-agent-at-a-time]]
+=== 한 번에 하나의 에이전트 고정 및 고정 해제
+
+테넌트 수준에서도 고정 및 고정 해제가 지원됩니다. 테넌트 수준에서 고정을 해제하면 테넌트의 모든 Agent가 자동으로 즉시 업그레이드됩니다.
+
+대신 에이전트 수준의 고정 및 고정 해제를 사용하십시오. 에이전트 수준 제어는 더욱 세밀합니다. 고정을 해제한 에이전트만 업그레이드를 받으므로 새 버전의 영향은 해당 에이전트와 해당 에이전트가 호스팅하는 컬렉터에만 국한됩니다.
+
+[cols="34%,33%,33%"]
+|===
+| 범위 | 핀 | 고정 해제 
+
+
+| 테넌트의 모든 에이전트 | POST /v1/cloudsecure/agents/configuration | DELETE /v1/cloudsecure/agents/configuration 
+
+
+| 단일 에이전트(권장)  a| 
+POST /v1/cloudsecure/agents/
+
+++{++agentId}/구성
+ a| 
+DELETE /v1/cloudsecure/agents/
+
+++{++agentId}/구성
+
+|===
+*제안된 접근 방식*
+
+. 현재 버전으로 유지할 에이전트를 고정하십시오.
+. 에이전트 하나를 고정 해제하고 업그레이드하도록 하세요.
+. 에이전트가 연결됨 상태로 복귀하고 해당 수집기가 실행 중 상태로 복귀했는지 확인하십시오.
+. 나머지 에이전트를 배치 단위로 고정 해제하여 예상치 못한 문제가 발생하더라도 환경의 일부에만 영향을 미치도록 하십시오.
+
+
+
+
+[[best-practices-for-agents]]
+== 에이전트를 위한 모범 사례
+
+이러한 지침은 에이전트에 적용됩니다. 수집기를 일시 중지하는 시점 등 수집기 관련 지침은 ONTAP SVM 데이터 수집기 구성을 참조하십시오.
+
+* 에이전트 업그레이드 시점을 제어하려면 고정 및 고정 해제 기능을 사용하십시오. 업그레이드 제어를 위해 수집기를 일시 중지할 필요는 없습니다.
+* 테넌트 수준이 아닌 에이전트 수준에서 고정 및 고정 해제를 수행하여 업그레이드가 한 번에 하나의 에이전트와 해당 수집기에만 영향을 미치도록 합니다.
+* 무기한 고정해 두지 마십시오. 고정된 에이전트는 마지막 업데이트 후 30일이 지나면 자동으로 업데이트됩니다.
+* 에이전트 용량을 준수하십시오. 에이전트당 최대 50개의 수집기(모든 유형 포함)를 사용할 수 있으며, 초당 처리 이벤트 수는 최대 20,000개로 제한됩니다. 약 10개의 수집기는 4개의 CPU 코어와 16GB RAM 환경에서, 약 20개의 수집기는 4개의 CPU 코어와 32GB RAM 환경에서 사용 가능합니다.
+* 수집기를 추가하기 전에 이벤트 발생률 검사기를 사용하여 최대 이벤트 발생률에 맞춰 에이전트 크기를 조정하고, 하나의 에이전트에 과부하가 걸리지 않도록 수집기를 다른 에이전트로 마이그레이션하십시오.
+* 하나의 에이전트에 대한 유지 관리가 모든 SVM에 대한 모니터링을 중단하지 않도록 수집기를 여러 에이전트에 분산합니다.
+* 에이전트 호스트에 고정 IP 주소를 할당하고 NTP를 사용하여 ONTAP과 시계를 동기화하십시오.
+* 호스트 방화벽을 포함하여 에이전트 방향으로 예약된 FPolicy 콜백 포트를 열어 두십시오(네트워크 구성 참조).
+
+
+
+
+[[troubleshooting]]
+== 문제 해결
+
+에이전트 설치 및 연결 실패(지원되지 않는 OS, unzip/zip 누락, cssys 권한 문제, NOT++_++CONNECTED, 프록시 변경, symptom-collector 실패)의 경우 ONTAP SVM 데이터 수집기 문제 해결 — 에이전트 설치 및 상태 섹션과 Workload Security Agent 요구 사항을 참조하십시오.
+
+지원팀에 제출할 진단 번들을 수집하려면 (루트 권한으로 실행):
+
+[quote]
+____
+sudo /opt/netapp/cloudsecure/agent/bin/cloudsecure-agent-symptom-collector.sh -o /tmp
+
+____
+
+cloudsecure-agent-symptoms.zip(또는 /tmp에 생성된 zip)과 Data Infrastructure Insights 일련 번호를 케이스에 첨부하십시오. 증상 수집기를 실행하기 전에 에이전트 호스트에 zip 패키지가 설치되어 있는지 확인하십시오.
