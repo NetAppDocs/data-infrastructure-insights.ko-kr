@@ -288,7 +288,6 @@ NetApp Monitoring Operator 설치 타일에서 "이미지 풀 스니펫"을 실�
 이벤트 로그
 
 * ci-fluent-bit
-* fe05143e1e28d056a7092a13c7ef1fda
 
 
 네트워크 성능 및 맵
@@ -462,26 +461,6 @@ Kubernetes Monitoring Operator를 설정하는 데 문제가 발생하면 다음
 | 두 개의 모니터링 운영자 포드가 실행 중인 것을 보는 이유는 무엇입니까? 하나는 netapp-ci-monitoring-operator-<pod>이고 다른 하나는 monitoring-operator-<pod>입니다. | 2023년 10월 12일부터 Data Infrastructure Insights 사용자에게 더 나은 서비스를 제공하기 위해 운영자를 리팩토링했습니다. 이러한 변경 사항을 완전히 적용하려면 다음을 수행해야 합니다.<<uninstalling,이전 연산자를 제거하세요>> 그리고<<installing-the-kubernetes-monitoring-operator,새로운 것을 설치하다>> . 
 
 
-| d91f7c56a5bd6c0e9735fe39d7d2d1a6  a| 
-0f21fa822dc46792cc163d7e77fe6c2c
-
- `kubectl -n netapp-monitoring get pods |grep event-exporter |awk '{print $1}' |sed 's/event-exporter./event-exporter/'`
-9df5220f9f1e94f2849e58be10655af5
-
-....
-fluent-bit:
-...
-- name: event-exporter-ci
-  substitutions:
-  - key: LOG_FILE
-    values:
-    - /var/log/containers/netapp-ci-event-exporter*.log
-...
-....
-e832e916ac4edbd5ff4fc3ce13949058
-
-
-
 | Kubernetes Monitoring Operator가 배포한 Pod가 리소스가 부족하여 충돌하는 현상이 발생합니다. | Kubernetes Monitoring Operator를 참조하세요.link:telegraf_agent_k8s_config_options.html["구성 옵션"] 필요에 따라 CPU 및/또는 메모리 한도를 늘립니다. 
 
 
@@ -489,9 +468,6 @@ e832e916ac4edbd5ff4fc3ce13949058
 
 
 | Kubernetes Operator 업그레이드를 실행한 후 netapp-ci-kube-state-metrics 포드가 시작되지 않고 ErrImagePull(이미지를 가져오는 데 실패) 오류가 발생합니다. | 포드를 수동으로 재설정해보세요. 
-
-
-| 2bc94fccd24faa68b4153886af40ec57 | 6c71496a372f3b5c0cbc9e2eb84a5fd0 
 
 
 | Telegraf는 잠글 수 있는 메모리가 부족하여 경고하거나 충돌합니다. | 기본 운영 체제/노드에서 Telegraf의 잠금 가능 메모리 한도를 늘려보세요.  한도를 늘리는 것이 불가능한 경우 NKMO 에이전트 구성을 수정하고 _unprotected_를 _true_로 설정하세요.  이렇게 하면 Telegraf는 잠긴 메모리 페이지를 예약하지 않습니다.  복호화된 비밀이 디스크로 옮겨갈 수 있으므로 보안 위험이 발생할 수 있지만, 잠긴 메모리를 예약할 수 없는 환경에서 실행할 수 있습니다.  _보호되지 않은_ 구성 옵션에 대한 자세한 내용은 다음을 참조하세요.link:telegraf_agent_k8s_config_options.html["구성 옵션"] 페이지. 

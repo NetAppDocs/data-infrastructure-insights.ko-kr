@@ -36,9 +36,9 @@ image:ai_assistant-column_graph.png["AI Assistant 시각화"]
 [[enhanced-vm-analyzer-filtering]]
 === 향상된 VM Analyzer 필터링
 
-7e3b063a499521d531e921d85b5ffe47
+VM Analyzer 보기의 새로운 토글 기능을 사용하면 데이터스토어가 없는 마운트된 볼륨을 숨길 수 있어 VM 문제 해결을 간소화하는 깔끔한 화면을 제공합니다.
 
-509d1d4de8b6cd47ea7d3ca1489eb431
+image:vm_analyzer_datastore_only_view.png["데이터스토어가 없는 마운트된 볼륨을 숨기는 토글을 표시하는 VM Analyzer"]
 
 
 
@@ -51,9 +51,9 @@ image:ai_assistant-column_graph.png["AI Assistant 시각화"]
 
 자산 랜딩 페이지를 직접 열고 오른쪽 상단의 편집을 선택할 수도 있습니다.
 
-d05c002809e2eff8dbbef3f837ebccae
+image:user_data_edit_slideout.png["편집 모드로 전환하는 데 사용되는 연필 아이콘과 함께 사용자 데이터를 읽기 전용 모드로 보여주는 자산 세부 정보 슬라이드아웃, width=400"]
 
-2676c87e0e32e08b02693582de233efc
+image:user_data_edit_lp.png["사용자 데이터가 편집 모드로 열려 있고 변경 사항을 저장할 준비가 된 자산 랜딩 페이지, width=200"]
 
 '''
 

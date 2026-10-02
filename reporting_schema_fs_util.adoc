@@ -13,6 +13,9 @@ keywords: dwh, data warehouse, schema, reporting, file system, fs util
 :imagesdir: ./media/
 
 
+[role="lead"]
+파일 시스템 활용률 스키마는 파일 시스템, 호스트 및 컴퓨팅 리소스 전반에 걸친 스토리지 소비 및 사용 패턴을 추적합니다. 이 스키마를 사용하여 용량 핫스팟을 파악하고 파일 시스템 수준에서 스토리지 할당을 최적화할 수 있습니다.
+
 출처: *dwh_fs_util* OData 엔드포인트 — Data Infrastructure Insights
 
 테이블 수: *8* | 연관 관계: *7*

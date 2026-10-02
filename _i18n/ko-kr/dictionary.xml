@@ -3079,24 +3079,10 @@
   <block id="993bb582982b324ee6465cc1d0c1a2bd" category="paragraph">사용자 지정 기간 범위를 사용하면 최대 31일 연속을 선택할 수 있습니다.  이 범위에 대한 시작 시간과 종료 시간을 설정할 수도 있습니다.  기본 시작 시간은 선택한 첫 번째 날의 오전 12시이고, 기본 종료 시간은 선택한 마지막 날의 오후 11시 59분입니다.  '적용'을 클릭하면 사용자 지정 시간 범위가 자산 페이지에 적용됩니다.</block>
   <block id="75190982e0922ca96ba831f7c3eb9037" category="paragraph">선택한 기간별로 페이지의 정보가 자동으로 새로 고쳐집니다.  현재 새로 고침 빈도는 요약 섹션의 오른쪽 상단 모서리와 페이지의 관련 표 또는 위젯에 표시됩니다.</block>
   <block id="773a459dc0ea8ba03d599d96cb1af7ca" category="paragraph">성과 섹션에는 자산에 대해 선택된 기간을 기준으로 여러 가지 지표가 표시될 수 있습니다.  각 지표는 자체 성과 차트로 표시됩니다.  보고 싶은 데이터에 따라 차트에서 지표와 관련 자산을 추가하거나 제거할 수 있습니다. 선택할 수 있는 지표는 자산 유형에 따라 다릅니다.</block>
-  <block id="9dc6acc34988c6b63dea4000b689a580" category="summary">Data Infrastructure Insights 의 자산 페이지 요약 섹션 개요입니다.</block>
-  <block id="29128cb5215fb2e80e1ee7a20fe86126" category="doc">자산 페이지 요약 섹션</block>
-  <block id="1928ab7a05e24c9e7bde67fb9a528d0d" category="paragraph">자산 페이지의 요약 섹션에는 자산에 대한 일반 정보가 표시되며, 여기에는 우려 사항이 있는 지표나 성과 정책이 있는지 여부도 포함됩니다.  문제가 발생할 가능성이 있는 영역은 빨간색 원으로 표시되어 있습니다.</block>
-  <block id="a529577c999092a8f244f1064ee16c6e" category="paragraph">요약 섹션의 정보와 자산 페이지의 모든 표 또는 사용자 정의 위젯의 정보는 선택한 시간 범위에 따라 자동으로 새로 고쳐집니다.  요약 섹션, 표 및 사용자 정의 위젯의 오른쪽 상단 모서리에서 현재 새로 고침 빈도를 확인할 수 있습니다.</block>
-  <block id="05245c9c713dbc0e818edff595a4246c" category="inline-image-macro">랜딩 페이지 요약 섹션의 예</block>
-  <block id="65ef2d3ac9b8dfdd7b17c10af9a602da" category="paragraph"><block ref="65ef2d3ac9b8dfdd7b17c10af9a602da" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="ce7951793151a0f69487b414bdd8b498" category="paragraph">참고: 요약 섹션에 표시되는 정보는 보고 있는 자산의 유형에 따라 달라집니다.</block>
   <block id="77e5be94869a677b15024b30a6f71dbd" category="paragraph">자산 링크를 클릭하면 해당 자산 페이지를 볼 수 있습니다.  예를 들어, 스토리지 노드를 보고 있는 경우 링크를 클릭하면 해당 스토리지의 자산 페이지를 볼 수 있습니다.</block>
-  <block id="74202c0b51dce91cb2d7ff8a3db7b041" category="paragraph">자산과 관련된 지표를 볼 수 있습니다.  지표 옆에 빨간색 원이 표시되면 잠재적인 문제를 진단하고 해결해야 할 수도 있음을 나타냅니다.</block>
   <block id="0072ea3bfe0375786c34c557c30c3890" category="admonition">일부 스토리지 자산에서는 볼륨 용량이 100%보다 크게 표시될 수 있습니다.  이는 자산에서 보고한 소비 용량 데이터에 볼륨 용량과 관련된 메타데이터가 포함되어 있기 때문입니다.</block>
-  <block id="bd7396064bde19099b129313d4e4960b" category="paragraph">해당되는 경우 알림 링크를 클릭하면 자산과 관련된 알림 및 모니터를 볼 수 있습니다.</block>
-  <block id="99571eecaa5c5d622bb0d1f855752d5f" category="section-title">토폴로지</block>
-  <block id="aa2a179e15d11223c669195106a7e555" category="paragraph">특정 자산 페이지의 요약 섹션에는 자산의 토폴로지와 연결을 볼 수 있는 링크가 포함되어 있습니다.</block>
-  <block id="575c9466566e751977f9292115eb4416" category="paragraph">다음 자산 유형에 대해 토폴로지를 사용할 수 있습니다.</block>
   <block id="27432d6ac14dca995c573c963e1fecd8" category="list-text">내부 볼륨</block>
   <block id="b19292cad601553e06435e12582db069" category="list-text">가상 머신</block>
-  <block id="b3e588c8b8cdde417ea31ee3bbefd9a9" category="inline-image-macro">랜딩 페이지 토폴로지 섹션의 예</block>
-  <block id="3cb6e63269aa6edf3cc66859826feb7d" category="paragraph"><block ref="3cb6e63269aa6edf3cc66859826feb7d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="a9bf92fda03d47c7754371c461a7b15c" category="summary">자산 페이지의 사용자 데이터 섹션에서는 현재 자산에 주석이나 애플리케이션을 할당할 수 있습니다.</block>
   <block id="c2bb4a41eb70c8ef98d0a34bf2c6b8a0" category="doc">사용자 데이터 섹션</block>
   <block id="5b85956dec7b32235b467a7425211daf" category="paragraph">자산 페이지의 사용자 데이터 섹션에는 애플리케이션 및 주석과 같은 사용자 정의 데이터가 표시되고 이를 변경할 수 있습니다.</block>
@@ -15560,14 +15546,748 @@
   <block id="a6fa4aea2a61c78e74a437025bfc4121" category="list-text">성능의 경우: 지연 시간 및 IOPS 타임라인과 이벤트 발생률 타임라인.</block>
   <block id="2f5a98a7fe17728f8b6f19bb7dde8ff4" category="list-text">용량의 경우: 구독 전후 사용량 및 각 수집기가 보고한 원시 용량.</block>
   <block id="7db2da5d72ca4cfd4dc3591cdb8b5f7a" category="paragraph">Data Infrastructure Insights에서 도움말 ++&gt;++ 지원을 사용하여 케이스를 개설하십시오.</block>
-  <block id="add9fe580da121a40e7d835cf08a489d" category="cell">데이터 SVM만 지원합니다(무한 볼륨은 지원하지 않음). 지원되는 하위 유형: default, sync++_++source, sync++_++destination. DP-destination SVM은 설계상 감사 대상에서 제외됩니다.</block>
-  <block id="689b820747aa6a4d860f2786eb806378" category="cell">볼륨 스냅샷: 전체 (가능한 경우 cloudsecure++_*++ 범위로)</block>
-  <block id="a0f6fb0a8302b109f912737c2869ae71" category="paragraph">역할 및 사용자를 생성합니다(실행하기 전에 ++&lt;++vservername++&gt;++ 교체):</block>
-  <block id="28c033259ae71cab82483e5eb721e1c5" category="paragraph">*영구 저장소(클러스터 모드 표시, SVM 모드의 경우 -vserver ++&lt;++vservername++&gt;++ 추가):*</block>
-  <block id="8de1a3a6bc3dbbbe06d26a1bcaf978d0" category="paragraph">*Protobuf (클러스터 모드 표시; SVM 모드의 경우 -vserver ++&lt;++vservername++&gt;++ 추가):*</block>
-  <block id="58322ab2ae3213de6b39a5124b6c922f" category="list-text">Workload Security ++&gt;++ 수집기 ++&gt;++ &amp;#43;데이터 수집기를 선택합니다.</block>
-  <block id="c421bfa9e5f3f2069af785152ca7a7ab" category="paragraph">*Important:* 기본 제외 파일 확장자: 설계상 Workload Security는 FPolicy 범위를 구성하여 ini 및 DS++_++Store 확장자를 제외합니다. 이러한 파일에 대한 이벤트는 ONTAP에서 필터링되어 Workload Security에 도달하지 않으므로 Activity Forensics에 나타나지 않습니다. 이는 고객이 구성할 수 있는 경고 제외와는 별개입니다. 이는 예상되는 동작이며, 이러한 확장자에 대한 감사는 UI에서 구성할 수 없습니다.</block>
-  <block id="2900a29dbf701a91de01303efc97eac8" category="paragraph">일시 중지 및 재개는 에이전트가 아닌 데이터 수집기에 적용됩니다. UI(Collectors ++&gt;++ 수집기 ++&gt;++ 옵션 메뉴) 또는 API에서 실행할 수 있습니다.</block>
-  <block id="8939329780680219f89b75f98718d19d" category="paragraph">수집기가 나중에 오류 또는 성능 저하 상태가 되면 상태 ++&gt;++ 자세한 내용을 열고 ONTAP SVM 데이터 수집기 문제 해결을 따르십시오. 중복 수집기, 이벤트 속도 과부하, 일시 중지된 수집기, 영구 저장소 배치, MetroCluster 전환, 누락된 활동 및 ID 확인 등 런타임 조건은 사전 저장 테스트 연결 워크플로에 포함되지 않습니다.</block>
-  <block id="ecfa6237a8a218fc5c797ee0578679c7" category="list-text">수집기가 Running 상태가 되고 실제 클라이언트 I/O 이후 Workload Security ++&gt;++ Activity Forensics에 이벤트가 나타나는지 확인하십시오.</block>
+  <block id="5eb14926e2b0223f53564d7659171c1c" category="admonition">또한 FlexGroups의 용량 수치가 "0"으로 표시되는 반면, 구성 요소에는 값이 표시되는 것을 확인할 수 있습니다. DII에서 FlexGroups 자체는 대부분의 용량 지표를 0으로 처리하는 반면, 구성 요소에는 해당 지표가 포함됩니다. 문제는 중복 계산입니다. 두 엔티티 모두 전체 용량 지표를 보고하는 경우, DII는 동일한 용량을 두 번 보고하게 됩니다(한 번은 flexgroup에서, 다른 한 번은 구성 요소에서). 구성 요소 수준의 보고를 우선시하면 이러한 중복을 방지하면서 주요 사용 사례를 지원할 수 있습니다.</block>
+  <block id="4613ec50b199e8fe1a45e8365d1126ed" category="paragraph">+ 이 경우 쿼리, 대시보드 또는 모니터에서 FlexGroup의 용량을 보고하려면 구성 요소의 상위 FlexGroup에 대한 참조를 사용하십시오. 그러면 해당 참조를 기준으로 구성 요소를 그룹화하고 용량 값을 집계할 수 있습니다.</block>
+  <block id="77064528bd054f741f0468e85617bf35" category="paragraph">+ DII는 FlexGroup 상위 요소의 용량을 의도적으로 0으로 설정하지만, ONTAP 자체는 여전히 용량을 보고합니다. 이는 성능 지표가 아닌 용량/효율성 지표에 적용됩니다. 그룹 이름은 전역적으로 고유하지 않을 수 있으므로 그룹 ID를 기준으로 구성 요소를 그룹화하는 것이 좋습니다.</block>
+  <block id="296cadc668db601a7fa80621086c9468" category="paragraph">VM Analyzer 보기의 새로운 토글 기능을 사용하면 데이터스토어가 없는 마운트된 볼륨을 숨길 수 있어 VM 문제 해결을 간소화하는 깔끔한 화면을 제공합니다.</block>
+  <block id="b6bf3aac3b33a207b8b6bbe0fc935a91" category="inline-image-macro">데이터스토어가 없는 마운트된 볼륨을 숨기는 토글을 표시하는 VM Analyzer</block>
+  <block id="6915ad7aa1643475defe5f685b410352" category="paragraph"><block ref="6915ad7aa1643475defe5f685b410352" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d0e9b5f06f461adaa0050f06dafe9575" category="inline-image-macro">편집 모드로 전환하는 데 사용되는 연필 아이콘과 함께 사용자 데이터를 읽기 전용 모드로 보여주는 자산 세부 정보 슬라이드아웃, width=400</block>
+  <block id="c2634a77f707f71f03af6181a842b88a" category="paragraph"><block ref="c2634a77f707f71f03af6181a842b88a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="58cc13c80c3e227fbe00047a9b822edc" category="inline-image-macro">사용자 데이터가 편집 모드로 열려 있고 변경 사항을 저장할 준비가 된 자산 랜딩 페이지, width=200</block>
+  <block id="194f62cbfe18d1624a3706d766ab06ed" category="paragraph"><block ref="194f62cbfe18d1624a3706d766ab06ed" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a0d5cf132ea60556950b6db3b75e1331" category="summary">이러한 개념을 이해하면 AI 비서가 적절한 툴을 선택하고 유효한 쿼리를 구성하는 데 도움이 됩니다.</block>
+  <block id="3e22aa14b911d8584c3de2cb2d09c8e3" category="doc">DII MCP 개념 및 데이터 모델</block>
+  <block id="845c2e1f81c7167073b0b3f255d00af4" category="admonition">DII MCP는 <block ref="312c0c6b46ba32b4b11ba8c9da5788ed" category="inline-link-macro-rx"></block> 기능이므로 변경될 수 있습니다.</block>
+  <block id="c24a6a0fbcf468cb15836f361c982306" category="section-title">테넌트 범위</block>
+  <block id="3af465bc8340a91d0857dbc69ece54c0" category="paragraph">모든 DII MCP 요청은 인증된 사용자의 DII 테넌트 및 권한 내에서 실행됩니다. 툴은 해당 테넌트에 존재하고 해당 ID로 볼 수 있는 데이터만 반환할 수 있습니다.</block>
+  <block id="1f6e96f30866692561631a04bbf5df94" category="section-title">수집 유닛</block>
+  <block id="a80dc875900b75f5008a683662daf66c" category="paragraph">수집 유닛(AU)은 원격으로 설치된 에이전트로, 데이터 소스를 폴링하고 원격 측정 데이터를 DII에 보고합니다. AU 레코드에는 연결 상태, 보고 최신성, 운영 체제, 버전 및 할당된 데이터 소스 수가 포함됩니다.</block>
+  <block id="975b85564f5db13da28fc5630881bfe9" category="paragraph">연결과 보고는 서로 다른 신호입니다. 예를 들어, AU는 성공적인 보고 이력이 없더라도 연결을 수락할 수 있습니다. 상태와<block ref="98590730af2b11154a1d93e8c46b2778" prefix=" " category="inline-code"></block>를 모두 평가하십시오.</block>
+  <block id="d1107e5839e1db0f331201116234fc6d" category="section-title">데이터 소스</block>
+  <block id="a509aa78fd503264cb66caf0b0b4c886" category="paragraph">데이터 소스(또는 수집기)는 스토리지 어레이, 스위치, 하이퍼바이저, 클라우드 서비스 등 인프라 시스템에 대한 구성된 연결입니다.</block>
+  <block id="568d4a528f825f2b510b1c9ab7c3ce19" category="paragraph">인벤토리 및 상태에 목록 작업을 사용하십시오. 수집 패키지, 폴링 간격 또는 최근 활동 등 구성 세부 정보가 필요한 경우 특정 데이터 소스를 검색하십시오.</block>
+  <block id="b84b607efe924feea91502be7beaf0da" category="paragraph">지원되는 데이터 소스 유형은 더 광범위한 DII 수집기 카탈로그를 설명합니다. 이는 현재 테넌트에 구성된 수집기와 동일하지 않습니다.</block>
+  <block id="c8308b1eba7ba926a61b8fd802194386" category="section-title">객체</block>
+  <block id="24b109764b9aac525d735f917e2f5e46" category="paragraph">오브젝트는 스토리지 시스템, 풀, 볼륨, 호스트, 가상 머신, Kubernetes 워크로드, 제품별 리소스 등 정규화된 인프라 엔티티입니다.</block>
+  <block id="f3dca07a26430634f6cec4b435251e1b" category="paragraph">오브젝트 유형은 동적입니다. 항상:</block>
+  <block id="d0bed2595156ec71cef87ede5f81ab52" category="list-text">오브젝트 유형을 나열합니다.</block>
+  <block id="5fb92ef33a24cf6866dff53e4a406f7b" category="list-text">정확한 유형을 선택하십시오.</block>
+  <block id="a8e549a4a967534ec12d46ec9c4ff5fc" category="list-text">해당 유형에 대한 메타데이터를 검색합니다.</block>
+  <block id="0a10742f07dbe57270789d5bd98792d5" category="list-text">메타데이터에 선언된 속성 및 메트릭만 쿼리합니다.</block>
+  <block id="422f71b1f5d388ac6cccffff67483a06" category="section-title">속성 및 메트릭</block>
+  <block id="e4d097a57c0dc386fcbbef9a49f83b4e" category="list-text">*속성*은 신원, 구성, 소유권, 레이블 또는 관계를 설명합니다.</block>
+  <block id="efebf0adaea31de8301ecfc61630e072" category="list-text">*메트릭*은 용량, 지연 시간, 처리량 또는 활용률 등 시간에 따라 변하는 측정값입니다.</block>
+  <block id="d01ae68441042fb1048edc996a62ed84" category="list-text">*그룹화 가능한 속성*을 사용하면 집계 쿼리를 세분화할 수 있습니다.</block>
+  <block id="888531a76f183011c680c6dc96e68a50" category="paragraph">메트릭 필터는 요청된 시간 창 집계가 적용되기 전에 원시 메트릭 값에 대해 평가됩니다.</block>
+  <block id="b2d37ae1cedf42ff874289b721860af2" category="section-title">로그</block>
+  <block id="f4c76edb2343ecf5f73db48a2e92f490" category="paragraph">로그 유형은 ONTAP EMS, Kubernetes 이벤트, StorageGRID 이벤트, VMware 이벤트 및 DII 플랫폼 이벤트 등의 이벤트 스트림을 나타냅니다.</block>
+  <block id="dca3d16dba5b965ca9da9fa8028f78f3" category="paragraph">로그 조회 또한 메타데이터 우선 방식입니다:</block>
+  <block id="51d90cb90f5e0a12203382f4f9174d4a" category="list-text">사용 가능한 로그 유형을 나열합니다.</block>
+  <block id="e93069e2487f472e54df4b5d7aef3a90" category="list-text">선택한 유형에 대한 메타데이터를 검색하십시오.</block>
+  <block id="b239ee178d458c6e53f3bac134c4af9c" category="list-text">유효한 속성만 요청하세요.</block>
+  <block id="514c25fe8547042a78a13b2d6c74e402" category="list-text">이벤트를 검색하거나 이벤트 발생 횟수 히스토그램을 작성하십시오.</block>
+  <block id="db5ca14432bcc36721aaad0cc76bc588" category="section-title">모니터링 및 경고</block>
+  <block id="baa7b16bc6a241889f4464c42f8d4097" category="paragraph">모니터는 DII가 평가하는 조건을 정의합니다. 경고는 하나 이상의 관련 오브젝트에 대한 특정 모니터 결과입니다.</block>
+  <block id="7f724d0b72144c6415fb7cdb22477eb1" category="list-text">모니터링 툴을 사용하여 의도, 상태, 오브젝트 유형 및 수정 지침을 검사하십시오.</block>
+  <block id="f14a688b148475dc52c6013806361111" category="list-text">알림을 조회하기 전에 알림 메타데이터를 사용하십시오.</block>
+  <block id="a257b0ef6cf67a52780be88c0e27e3a5" category="list-text"><block ref="fea18275d08c39713b6dcad48bb36fa6" prefix=" " category="inline-code"></block> 등과 같은 알림 이름 또는 해당 UUID를 사용하여 하나의 알림을 검색하십시오.</block>
+  <block id="6f1d44ed8bb0ef6a8b11965160804e1f" category="paragraph">경고 상태와 심각도는 별개의 개념입니다. 결과의 우선순위를 정할 때는 두 가지 모두를 요청하십시오.</block>
+  <block id="4a383c6031bb01ff64bf826213bd8b0a" category="section-title">유지보수 윈도우</block>
+  <block id="ce51c2973116361d3e357d367e724820" category="paragraph">유지보수 윈도우는 정의된 기간 동안 표현식과 일치하는 알림을 억제합니다. 성공 결과가 비어 있다는 것은 일치하는 윈도우가 없다는 의미이며, 데이터가 누락되었다는 증거는 아닙니다.</block>
+  <block id="89fb65faa11daecda4dcad2b6a6aa3ca" category="section-title">알림 규칙 및 대상</block>
+  <block id="4df6394b7dbcdb605f97caca5667a783" category="paragraph">알림 규칙은 일치하는 알림을 라우팅합니다. 대상에는 Slack, Microsoft Teams, PagerDuty 또는 사용자 지정 HTTP 통합이 포함될 수 있습니다.</block>
+  <block id="ad9e356a50e347924fe2c3b70e20a7d7" category="paragraph">웹훅 주소에는 기밀 정보가 포함될 수 있습니다. 보고 시에는 대상 이름, 엔진 유형 및 상태만 요청하십시오. 전체 주소를 절대 복제하지 마십시오.</block>
+  <block id="9cca89eab839e79d026c8a8fac2cc1c4" category="section-title">메타데이터 우선 쿼리 흐름</block>
+  <block id="f3f43e30c8c7d78c6ac0173515e57a00" category="section-title">필터</block>
+  <block id="922e4449ab96be457735ddbfa6cb3da0" category="paragraph">DII 쿼리 툴은 조건 및 중첩 논리 연산자를 지원합니다:</block>
+  <block id="1c8d54e324e6f36a3b4007744ff51e68" category="list-text">비교:<block ref="2dcbad7477fd40561e8b8198f173bd47" prefix=" " category="inline-code"></block>,<block ref="dc33066c3993e0d50896e533fd692ce0" prefix=" " category="inline-code"></block>,<block ref="cd6a9bd2a175104eed40f0d33a8b4020" prefix=" " category="inline-code"></block>,<block ref="c562607189d77eb9dfb707464c1e7b0b" prefix=" " category="inline-code"></block>,<block ref="f803729628adf4199f224c2a225038e9" prefix=" " category="inline-code"></block>,<block ref="cfe6055d2e0503be378bb63449ec7ba6" prefix=" " category="inline-code"></block></block>
+  <block id="c412a5dba74dfeb8f5a25525359c5282" category="list-text">패턴 매칭:<block ref="15f4cff81d9ee10b162eac10c339d5f4" prefix=" " category="inline-code"></block></block>
+  <block id="84aba758d5fe359561d79cd096288b8a" category="list-text">있음:<block ref="6a240802522e95fc9e2c1d09122d8ec4" prefix=" " category="inline-code"></block></block>
+  <block id="46531a3b544b47f31b0c2f1dddd9a4f8" category="list-text">논리:<block ref="be5d5d37542d75f93a87094459f76678" prefix=" " category="inline-code"></block>,<block ref="e81c4e4f2b7b93b481e13a8553c2ae1b" prefix=" " category="inline-code"></block>,<block ref="d529e941509eb9e9b9cfaeae1fe7ca23" prefix=" " category="inline-code"></block></block>
+  <block id="4d3b1d156e67d976d13df98d3cb0c490" category="paragraph">메타데이터에 선언된 정확한 필드 이름과 호환되는 값 유형을 사용하십시오. <block ref="6a240802522e95fc9e2c1d09122d8ec4" prefix=" " category="inline-code"></block>의 경우, 연결된 서버 버전에서 지원할 때 비교 값을 생략하십시오.</block>
+  <block id="e476e3c9172cb2064ba1739baf6be204" category="section-title">시간 범위 및 페이지네이션</block>
+  <block id="1c060490ca0703bb45a853ed3fde3aad" category="list-text">명시적인 오프셋 또는 <block ref="21c2e59531c8710156d34a3c30ac81d5" prefix=" " category="inline-code"></block>가 포함된 ISO-8601 타임스탬프를 사용하십시오.</block>
+  <block id="783d7ec762585244231c6f01986fa556" category="list-text">필요한 경우 +America/New_York+ 또는<block ref="9234324ddf6b4176b57d803a925b7961" prefix=" " category="inline-code"></block> 등 IANA 시간대를 제공하십시오.</block>
+  <block id="9374d63674f21af0454b8f1bb33a7ee7" category="list-text">툴에서 더 짧은 제한 기간을 명시하지 않는 한, 조회 기간은 30일 이하로 유지하십시오.</block>
+  <block id="aa0d33f2727fffbdea5607e601027004" category="list-text">오브젝트 및 알림 쿼리는 일반적으로 <block ref="aa9f73eea60a006820d0f8768bc8a3fc" prefix=" " category="inline-code"></block> 및 <block ref="7a86c157ee9713c34fbd7a1ee40f0c5a" prefix=" " category="inline-code"></block>를 사용합니다.</block>
+  <block id="c43b8a868e06ae46b05208b49e27df39" category="list-text">로그 이벤트 쿼리는 다음 페이지를 위해 반환된 커서를 사용합니다.</block>
+  <block id="2f38d4343969490ae48e613f3de832bf" category="paragraph">오류 및 복구 단계는 <block ref="5498ec94416004e6b68822d8a755ce71" category="inline-link-macro-rx"></block>을(를) 참조하십시오.</block>
+  <block id="8e87b8fcaaab63d270d3caef57eb597c" category="summary">AI 비서를 Data Infrastructure Insights(DII)에 연결하여 자연어를 사용하여 인프라 인벤토리, 원격 측정, 경고 및 수집 상태를 조사할 수 있도록 하십시오.</block>
+  <block id="3e923f7f281fa681b6b446f4107cd7e0" category="doc">DII MCP 서버</block>
+  <block id="3021d5e0dccba3ca739ce39b733f507e" category="paragraph">AI 어시스턴트/에이전트를 Data Infrastructure Insights(DII)에 연결하여 자연어를 사용하여 인프라 인벤토리, 원격 측정 데이터, 경고 및 데이터 수집 상태를 조사할 수 있도록 합니다.</block>
+  <block id="f6bbce1e4278dc6a570847525a6d6d25" category="paragraph">DII MCP 서버는 모델 컨텍스트 프로토콜(MCP)을 구현하고 지원되는 AI 클라이언트에 테넌트 범위 툴을 제공합니다. 현재 제품 툴셋은 *읽기 전용*입니다. DII 데이터를 검색하고 분석하지만 인프라 또는 DII 리소스를 수정하지는 않습니다.</block>
+  <block id="c5819b15a0e272c53a506715c03c08b0" category="section-title">조사할 수 있는 사항</block>
+  <block id="68b7c7f45c752d5301706abc9348a8d0" category="list-text">*인프라 인벤토리:* 스토리지, 가상화, Kubernetes, ONTAP, Azure NetApp Files, StorageGRID 및 관련 리소스.</block>
+  <block id="d974b2a73bed742051b1482dd3f74eb9" category="list-text">*성능 및 용량:* 오브젝트 메트릭, 그룹화된 집계 및 시계열 동작.</block>
+  <block id="18412cbb840e7dd27d456bf170e2a015" category="list-text">*로그 및 이벤트:* 로그 유형을 확인하고, 이벤트를 검색하고, 이벤트 발생 횟수 히스토그램을 생성합니다.</block>
+  <block id="858194edc526343c116acf769973d013" category="list-text">*경고:* 활성 경고를 검토하고, 정의, 심각도 및 시정 지침을 모니터링합니다.</block>
+  <block id="b903dcc6c944edc358ebb3a3bcfe3754" category="list-text">*컬렉션 상태:* 수집 단위, 데이터 소스, 지원되는 컬렉터 유형 및 Kubernetes 컬렉터 버전을 검토하십시오.</block>
+  <block id="d8f2460aa91803a2b80333935f452c9c" category="list-text">*알림 설정:* 유지 관리 기간, 알림 규칙 및 웹훅 대상 유형을 검토하십시오.</block>
+  <block id="a22f2b07f3532967877f12fbcb10d4ba" category="section-title">진입점을 선택하세요</block>
+  <block id="09d298c703d37f941d18f505e350c5c4" category="section-title">AI 클라이언트 연결</block>
+  <block id="475bdd61a23a75eafbd484af4e863f22" category="inline-link-macro">DII MCP 서버를 설정하십시오</block>
+  <block id="f666cc1807907346335aeee8d93f2993" category="paragraph">Cursor, Claude Code, VS Code, Codex 또는 기타 MCP 호환 클라이언트의 경우 <block ref="b0abb521018fe4eb467a66367286751f" category="inline-link-macro-rx"></block>을(를) 따르십시오.</block>
+  <block id="b11f8c7d52de0b7674c6a1e4680ff21a" category="section-title">사용 가능한 툴 찾아보기</block>
+  <block id="124b9417760f5748d365e86f1d4d5092" category="inline-link-macro">툴 참조</block>
+  <block id="7d7627b71a67ff60643737eab6195583" category="paragraph"><block ref="e83a2a8ca0e307114e8e048d4c25c43d" category="inline-link-macro-rx"></block>을(를) 사용하여 현재의 모든 툴, 필수 검색 호출, 쿼리 제한 및 사용자에게 표시되는 이름을 파악하십시오.</block>
+  <block id="62a81233ec02cfc871d0b03db8169e02" category="section-title">운영 워크플로부터 시작하세요</block>
+  <block id="ae18fe4e01e61a9862ceaf165003213a" category="inline-link-macro">레시피</block>
+  <block id="001e84898f721e9666b33fe46bcd171f" category="paragraph">원하는 결과를 이미 알고 있을 때 <block ref="804387b76dc98afb54c8e2b2ce094cb6" category="inline-link-macro-rx"></block>을(를) 사용하십시오:</block>
+  <block id="329a3a20abb70f901de4ae2479ffd6c4" category="list-text">인벤토리 수집 상태</block>
+  <block id="3290b75c1ba79cc5205543672ee9743d" category="list-text">스토리지 상태 평가</block>
+  <block id="462bf3ed1d95099dae9e1a5f0fdfc1b9" category="list-text">용량 위험 파악</block>
+  <block id="692a66b615fe229939932b5726c43926" category="list-text">Kubernetes 컬렉터의 현재 상태를 확인하세요</block>
+  <block id="d1bccbec1c0db5ca547e527eb08c8ce2" category="list-text">성능 문제 해결</block>
+  <block id="46e96ae0f6f3cfc97db2ed0fa673e648" category="list-text">알림 상태 검토</block>
+  <block id="9efa5e977515bddd26a5017232c81b8c" category="section-title">DII MCP 쿼리 작동 방식</block>
+  <block id="d986f29a734a31ff00f9fc150521d1ae" category="paragraph">많은 DII 리소스는 동적 스키마를 가지고 있습니다. 신뢰할 수 있는 조사는 발견 우선 순서를 따릅니다:</block>
+  <block id="d1f464ce3b52ef809c9e0ca8f757fdee" category="list-text">사용 가능한 오브젝트 또는 로그 유형을 나열하십시오.</block>
+  <block id="3d991cc8fdbd0606bbc04ea0b975ae31" category="list-text">해당 메타데이터에서 유효한 속성 및 메트릭만 사용하십시오.</block>
+  <block id="dbb585659e6e146cf9bbb8b8f43abe73" category="list-text">특정 시간 범위를 지정하여 조회합니다.</block>
+  <block id="489875bd9e0ee746a644985b342ea331" category="list-text">필터, 그룹화, 정렬 또는 페이지네이션을 사용하여 결과를 세분화하세요.</block>
+  <block id="4a376152a5611c302f0dd80dbc506004" category="inline-link-macro">개념 및 데이터 모델</block>
+  <block id="62bad144d8e2516e566b0245fb2ebe16" category="paragraph">자세한 내용은 <block ref="3a5585cb726e7b542ce3d7b91aac8bc1" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
+  <block id="406aad28adb685420b2496b274c01a08" category="section-title">중요한 제한 사항</block>
+  <block id="1461737afecbd2444e5aa7679f72a3c3" category="list-text">현재 모든 제품 툴은 읽기 전용입니다.</block>
+  <block id="3f168ef7442029dd3a55cafbbc59f0d0" category="list-text">오브젝트, 성능 및 로그 쿼리는 제한된 시간 범위를 적용합니다. 툴 페이지에 더 짧은 제한이 명시적으로 나와 있지 않는 한 30일 이하의 시간 범위를 사용하십시오.</block>
+  <block id="2e0522af74c1376b4c7a9a56f8a90362" category="list-text">쿼리 필드는 선택한 리소스 유형에 대해 반환된 메타데이터와 일치해야 합니다.</block>
+  <block id="e5eccd010544a14fec89dd9967edbdf3" category="list-text">검색 결과 용량이 큰 경우 페이지네이션 또는 용량 제한이 적용됩니다.</block>
+  <block id="ccea86745c107be00119a47be9317bc1" category="list-text">툴 사용 가능 여부 및 반환되는 데이터는 테넌트의 수집기, 활성화된 기능 및 사용자 권한에 따라 달라집니다.</block>
+  <block id="60a8a2df8a0c4e55080bb30d0a8e1e2c" category="inline-link-macro">보안 및 개인정보 보호</block>
+  <block id="49cdbfec80e940928dcae8754ad0f9bb" category="list-text">전체 웹훅 엔드포인트 주소를 요청하거나 복제하지 마십시오. <block ref="c3d0d96dc88bb2d999220c1ec6124dd1" category="inline-link-macro-rx"></block>을(를) 참조하십시오.</block>
+  <block id="cce78dc6ebbec7385a01f2146d6d01c8" category="section-title">다음 단계</block>
+  <block id="00be2877892bf7a7171ac6f6a49533e5" category="inline-link-macro">클라이언트를 연결하십시오</block>
+  <block id="2295cb01af592c1e12ee57d5b7b9e41f" category="list-text"><block ref="fb7d969ff0093fd4611c668ef8461c15" category="inline-link-macro-rx"></block>.</block>
+  <block id="61c84588006b722cff7a3863b1b38cf0" category="inline-link-macro">환경 인벤토리 레시피</block>
+  <block id="d2c17a8eb702953e412346a1a7fd11af" category="list-text"><block ref="3c65db3f9e7ade5ed02afb71e65e8ca5" category="inline-link-macro-rx"></block>을(를) 시도해 보십시오.</block>
+  <block id="73232880df62414c2d8d0c34052ffdee" category="list-text">쿼리가 거부되거나 예상치 못한 결과가 반환되는 경우 <block ref="5498ec94416004e6b68822d8a755ce71" category="inline-link-macro-rx"></block>을(를) 검토하십시오.</block>
+  <block id="e7a70e94622953c3236ee0a7ae4e8bc8" category="summary">이 레시피를 사용하여 용량 부족 현상이 임박한 스토리지 풀 또는 이와 동등한 용량 도메인을 식별하고 잠재적인 리밸런싱 후보를 찾으십시오.</block>
+  <block id="c44b016987d7f95c7680e967fd494727" category="list-text">모든 표시된 스토리지 풀을 검토할 수 있는 스토리지 범위 또는 권한입니다.</block>
+  <block id="b0b203fd3b1df2f04d68d1de00d2c0e1" category="list-text">30일 이하의 조회 기간.</block>
+  <block id="cad1e2a40c136ac23bc41185f6f14b38" category="list-text">조직의 경고 및 위험 임계값에 대한 합의.</block>
+  <block id="581f0c912738e251311f0ad82ba8e378" category="section-title">사용된 툴</block>
+  <block id="45327a7e56d6699def1f5c41edf4770a" category="list-text">+ObjectService_getObjectTypes+</block>
+  <block id="83e407d9d755bb01bc069e300174647d" category="list-text">+ObjectService_getMetadataForObjectType+</block>
+  <block id="49e7198d68ef63d211026c7cf00a8f0d" category="list-text">+ObjectService_query+</block>
+  <block id="a7ad5b5c0428809970832567d587c0a3" category="list-text">+ObjectService_groupObjects+</block>
+  <block id="97513837a534e44cab5d635408132ba9" category="list-text">+ObjectService_queryPerformanceMetricsForObjects+</block>
+  <block id="8a131b001c484d5b055ba13c400f3908" category="list-text">+AlertsService_getMetadata+</block>
+  <block id="7369ee6777bb0bdb6a56e38182e7b4ae" category="list-text">+AlertsService_queryForAlerts+</block>
+  <block id="afe1dd876bc297348bddbe621b6a6933" category="section-title">시작 프롬프트</block>
+  <block id="5df81fe11945be4cfb61313582162f9b" category="paragraph">지난 30일간의 스토리지 용량 위험을 평가합니다. 올바른 스토리지 풀 오브젝트 유형과 메타데이터를 검색한 후, 사용 가능한 사용 용량 비율, 여유 용량, 증가율 및 용량 포화 시간 신호를 사용하여 풀 순위를 매깁니다. 중요, 경고 및 관찰 대상 풀을 식별하고, 근거 기반의 리밸런싱 후보를 제안합니다. 사용된 임계값과 집계 함수를 명시합니다.</block>
+  <block id="13ed57dd36bfc146ef34347b7a9039c5" category="section-title">에이전트 워크플로</block>
+  <block id="bdca77ae386bcb2504e138fd893ed442" category="list-text">오브젝트 유형을 나열하고 적절한 정규화된 풀 유형 또는 제품별 풀 유형을 선택하십시오.</block>
+  <block id="6b544e08a446b98741ed008fa5b9e879" category="list-text">메타데이터 검색.</block>
+  <block id="8a57e77d98a867838a6cb661f90b91ca" category="list-text">유효한 항목을 식별하십시오:</block>
+  <block id="e34185888ab796736b019b19f1ee1b18" category="list-text">풀 및 스토리지 시스템 이름</block>
+  <block id="6a593c1001b5d5ede6495e783a1d9cdc" category="list-text">총 용량, 사용량 및 여유 용량 지표</block>
+  <block id="8ae1962f921fa156b7c2625aae13ad77" category="list-text">사용률 지표</block>
+  <block id="9a135b783b5fe5c627bcb201a9d01d04" category="list-text">전체 용량 도달 시간 또는 예측 지표</block>
+  <block id="03f98f5ba670204e96085fa1025e8939" category="list-text">그룹화 가능한 스토리지, 계층, 위치 또는 서비스 수준 속성</block>
+  <block id="507c5fbe45f15d02da16f855f1de2376" category="list-text">호환 가능한 집계를 사용하여 현재 순위가 매겨진 스냅샷을 조회합니다.</block>
+  <block id="0cdbed90f0905380e3158d9c68dcf5d3" category="list-text">요청된 기간 동안 성장 민감 지표에 대한 시계열 데이터를 검색합니다.</block>
+  <block id="3f763029d306c3e42469b9f6a11d5658" category="list-text">지원되는 경우 스토리지 시스템, 계층 또는 위치별로 용량을 그룹화합니다.</block>
+  <block id="8f5709591112d139de64ace3bdd50215" category="list-text">용량 관련 활성 알림을 조회하여 확인하십시오.</block>
+  <block id="c86ad2432bf30f22961c610b3cbe9f4b" category="list-text">합의된 기준치를 사용하여 위험도를 분류합니다.</block>
+  <block id="7038138027bb6f322eeaa6e1b51bae08" category="list-text">용량 및 운영 제약 조건을 모두 고려하여 잠재적인 재분배 공급원과 목적지를 파악합니다.</block>
+  <block id="5f824363f6893a32d34d16c7091467c6" category="section-title">위험 모델 예시</block>
+  <block id="3178ef9dda99dd2ecce9bd05737a5c4d" category="paragraph">가능한 경우 테넌트 정책을 사용하십시오. 그렇지 않으면 다음을 예시 모델로 표시하십시오:</block>
+  <block id="0446236a81b8896a954567c0e5a82d6f" category="list-text">*심각:* 사용률이 90% 이상이거나 가득 찰 때까지 남은 시간이 30일 미만인 경우</block>
+  <block id="f415bcea33a0906ccc8246e3f4199b62" category="list-text">*경고:* 사용률이 80% 이상이거나 가득 찰 때까지 남은 시간이 90일 미만인 경우</block>
+  <block id="7ec967e0732f52cb3d2c4c3183fd5e8a" category="list-text">*주의:* 전체 용량 도달까지 180일 미만 남은 지속적인 증가세</block>
+  <block id="e51980e126230069d1a0b78807da1d0f" category="list-text">*낮은 위험도:* 위의 조건에 해당하지 않음</block>
+  <block id="910b412f47685f91d7eb6214a4ff389d" category="paragraph">DII에서 예측 지표를 제공하는 경우, 단 두 개의 샘플만으로 완전 소진 시간을 추론하지 마십시오. 예측 지표를 사용할 수 없는 경우, 정확한 소진 날짜를 제시하지 않고 추세를 설명하십시오.</block>
+  <block id="ac8e114efcc6a60e59ba78b5f8459863" category="section-title">리밸런싱 가이드</block>
+  <block id="4008afcaac8b35128646c0643c66c287" category="paragraph">단순히 여유 용량이 있다고 해서 목적지로 적합한 것은 아닙니다. 다음을 고려하십시오:</block>
+  <block id="6a6e7c83d145eb7bedf1cc56300e7237" category="list-text">스토리지 시스템 및 프로토콜 호환성</block>
+  <block id="57b133a9fe22d9c7d2063e28c54e2695" category="list-text">서비스 수준 및 성능 여유 공간</block>
+  <block id="059bed65ffb23a1f456ab5b27a726d66" category="list-text">데이터 보호 및 복제 관계</block>
+  <block id="c1263315dc2a04246b6c45d263bf36ad" category="list-text">워크로드 배치 제약 조건</block>
+  <block id="63cf0c735c94a7cf498c22432742a45b" category="list-text">씬 프로비저닝 및 오버커밋</block>
+  <block id="2332343dbcab9886e1ce9c7afa9e4be4" category="list-text">운영 변경 기간</block>
+  <block id="e349761660073e91d78c4924e89f4e02" category="section-title">제안된 출력</block>
+  <block id="1864353042fc5474b3b2da90f2270c6c" category="list-text">용량-위험 요약</block>
+  <block id="f0880706d8eea27ff3dae74aa976bab2" category="list-text">중요 및 경고 풀</block>
+  <block id="a93476ddb16104cd7a1fcf0734386dd2" category="list-text">성장 이야기</block>
+  <block id="ef6ba5160c901beec4f95b29e26a7520" category="list-text">활성 용량 알림</block>
+  <block id="504d99013aba3f5c33afdf828a6d5810" category="list-text">후보 소스 및 대상 쌍</block>
+  <block id="6b9b1fa1927bce7830f3be27a7caed5f" category="list-text">가정 및 누락된 데이터</block>
+  <block id="b76c17a7414218ef9e8c23f5f621472a" category="section-title">제한 및 개인정보 보호</block>
+  <block id="0d19fadbd2d9b42fe76f74be79380860" category="list-text">오브젝트 기간은 호출당 30일을 초과할 수 없습니다. 더 긴 추세를 파악하려면 연속적이고 겹치지 않는 기간을 사용하십시오.</block>
+  <block id="f1409cd7e416a747e6cc6f7b017ba927" category="list-text">필터는 집계 전 원시 측정값에 적용됩니다.</block>
+  <block id="2537cc4e0c91de4d6854e46f4a313dbf" category="list-text">메타데이터에서 그룹화 가능으로 표시된 속성으로만 그룹화하십시오.</block>
+  <block id="acafa56b8a1478ea8f7a4201f902e98d" category="list-text">용량 값은 서로 다른 단위를 사용할 수 있으므로 비교하기 전에 단위를 정규화해야 합니다.</block>
+  <block id="7e3817162b33d7920786df85f7e105dc" category="section-title">후속 질문</block>
+  <block id="946cdff6b94d508078ef67cbda6d95b0" category="paragraph">위험도가 가장 높은 5개 풀의 30일간 사용 용량 추세를 표시하십시오.</block>
+  <block id="bcd5ff93de98ef7cb81e2f608e4868a1" category="paragraph">스토리지 시스템별로 풀 용량을 그룹화하고, 중요 풀과 위험도가 낮은 실행 가능한 대상을 모두 갖춘 시스템을 식별합니다.</block>
+  <block id="c9dbf2a662fc0a120dc30591296a8ce0" category="paragraph">위험도가 가장 높은 풀을 활성 용량 모니터 및 경고와 연관시키십시오.</block>
+  <block id="5bad1810530ef525fa355d75fe783ac6" category="inline-link-macro">레시피 목록으로 돌아가기</block>
+  <block id="95197ff12bd6e54cc19fe8cfcb841567" category="paragraph"><block ref="95197ff12bd6e54cc19fe8cfcb841567" category="inline-link-macro-rx"></block></block>
+  <block id="8316d2edd3afed6f6af2689e874d2688" category="summary">이 레시피를 사용하여 DII의 데이터 수집 장치와 구성된 데이터 소스가 제대로 연결되어 보고 및 수집되는지 확인하십시오.</block>
+  <block id="ed1c0d4f7640d15c95af1b6e3a687690" category="doc">인벤토리 환경 및 컬렉션 상태</block>
+  <block id="5e4ec732f254bb8f5899379cc7d04bfc" category="list-text">수집 장치 및 수집기 툴에 대한 액세스.</block>
+  <block id="e11c48b2be31d68444a78dac23db5f27" category="list-text">조사 범위를 좁히기 위한 선택적 획득 장치 또는 수집기 이름입니다.</block>
+  <block id="169ef6df047ea8cdf1523b7763896055" category="list-text">+AcquisitionUnitsService_getAcquisitionUnits+</block>
+  <block id="cce85d6c6e6e23e97f10ba1892e1c581" category="list-text">+AcquisitionUnitsService_getAcquisitionUnitByUuid+</block>
+  <block id="cab238e59566ee4550704abfc3320825" category="list-text">+CollectorService_getDataSources+</block>
+  <block id="6dcd43a376b504d945bb6de714e00451" category="list-text">+CollectorService_getDataSourceById+</block>
+  <block id="900d7f4abf83627dc7ebbc270a3ea4b3" category="list-text">+CollectorService_getDataSourceTypes+</block>
+  <block id="bfff656658f9a999cf82e8e8d140f30a" category="paragraph">DII 수집 환경을 검토하십시오. 수집 장치를 연결 상태 및 보고 최신성별로 요약하고, 구성된 데이터 소스를 수집 상태 및 공급업체별로 요약하십시오. 보고가 전혀 없는 수집 장치, 할당된 수집기가 없는 장치, 수집에 실패한 장치, 그리고 오래된 성공 수집 데이터를 강조 표시하십시오. IP 주소, UUID 또는 자격 증명은 표시하지 마십시오.</block>
+  <block id="df5947bfccd2c317f6209c660d6217c7" category="list-text">모든 수집 단위를 나열하십시오.</block>
+  <block id="731c94de5a32cb6afce48135ed599a4c" category="list-text">연결 상태와 <block ref="98590730af2b11154a1d93e8c46b2778" prefix=" " category="inline-code"></block> 모두 사용하여 각 AU를 분류합니다.</block>
+  <block id="1e1ddefbde3cd9faf4105a9811ff60c2" category="list-text">AU별로 할당된 데이터 소스 수를 계산합니다.</block>
+  <block id="8260502e634e58c0a8abc4f87b3cfbf2" category="list-text">구성된 모든 데이터 소스를 나열합니다.</block>
+  <block id="0b09226e84ebf02c76fb13598f1dfb2c" category="list-text">수집기를 상태, 제조사, 모델 및 AU별로 그룹화하십시오.</block>
+  <block id="30f6aecfc15a0ab94c7e9ca927fad02a" category="list-text">식별:</block>
+  <block id="32b14fb05f2eb5a70455a77d018af120" category="list-text">연결이 끊기거나 하트비트가 실패한 AU</block>
+  <block id="15af971f9ab22613da464b434b6ec10f" category="list-text">보고하지 않은 연결된 AU</block>
+  <block id="d095b90a352254c5363ea27fa0f21b73" category="list-text">데이터 소스가 없는 AU</block>
+  <block id="c6da05b272d042ec5bef9acf9d86b329" category="list-text">실패한 수집기</block>
+  <block id="c628af3e788030b7d14a589399a5cf76" category="list-text">성공적인 획득이 없는 수집기</block>
+  <block id="389c4ab4a6ce1ad70e35e5c30eb85691" category="list-text">마지막 수집이 예상외로 오래된 성공적인 수집기</block>
+  <block id="257e4e15ae60899b01baed737a58e28f" category="list-text">예외적인 경우에만 전체 AU 또는 수집기 세부 정보를 조회하십시오.</block>
+  <block id="7e0600b34da2a57fed170f2d8497e47b" category="list-text">우선순위가 지정된 요약 정보를 반환하고 사용된 신선도 임계값을 명확하게 명시하십시오.</block>
+  <block id="ed5f9d72f11181ff3b05bf535e384183" category="section-title">해석</block>
+  <block id="12abb02146ab07ef58afe9013a97841b" category="paragraph">다음 구분을 사용하십시오:</block>
+  <block id="e058417792171e657600a717a5242baf" category="list-text">*연결 및 보고 중:* AU가 연결되어 있으며 최근 <block ref="98590730af2b11154a1d93e8c46b2778" prefix=" " category="inline-code"></block>값이 있습니다.</block>
+  <block id="8476b2757c7d4518d3d1e8417c7073d2" category="list-text">*연결되었지만 보고되지 않음:* 연결은 되어 있지만 원격 측정 보고가 성공적으로 설정되지 않았습니다.</block>
+  <block id="ec3404c076189ec4fa2c20bc13dde3b5" category="list-text">*하트비트 실패:* AU 호스트, 네트워크 경로 및 서비스를 조사하십시오.</block>
+  <block id="877ffc16ff7b4a70233b4b2038db1a2f" category="list-text">*수집기 실패:* 수집기의 최근 폴링 활동, 패키지 상태, 구성 및 마지막 성공 수집을 확인하십시오.</block>
+  <block id="36f04184107b30d3948d3dd3eb1f1ef9" category="list-text">*할당된 컬렉터 없음:* 이는 의도적인 것일 수 있습니다. 오류로 간주하기 전에 확인하십시오.</block>
+  <block id="5008b8f24208812654274725be4f919a" category="paragraph">지원되는 데이터 소스 유형 카탈로그는 DII가 수집할 수 있는 제품을 설명합니다. 이는 해당 제품이 테넌트에 구성되어 있다는 것을 증명하지는 않습니다.</block>
+  <block id="7919e821dc18f3e88c0201e01bf6a240" category="list-text">요약 보고서</block>
+  <block id="fd379e735d7981278b83eefc92b3df40" category="list-text">수집 유닛 상태 개수</block>
+  <block id="0eae51f57f4021eaf942a112fd4a3afb" category="list-text">수집기 상태 개수</block>
+  <block id="19f3737ec767865dd63e688efd0d7054" category="list-text">운영상 영향도에 따라 순위가 매겨진 예외 사항</block>
+  <block id="e123baf083c19e002d980bd9473bdbb3" category="list-text">권장 점검 사항</block>
+  <block id="467ea0fb0b54918827a3cff40b8a7e99" category="list-text">데이터 제한 사항</block>
+  <block id="d8b104079ee8c294080f4bcfa3fb6f78" category="list-text">AU UUID, IP 주소, 개인 호스트 이름 또는 수집기 자격 증명을 반환하지 마십시오.</block>
+  <block id="889a7c82601ebd3e16f183a0a0b79681" category="list-text">상태 값만으로는 데이터의 최신성을 판단할 수 없습니다.</block>
+  <block id="b1dbe8962d9ea0f619ef50e3bab2981c" category="list-text">명시된 예외에 대해서만 자세한 구성을 가져옵니다.</block>
+  <block id="b6c53be9253996a52f828f0c4fa5edfa" category="paragraph">이름이 <block ref="6c4358d342d4a6c6f01a3b07cb190045" prefix=" " category="inline-code"></block>인 실패한 수집기를 검사합니다. 자격 증명이나 개인 주소를 표시하지 않고 최근 폴링 활동 및 수집 패키지 실패를 요약합니다.</block>
+  <block id="ba61a287c22a9d975f5f63ed194f0f1d" category="paragraph">지난 30분 동안 보고하지 않은 수집 장치는 무엇이며, 어떤 수집기가 해당 장치에 종속되어 있습니까?</block>
+  <block id="dc49dcee5bac6ee8b8bcb50118000ee4" category="paragraph">구성된 수집기 공급업체를 DII에서 지원하는 데이터 소스 유형 카탈로그와 비교하십시오.</block>
+  <block id="0db1fda8044f572db18109871e3b2392" category="summary">이 레시피를 사용하여 DII 오퍼레이터 또는 컬렉션 구성 요소가 오래되었거나, 비활성화되었거나, 더 이상 사용되지 않는 Kubernetes 클러스터를 식별하십시오.</block>
+  <block id="cc684c915b41168af2c117ce54ed094e" category="list-text">Kubernetes 컬렉션이 DII 테넌트에 구성되어 있습니다.</block>
+  <block id="211962daa43b6fbe936ae03b791d5adc" category="list-text">Kubernetes 컬렉터 정보에 대한 접근 권한.</block>
+  <block id="c2252e9c57df694e083bbe1379174543" category="list-text">+OperatorsManagement_getKubernetesCollectors+</block>
+  <block id="c29dbeda345af1a3236e6e47e6e85e71" category="list-text">선택 사항: +AcquisitionUnitsService_getAcquisitionUnits+</block>
+  <block id="fe04d577d15b78754931d7a00c9633f5" category="list-text">선택 사항: +CollectorService_getDataSources+</block>
+  <block id="b70cff5b8307a23413180cd52d65ae4a" category="paragraph">DII Kubernetes 컬렉터의 최신 상태를 검토합니다. 클러스터를 전체 상태별로 그룹화하고, 오래되었거나 비활성화된 오퍼레이터 및 구성 요소를 식별하고, 마지막 보고 타임스탬프가 오래된 경우 표시합니다. 내부 주소나 UUID는 표시하지 않습니다.</block>
+  <block id="19165db325c7f713d00bb6abf6a490f9" category="list-text">Kubernetes 컬렉터 목록을 표시합니다.</block>
+  <block id="f47fa959482a8b4beea99bd45efbeec4" category="list-text">각 클러스터를 다음과 같이 정규화합니다:</block>
+  <block id="092671d6fbcfa9171424fcc805c6ac4a" category="list-text">최신 상태</block>
+  <block id="6f64ae857ab55cba2c3941fbc59285d5" category="list-text">구식</block>
+  <block id="88183b946cc5f0e8c96b2e66e1c74a7e" category="list-text">알 수 없음</block>
+  <block id="a257a9fd6cf8bf1875362e2cd14dbd68" category="list-text">비교:</block>
+  <block id="826bd13a92e49352d28b368b6ad310c9" category="list-text">운영자 버전</block>
+  <block id="b0ffecb26711cbd1b8ad984110e4a8a2" category="list-text">네트워크 성능 및 맵 구성 요소 버전</block>
+  <block id="80b8e4e43fefb8ee2fe14ebdcb6fb311" category="list-text">변경 분석 구성 요소 버전</block>
+  <block id="a00224336d1ae7360ec0d259e2ea3c79" category="list-text">마지막으로 보고된 타임스탬프를 요청된 시간대로 변환합니다.</block>
+  <block id="1ff65c13a04bb38188c12bd26bb58739" category="list-text">합의된 최신성 기준 내에 보고되지 않은 클러스터에 플래그를 지정합니다.</block>
+  <block id="97618c6d0e32061b6c8eceef5a766e42" category="list-text"><block ref="382b0f5185773fa0f67a8ed8056c7759" prefix=" " category="inline-code"></block>을(를) 구버전과 구별하십시오:</block>
+  <block id="f174d76a7e7e68b78119bdca2c84dcd5" category="list-text"><block ref="382b0f5185773fa0f67a8ed8056c7759" prefix="" category="inline-code"></block>은(는) 구성 요소가 설치되지 않았거나, 활성화되지 않았거나, 적용되지 않음을 의미할 수 있습니다.</block>
+  <block id="e4f4230e27f1340d331c489c88eb1aa8" category="list-text">보고서가 최신 정보가 아닌 경우, 가능한 경우 관련 획득 장치 및 수집기 상태를 확인하십시오.</block>
+  <block id="5459198282a37716ce52292a65d024a7" category="list-text">우선순위가 지정된 업그레이드 및 조사 목록을 반환합니다.</block>
+  <block id="0a13a0dc882bf6ff1a51a48da92d8566" category="list-text">*구식:* 설치된 구성 요소 중 하나 이상이 DII에서 예상하는 버전보다 뒤처져 있습니다.</block>
+  <block id="8a6659cd5a6dc1082af3523b1a59d9d8" category="list-text">*비활성화됨:* 컬렉션이 의도적으로 또는 관리상 비활성화되었습니다.</block>
+  <block id="ce07813d91f14a9e27cdae05e964494b" category="list-text">*오래된 보고:* 버전 데이터가 클러스터의 현재 상태를 반영하지 않을 수 있습니다.</block>
+  <block id="3af3509e6a3ce57e4cdedcc0dfd115f7" category="list-text">*N/A:* 맥락이 필요하므로 자동으로 실패로 분류하지 마십시오.</block>
+  <block id="4d5332083b90a999a8053324d7a4954f" category="paragraph">이 툴은 버전 및 상태를 보고합니다. 업그레이드는 수행하지 않습니다.</block>
+  <block id="54f8bdf953f47f5e0bf76e6007cf2dde" category="list-text">상태별 클러스터 개수</block>
+  <block id="7fd59d9da85ce816088cf6b4f0ca2eaf" category="list-text">보고 최신성 기준으로 순위가 매겨진 오래된 클러스터</block>
+  <block id="467a439400e02a1c1f1223799f6dd394" category="list-text">구성 요소 수준 버전 차이</block>
+  <block id="a4f1ba3e471a15dba8dc9d1f6033ad6b" category="list-text">비활성화되었거나 사용할 수 없는 구성 요소</block>
+  <block id="144fb7d712d2c699e9caec5cbb83aefb" category="list-text">권장되는 확인 단계</block>
+  <block id="5e6e84a17d35bfdaa35988f1f8c8c8a2" category="list-text">클러스터 이름은 민감한 정보일 수 있으므로 결과를 공유할 때는 승인된 처리 방식을 사용하십시오.</block>
+  <block id="27bed063b81584aba868fcbb0ab7f41e" category="list-text">버전 최신성만으로 취약점 노출 여부를 판단하지 마십시오.</block>
+  <block id="ba3de09a1ea49aa0b7f2bfa64516d278" category="list-text">이 읽기 전용 워크플로 외부에서 업그레이드 호환성 및 프로세스를 검증하십시오.</block>
+  <block id="d936a057ec5402b8bfd9bb9cf51446bb" category="paragraph">어떤 클러스터가 구버전 오퍼레이터를 가지고 있으며 지난 한 시간 동안 보고하지 않았습니까?</block>
+  <block id="b72cc5defa940bc559507ec132386673" category="paragraph">변경 분석 구성 요소가 오래된 클러스터와 해당 구성 요소를 사용할 수 없는 클러스터를 분리합니다.</block>
+  <block id="cce837c51576a22ba28d8a93f7718b60" category="paragraph">클러스터가 오래된 경우, 관련 DII 수집 인프라가 정상인지 확인하십시오.</block>
+  <block id="05eff39ce870bca7f35a5dc13286d80a" category="summary">이 레시피를 사용하면 웹훅 엔드포인트 주소를 노출하지 않고 DII 경고가 어떻게 라우팅되고 억제되는지 이해할 수 있습니다.</block>
+  <block id="847d6170be3ceb1920dd33a2f80cbf3a" category="list-text">알림 및 유지보수 기간 툴에 대한 액세스.</block>
+  <block id="c09737bc95dd5cb7f8af97a6212bf597" category="list-text">검토 범위를 좁히기 위한 선택적 모니터, 리소스 또는 통합 유형입니다.</block>
+  <block id="ec05267c82982af7068e41483e012c9c" category="list-text">+NotificationService_getNotificationRules+</block>
+  <block id="f3248bf9f74182fc9a61d596c99a5fda" category="list-text">+NotificationService_getNotificationRuleById+</block>
+  <block id="5825bd50bc1cc7ad09e366f92212a312" category="list-text">+NotificationService_getWebhooks+</block>
+  <block id="b39497185fd280000d06e4f432551d4a" category="list-text">+MaintenanceWindowService_getMaintenanceWindows+</block>
+  <block id="071e7e04a221bc1381b3df6ee5db5cc8" category="list-text">+MaintenanceWindowService_getMaintenanceWindowById+</block>
+  <block id="b9634a5999dbe8afebafa635284362e5" category="list-text">선택 사항: +MonitorsService_queryMonitors+</block>
+  <block id="8c3d6d1bdbaf96be14b64d6f735f4bff" category="paragraph">DII 알림 상태를 검토합니다. 활성 및 비활성 알림 규칙, 각 규칙의 모니터 또는 리소스 범위, 통합 유형별 웹훅 대상 개수, 현재 유지 관리 기간을 요약합니다. 대상 이름, 엔진 유형 및 상태만 반환하고 엔드포인트 주소는 반환하지 않습니다.</block>
+  <block id="307db9ac665d3e3a8c5e75d3f989719b" category="list-text">알림 규칙을 나열합니다.</block>
+  <block id="9b479b3817d529bfcfe1ea7026f6c1b1" category="list-text">규칙을 활성, 비활성, 만료 예정 또는 만료 없음으로 분류합니다.</block>
+  <block id="db66a31ff3713d82d4a950d03266a150" category="list-text">각 규칙의 표현 범위를 요약하십시오:</block>
+  <block id="2855bdcbb02d9c091a436d1f06aadda6" category="list-text">모니터 이름 또는 그룹</block>
+  <block id="6ed11248b24c2511a2006109bbfb28f4" category="list-text">관련 오브젝트</block>
+  <block id="148333b888c07fd705a065170bb6207c" category="list-text">광범위한 와일드카드 범위</block>
+  <block id="bf51672ce0a57e61af25f96a88f91b76" category="list-text">추가적인 세부 정보가 필요할 때만 특정 규칙을 검색하세요.</block>
+  <block id="5e217a9653f8a20908968f948d76d991" category="list-text">웹훅 대상을 나열하고 작업 결과에서 주소 필드를 즉시 제외합니다.</block>
+  <block id="2a4cb9ca170e6707871e19b0584be8b2" category="list-text">엔진 유형 및 상태별로 대상을 그룹화합니다.</block>
+  <block id="b9373e8b4898b9b669e30cf8118a31f6" category="list-text">활성화된 유지보수 기간을 나열합니다.</block>
+  <block id="66d39000468c3e2a9660fab8795e8520" category="list-text">중요 자원이나 비정상적으로 긴 기간과 겹치는 억제 기간을 파악하십시오.</block>
+  <block id="284035b588f9803f1d37555d33a66ed3" category="list-text">선택적으로 규칙 표현식을 사용 가능한 모니터와 비교할 수 있습니다.</block>
+  <block id="d60c43c797882a23b6032e14d38ef8e0" category="list-text">보고서 라우팅 범위, 광범위한 규칙, 비활성 규칙 및 억제 위험.</block>
+  <block id="61eba1934ae68592e10f1e0cdbb728b3" category="section-title">보안 요구 사항</block>
+  <block id="d4f2dba448de4454dc5137d020fd62a1" category="paragraph">전체 웹훅 주소에는 다음이 포함될 수 있습니다:</block>
+  <block id="73bc54ee835c767cdf02f542ec949389" category="list-text">Slack 또는 Teams 서명 경로</block>
+  <block id="46a64126516ba025441412e6fab52907" category="list-text">PagerDuty 라우팅 키</block>
+  <block id="38bb49d0eb7601bf0e891825f8ee8437" category="list-text">API 토큰</block>
+  <block id="5f2dff937a4a65939bc47aeede2cdd91" category="list-text">고유한 워크플로 서명</block>
+  <block id="956929e1f9cf0a1cef77a863659b2094" category="list-text">사용자 지정 통합 자격 증명</block>
+  <block id="83b0329f04b3f36525e455bae69d6feb" category="paragraph">주소 필드는 절대 표시하거나, 인용하거나, 요약하거나, 저장하거나, 전달하지 마십시오. 또한 이 워크플로에서는 마스킹된 접미사도 필요하지 않습니다.</block>
+  <block id="148493494d72b92807fa877df229493c" category="paragraph">전체 엔드포인트가 기록이나 공유된 아티팩트에 나타나는 경우, <block ref="c3d0d96dc88bb2d999220c1ec6124dd1" category="inline-link-macro-rx"></block>에 있는 사건 처리 단계를 따르십시오.</block>
+  <block id="95a43c47951c549ef94ec02d0f932efa" category="list-text">비활성화된 규칙은 의도적일 수 있으므로, 삭제를 권장하기 전에 소유권을 확인하십시오.</block>
+  <block id="fbfabd4c8f4e3d3b8745e907fedfc03f" category="list-text">광범위한 와일드카드 표현식은 알림 노이즈를 발생시키거나 의도치 않은 라우팅을 초래할 수 있습니다.</block>
+  <block id="23a6486b72e5ef4455eac9dfd7354dc7" category="list-text">대상 상태는 null이거나 알 수 없을 수 있습니다. 활성화되었다고 보고하지 마십시오.</block>
+  <block id="80e4165057c24cae9d3396f20e9cc7e7" category="list-text">성공적인 빈 유지보수 기간 결과는 일치하는 기간이 없음을 의미합니다.</block>
+  <block id="97182b7c90cbabd288adec7468eddc7e" category="list-text">장기간 지속되는 윈도우는 기술적으로 활성화되어 있고 유효하더라도 실제 문제를 숨길 수 있습니다.</block>
+  <block id="b36b7fe8bbd1a92fde102ff802714aea" category="list-text">상태별 규칙 개수</block>
+  <block id="697cf98c5fe6fa5fd0c78eea0f1e829d" category="list-text">규칙 범위 및 대상 유형</block>
+  <block id="07c0f7a9fc1b4843e1de3f9783a94465" category="list-text">엔진별 타겟 수</block>
+  <block id="16fe2c196ceea15c29f71c4c1f94f03b" category="list-text">활성 유지 관리 기간</block>
+  <block id="b558c26d5d1657172dff976536f87dff" category="list-text">광범위하거나, 비활성이거나, 모호한 구성</block>
+  <block id="f7adea46486b7094b9ae1fa6cae0d741" category="list-text">보안 및 데이터 품질 관련 주의사항</block>
+  <block id="1dc47db3329823bd7b2ba4522e2185f3" category="list-text">주소, 토큰, UUID 또는 개인 리소스 식별자를 반환하지 마십시오.</block>
+  <block id="c20faf00ade415e31594b7f3fbee0910" category="list-text">이 워크플로는 구성을 검토하지만 메시지 전달은 테스트하지 않습니다.</block>
+  <block id="a50fabc59e868b864b4d02908e775d5b" category="list-text">현재 툴은 규칙 및 대상을 생성, 업데이트, 비활성화 또는 삭제하지 않습니다.</block>
+  <block id="d2c0d8539e5b4e91c19e35cdb2eebe17" category="paragraph">&lt;</block>
+  <block id="c57b46497f16e5aefc1f0e4c9ba9a77c" category="paragraph">현재 및 예정된 유지보수 기간을 나열하고, 해당 기간 동안 어떤 알림 범위가 비활성화되는지 설명하십시오.</block>
+  <block id="b1100d2bab458d58dc19507081776da4" category="paragraph">통합 유형별 알림 대상 수를 세고 상태를 알 수 없는 대상을 식별합니다. 주소는 표시하지 않습니다.</block>
+  <block id="4c992409b3b28d620882728a33ac6b8c" category="summary">레시피는 여러 읽기 전용 DII 툴을 반복 가능한 인프라 워크플로로 결합합니다. 이를 시작점으로 활용하고 가상의 리소스 이름을 테넌트의 값으로 교체하십시오.</block>
+  <block id="19c68a1eb2efcf22174899c794513466" category="doc">DII MCP 운영 레시피</block>
+  <block id="ff5a3877e37c9049384a942e1004523c" category="section-title">워크플로를 선택하십시오</block>
+  <block id="12c74214cb4c18cf36d885303d6aa2e1" category="cell">목표</block>
+  <block id="aef6ec2224f7ef3c74b4942b0e7f2969" category="cell">레시피</block>
+  <block id="4e8221b943f971cf937a7f02bb29452d" category="cell">주요 DII 표면</block>
+  <block id="5c67fe2f8d346bce25d1434a44ea5c0d" category="cell">수집 범위와 최신성을 검증합니다</block>
+  <block id="5dd7ee5a5e4ed3fdd7c7d864dcd97845" category="cell"><block ref="5dd7ee5a5e4ed3fdd7c7d864dcd97845" category="inline-link-macro-rx"></block></block>
+  <block id="56fb3d4d29cd5a5f2f39d67b78d8fbb8" category="cell">수집 단위, 데이터 소스</block>
+  <block id="3365ba8fa249590900199e1b8fe63fe6" category="cell">활성 인프라 문제를 우선시하십시오</block>
+  <block id="210f8d8a7ba52477c5aafeea415f0136" category="cell"><block ref="210f8d8a7ba52477c5aafeea415f0136" category="inline-link-macro-rx"></block></block>
+  <block id="dbf4c5e43f3ad7adb2890416ad626d72" category="cell">경고, 모니터링, 로그, 오브젝트</block>
+  <block id="2abaa9e35a19ed7ceedd29789a704523" category="cell">용량 한계에 다다른 풀 찾기</block>
+  <block id="95639ee75da87550a5bc967b612d5f7b" category="cell"><block ref="95639ee75da87550a5bc967b612d5f7b" category="inline-link-macro-rx"></block></block>
+  <block id="3a8483873d6e9339ac9c5ddc43843fc0" category="cell">오브젝트 메타데이터, 그룹화, 시계열</block>
+  <block id="8581caa1526f087be0fc34b44deb1b3b" category="cell">Kubernetes 컬렉션 구성 요소 버전 확인</block>
+  <block id="20ddc970df6e0f43fbd7bf40f9b1c8df" category="cell"><block ref="20ddc970df6e0f43fbd7bf40f9b1c8df" category="inline-link-macro-rx"></block></block>
+  <block id="c2b8f77591f1eb90daea1011e0c874a4" category="cell">쿠버네티스 컬렉터</block>
+  <block id="869b60ec7d87b95d57cd897035bd2d2c" category="cell">느린 볼륨 또는 워크로드를 조사하십시오.</block>
+  <block id="c8f0f04e0d795105c32051797968dfcf" category="cell"><block ref="c8f0f04e0d795105c32051797968dfcf" category="inline-link-macro-rx"></block></block>
+  <block id="48fdfcb07db03e9ae7b2e6fd980023b9" category="cell">오브젝트 메트릭, 알림, 로그</block>
+  <block id="423284668ada671240e42dc6bf176469" category="cell">라우팅 및 억제 기능을 안전하게 검토하세요</block>
+  <block id="b4f4a7051901b7becdded97777fbe13a" category="cell"><block ref="b4f4a7051901b7becdded97777fbe13a" category="inline-link-macro-rx"></block></block>
+  <block id="fc36b7a1cf782bef3d7732da2d382ca5" category="cell">규칙, 목표, 유지 관리 기간</block>
+  <block id="9758973458adae3e86e066142d4c01f9" category="section-title">표준 조사 패턴</block>
+  <block id="f3fcd2888d95aaaec35655ed90ae82f1" category="list-text">자원의 범위와 기간을 명확히 하십시오.</block>
+  <block id="53904d83d95aa2b6984f3c47b16b5f69" category="list-text">이용 가능한 유형을 확인하세요.</block>
+  <block id="51165c50e248855af0a2841721b7f53d" category="list-text">동적 필드를 사용하기 전에 메타데이터를 검색하십시오.</block>
+  <block id="2ee3fd8dfd8efb827f6787d0d683e4de" category="list-text">제한된 시간 창을 쿼리합니다.</block>
+  <block id="4e8f6c3abb258cb3c83f1d4694df824b" category="list-text">독립적인 신호들을 상관 분석합니다.</block>
+  <block id="13285792e1387311df347b806a715f43" category="list-text">관찰된 사실과 추론을 구분하십시오.</block>
+  <block id="3e186f3294257815826d548b7854c118" category="list-text">보고서의 한계점과 권장 후속 조치 사항.</block>
+  <block id="6472ce41c26babff27b4c28028093d77" category="section-title">안전</block>
+  <block id="898deaee8a8c7bdb4f0e2b4025559c32" category="list-text">이 레시피들은 읽기 전용 툴을 사용합니다.</block>
+  <block id="09d2f71c6bad34a1e5e687ed56bb663e" category="list-text">시간 범위는 30일 이하로 유지하세요.</block>
+  <block id="7c940f1cd84ea2c782801de994993f2a" category="list-text">자격 증명, 사설 주소, UUID, 원시 웹훅 엔드포인트 및 불필요한 로그 페이로드를 제외합니다.</block>
+  <block id="39aaa9f2fc63f2331e844e3b939658cb" category="list-text">MCP 워크플로 외부에서 영향력이 큰 운영 조치를 확인합니다.</block>
+  <block id="ff85555af8179cc34334b01001630ce6" category="section-title">관련 문서</block>
+  <block id="e802ab55e9a2f1b6d25718c465cac825" category="inline-link-macro">DII MCP 개요</block>
+  <block id="123d559811513229f3b64140f8fa6fae" category="list-text"><block ref="123d559811513229f3b64140f8fa6fae" category="inline-link-macro-rx"></block></block>
+  <block id="3a5585cb726e7b542ce3d7b91aac8bc1" category="list-text"><block ref="3a5585cb726e7b542ce3d7b91aac8bc1" category="inline-link-macro-rx"></block></block>
+  <block id="7b8ecf690b4e932a4bb808b7cdadd106" category="inline-link-macro">툴 참조</block>
+  <block id="14eca6c7a8b62644627593e3da67efb4" category="list-text"><block ref="14eca6c7a8b62644627593e3da67efb4" category="inline-link-macro-rx"></block></block>
+  <block id="c3d0d96dc88bb2d999220c1ec6124dd1" category="list-text"><block ref="c3d0d96dc88bb2d999220c1ec6124dd1" category="inline-link-macro-rx"></block></block>
+  <block id="32bb352de8e97d2bd3797f6cd842196a" category="summary">이 레시피를 사용하여 성능 지표, 경고 및 플랫폼 로그를 상호 연관시켜 볼륨, 데이터 저장소, 가상 머신, Kubernetes 워크로드 또는 기타 DII 오브젝트의 속도 저하 문제를 조사할 수 있습니다.</block>
+  <block id="1924c0a2e1958aea69445cf5d2b711de" category="list-text">영향을 받은 리소스 이름과 대략적인 발생 시간입니다.</block>
+  <block id="6cd40a1d013cfe98d161dfc07ec25891" category="list-text">30일 이하의 기간.</block>
+  <block id="c0b60312ce0a835271e407ab900f3c6b" category="list-text">가능한 경우 비교 기간 또는 알려진 정상 기준선.</block>
+  <block id="b68dffb22801465f628307cb88c10e72" category="list-text">+LogService_getLogTypes+</block>
+  <block id="d5bb621f0988a2b7c9cae18368d3d9d3" category="list-text">+LogService_getLogTypeMetadata+</block>
+  <block id="c8e6373c3d6e5975ce7c632a0e31b55f" category="list-text">+LogService_queryLogEvents+</block>
+  <block id="c05a8e98925a47fde09e9886a5cc3433" category="paragraph">09:00에서 11:00 UTC 사이에 볼륨<block ref="b03663ef9f13cbe835fec939342a434a" prefix=" " category="inline-code"></block>이 느려진 이유를 조사합니다. 정확한 오브젝트 유형과 유효한 메트릭을 파악하고, 해당 기간 동안의 지연 시간, IOPS 및 처리량을 비교하며, 관련 활성 경고 및 플랫폼 로그를 검토하고, 정상적인 기간과 비교합니다. 증거와 가설을 구분하고 필요한 다음 측정 항목을 식별합니다.</block>
+  <block id="ab5f9fab01bfb2981b7d4bb3237e4358" category="list-text">리소스를 정확한 오브젝트 유형 및 ID로 확인합니다.</block>
+  <block id="0e53b9b78a5c9fd169a0aeb06335e94b" category="list-text">해당 오브젝트 유형에 대한 메타데이터를 검색합니다.</block>
+  <block id="6bbb6e0069d7535cfcec40ebff58b064" category="list-text">유효한 지연 시간, 작업량, 처리량, 활용률 및 용량 지표를 식별합니다.</block>
+  <block id="86793b704771c0dc30279b1ed9e6666f" category="list-text">현재 오브젝트 속성을 조회하여 배치 및 관계를 파악합니다.</block>
+  <block id="6e5a0cdd7535fe1fda227ed9d8146b04" category="list-text">다음 기간 동안 시계열 검색:</block>
+  <block id="c22a746c5b8051666f855532b1c47136" category="list-text">사건 발생 기간</block>
+  <block id="eaed52c34466ca16e6d3df426d560590" category="list-text">비슷한 정상 기간</block>
+  <block id="ad024ef9211ff2451628aa6d11f9426e" category="list-text">측정항목 전반에 걸쳐 타임스탬프와 집계 함수를 일치시키십시오.</block>
+  <block id="05b20316af5c8f7530001982280bd4e6" category="list-text">시스템, 호스트, 노드 또는 스토리지 풀이 포함된 리소스와 관련된 경고를 검색합니다.</block>
+  <block id="35cbdd4d6943b19f0849b1dd43377816" category="list-text">관련 로그 스트림을 선택하고, 메타데이터를 가져오고, 메트릭 변경 시점을 중심으로 좁은 간격을 검색합니다.</block>
+  <block id="aeef23cabe41f59cc1e4689e355cfb3e" category="list-text">타당한 가설을 검증하십시오:</block>
+  <block id="1422884ce8eae8df82a39bd0831e7876" category="list-text">수요 급증</block>
+  <block id="76e5d910c38df548caee8123eb064c6a" category="list-text">리소스 포화</block>
+  <block id="6c46f1edd47df9e89b731dfa5f3514fb" category="list-text">스토리지 또는 패브릭 오류</block>
+  <block id="9154a16f42ccc3b60c82bb60ea91e541" category="list-text">용량 압력</block>
+  <block id="5307ad844ffeb1438524ecc441523db2" category="list-text">호스트 또는 VM 경합</block>
+  <block id="0110af9d90a0be20606664b2431094e3" category="list-text">수집 격차</block>
+  <block id="300e0f5223cc6b3aa2aef7f95dd49383" category="list-text">가장 타당한 설명과 해결되지 않은 대안을 보고하십시오.</block>
+  <block id="add3675abba67ecfb7a6382bde8fbcb6" category="section-title">증거 기준</block>
+  <block id="b6848c410f64bee0cb94f879f5fe44de" category="paragraph">라벨 검색 결과:</block>
+  <block id="941389ae23f5a66b2a790ae6040b1037" category="list-text">*관찰 결과:* 툴에서 직접 반환됩니다.</block>
+  <block id="22d949509d9337b0b50e394cc16985ea" category="list-text">*상관관계 있음:* 동일한 시간 간격 내에 변화한 독립적인 신호들.</block>
+  <block id="c099a536a0dd007b4154de963b86150a" category="list-text">*추론됨:* 아직 증명되지 않은 그럴듯한 설명.</block>
+  <block id="24b3e3fc282c9b508cea9d92f612f2ba" category="list-text">*알 수 없음:* 필요한 증거를 확보할 수 없습니다.</block>
+  <block id="b82feacca4439782a8dc8c45b35fb1bc" category="paragraph">상관관계가 곧 인과관계는 아닙니다. 동시 경보는 메커니즘이 규명되지 않는 한 확증이 아닌 보조적인 증거로 간주해야 합니다.</block>
+  <block id="8fcd4db512c90de436046f7b140b8b72" category="section-title">측정 기준 안내</block>
+  <block id="6ebb032cc1f1eeaf7b653b18856dc6d2" category="list-text">전반적인 동작에는 <block ref="fcefd647d6a866603c627b11347c707a" prefix=" " category="inline-code"></block>을(를) 사용하되, 짧은 스파이크가 중요할 때는 <block ref="26a4b44a837bf97b972628509912b4a5" prefix=" " category="inline-code"></block>을(를) 검사하십시오.</block>
+  <block id="62269835b3cc782a90be299005d0c4e0" category="list-text">가산 메트릭에만 <block ref="6970bdc2201030b9c03fbdcf3973858a" prefix=" " category="inline-code"></block>을(를) 사용하십시오.</block>
+  <block id="f4d6e4240cfd86d7996a1c56fc9a68d0" category="list-text">메타데이터가 지원하는 경우 카운터 또는 증가에 대해 <block ref="421cfd143e450c3f5814a0495409e073" prefix=" " category="inline-code"></block> 또는 +CHANGE_RATIO+를 사용하십시오.</block>
+  <block id="4887250d9f0036c43f07b7e37427ad70" category="list-text">버킷 경계 또는 단위가 다른 시리즈를 비교하지 마십시오.</block>
+  <block id="8e466e49d91d217bd3b30db3699ae500" category="list-text">필터는 시간 구간별 집계 전에 적용됩니다.</block>
+  <block id="25c1b106fb95f7eab4ccd99871f824f8" category="list-text">사고 범위 및 일정</block>
+  <block id="41dc3155d274ef39975d9239d3817bf9" category="list-text">메트릭 증거</block>
+  <block id="c5bbf1553f0a79d68be3589d8071e657" category="list-text">경고 및 로그 증거</block>
+  <block id="fef64149a9282bc72532000d8bc88528" category="list-text">정상 기간 비교</block>
+  <block id="3c952fb812960dc8aee7c15412ab7e9e" category="list-text">가장 가능성 높은 설명</block>
+  <block id="06f6fa8f26d3b78087a91a5308503545" category="list-text">대안 가설</block>
+  <block id="d96c17aaf1eb12d27d6d2322fc565430" category="list-text">확신과 증거 부족</block>
+  <block id="5a8f144245ab77c2d314b61351949e72" category="list-text">다음 확인 권장 사항</block>
+  <block id="32a5647ed22be5f151282c5abcd8bfdd" category="list-text">시계열 데이터의 기간은 30일을 초과할 수 없습니다.</block>
+  <block id="0711fbc642b9320392fc217f3bb9d4aa" category="list-text">성능 툴은 제한된 수의 시계열을 반환합니다. 제한을 늘리기 전에 필터 범위를 좁히십시오.</block>
+  <block id="045833e5168fb55f4484d03dab30f2c5" category="list-text">진단에 도움이 되지 않는 민감한 원시 로그 필드는 제외합니다.</block>
+  <block id="a42031851d7dd65683250de541d156a7" category="list-text">정상적인 운영 통제를 통해 검증하지 않고는 파괴적인 개선 방안을 제안하지 마십시오.</block>
+  <block id="54eadf81acc64ae0fe348886daa5bb8c" category="paragraph">장애 발생 시 최대 및 평균 지연 시간을 이전의 정상 작동일 같은 시간대와 비교합니다.</block>
+  <block id="2d311cd7fe4cda7a18e332511eccd7f0" category="paragraph">관련 워크로드를 호스트 또는 스토리지 풀별로 그룹화하고 속도 저하가 격리된 것인지 아니면 공유된 것인지 확인합니다.</block>
+  <block id="b12e4e5d0f79264ca241c03e37ee934c" category="paragraph">최초 지연 시간 증가 후 15분 이내의 플랫폼 이벤트를 표시합니다.</block>
+  <block id="1593f55ee6e73845b15b773a1eeefdfe" category="summary">이 레시피를 사용하여 활성 경고, 모니터 의도, 수정 지침, 관련 플랫폼 로그 및 오브젝트 컨텍스트를 결합하여 스토리지 문제의 우선순위를 지정하십시오.</block>
+  <block id="95b46f5a68f52fd1ae30e4e69159c76e" category="list-text">스토리지 시스템, 클러스터, 풀 또는 볼륨 범위는 선택 사항입니다.</block>
+  <block id="5268b7390248983f214c732b9bf44d12" category="list-text">경고, 모니터링, 로그 및 오브젝트 툴에 대한 액세스.</block>
+  <block id="d8cad398c38b1d551f46a9573fb7131e" category="list-text">+AlertsService_getAlertByName+</block>
+  <block id="72a6b260d561d2cf7fcc6390f24c7a3c" category="list-text">+MonitorsService_getMonitorById+</block>
+  <block id="eb19b4fb3be3bb3c0c6a3112d54f76cd" category="paragraph">지난 24시간 동안의 스토리지 상태를 평가합니다. 스토리지 시스템, 노드, 풀 및 볼륨에 대한 중요 및 경고 활성 알림을 식별합니다. 가장 큰 영향을 미치는 알림에 대해서는 모니터링 상태와 해결 지침을 설명한 다음, 알림 발생 시점을 기준으로 관련 EMS 또는 스토리지 플랫폼 로그를 검토합니다. 확정된 증거와 추정 원인을 구분합니다.</block>
+  <block id="353bdfc8c879986963234b23ee1e9826" category="list-text">알림 메타데이터를 가져옵니다.</block>
+  <block id="571195d33cbffaf45f7c66ed3bd2fb05" category="list-text">심각도, 상태, 모니터, 관련 오브젝트 및 트리거 시간에 대한 유효한 필드를 식별합니다.</block>
+  <block id="5ec971c056a6f5d436cdf381c87c38ab" category="list-text">요청된 기간 내에 활성화된 스토리지 관련 알림을 조회합니다.</block>
+  <block id="f4df2ba3dcdf16e91374317eb5e4b175" category="list-text">다음을 사용하여 알림 순위 지정:</block>
+  <block id="351d191b6a8d16ee63baef6bb87ece9c" category="list-text">영향을 받는 오브젝트 유형</block>
+  <block id="f4c8698b1c77881c8c06a24e875e0503" category="list-text">영향을 받은 오브젝트 수</block>
+  <block id="a18f7019342f853bc1c590efd6f32033" category="list-text">최근성과 재발성</block>
+  <block id="8e6afcd5b7023f512bcd89ebf3083ed2" category="list-text">가용성, 데이터 보호, 성능 또는 용량 영향</block>
+  <block id="e47d1dcc86fefa16ce0da5c6223c21ee" category="list-text">최우선 순위 알림에 대한 자세한 정보를 확인하십시오.</block>
+  <block id="b33077dcd3d9ceca67636f745eee687c" category="list-text">모니터 정의 및 시정 지침을 검색하십시오.</block>
+  <block id="0375391afe2e70569e8a229a6bdfbe0d" category="list-text">로그 유형을 나열하고 ONTAP EMS 또는 StorageGRID 이벤트 등 각 경고와 관련된 플랫폼 네이티브 스트림을 선택합니다.</block>
+  <block id="d67cae6790c5285af873b1f7ce71af38" category="list-text">로그 메타데이터를 검색한 다음, 경고를 중심으로 좁은 간격을 조회합니다.</block>
+  <block id="af133cb5077da848b4a847568c33d383" category="list-text">현재 상태를 확인하는 데 필요한 오브젝트 속성 또는 메트릭을 검색합니다.</block>
+  <block id="ad5c5427dcf8c99964b57079c1a36993" category="list-text">증거, 예상 원인, 영향 및 다음 점검이 포함된 상태 요약을 생성하십시오.</block>
+  <block id="fd78129ae6672a17933b0a4bf00e731e" category="paragraph">하나의 신호만으로 완전한 건강 상태를 판단하지 마십시오:</block>
+  <block id="daf7fd7737982ae30ff454d3aefe0576" category="list-text">*경고*는 감지된 상황을 나타냅니다.</block>
+  <block id="85ddae3bcfc9bfc70d4579b960fd89eb" category="list-text">*모니터*는 탐지 규칙과 의도된 시정 조치를 설명합니다.</block>
+  <block id="d3cc036da5757a9d97519e5ae8692941" category="list-text">*로그*는 플랫폼 고유의 이벤트 컨텍스트를 제공합니다.</block>
+  <block id="fb3cbe1731324de5e6fe48e80710f4f1" category="list-text">*오브젝트 및 측정항목*은 현재 재고 또는 측정된 상태를 보여줍니다.</block>
+  <block id="8d2e06e86c536940b30dcf6ba78cada5" category="paragraph">활성 알림은 기본 조건이 변경된 후에도 계속 열려 있을 수 있습니다. 가능한 경우 최신 오브젝트 및 메트릭 데이터를 사용하십시오.</block>
+  <block id="bb524eac8bbcde2b2349fb5e69da8463" category="paragraph">각 우선순위 문제에 대해:</block>
+  <block id="e93c66a46da3f7529ec90bec40603e85" category="list-text">영향을 받는 리소스</block>
+  <block id="7848856790fc9e79a5eec69712cd8139" category="list-text">심각도 및 경고 상태</block>
+  <block id="1d2915d3297fe231774aa99c31393c79" category="list-text">트리거 시간</block>
+  <block id="859a1b8477ce9b4e282ee45ad7028edf" category="list-text">모니터링 및 조건</block>
+  <block id="c2da6a6c47969e225a88dfd502d746c5" category="list-text">로그 또는 지표를 통해 입증</block>
+  <block id="981c11f267222f852961d40066754d00" category="list-text">확인된 증거</block>
+  <block id="9023cb2bfd4d7ce5aeaad9bd6b040544" category="list-text">추론으로 분류된 가능성 있는 원인</block>
+  <block id="1ae7df2f807cad7672c8f4ced95a8500" category="list-text">교정 지침</block>
+  <block id="8e48a5aa780489955a48c0378f68ad35" category="list-text">알림 및 로그 기간을 30일 미만으로 유지하십시오.</block>
+  <block id="72b9615806027d02fa488ec958e3ed22" category="list-text">관련 없는 이벤트를 줄이려면 로그 창을 좁게 설정하십시오.</block>
+  <block id="73ee4892cd894fccffe7e0ed8fc2490f" category="list-text">불필요한 UUID, 주소, 주석 및 원시 페이로드를 생략하십시오.</block>
+  <block id="f5c44996a11e0310da26e5de672ff8e2" category="list-text">수정 지침은 정보 제공용입니다. 관련 제품 문서 및 변경 절차에 따라 명령의 유효성을 검증하십시오.</block>
+  <block id="69878fdb9cae52189372f3506a00690a" category="paragraph">경고<block ref="fea18275d08c39713b6dcad48bb36fa6" prefix=" " category="inline-code"></block>의 경우, 트리거 발생 전후 30분 이내의 모니터 안내 및 관련 EMS 이벤트를 표시합니다.</block>
+  <block id="20e57e1705da4d2ebf4e686cd6afa318" category="paragraph">영향을 받는 시스템 및 영향 영역별로 활성 스토리지 경고를 그룹화합니다. 어떤 시스템에 먼저 주의를 기울여야 하며, 그 이유는 무엇입니까?</block>
+  <block id="daa51c0bdcf364c577f92e20277ce8f4" category="paragraph">현재 오브젝트 메트릭에서 최우선 순위 경고가 여전히 지원되는지 확인하십시오.</block>
+  <block id="f549e843bf2e322aca0c126ad37ed428" category="summary">DII MCP 서버는 AI 클라이언트에게 테넌트 인프라 컨텍스트에 대한 접근 권한을 제공합니다. DII 사용자 인터페이스 및 API와 마찬가지로 해당 컨텍스트도 신중하게 다루어야 합니다.</block>
+  <block id="46c0eeda223536b258e18ecf1aa37578" category="section-title">최소 권한 접근</block>
+  <block id="0d89869234b6d6ca83025e9f1c3befad" category="list-text">MCP에 연결하는 사람, 애플리케이션 또는 자동화에 전용 ID를 사용하십시오.</block>
+  <block id="abfea9a720216d47384d64dd9b78a4c4" category="list-text">의도된 워크플로에 필요한 DII 읽기 권한만 부여하십시오.</block>
+  <block id="2992c12646cc02ded9084db327f468e1" category="list-text">사용자의 역할이나 운영 책임이 변경될 경우 접근 권한을 검토하십시오.</block>
+  <block id="f81f4c9375fd4a7d7acd4a804fb5058a" category="list-text">무인 자동화를 위해 별도의 서비스 ID를 사용하십시오.</block>
+  <block id="2b2260c1ef0fbbd8ee53c717da5114f2" category="paragraph">여기에 설명된 현재 DII 제품 툴셋은 읽기 전용입니다. 읽기 전용 액세스로도 민감한 이름, 토폴로지, 구성, 원격 측정 및 운영 상태가 노출될 수 있습니다.</block>
+  <block id="c75f7811d70d17dbcd88e9d03752cbed" category="section-title">인증</block>
+  <block id="79c4c75b034726dc4a89f3add5334ca7" category="paragraph">배포 환경에서 지원하는 대화형 OAuth 또는 다른 단기 인증 흐름을 사용하는 것이 좋습니다. 비대화형 자격 증명이 필요한 경우:</block>
+  <block id="16056f55dc8e6c336a31a6c81a52aaa4" category="list-text">승인된 시크릿 매니저에 저장하십시오.</block>
+  <block id="c4a18b068272010765633a46ef04fd46" category="list-text">조직 정책에 따라 범위를 지정하고 교체하십시오.</block>
+  <block id="3c6a3d50808bb5a59a39e3399d2e934b" category="list-text">프로젝트 파일, 셸 기록, 프롬프트, 스크린샷 또는 문서에 절대 저장하지 마십시오.</block>
+  <block id="b0b4010b0873e646491e3898c0269083" category="section-title">민감한 필드</block>
+  <block id="99235b1349ca4949e8c8530d2885d656" category="paragraph">잠재적으로 민감한 DII 데이터는 다음과 같습니다:</block>
+  <block id="7d68f1f2e731953ebcedad14346ed144" category="list-text">IP 주소, 호스트 이름, 테넌트별 리소스 이름 및 UUID</block>
+  <block id="d3f5d079550d0064e9d750b5947775de" category="list-text">인프라 토폴로지 및 구성</block>
+  <block id="4e9d6caf464f9b21f2640001c5d46197" category="list-text">경고 설명 및 로그 페이로드</block>
+  <block id="f5d18e5db90e3f6c1d1c2508b856767c" category="list-text">사용자, 소유자, 레이블 및 주석 값</block>
+  <block id="1e4729b9cc70f625cb6e478003ed2ed2" category="list-text">웹훅 엔드포인트 주소</block>
+  <block id="76af65106ac783c3f88db84201d0059d" category="paragraph">웹훅 URL에는 일반적으로 라우팅 키, 서명, 토큰 또는 고유 경로가 포함됩니다. 에이전트에게 전체 웹훅 주소를 반환하도록 요청하지 마십시오. 다음만 요청하십시오:</block>
+  <block id="609533249224f911d86bed676877d9cd" category="list-text">타겟 이름</block>
+  <block id="f36d2da123874fa056921d120133b5bc" category="list-text">통합 또는 엔진 유형</block>
+  <block id="2d14e6849bf98b2e0701bac988bd3195" category="list-text">활성화됨 또는 배송 상태</block>
+  <block id="3350fdbca3c7672723ecda6958e38ea3" category="paragraph">MCP 서버를 통합하는 애플리케이션은 툴 결과를 표시, 저장 또는 전달하기 전에 웹훅 주소를 삭제해야 합니다.</block>
+  <block id="cd9f898b40e8af549956903085d9bbad" category="section-title">프롬프트 및 출력 위생</block>
+  <block id="e3808a6bafea8b0d81d9460bb9fc5a6a" category="list-text">재사용 가능한 프롬프트와 예시에서 가상의 식별자를 사용하세요.</block>
+  <block id="a9db47c8dba15cde137061b27022d994" category="list-text">상담원에게 필요한 경우가 아니면 IP 주소, UUID, 엔드포인트 주소 및 원시 로그 페이로드를 제외하도록 요청하십시오.</block>
+  <block id="0a7396d90b01cae05595c51301bcfc58" category="list-text">방대한 원문을 그대로 복사하는 대신, 조사 결과를 요약하세요.</block>
+  <block id="78f8a1e265095b06b376efafb4b8a52e" category="list-text">티켓, 채팅 채널 또는 외부 문서에 게시하기 전에 생성된 콘텐츠를 검토하십시오.</block>
+  <block id="e9e991b52f0256c487d88e2a071074e7" category="list-text">선택한 AI 클라이언트에 대한 조직의 데이터 처리 요구 사항을 준수하십시오.</block>
+  <block id="1384bba3f2eb78dcdcf23363d9ba0b3f" category="section-title">테넌트 격리</block>
+  <block id="1029e60210a0272da70fd35b0f6ecff9" category="paragraph">MCP 결과는 인증된 DII 컨텍스트에 따라 테넌트 범위로 제한됩니다. 워크플로 및 권한 부여에서 명시적으로 허용하지 않는 한 여러 테넌트의 결과를 결합하지 마십시오.</block>
+  <block id="bfd6f324ce3ccb8d689b58bd153bd096" category="section-title">감사 및 보존</block>
+  <block id="84ad3a2f4ed102c0a158b6696c2c47ca" category="paragraph">감사 이벤트의 적용 범위와 보존 기간은 DII 배포 방식과 연결된 AI 클라이언트에 따라 달라집니다. 관리자는 실제 운영 환경에 사용하기 전에 다음 사항을 확인해야 합니다:</block>
+  <block id="ab5ac511d0a65c4d42fcf5f450037057" category="list-text">MCP 인증 및 툴 호출이 기록되는지 여부</block>
+  <block id="ca13ae388e1c2fe2e99be5e68bb73de4" category="list-text">어떤 요청 인자와 결과 메타데이터가 유지됩니까</block>
+  <block id="fae9d6e695be95d30b797637119168fc" category="list-text">누가 그 기록들을 검토할 수 있습니까</block>
+  <block id="c6bc158997784727e9eb5c28640085a0" category="list-text">AI 클라이언트가 프롬프트와 툴 결과를 얼마나 오랫동안 보관하는지</block>
+  <block id="88878a392611009c5aa979f896716d14" category="paragraph">배포 환경에 대해 문서화되어 있지 않은 한, MCP 관련 감사 이벤트 또는 보존 보장이 존재한다고 가정하지 마십시오.</block>
+  <block id="7fb1ca7b0dfce3a9a7eaedc329cecc27" category="section-title">사고 대응</block>
+  <block id="8934435d6c493fb1448258876a032fe1" category="paragraph">자격 증명 또는 자격 증명이 포함된 엔드포인트가 MCP 결과, 프롬프트, 기록 또는 게시된 문서에 나타나는 경우:</block>
+  <block id="bb72323b613332952d12e81f7657f05e" category="list-text">해당 콘텐츠 공유를 중단하세요.</block>
+  <block id="98f60a627f83440761b5533e3b0864bb" category="list-text">자격 증명 또는 통합 암호를 취소하거나 변경하십시오.</block>
+  <block id="119f3a75896226f51c4ed76463c9c42f" category="list-text">가능하다면 저장된 아티팩트에서 해당 값을 제거하십시오.</block>
+  <block id="183f2842be3c8a7ada082511e4925efb" category="list-text">접근 권한 및 감사 기록을 검토하십시오.</block>
+  <block id="6089901b29c0050bcc73ef9e50459bb5" category="list-text">조직의 보안 절차에 따라 노출 사실을 보고하십시오.</block>
+  <block id="b0abb521018fe4eb467a66367286751f" category="list-text"><block ref="b0abb521018fe4eb467a66367286751f" category="inline-link-macro-rx"></block></block>
+  <block id="d2d60333ee8663f577ccc446f01efd03" category="inline-link-macro">알림 태세 레시피</block>
+  <block id="15e4d787c6f526e2d488a4b6a92f58c5" category="list-text"><block ref="15e4d787c6f526e2d488a4b6a92f58c5" category="inline-link-macro-rx"></block></block>
+  <block id="5498ec94416004e6b68822d8a755ce71" category="list-text"><block ref="5498ec94416004e6b68822d8a755ce71" category="inline-link-macro-rx"></block></block>
+  <block id="4f1809ce5bf0cb69274ecf1ae0174d85" category="summary">이 가이드를 사용하여 MCP 호환 AI 클라이언트를 DII에 연결하십시오.</block>
+  <block id="36ee27bc3fc7c617977b35534609c979" category="paragraph">필요한 것:</block>
+  <block id="65eb9bb79bd1552bf98cb5b56231a272" category="list-text">DII 테넌트에 대한 액세스.</block>
+  <block id="f772127f3db8f318292bc2d80e4975a1" category="list-text">쿼리하려는 리소스를 읽을 수 있도록 승인된 DII 사용자 또는 서비스 ID입니다.</block>
+  <block id="d4553a133328162900cb1fd55cc320e0" category="list-text">DII 환경에 제공되는 원격 MCP 엔드포인트입니다.</block>
+  <block id="7835d762213fc7667200932b4f7426b8" category="list-text">원격 HTTP 서버와 조직의 인증 방법을 지원하는 MCP 클라이언트.</block>
+  <block id="3098d3462bffd986fba6d2c17b456e00" category="paragraph">예제에서는 +&lt;DII_HOST_URL&gt;+를 자리 표시자로 사용합니다. 액세스 토큰을 소스 제어 파일에 붙여넣지 마십시오. 예를 들어 Cursor에서 사용하는 URL은 다음과 같습니다:</block>
+  <block id="90c095cbafa658cd89c07a04d8f2d025" category="paragraph">사용 중인 연결에 맞는 구체적인 코드 조각을 참조하세요.</block>
+  <block id="27927a53ea0457a334ca543b6dbbc8b2" category="section-title">MCP 클라이언트를 구성합니다</block>
+  <block id="db082e61a5e1ddfeebd2f12354c05396" category="list-text">관리자 &gt; API 액세스로 이동하여 "MCP 구성" 탭을 선택하십시오.</block>
+  <block id="97c9b276a57129305d764ace4b001e56" category="list-text">구성할 클라이언트를 선택하십시오.</block>
+  <block id="c9782cf8e7b647a90cf0092c13246574" category="list-text">의미 있는 이름과 만료일을 입력하고 _Generate Token_을 선택합니다.</block>
+  <block id="4e2ac3b5e3a43c9cd62e4e73d61d98eb" category="list-text">*코드 조각 복사* 이 단계에서만 복사할 수 있습니다. 토큰은 코드 조각에 숨겨져 있지만 클라이언트 앱에 올바르게 붙여넣어집니다.</block>
+  <block id="6668800913a6abce65f5403fa1709e56" category="list-text">클라이언트 설정에서 "url" 필드에 올바른 DII 호스트 URL을 입력하십시오.</block>
+  <block id="25812ed1432cfe46632186b5957ebe26" category="list-text">구성을 저장합니다.</block>
+  <block id="5458558ee03b38020cb38eb29ffaf74b" category="admonition">셸 기록, 프롬프트, 스크린샷, 프로젝트 파일 또는 소스 제어에 베어러 토큰을 두지 마십시오.</block>
+  <block id="77a745fef2e2a8107bde2d67a25c2132" category="section-title">접근 권한 확인</block>
+  <block id="fa2d5a335a488d72c93c26ac6dd722cb" category="paragraph">클라이언트가 서버에 연결되었다고 보고하면 다음과 같은 요청을 보낼 수 있습니다.</block>
+  <block id="909f299cfcff030d6663a6a800f4a43f" category="paragraph">내가 사용할 수 있는 DII 오브젝트 유형을 나열해 주세요. 내가 사용할 수 있는 DII 로그 유형을 나열해 주세요. IP 주소나 UUID를 표시하지 않고 내 수집 장치를 나열해 주세요.</block>
+  <block id="564ceeaf74b5fb2d33010f8f6017393c" category="paragraph">검색에 성공하면 연결이 확인되지만, 모든 하위 리소스에 대한 액세스가 보장되는 것은 아닙니다. 테넌트 기능, 수집기 및 권한에 따라 반환되는 데이터가 결정됩니다.</block>
+  <block id="d0933f1f9dafed905df9382828393e72" category="section-title">자격증명 보안</block>
+  <block id="68e6711bb4dbd9236bba771e62c2cfd7" category="list-text">가능하다면 대화형 OAuth 또는 다른 단기 자격 증명 흐름을 사용하는 것이 좋습니다.</block>
+  <block id="fdb53dccd211ca3cf85903a17f3017c7" category="list-text">무인 클라이언트에는 전용 서비스 ID를 사용하십시오.</block>
+  <block id="01e72edd6581541217551e48b59c6676" category="list-text">프롬프트, 스크린샷, 예제, 문제 설명 또는 소스 코드 관리 시스템에 토큰을 넣지 마십시오.</block>
+  <block id="7ab95051d7c6e31cd3a342ee78a3509b" category="list-text">에이전트에게 전체 웹훅 주소를 표시하도록 요청하지 마십시오.</block>
+  <block id="39e500834d094c3efb03a29a0938b114" category="paragraph">추가 지침은 <block ref="c3d0d96dc88bb2d999220c1ec6124dd1" category="inline-link-macro-rx"></block>을(를) 참조하십시오.</block>
+  <block id="158acc2febd8c10f0c89f298170caa6c" category="inline-link-macro">DII 데이터 모델 이해</block>
+  <block id="f4bd74113f0d1e6481ec67d6c82e7946" category="list-text"><block ref="f4bd74113f0d1e6481ec67d6c82e7946" category="inline-link-macro-rx"></block></block>
+  <block id="cfc65dac4f41aa76e220e96c4adb1ab3" category="inline-link-macro">툴 참조를 살펴보십시오</block>
+  <block id="9a445f2f1ba8c9e5d07d883d04cdbcce" category="list-text"><block ref="9a445f2f1ba8c9e5d07d883d04cdbcce" category="inline-link-macro-rx"></block></block>
+  <block id="fb4abb0a2247d7ff1d689eaf17cac853" category="inline-link-macro">환경 인벤토리 레시피를 실행합니다</block>
+  <block id="6c1200ed1837128a2c15b498fb4983d9" category="list-text"><block ref="6c1200ed1837128a2c15b498fb4983d9" category="inline-link-macro-rx"></block></block>
+  <block id="53a0dba0699d94685889a4587ce0ce4a" category="inline-link-macro">연결 및 쿼리 오류 해결</block>
+  <block id="e947be8d7ffd896cb8af98ddb433fd5b" category="list-text"><block ref="e947be8d7ffd896cb8af98ddb433fd5b" category="inline-link-macro-rx"></block></block>
+  <block id="47b53ae2be6a2659db00cf1e38671a6d" category="summary">DII MCP 서버는 현재 9개 도메인에 걸쳐 26개의 읽기 전용 제품 툴을 제공합니다. 연결된 클라이언트가 인증해야 할 때 별도의<block ref="39ecf7d31ec6be886d7707f9c9bf5923" prefix=" " category="inline-code"></block> 도우미가 나타날 수 있습니다.</block>
+  <block id="299cb2faf525e7f06443893b539fad20" category="doc">DII MCP 툴 참조</block>
+  <block id="5966c913596c008e37e32c6327726464" category="paragraph">DII MCP 서버는 현재 9개 도메인에 걸쳐 26개의 읽기 전용 제품 툴을 제공합니다. 연결된 클라이언트가 인증해야 할 때 별도의 +mcp_auth+ 헬퍼가 나타날 수 있습니다.</block>
+  <block id="2ac097a4311270553371c107a4bf5779" category="paragraph">툴 가용성과 결과는 인증된 테넌트, 활성화된 DII 기능, 구성된 수집기 및 사용자 권한에 따라 달라집니다.</block>
+  <block id="0742bafe6c0f34000c58d9432dc59b1e" category="section-title">쿼리 규칙</block>
+  <block id="bc2b07536952692ce9b589d7379d0e5c" category="list-text">동적 필드를 쿼리하기 전에 유형과 메타데이터를 확인하십시오.</block>
+  <block id="217a130c1ced658b456e98e2fc11995e" category="list-text">메타데이터에서 반환된 대소문자를 구분하는 정확한 속성 및 메트릭 이름을 사용하십시오.</block>
+  <block id="d764b5de11d12da532a223104136397f" category="list-text">필요한 경우 ISO-8601 타임스탬프와 IANA 시간대 이름을 사용하십시오.</block>
+  <block id="eac701ba0c2931b58b52ee283194af56" category="list-text">조회 기간은 30일 이하로 유지하세요.</block>
+  <block id="6107f7d5836263df9803a330bfbeae6c" category="list-text">오브젝트 및 알림 페이지네이션에 <block ref="aa9f73eea60a006820d0f8768bc8a3fc" prefix=" " category="inline-code"></block> 및 <block ref="7a86c157ee9713c34fbd7a1ee40f0c5a" prefix=" " category="inline-code"></block>를 사용하십시오.</block>
+  <block id="6c35263a7bd13c5db530d62506eeecdf" category="list-text">반환된 커서를 사용하여 로그 이벤트 페이지를 매기십시오.</block>
+  <block id="0eedaad2cb458e80e10bcdfc8a9d3ccd" category="list-text">전체 웹훅 엔드포인트 주소를 표시하지 마십시오.</block>
+  <block id="6ce9e21d859805f08af092d395b869f7" category="section-title">획득 단위 목록</block>
+  <block id="994494e9e5165ca067ac21d604bc05a3" category="paragraph">연결 상태, 보고된 데이터의 최신성, 운영 체제, 버전, IP 주소 및 할당된 데이터 소스 개수와 함께 모든 데이터 수집 장치를 반환합니다.</block>
+  <block id="f9a671f1e8130723e6f12e6ce7da466f" category="paragraph">수집 장치 목록을 표시합니다. IP 주소나 UUID를 표시하지 않고 연결된 장치, 연결 실패 장치 및 보고되지 않은 장치를 요약하여 보여줍니다.</block>
+  <block id="630f7823aa395a334fbe74a6f34d3001" category="section-title">Acquisition Unit 가져오기</block>
+  <block id="65cc2dbb7689d220cf62264b097e2566" category="paragraph">하나의 획득 장치에 대한 전체 세부 정보를 검색합니다. 사용자가 이름을 제공하면 먼저 획득 장치 목록을 표시하여 UUID를 확인합니다.</block>
+  <block id="4965a3363d861a8494bba608cbc48865" category="paragraph">필수 입력 항목:<block ref="ef7c876f00f3acddd00fa671f52d0b1f" prefix=" " category="inline-code"></block></block>
+  <block id="762d92c1d4d35cda03206cb649a3ac96" category="section-title">알림 메타데이터 가져오기</block>
+  <block id="37a64a7798a50e66ff71ef87bbdade2e" category="paragraph">유효한 알림 필드 이름과 데이터 유형을 반환합니다. 알림을 조회하기 전에 이 함수를 호출하십시오.</block>
+  <block id="cea03a9ad95ce8bf9d80fa66008282b0" category="section-title">쿼리 알림</block>
+  <block id="325ad6b8c9b23b9fd08a33d64ec42256" category="paragraph">선택한 속성, 필터, 정렬, 시간 범위 및 오프셋 페이지네이션을 사용하여 활성 또는 비활성 알림을 조회합니다.</block>
+  <block id="7ae428f64de58d13bc99bbac22bb71e6" category="paragraph">필수 입력값:</block>
+  <block id="a28abcf329411971cd72532cd0b6e398" category="list-text"><block ref="c76a5e84e4bdee527e274ea30c680d79" prefix="" category="inline-code"></block></block>
+  <block id="32f1bb8669108c1a8bb3598a196d876b" category="list-text"><block ref="c8a6dd9da0fcee4306d96d2862a56d9d" prefix="" category="inline-code"></block></block>
+  <block id="b6d8058581b58de0b39be36cc91e3893" category="list-text"><block ref="a4bdd86ad6ce1ef74538de5a02bcafce" prefix="" category="inline-code"></block></block>
+  <block id="241085b8c5281cdef5445d733f1832fa" category="list-text"><block ref="9f8d22daa83e2d0780e97116054ab5dc" prefix="" category="inline-code"></block></block>
+  <block id="794a2b1f842007d85813d169d39c6ea8" category="list-text"><block ref="b2c6cc48f97ccd71b16d31d88fc177a6" prefix="" category="inline-code"></block></block>
+  <block id="bff3155fd6a2acb798bbb06ea6e21a99" category="paragraph">선택적 입력값에는 <block ref="b2c97ae425dd751b0e48a3acae79cf4a" prefix=" " category="inline-code"></block>, <block ref="2d151e4f9ba01068bebf0f8e5068723a" prefix=" " category="inline-code"></block>, <block ref="50025d4296811c9f52fde7683774c16f" prefix=" " category="inline-code"></block>, <block ref="aa9f73eea60a006820d0f8768bc8a3fc" prefix=" " category="inline-code"></block> 및 <block ref="7a86c157ee9713c34fbd7a1ee40f0c5a" prefix=" " category="inline-code"></block>가 포함됩니다. <block ref="aa9f73eea60a006820d0f8768bc8a3fc" prefix=" " category="inline-code"></block>는 1-500이고, <block ref="7a86c157ee9713c34fbd7a1ee40f0c5a" prefix=" " category="inline-code"></block>은 0-1000입니다. 시간 범위는 30일 미만으로 유지하십시오.</block>
+  <block id="4d97c67f7559517eefc9f2c83f1bbb24" category="paragraph">지난 7일간 발생한 중요 활성 스토리지 경고를 검색합니다. 경고 ID, 모니터 이름, 심각도, 상태 및 관련 스토리지 이름을 반환합니다.</block>
+  <block id="52319f3ec04be9214cb24e36f72f17a0" category="section-title">이름으로 알림 가져오기</block>
+  <block id="b61a95d45128a114c0d9f7da9a08565e" category="paragraph"><block ref="fea18275d08c39713b6dcad48bb36fa6" prefix=" " category="inline-code"></block> 형식의 알림 ID를 사용하여 하나의 알림을 검색합니다.</block>
+  <block id="f419ab569a8201ee96aabc99f5b9da28" category="paragraph">필수 입력 항목:<block ref="b068931cc450442b63f5b3d276ea4297" prefix=" " category="inline-code"></block></block>
+  <block id="6a4ed6562e0de5eb6c3ca426f308d56c" category="section-title">UUID로 알림 가져오기</block>
+  <block id="98745c0827fc4db11ab7c99c6f04ad32" category="paragraph">+AlertsService_getAlertByUUID+</block>
+  <block id="d2091f36ebc49eda33bdd666d786c036" category="paragraph">UUID를 사용하여 하나의 알림을 검색합니다.</block>
+  <block id="e9f4bbab6c552d0e2bea33effd816977" category="section-title">데이터 수집기</block>
+  <block id="0bed1046b06dfa30779e62a6324e158a" category="section-title">데이터 소스 나열</block>
+  <block id="517c41285c12a855b63ef17cac437e89" category="paragraph">구성된 수집기의 이름, 상태, 공급업체, 모델, 수집 장치, 버전 및 마지막 성공 수집을 나열합니다. 선택적으로 AU UUID로 필터링할 수 있습니다.</block>
+  <block id="c888ec43b912d5e18b84ff583683d5ef" category="paragraph">상태 및 공급업체별로 구성된 데이터 소스를 그룹화합니다. 실패한 데이터 소스와 오래된 성공적인 데이터 수집 내역을 강조 표시합니다.</block>
+  <block id="cebc2df7b7ef831717afc3866eed707c" category="section-title">데이터 소스 가져오기</block>
+  <block id="71a9df4bf0f542c90ff2521a3cd80adb" category="paragraph">구성, 수집 패키지 상태, 폴링 활동, 검색된 장치, 패치 정보 및 획득 장치 컨텍스트를 포함하는 하나의 수집기를 검색합니다.</block>
+  <block id="511f133a29804e5180fc6324d39b4756" category="paragraph">필수 입력 항목:<block ref="b80bb7740288fda1f201890375a60c8f" prefix=" " category="inline-code"></block></block>
+  <block id="b2ed35aee46122a60cf22388b1511ec9" category="paragraph">폴링 간격, 구성된 메트릭, 수집 설정 또는 오류 조사에 이 툴을 사용하십시오.</block>
+  <block id="f0d4567828a9e9a760dcd3c58dfb6d71" category="section-title">지원되는 데이터 소스 유형 목록</block>
+  <block id="8e95e68125c18cf04c7293348aad7f2e" category="paragraph">DII 수집기 카탈로그에서 지원하는 제품 유형을 나열합니다. 이것은 테넌트에 구성된 수집기 목록이 아닙니다.</block>
+  <block id="5035fb83a0a0fb1fc39267a336201b8f" category="section-title">로그 유형 목록</block>
+  <block id="7a28624c0226e6b42b7d87fcd2ae83f9" category="paragraph">현재 테넌트에서 사용 가능한 로그 유형을 나열합니다.</block>
+  <block id="adc5b26e1564f4fd7a006fab84ceaefc" category="section-title">로그 유형 메타데이터 가져오기</block>
+  <block id="c80654af1ec771d8dfdcce16a8fc4734" category="paragraph">로그 유형에 대한 유효한 속성을 반환합니다. 이벤트를 검색하거나 그룹화하기 전에 호출하십시오.</block>
+  <block id="b79550b61888c3f687fb477f97287291" category="paragraph">필수 입력 항목:<block ref="599dcce2998a6b40b1e38e8c6006cb0a" prefix=" " category="inline-code"></block></block>
+  <block id="6b780a259e427d9b7bbc571192467ac7" category="section-title">쿼리 로그 이벤트</block>
+  <block id="2e8855bf556e086f644e74889a59485e" category="paragraph">로그 이벤트를 타임스탬프 내림차순으로 반환합니다.</block>
+  <block id="415ce7b551e9decd6aac5fb465bd367b" category="list-text"><block ref="599dcce2998a6b40b1e38e8c6006cb0a" prefix="" category="inline-code"></block></block>
+  <block id="92276b2a9fcd78fa8677c4c98001b9a9" category="paragraph">선택적 입력에는 <block ref="736b91750e516139acc13c5eb6564f92" prefix=" " category="inline-code"></block>, <block ref="b2c97ae425dd751b0e48a3acae79cf4a" prefix=" " category="inline-code"></block>, <block ref="aa9f73eea60a006820d0f8768bc8a3fc" prefix=" " category="inline-code"></block> 및 <block ref="1791a97a8403730ee0760489a2aeb992" prefix=" " category="inline-code"></block>가 포함됩니다. <block ref="aa9f73eea60a006820d0f8768bc8a3fc" prefix=" " category="inline-code"></block>은(는) 1-200입니다. 이벤트 기간은 30일을 초과할 수 없습니다. 이전 응답의 커서를 전달하여 다음 페이지를 가져옵니다.</block>
+  <block id="4ed4b0c2fb43c05c4ab6a4f7c91482dc" category="section-title">시간에 따른 로그 이벤트 수 계산</block>
+  <block id="52c377cf2bf22ed956b7862fcad2eef3" category="paragraph">+LogService_queryLogEventsCountHistogram+</block>
+  <block id="98f87af6aa79b490af36b4e23a3d184b" category="paragraph">이벤트 발생 횟수를 고정 크기의 시간 단위로 반환합니다. 선택적으로 각 시간 단위를 유효한 그룹화 속성으로 그룹화할 수 있으며, 그룹화된 결과는 상위 세그먼트와 +__other__+ 세그먼트를 반환합니다.</block>
+  <block id="97e02bcd2922ccb021e5e23572fc0d46" category="paragraph">선택적 입력:<block ref="b2c97ae425dd751b0e48a3acae79cf4a" prefix=" " category="inline-code"></block>,<block ref="a2adfb5bd89626055a805d8102720c88" prefix=" " category="inline-code"></block></block>
+  <block id="db56524dcb8418e3c0600c4d72f4e200" category="section-title">유지보수 윈도우 목록</block>
+  <block id="6f1cfbef9d4bdba542815d7ec238dfae" category="paragraph">활성 상태이며 만료되지 않은 경고 억제 윈도우를 나열합니다. 만료된 윈도우를 포함하려면 <block ref="d39acf57014820cefc8394ffd61ad405" prefix=" " category="inline-code"></block>을(를) <block ref="b326b5062b2f0e69046810717534cb09" prefix=" " category="inline-code"></block>(으)로 설정하십시오.</block>
+  <block id="f0e1526b1c63b1b205cc17b190073bab" category="paragraph">성공적인 빈 응답은 일치하는 유지보수 윈도우가 없음을 의미합니다.</block>
+  <block id="0831365630a6250e7ecc8800bfea41a4" category="section-title">유지보수 윈도우 가져오기</block>
+  <block id="ce053c0505fa686566009a6abf47a525" category="paragraph">하나의 유지보수 윈도우를 가져옵니다.</block>
+  <block id="71fa301a68bd0fc8d012a11c905ee94d" category="section-title">모니터 목록</block>
+  <block id="775b5da445f5bb3b887ebb5e6194d58d" category="paragraph">+MonitorsService_queryMonitors+</block>
+  <block id="6eb4f2f94ab22ac4511cf3725d98151c" category="paragraph">DII 모니터 목록을 표시합니다. 시스템 모니터만 반환하거나, 시스템 모니터를 제외하거나, 모든 모니터를 반환하려면 <block ref="03c1f379372e00d33098fed2f34f423a" prefix=" " category="inline-code"></block>을(를) 사용합니다.</block>
+  <block id="81e388f7796f7e747f5439a78bb7e4c4" category="section-title">모니터 가져오기</block>
+  <block id="0e0dc68c7e141437fcf9ebe136873b54" category="paragraph">가능한 경우 설명 및 수정 지침을 포함하여 모니터 하나를 검색합니다.</block>
+  <block id="cbb25772851c21af96bee8a00fdbe816" category="section-title">알림 규칙 목록</block>
+  <block id="73bbd39b9c800f0741667fd7b108c97e" category="paragraph">일치하는 알림을 알림 대상으로 전달하는 규칙 목록입니다. 성공적인 빈 응답은 일치하는 규칙이 없음을 의미합니다.</block>
+  <block id="84874fbaafe06789f59999ac727c79b0" category="section-title">알림 규칙 가져오기</block>
+  <block id="d7754c5a4c0c8d4729dae026bef4eec8" category="paragraph">라우팅 규칙 하나를 검색합니다.</block>
+  <block id="fbd7ef78b83ee1b89c0d5e16e69d80e6" category="section-title">웹훅 대상 목록</block>
+  <block id="7d246229986b5a7fb84f0bfd6b769242" category="paragraph">Slack, Microsoft Teams, Discord, PagerDuty 및 사용자 지정 HTTP 통합에 대한 웹훅 대상 메타데이터를 나열합니다. 선택적으로 쉼표로 구분된 엔진 유형별로 필터링할 수 있습니다.</block>
+  <block id="00504b54467e7bb51a7d516a7865e9cd" category="paragraph">보안 요구 사항: 엔드포인트 주소 전체에는 자격 증명이 포함될 수 있습니다. 애플리케이션 및 에이전트는 표시되거나 전달되는 결과에서 주소 필드를 제외하거나 수정해야 합니다.</block>
+  <block id="58fbe25ddf8018ec263a8fa9a2af0d3a" category="paragraph">안전한 예시:</block>
+  <block id="2439d255e0f310c48b3c944a1b703fc4" category="paragraph">엔진 유형별 웹훅 대상 수를 세고 대상 이름과 상태만 나열합니다. 엔드포인트 주소는 반환하지 않습니다.</block>
+  <block id="b90079a54d747cb398e165c412ee2432" category="section-title">오브젝트 및 측정항목</block>
+  <block id="523cf9be142cd4a84c9cc627bcaf3408" category="section-title">오브젝트 유형 목록</block>
+  <block id="80587015339dfbffaf25b60049a91de1" category="paragraph">현재 테넌트에서 사용 가능한 오브젝트 유형을 나열합니다.</block>
+  <block id="5db98635d57040de872dc385b017c147" category="section-title">오브젝트 메타데이터 가져오기</block>
+  <block id="3cb280753356d7296fb75b02afaf83bb" category="paragraph">하나의 오브젝트 유형에 대한 유효한 속성, 메트릭, 유형 및 그룹화 기능을 반환합니다.</block>
+  <block id="3d27481cd2e35cffe13f6f340ca64f23" category="paragraph">필수 입력 항목:<block ref="726e8e4809d4c1b28a6549d86436a124" prefix=" " category="inline-code"></block></block>
+  <block id="822c179e3dc91570456d3ecc9fb0c958" category="section-title">쿼리 오브젝트</block>
+  <block id="92a0566df7c7cd9d7c3f22f25114b1e8" category="paragraph">오브젝트, 선택된 속성 및 선택적 메트릭을 검색합니다. 메트릭을 참조하는 필터는 시간 창 집계 전의 원시 값에 적용됩니다.</block>
+  <block id="6b415e19199169f357f4b475155784e1" category="list-text"><block ref="726e8e4809d4c1b28a6549d86436a124" prefix="" category="inline-code"></block></block>
+  <block id="ee32799594a4a716a132df0fe0e235ba" category="paragraph">선택적 입력에는 <block ref="a69e8bebc7db12d25513d660c49b759b" prefix=" " category="inline-code"></block>, <block ref="b2c97ae425dd751b0e48a3acae79cf4a" prefix=" " category="inline-code"></block>, <block ref="13c2a8d3bf179d619c90d3f217f0cc03" prefix=" " category="inline-code"></block>, <block ref="eb047ddc07ae2d475c91d4d0e5bc1666" prefix=" " category="inline-code"></block>, <block ref="a4bdd86ad6ce1ef74538de5a02bcafce" prefix=" " category="inline-code"></block>, <block ref="9f8d22daa83e2d0780e97116054ab5dc" prefix=" " category="inline-code"></block>, <block ref="d4f1582143a1afc626dedd560475665b" prefix=" " category="inline-code"></block>, <block ref="aa9f73eea60a006820d0f8768bc8a3fc" prefix=" " category="inline-code"></block> 및 <block ref="7a86c157ee9713c34fbd7a1ee40f0c5a" prefix=" " category="inline-code"></block>가 포함됩니다.</block>
+  <block id="2f826b9e79ccdcbc6498f06d095c1890" category="paragraph">지원되는 쿼리 집계: <block ref="26a4b44a837bf97b972628509912b4a5" prefix=" " category="inline-code"></block>,<block ref="ce31e2a082d17e038fcc6e3006166653" prefix=" " category="inline-code"></block>,<block ref="fcefd647d6a866603c627b11347c707a" prefix=" " category="inline-code"></block>,<block ref="6970bdc2201030b9c03fbdcf3973858a" prefix=" " category="inline-code"></block>,<block ref="f447f5c03508de4d88e340390ba7c78f" prefix=" " category="inline-code"></block>. <block ref="aa9f73eea60a006820d0f8768bc8a3fc" prefix=" " category="inline-code"></block>은(는) 1-500입니다. 시간 범위를 생략하면 툴은 기본적으로 최근 3시간 윈도우를 사용합니다.</block>
+  <block id="c77992eacc8cb23c41748ed433bcd3b3" category="section-title">그룹 오브젝트</block>
+  <block id="9e4858afd3fb8728f10451a793c23171" category="paragraph">하나의 유효한 그룹화 속성을 기준으로 오브젝트를 그룹화하고 선택한 메트릭을 집계합니다. 필터는 집계 전에 원시 값에 적용됩니다.</block>
+  <block id="995fc42a264582bdf46f042e03569e91" category="list-text"><block ref="bc77066a6cd8c9b9baebaaa8dace6f53" prefix="" category="inline-code"></block></block>
+  <block id="fea848ee5f68bbe562aa7ac62289ddc3" category="list-text"><block ref="a69e8bebc7db12d25513d660c49b759b" prefix="" category="inline-code"></block></block>
+  <block id="cf96f1438e714f9de87807fd9bfd473d" category="paragraph">선택적 입력에는 <block ref="d4f1582143a1afc626dedd560475665b" prefix=" " category="inline-code"></block>, <block ref="b2c97ae425dd751b0e48a3acae79cf4a" prefix=" " category="inline-code"></block>, 정렬, 시간 제한, <block ref="aa9f73eea60a006820d0f8768bc8a3fc" prefix=" " category="inline-code"></block> 및 <block ref="7a86c157ee9713c34fbd7a1ee40f0c5a" prefix=" " category="inline-code"></block>가 포함됩니다.</block>
+  <block id="35b03ceb928f7e6c089a692af552088a" category="paragraph">지원되는 그룹 집계:<block ref="26a4b44a837bf97b972628509912b4a5" prefix=" " category="inline-code"></block>,<block ref="ce31e2a082d17e038fcc6e3006166653" prefix=" " category="inline-code"></block>,<block ref="fcefd647d6a866603c627b11347c707a" prefix=" " category="inline-code"></block>,<block ref="6970bdc2201030b9c03fbdcf3973858a" prefix=" " category="inline-code"></block>,<block ref="2c2624a5059934a947d6e25fe8332ade" prefix=" " category="inline-code"></block>,<block ref="421cfd143e450c3f5814a0495409e073" prefix=" " category="inline-code"></block>, +CHANGE_RATIO+.</block>
+  <block id="08ebae22aa6c8ffe6e4f629093fcd891" category="section-title">쿼리 성능 시계열</block>
+  <block id="dbf43daa40eaf3d7964619bd97ab50e5" category="paragraph">하나의 측정항목과 일치하는 오브젝트에 대한 버킷화된 시계열 데이터를 반환합니다.</block>
+  <block id="aa6f2daf14e6f97b9cf0e4f58aabe39f" category="list-text"><block ref="f42b20b08d8a6db9b00f4a3721d2a459" prefix="" category="inline-code"></block></block>
+  <block id="2d7fcea1245c9bcaee19de767c9f4601" category="paragraph">선택적 입력에는 <block ref="b2c97ae425dd751b0e48a3acae79cf4a" prefix=" " category="inline-code"></block>, <block ref="9e5a42df3511323d1d417e97fa2a8220" prefix=" " category="inline-code"></block>, <block ref="aa9f73eea60a006820d0f8768bc8a3fc" prefix=" " category="inline-code"></block> 및 <block ref="eb047ddc07ae2d475c91d4d0e5bc1666" prefix=" " category="inline-code"></block>가 포함됩니다. <block ref="aa9f73eea60a006820d0f8768bc8a3fc" prefix=" " category="inline-code"></block>는 반환되는 시리즈의 수를 제어하며 1-50이어야 합니다.</block>
+  <block id="d8107672e721a347bca90bbdb5fe6302" category="paragraph">지원되는 버킷 집계:<block ref="26a4b44a837bf97b972628509912b4a5" prefix=" " category="inline-code"></block>,<block ref="ce31e2a082d17e038fcc6e3006166653" prefix=" " category="inline-code"></block>,<block ref="fcefd647d6a866603c627b11347c707a" prefix=" " category="inline-code"></block>,<block ref="6970bdc2201030b9c03fbdcf3973858a" prefix=" " category="inline-code"></block>,<block ref="2c2624a5059934a947d6e25fe8332ade" prefix=" " category="inline-code"></block>,<block ref="421cfd143e450c3f5814a0495409e073" prefix=" " category="inline-code"></block>, +CHANGE_RATIO+.</block>
+  <block id="b97c2c0c104a2b7df7f86d3f7caa9e37" category="section-title">Kubernetes 컬렉터 목록</block>
+  <block id="c3db24282c6edc8a43ab82d82b6bc4c4" category="paragraph">클러스터 이름, 전체 최신 상태, 오퍼레이터 버전, 네트워크 성능 및 맵 구성 요소 버전, 변경 분석 구성 요소 버전 및 마지막으로 보고된 타임스탬프를 반환합니다.</block>
+  <block id="855e0673a72847ac65c605b5db5167f1" category="paragraph">오래된 Kubernetes 컬렉터를 식별하고 어떤 구성 요소에 주의가 필요한지 요약합니다.</block>
+  <block id="ad595f2314671c72fc47c1577dc94f7e" category="section-title">필터 연산자</block>
+  <block id="aea172616ee551bdb3635e690c1294a0" category="paragraph">경고, 로그 및 오브젝트 쿼리는 중첩 조건을 지원합니다:</block>
+  <block id="cdc85db381695ddad389e31fb04a1c99" category="list-text"><block ref="2dcbad7477fd40561e8b8198f173bd47" prefix="" category="inline-code"></block>,<block ref="dc33066c3993e0d50896e533fd692ce0" prefix=" " category="inline-code"></block></block>
+  <block id="9e06ee5cc0ace3d365581d75145e819c" category="list-text"><block ref="cd6a9bd2a175104eed40f0d33a8b4020" prefix="" category="inline-code"></block>,<block ref="c562607189d77eb9dfb707464c1e7b0b" prefix=" " category="inline-code"></block>,<block ref="f803729628adf4199f224c2a225038e9" prefix=" " category="inline-code"></block>,<block ref="cfe6055d2e0503be378bb63449ec7ba6" prefix=" " category="inline-code"></block></block>
+  <block id="56c67195947238eb4569f6ed7b437162" category="list-text"><block ref="15f4cff81d9ee10b162eac10c339d5f4" prefix="" category="inline-code"></block> 사용<block ref="2e5c58593e161bfc5f0b462a2edbeca1" prefix=" " category="inline-code"></block> 및<block ref="d1457b72c3fb323a2671125aef3eab5d" prefix=" " category="inline-code"></block></block>
+  <block id="e55e77caf184dbd072c8906b1799599a" category="list-text"><block ref="6a240802522e95fc9e2c1d09122d8ec4" prefix="" category="inline-code"></block></block>
+  <block id="b5b331763607db751aee8972b1826c20" category="list-text">중첩된<block ref="be5d5d37542d75f93a87094459f76678" prefix=" " category="inline-code"></block>,<block ref="e81c4e4f2b7b93b481e13a8553c2ae1b" prefix=" " category="inline-code"></block> 및<block ref="d529e941509eb9e9b9cfaeae1fe7ca23" prefix=" " category="inline-code"></block></block>
+  <block id="2ee7caa3b8aa9512e3f9101f7eef0d20" category="paragraph">연결된 서버는 메타데이터를 기준으로 필드를 검증합니다. 쿼리가 거부되면 관련 메타데이터를 새로 고치고 필터를 재구성하십시오.</block>
+  <block id="5fe5b3453a2f3b9df77af11559d9951c" category="inline-link-macro">운영 레시피</block>
+  <block id="1b3885661a25271636d6446e1a49cd8b" category="list-text"><block ref="1b3885661a25271636d6446e1a49cd8b" category="inline-link-macro-rx"></block></block>
+  <block id="5be5d95c8863a0ff4b75894eb5db082c" category="summary">MCP 서버 연결 문제, 인증 오류, 쿼리 거부 및 API 속도 제한에 대한 일반적인 해결 방법입니다.</block>
+  <block id="d382b6b9cbd8fdb1a9a8efc66fe393fa" category="doc">DII MCP 문제 해결</block>
+  <block id="355134cd58fa356416edb65f882230f3" category="section-title">서버가 연결되지 않습니다</block>
+  <block id="ef83f8cb33ad61a9f76fd07fde393cb7" category="paragraph">확인:</block>
+  <block id="f2fdcdd36f210dddb1ed4060a5df74fb" category="list-text">구성된 URL은 DII 환경에 제공된 엔드포인트와 일치합니다.</block>
+  <block id="bef1020a681f9d3a73a92d825cb3a656" category="list-text">클라이언트는 원격 HTTP MCP 서버와 필요한 인증 흐름을 지원합니다.</block>
+  <block id="1001e7e283e6cc93400d48345ae4be37" category="list-text">인증이 성공적으로 완료되었습니다.</block>
+  <block id="1d33f6e7519dbf59c7d86da9965e7970" category="list-text">네트워크 정책에 따라 엔드포인트에 대한 액세스가 허용됩니다.</block>
+  <block id="4678c86a439acca7f24beeccb7f681d4" category="list-text">연결된 ID는 DII 테넌트에 액세스할 수 있습니다.</block>
+  <block id="7b7983653a1387b7bb98896560a1d064" category="paragraph">클라이언트 구성을 변경한 후 MCP 서버를 다시 시작하거나 다시 로드하십시오.</block>
+  <block id="e8583414c11fe6fffebe22dee75e7dcf" category="section-title">인증이 필요합니다</block>
+  <block id="35ffd81d55db481e95a4fd5a8b5b33d6" category="paragraph">클라이언트 로그인 절차를 완료한 후 원래 요청을 다시 시도하십시오. 서비스 ID를 사용하는 경우 해당 자격 증명이 유효하고 승인된 비밀 메커니즘을 통해 저장되었는지 확인하십시오.</block>
+  <block id="e3ef799216fd535ea20f2d7edddc57cf" category="paragraph">권한 거부가 확인된 경우 반복적으로 재시도하지 마십시오. DII 관리자에게 사용자의 테넌트 및 리소스 권한을 검토해 달라고 요청하십시오.</block>
+  <block id="d79c6f7344036f0b684030f808ecc06a" category="section-title">오브젝트 쿼리가 필드를 거부합니다</block>
+  <block id="a3c25ad86f7c9381c2731acd6c871a30" category="paragraph">오브젝트 속성과 측정 기준은 유형에 따라 다릅니다.</block>
+  <block id="d5009a898b6dccd7f6e6c02cc94de59c" category="list-text">+ObjectService_getObjectTypes+를 호출하십시오.</block>
+  <block id="453bef272ff51ef6ec94aa34a9ca9066" category="list-text">정확한 오브젝트 유형을 확인하십시오.</block>
+  <block id="162b411023d4b87cfebadbc206e8eae3" category="list-text">+ObjectService_getMetadataForObjectType+를 호출합니다.</block>
+  <block id="d2f7811da7b5491580f0e70f816e4c5d" category="list-text">메타데이터에서 필드 이름을 정확히 복사하십시오.</block>
+  <block id="c1d6a85d420f9958d7e6742765783b0b" category="list-text">값 유형과 집계 함수가 호환되는지 확인하십시오.</block>
+  <block id="f40464dd0882303bd3f14d93700ba2cc" category="paragraph">그룹화 가능으로 표시된 속성만 오브젝트를 그룹화하는 데 사용할 수 있습니다.</block>
+  <block id="52d14538033cc1caffc28c5bc8219bd9" category="section-title">로그 쿼리에서 속성이 거부되었습니다</block>
+  <block id="f08d404d9a85bc4bf2763b37275a6d47" category="list-text">+LogService_getLogTypes+를 호출하세요.</block>
+  <block id="28a6cf0b8991f85902ebebdd9ec065eb" category="list-text">정확한 로그 유형을 확인하십시오.</block>
+  <block id="5951f5c8fe05ebff77b07518a0b4344c" category="list-text">+LogService_getLogTypeMetadata+를 호출하십시오.</block>
+  <block id="aec76932f305d42c394cf8e24c5334d5" category="list-text">해당 로그 유형에 대해 반환된 속성만 사용하십시오.</block>
+  <block id="8f6ccda98ccb370a5d6d64525bc06ce9" category="paragraph">로그 이벤트 쿼리는 커서 기반 페이지네이션을 사용합니다. 오프셋 대신 이전 페이지에서 반환된 커서를 전달하십시오.</block>
+  <block id="b6e3b7628aad361a7a09955f42c7d936" category="section-title">경고 쿼리가 필드를 거부합니다</block>
+  <block id="f1cdee4f58df803e77f25d8579f6fc35" category="paragraph">쿼리를 구성하기 직전에 +AlertsService_getMetadata+를 호출하십시오. 알림 메타데이터는 광범위하고 테넌트에 따라 다를 수 있으므로 정확한 필드 이름을 사용하십시오.</block>
+  <block id="c6af9f074b93a48a580cd0adaf0efa50" category="section-title">시간 범위가 잘못되었습니다</block>
+  <block id="655048c88aa5416e2f13e1cf04d269cb" category="list-text"><block ref="a4bdd86ad6ce1ef74538de5a02bcafce" prefix=" " category="inline-code"></block>이(가) <block ref="9f8d22daa83e2d0780e97116054ab5dc" prefix=" " category="inline-code"></block>보다 이전이거나 같은지 확인하십시오.</block>
+  <block id="d8e820234a41a7d70f60938968a60e2e" category="list-text">오프셋 또는 <block ref="21c2e59531c8710156d34a3c30ac81d5" prefix=" " category="inline-code"></block>와 함께 ISO-8601 타임스탬프를 사용하십시오.</block>
+  <block id="cd0abfa669fda4a141cd0a3163def055" category="list-text">요청하신 기간을 30일 이내로 유지해 주십시오.</block>
+  <block id="e6faa55bdbc9e4cfa0d0f933d4df1305" category="list-text">장기간에 걸친 조사는 연속적이고 겹치지 않는 기간으로 나누고 결과를 요약합니다.</block>
+  <block id="28d09296acf0542939284c47dec494e9" category="list-text">툴이 요구하는 경우 유효한 IANA 시간대를 제공하십시오.</block>
+  <block id="73d0117552bcc0f91c7774bd6f2198ef" category="paragraph">런타임 적용이 클라이언트에 캐시된 툴 설명보다 더 엄격한 경우 권한을 갖습니다.</block>
+  <block id="14c43f3821288aeaa08ba90f6dc021fb" category="section-title">쿼리 결과가 너무 많습니다</block>
+  <block id="afa9ffe16edcb0c1f8d7cff94471638e" category="list-text">유효한 필터를 추가하세요.</block>
+  <block id="7844cc90ba7464cf7e349481e2bc3cb6" category="list-text">시간 범위를 줄이십시오.</block>
+  <block id="d7da635a9ed1a13e63a714b383a61a04" category="list-text">가장 관련성이 높은 지표를 기준으로 정렬하세요.</block>
+  <block id="92d71586a849f240646c52b58d4804a2" category="list-text">결과 제한값을 낮추세요.</block>
+  <block id="3883859e88254bac85024cff1e3bcc18" category="list-text">개별 기록이 필요하지 않은 경우 그룹화 또는 히스토그램을 사용하십시오.</block>
+  <block id="060472321e0aeceebd402196daa756fd" category="list-text">더 자세한 정보가 필요할 때만 <block ref="7a86c157ee9713c34fbd7a1ee40f0c5a" prefix=" " category="inline-code"></block> 또는 로그 커서를 사용하여 계속 진행하십시오.</block>
+  <block id="f9b9be3c6471563d697117d3fc2ff0d5" category="section-title">호출이 성공하면 반환되는 행이 없습니다.</block>
+  <block id="0be1782d0559882a9530bc74e7f7f0ad" category="paragraph">빈 결과는 종종 유효한 답변입니다. 이는 다음을 의미할 수 있습니다:</block>
+  <block id="3058feae0f2b720ed68ef9ff9bab1f5d" category="list-text">필터 조건에 맞는 리소스가 없습니다.</block>
+  <block id="92669de0cb15b7b747e6c3553e299307" category="list-text">선택한 시간 범위 내에 이벤트가 발생하지 않았습니다.</block>
+  <block id="c25557ccc693830e05bea444da34efb4" category="list-text">유지 관리 기간이나 알림 규칙이 설정되어 있지 않습니다.</block>
+  <block id="de8cc582bbdd90a9a0058466f95984f4" category="list-text">선택한 데이터 유형은 테넌트의 수집기에서 채워지지 않습니다.</block>
+  <block id="365061b0ac161eb4f41dbe48f3bca4fe" category="paragraph">수집 과정에 문제가 있음을 나타내는 다른 증거가 없는 한, 성공적으로 빈 결과가 나온 경우를 누락된 데이터로 설명하지 마십시오.</block>
+  <block id="1599abeaa06db5eb56dbc39f27d09a03" category="section-title">수집 장치가 연결되었지만 보고한 적이 없습니다</block>
+  <block id="715e7b19030f034e0973572185f27f95" category="paragraph">연결 상태와 성공 보고는 별개입니다. 확인:</block>
+  <block id="3f1fcb9aad20359afeea944082bb3519" category="list-text"><block ref="98590730af2b11154a1d93e8c46b2778" prefix="" category="inline-code"></block></block>
+  <block id="2152887ae464373788d36e75f1f13230" category="list-text">할당된 데이터 소스 개수</block>
+  <block id="44a00a8b331a640d0791ec6c7f93ce41" category="list-text">데이터 소스 획득 상태</block>
+  <block id="212637912aa8191d536573f9a7671da0" category="list-text">AU 호스트 연결 및 버전</block>
+  <block id="af139fa258a82f1b92d475e0a6dd46aa" category="list-text">지정된 데이터 소스에 대한 폴링 활동</block>
+  <block id="d2578a77b1df186f223ae80f2eadfd31" category="section-title">수집기가 실패했습니다</block>
+  <block id="526582eda60fc066ab851b12a1bf4bfc" category="paragraph">해당 컬렉터에 대해 +CollectorService_getDataSourceById+를 사용하십시오. 최근 폴링 활동, 활성 패치 정보, 패키지 상태, 구성 및 마지막 성공적인 데이터 수집 시간을 검토하십시오. 자격 증명이나 개인 구성 값은 표시하지 마십시오.</block>
+  <block id="caacea8ee3dab59385640af7ec832fb3" category="section-title">웹훅 결과에는 전체 주소가 포함됩니다</block>
+  <block id="6af07ab5a9c2913d8b3aab994bddb65a" category="paragraph">값을 반복하지 마십시오. 대상 이름, 통합 유형, 개수 및 상태만 요약하십시오. 기밀 자료가 표시되거나 공유된 경우 <block ref="c3d0d96dc88bb2d999220c1ec6124dd1" category="inline-link-macro-rx"></block>을(를) 따르십시오.</block>
+  <block id="833b4c3abea9dda26d1c9ab1f2c2b8dd" category="section-title">AI 비서가 잘못된 툴을 선택했습니다</block>
+  <block id="5266587ad9178a28dba8105973d046fb" category="paragraph">보다 명확한 프롬프트를 사용하십시오:</block>
+  <block id="1932e8ea5eb73f970642cb5b2a4fc78c" category="paragraph">먼저 사용 가능한 오브젝트 유형을 나열하십시오. 선택한 유형에 대한 메타데이터를 검색하십시오. 그런 다음 유효한 필드만 쿼리하고 어떤 DII 툴을 사용했는지 설명하십시오.</block>
+  <block id="8e9b644da11d503c688045991989fb08" category="inline-link-macro">운영 레시피</block>
+  <block id="84b0b2d2ff7bce9fcd6cfbf9e254a8d6" category="paragraph">일반적인 조사의 경우 <block ref="46c9045eff432af233929989c542e090" category="inline-link-macro-rx"></block>에서 시작하십시오.</block>
+  <block id="a23e7bf3f0e7e94fbc944ad274535e4f" category="admonition">보고 기능은 Data Infrastructure Insights <block ref="e53fcfe2d8e430963458770e616738bd" category="inline-link-macro-rx"></block>에서 사용할 수 있습니다. <block ref="0ec52641b6ccb1942a8a239f999b7e3e" category="inline-link-macro-rx"></block> <block ref="3b5464e5227ca5bca8202e73f38f8484" category="inline-link-macro-rx"></block> <block ref="b5b2a212e3db2ebf0698577bb3fa110c" category="inline-link-macro-rx"></block> <block ref="6dcfbee49c44a8328938bbb4835169ec" category="inline-link-macro-rx"></block> <block ref="93625d442049bb401e7127dc86f547f7" category="inline-link-macro-rx"></block> <block ref="02d8f86e7604c160ff33f6098d5ab0fe" category="inline-link-macro-rx"></block></block>
+  <block id="e5e5f8878927980995e10a5cedd8b308" category="paragraph">용량 스키마에는 인프라 전반의 스토리지 용량, 활용률 및 프로비저닝과 관련된 테이블과 메트릭이 포함되어 있습니다. 이 스키마를 사용하여 용량 추세를 분석하고, 향후 요구 사항을 예측하고, 리소스 할당을 최적화할 수 있습니다.</block>
+  <block id="62c9105acfc20634e0945ecfaf29d0bb" category="paragraph">용량 효율성 스키마는 데이터 축소 비율 및 최적화 기회를 포함하여 스토리지 효율성에 대한 지표를 제공합니다. 이 스키마를 사용하여 중복 제거 및 압축과 같은 스토리지 기술의 효과를 모니터링하고 분석할 수 있습니다.</block>
+  <block id="d0a80c4370fe5dfc7960c7b868126b76" category="paragraph">파일 시스템 활용률 스키마는 파일 시스템, 호스트 및 컴퓨팅 리소스 전반에 걸친 스토리지 소비 및 사용 패턴을 추적합니다. 이 스키마를 사용하여 용량 핫스팟을 파악하고 파일 시스템 수준에서 스토리지 할당을 최적화할 수 있습니다.</block>
+  <block id="b2200689dae4036b4813579eff31d56c" category="paragraph">인벤토리 스키마는 스토리지 시스템, 호스트, 애플리케이션 및 주석을 포함한 포괄적인 자산 및 오브젝트 데이터를 포함합니다. 이는 데이터 웨어하우스에서 가장 큰 스키마이며 자산 관리 및 인프라 가시성의 기반이 됩니다.</block>
+  <block id="d9a7965bf43985ef0fc40616a6785117" category="paragraph">성능 스키마는 스토리지, 호스트, 볼륨 및 애플리케이션 전반에 걸쳐 I/O, 지연 시간, 처리량 및 기타 성능 지표에 대한 시계열 메트릭을 제공합니다. 이 스키마를 사용하여 성능 추세를 분석하고, 병목 현상을 파악하고, 워크로드 배치를 최적화할 수 있습니다.</block>
+  <block id="18b7f15f593dc47ea50fd485e859a539" category="paragraph">포트 스키마에는 포트 연결, 상태, 연결된 장치와의 관계 등 네트워크 포트 및 스위치 데이터가 포함되어 있습니다. 이 스키마를 사용하여 스토리지 인프라 내의 네트워크 토폴로지 및 패브릭 상태를 분석하십시오.</block>
+  <block id="1bccf90180c31adab404747497809cea" category="cell">데이터 SVM만 지원합니다(무한 볼륨은 지원하지 않음). 지원되는 하위 유형: default, sync_source, sync_destination. DP-destination SVM은 설계상 감사 대상에서 제외됩니다.</block>
+  <block id="aadaea56453502b49c3bb1d83460b925" category="cell">볼륨 스냅샷: 전체(가능한 경우 cloudsecure_* 범위로)</block>
+  <block id="7f1025af379bb72826214683cac22df7" category="paragraph">역할 및 사용자 생성(실행 전 &lt;vservername&gt; 교체):</block>
+  <block id="adf604179202ac8d7549519f9ce15c55" category="paragraph">*영구 저장소(클러스터 모드 표시, SVM 모드의 경우 -vserver &lt;vservername&gt; 추가):*</block>
+  <block id="2ad63734d5ea88b691fcec8abfa334e6" category="paragraph">*Protobuf (클러스터 모드 표시, SVM 모드의 경우 -vserver &lt;vservername&gt; 추가):*</block>
+  <block id="03a48f775ff6c08509430c660d47baaa" category="list-text">Workload Security &gt; 수집기 &gt; &amp;#43;데이터 수집기를 선택합니다.</block>
+  <block id="d78aa3ef141641a0a1fc5a86295f9836" category="paragraph">*Important:* 기본 제외 파일 확장자: 설계상 Workload Security는 FPolicy 범위를 구성하여 ini 및 DS_Store 확장자를 제외합니다. 이러한 파일에 대한 이벤트는 ONTAP에서 필터링되어 Workload Security에 도달하지 않으므로 Activity Forensics에 나타나지 않습니다. 이는 고객이 구성할 수 있는 경고 제외와는 별개입니다. 이는 예상되는 동작이며, 이러한 확장자에 대한 감사는 UI에서 구성할 수 없습니다.</block>
+  <block id="24dda3b59a8373ca61cb08f3e04c9cce" category="paragraph">일시 중지 및 재개는 에이전트가 아닌 데이터 수집기에 적용됩니다. UI(수집기 &gt; 해당 수집기 &gt; 옵션 메뉴) 또는 API에서 실행할 수 있습니다.</block>
+  <block id="77b5c5ee27c770993c6041b7b3f0105c" category="paragraph">수집기가 나중에 오류 또는 성능 저하 상태가 되면 상태 &gt; 자세히 보기를 열고 ONTAP SVM 데이터 수집기 문제 해결 지침을 따르십시오. 중복 수집기, 이벤트 속도 과부하, 일시 중지된 수집기, 영구 저장소 배치, MetroCluster 전환, 누락된 활동, ID 확인 등 런타임 조건은 사전 저장 테스트 연결 워크플로에 포함되지 않습니다.</block>
+  <block id="954c32784463d0103797201c7694bdf9" category="list-text">수집기가 Running 상태가 되고 실제 클라이언트 I/O 후에 Workload Security &gt; Activity Forensics에 이벤트가 나타나는지 확인하십시오.</block>
+  <block id="a82c02e71992fe00dd9609cb03521444" category="cell">DII에서 FlexGroups의 용량 수치는 "0"입니다. 구성원 자체는 문제가 없지만, FlexGroup은 모든 구성원의 총 용량을 표시하지 않습니다.</block>
+  <block id="53faddfe1edffe14cfa22b21a8e4e255" category="cell">이는 의도적인 것입니다. 대부분의 용량 지표는 상위 FlexGroup이 아닌 FlexGroup의 구성 요소에 보고됩니다. 양쪽 모두에 동일한 용량을 보고하면 중복 계산이 발생합니다. 구성 요소 수준의 보고를 선호하면 이러한 중복을 방지하면서 주요 사용 사례를 지원할 수 있습니다. 쿼리, 대시보드 또는 모니터에서 FlexGroup의 용량을 보고하려면 상위 FlexGroup에 대한 구성 요소의 참조를 사용하십시오. 해당 참조를 기준으로 구성 요소를 그룹화하고 용량 값을 집계합니다. DII는 의도적으로 FlexGroup 상위의 용량을 0으로 설정하지만, ONTAP 자체는 여전히 용량을 보고합니다. 이는 성능 지표가 아닌 용량/효율성 지표에 적용됩니다. 그룹 이름은 전역적으로 고유하지 않을 수 있으므로 그룹 ID를 기준으로 구성 요소를 그룹화하는 것이 좋습니다.</block>
+  <block id="056e089a06825ff9cfdc7d8a4300fc74" category="sidebar">AI 어시스턴트 개요</block>
+  <block id="2d58e9779fa68c4a5c50267077c89115" category="sidebar">DII MCP</block>
+  <block id="4d0566ae20cdd246f277a26a7f13a2f5" category="sidebar">DII MCP 개요</block>
+  <block id="0460583622f03a52d7693094d6fa2452" category="sidebar">개념</block>
+  <block id="8625e1de7be14c39b1d14dc03d822497" category="sidebar">툴</block>
+  <block id="1cf7e301510c711b73d2b182b9dcf084" category="sidebar">사용 사례</block>
+  <block id="e251010eb0cac5793d760ab2e5f51473" category="sidebar">사용 사례 개요</block>
+  <block id="2ac21a73971586e92654a9bebf1f13f8" category="sidebar">용량 위험 분석</block>
+  <block id="20e5685830d94211d24777272fbcb29e" category="sidebar">환경 인벤토리</block>
+  <block id="5224f411bcf47833c655b19d061e8ba9" category="sidebar">Kubernetes Collector 최신 상태</block>
+  <block id="6ce78279e85ae6fe9f97051d8bc3c13e" category="sidebar">알림 태세</block>
+  <block id="b349cdb464a16150566e060380a1b77f" category="sidebar">성능 근본 원인 분석</block>
+  <block id="aa70f40c4ba41bbc875ee1b79a091d75" category="sidebar">스토리지 상태</block>
 </blocks>
