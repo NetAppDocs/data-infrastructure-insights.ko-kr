@@ -13,6 +13,9 @@ keywords: dwh, data warehouse, schema, reporting, ports
 :imagesdir: ./media/
 
 
+[role="lead"]
+포트 스키마에는 포트 연결, 상태 및 연결된 장치와의 관계 등 네트워크 포트 및 스위치 데이터가 포함되어 있습니다. 이 스키마를 사용하여 스토리지 인프라 내의 네트워크 토폴로지 및 패브릭 상태를 분석하십시오.
+
 출처: *dwh_ports* OData 엔드포인트 — Data Infrastructure Insights
 
 테이블 발견 개수: *7* | 연관 관계: *4*

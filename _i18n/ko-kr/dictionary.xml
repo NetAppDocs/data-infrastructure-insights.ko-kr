@@ -15320,8 +15320,6 @@
   <block id="afd0c3c4cdf600c241e6062de7efc38d" category="list-text">SVM IP와 vsadmin을 사용하는 경우 관리 전용 LIF를 사용하십시오. 데이터 및 관리 역할이 결합된 LIF는 ping에 응답할 수 있지만 관리 액세스는 여전히 실패할 수 있습니다.</block>
   <block id="9410d3dd17bd3b4647e1b70d1d1e6745" category="list-text">선택적 기능의 경우, 기능 테스트에서 보고된 권한을 부여한 다음 연결 테스트를 다시 실행하십시오.</block>
   <block id="052cdb9ec1abf182e678dbe78454c893" category="paragraph">*정확한 오류 내용 포함*</block>
-  <block id="e9a0103a0775b98e2814bd92d2a62dda" category="list-text">++[++host++]++에 대한 ONTAP 유형을 확인할 수 없습니다. 이유: 스토리지 시스템 연결 오류: 호스트에 연결할 수 없습니다</block>
-  <block id="035aadd245a74b453daf0d268eee41c9" category="list-text">++[++IP++]++는 클러스터/노드로 식별되어 이 모드에서는 추가할 수 없습니다</block>
   <block id="9266ab3354c0bb9a2d4706509e093c35" category="list-text">SVM에서 유효한 데이터 인터페이스 ...를 찾을 수 없습니다</block>
   <block id="8bc4b2d3427ec80982ffc645e4e2e663" category="list-text">권한 누락: vserver fpolicy</block>
   <block id="633ff01f97949aad10c07c3050299b8f" category="list-text">이 Active Directory 사용자에 대해 사용자 수준 대신 그룹 수준에서 할당된 역할</block>
@@ -15350,7 +15348,6 @@
   <block id="5d3f323b7708802c99d3b55d34c784e6" category="list-text">SVM에서 fpolicy를 구성하는 데 실패했습니다... 사용자에게 권한이 없습니다</block>
   <block id="085ae3f401d2a02104ded446925f5fa7" category="list-text">fpolicy 정책을 활성화하는 데 사용할 수 있는 유효한 시퀀스 번호가 없습니다.</block>
   <block id="60acbda9b6d8687d4f8ee9a8df323d0a" category="list-text">영구 스토리지 구성에 실패했습니다... 애그리게이트에 대한 성능 정보를 현재 사용할 수 없습니다</block>
-  <block id="37f4c8d9b3bc335487b57648a25e1c45" category="list-text">cloudsecure++_++ FPolicy 정책이 활성화되었고 컬렉터가 실행 중인 상태로 유지됩니다.</block>
   <block id="42250c9902d77a942ca166de080c8e73" category="section-title">*에이전트 용량 또는 수집기 상태*</block>
   <block id="aa8e789605cb94bb5e2b9cad3e988d48" category="list-text">수집기 암호를 다시 입력하십시오: 편집을 열고 암호를 입력한 다음 저장하십시오.</block>
   <block id="e5b427e63010950b710856ccba203384" category="list-text">에이전트 CPU 및 메모리 여유 공간과 호스팅된 컬렉터 수를 확인하십시오.</block>
@@ -15378,8 +15375,6 @@
   <block id="9d5558de49864a5aaf09bbc466325f62" category="list-text">클라이언트 프로토콜이 활성화되어 있는지 확인하고, SMB의 경우 SVM에 CIFS 서버가 있는지 확인하십시오.</block>
   <block id="78e4147d2fcb665330522205434cc942" category="list-text">포함 및 제외된 공유와 볼륨을 검토하십시오. 따옴표 없이 전체 이름을 사용하십시오.</block>
   <block id="de8dab0414b0315e30cded2b46a453aa" category="list-text">일반적인 폴더 접근 이벤트가 필요한 경우 폴더 접근 모니터링을 활성화합니다. 이 옵션을 선택하지 않아도 폴더 생성, 이름 변경 및 삭제 이벤트는 수집됩니다.</block>
-  <block id="4759d60f794302252cb46abffa2003de" category="list-text">.ini 및 .DS++_++Store 활동만 누락된 경우 조치가 필요하지 않습니다. 이러한 확장자는 FPolicy 이벤트 수집에서 제외됩니다.</block>
-  <block id="8c22f9462036f0dd20c80fc189249549" category="list-text">활동이 여전히 나타나지 않으면 고급 진단을 사용하여 cloudsecure++_++ 정책 및 ONTAP FPolicy 이벤트 로그를 확인하십시오.</block>
   <block id="d347513df0e13aad5feb241cbab4bdfc" category="list-text">새로운 클라이언트 작업은 예상되는 프로토콜, 공유, 경로 및 사용자 정보와 함께 Activity Forensics에 나타납니다.</block>
   <block id="f8acf423c23d41fcdb70a66757da8e59" category="section-title">*활동 내역에 사용자 이름 대신 SID가 표시됩니다.*</block>
   <block id="3787b0669929b027268b3b24a4fe3c62" category="paragraph">ONTAP 감사 기능은 정상적으로 작동하고 있지만, 신원 확인은 별개의 문제입니다.</block>
@@ -15406,7 +15401,6 @@
   <block id="6b922742b49720893c54e6b1e398b6cc" category="list-text">수집기가 실행 중인지, 일시 중지된 상태가 아닌지 확인하십시오.</block>
   <block id="1e784234b40a4ed8a4c8884e71201bba" category="list-text">사용자 차단을 위해서는 클러스터 수준 자격 증명을 사용하십시오. 사용자 지정 사용자는 TCP 22 포트를 통한 SSH 액세스 권한과 문서화된 차단 권한도 필요합니다.</block>
   <block id="78c3532ecef5ab1659ad612cc4c53bd2" category="list-text">사용자 지정 사용자에게 필요한 스냅샷 권한이 있는지 확인하십시오.</block>
-  <block id="d57fd269eade28c34db56bbb026b8383" category="list-text">ONTAP 다중 관리자 검증이 활성화된 경우, cloudsecure++_++ 스냅샷 및 사용자 차단에 사용되는 설정 작업에 대한 문서화된 제외 항목을 추가하십시오.</block>
   <block id="ed39e8caebd174407031fe2936738028" category="list-text">클러스터 모드에서 연결 테스트를 실행하고 스냅샷 및 사용자 차단 기능 결과를 검토하십시오.</block>
   <block id="3eeafc54af73f87800ed2ce617a3f8b7" category="list-text">Workload Security는 스냅샷을 생성 및 삭제할 수 있으며, 사용자 액세스를 차단 및 복원할 수 있습니다.</block>
   <block id="0aa7337be8ed8a5fc38708f43902ba4b" category="section-title">*예상되는 동작 — 별도의 조치 필요 없음*</block>
@@ -15419,7 +15413,6 @@
   <block id="f06cf56d9192258142217bc7534ffa29" category="cell">저하됨은 로컬 데이터 LIF가 없는 노드를 나열합니다.</block>
   <block id="523eaf1144fe5e0cc0ce6ccf0aa0fdbc" category="cell">ONTAP은 SVM을 로컬에서 제공하지 않는 노드에서 FPolicy 채널을 설정할 수 없습니다.</block>
   <block id="86f505c2b43c4bab68db6b2721e92825" category="cell">나열된 노드에는 작동 가능한 SVM 데이터 LIF가 있습니다.</block>
-  <block id="0c024c9786b0a130ef9f2209b5b4eef7" category="cell">.ini 또는 .DS++_++Store에 대한 이벤트가 없습니다</block>
   <block id="d2b54416d881f7bd67a08215cba775e7" category="cell">이러한 확장자는 FPolicy 범위에서 제외됩니다.</block>
   <block id="5eac15c2b8b9fc80cd9b41574c1acf1a" category="cell">그 외 예상되는 파일 활동도 누락되었습니다.</block>
   <block id="4f46848b0dbf0fd386dde599cb8868ce" category="cell">짧은 초기화, 정지 또는 성능 저하 상태</block>
@@ -15437,13 +15430,10 @@
   <block id="0be76c87d632cbbfa4e3922e4adcc907" category="cell">*증거*</block>
   <block id="eef4b2f23f3a025cf83eab51354896eb" category="cell">*위치 또는 명령*</block>
   <block id="609b6fe2bd0fb9e30ab6cb0642ad9815" category="cell">수집기 로그</block>
-  <block id="4b5f755dff50d04d0ef018545e6f1842" category="paragraph">/opt/netapp/cloudsecure/data-collectors/++&lt;++collector-uuid++&gt;++/logs/dsc.log</block>
   <block id="4e236688e06bc3fc103e6f1c01f16cf0" category="paragraph">오류를 포함한 모든 컬렉터 활동이 포함되어 있습니다. 이 로그를 사용하여 컬렉터 문제를 조사하십시오.</block>
   <block id="ceb60f8be137b22ec9c994e3859fc9d3" category="cell">에이전트 로그</block>
   <block id="8ea61ce76dc83026cf34e9ad16a24974" category="cell">/opt/netapp/cloudsecure/agent/logs/agent.log</block>
   <block id="b775cc33ad81bc8796a92737fbe1fef0" category="cell">에이전트 설치 및 업그레이드</block>
-  <block id="4fb306285a138205d2951fdac023a9ab" category="paragraph">/opt/netapp/cloudsecure/agent/logs/cloudsecure++_++agent++_++install.log</block>
-  <block id="92e3160f317eea05bbcd97704c2e390e" category="paragraph">/opt/netapp/cloudsecure/agent/logs/cloudsecure++_++agent++_++upgrade.log</block>
   <block id="49ab5aaeb16e40d2787f6cc6532c99a3" category="cell">연결 테스트</block>
   <block id="837a3cd2b56827ebcf5b9a67fba50b92" category="cell">/opt/netapp/cloudsecure/test-connection/logs/</block>
   <block id="655ba6865da50cb3947405fa07a09371" category="cell">에이전트 서비스</block>
@@ -15452,7 +15442,6 @@
   <block id="566c4a298f7b5a7e738daecdc8429aa7" category="paragraph">*참고:* 수집기 로그 디렉터리에는 error.log도 포함될 수 있지만 일반적인 오류 로그는 아닙니다. 이 파일은 잘못된 구성으로 인해 수집기를 시작할 수 없을 때만 기록되며, 에이전트는 수집기 상태에 해당 이유를 보고한 후 이를 삭제합니다. 일반적으로 없거나 비어 있으므로 dsc.log를 사용하십시오.</block>
   <block id="1f19c695deb1ea2cfc7730a695c1da0d" category="section-title">*ONTAP FPolicy 상태 유효성 검사*</block>
   <block id="ed6326945366f78c6138656fa831567e" category="paragraph">해당 ONTAP 관리 컨텍스트에서 다음 명령을 실행하십시오:</block>
-  <block id="7f5bdaa89a1d8cc7785d87c89e903aef" category="paragraph">cloudsecure++_++ 접두사가 있는 Workload Security 정책을 찾으십시오. 정책이 활성화되어 있어야 하며, 모든 데이터 제공 노드에 연결된 외부 엔진이 표시되어야 합니다. 채널 연결이 끊어질 때 이벤트 사유와 노드 이름을 유지하십시오.</block>
   <block id="10e79af04432e7c04ea6e975d6340b34" category="section-title">*각 네트워크 경로를 검증하십시오*</block>
   <block id="e71a4b7488a97c0e5d8b3ab3efe619e4" category="cell">*방향*</block>
   <block id="139a0086c51a356d51b9adbdd2abcd41" category="cell">에이전트 → 클러스터 또는 SVM 관리 IP</block>
@@ -15481,7 +15470,6 @@
   <block id="9319f07e493af8a26e0543b0ed658b50" category="list-text">관련 데이터 LIF 및 에이전트 IP에 대해 ONTAP에서 패킷 추적을 시작합니다.</block>
   <block id="456fd97b69d8c1f180393a803e319725" category="list-text">연결 테스트를 시도하거나 수집기를 다시 시작하십시오.</block>
   <block id="e9b6af72f3ca122d88bd922fd574735b" category="list-text">오류가 발생할 때까지 기다린 후 추적을 중지하십시오.</block>
-  <block id="5bff9b997a211d5666ffda85aad32c5f" category="list-text"><block ref="8257c599cb4030b99e5758145816d417" category="inline-link-rx"></block>에서 추적을 가져옵니다.</block>
   <block id="4c48ff6a88114f32654d41d561b9f2e7" category="list-text">ONTAP에서 에이전트 콜백 포트로 전송되는 SYN을 확인하십시오. SYN이 없으면 ONTAP 측 경로 또는 정책에 문제가 있는 것입니다. 핸드셰이크가 완료되지 않은 SYN은 ONTAP와 에이전트 간의 방화벽 또는 라우팅 문제를 나타냅니다.</block>
   <block id="13bae038f53424549e687573baa305f9" category="paragraph">*참고:* 패킷 추적에는 네트워크 정보가 포함될 수 있습니다. 데이터 처리 요구 사항에 따라 패킷 추적을 처리하십시오.</block>
   <block id="e5a6d800b320650499428b863e2fea63" category="section-title">*중복된 SVM 수집기 진단*</block>
@@ -15491,7 +15479,6 @@
   <block id="fb40f0a3377da0677df294df514ce170" category="list-text">수집기는 하나만 남기고 중복 항목은 제거하십시오.</block>
   <block id="83ec7b975b509497443f363336b2878a" category="list-text">유지된 컬렉터를 다시 시작하고 FPolicy 채널이 계속 연결되어 있는지 확인하십시오.</block>
   <block id="952e188cbe99d625d6ae54372872a42c" category="section-title">*사용되지 않는 것으로 확인된 FPolicy 객체 정리*</block>
-  <block id="e4920097354c598ef6752b5bc14cee04" category="paragraph">*참고:* 활성 컬렉터의 cloudsecure++_++ 객체를 삭제하지 마십시오. 컬렉터가 해당 객체를 소유하고 업데이트합니다.</block>
   <block id="4a1659c2394e857673030dacc385655d" category="paragraph">FPolicy 구성을 나열하고 사용되지 않는 것으로 확인된 개체를 식별하십시오:</block>
   <block id="e95c6549d2974824b4453d611bbdfe4e" category="paragraph">사용하지 않는 정책의 경우, 종속성 순서대로 해당 정책의 객체를 제거하십시오:</block>
   <block id="a656df570b8da2747fb3faad17385d76" category="paragraph">시퀀스 슬롯 또는 충돌하는 객체가 제거된 후 Workload Security 수집기를 다시 시작하십시오.</block>
@@ -15506,12 +15493,10 @@
   <block id="4850e98bb8a39839a6bb92e01777cbcf" category="cell">몇 분 후에 다시 시도하십시오. 그래도 작업이 실패하면 cloudsecure-agent.service를 재시작하고 정확한 작업과 이유를 기록하십시오.</block>
   <block id="16be73a2b9210092fc8fe6820b245503" category="cell">AGENT009</block>
   <block id="a9d00c660fbf0bc3f42c37f8cf43f676" category="cell">선택한 에이전트 및 환경에 컬렉터가 여전히 존재하는지, 그리고 동시 삭제 또는 마이그레이션으로 인해 컬렉터가 제거되지 않았는지 확인하십시오.</block>
-  <block id="91c26bc5047d4ec1362dbf32c0f86a5e" category="cell">에이전트 NOT++_++CONNECTED</block>
   <block id="4a0da87311c8e8744d432fb03ee3b1d8" category="cell">systemctl 및 journalctl, TCP 443 포트를 통한 SaaS 송신, 프록시 구성, SSL 검사 및 cssys 계정을 확인하십시오.</block>
   <block id="0345935c483ab0eaa99d31263cc2f72e" category="paragraph">Event Rate Checker를 사용하여 Agent의 크기를 조정하십시오. 수집기 개수에만 의존하지 마십시오. 이벤트 볼륨과 활성화된 기능이 부하에 영향을 미칩니다.</block>
   <block id="6ea9628ebc17179ccc4454528a3ab14d" category="section-title">*기본 점검 후 활동 없음 조사*</block>
   <block id="688373a52a32242a1525ed2568c00aad" category="list-text">event log show -source fpolicy를 실행하고 모든 오류를 보존하십시오.</block>
-  <block id="779bdc55b359ee63c911efcfcc0e8688" category="list-text">fpolicy show를 실행하여 cloudsecure++_++ 정책이 활성화되어 있는지 확인하십시오.</block>
   <block id="39124cfeb8730bd8fe9d1be3bb163565" category="list-text">클라이언트 작업을 생성하는 프로토콜이 컬렉터에서 활성화되어 있고 SVM에서 허용되어 있는지 확인하십시오.</block>
   <block id="57ca85a860df4ace6caa7e08fa8f33e5" category="list-text">공유 또는 볼륨이 제외되지 않았는지 확인하십시오.</block>
   <block id="802fcf9cbb96d250f3575d08755fa373" category="list-text">해당 작업이 수행될 당시 수집기가 일시 중지되지 않았는지 확인하십시오.</block>
@@ -15531,12 +15516,10 @@
   <block id="079a9de08ebe445d6180d268b0db4f7b" category="paragraph">서버 이름, 포트, 바인딩 DN, 암호, 포리스트 또는 검색 기준, 읽기 권한을 검증하십시오. 수정 후 디렉터리 수집기를 다시 시작하여 새로운 동기화를 요청하십시오.</block>
   <block id="2f0f47626d0bec33bd993cee56586690" category="section-title">*다중 관리자 확인 검사*</block>
   <block id="0f478b151a9500cf69f64fb647b097cb" category="paragraph">Multi-Admin Verify는 스냅샷 및 사용자 차단에 사용되는 ONTAP 명령을 차단할 수 있습니다. 규칙을 변경하기 전에 기존 규칙을 검토하십시오. 문서화된 Workload Security 제외 항목은 다음과 같습니다.</block>
-  <block id="bf3cb288a9b88a2fc95a1063d9e6d11e" category="paragraph">multi-admin-verify rule modify -operation "volume snapshot create" -query "-snapshot !++*++cloudsecure++_*++" + multi-admin-verify rule modify -operation "volume snapshot delete" -query "-snapshot !++*++cloudsecure++_*++" + multi-admin-verify rule delete -operation set</block>
   <block id="444f280bbd2d0cce542fd9d8aba0671d" category="paragraph">*참고:* 설정된 규칙을 삭제하면 해당 작업에 대한 다중 관리자 확인 보호가 변경됩니다. ONTAP 보안 관리자와 변경 사항을 검토하십시오.</block>
   <block id="76ee106a6ea5ef6d8e735d293787d3db" category="section-title">*NetApp 지원팀에 문의하십시오*</block>
   <block id="0e97d92ce4baab6ec2b2a655cf4a3812" category="paragraph">정해진 점검 후에도 오류가 지속되거나, ONTAP이 노드 패닉을 보고하거나, 수집기 데이터가 새로 고쳐진 후에도 용량이 정확하지 않은 경우 지원팀에 문의하십시오.</block>
   <block id="3b250ab7948f1e0ddee4a50c56e89018" category="paragraph">*포함*</block>
-  <block id="23d31771696a63dc720a7a7a2f14889a" category="list-text">상태 ++&gt;++ 자세한 내용의 전체 메시지 및 오류 발생 시간.</block>
   <block id="653175e9b87d13e599ea4371e94298a3" category="list-text">건너뛴 검사를 포함한 테스트 연결 결과.</block>
   <block id="61423e0605b0cbdcf8f0bebd958e94f1" category="list-text">에이전트 및 컬렉터 버전과 현재 상태.</block>
   <block id="4850584f0032dfb26d5d8c2ffb395fb4" category="list-text">ONTAP 버전, 클러스터 및 SVM 이름, 연결 모드 및 최근 토폴로지 변경 사항입니다.</block>
@@ -15545,7 +15528,6 @@
   <block id="0c9d71e2f36e202f52a80a1e18d84631" category="list-text">콜백 경로가 설명되지 않은 경우의 패킷 추적 정보입니다.</block>
   <block id="a6fa4aea2a61c78e74a437025bfc4121" category="list-text">성능의 경우: 지연 시간 및 IOPS 타임라인과 이벤트 발생률 타임라인.</block>
   <block id="2f5a98a7fe17728f8b6f19bb7dde8ff4" category="list-text">용량의 경우: 구독 전후 사용량 및 각 수집기에서 보고한 원시 용량.</block>
-  <block id="7db2da5d72ca4cfd4dc3591cdb8b5f7a" category="paragraph">케이스를 개설하려면 Data Infrastructure Insights에서 도움말 ++&gt;++ 지원을 사용하십시오.</block>
   <block id="a0d5cf132ea60556950b6db3b75e1331" category="summary">이러한 개념을 이해하면 AI 비서가 적절한 툴을 선택하고 유효한 쿼리를 구성하는 데 도움이 됩니다.</block>
   <block id="3e22aa14b911d8584c3de2cb2d09c8e3" category="doc">DII MCP 개념 및 데이터 모델</block>
   <block id="845c2e1f81c7167073b0b3f255d00af4" category="admonition">DII MCP는 <block ref="312c0c6b46ba32b4b11ba8c9da5788ed" category="inline-link-macro-rx"></block> 기능이므로 변경될 수 있습니다.</block>
@@ -16263,15 +16245,49 @@
   <block id="6ce78279e85ae6fe9f97051d8bc3c13e" category="sidebar">알림 상태</block>
   <block id="b349cdb464a16150566e060380a1b77f" category="sidebar">성능 근본 원인 분석</block>
   <block id="aa70f40c4ba41bbc875ee1b79a091d75" category="sidebar">스토리지 상태</block>
-  <block id="add9fe580da121a40e7d835cf08a489d" category="cell">데이터 SVM만 지원합니다(무한 볼륨은 지원하지 않음). 지원되는 하위 유형: default, sync++_++source, sync++_++destination. DP-destination SVM은 설계상 감사 대상에서 제외됩니다.</block>
-  <block id="689b820747aa6a4d860f2786eb806378" category="cell">볼륨 스냅샷: 전체 (가능한 경우 cloudsecure++_*++ 범위로)</block>
-  <block id="a0f6fb0a8302b109f912737c2869ae71" category="paragraph">역할 및 사용자를 생성합니다(실행하기 전에 ++&lt;++vservername++&gt;++ 교체):</block>
-  <block id="28c033259ae71cab82483e5eb721e1c5" category="paragraph">*영구 저장소(클러스터 모드 표시, SVM 모드의 경우 -vserver ++&lt;++vservername++&gt;++ 추가):*</block>
-  <block id="8de1a3a6bc3dbbbe06d26a1bcaf978d0" category="paragraph">*Protobuf(클러스터 모드 표시; SVM 모드의 경우 -vserver ++&lt;++vservername++&gt;++ 추가):*</block>
-  <block id="58322ab2ae3213de6b39a5124b6c922f" category="list-text">Workload Security ++&gt;++ 수집기 ++&gt;++ &amp;#43;데이터 수집기를 선택합니다.</block>
-  <block id="c421bfa9e5f3f2069af785152ca7a7ab" category="paragraph">*Important:* 기본 제외 파일 확장자: 설계상 Workload Security는 FPolicy 범위를 구성하여 ini 및 DS++_++Store 확장자를 제외합니다. 이러한 파일에 대한 이벤트는 ONTAP에서 필터링되어 Workload Security에 도달하지 않으므로 Activity Forensics에 나타나지 않습니다. 이는 고객이 구성할 수 있는 경고 제외와는 별개입니다. 이는 예상되는 동작이며, 이러한 확장자에 대한 감사는 UI에서 구성할 수 없습니다.</block>
-  <block id="2900a29dbf701a91de01303efc97eac8" category="paragraph">일시 중지 및 재개는 에이전트가 아닌 데이터 수집기에 적용됩니다. UI(Collectors ++&gt;++ 수집기 ++&gt;++ 옵션 메뉴) 또는 API에서 실행할 수 있습니다.</block>
-  <block id="8939329780680219f89b75f98718d19d" category="paragraph">수집기가 나중에 오류 또는 성능 저하 상태가 되면 상태 ++&gt;++ 자세한 내용을 열고 ONTAP SVM 데이터 수집기 문제 해결을 따르십시오. 중복 수집기, 이벤트 속도 과부하, 일시 중지된 수집기, 영구 저장소 배치, MetroCluster 전환, 누락된 활동, ID 확인 등 런타임 조건은 사전 저장 테스트 연결 워크플로에 포함되지 않습니다.</block>
-  <block id="ecfa6237a8a218fc5c797ee0578679c7" category="list-text">수집기가 실행 중 상태가 되고 실제 클라이언트 I/O 이후 Workload Security ++&gt;++ Activity Forensics에 이벤트가 나타나는지 확인하십시오.</block>
-  <block id="237b4a7247d444dc79495ddb037a4600" category="cell">이는 의도적인 것입니다. 대부분의 용량 지표는 상위 FlexGroup이 아닌 FlexGroup의 구성 요소에 보고됩니다. 양쪽 모두에 동일한 용량을 보고하면 중복 계산됩니다. 구성 요소 수준 보고를 우선시하면 이러한 중복을 피하면서 주요 사용 사례를 지원합니다. 쿼리, 대시보드 또는 모니터에서 FlexGroup의 용량을 보고하려면 상위 FlexGroup에 대한 구성 요소의 참조를 사용하십시오. 해당 참조를 기준으로 구성 요소를 그룹화하고 용량 값을 집계하십시오.</block>
+  <block id="5eb14926e2b0223f53564d7659171c1c" category="paragraph">또한 FlexGroups의 용량 수치가 "0"으로 표시되는 반면, 구성 요소에는 값이 표시되는 것을 확인할 수 있습니다. DII에서 FlexGroups 자체는 대부분의 용량 지표를 0으로 처리하는 반면, 구성 요소에는 해당 지표가 포함됩니다. 문제는 중복 계산입니다. 두 엔티티 모두 전체 용량 지표를 보고하는 경우, DII는 동일한 용량을 두 번 보고하게 됩니다(한 번은 flexgroup에서, 다른 한 번은 구성 요소에서). 구성 요소 수준 보고를 우선시하면 이러한 중복을 피하면서 주요 사용 사례를 지원합니다.</block>
+  <block id="b0b97f3348cdc669199b59397d5cfda9" category="paragraph">이 경우 쿼리, 대시보드 또는 모니터에서 FlexGroup의 용량을 보고하려면 구성 요소의 상위 FlexGroup에 대한 참조를 사용하십시오. 그러면 해당 참조를 기준으로 구성 요소를 그룹화하고 용량 값을 집계할 수 있습니다.</block>
+  <block id="df0226880b0292bb3e39fbb512638c4a" category="paragraph">DII는 의도적으로 FlexGroup 상위의 용량을 0으로 설정하지만, ONTAP 자체는 여전히 용량을 보고합니다. 이는 성능 지표가 아닌 용량/효율성 지표에 적용됩니다. 그룹 이름은 전역적으로 고유하지 않을 수 있으므로 그룹 ID를 기준으로 구성 요소를 그룹화하는 것이 좋습니다.</block>
+  <block id="296cadc668db601a7fa80621086c9468" category="paragraph">VM Analyzer 보기의 새로운 토글 기능을 사용하면 데이터스토어가 없는 마운트된 볼륨을 숨길 수 있어 VM 문제 해결을 간소화하는 깔끔한 화면을 제공합니다.</block>
+  <block id="b6bf3aac3b33a207b8b6bbe0fc935a91" category="inline-image-macro">데이터스토어가 없는 마운트된 볼륨을 숨기는 토글을 표시하는 VM Analyzer</block>
+  <block id="6915ad7aa1643475defe5f685b410352" category="paragraph"><block ref="6915ad7aa1643475defe5f685b410352" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d0e9b5f06f461adaa0050f06dafe9575" category="inline-image-macro">편집 모드로 전환하는 데 사용되는 연필 아이콘과 함께 사용자 데이터를 읽기 전용 모드로 보여주는 자산 세부 정보 슬라이드아웃, width=400</block>
+  <block id="c2634a77f707f71f03af6181a842b88a" category="paragraph"><block ref="c2634a77f707f71f03af6181a842b88a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="58cc13c80c3e227fbe00047a9b822edc" category="inline-image-macro">사용자 데이터가 편집 모드로 열려 있고 변경 사항을 저장할 준비가 된 자산 랜딩 페이지, 너비=200</block>
+  <block id="194f62cbfe18d1624a3706d766ab06ed" category="paragraph"><block ref="194f62cbfe18d1624a3706d766ab06ed" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e5e5f8878927980995e10a5cedd8b308" category="paragraph">용량 스키마에는 인프라 전반의 스토리지 용량, 활용률 및 프로비저닝과 관련된 테이블과 메트릭이 포함되어 있습니다. 이 스키마를 사용하여 용량 추세를 분석하고, 향후 요구 사항을 예측하며, 리소스 할당을 최적화하십시오.</block>
+  <block id="62c9105acfc20634e0945ecfaf29d0bb" category="paragraph">용량 효율성 스키마는 데이터 축소 비율 및 최적화 기회 등 스토리지 효율성에 대한 지표를 제공합니다. 이 스키마를 사용하여 중복 제거 및 압축 등 스토리지 기술의 효과를 모니터링하고 분석하십시오.</block>
+  <block id="d0a80c4370fe5dfc7960c7b868126b76" category="paragraph">파일 시스템 활용률 스키마는 파일 시스템, 호스트 및 컴퓨팅 리소스 전반에 걸친 스토리지 소비 및 사용 패턴을 추적합니다. 이 스키마를 사용하여 용량 핫스팟을 파악하고 파일 시스템 수준에서 스토리지 할당을 최적화할 수 있습니다.</block>
+  <block id="b2200689dae4036b4813579eff31d56c" category="paragraph">인벤토리 스키마는 스토리지 시스템, 호스트, 애플리케이션 및 주석을 포함한 포괄적인 자산 및 오브젝트 데이터를 포함합니다. 이는 데이터 웨어하우스에서 가장 큰 스키마이며 자산 관리 및 인프라 가시성의 기반이 됩니다.</block>
+  <block id="d9a7965bf43985ef0fc40616a6785117" category="paragraph">성능 스키마는 스토리지, 호스트, 볼륨 및 애플리케이션 전반에 걸쳐 I/O, 지연 시간, 처리량 및 기타 성능 지표에 대한 시계열 메트릭을 제공합니다. 이 스키마를 사용하여 성능 추세를 분석하고, 병목 현상을 파악하고, 워크로드 배치를 최적화할 수 있습니다.</block>
+  <block id="18b7f15f593dc47ea50fd485e859a539" category="paragraph">포트 스키마에는 포트 연결, 상태 및 연결된 장치와의 관계 등 네트워크 포트 및 스위치 데이터가 포함되어 있습니다. 이 스키마를 사용하여 스토리지 인프라 내의 네트워크 토폴로지 및 패브릭 상태를 분석하십시오.</block>
+  <block id="1bccf90180c31adab404747497809cea" category="cell">데이터 SVM만 지원합니다(무한 볼륨은 지원하지 않음). 지원되는 하위 유형: default, sync_source, sync_destination. DP-destination SVM은 설계상 감사 대상에서 제외됩니다.</block>
+  <block id="aadaea56453502b49c3bb1d83460b925" category="cell">볼륨 스냅샷: 전체(가능한 경우 cloudsecure_* 범위로)</block>
+  <block id="7f1025af379bb72826214683cac22df7" category="paragraph">역할 및 사용자 생성(실행 전 &lt;vservername&gt; 교체):</block>
+  <block id="adf604179202ac8d7549519f9ce15c55" category="paragraph">*영구 저장소(클러스터 모드 표시, SVM 모드의 경우 -vserver &lt;vservername&gt; 추가):*</block>
+  <block id="2ad63734d5ea88b691fcec8abfa334e6" category="paragraph">*Protobuf (클러스터 모드 표시, SVM 모드의 경우 -vserver &lt;vservername&gt; 추가):*</block>
+  <block id="03a48f775ff6c08509430c660d47baaa" category="list-text">Workload Security &gt; 수집기 &gt; &amp;#43;데이터 수집기를 선택합니다.</block>
+  <block id="d78aa3ef141641a0a1fc5a86295f9836" category="paragraph">*Important:* 기본 제외 파일 확장자: 설계상 Workload Security는 FPolicy 범위를 구성하여 ini 및 DS_Store 확장자를 제외합니다. 이러한 파일에 대한 이벤트는 ONTAP에서 필터링되어 Workload Security에 도달하지 않으므로 Activity Forensics에 나타나지 않습니다. 이는 고객이 구성할 수 있는 경고 제외와는 별개입니다. 이는 예상되는 동작이며, 이러한 확장자에 대한 감사는 UI에서 구성할 수 없습니다.</block>
+  <block id="24dda3b59a8373ca61cb08f3e04c9cce" category="paragraph">일시 중지 및 재개는 에이전트가 아닌 데이터 수집기에 적용됩니다. UI(수집기 &gt; 해당 수집기 &gt; 옵션 메뉴) 또는 API에서 실행할 수 있습니다.</block>
+  <block id="77b5c5ee27c770993c6041b7b3f0105c" category="paragraph">수집기가 나중에 오류 또는 성능 저하 상태가 되면 상태 &gt; 자세히 보기를 열고 ONTAP SVM 데이터 수집기 문제 해결 지침을 따르십시오. 중복 수집기, 이벤트 속도 과부하, 일시 중지된 수집기, 영구 저장소 배치, MetroCluster 전환, 누락된 활동, ID 확인 등 런타임 조건은 사전 저장 테스트 연결 워크플로에 포함되지 않습니다.</block>
+  <block id="954c32784463d0103797201c7694bdf9" category="list-text">수집기가 Running 상태가 되고 실제 클라이언트 I/O 후에 Workload Security &gt; Activity Forensics에 이벤트가 나타나는지 확인하십시오.</block>
+  <block id="53faddfe1edffe14cfa22b21a8e4e255" category="cell">이는 의도적인 것입니다. 대부분의 용량 지표는 상위 FlexGroup이 아닌 FlexGroup의 구성 요소에 보고됩니다. 양쪽 모두에 동일한 용량을 보고하면 중복 계산됩니다. 구성 요소 수준 보고를 우선시하면 이러한 중복을 피하면서 주요 사용 사례를 지원합니다. 쿼리, 대시보드 또는 모니터에서 FlexGroup의 용량을 보고하려면 상위 FlexGroup에 대한 구성 요소의 참조를 사용하십시오. 해당 참조를 기준으로 구성 요소를 그룹화하고 용량 값을 집계하십시오. DII는 의도적으로 FlexGroup 상위의 용량을 0으로 설정하지만, ONTAP 자체는 여전히 용량을 보고합니다. 이는 성능 지표가 아닌 용량/효율성 지표에 적용됩니다. 그룹 이름은 전역적으로 고유하지 않을 수 있으므로 그룹 ID를 기준으로 구성 요소를 그룹화하는 것이 좋습니다.</block>
+  <block id="11c755b8329995c080a4059e4bf242e6" category="list-text">[호스트]에 대한 ONTAP 유형을 확인할 수 없습니다. 이유: 스토리지 시스템 연결 오류: 호스트에 연결할 수 없습니다</block>
+  <block id="f02b1b5ed10b4dbe05da2a063a182088" category="list-text">[IP]는 클러스터/노드로 식별되어 이 모드에서는 추가할 수 없습니다</block>
+  <block id="3d00f3f42cac2e414eee4dcb9d0d9483" category="list-text">cloudsecure_ FPolicy 정책이 활성화되었고 컬렉터가 실행 중인 상태로 유지됩니다.</block>
+  <block id="293c08cd401f87c15336eaf417d06e57" category="list-text">.ini 및 .DS_Store 활동만 누락된 경우 조치가 필요하지 않습니다. 이러한 확장자는 FPolicy 이벤트 수집에서 제외됩니다.</block>
+  <block id="8fa18ab7a18929f7f0879be2fb8b3054" category="list-text">활동이 여전히 없으면 고급 진단을 사용하여 cloudsecure_ 정책 및 ONTAP FPolicy 이벤트 로그를 확인하십시오.</block>
+  <block id="1c65b961301c2b223a8bf45311f05dd4" category="list-text">ONTAP 다중 관리자 검증이 활성화된 경우, cloudsecure_ 스냅샷 및 사용자 차단에 사용되는 설정 작업에 대한 문서화된 제외 항목을 추가하십시오.</block>
+  <block id="76778495a87770e10d3bc7b730dc736b" category="cell">.ini 또는 .DS_Store에 대한 이벤트가 없습니다.</block>
+  <block id="60869d1abd3ecf7441cbb614b23131a0" category="paragraph">/opt/netapp/cloudsecure/data-collectors/{lt}collector-uuid{gt}/logs/dsc.log</block>
+  <block id="48e5b137f1782a0dff6b1d690fd29c78" category="paragraph">/opt/netapp/cloudsecure/agent/logs/cloudsecure_agent_install.log</block>
+  <block id="2bf9ae67b6a7c5df6ba0e09cf1dc81fe" category="paragraph">/opt/netapp/cloudsecure/agent/logs/cloudsecure_agent_upgrade.log</block>
+  <block id="0d3dee47dc809f7fc5a86fb82b4caf0e" category="paragraph">cloudsecure_ 접두사가 있는 Workload Security 정책을 찾으십시오. 해당 정책이 활성화되어 있어야 하며, 모든 데이터 제공 노드에 외부 엔진이 연결된 것으로 표시되어야 합니다. 채널 연결이 끊어질 경우 이벤트 사유와 노드 이름을 유지하십시오.</block>
+  <block id="b9a0a25a4fe58508d1c1bb635a53d91d" category="list-text"><block ref="8024a7e052cfeb7e469f12b11909df83" category="inline-link-rx"></block>에서 추적을 가져옵니다.</block>
+  <block id="2dfc455baa46eb666025dbc7b414efa9" category="paragraph">*참고:* 활성 컬렉터의 cloudsecure_ 객체를 삭제하지 마십시오. 컬렉터가 해당 객체를 소유하고 업데이트합니다.</block>
+  <block id="42afc33a95a008fa50b39816238d5ae4" category="cell">에이전트 NOT_CONNECTED</block>
+  <block id="ebad25052221f4ee537e35e4f5dbaad7" category="list-text">fpolicy show 명령어를 실행하여 cloudsecure_ 정책이 활성화되어 있는지 확인하십시오.</block>
+  <block id="d822a0d21d568ecd22e518ef5dc10ebb" category="paragraph">multi-admin-verify rule modify -operation "volume snapshot create" -query "-snapshot !\*cloudsecure\_*" + multi-admin-verify rule modify -operation "volume snapshot delete" -query "-snapshot !\*cloudsecure\_*" + multi-admin-verify rule delete -operation set</block>
+  <block id="4ff2cea234868624331b11228fa5ab0d" category="list-text">상태 &gt; 자세히 보기에서 확인할 수 있는 전체 메시지와 오류 발생 시간입니다.</block>
+  <block id="9277538c12d62b57cf00dc1681c9a5af" category="paragraph">Data Infrastructure Insights에서 도움말 &gt; 지원을 사용하여 케이스를 개설하십시오.</block>
 </blocks>

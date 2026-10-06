@@ -53,7 +53,7 @@ ____
 | ONTAP Select | 지원됩니다. 
 
 
-| SVM 유형 / 하위 유형 | 데이터 SVM만 지원합니다(무한 볼륨은 지원하지 않음). 지원되는 하위 유형: default, sync++_++source, sync++_++destination. DP-destination SVM은 설계상 감사 대상에서 제외됩니다. 
+| SVM 유형 / 하위 유형 | 데이터 SVM만 지원합니다(무한 볼륨은 지원하지 않음). 지원되는 하위 유형: default, sync_source, sync_destination. DP-destination SVM은 설계상 감사 대상에서 제외됩니다. 
 
 
 | data-fpolicy-client 서비스 정책 | ONTAP 9.8 이상 버전부터 필수 설정 사항입니다(서비스 정책 참조). 이전 버전에서는 설정할 필요가 없습니다. 
@@ -141,15 +141,15 @@ _클러스터 관리 IP {plus} SVM 이름을 사용하는 것이 좋습니다. S
 
 [listing]
 ----
-security login password -username vsadmin -vserver ++<++svmname++>++
+security login password -username vsadmin -vserver <svmname>
 
-security login unlock -username vsadmin -vserver ++<++svmname++>++
+security login unlock -username vsadmin -vserver <svmname>
 ----
 *전용 SVM 관리 LIF를 사용하십시오. 전용 관리 LIF를 사용할 수 없는 경우 데이터 LIF 방화벽 정책을 mgmt:로 설정하십시오.*
 
 [listing]
 ----
-network interface modify -lif ++<++SVM++_++data++_++LIF++_++name++>++ -firewall-policy mgmt
+network interface modify -lif <SVM_data_LIF_name> -firewall-policy mgmt
 ----
 .SVM 로그인 출력 예시입니다.
 image:ontap-svm-login-output.png["SVM 로그인 출력 예,title=\"SVM 로그인 출력 예\",width=646,height=164"]
@@ -180,7 +180,7 @@ ____
 | 관리자 바로가기 | role DEFAULT: readonly (cluster) — 읽기 검사를 충족합니다. fpolicy는 여전히 all을 필요로 합니다. | — 
 
 
-| 스냅샷 | 볼륨 스냅샷: 전체 (가능한 경우 cloudsecure++_*++ 범위로) | 모든 
+| 스냅샷 | 볼륨 스냅샷: 전체(가능한 경우 cloudsecure_* 범위로) | 모든 
 
 
 | EMS 기반 모니터링 | 이벤트 카탈로그, 이벤트 필터, 이벤트 알림, 이벤트 알림 수신처, 보안 인증서: 모두 | 모든 
@@ -215,10 +215,10 @@ ____
 
 [listing]
 ----
-security login delete -user-or-group-name csuser -application ++*++
-security login role delete -role csrole -cmddirname ++*++
-security login rest-role delete -role csrestrole -api ++*++
-security login rest-role delete -role arwrole -api ++*++
+security login delete -user-or-group-name csuser -application *
+security login role delete -role csrole -cmddirname *
+security login rest-role delete -role csrestrole -api *
+security login rest-role delete -role arwrole -api *
 ----
 역할과 사용자를 생성합니다(클러스터 관리자로 실행):
 
@@ -226,7 +226,7 @@ security login rest-role delete -role arwrole -api ++*++
 ----
 security login role create -role csrole -cmddirname DEFAULT -access readonly
 security login role create -role csrole -cmddirname "vserver fpolicy" -access all
-security login role create -role csrole -cmddirname "volume snapshot" -access all -query "-snapshot cloudsecure++_*++"
+security login role create -role csrole -cmddirname "volume snapshot" -access all -query "-snapshot cloudsecure_*"
 security login role create -role csrole -cmddirname "event catalog" -access all
 security login role create -role csrole -cmddirname "event filter" -access all
 security login role create -role csrole -cmddirname "event notification destination" -access all
@@ -246,37 +246,37 @@ security login create -user-or-group-name csuser -application http -authmethod p
 
 [listing]
 ----
-security login delete -user-or-group-name csuser -application ++*++ -vserver ++<++vservername++>++
-security login role delete -role csrole -cmddirname ++*++ -vserver ++<++vservername++>++
-security login rest-role delete -role csrestrole -api ++*++ -vserver ++<++vservername++>++
+security login delete -user-or-group-name csuser -application * -vserver <vservername>
+security login role delete -role csrole -cmddirname * -vserver <vservername>
+security login rest-role delete -role csrestrole -api * -vserver <vservername>
 ----
-역할 및 사용자를 생성합니다(실행하기 전에 ++<++vservername++>++ 교체):
+역할 및 사용자 생성(실행 전 <vservername> 교체):
 
 [listing]
 ----
-security login role create -vserver ++<++vservername++>++ -role csrole -cmddirname DEFAULT -access none
-security login role create -vserver ++<++vservername++>++ -role csrole -cmddirname "network interface" -access readonly
-security login role create -vserver ++<++vservername++>++ -role csrole -cmddirname version -access readonly
-security login role create -vserver ++<++vservername++>++ -role csrole -cmddirname volume -access readonly
-security login role create -vserver ++<++vservername++>++ -role csrole -cmddirname vserver -access readonly
-security login role create -vserver ++<++vservername++>++ -role csrole -cmddirname "vserver fpolicy" -access all
-security login role create -vserver ++<++vservername++>++ -role csrole -cmddirname "volume snapshot" -access all
-security login create -user-or-group-name csuser -application ontapi -authmethod password -role csrole -vserver ++<++vservername++>++
-security login create -user-or-group-name csuser -application http -authmethod password -role csrole -vserver ++<++vservername++>++
+security login role create -vserver <vservername> -role csrole -cmddirname DEFAULT -access none
+security login role create -vserver <vservername> -role csrole -cmddirname "network interface" -access readonly
+security login role create -vserver <vservername> -role csrole -cmddirname version -access readonly
+security login role create -vserver <vservername> -role csrole -cmddirname volume -access readonly
+security login role create -vserver <vservername> -role csrole -cmddirname vserver -access readonly
+security login role create -vserver <vservername> -role csrole -cmddirname "vserver fpolicy" -access all
+security login role create -vserver <vservername> -role csrole -cmddirname "volume snapshot" -access all
+security login create -user-or-group-name csuser -application ontapi -authmethod password -role csrole -vserver <vservername>
+security login create -user-or-group-name csuser -application http -authmethod password -role csrole -vserver <vservername>
 ----
 
 
 [[feature-specific-permissions]]
 === 기능별 권한
 
-*영구 저장소(클러스터 모드 표시, SVM 모드의 경우 -vserver ++<++vservername++>++ 추가):*
+*영구 저장소(클러스터 모드 표시, SVM 모드의 경우 -vserver <vservername> 추가):*
 
 [listing]
 ----
 security login role create -role csrole -cmddirname "vserver fpolicy" -access all
 security login role create -role csrole -cmddirname "job show" -access readonly
 ----
-*Protobuf(클러스터 모드 표시; SVM 모드의 경우 -vserver ++<++vservername++>++ 추가):*
+*Protobuf (클러스터 모드 표시, SVM 모드의 경우 -vserver <vservername> 추가):*
 
 [listing]
 ----
@@ -290,7 +290,7 @@ security login role create -role csrole -cmddirname "vserver fpolicy" -access al
 == 데이터 수집기를 구성하고 테스트합니다
 
 . 관리자 또는 계정 소유자로 Data Infrastructure Insights에 로그인합니다.
-. Workload Security ++>++ 수집기 ++>++ &#43;데이터 수집기를 선택합니다.
+. Workload Security > 수집기 > &#43;데이터 수집기를 선택합니다.
 . NetApp SVM 타일 위로 마우스를 가져간 다음 &#43;Monitor를 클릭합니다.
 . 아래 필드에 정보를 입력하세요. 아직 수집기를 저장하지 마세요.
 
@@ -337,7 +337,7 @@ security login role create -role csrole -cmddirname "vserver fpolicy" -access al
 |===
 [quote]
 ____
-*Important:* 기본 제외 파일 확장자: 설계상 Workload Security는 FPolicy 범위를 구성하여 ini 및 DS++_++Store 확장자를 제외합니다. 이러한 파일에 대한 이벤트는 ONTAP에서 필터링되어 Workload Security에 도달하지 않으므로 Activity Forensics에 나타나지 않습니다. 이는 고객이 구성할 수 있는 경고 제외와는 별개입니다. 이는 예상되는 동작이며, 이러한 확장자에 대한 감사는 UI에서 구성할 수 없습니다.
+*Important:* 기본 제외 파일 확장자: 설계상 Workload Security는 FPolicy 범위를 구성하여 ini 및 DS_Store 확장자를 제외합니다. 이러한 파일에 대한 이벤트는 ONTAP에서 필터링되어 Workload Security에 도달하지 않으므로 Activity Forensics에 나타나지 않습니다. 이는 고객이 구성할 수 있는 경고 제외와는 별개입니다. 이는 예상되는 동작이며, 이러한 확장자에 대한 감사는 UI에서 구성할 수 없습니다.
 
 ____
 
@@ -402,14 +402,14 @@ ____
 
 [listing]
 ----
-net int service-policy create -policy only++_++data++_++fpolicy -vserver ++<++svm++>++ ++\++ \
+net int service-policy create -policy only_data_fpolicy -vserver <svm> \
 -allowed-addresses 0.0.0.0/0 -services data-cifs,data-nfs,data,-core,data-fpolicy-client
 ----
 LIF를 확인하십시오:
 
 [listing]
 ----
-network interface show -vserver ++<++svm++>++ -fields service-policy,status-admin,status-oper
+network interface show -vserver <svm> -fields service-policy,status-admin,status-oper
 ----
 ONTAP 9.8 이전 버전에서는 data-fpolicy-client를 설정할 필요가 없습니다. NFS 및/또는 CIFS를 포함하는 데이터 역할(up)이 있는 LIF면 충분합니다.
 
@@ -427,8 +427,8 @@ MAV가 활성화된 경우 Workload Security가 스냅샷 및 사용자 차단�
 
 [listing]
 ----
-multi-admin-verify rule modify -operation "volume snapshot create" -query "-snapshot !++*++cloudsecure++_*++"
-multi-admin-verify rule modify -operation "volume snapshot delete" -query "-snapshot !++*++cloudsecure++_*++"
+multi-admin-verify rule modify -operation "volume snapshot create" -query "-snapshot !*cloudsecure_*"
+multi-admin-verify rule modify -operation "volume snapshot delete" -query "-snapshot !*cloudsecure_*"
 multi-admin-verify rule delete -operation set # allow user blocking
 ----
 
@@ -490,7 +490,7 @@ ____
 [[pause-and-resume-a-collector]]
 == 수집기 일시 중지 및 재개
 
-일시 중지 및 재개는 에이전트가 아닌 데이터 수집기에 적용됩니다. UI(Collectors ++>++ 수집기 ++>++ 옵션 메뉴) 또는 API에서 실행할 수 있습니다.
+일시 중지 및 재개는 에이전트가 아닌 데이터 수집기에 적용됩니다. UI(수집기 > 해당 수집기 > 옵션 메뉴) 또는 API에서 실행할 수 있습니다.
 
 실행 중인 컬렉터를 일시 중지하면 ONTAP에서 FPolicy 구성이 제거됩니다. 일시 중지된 동안에는 이벤트가 흐르지 않으며 양방향으로 데이터가 전송되지 않습니다.
 
@@ -557,7 +557,7 @@ image:ws-agent-selector.png["수집기 마이그레이션을 위한 에이전트
 
 연결 테스트는 설정 시간 연결, 자격 증명, 데이터 LIF, 할당된 포트의 콜백 연결, SMB 선택 시 CIFS 서버 확인 및 클러스터 모드에서의 기능 액세스를 포함합니다. 테스트가 성공적으로 완료된 후에는 이러한 검사를 수동으로 반복하지 마십시오.
 
-수집기가 나중에 오류 또는 성능 저하 상태가 되면 상태 ++>++ 자세한 내용을 열고 ONTAP SVM 데이터 수집기 문제 해결을 따르십시오. 중복 수집기, 이벤트 속도 과부하, 일시 중지된 수집기, 영구 저장소 배치, MetroCluster 전환, 누락된 활동, ID 확인 등 런타임 조건은 사전 저장 테스트 연결 워크플로에 포함되지 않습니다.
+수집기가 나중에 오류 또는 성능 저하 상태가 되면 상태 > 자세히 보기를 열고 ONTAP SVM 데이터 수집기 문제 해결 지침을 따르십시오. 중복 수집기, 이벤트 속도 과부하, 일시 중지된 수집기, 영구 저장소 배치, MetroCluster 전환, 누락된 활동, ID 확인 등 런타임 조건은 사전 저장 테스트 연결 워크플로에 포함되지 않습니다.
 
 
 
@@ -565,6 +565,6 @@ image:ws-agent-selector.png["수집기 마이그레이션을 위한 에이전트
 == 당신이 완료한 후
 
 * 설치된 데이터 수집기 페이지에서 옵션 메뉴를 사용하여 수집기를 편집하거나 다시 시작하십시오.
-* 수집기가 실행 중 상태가 되고 실제 클라이언트 I/O 이후 Workload Security ++>++ Activity Forensics에 이벤트가 나타나는지 확인하십시오.
+* 수집기가 Running 상태가 되고 실제 클라이언트 I/O 후에 Workload Security > Activity Forensics에 이벤트가 나타나는지 확인하십시오.
 * 사용자 이름이 제대로 확인되는지 확인하십시오(SID가 아님). 확인되지 않으면 User Directory Collector를 확인하십시오.
 
