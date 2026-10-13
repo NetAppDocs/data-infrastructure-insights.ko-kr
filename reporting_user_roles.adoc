@@ -76,6 +76,28 @@ Data Infrastructure Insights 의 사용자 역할에 따라 보고 사용자 역
 |===
 
 
+[[reporting-administration]]
+== 보고 관리
+
+이전 보고서 관리 콘솔은 더 이상 사용할 수 없습니다. 보고서 관리는 관리 기능을 사용하십시오.
+
+. Data Infrastructure Insights에서 *보고서*를 엽니다.
+. *메뉴 > 관리*를 선택합니다.
+
+
+관리 메뉴에서 보고 관리자는 보고서를 구성하고 현재, 과거 및 향후 보고 활동을 관리할 수 있습니다.
+
+완료된 활동의 실행 세부 정보를 열려면:
+
+. *메뉴 > 관리 > 활동 > 이전*을 선택합니다.
+. 해당 활동에서 점 세 개 메뉴를 엽니다.
+. *실행 세부 정보*를 선택합니다.
+
+
+자세한 내용은 이 link:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs/IBM_Cognos_Administration_Console_Does_Not_Load_for_DII_Reporting_Scheduled_Reports["KB 기사"^]을(를) 참조하십시오.
+
+
+
 [[setting-reporting-cognos-email-preferences]]
 == 보고(Cognos) 이메일 환경 설정
 
