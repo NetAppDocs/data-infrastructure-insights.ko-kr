@@ -19,6 +19,23 @@ NetApp 제품과 서비스를 지속적으로 개선하고 향상시키고 있�
 
 
 
+[[november-2026]]
+== 2026년 11월
+
+
+
+[[data-collector-updates]]
+=== 데이터 수집기 업데이트:
+
+이제 다음 데이터 수집기를 사용할 수 있습니다:
+
+*NVIDIA Base Command Manager(BCM) 수집기(미리 보기)* Data Infrastructure Insights에서 NVIDIA Base Command Manager용 미리 보기 수집기를 제공하여 HPC 및 AI 클러스터에 대한 가시성을 확보할 수 있습니다. 클러스터 노드와 워크로드를 기본 스토리지 구성 요소와 연관시켜 I/O 병목 현상을 파악하고, 부하를 유발하는 작업이나 노드를 찾아내고, 비용이 많이 드는 GPU 리소스가 데이터를 기다리며 유휴 상태가 되는 것을 방지할 수 있습니다.
+
+*Proxmox VE 데이터 수집기(미리 보기)* Data Infrastructure Insights에서 이제 Proxmox VE용 미리 보기 수집기를 제공합니다. 이 도구를 사용하면 Proxmox 호스트 및 VM, 그리고 그 뒤에 있는 스토리지에 대한 가시성을 확보하여 데이터 경로 전체에서 문제를 정확히 파악하고 더 빠르게 문제를 해결할 수 있습니다.
+
+'''
+
+
 [[september-2026]]
 == 2026년 9월
 
