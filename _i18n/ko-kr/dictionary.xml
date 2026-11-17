@@ -11650,7 +11650,6 @@
   <block id="91a0d06a30de7119cf7ba6773ce38416" category="paragraph">DII Proxmox 가상 환경 수집기는 PVE 기반 가상 머신(LXC 컨테이너 제외) 및 호스트/하이퍼바이저에 대한 인벤토리 및 성능 데이터를 수집합니다. 이 수집기는 HTTPS REST API 기반이며, TCP 8006 포트에서 수신 대기하는 pveproxy 서비스/데몬이 제공하는 Proxmox REST API와 통신해야 합니다.</block>
   <block id="7bd4738e9b2442fc6fa7415e88a3298d" category="paragraph">이 데이터 수집기는 사용자 + 토큰 인증을 사용합니다. 각 Proxmox 클러스터에 서비스 계정을 생성하고 해당 사용자에게 적절한 권한을 할당한 다음, 동일한 권한을 가진 API 토큰을 생성해야 합니다. 특정 Proxmox 사용자의 토큰이 사용자와 동일한 권한을 갖는 것은 아니라는 점에 유의하십시오. DII는 일반적으로 전역 감사/모니터링 수준 권한이 필요합니다. Proxmox UI를 통해 서비스 계정을 생성하는 경우, PathPermision은 "/"로 시작하고, 전파(Propagate)는 "예"로 설정하며, 최소한 Datastore Audit, Mapping Audit, Pool Audit, SDN Audit, Sys Audit, VM Audit, VM Monitor 권한을 활성화해야 합니다. 사용자 계정이 생성되면 해당 계정에 대한 액세스 토큰을 생성할 수 있습니다. 토큰 만료 기한을 0으로 설정하여 토큰이 만료되지 않도록 하는 것이 좋습니다.</block>
   <block id="57e13573114577b3af8a0a24aa24d576" category="sidebar">Proxmox VE</block>
-  <block id="48c0a89dc87860e6c3b42a70bbd13c53" category="paragraph"><block ref="48c0a89dc87860e6c3b42a70bbd13c53" category="inline-link-macro-rx"></block></block>
   <block id="10fcc85a32e000abd9a522eb086aa8b9" category="list-text">참고: 에이전트 설치 프로그램은 실행 중인 에이전트가 있는 폴더와는 다른 폴더에 다운로드해야 합니다.</block>
   <block id="323d0a1ff366ae52ecb4199bd4c94bcc" category="paragraph">예를 들어 에이전트가 "/test_user/apps"에서 실행 중인 경우 명령은 다음과 같습니다.</block>
   <block id="22e2d1e386d2ea8093c75a43b1b0223e" category="summary">Capacity 데이터 웨어하우스의 스키마 테이블</block>
@@ -16460,4 +16459,5 @@
   <block id="4dcdcb2e56c49bf89538b93565979fe4" category="cell">UI에 워크로드/비용 청구 없음</block>
   <block id="44aa343060dfa443edf605972782079e" category="cell">Slurm 작업이 실행되었고 차지백이 활성화되었는지 확인하십시오. 유휴 클러스터는 API가 비어 있는 경우가 많습니다. <block ref="866d4e136372de4f4e0a83eb14fae02d" prefix=" " category="inline-code"></block>이(가) 준비되어 있고(*차지백 토큰(선택 사항)* 참조) 서버<block ref="21669d594353bfb093b487f21cae5621" prefix=" " category="inline-code"></block> 메타데이터가 준비되어 있는지 확인하십시오.</block>
   <block id="bbb144aa78b3cd782d5706367bcc3f8e" category="paragraph">이 데이터 수집기에 대한 추가 정보는 지원 페이지 또는 데이터 수집기 지원 매트릭스에서 확인할 수 있습니다.</block>
+  <block id="9147d8a87f0c15b0e1cb8f0114b69cc2" category="paragraph"><block ref="9147d8a87f0c15b0e1cb8f0114b69cc2" category="inline-link-macro-rx"></block></block>
 </blocks>
